@@ -41,9 +41,9 @@ section.
 
 ### Docker
 
-The Netatalk development team maintains Docker images for Netatalk. For
-more details, see the [Netatalk organization on Docker
-Hub](https://hub.docker.com/u/netatalk).
+The Netatalk development team maintains a
+[Docker image for Netatalk](https://hub.docker.com/r/netatalk/netatalk)
+which are distributed on Docker Hub.
 
 With Docker Engine installed, do:
 
