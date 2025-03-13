@@ -148,49 +148,49 @@ value, it will get ignored.
 
 The variables which can be used for substitutions are:
 
-$b
+> $b
 
-> basename
+> > basename
 
-$c
+> $c
 
-> client's ip address
+> > client's ip address
 
-$d
+> $d
 
-> volume pathname on server
+> > volume pathname on server
 
-$f
+> $f
 
-> full name (contents of the gecos field in the passwd file)
+> > full name (contents of the gecos field in the passwd file)
 
-$g
+> $g
 
-> group name
+> > group name
 
-$h
+> $h
 
-> hostname
+> > hostname
 
-$i
+> $i
 
-> client's ip, without port
+> > client's ip, without port
 
-$s
+> $s
 
-> server name (this can be the hostname)
+> > server name (this can be the hostname)
 
-$u
+> $u
 
-> user name (if guest, it is the user that guest is running as)
+> > user name (if guest, it is the user that guest is running as)
 
-$v
+> $v
 
-> volume name
+> > volume name
 
-$$
+> $$
 
-> prints dollar sign ($)
+> > prints dollar sign ($)
 
 # Explanation of Global Parameters
 
