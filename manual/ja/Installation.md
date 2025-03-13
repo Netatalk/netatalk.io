@@ -65,27 +65,27 @@ Git レポジトリ のダウンロードは迅速で容易である：
 
 - Berkeley DB
 
-  書き込みの時に最低でもバージョン 4.6 が必要となる。
+    デフォルトのdbd CNIDバックエンドは、Berkeley DBを使用して一意のファイル識別子を保存します。書き込みの時に最低でもバージョン 4.6 が必要となる。
 
-  推奨バージョンは 5.3 である Sleepycat
-  ライセンスで提供された最終リリースである。
+    推奨バージョンは 5.3 である Sleepycat
+    ライセンスで提供された最終リリースである。
 
 - iniparser
 
-  iniparser ライブラリは設定ファイルを解析するために使用される。
-  最低でもバージョン 3.1 が必要であり、4.0 以降が推奨される。
+    iniparser ライブラリは設定ファイルを解析するために使用される。
+    最低でもバージョン 3.1 が必要であり、4.0 以降が推奨される。
 
 - libevent
 
-  netatalk サービス コントローラー デーモンの内部イベント
-  コールバックは、 libevent バージョン 2 に基づいて構築されている。
+    netatalk サービス コントローラー デーモンの内部イベント
+    コールバックは、 libevent バージョン 2 に基づいて構築されている。
 
 - Libgcrypt
 
-  [Libgcrypt](https://gnupg.org/software/libgcrypt/)
-  ライブラリは、標準のユーザー認証モジュール (UAM)
-  の暗号化を提供する。これらは、DHX2、DHCAST128 (別名 DHX)、および
-  RandNum である。
+    [Libgcrypt](https://gnupg.org/software/libgcrypt/)
+    ライブラリは、標準のユーザー認証モジュール (UAM)
+    の暗号化を提供する。これらは、DHX2、DHCAST128 (別名 DHX)、および
+    RandNum である。
 
 #### 任意のサードパーティソフトウェア
 
@@ -93,121 +93,116 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
 
 - ACL と LDAP
 
-  LDAP は、ACL
-  の高度な権限スキームと連携して動作するオープンで業界標準のユーザー
-  ディレクトリ プロトコルである。一部のオペレーティング システムでは ACL
-  と LDAP ライブラリがシステムに組み込まれているが、他のオペレーティング
-  システムではこの機能を有効にするためにサポート
-  パッケージをインストールする必要がある。
+    LDAPは、ACLの高度な権限スキームと連携して動作するオープンで業界標準のユーザー
+    ディレクトリ プロトコルである。一部のオペレーティング システムではACL
+    とLDAPライブラリがシステムに組み込まれているが、他のオペレーティング
+    システムではこの機能を有効にするためにサポート
+    パッケージをインストールする必要がある。
 
 - Bonjour 用の Avahi または mDNSresponder
 
-  Mac OS X 10.2 以降では、自動サービス検出に Bonjour (別名 Zeroconf)
-  を使用する。 Netatalk は、Avahi または mDNSResponder を使用して AFP
-  ファイル共有と Time Machine ボリュームをアドバタイズできる。
+    Mac OS X 10.2 以降では、自動サービス検出に Bonjour (別名 Zeroconf)
+    を使用する。 Netatalk は、Avahi または mDNSResponder を使用して AFP
+    ファイル共有と Time Machine ボリュームをアドバタイズできる。
 
-  Avahi を使用する場合は、D-Bus または D-Bus サポートを有効になっている
-  Avahi ライブラリは必要になる。
+    Avahi を使用する場合は、D-Bus または D-Bus サポートを有効になっている
+    Avahi ライブラリは必要になる。
 
 - cmark もしくは cmark-gfm
 
-  Netatalk のドキュメントは Markdown 形式で作成されている。
-  マニュアル ページのソースは標準に準拠した CommonMark で構成され、
-  ドキュメントの残りの部分は GitHub 風の Markdown (gfm) で作成されている。
+    Netatalk のドキュメントは Markdown 形式で作成されている。
+    マニュアル ページのソースは標準に準拠した CommonMark で構成され、
+    ドキュメントの残りの部分は GitHub 風の Markdown (gfm) で作成されている。
 
-cmark を使用して Markdown ソースから roff マニュアル ページを生成し、cmark-gfm を使用して HTML ページを含むすべてのドキュメントを生成できる。
-後者は利用可能な場合は、前者は必要ない。
+    cmark を使用して Markdown ソースから roff マニュアル ページを生成し、cmark-gfm を使用して HTML ページを含むすべてのドキュメントを生成できる。
+    後者は利用可能な場合は、前者は必要ない。
 
 - CrackLib
 
-  Random Number UAM と netatalk 独自の **afppasswd** パスワード
-  マネージャを使用する場合、CrackLib は netatalk
-  での認証に弱いパスワードを設定するのを防ぐのに役立つ。
+    Random Number UAM と netatalk 独自の **afppasswd** パスワード
+    マネージャを使用する場合、CrackLib は netatalk
+    での認証に弱いパスワードを設定するのを防ぐのに役立つ。
 
-  ランタイム パッケージで別途配布されることもある CrackLib
-  辞書も必須である。
+    ランタイム パッケージで別途配布されることもある CrackLib
+    辞書も必須である。
 
 - D-Bus
 
-  D-Bus はプロセス間にメッセージを通信するメカニズムを提供し、下記
-  Netatalk 機能に使われる： Spotlight、Avahi を使用した Zeroconf、および
-  **afpstats** ツール。
+    D-Bus はプロセス間にメッセージを通信するメカニズムを提供し、下記
+    Netatalk 機能に使われる： Spotlight、Avahi を使用した Zeroconf、および
+    **afpstats** ツール。
 
 - GLib および GIO
 
-  D-Bus とのインターフェースとして、**afpstats** ツールに使われる。
+    D-Bus とのインターフェースとして、**afpstats** ツールに使われる。
 
 - iconv
 
-  iconv は、多くの文字エンコードの変換ルーチンを提供する。Netatalk
-  は、ISO-8859-1
-  など、組み込みの変換がない文字セットを提供するためにこれを使用する。glibc
-  システムでは、Netatalk は glibc が提供する iconv
-  実装を使用できる。それ以外の場合は、GNU libiconv 実装を使用できる。
+    iconv は、多くの文字エンコードの変換ルーチンを提供する。Netatalk
+    は、ISO-8859-1
+    など、組み込みの変換がない文字セットを提供するためにこれを使用する。glibc
+    システムでは、Netatalk は glibc が提供する iconv
+    実装を使用できる。それ以外の場合は、GNU libiconv 実装を使用できる。
 
 - Kerberos V
 
-  Kerberos v5 は、マサチューセッツ工科大学で発明されたクライアント
-  サーバー ベースの認証プロトコルである。Kerberos
-  ライブラリを使用すると、netatalk は既存の Kerberos
-  インフラストラクチャでの認証用に GSS UAM ライブラリを作成できる。
+    Kerberos v5 は、マサチューセッツ工科大学で発明されたクライアント
+    サーバー ベースの認証プロトコルである。Kerberos
+    ライブラリを使用すると、netatalk は既存の Kerberos
+    インフラストラクチャでの認証用に GSS UAM ライブラリを作成できる。
 
 - MySQL または MariaDB
 
-  MySQL 互換のクライアント ライブラリを活用することで、netatalk
-  は、スケーラビリティと信頼性に優れた MySQL CNID
-  バックエンドを使用して構築できる。管理者は、このバックエンドで使用するために別のデータベース
-  インスタンスを用意する必要がある。
+    MySQL 互換のクライアント ライブラリを活用することで、netatalk
+    は、スケーラビリティと信頼性に優れた MySQL CNID
+    バックエンドを使用して構築できる。管理者は、このバックエンドで使用するために別のデータベース
+    インスタンスを用意する必要がある。
 
 - PAM
 
-  PAM は、ユーザーを認証するための柔軟なメカニズムを提供する。 PAM は
-  SUN Microsystems
-  によって発明された。Linux-PAM は、ローカル
-  システム管理者がアプリケーションによるユーザー認証方法を選択できるようにする共有ライブラリ
-  スイートである。
+    PAM は、ユーザーを認証するための柔軟なメカニズムを提供する。 PAM は
+    SUN Microsystems
+    によって発明された。Linux-PAM は、ローカル
+    システム管理者がアプリケーションによるユーザー認証方法を選択できるようにする共有ライブラリ
+    スイートである。
 
 - Perl
 
-  Netatalk の管理ユーティリティ スクリプトは、Perl ランタイム バージョン
-  5.8 以降に依存する。必須 Perl モジュールは以下： *IO::Socket::IP*
-  (asip-status) 又は *Net::DBus* (afpstats)。
+    Netatalk の管理ユーティリティ スクリプトは、Perl ランタイム バージョン
+    5.8 以降に依存する。必須 Perl モジュールは以下： *IO::Socket::IP*
+    (asip-status) 又は *Net::DBus* (afpstats)。
 
 - po4a
 
-  po4a の助けを借りて、Netatalk のドキュメントは他の言語に翻訳できる。gettext
-  を使用して、ソース ファイルから翻訳可能な文字列を抽出し、PO
-  ファイルに保存されている翻訳と結合する。
+    po4a の助けを借りて、Netatalk のドキュメントは他の言語に翻訳できる。gettext
+    を使用して、ソース ファイルから翻訳可能な文字列を抽出し、PO
+    ファイルに保存されている翻訳と結合する。
 
 - TCP ラッパー
 
-  Wietse Venema のネットワーク ロガー。TCPD または LOG_TCP
-  とも呼ばれる。
+    Wietse Venema のネットワーク ロガー。TCPD または LOG_TCP とも呼ばれる。
 
-  セキュリティ
-  オプションは次のとおり。ホスト、ドメイン、および/またはサービスごとのアクセス制御、ホスト名のスプーフィングまたはホスト
-  アドレスのスプーフィングの検出。ブービートラップを使用して早期警告システムを実装する。
+    セキュリティオプションは次のとおり。ホスト、ドメイン、および/またはサービスごとのアクセス制御、ホスト名のスプーフィングまたはホスト
+    アドレスのスプーフィングの検出。ブービートラップを使用して早期警告システムを実装する。
 
 - Tracker もしくは TinySPARQL / LocalSearch
 
-  Netatalk は、Spotlight
-  検索インデックスのメタデータ バックエンドとして
-  [Tracker](https://tracker.gnome.org) またはそれ以降のバージョンである
-  TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
-  を使用する。必要な最小限のバージョンは 0.7 である。これは
-  [SPARQL](https://gnome.pages.gitlab.gnome.org/tracker/)
-  をサポートする最初のバージョンだからである。
+    Netatalkは、Spotlight検索インデックスのメタデータ バックエンドとして
+    [Tracker](https://tracker.gnome.org) またはそれ以降のバージョンである
+    TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
+    を使用する。必要な最小限のバージョンは 0.7 である。これは
+    [SPARQL](https://gnome.pages.gitlab.gnome.org/tracker/)
+    をサポートする最初のバージョンだからである。
 
 - talloc / bison / flex
 
-  Spotlight には、Samba の talloc ライブラリ、bison などの Yacc
-  パーサー、flex などのレキサーも必要。
+    Spotlight には、Samba の talloc ライブラリ、bison などの Yacc
+    パーサー、flex などのレキサーも必要。
 
 - UnicodeData.txt
 
-  ビルド システムは、Perl と Unicode
-  文字データベースを使用して、Netatalk の Unicode
-  文字変換ソースを生成する。
+    ビルド システムは、Perl と Unicode 文字データベースを使用して、NetatalkのUnicode
+    文字変換ソースを生成する。
 
 ### Netatalk のコンパイル
 

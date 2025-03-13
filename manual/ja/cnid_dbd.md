@@ -73,8 +73,7 @@ DBデータベースのアップグレードを準備するコードと、既に
 
 - 古いBerkeley DBユーティリティを使って、`db_checkpoint -1 -h <.AppleDBのパス>` を実行する
 
-- 新しいBerkeley DBユーティリティを使って、`db_upgrade -v -h <.AppleDBのパス> -f cnid2.db`
-  を実行する
+- 新しいBerkeley DBユーティリティを使って、`db_upgrade -v -h <.AppleDBのパス> -f cnid2.db` を実行する
 
 - 再び新しいBerkeley DBユーティリティを使って、`db_checkpoint -1 -h <.AppleDBのパス>` を実行する
 

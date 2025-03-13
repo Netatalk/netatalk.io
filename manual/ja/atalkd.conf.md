@@ -63,17 +63,17 @@ atalkd.conf — AppleTalk が使用するインターフェイスを構成する
 
 Solaris 上の単一インターフェイスと自動検出パラメータ。
 
-       le0
+      le0
 
 Linux でも同様。
 
-       eth0
+      eth0
 
 以下は Sun 4/40 の設定ファイルの例になる。マシンには
 2つのインターフェイス「le0」と「le1」がある。「le0」インターフェイスは、ネットワーク上の他のルーターから自動的に設定される。このマシンは、「le1」インターフェースの唯一のルーターである。
 
-       le0
-       le1 -seed -net 9461-9471 -zone netatalk -zone Argus
+      le0
+      le1 -seed -net 9461-9471 -zone netatalk -zone Argus
 
 # 関連項目
 

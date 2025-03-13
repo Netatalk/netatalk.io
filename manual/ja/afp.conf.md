@@ -38,18 +38,18 @@ path**」というパラメータは、設定ファイルの中にもう一つ�
 
 一つのボリュームは、アクセスを許可するディレクトリ設定と、そのサービスにおいてユーザに与えるアクセス権設定で成り立つ。ボリュームに対して**path**オプションを使って共有ディレクトリを指定しなければならない。
 
-ボリューム名は**name**オプションで定義される。省略された場合、ボリューム名は小文字で表されるセクション名となる。
+ボリューム名は**volume name**オプションで定義される。省略された場合、ボリューム名は小文字で表されるセクション名となる。
 
 **path**オプションのないボリュームセクションは、他のボリュームセクションから**vol
 preset**オプション経由で呼び出され、ボリュームのデフォルト値を決める*ボリュームプリセット*と見なされる。プリセット*と*ボリュームセクションの両方で指定されたオプションについては、ボリュームオプション設定がプリセットオプションを完全に上書きする。
 
 サーバが許可したアクセス権は、ホストシステムの特定のUNIXユーザまたはゲストユーザのアクセス権でマスクされる。サーバはホストシステムの許可以上の許可をしない。
 
-以下のセクションの例は、一つのAFPボリュームを定義している。ユーザはパス`/foo/bar`への完全なアクセス権を持つ。 *Baz
-Volume*という共有名でアクセスできる:
+以下のセクションの例は、一つのAFPボリュームを定義している。ユーザはパス`/foo/bar`への完全なアクセス権を持つ。
+*Baz*という共有名でアクセスできる:
 
     [baz]
-        name = Baz Volume
+        volume name = Baz
         path = /foo/bar
 
 # 特殊なセクション
@@ -99,9 +99,9 @@ type**)。それ以外は全てボリュームセクションのみに許され�
 
 ボリューム名で変数を使うことができる。パスでの変数の利用は$uに限られる。
 
-1.  不明な変数を指定した場合、それは変換されない。
+1. 不明な変数を指定した場合、それは変換されない。
 
-2.  既知の変数を指定したが変数が値を持たない場合、それは無視される。
+2. 既知の変数を指定したが変数が値を持たない場合、それは無視される。
 
 置換に使われる変数は以下のとおり:
 
@@ -197,34 +197,34 @@ uams_dhx2.so」)
 
 最も一般的に使われるUAMは以下の通り:
 
-uams_guest.so
+> uams_guest.so
 
-> ゲストログインを許可する
+> > ゲストログインを許可する
 
-uams_clrtxt.so
+> uams_clrtxt.so
 
-> (uams_pam.soまたはuams_passwd.so)
+> > (uams_pam.soまたはuams_passwd.so)
 暗号化なしで転送されたパスワードによるログインを許可する。Mac OS 9 以前と互換性がある。
 
-uams_randnum.so
+> uams_randnum.so
 
-> 認証のための乱数および双方向乱数交換を許可する
+> > 認証のための乱数および双方向乱数交換を許可する
 (パスワードを含んだファイル、つまりafppasswdファイルか"**passwd file**"で指定したファイルのどちらかが必要)。詳細は
 **afppasswd**(1)を見よ。Mac OS 9 以前と互換性がある。
 
-uams_dhx.so
+> uams_dhx.so
 
-> (uams_dhx_pam.soまたはuams_dhx_passwd.so)
+> > (uams_dhx_pam.soまたはuams_dhx_passwd.so)
 認証のためのDiffie-Hellman交換(DHX)を許可する。
 
-uams_dhx2.so
+> uams_dhx2.so
 
-> (uams_dhx2_pam.soまたはuams_dhx2_passwd.so)
+> > (uams_dhx2_pam.soまたはuams_dhx2_passwd.so)
 認証のためのDiffie-Hellman交換2(DHX2)を許可する。
 
-uam_gss.so
+> uam_gss.so
 
-> 認証のためのKerberos Vを許可する。(オプション)
+> > 認証のためのKerberos Vを許可する。(オプション)
 
 uam path = <path\> **(G)**
 
@@ -406,12 +406,11 @@ chmod request = <preserve (デフォルト) \| ignore \| simple\> **(G)**/**(V)*
 
 > ACLに対応する高度なパーミッション制御。
 
-- **ignore** -
-  UNIXのchmod()要求を完全に無視する。新規作成を上書きして親ディレクトリのACL継承に完全コントロールさせるためにこのオプションを使う。
+> - **ignore** - UNIXのchmod()要求を完全に無視する。新規作成を上書きして親ディレクトリのACL継承に完全コントロールさせるためにこのオプションを使う。
 
-- **preserve** - 名前付きユーザとグループのためのZFS ACEやPOSIX ACLグループマスクを維持する
+> - **preserve** - 名前付きユーザとグループのためのZFS ACEやPOSIX ACLグループマスクを維持する
 
-- **simple** - いかなる追加の手順も踏まず、単に要求通りにchmod()する
+> - **simple** - いかなる追加の手順も踏まず、単に要求通りにchmod()する
 
 close vol = <BOOLEAN\> (デフォルト: *no*) **(G)**
 
@@ -448,7 +447,7 @@ splice size = <number\> (デフォルト: *64k*) **(G)**
 
 > ディレクトリキャッシュにおける最大エントリ数。キャッシュはディレクトリとファイルを格納する。これはディレクトリのフルパスと、ディレクトリ一覧を大幅にスピードアップするCNIDをキャッシュするために使われる。
 
-デフォルトサイズは8192、最大サイズは131072。与えられた値は最も近い2の累乗に丸められる。それぞれのエントリは約100バイトを消費し、これは大きな値とは言えないが、それぞれの接続ユーザ毎のafpd子プロセスがキャッシュを持つことを念頭に置いてください。
+> デフォルトサイズは8192、最大サイズは131072。与えられた値は最も近い2の累乗に丸められる。それぞれのエントリは約100バイトを消費し、これは大きな値とは言えないが、それぞれの接続ユーザ毎のafpd子プロセスがキャッシュを持つことを念頭に置いてください。
 
 extmap file = <path\> **(G)**
 
@@ -458,7 +457,7 @@ force xattr with sticky bit = <BOOLEAN\> (デフォルト: *no*) `(G/V)`
 
 > ディレクトリへの書き込み権限があったとしても、スティッキービット設定を使ってメタデータ(拡張属性)を書き込むことに失敗するかもしれない。なぜなら、スティッキービットが設定されている場合、所有者だけが拡張属性への書き込みを許されるからである。
 
-このオプションを有効にするとNetatalkはroot権限でメタデータ(拡張属性)を書き込む。
+> このオプションを有効にするとNetatalkはroot権限でメタデータ(拡張属性)を書き込む。
 
 guest account = <name\> **(G)**
 
@@ -474,9 +473,7 @@ ignored attributes = <all \| nowrite \| nodelete \| norename\> **(G)**/**(V)**
 
 > サーバが無視すべきファイルとディレクトリの属性を設定する。`all`はオプション全部という意味である。
 
-OS Xにおいて、Finderがファイル/ディレクトリのロックを設定する場合、またはターミナルでBSD
-uchgフラグを設定する場合、3つの属性が全て使われる。従って、Finderロック/BSD uchgフラグを無視する目的で*ignored
-attributes = all*の設定を追加してください。
+> OS Xにおいて、Finderがファイル/ディレクトリのロックを設定する場合、またはターミナルでBSD uchgフラグを設定する場合、3つの属性が全て使われる。従って、Finderロック/BSD uchgフラグを無視する目的で*ignored attributes = all*の設定を追加してください。
 
 legacy icon = <icon\> **(G)**
 
@@ -485,11 +482,9 @@ legacy icon = <icon\> **(G)**
 バージョンでは、このアイコン設定が無視される。
 有効なアイコン名の例は以下になる。
 
-- **daemon**
-
-- **globe**
-
-- **sdcard**
+> - **daemon**
+> - **globe**
+> - **sdcard**
 
 login message = <message\> **(G)**/**(V)**
 
@@ -501,15 +496,11 @@ mimic model = <model\> **(G)**
 Mac
 に任せること。netatalkがZeroconfをサポートしなければならないことに注意してください。例:
 
-- **Laptop**
+> - **Laptop**
+> - **RackMount**
+> - **Tower**
 
-- **RackMount**
-
-- **Tower**
-
-macOSは認識しているモデルコードは
-*/System/Library/CoreServices/CoreTypes.bundle/Contents/Info.plist*
-を参照すれば確認できる。(macOS 15 Sequoia の場合。)
+> macOSは認識しているモデルコードは */System/Library/CoreServices/CoreTypes.bundle/Contents/Info.plist* を参照すれば確認できる。(macOS 15 Sequoia の場合。)
 
 server name = <name\> **(G)**
 
@@ -568,7 +559,7 @@ XのためのUTF8-MACボリューム名の最大長。ハングルはこれに�
     80: Mac OS X 10.4/10.5の制限 (デフォルト)
     255: 最近のMac OS Xの制限
 
-Mac OS 9以前はこれに影響されない。なぜならMac文字セットのボリューム名は常に27バイト制限がある。
+> Mac OS 9以前はこれに影響されない。なぜならMac文字セットのボリューム名は常に27バイト制限がある。
 
 vol size limit = <MiB 単位でのサイズ\> **(V)**
 
@@ -586,12 +577,11 @@ log level = <type:level \[type:level ...\]\> **(G)**; log level =
 
 > 与えられた**log level**までのログレベルのメッセージを出力するように設定する。
 
-デフォルトではafpdは**default:note**に相当する設定でsyslogに出力する。
+> デフォルトではafpdは**default:note**に相当する設定でsyslogに出力する。
 
-ログタイプ: default, afpdaemon, logger, uamsdaemon
+> ログタイプ: default, afpdaemon, logger, uamsdaemon
 
-ログレベル: severe, error, warn, note, info, debug, debug6, debug7, debug8,
-debug9, maxdebug
+> ログレベル: severe, error, warn, note, info, debug, debug6, debug7, debug8, debug9, maxdebug
 
 > **注記**
 
@@ -664,16 +654,15 @@ fce sendwait = <milliseconds\> **(G)**
 オーバーフローが発生し、その後パケット損失が発生する可能性がある。 0
 から 999 までの値は設定可能。デフォルト: 0 ミリ秒。
 
-fce ignore names = <NAME\[/NAME2/...\]\> **(G)**
+fce ignore names = <NAME\[,NAME2,...\]\> **(G)**
 
-> FCE
-イベントを生成すべきでないファイル名をスラッシュで区切ったリスト。デフォルトでは
-.DS_Store。
+> FCEイベントを生成すべきでないファイル名をカンマ区切りのリスト。デフォルトでは
+`.DS_Store`
 
-fce ignore directories = <NAME\[,NAME2,...\]\> **(G)**
+fce ignore directories = <PATH\[,PATH2,...\]\> **(G)**
 
-> FCE
-イベントが生成されないディレクトリのカンマ区切りのリスト。デフォルトは無し。
+> FCEイベントが生成されないディレクトリのカンマ区切りのリスト。ホストのファイルシステム上の絶対パスである必要がある。
+パスはスラッシュで終わってはならない。デフォルトは無し。
 
 fce notify script = <PATH\> **(G)**
 
@@ -699,8 +688,7 @@ client polling = <BOOLEAN\> (デフォルト: *no*) **(G)**
 notificationの機能があることを宣伝しない。これは、接続中のクライアントが開いているサーバのウインドウの変更を検出するために10秒毎にポーリングするのを目的としている。*注記*:
 同時接続クライアント数とネットワークスピード次第でネットワークの負荷が相当に高くなる!
 
-現在のNetatalkはserver
-notificationを正確にサポートしており、接続中のクライアントは他のクライアントが内容を変更したときにフォルダ内の一覧を更新できるので、もはやこのオプションは使わないでください。
+> 現在のNetatalkはserver notificationを正確にサポートしており、接続中のクライアントは他のクライアントが内容を変更したときにフォルダ内の一覧を更新できるので、もはやこのオプションは使わないでください。
 
 ## ACL処理のためのオプション
 
@@ -711,15 +699,15 @@ map acls = <none|rights|mode\> **(G)**
 
 > none
 
-> ACLのマッピングをしない
+> > ACLのマッピングをしない
 
-rights
+> rights
 
-> 有効な権限がUARights構造にマップされる。これがデフォルトである。
+> > 有効な権限がUARights構造にマップされる。これがデフォルトである。
 
-mode
+> mode
 
-> ACLはファイルシステムオブジェクトのUNIXモードにもマップされる。
+> > ACLはファイルシステムオブジェクトのUNIXモードにもマップされる。
 
 もしクライアント上で ACL を表示できるようにしたければ、 クライアントもサーバーも認証ドメイン（ディレクトリサービス、例えば、LDAP、Open
 Directory、Active Directory）の一部としてセットアップしなければならない。その理由は、OS X の ACL は単に uid
@@ -735,15 +723,13 @@ Netatalk では以下の LDAP オプションが設定されなければなら�
 
 ldap auth method = <none|simple\> **(G)**
 
-> 認証方式: **none** | **simple**
+> none
 
-none
+> > 匿名 LDAP 認証
 
-> 匿名 LDAP 認証
+> simple
 
-simple
-
-> 簡易 LDAP 認証
+> > 簡易 LDAP 認証
 
 ldap auth dn = <dn\> **(G)**
 
@@ -761,7 +747,7 @@ LDAP ライブラリ次第。本オプションは LDAP に UUID
 の問い合わせをできるようにするために、明示的な ACL
 サポートを必要とする時のみ必要。
 
-設定の構文的なチェックのために **afpldaptest**(1) を使うこともできる。
+> 設定の構文的なチェックのために **afpldaptest**(1) を使うこともできる。
 
 ldap userbase = <base dn\> **(G)**
 
@@ -783,7 +769,7 @@ ldap uuid attr = <dn\> **(G)**
 
 > UUID のある LDAP 属性の名前。
 
-注記: これはユーザーでもグループでも双方で用いられる。
+> 注記: これはユーザーでもグループでも双方で用いられる。
 
 ldap name attr = <dn\> **(G)**
 
@@ -799,7 +785,7 @@ ldap uuid string = <STRING\> **(G)**
 '-'を続けたもので、それぞれの 'x' は 0-9a-f の値を示し、'-'
 はそれぞれ区切り文字である。
 
-デフォルト: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+> デフォルト: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ldap uuid encoding = <string | ms-guid (デフォルト: string)\> **(G)**
 
@@ -811,15 +797,15 @@ ldap uuid encoding = <string | ms-guid (デフォルト: string)\> **(G)**
 内にあるオブジェクトの objectGUID 属性で用いられる内部 UUID
 表記とバイナリー形式が相互に変換される。
 
-オプション **ldap user filter** 及び **ldap group filter** も参照のこと。
+> オプション **ldap user filter** 及び **ldap group filter** も参照のこと。
 
-string
+> string
 
-> UUID は文字列。例えば OpenDirectory とで使用する。
+> > UUID は文字列。例えば OpenDirectory とで使用する。
 
-ms-guid
+> ms-guid
 
-> Active Directory からの objectGUID バイナリー。
+> > Active Directory からの objectGUID バイナリー。
 
 ldap user filter = <STRING (デフォルト: 未使用)\> **(G)**
 
@@ -827,7 +813,7 @@ ldap user filter = <STRING (デフォルト: 未使用)\> **(G)**
 フィルター。これは、ユーザーとグループが同じディレクトリのサブツリーに保存されている
 Active Directory 環境で必要。
 
-Active Directory での推奨設定: **objectClass=user**
+> Active Directory での推奨設定: **objectClass=user**
 
 ldap group filter = <STRING (デフォルト: 未使用)\> **(G)**
 
@@ -835,7 +821,7 @@ ldap group filter = <STRING (デフォルト: 未使用)\> **(G)**
 フィルター。これは、ユーザーとグループが同じディレクトリのサブツリーに保存されている
 Active Directory 環境で必要。
 
-Active Directory での推奨設定: **objectClass=group**
+> Active Directory での推奨設定: **objectClass=group**
 
 # ボリュームパラメータの説明
 
@@ -885,13 +871,13 @@ hosts allow = <IPホストアドレス/IPマスクビット \[ ... \]\> **(V)**
 IPv4
 のドット区切りフォーマット、IPv6の16進数フォーマットのどちらでもよい。
 
-例: hosts allow = 10.1.0.0/16 10.2.1.100 2001:0db8:1234::/48
+> 例: hosts allow = 10.1.0.0/16 10.2.1.100 2001:0db8:1234::/48
 
 hosts deny = <IPホストアドレス/IPマスクビット \[ ... \]\> **(V)**
 
 > 列挙されたホストとネットのみが拒否され、ほかの全ては許可される。
 
-例: hosts deny = 192.168.100/24 10.1.1.1 2001:db8::1428:57ab
+> 例: hosts deny = 192.168.100/24 10.1.1.1 2001:db8::1428:57ab
 
 cnid scheme = <backend\> **(V)**
 
@@ -914,29 +900,28 @@ ea = <sys|samba|ad|none\> (default: auto detect) **(V)**
 
 > 拡張属性およびリソースフォークをどのように保存するか指定する。
 
-By default, we attempt to enable **sys** with a fallback to **ad**.  For the
-auto detection to work, the volume needs to be writable because we attempt
-to set an EA on the shared directory itself.  If **read only = yes** is set,
-we fallback to **sys**.  Use explicit "**ea = ad|none**" for read-only
-volumes where appropriate.
+> By default, we attempt to enable **sys** with a fallback to **ad**.
+For the auto detection to work, the volume needs to be writable
+because we attempt to set an EA on the shared directory itself.
+If **read only = yes** is set, we fallback to **sys**.
+Use explicit "**ea = ad|none**" for read-only volumes where appropriate.
 
-sys
+> sys
 
-> ファイルシステムの拡張属性を使う。
+> > ファイルシステムの拡張属性を使う。
 
-samba
+> samba
 
-> ファイルシステムの拡張属性を使うが、Sambaのvfs_streams_xattrとの互換性の目的で、それぞれの拡張属性に値がゼロの1バイトを追加する。
+> > ファイルシステムの拡張属性を使うが、Sambaのvfs_streams_xattrとの互換性の目的で、それぞれの拡張属性に値がゼロの1バイトを追加する。
 
-ad
+> ad
 
-> Use AppleDouble v2 metadata stored as files in *.AppleDouble* directories.
-This should only be used when the host's filesystem does not support
-Extended Attributes.
+> > *.AppleDouble* ディレクトリ内のファイルとして格納された AppleDouble v2 メタデータを使用する。
+ファイルシステムが拡張属性をサポートしていない場合にのみ使用するべき。
 
-none
+> none
 
-> 拡張属性をサポートしない。
+> > 拡張属性をサポートしない。
 
 > **警告**
 
@@ -955,13 +940,13 @@ casefold = <option\> **(V)**
 > ファイル名の大文字小文字を変更すべき場合、casefold
 オプションが処理する。有効なオプションは:
 
-**tolower** - 双方向で名前を小文字に変換する。
+> **tolower** - 双方向で名前を小文字に変換する。
 
-**toupper** - 双方向で名前を大文字に変換する。
+> **toupper** - 双方向で名前を大文字に変換する。
 
-**xlatelower** - クライアントでは小文字に見えて、サーバでは大文字に見える。
+> **xlatelower** - クライアントでは小文字に見えて、サーバでは大文字に見える。
 
-**xlateupper** - クライアントでは大文字に見えて、サーバでは小文字にみえる。
+> **xlateupper** - クライアントでは大文字に見えて、サーバでは小文字にみえる。
 
 password = <password\> **(V)**
 
@@ -974,7 +959,7 @@ file perm = <mode\> **(V)**; directory perm = <mode\> **(V)**
 はファイルにのみ、**directory perm** はディレクトリにのみ用いる。
 "**unix priv = no**" と共に用いてはならない。
 
-## 例：共同作業グループ向けのボリューム
+> **例**：共同作業グループ向けのボリューム
 
     file perm = 0660
     directory perm = 0770
@@ -1050,8 +1035,7 @@ delete veto files = <BOOLEAN\> (デフォルト: *no*) **(V)**
 no に設定し（デフォルト）、そしてもしあるディレクトリが何か非 veto
 ファイルないしはディレクトリを含んでいたら、ディレクトリの削除は失敗するであろう。これは通常あなたの望むところの動作である。
 
-もしこのオプションが yes に設定されていたら、Netatalk は veto
-化ディレクトリ・ディレクトリ内も含めあらゆるファイル、ディレクトリを再帰的に削除しようとするであろう。
+> もしこのオプションが yes に設定されていたら、Netatalk は veto 化ディレクトリ・ディレクトリ内も含めあらゆるファイル、ディレクトリを再帰的に削除しようとするであろう。
 
 follow symlinks = <BOOLEAN\> (デフォルト: *no*) **(V)**
 
@@ -1166,12 +1150,12 @@ uam list = uams_dhx.so uams_dhx2.so uams_randnum.so uams_clrtxt.so
 legacy icon = daemon
 
 [mac]
-name = Mac Volume
+volume name = Mac Files
 path = /srv/mac
 legacy volume size = yes
 
 [apple2]
-name = Apple II Volume
+volume name = Apple II Files
 path = /srv/apple2
 prodos = yes
 ```
