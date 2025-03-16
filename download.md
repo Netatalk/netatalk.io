@@ -39,12 +39,16 @@ Find historical afptest release tarballs in the [SourceForge
 Files](https://sourceforge.net/projects/netatalk/files/Testsuite/)
 section.
 
-### Docker
+### Container Deployment
 
 The Netatalk development team maintains a
 [Docker image for Netatalk](https://hub.docker.com/r/netatalk/netatalk)
-which are distributed on Docker Hub.
+which is distributed on Docker Hub.
 
-With Docker Engine installed, do:
+With Docker Engine or equivalent installed, pull the `netatalk/netatalk:latest` image
+from Docker Hub. Example command:
 
     $ docker pull netatalk/netatalk:latest
+
+See the [Docker image documentation](/docker.html)
+for more information on how to use the image.
