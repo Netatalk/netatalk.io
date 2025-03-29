@@ -27,7 +27,9 @@ configuration files, and starting/stopping system services are required.
 
 Use your operating system's package manager to install the latest
 available *netatalk* package. This is the recommended option for most
-users. See [Repology](https://repology.org/project/netatalk/packages)
+users.
+
+See [Repology](https://repology.org/project/netatalk/packages)
 for a list of known packages.
 
 ### 2. Pull a container image
