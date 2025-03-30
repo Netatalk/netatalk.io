@@ -30,7 +30,7 @@ original afile/achfile/acleandir implementation
 
 - Alain Richard <alain.richard@equation.fr>
 - David R Bosso <dbosso@ltsc.ucsb.edu>
-- Joe Clarke <marcus@marcuscom.com>
+- Joe Clarke <jclarke@marcuscom.com>
 - Jonathan Newman <jnewman@mudpup.com>
 - Lance Levsen <l.levsen@printwest.com>
 - Matthew Keller <kellermg@potsdam.edu>
@@ -81,11 +81,12 @@ original afile/achfile/acleandir implementation
 - Jonas Smedegaard <dr@jones.dk> (Debian GNU/Linux)
 - Daniel Markstedt <daniel@mindani.net> (Debian GNU/Linux)
 - Andrew Bauer <zonexpertconsulting@outlook.com> (Fedora)
-- Joe Clarke <marcus@FreeBSD.org> (FreeBSD)
+- Joe Clarke <jclarke@marcuscom.com> (FreeBSD)
 - Eric Knibbe (Homebrew)
 - Blake Garner (MacPorts)
 - David Rankin <drankin@bohemians.lexington.ky.us> (NetBSD)
 - Hauke Fath <hf@spg.tu-darmstadt.de> (NetBSD)
+- Antoine Jacoutot <ajacoutot@openbsd.org> (OpenBSD)
 - Antonio Pastor (OpenWrt)
 
 > **NOTE:** This list of package maintainers is nowhere near complete,
@@ -247,8 +248,18 @@ Our gratitude goes out to all package maintainers not listed here, too!
 - Antonio Pastor
 - Eric Knibbe
 - Eric Helgeson <erichelgeson@gmail.com>
+- sqrmax
+- Nils Frohberg
+- Johan Huldtgren
+- Stuart Henderson
+- Antoine Jacoutot <ajacoutot@openbsd.org>
+- Rob Mitchelmore
+- Sergey Fedorov <vital.had@gmail.com>
 
 ### macipgw
+
+Contributors to the original macipgw project and forks,
+at the time the codebase was merged into netatalk.
 
 - Stefan Bethke <Stefan.Bethke@Hanse.DE>: original author
 - Jason King

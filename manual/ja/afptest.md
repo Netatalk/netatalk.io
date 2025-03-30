@@ -1,7 +1,7 @@
 # 名前
 
-afp_lantest, afp_logintest, afp_spectest, afp_speedtest, afparg — AFP
-プロトコルテスト一式
+afp_lantest, afp_logintest, afp_spectest, afp_speedtest, afparg, fce_listen
+— AFP プロトコルテスト一式
 
 # 概要
 
@@ -22,6 +22,8 @@ file] [-f test]`
 `afparg [-1234567lVv] [-h host] [-p port] [-s volume] [-u user] [-w
 password] [-f command]`
 
+`fce_listen [-h host] [-p port]`
+
 # 説明
 
 *afptest*
@@ -38,6 +40,8 @@ password] [-f command]`
 **afp_lantest** と **afp_speedtest**` は、AFP サーバーのファイル転送ベンチマークです。前者は、さまざまなファイル転送パターンのバッチを実行する *HELIOS LanTest* にヒントを得たものである。後者は、いくつかのテスト ケースが用意された、よりシンプルなツールである。
 
 **afparg**` は、オプションの引数を持つ特定のコマンドを受け取り、AFP サーバーに単一のアクションを送信する AFP CLI クライアントである。これは、1 回限りのトラブルシューティングやシステム管理に使用できる。
+
+**fce_listen** は、Netatalk のファイルシステム変更イベント (FCE) プロトコルのシンプルなリスナーである。これは、AFP サーバーから受信した UDP データグラムを出力する。
 
 各オプションの正確な使用方法については、各ツールのヘルプテキストを参照してください。
 
