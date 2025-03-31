@@ -144,16 +144,11 @@ def html_navbar(version):
     <h2>netatalk manual</h2>
     <div><a href="/stable/htmldocs">Table of Contents</a></div>
     <ol>
-      <li><a href="/stable/htmldocs/intro">Introduction</a></li>
-      <li><a href="/stable/htmldocs/installation">Installation</a></li>
-      <li><a href="/stable/htmldocs/configuration">Configuration</a></li>
-      <li><a href="/stable/htmldocs/appletalk">AppleTalk</a></li>
-      <li><a href="/stable/htmldocs/upgrade">Upgrading</a></li>
-      <li><a href="/stable/htmldocs/man-pages">List of Manual Pages</a></li>
-    </ol>
-    <ol class="alpha">
-      <li><a href="/stable/htmldocs/compile">Appendix: Compile</a></li>
-      <li><a href="/stable/htmldocs/gpl">Appendix: License</a></li>
+      <li><a href="/manual/en/Installation">Installation</a></li>
+      <li><a href="/manual/en/Configuration">Configuration</a></li>
+      <li><a href="/manual/en/AppleTalk">AppleTalk</a></li>
+      <li><a href="/manual/en/Upgrading">Upgrading</a></li>
+      <li><a href="/manual/en/Compilation">Compilation</a></li>
     </ol>
   </div>
   <div class="navbar">

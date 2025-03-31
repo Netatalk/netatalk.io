@@ -1,5 +1,20 @@
 # News Archive
 
+## End of Life policy published
+
+*18th of January 2025*
+
+The Netatalk Project has published its End of Life policy. We guarantee
+that each release series will be supported with security patches for 12
+months after the release of the superseding feature release.
+
+Most urgently, this means that the long-running 3.1 release series will
+be out of support after May 31st, 2025. Users and downstream packagers
+are encouraged to upgrade to the latest Netatalk 4.1 release series.
+
+For more information, see the [Security
+Policy](/security.html).
+
 ## Netatalk 4.1.0 is available
 
 *11th of January 2025*

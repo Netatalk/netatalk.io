@@ -105,6 +105,24 @@ latest version of Netatalk provides.
 
 # Latest News
 
+## Netatalk 4.2.0 is available
+
+*31st of March 2025*
+
+The Netatalk development team is proud to announce the first release of
+the Netatalk 4.2 release series. The theme for this release is
+security and reliability.
+
+There are a number of breaking changes and new dependencies in this release.
+Please read the [Release Notes](/4.2/ReleaseNotes4.2.0.html) carefully
+before upgrading.
+
+Early adopters are encouraged to test the new release and report any
+issues to the Netatalk development team.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.0.html).
+
 ## Netatalk 4.1.2 is available
 
 *10th of February 2025*
@@ -132,21 +150,6 @@ All users of previous Netatalk versions are encouraged to upgrade to
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.1/ReleaseNotes4.1.1.html).
-
-## End of Life policy published
-
-*18th of January 2025*
-
-The Netatalk Project has published its End of Life policy. We guarantee
-that each release series will be supported with security patches for 12
-months after the release of the superseding feature release.
-
-Most urgently, this means that the long-running 3.1 release series will
-be out of support after May 31st, 2025. Users and downstream packagers
-are encouraged to upgrade to the latest Netatalk 4.1 release series.
-
-For more information, see the [Security
-Policy](/security.html).
 
 ## Older Stories
 

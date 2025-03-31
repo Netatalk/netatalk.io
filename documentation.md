@@ -16,6 +16,8 @@ upgrade Netatalk.
 
 ### Netatalk 4 Manual
 
+- [Netatalk 4.2 manual](/manual/en)
+- [Netatalk 4.2 マニュアル (Japanese)](/manual/ja)
 - [Netatalk 4.1 manual](/4.1/htmldocs)
 - [Netatalk 4.1 マニュアル (Japanese)](/4.1/htmldocs/ja)
 - [Netatalk 4.0 manual](/4.0/htmldocs)
@@ -66,6 +68,7 @@ Records of historical Netatalk releases.
 
 ### Netatalk Version 4 Release Series
 
+- [Netatalk 4.2.0](/4.2/ReleaseNotes4.2.0.html)
 - [Netatalk 4.1.2](/4.1/ReleaseNotes4.1.2.html)
 - [Netatalk 4.1.1](/4.1/ReleaseNotes4.1.1.html)
 - [Netatalk 4.1.0](/4.1/ReleaseNotes4.1.0.html)
