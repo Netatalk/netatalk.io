@@ -142,7 +142,6 @@ def html_navbar(version):
   </div>
   <div class="navbar">
     <h2>netatalk manual</h2>
-    <div><a href="/stable/htmldocs">Table of Contents</a></div>
     <ol>
       <li><a href="/manual/en/Installation">Installation</a></li>
       <li><a href="/manual/en/Configuration">Configuration</a></li>
