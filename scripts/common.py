@@ -1,11 +1,10 @@
 import re
 
-VERSION = "4.1.2"
 LOCALES = ["en", "ja"]
 
 # Netatalk releases 2023 onward which have release notes on GitHub.
 # Earlier versions have static release notes html pages.
-RELEASENOTES = [
+VERSIONS = [
     "2.2.7",
     "2.2.8",
     "2.2.9",
@@ -54,6 +53,8 @@ RELEASENOTES = [
     "4.1.1",
     "4.1.2",
 ]
+
+VERSION = max(VERSIONS)
 
 def html_head(title, path, lang="en"):
     return f"""<!doctype html>

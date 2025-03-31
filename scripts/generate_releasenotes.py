@@ -4,7 +4,7 @@ import markdown
 import requests
 
 from common import (
-    RELEASENOTES,
+    VERSIONS,
     VERSION,
     html_head,
     html_menlinks,
@@ -20,7 +20,7 @@ if os.environ.get("GITHUB_TOKEN") is None:
     print("WARNING: No GitHub token found. Skipping release notes generation.")
 else:
     github_token = os.environ["GITHUB_TOKEN"]
-    for release_version in RELEASENOTES:
+    for release_version in VERSIONS:
         github_tag = "netatalk-" + release_version.replace(".", "-")
         minor_version = re.search(r"^(\d+\.\d+)", release_version).group()
         file_name = f"ReleaseNotes{release_version}.html"
