@@ -45,8 +45,8 @@ package](https://repology.org/badge/version-for-repo/nix_unstable/netatalk.svg)
 port](https://repology.org/badge/version-for-repo/openbsd/netatalk.svg)
 ![OpenPKG
 package](https://repology.org/badge/version-for-repo/openpkg_current/netatalk.svg)
-![OpenWrt 23.05 x86_64
-package](https://repology.org/badge/version-for-repo/openwrt_23_05_x86_64/netatalk.svg)
+![OpenWrt 24.10 x86_64
+package](https://repology.org/badge/version-for-repo/openwrt_24_10_x86_64/netatalk.svg)
 ![Parabola
 package](https://repology.org/badge/version-for-repo/parabola/netatalk.svg)
 ![PCLinuxOS
