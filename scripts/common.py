@@ -149,6 +149,7 @@ def html_navbar(version):
       <li><a href="/manual/en/AppleTalk">AppleTalk</a></li>
       <li><a href="/manual/en/Upgrading">Upgrading</a></li>
       <li><a href="/manual/en/Compilation">Compilation</a></li>
+      <li><a href="/manual/en/License">License</a></li>
     </ol>
   </div>
   <div class="navbar">
