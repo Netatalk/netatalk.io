@@ -7,10 +7,9 @@ distributions, to package and distribute pre-built binary packages for
 Netatalk.
 
 Either use your operating system's package manager to search for a
-*netatalk* package, or refer to the below list of known packages
-courtesy of [Repology](https://repology.org/project/netatalk/packages).
-
-See the bottom of this page for a full list of known packages.
+*netatalk* package, or refer to the list of packages
+known to [Repology](https://repology.org/project/netatalk/packages)
+at the bottom of this page.
 
 ### Netatalk Source Code Releases
 
@@ -55,6 +54,6 @@ With Docker Engine or compatible platform installed, pull a
 See the [container documentation](/docker.html) for available options
 and usage examples.
 
-### Repology package status
+### Repology status
 
 ![Repology package status](https://repology.org/badge/vertical-allrepos/netatalk.svg)
