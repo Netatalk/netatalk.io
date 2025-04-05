@@ -46,7 +46,7 @@ The Netatalk development team maintains a
 [container image for Netatalk](https://hub.docker.com/r/netatalk/netatalk)
 which is distributed on Docker Hub.
 
-With Docker Engine or compatible platform installed, pull a
+With Docker Engine or compatible container runtime installed, pull a
 `netatalk/netatalk` tag from Docker Hub, for example:
 
     $ docker pull netatalk/netatalk:latest

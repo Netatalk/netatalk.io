@@ -32,19 +32,17 @@ users.
 See [Repology](https://repology.org/project/netatalk/packages)
 for a list of known packages.
 
-### 2. Pull a container image
+### 2. Deploy a container image
 
-This option is either for users who already leverage containers in their
+This option is either for you who already leverage containers in your
 setup, or for when a binary package is outdated and you want to run the
-latest Netatalk version. Running a docker image has a relatively lower
-barrier to entry compared to building from source.
+latest Netatalk version without building from source.
 
-With Docker Engine or equivalent installed, do:
+With Docker Engine or compatible container runtime installed, do:
 
     $ docker pull netatalk/netatalk:latest
 
-Then follow the
-[instructions](https://hub.docker.com/r/netatalk/netatalk) on how to
+Then follow the [instructions](/docker.html) on how to
 configure the container.
 
 ### 3. Build from source
