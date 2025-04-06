@@ -6,6 +6,8 @@
 * [Netatalk のセットアップ](Configuration.html)
 * [AppleTalk](AppleTalk.html)
 * [以前の Netatalk バージョンからのアップグレード](Upgrading.html)
+* [ソースコードから Netatalk をコンパイルする](Compilation.html)
+* [ライセンス](License.html)
 
 ユーザーツール
 
@@ -50,8 +52,3 @@
 * [atalk](atalk.html)
 * [atalk_aton](atalk_aton.html)
 * [nbp_name](nbp_name.html)
-
-付録
-
-* [ソースコードから Netatalk をコンパイルする](Compilation.html)
-* [ライセンス](License.html)
