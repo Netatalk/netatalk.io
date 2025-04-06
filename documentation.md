@@ -9,38 +9,13 @@
 - [Developer's technical reference](/developer.html)
 - [Netatalk installation requirements](/install.html)
 
-## Manuals
+## Manual
 
 The manual covers topics on how to install, configure, control, and
 upgrade Netatalk.
 
-### Netatalk 4 Manual
-
 - [Netatalk 4.2 manual](/manual/en)
 - [Netatalk 4.2 マニュアル (Japanese)](/manual/ja)
-- [Netatalk 4.1 manual](/4.1/htmldocs)
-- [Netatalk 4.1 マニュアル (Japanese)](/4.1/htmldocs/ja)
-- [Netatalk 4.0 manual](/4.0/htmldocs)
-- [Netatalk 4.0 マニュアル (Japanese)](/4.0/htmldocs/ja)
-
-### Netatalk 3 Manual
-
-- [Netatalk 3.2 manual](/3.2/htmldocs)
-- [Netatalk 3.2 マニュアル (Japanese)](/3.2/htmldocs/ja)
-- [Netatalk 3.1 manual](/3.1/htmldocs)
-- [Netatalk 3.1 マニュアル (Japanese)](/3.1/htmldocs/ja)
-- [Netatalk 3.0 manual](/3.0/htmldocs)
-
-### Netatalk 2 Manual
-
-- [Netatalk 2.4 manual](/2.4/htmldocs)
-- [Netatalk 2.3 manual](/2.3/htmldocs)
-- [Netatalk 2.2 manual](/2.2/htmldocs)
-- [Netatalk 2.1 manual](/2.1/htmldocs)
-- [Netatalk 2.0 manual](/2.0/htmldocs)
-- [Netatalk 2.0.5 manual (PDF)](/2.0/Netatalk-Manual2.0.5.pdf)
-- [Netatalk 2.0.3 manual (PDF)](/2.0/Netatalk-Manual2.0.3.pdf)
-- [Netatalk 2.0.2 manual (PDF)](/2.0/Netatalk-Manual.pdf)
 
 ## Tech Notes
 
