@@ -1,15 +1,16 @@
 # netatalk-homepage
 
-Netatalk html website.
+Netatalk static website.
 
-The entire site, save for historical manual pages, is generated from Markdown sources.
+The entire site is generated from Markdown sources using custom Python scripts.
 
 Release notes as well as wiki documentation pages are generated from Markdown sources from GitHub release notes and wiki on the fly.
 
-The contents of `manual/` should not be modified directly, but rather built from netatalk sources and installed into this location.
-See the [Netatalk release process](https://github.com/Netatalk/netatalk/wiki/Release-Process) for the detailed procedure.
+The contents of `manual/` should not be modified directly.
+See the [Netatalk release process](https://github.com/Netatalk/netatalk/wiki/Release-Process) for how to refresh these sources.
 
 # New release procedure
+
 - Create a news story at the top of `index.md`.
 - Move an older news story to `archive.md`. Limit the number of news stories on `index.md` to about 4.
 - Add link to release notes in `documentation.md`.
