@@ -16,7 +16,8 @@ It covers topics on how to install, configure, control, and upgrade Netatalk.
 - [Docker](/docker.html)
 - [Developer](/developer.html)
 - [Install](/install.html)
-- [Archived manuals for previous Netatalk versions](https://sourceforge.net/projects/netatalk/files/docs/)
+
+If you are looking for manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
 ## Tech Notes
 
