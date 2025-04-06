@@ -6,7 +6,7 @@ afp_voluuid.conf — AFP ボリュームの UUID を指定するために afpd �
 
 **afp_voluuid.conf** は全てのAFPボリュームのUUIDを魔法のように自動的に指定するために **afpd** が利用する設定ファイルである。設定行は以下のように構成される。
 
-<"volume-name"\> <uuid-string\>
+    "volume-name" "uuid-string"
 
 最初のフィールドはボリューム名である。ボリューム名がスペースを含む場合、それを引用符で囲まなければならない。第二のフィールドは36文字からなるUUIDの16進数ASCII文字列表現である。
 
