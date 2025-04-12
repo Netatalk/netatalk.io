@@ -95,9 +95,9 @@ Mac と Netatalk が以前は異なる結果を返していたが、現在は同
 
 以下は、APF 仕様テストを実行するためのサンプル設定です。
 
-- 2人のユーザー: <user1> <user2> は同じパスワードを持つ。
-- 1つのグループ: <afpusers>
-- user1, user2 は afpusers グループに割り当てられる。
+- 2人のユーザー: `user1`, `user2` は同じパスワードを持つ。
+- 1つのグループ: `afpusers`
+- `user1`, `user2` は `afpusers` グループに割り当てられる。
 - clear text UAM + guest UAM
 - 2つの空のボリューム:
 
