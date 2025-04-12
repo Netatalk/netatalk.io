@@ -3,10 +3,10 @@
 マニュアル
 
 * [インストール](Installation.html)
-* [Netatalk のセットアップ](Configuration.html)
+* [セットアップ](Configuration.html)
 * [AppleTalk](AppleTalk.html)
-* [以前の Netatalk バージョンからのアップグレード](Upgrading.html)
-* [ソースコードから Netatalk をコンパイルする](Compilation.html)
+* [アップグレード](Upgrading.html)
+* [コンパイル](Compilation.html)
 * [ライセンス](License.html)
 
 ユーザーツール
@@ -20,7 +20,7 @@
 * [afptest](afptest.1.html)
 * [asip-status](asip-status.1.html)
 * [dbd](dbd.1.html)
-* [ライセンス](License.html)
+* [getzones](getzones.1.html)
 * [macusers](macusers.1.html)
 * [nbp](nbp.1.html)
 * [pap](pap.1.html)

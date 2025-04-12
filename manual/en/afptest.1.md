@@ -18,7 +18,7 @@ afp_lantest, afp_logintest, afp_spectest, afp_speedtest, afparg, fce_listen — 
 
 # Description
 
-This suite contains several utilities aimed at testing AFP servers.
+The AFP testsuite contains several utilities aimed at testing AFP servers.
 They're broadly divided into conformance tests, benchmarking, and helpers.
 
 Most of the tools in the *afptest* family follow the same general usage
