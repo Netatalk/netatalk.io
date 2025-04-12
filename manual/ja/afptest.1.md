@@ -35,6 +35,8 @@ password] [-f command]`
 から実行し、テスト対象のボリュームへのローカル パスを指定する必要がある。 単一のテストまたはテスト セクションは、**-f**
 オプションで実行できる。使用可能なテストは、**-l** オプションで一覧表示できる。
 
+各オプションの正確な使用方法については、各ツールのヘルプテキストを参照してください。
+
 ## 復帰コード
 
 テストスイート内の各テストは、次の復帰コードのいずれかを返す。
@@ -68,8 +70,6 @@ NOT TESTED の結果はテスト実施全体の失敗として扱われるが、
 
 **fce_listen** は、Netatalk のファイルシステム変更イベント (FCE) プロトコルのシンプルなリスナーである。これは、AFP サーバーから受信した UDP データグラムを出力する。
 
-各オプションの正確な使用方法については、各ツールのヘルプテキストを参照してください。
-
 ## Mac AFP サーバーのテスト
 
 このツール群は、主に Netatalk AFP サーバーをテストするために設計されているが、古い Mac OS X または Classic Mac OS
@@ -100,8 +100,8 @@ Mac と Netatalk が以前は異なる結果を返していたが、現在は同
 - clear text UAM + guest UAM
 - 2つの空のボリューム:
 
-    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
-    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
+>    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
+>    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
 
 *注意:* テストボリュームに残ったファイルがあると、いくつかのテストが失敗する。
 

@@ -30,6 +30,9 @@ local path to the volume under test to be provided. Single tests or test
 sections can be executed with the **-f** option. Available tests can be
 listed with the **-l** option.
 
+Please refer to the helptext of each tool for the precise use of each
+option.
+
 ## Return codes
 
 Each test within a testsuite returns one of the following return codes:
@@ -76,9 +79,6 @@ administration. Run `afparg -l` to list available commands.
 (FCE) protocol. It will print out any UDP datagrams received from the AFP
 server.
 
-Please refer to the helptext of each tool for the precise use of each
-option.
-
 ## Testing a Mac AFP server
 
 This suite of tools were designed primarily to test Netatalk AFP servers,
@@ -112,8 +112,8 @@ Below is a sample configuration for running the APF spec tests.
 - clear text UAM + guest UAM
 - two empty volumes:
 
-    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
-    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
+>    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
+>    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
 
 *Note:* Some tests will fail if there are residual files
 in the test volumes.
