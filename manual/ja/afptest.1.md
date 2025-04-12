@@ -100,8 +100,10 @@ Mac と Netatalk が以前は異なる結果を返していたが、現在は同
 - clear text UAM + guest UAM
 - 2つの空のボリューム:
 
->    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
->    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
+```
+drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
+drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
+```
 
 *注意:* テストボリュームに残ったファイルがあると、いくつかのテストが失敗する。
 
