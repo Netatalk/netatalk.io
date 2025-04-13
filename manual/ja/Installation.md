@@ -2,7 +2,7 @@
 
 > **警告**
 
-> Netatalk 2 または 3 から Netatalk 4
+> 以前のバージョン から Netatalk 4
 にアップグレードする前に、このマニュアルの[アップグレード](Upgrading.html)
 の章を必ずお読みください。
 
@@ -15,6 +15,9 @@
 Netatalk のバイナリーパッケージは、いくつかの Linux、BSD、Solaris
 ディストリビューションに含まれている。通常の配布元も見たいだろうと思う。
 
+既知の Netatalk パッケージのリストは [Repology の Netatalk
+ページ](https://repology.org/project/netatalk/versions) を見るとよい。
+
 第三者が提供しているパッケージ リポジトリも参照する手もある。例えば、Red Hat 派生 Linux ディストリビューションの為の
 [rpmfind](https://rpmfind.net/)、 Solaris 系 OS の為の
 [OpenCSW](https://www.opencsw.org/)、そして macOS の為の
@@ -22,46 +25,20 @@ Netatalk のバイナリーパッケージは、いくつかの Linux、BSD、So
 
 ### ソースパッケージ
 
-#### ターボール
-
 tar で固めた Netatalk 安定版ソースコードは [GitHub の Netatalk
 リリースページ](https://github.com/Netatalk/netatalk/releases)にある。
 
-#### Git
+ソースコードは [Netatalk Git リポジトリ](https://github.com/Netatalk/netatalk) からも入手できる。
 
-Git レポジトリ のダウンロードは迅速で容易である：
+ソースコードから Netatalk をビルドする方法については
+[インストールクイックスタート](https://netatalk.io/install) を参照のこと。
 
-1.  Git がインストールしてあることを確認する。**which git** は git のパスを示してくれるはずである。
+## 前提条件
 
-        $ which git
-        /usr/bin/git
+Netatalk は、いくつかのサードパーティのライブラリとユーティリティに依存している。Netatalk
+をビルドする前に、いくつかの必須パッケージをインストールする必要がある。さらに、機能を強化するためにいくつかのオプションパッケージをインストールすることができる。
 
-2.  ソースを取得してみよう。
-
-        $ git clone https://github.com/Netatalk/netatalk.git netatalk-code
-        Cloning into 'netatalk-code'...
-        remote: Enumerating objects: 41592, done.
-        ...
-        Resolving deltas: 100% (32227/32227), done.
-
-    上記で Git リポジトリから、Netatalk
-    のソース全体の完全でまっさらのコピーを含む *netatalk-code*
-    という名前のローカルディレクトリが作成される。
-
-3.  ブランチやタグを指定しない場合は、最先端の開発コードが取得さる。例えば、最新の安定した Netatalk 3.1
-    コードを入手するには、「branch-netatalk-3-1」という名前のブランチをチェックアウトする：
-
-        $ git checkout branch-netatalk-3-1
-
-4.  レポジトリのコピーを最新の状態にしておきたい場合、適宜以下を実行する。
-
-        $ git pull
-
-## Netatalk のコンパイル
-
-### 前提条件
-
-#### 必要なサードパーティソフトウェア
+### 必要なサードパーティソフトウェア
 
 - Berkeley DB
 
@@ -87,7 +64,7 @@ Git レポジトリ のダウンロードは迅速で容易である：
     の暗号化を提供する。これらは、DHX2、DHCAST128 (別名 DHX)、および
     RandNum である。
 
-#### 任意のサードパーティソフトウェア
+### 任意のサードパーティソフトウェア
 
 Netatalk はその機能性を拡充するために以下のサードパーティソフトウェアを使用することができる。
 
@@ -123,8 +100,8 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
     マネージャを使用する場合、CrackLib は netatalk
     での認証に弱いパスワードを設定するのを防ぐのに役立つ。
 
-    ランタイム パッケージで別途配布されることもある CrackLib
-    辞書も必須である。
+    別途配布されることもある CrackLib dictionaryパッケージ
+    もコンパイル時にも実行時にも必須である。
 
 - D-Bus
 
@@ -190,7 +167,7 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
     Netatalkは、Spotlight検索インデックスのメタデータ バックエンドとして
     [Tracker](https://tracker.gnome.org) またはそれ以降のバージョンである
     TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
-    を使用する。必要な最小限のバージョンは 0.7 である。これは
+    を使用する。必要な最小限のバージョンは 0.12 である。これは
     [SPARQL](https://gnome.pages.gitlab.gnome.org/tracker/)
     をサポートする最初のバージョンだからである。
 
@@ -201,16 +178,10 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
 
 - UnicodeData.txt
 
-    ビルド システムは、Perl と Unicode 文字データベースを使用して、NetatalkのUnicode
-    文字変換ソースを生成する。
+    Netatalk の Unicode 文字変換テーブルを再生成するには、[Unicode 文字データベース](https://www.unicode.org/Public/UNIDATA/UnicodeData.txt)
+    が必要である。
 
-### Netatalk のコンパイル
-
-ビルドシステムの使い方、コードのコンフィグ又はビルドの手順書は [Install Quick Start](/install.html)
-というのがあるので、ご参考まで。
-
-特定の OS に対しての具体的なビルド事例は [Netatalk をソースコードからコンパイルする](Compilation.html)
-付録を参考してください。
+    これは、開発者やパッケージ マネージャーが Netatalk の Unicode 文字変換テーブルを再生成したい場合に関連する。
 
 ## Netatalk の起動と停止
 
