@@ -1,5 +1,38 @@
+Changes in 4.2.1
+================
+
+* NEW: meson: Introduce option to control state dir creation, GitHub #2070
+       Introduces the with-statedir-creation boolean option, true by default
+* NEW: meson: Option for controlling CUPS backend installation, GitHub #2071
+       Introduces with-cups-pap-backend (boolean, default false)
+       and with-cups-libdir-path (string)
+* FIX: meson: Generate Unicode lookup table sources before use, GitHub #2072
+* FIX: libatalk: Work around DSIWrite() bug in AppleShare Client 3.7.x,
+       GitHub #2085
+* FIX: libatalk: Restore cnid mysql pw option that had fallen off
+       which makes the mysql backend usable again, GitHub #2112
+* FIX: afpd: Don't lose extension mapping on macOS hosts, GitHub #2092
+* FIX: afpd: Fall back to ea = none rather than ea = ad when
+       the filesystem EA support check fails, GitHub #2103
+* UPD: webmin: Print volume name + section name in volumes list, GitHub #2073
+* FIX: webmin: Sort lists of index page items in alphabetical order,
+       GitHub #2074
+* FIX: webmin: Return to the correct index tab from other actions, GitHub #2075
+* UPD: testsuite: Print a detailed test summary after spectest run, GitHub #2095
+* UPD: testsuite: Break out separate FPGetExtAttr test module, GitHub #2104
+* UPD: testsuite: Print usage helptext when running test binaries
+       without params, GitHub #2111
+* UPD: docs: Major additions to the afptest man page, GitHub #2100
+* NEW: docs: bstring README with redistribution notes and LICENSE,
+       GitHub #2077
+* FIX: docs: Improve verbiage in signature and UUID man pages, GitHub #2084
+* UPD: docs: Transition Compilation from manual chapter to readme, GitHub #2106
+* UPD: docs: Reduce overlap between install chapter and install readme,
+       GitHub #2107
+
 Changes in 4.2.0
 ================
+
 * NEW: Link with shared iniparser library instead of vendored one, GitHub #1948
        - Makes iniparser a mandatory dependency
        - Our own hacked iniparser is now removed, which has a few side effects
@@ -66,6 +99,7 @@ Changes in 4.2.0
 
 Changes in 4.1.2
 ================
+
 * UPD: meson: Look for shared Berkeley DB library in versioned subdir too,
        to detect the library in the MacPorts build system, GitHub #1909
 * FIX: webmin: Redirect back to the originating module index tab
@@ -76,6 +110,7 @@ Changes in 4.1.2
 
 Changes in 4.1.1
 ================
+
 * NEW: meson: Introduce with-bdb-include-path override option, GitHub #1908
 * FIX: meson: Restore prioritized Berkeley DB detection, GitHub #1877
        Fixes a regression when building on Arch Linux.
@@ -90,6 +125,7 @@ Changes in 4.1.1
 
 Changes in 4.1.0
 ================
+
 * NEW: afpd: Add native metadata storage for macOS hosts, GitHub #1813
 * FIX: afpd: Do not report old AFP versions when AppleTalk support
        is disabled, GitHub #1846
@@ -128,6 +164,7 @@ Changes in 4.1.0
 
 Changes in 4.0.8
 ================
+
 * UPD: Set resource max limit to 10240 on macOS, GitHub #1793
        Compatibility with older macOS hosts such as 10.15 Catalina.
 * UPD: meson: Allow building papd without CUPS, GitHub #1774
@@ -145,6 +182,7 @@ Changes in 4.0.8
 
 Changes in 4.0.7
 ================
+
 * FIX: Remove bitrotted code in the bstring library, GitHub #1769
        This was a regression between netatalk 3.2 and 4.0.
 * FIX: meson: Check for SunRPC function quota_open(), GitHub #1225
@@ -172,6 +210,7 @@ Changes in 4.0.7
 
 Changes in 4.0.6
 ================
+
 * FIX: Workaround for bug in AppleShare Client 3.7.4, GitHub #1749
        Only report support of AFP 2.2 and later to DSI (TCP) clients
        which shaves several bytes off the server response
@@ -187,6 +226,7 @@ Changes in 4.0.6
 
 Changes in 4.0.5
 ================
+
 * UPD: Distribute pre-generated Unicode table sources, GitHub #1724
        This reverts the previous change in v4.0.0 removing these sources.
        We retain the ability to regenerate them on the fly,
@@ -213,6 +253,7 @@ Changes in 4.0.5
 
 Changes in 4.0.4
 ================
+
 * FIX: Fix loss of FinderInfo on resource fork creation with
        AppleDouble EA backend, GitHub #1702
 * FIX: Remove remnants of obsoleted DEBUG compile time flag, GitHub #1696
@@ -255,6 +296,7 @@ Changes in 4.0.4
 
 Changes in 4.0.3
 ================
+
 * FIX: afpd: Limit FPGetSrvrInfo packet for AppleTalk clients, GitHub #1661
        This prevents errors with very old clients
        when many AFP options are enabled.
@@ -288,6 +330,7 @@ Changes in 4.0.3
 
 Changes in 4.0.2
 ================
+
 * NEW: Bring back Classic Mac OS `legacy icon' option, GitHub #1622
 * UPD: Spotlight: Support TinySPARQL/LocalSearch, GitHub #1078
 * FIX: ad: Fix volume check for the AppleDouble toolsuite, GitHub #1605
@@ -307,6 +350,7 @@ Changes in 4.0.2
 
 Changes in 4.0.1
 ================
+
 * UPD: Update license grant to reflect the retroactive rescission
        of U.C Berkeley clause 3, GitHub #1567
 * FIX: meson: Don't always build AppleTalk utils with RPATH, GitHub #1568
@@ -332,6 +376,7 @@ Changes in 4.0.1
 
 Changes in 4.0.0
 ================
+
 * NEW: Reintroduce AppleTalk / DDP support, GitHub #220
        Controlled with the new build system option `-Dwith-appletalk'.
        Revived daemons: atalkd, papd, timelord, a2boot
@@ -363,6 +408,7 @@ Changes in 4.0.0
 
 Changes in 3.2.10
 =================
+
 * BREAKING: Install netatalk-dbus.conf into datadir by default, GitHub #1533
        Previously: sysconfdir. This can be overridden by the build system.
 * FIX: uams: Correct shadow password length check for ClearTxt, GitHub #1528
@@ -376,6 +422,7 @@ Changes in 3.2.10
 
 Changes in 3.2.9
 ================
+
 * UPD: Use the recommended command to import Solaris init manifest,
        GitHub #1451
 * FIX: uams: Make sure the DHX2 client nonce is aligned appropriately,
@@ -386,6 +433,7 @@ Changes in 3.2.9
 
 Changes in 3.2.8
 ================
+
 * UPD: Bump bundled WolfSSL library to stable version 5.7.2, GitHub #1433
        Resolves CVE-2024-1544, CVE-2024-5288, CVE-2024-5991, CVE-2024-5814
 * UPD: Revert local modifications to the bundled WolfSSL library, GitHub #1432
@@ -394,6 +442,7 @@ Changes in 3.2.8
 
 Changes in 3.2.7
 ================
+
 * NEW: meson: Ability to control the run-time linker path config file,
        GitHub #1396
        New boolean Meson option: `-Dwith-ldsoconf'
@@ -409,6 +458,7 @@ Changes in 3.2.7
 
 Changes in 3.2.6
 ================
+
 * BREAKING: meson: Refresh the dynamic linker cache when installing on Linux,
        GitHub #1386
        This fixes the issue of the libatalk.so shared library not being found
@@ -435,6 +485,7 @@ Changes in 3.2.6
 
 Changes in 3.2.5
 ================
+
 * BREAKING: meson: Allow choosing shared or static libraries to build,
        GitHub #1321
        In practice, only shared libraries are built by default now.
@@ -464,6 +515,7 @@ Changes in 3.2.5
 
 Changes in 3.2.4
 ================
+
 * UPD: autotools: Restore ABI versioning of libatalk,
        and set it to 18.0.0, GitHub #1261
 * UPD: meson: Define long-form soversion as 18.0.0, GitHub #1256
@@ -481,6 +533,7 @@ Changes in 3.2.4
 
 Changes in 3.2.3
 ================
+
 * UPD: Record note of permission to upgrade CNID code
        to a later GPL, GitHub #1194
 * REM: Remove long-obsoleted cnid2_create script, GitHub #1203
@@ -499,6 +552,7 @@ Changes in 3.2.3
 
 Changes in 3.2.2
 ================
+
 * UPD: meson: Use external SSL dependency to provide cast header, GitHub #1186
        This reintroduces OpenSSL/LibreSSL as a dependency for the DHX UAM,
        while removing all source files with the SSLeay copyright notice.
@@ -515,6 +569,7 @@ Changes in 3.2.2
 
 Changes in 3.2.1
 ================
+
 * FIX: CVE-2024-38439,CVE-2024-38440,CVE-2024-38441: Harden user login,
        GitHub #1158
 * BREAKING: meson: Rework option semantics and feature macros, GitHub #1099
@@ -568,6 +623,7 @@ Changes in 3.2.1
 
 Changes in 3.2.0
 ================
+
 * NEW: Introduce the Meson build system, GitHub #707
        GNU Autotools is still supported, but will be removed
        in a future release. See the newly added INSTALL file.
@@ -629,6 +685,7 @@ Changes in 3.2.0
 
 Changes in 3.1.18
 =================
+
 * FIX: CVE-2022-22995: Harden create_appledesktop_folder(), GitHub #480
 * FIX: Disable dtrace support on aarch64 FreeBSD hosts, Github #498
 * FIX: Correct syntax for libwrap check in tcp-wrappers.m4, GitHub #500
@@ -637,6 +694,7 @@ Changes in 3.1.18
 
 Changes in 3.1.17
 =================
+
 * FIX: CVE-2023-42464: Validate data type in dalloc_value_for_key(), GitHub #486
 * FIX: Declare a variable before using it in a loop,
        which was throwing off the default compiler on RHEL7, GitHub #481
@@ -646,6 +704,7 @@ Changes in 3.1.17
 
 Changes in 3.1.16
 =================
+
 * FIX: libatalk: Fix CVE-2022-23121, CVE-2022-23123 regression
        - Added guard check before access ad_entry(), GitHub#357
        - Allow zero length entry, for AppleDouble specification, GitHub#368
@@ -683,6 +742,7 @@ Changes in 3.1.16
 
 Changes in 3.1.15
 =================
+
 * FIX: CVE-2022-43634
 * FIX: CVE-2022-45188
 * NEW: Support for macOS hosts, Intel and Apple silicon, GitHub#281
@@ -722,6 +782,7 @@ Changes in 3.1.15
 
 Changes in 3.1.14
 =================
+
 * FIX: fix build with libressl >= 2.7.0, GitHub#105
 * NEW: Added Ignore Directories Feature
 * UPD: Generate Unicode source code based on Unicode 14.0, GitHub#114
@@ -756,6 +817,7 @@ Changes in 3.1.14
 
 Changes in 3.1.13
 =================
+
 * FIX: CVE-2021-31439
 * FIX: CVE-2022-23121
 * FIX: CVE-2022-23123
@@ -768,12 +830,14 @@ Changes in 3.1.13
 
 Changes in 3.1.12
 =================
+
 * FIX: dhx uams: build with LibreSSL, GitHub#91
 * FIX: various spelling errors
 * FIX: CVE-2018-1160
 
 Changes in 3.1.11
 =================
+
 * NEW: Global option "zeroconf name", FR#99
 * NEW: show Zeroconf support by "netatalk -V", FR#100
 * UPD: gentoo: Switch openrc init script to openrc-run, GitHub#77
@@ -785,6 +849,7 @@ Changes in 3.1.11
 
 Changes in 3.1.10
 =================
+
 * FIX: cannot build when ldap is not defined, bug #630
 * FIX: SIGHUP can cause core dump when mdns is enabled, bug #72
 * FIX: Solaris: stale pid file puts netatalk into maintenance mode, bug #73
@@ -792,6 +857,7 @@ Changes in 3.1.10
 
 Changes in 3.1.9
 ================
+
 * FIX: afpd: fix "admin group" option
 * NEW: afpd: new options "force user" and "force group"
 * FIX: listening on IPv6 wildcard address may fail if IPv6 is
@@ -821,6 +887,7 @@ Changes in 3.1.9
 
 Changes in 3.1.8
 ================
+
 * FIX: CNID/MySQL: Quote UUID table names.
        https://sourceforge.net/p/netatalk/bugs/585/
 * FIX: Crash in cnid_metad, bug #593
@@ -839,6 +906,7 @@ Changes in 3.1.8
 
 Changes in 3.1.7
 ================
+
 * UPD: Spotlight: enhance behaviour for long running queries, client
        will now show "progress wheel" while waiting for first results.
 * FIX: netatalk: fix a crash on Solaris when registering with mDNS
@@ -857,6 +925,7 @@ Changes in 3.1.7
 
 Changes in 3.1.6
 ================
+
 * FIX: Spotlight: fix for long running queries
 * UPD: afpd: distribute SIGHUP from parent afpd to children and force
        reload shares
@@ -867,10 +936,12 @@ Changes in 3.1.6
 
 Changes in 3.1.5
 ================
+
 * FIX: Spotlight: several important fixes
 
 Changes in 3.1.4
 ================
+
 * FIX: afpd: Hangs in Netatalk which causes it to stop responding to
        connections, bug #572.
 * NEW: afpd: new option "force xattr with sticky bit = yes|no"
@@ -887,6 +958,7 @@ Changes in 3.1.4
 
 Changes in 3.1.3
 ================
+
 * UPD: Spotlight: more SPARQL query optimisations
 * UPD: Spotlight: new options "sparql results limit", "spotlight
        attributes" and "spotlight expr"
@@ -906,6 +978,7 @@ Changes in 3.1.3
 
 Changes in 3.1.2
 ================
+
 * FIX: Option "vol dbpath" was broken in 3.1.1
 * FIX: Spotlight: file modification date, bug #545
 * FIX: Improve reliability of afpd child handler
@@ -923,6 +996,7 @@ Changes in 3.1.2
 
 Changes in 3.1.1
 ================
+
 * FIX: Add asprint() compatibility function for systems lacking it
 * FIX: Fix resource fork name conversion. Bug #534.
 * FIX: Fix a bug where only the first configured UAM was loaded.
@@ -941,6 +1015,7 @@ Changes in 3.1.1
 
 Changes in 3.1.0
 ================
+
 * NEW: AFP Spotlight support with Gnome Tracker
 * NEW: New option "spotlight" (G/V)
 * NEW: Configure option --with-tracker-pkgconfig-version
@@ -955,6 +1030,7 @@ Changes in 3.1.0
 
 Changes in 3.0.7
 ================
+
 * FIX: Build fixes for the Kerberos UAM
 * UPD: Use dedicated exit code for AFP connections that were dropped
        by the client right after the TCP handshake
@@ -967,6 +1043,7 @@ Changes in 3.0.7
 
 Changes in 3.0.6
 ================
+
 * FIX: charset conversion failed when copying from Mac OS 9. Bug #523.
 * UPD: Don't force S_ISGID for directories on FreeBSD. Bug #525.
 * NEW: Add support for ZFS ACLs on FreeBSD with libsunacl. From FR#83.
@@ -990,6 +1067,7 @@ Changes in 3.0.6
 
 Changes in 3.0.5
 ================
+
 * FIX: Fix a crash when using pam_winbind. Fixes bug #516.
 * NEW: New global/volume option "ignored attributes"
 * FIX: "afp listen" option failed to take IPv6 addresses. Bug #515.
@@ -1008,6 +1086,7 @@ Changes in 3.0.5
 
 Changes in 3.0.4
 ================
+
 * FIX: Opening files without metadata EA may result in an invalid
        metadata EA. Check for malformed metadata EAs and delete them.
        Fixes bug #510.
@@ -1035,6 +1114,7 @@ Changes in 3.0.4
 
 Changes in 3.0.3
 ================
+
 * UPD: afpd: Increase default DSI server quantum to 1 MB
 * UPD: bundled libevent2 is now static
 * NEW: --with-lockfile=PATH configure option for specifying an
@@ -1084,6 +1164,7 @@ Changes in 3.0.3
 
 Changes in 3.0.2
 ================
+
 * NEW: afpd: Put file extension type/creator mapping back in which had
        been removed in 3.0.
 * NEW: afpd: new option 'ad domain'. From FR #66.
@@ -1118,6 +1199,7 @@ Changes in 3.0.2
 
 Changes in 3.0.1
 ================
+
 * NEW: afpd: Optional "ldap uuid encoding = string | ms-guid" parameter to
        afp.conf, allowing for usage of the binary objectGUID fields from
        Active Directory.
@@ -1355,7 +1437,7 @@ Changes in 2.2.1
 * FIX: precompose_w() failed if tail character is decomposed surrogate pair
 
 Changes in 2.2.0
-==============
+================
 
 * NEW: afpd: new volume option "nonetids"
 * NEW: afpd: ACL access check caching
@@ -1403,13 +1485,13 @@ Changes in 2.2beta3
        multibyte UTF-8 glyphs
 
 Changes in 2.2beta2
-====================
+===================
 
 * NEW: afpd: AFP 3.3
 * UPD: afpd: AFP 3.x can't be disabled
 
 Changes in 2.2beta1
-====================
+===================
 
 * FIX: composition of Surrogate Pair
 * UPD: gentoo,suse,cobalt,tru64: inistscript name is "netatalk", not "atalk"
