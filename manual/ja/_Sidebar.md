@@ -2,11 +2,11 @@
 
 マニュアル
 
+* [序説](index.html)
 * [インストール](Installation.html)
 * [セットアップ](Configuration.html)
 * [AppleTalk](AppleTalk.html)
 * [アップグレード](Upgrading.html)
-* [コンパイル](Compilation.html)
 * [ライセンス](License.html)
 
 ユーザーツール
