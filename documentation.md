@@ -6,6 +6,12 @@ It covers topics on how to install, configure, control, and upgrade Netatalk.
 - [Netatalk manual](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
 
+## Installation
+
+- [Install Quick Guide](/install.html)
+- [Compile from Source](/compilation.html)
+- [Container Deployment](/docker.html)
+
 ## Supplementary documentation
 
 - [Readme – Netatalk overview](/readme.html)
@@ -13,11 +19,9 @@ It covers topics on how to install, configure, control, and upgrade Netatalk.
 - [News – Version history](/news.html)
 - [Contributors](/contributors.html)
 - [AppleTalk](/appletalk.html)
-- [Docker](/docker.html)
 - [Developer](/developer.html)
-- [Install](/install.html)
 
-If you are looking for manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
+If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
 ## Tech Notes
 
