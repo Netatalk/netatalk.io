@@ -1,25 +1,25 @@
 # Netatalk Documentation
 
-The manual is the primary source of documentation for Netatalk.
-It covers topics on how to install, configure, control, and upgrade Netatalk.
+The manual is the primary source of documentation for the Netatalk suite of programs.
 
-- [Netatalk manual](/manual/en)
+- [Netatalk Manual](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
 
 ## Installation
+
+Start here to get an overview of the installation process when not using a package manager.
 
 - [Install Quick Guide](/install.html)
 - [Compile from Source](/compilation.html)
 - [Container Deployment](/docker.html)
 
-## Supplementary documentation
+## Supplementary Documentation
 
-- [Readme – Netatalk overview](/readme.html)
-- [Security – Policy and advisories](/security.html)
-- [News – Version history](/news.html)
+- [Security Policy and Advisories](/security.html)
+- [News – Version History](/news.html)
 - [Contributors](/contributors.html)
-- [AppleTalk](/appletalk.html)
-- [Developer](/developer.html)
+- [AppleTalk Transport Layer](/appletalk.html)
+- [Implementation Notes for Developers](/developer.html)
 
 If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
