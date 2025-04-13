@@ -9,7 +9,7 @@ The manual is the primary source of documentation for the Netatalk suite of prog
 
 Start here to get an overview of the installation process when not using a package manager.
 
-- [Install Quick Guide](/install.html)
+- [Installation Quick Start](/install.html)
 - [Compile from Source](/compilation.html)
 - [Container Deployment](/docker.html)
 
