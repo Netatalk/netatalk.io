@@ -1,5 +1,19 @@
 # News Archive
 
+## Netatalk 4.1.1 is available
+
+*20th of January 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.1 release series. This is a bugfix release that also
+improves compatibility with NetBSD and NixOS.
+
+All users of previous Netatalk versions are encouraged to upgrade to
+4.1.1.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.1/ReleaseNotes4.1.1.html).
+
 ## End of Life policy published
 
 *18th of January 2025*
