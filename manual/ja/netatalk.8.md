@@ -4,9 +4,9 @@ netatalk — Netatalk AFP サーバのサービス コントローラ デーモ�
 
 # 概要
 
-`netatalk [-F configfile]`
+**netatalk** [-F configfile]
 
-`netatalk [ -v | -V ]`
+**netatalk** [ -v | -V ]
 
 # 説明
 

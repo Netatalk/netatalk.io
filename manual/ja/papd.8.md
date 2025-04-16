@@ -4,9 +4,9 @@ papd — AppleTalk プリント サーバー デーモン
 
 # 概要
 
-`papd [-d] [-f configfile] [-p printcap] [-P pidfile]`
+**papd** [-d] [-f configfile] [-p printcap] [-P pidfile]
 
-`papd [ -v | -V ]`
+**papd** [ -v | -V ]
 
 # 説明
 

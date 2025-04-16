@@ -4,11 +4,11 @@ asip-status — AFP サーバに機能を問い合わせる
 
 # 概要
 
-`asip-status [ -4 | -6 ] [-d] [-i] [-x] [HOSTNAME] [PORT]`
+**asip-status** [ -4 | -6 ] [-d] [-i] [-x] [HOSTNAME] [PORT]
 
-`asip-status [ -4 | -6 ] [-d] [-i] [-x] [ HOSTNAME:PORT ]`
+**asip-status** [ -4 | -6 ] [-d] [-i] [-x] [ HOSTNAME:PORT ]
 
-`asip-status [ -v | -version | --version ]`
+**asip-status** [ -v | -version | --version ]
 
 # 説明
 

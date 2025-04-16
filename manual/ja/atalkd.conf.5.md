@@ -10,7 +10,7 @@ atalkd.conf — AppleTalk が使用するインターフェイスを構成する
 先頭に *\#*
 が付いていない行はすべて解釈される。各インターフェイスは、分割行をサポートせず、中断のない行で設定する必要がある。設定行の形式は次のとおり:
 
-`interface [ -seed ] [ -phase <number> ] [ -net <net-range> ] [ -addr <address> ] [ -zone <zonename> ] ...`
+    interface [ -seed ] [ -phase <number> ] [ -net <net-range> ] [ -addr <address> ] [ -zone <zonename> ] ...
 
 最も単純なケースは、atalkd.conf がないか、有効な行はないかこの場合、atalkd はマシン上のローカル
 インターフェースを自動検出し、atalkd.conf ファイルに書き込む。存在しない場合は作成する。

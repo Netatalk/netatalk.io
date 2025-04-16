@@ -2,6 +2,14 @@
 
 nbplkup, nbprgstr, nbpunrgstr — NBP データベースにアクセスするツール群
 
+# 概要
+
+**nbplkup**
+
+**nbprgstr** [ -A address ] [ -m Mac charset ] [ -p port ] obj:type@zone
+
+**nbpunrgstr** [ -A address ] [ -m Mac charset ] obj:type@zone
+
 # 説明
 
 **nbprgstr** は、指定された <port\> で、**atalkd**(8) に <nbpname\>

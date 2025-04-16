@@ -435,7 +435,7 @@ extmap file = <path\> **(G)**
 
 > ファイル拡張子とタイプ/クリエータのマッピングを定義するファイルのパスを設定する。
 
-force xattr with sticky bit = <BOOLEAN\> (デフォルト: *no*) `(G/V)`
+force xattr with sticky bit = <BOOLEAN\> (デフォルト: *no*) **(G)**/**(V)**
 
 > ディレクトリへの書き込み権限があったとしても、スティッキービット設定を使ってメタデータ(拡張属性)を書き込むことに失敗するかもしれない。なぜなら、スティッキービットが設定されている場合、所有者だけが拡張属性への書き込みを許されるからである。
 
@@ -443,7 +443,7 @@ force xattr with sticky bit = <BOOLEAN\> (デフォルト: *no*) `(G/V)`
 
 ignored attributes = <all | nowrite | nodelete | norename\> **(G)**/**(V)**
 
-> サーバが無視すべきファイルとディレクトリの属性を設定する。`all`はオプション全部という意味である。
+> サーバが無視すべきファイルとディレクトリの属性を設定する。*all*はオプション全部という意味である。
 
 > OS Xにおいて、Finderがファイル/ディレクトリのロックを設定する場合、またはターミナルでBSD uchgフラグを設定する場合、3つの属性が全て使われる。従って、Finderロック/BSD uchgフラグを無視する目的で*ignored attributes = all*の設定を追加してください。
 
@@ -616,7 +616,7 @@ fce sendwait = <milliseconds\> **(G)**
 fce ignore names = <NAME\[,NAME2,...\]\> **(G)**
 
 > FCEイベントを生成すべきでないファイル名をカンマ区切りのリスト。デフォルトでは
-`.DS_Store`
+*.DS_Store*
 
 fce ignore directories = <PATH\[,PATH2,...\]\> **(G)**
 
@@ -1126,7 +1126,7 @@ unix priv = <BOOLEAN\> (デフォルト: *yes*) **(V)**
 
 > AFP3 UNIX 権限を使うかどうか。これは OS X
 クライアントに対しては設定すべきである。**file perm**、**directory perm**
-及び `umask` も参照。
+及び **umask** も参照。
 
 # 例
 
@@ -1137,16 +1137,14 @@ Netatalk が Spotlight および AFP stats サポート付きでビルドされ�
 
 ホームディレクトリは */home/{user}/afp-data* にマウントされる。
 
-```
-[Global]
-afpstats = yes
-spotlight = yes
-mimic model = RackMac
+    [Global]
+    afpstats = yes
+    spotlight = yes
+    mimic model = RackMac
 
-[Home]
-basedir regex = /home
-path = afp-data
-```
+    [Home]
+    basedir regex = /home
+    path = afp-data
 
 ## 例：レトロ Mac クライアント
 
@@ -1156,22 +1154,20 @@ ClearTxt 認証モジュールが使われる。**legacy icon** オプション�
 **legacy volume size** でボリュームサイズは 2 GB に制限される。**prodos** はボリュームに ProDOS
 ブートフラグを設定する上、ボリュームの空き領域は 32 MB に制限される。
 
-```
-[Global]
-appletalk = yes
-uam list = uams_dhx.so uams_dhx2.so uams_randnum.so uams_clrtxt.so
-legacy icon = daemon
+    [Global]
+    appletalk = yes
+    uam list = uams_dhx.so uams_dhx2.so uams_randnum.so uams_clrtxt.so
+    legacy icon = daemon
 
-[mac]
-volume name = Mac Files
-path = /srv/mac
-legacy volume size = yes
+    [mac]
+    volume name = Mac Files
+    path = /srv/mac
+    legacy volume size = yes
 
-[apple2]
-volume name = Apple II Files
-path = /srv/apple2
-prodos = yes
-```
+    [apple2]
+    volume name = Apple II Files
+    path = /srv/apple2
+    prodos = yes
 
 # 関連項目
 

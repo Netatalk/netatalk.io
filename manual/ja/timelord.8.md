@@ -4,9 +4,9 @@ timelord — Macintosh タイム サーバー デーモン
 
 # 概要
 
-`timelord [-d] [-l] [-n nbpname]`
+**timelord** [-d] [-l] [-n nbpname]
 
-`timelord [ -v | -V ]`
+**timelord** [ -v | -V ]
 
 # 説明
 

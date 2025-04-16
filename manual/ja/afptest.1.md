@@ -5,24 +5,17 @@ afp_lantest, afp_logintest, afp_spectest, afp_speedtest, afparg, fce_listen
 
 # 概要
 
-`afp_lantest [-34567GgVv] [-h host] [-p port] [-s volume] [-u user] [-w
-password] [-n iterations] [-t tests] [-F bigfile]`
+**afp_lantest** [-34567GgVv] [-h host] [-p port] [-s volume] [-u user] [-w password] [-n iterations] [-t tests] [-F bigfile]
 
-`afp_logintest [-1234567CmVv] [-h host] [-p port] [-s volume] [-u user] [-w
-password]`
+**afp_logintest** [-1234567CmVv] [-h host] [-p port] [-s volume] [-u user] [-w password]
 
-`afp_spectest [-1234567aCiLlmVvXx] [-h host] [-H host2] [-p port] [-s
-volume] [-c path to volume] [-S volume2] [-u user] [-d user2] [-w password]
-[-f test]`
+**afp_spectest** [-1234567aCiLlmVvXx] [-h host] [-H host2] [-p port] [-s volume] [-c path to volume] [-S volume2] [-u user] [-d user2] [-w password] [-f test]
 
-`afp_speedtest [-1234567aeiLnVvy] [-h host] [-p port] [-s volume] [-S
-volume2] [-u user] [-w password] [-n iterations] [-d size] [-q quantum] [-F
-file] [-f test]`
+**afp_speedtest** [-1234567aeiLnVvy] [-h host] [-p port] [-s volume] [-S volume2] [-u user] [-w password] [-n iterations] [-d size] [-q quantum] [-F file] [-f test]
 
-`afparg [-1234567lVv] [-h host] [-p port] [-s volume] [-u user] [-w
-password] [-f command]`
+**afparg** [-1234567lVv] [-h host] [-p port] [-s volume] [-u user] [-w password] [-f command]
 
-`fce_listen [-h host] [-p port]`
+**fce_listen** [-h host] [-p port]
 
 # 説明
 
@@ -67,7 +60,7 @@ NOT TESTED の結果はテスト実施全体の失敗として扱われるが、
 
 ## ヘルパー
 
-**afparg** は、オプションの引数を持つ特定のコマンドを受け取り、AFP サーバーにアクションを送信する対話型 AFP クライアントである。サーバの問題検討やシステム管理などに活用できる。`afparg -l` を実行して利用可能なコマンドを一覧表示する。
+**afparg** は、オプションの引数を持つ特定のコマンドを受け取り、AFP サーバーにアクションを送信する対話型 AFP クライアントである。サーバの問題検討やシステム管理などに活用できる。*afparg -l* を実行して利用可能なコマンドを一覧表示する。
 
 **fce_listen** は、Netatalk のファイルシステム変更イベント (FCE) プロトコルのシンプルなリスナーである。これは、AFP サーバーから受信した UDP データグラムを出力する。
 
@@ -76,8 +69,8 @@ NOT TESTED の結果はテスト実施全体の失敗として扱われるが、
 このツール群は、主に Netatalk AFP サーバーをテストするために設計されているが、古い Mac OS X または Classic Mac OS
 システムでホストされている Mac OS AFP サーバーをテストするためにも使用できる。
 
-Mac AFP サーバーをテストする場合は、`-m` オプションを使用してテストランナーを起動する。Mac モードで実行すると、テストランナーは、Mac
-と Netatalk の間の既知の現在または過去の相違点を持つテストを報告する。
+Mac AFP サーバーをテストする場合は、**-m** オプションを使用してテストランナーを起動する。Mac
+モードで実行すると、テストランナーは、Mac と Netatalk の間の既知の現在または過去の相違点を持つテストを報告する。
 
 Mac と Netatalk が異なる場合、または Mac の結果がバージョン間で異なる場合:
 
@@ -95,18 +88,15 @@ Mac と Netatalk が以前は異なる結果を返していたが、現在は同
 
 以下は、APF 仕様テストを実行するためのサンプル設定です。
 
-- 2人のユーザー: `user1`, `user2` は同じパスワードを持つ。
-- 1つのグループ: `afpusers`
-- `user1`, `user2` は `afpusers` グループに割り当てられる。
+- 2人のユーザー: user1, user2 は同じパスワードを持つ。
+- 1つのグループ: afpusers
+- user1, user2 は afpusers グループに割り当てられる。
 - clear text UAM + guest UAM
-- 2つの空のボリューム:
 
-```
-drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
-drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
-```
+2つの空のディレクトリを用意する。テストディレクトリに残ったファイルがあると、いくつかのテストが失敗する。
 
-*注意:* テストボリュームに残ったファイルがあると、いくつかのテストが失敗する。
+    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest1
+    drwxrwsr-x    5 user1   afpusers       176 avr 27 23:56 /tmp/afptest2
 
 afp.confオプションは次の通り。
 

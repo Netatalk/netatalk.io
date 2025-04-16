@@ -4,9 +4,9 @@ a2boot — Apple II ネットブート サーバー デーモン
 
 # 概要
 
-`a2boot [-d] [-n nbpname]`
+**a2boot** [-d] [-n nbpname]
 
-`a2boot [ -v | -V ]`
+**a2boot** [ -v | -V ]
 
 # 説明
 

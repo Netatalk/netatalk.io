@@ -4,9 +4,9 @@ afpd — Apple Filing Protocol デーモン
 
 # 概要
 
-`afpd [-d] [-F configfile]`
+**afpd** [-d] [-F configfile]
 
-`afpd [ -v | -V | -h ]`
+**afpd** [ -v | -V | -h ]
 
 # 説明
 

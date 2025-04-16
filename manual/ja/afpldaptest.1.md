@@ -4,9 +4,9 @@ afpldaptest — afp.conf の LDAP パラメータを構文チェックする
 
 # 概要
 
-`afpldaptest [ -u USER | -g GROUP | -i UUID ]`
+**afpldaptest** [ -u USER | -g GROUP | -i UUID ]
 
-`afpldaptest [ -h | -? | -: ]`
+**afpldaptest** [ -h | -? | -: ]
 
 # 説明
 

@@ -4,8 +4,7 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 # 概要
 
-`afppasswd [-acfn] [-p afppasswd file] [-u minimum uid] [-w password
-string]`
+**afppasswd** [-acfn] [-p afppasswd file] [-u minimum uid] [-w password string]
 
 # 説明
 

@@ -4,7 +4,7 @@ aecho - AppleTalk Echo Protocol プロトコル パケットをネットワー�
 
 # 概要
 
-`aecho [-c count] [ address | nbpname ]`
+**aecho** [-c count] [ address | nbpname ]
 
 # 説明
 

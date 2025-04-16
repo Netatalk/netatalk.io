@@ -4,8 +4,7 @@ pap — Printer Access Protocol を使用したネットワークプリンター
 
 # 概要
 
-`pap [-A address] [-c] [-d] [-e] [-E] [-p nbpname] [-s statusfile] [-w] [-W]
-[FILES]`
+**pap** [-A address] [-c] [-d] [-e] [-E] [-p nbpname] [-s statusfile] [-w] [-W] [FILES]
 
 # 説明
 

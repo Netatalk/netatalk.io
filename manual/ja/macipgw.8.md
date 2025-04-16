@@ -4,10 +4,9 @@ macipgw — MacIP ゲートウェイ デーモン
 
 # 概要
 
-`macipgw [-d debugclass] [-f configfile] [-n nameserver] [-u
-unprivileged-user] [-z zone] [network] [netmask]`
+**macipgw** [-d debugclass] [-f configfile] [-n nameserver] [-u unprivileged-user] [-z zone] [network] [netmask]
 
-`macipgw [ -v | -V ]`
+**macipgw** [ -v | -V ]
 
 # 説明
 

@@ -4,9 +4,9 @@ cnid_metad — 要求に応じて cnid_dbd デーモンを起動するデーモ�
 
 # 概要
 
-`cnid_metad [-d] [-F configuration file]`
+**cnid_metad** [-d] [-F configuration file]
 
-`cnid_metad [ -v | -V ]`
+**cnid_metad** [ -v | -V ]
 
 # 説明
 

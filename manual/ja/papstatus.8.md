@@ -4,7 +4,7 @@ papstatus — AppleTalk 接続プリンタのステータスを取得する
 
 # 概要
 
-`papstatus [-d] [-p printer] [retrytime]`
+**papstatus** [-d] [-p printer] [retrytime]
 
 # 説明
 

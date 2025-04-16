@@ -4,9 +4,9 @@ ad - AppleDouble ファイルユーティリティ 一式
 
 # 概要
 
-`ad [ ls | cp | mv | rm | set ] [...]`
+**ad** [ ls | cp | mv | rm | set ] [...]
 
-`ad [ -v | --version ]`
+**ad** [ -v | --version ]
 
 # 説明
 
@@ -16,31 +16,31 @@ ad - AppleDouble ファイルユーティリティ 一式
 
 List files and directories.
 
-> `ad ls [-dRl[u]] {file|dir [...]}`
+> ad ls [-dRl[u]] {file|dir [...]}
 
 ファイルやディレクトリをコピーする。
 
-> `ad cp [-aipvf] {src_file} {dst_file}`
+> ad cp [-aipvf] {src_file} {dst_file}
 
-> `ad cp -R [-aipvf] {src_file|src_directory ...} {dst_directory}`
+> ad cp -R [-aipvf] {src_file|src_directory ...} {dst_directory}
 
 ファイルやディレクトリを移動する。
 
-> `ad mv [-finv] {src_file} {dst_file}`
+> ad mv [-finv] {src_file} {dst_file}
 
-> `ad mv [-finv] {src_file|src_directory ...} {dst_directory}`
+> ad mv [-finv] {src_file|src_directory ...} {dst_directory}
 
 ファイルやディレクトリを削除する。
 
-> `ad rm [-Rv] {file|directory}`
+> ad rm [-Rv] {file|directory}
 
 ファイルにメタデータを設定する。
 
-> `ad set [-t type] [-c creator] [-l label] [-f flags] [-a attributes] {file}`
+> ad set [-t type] [-c creator] [-l label] [-f flags] [-a attributes] {file}
 
 バージョンを表示する。
 
-> `ad -v | --version`
+> バージョンを表示する。
 
 # ad ls
 
