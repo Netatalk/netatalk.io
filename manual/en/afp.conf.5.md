@@ -1086,19 +1086,17 @@ hosts deny = <IP host address/IP netmask bits \[ ... \]\> **(V)**
 
 cnid scheme = <backend\> **(V)**
 
-> set the CNID backend to be used for the volume, default is
-\[@DEFAULT_CNID_SCHEME@\] available schemes: \[@compiled_backends@\]
+> set the CNID backend to be used for the volume. Default is *dbd*.
+Run *afpd -v* to see a list of available backends.
 
 > **NOTE**
 
 > The "mysql" backend requires the system administrator to configure a
 MySQL database instance for use with netatalk.
 
-> **WARNING**
+> **NOTE**
 
-> Do *NOT* use the "last" backend for volumes, because **afpd** relies
-heavily on a persistent ID database. Aliases will likely not work and
-filename mangling is not supported.
+> The "last" backend is read only, used to mount CD-ROMs and similar media.
 
 ea = <sys|samba|ad|none\> (default: auto detect) **(V)**
 
