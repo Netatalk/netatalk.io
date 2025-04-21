@@ -127,6 +127,64 @@ networks:
     driver: bridge
 ```
 
+## Webmin Module
+
+Netatalk's Webmin module is distributed as a separate container image.
+The module allows you to administer the Netatalk configuration via a web interface.
+Here follows an example Docker Compose configuration to run the module in a container.
+
+Note that since the netatalk daemons run in a separate container, we cannot control
+the services directly. Instead, activate polling of changes to the afp.conf
+configuration file. Set `AFP_CONFIG_POLLING` to the number of seconds to wait between
+polling attempts.
+
+```
+services:
+  netatalk:
+    image: netatalk:latest
+    networks:
+      - afp_network
+    ports:
+      - "548:548"
+    volumes:
+      - afpshare:/mnt/afpshare
+      - afpbackup:/mnt/afpbackup
+      - afpconf:/etc/netatalk
+      - /var/run/dbus:/var/run/dbus
+    environment:
+      - AFP_USER=atalk1
+      - AFP_USER2=atalk2
+      - AFP_PASS=
+      - AFP_PASS2=
+      - AFP_GROUP=afpusers
+      - AFP_CONFIG_POLLING=5
+      - MANUAL_CONFIG=1
+
+  webmin:
+    image: netatalk_webmin_module:latest
+    networks:
+      - afp_network
+    ports:
+      - "10000:10000"
+    volumes:
+      - afpconf:/etc/netatalk
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WEBMIN_USER=admin
+      - WEBMIN_PASS=
+    depends_on:
+      - netatalk
+
+volumes:
+  afpshare:
+  afpbackup:
+  afpconf:
+
+networks:
+  afp_network:
+    driver: bridge
+```
+
 ## Printing
 
 The CUPS administrative web app is running on port 631 in the container, which is exposed to the host machine by default when using the `host` network driver. This is used to configure CUPS compatible printers for printing from an old Mac or Apple IIGS.
@@ -168,6 +226,7 @@ These are required to set the credentials used to authenticate with the file ser
 | `AFP_LEGACY_ICON` | Use a custom legacy AFP icon, such as `daemon` or `sdcard`   |
 | `INSECURE_AUTH` | When non-zero, enable the "ClearTxt" and "Guest" UAMs          |
 | `DISABLE_TIMEMACHINE` | When non-zero, the secondary shared volume is a regular volume |
+| `DISABLE_SPOTLIGHT` | When non-zero, Spotlight compatible indexing is disabled   |
 | `MANUAL_CONFIG` | When non-zero, enable manual management of config files        |
 | `ATALKD_OPTIONS` | A string with options to append to atalkd.conf                |
 | `AFP_DROPBOX`   | Enable dropbox mode; turns secondary user into guest with read only access to the second shared volume |
