@@ -32,7 +32,7 @@ afpd — Apple Filing Protocol デーモン
 
 > ヘルプを表示してから終了する。
 
-**-F** <configfile\>
+**-F** <configfile>
 
 > 利用する設定ファイルを指定する。
 

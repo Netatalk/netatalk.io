@@ -18,7 +18,7 @@ netatalk — Netatalk AFP サーバのサービス コントローラ デーモ�
 
 > デーモンをターミナルから切り離さない。
 
-**-F** <configfile\>
+**-F** <configfile>
 
 > 利用する設定ファイルを指定する。
 

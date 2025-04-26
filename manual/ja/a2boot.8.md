@@ -34,7 +34,7 @@ Server for Macintosh の初期バージョンに含まれていた Apple II
 
 > デバッグ モード。つまり、制御 TTY から切り離されない。
 
-**-n** <nbpname\>
+**-n** <nbpname>
 
 > このサーバーを *nbpname*
 として登録する。デフォルトではホスト名になる。

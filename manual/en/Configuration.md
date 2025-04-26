@@ -11,19 +11,20 @@ Netatalk's **afpd** daemon offers AFP fileservices to Apple clients. The
 configuration is managed through the *afp.conf* file which uses an ini
 style configuration syntax.
 
-Support for [Spotlight](#spotlight) was added in Netatalk 3.1.
+Netatalk provides compatibility with Time Machine for remote backups,
+and Spotlight for indexed searching.
 
-Mac OS X 10.5 (Leopard) introduced support for Time Machine backups over
-AFP. Two new functions ensure that backups are written to disk, not just
-in the server's cache. Different host operating systems honor this cache
-flushing differently. To make a volume a Time Machine target, use the
-volume option "**time machine = yes**".
+To make a volume a Time Machine target, use the
+volume option **time machine = yes**.
 
-Starting with Netatalk 2.1 UNIX symlinks
-can be used on the server. Semantics are the same as for e.g. NFS, i.e.
-they are not resolved on the server side but instead it's completely up
-to the client to resolve them, resulting in links that point somewhere
-inside the clients filesystem view.
+To enable Spotlight indexing globally or for a volume,
+set the option **spotlight = yes** where appropriate.
+
+Starting with Netatalk 2.1, UNIX symlinks can be used on the server.
+Semantics are the same as for e.g. NFS, i.e. they are not resolved
+on the server side but instead it's completely up to the client
+to resolve them, resulting in links that point somewhere inside
+the client's filesystem view.
 
 ### afp.conf
 
@@ -100,7 +101,7 @@ To achieve this, several different CNID
 backends are available and can be
 selected with the **cnid scheme** option in
 the *afp.conf* configuration file. A CNID backend is basically a
-database storing ID <-\> name mappings.
+database storing ID <-> name mappings.
 
 The CNID databases are by default located in
 *$prefix/var/netatalk/CNID*. You can change the location by configuring
@@ -321,7 +322,7 @@ installed, you can use any iconv provided charset as well.
 afpd needs a way to preserve extended Macintosh characters, or
 characters illegal in UNIX filenames, when saving files on a UNIX
 filesystem. Earlier versions used the the so called CAP
-encoding. An extended character (\>0x7F)
+encoding. An extended character (>0x7F)
 would be converted to a :xx hex sequence, e.g. the Apple Logo (MacRoman:
 0xF0) was saved as :f0. Some special characters will be converted as to
 :xx notation as well. '/' will be encoded to :2f, if **usedots** was not
@@ -581,9 +582,8 @@ permission mapping the Finder would display a read-only icon and the
 user wouldn't be able to write to the folder.
 
 By default, the effective permission of the authenticated user are only
-mapped to the mentioned
-UARightspermission structure, not the
-UNIX mode. You can adjust this behaviour with the configuration option
+mapped to the mentioned UARightspermission structure, not the UNIX mode.
+You can adjust this behaviour with the configuration option
 [map acls](afp.conf#options-for-acl-handling).
 
 However, neither in Finder "Get Info" windows nor in the Terminal will

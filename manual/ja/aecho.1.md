@@ -33,7 +33,7 @@ aecho - AppleTalk Echo Protocol プロトコル パケットをネットワー�
 
 # オプション
 
-**-c** <count\>
+**-c** <count>
 
 > *count* パケット後に停止する。
 
