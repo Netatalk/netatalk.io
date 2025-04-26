@@ -333,12 +333,10 @@ server quantum
 
 fqdn = *name[:port]* **(G)**
 
-> Specifies a fully-qualified domain name, with an optional port. This is
-discarded if the server cannot resolve it. This option is not honored by
-AppleShare clients <= 3.8.3. This option is disabled by default. Use
-with caution as this will involve a second name resolution step on the
-client side. Also note that afpd will advertise this name:port
-combination but not automatically listen to it.
+> 完全修飾ドメイン名をオプションのポート番号と共に指定する。サーバがこれを解決できない場合は破棄される。
+AppleShareクライアント3.8.3以前はこのオプションを評価しない。
+このオプションはデフォルトで無効である。これによりクライアント側は名前解決を二段階踏むことになるので注意して使ってください。
+afpdはこのname:portの組み合わせを宣伝するが自動的にはリッスンしないことにも注意してください。
 
 hostname = *name* **(G)**
 

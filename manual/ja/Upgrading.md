@@ -36,7 +36,7 @@ Netatalk 4 の主要な変更は以下の3点：
 > **警告**
 
 > ほとんどのオプション名は変更されたので、 詳細については
-[afp.conf](afp.conf.html) の manpage 全体を読むこと
+[afp.conf](afp.conf.5.html) の manpage 全体を読むこと
 
 #### extmap.conf
 

@@ -41,7 +41,7 @@ There are three major changes between Netatalk 2 and Netatalk 4:
 > **WARNING**
 
 > most option names have changed, read the full manpage
-[afp.conf](afp.conf.html) for details
+[afp.conf](afp.conf.5.html) for details
 
 #### extmap.conf
 

@@ -4,9 +4,9 @@ ad - AppleDouble ファイルユーティリティ 一式
 
 # 概要
 
-**ad** [ ls | cp | mv | rm | set ] [...]
+**ad** [ls | cp | mv | rm | set] [...]
 
-**ad** [ -v | --version ]
+**ad** [-v | --version]
 
 # 説明
 

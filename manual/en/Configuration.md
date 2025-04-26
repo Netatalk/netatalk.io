@@ -76,7 +76,7 @@ path. When */home* links to */usr/home*:
     basedir regex = /usr/home
 
 For a more detailed explanation of the available options, please refer
-to the [afp.conf](afp.conf.html) man page.
+to the [afp.conf](afp.conf.5.html) man page.
 
 ## CNID backends
 

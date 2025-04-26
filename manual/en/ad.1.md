@@ -4,9 +4,9 @@ ad - AppleDouble file utility suite
 
 # Synopsis
 
-**ad** [ ls | cp | mv | rm | set ] [...]
+**ad** [ls | cp | mv | rm | set] [...]
 
-**ad** [ -v | --version ]
+**ad** [-v | --version]
 
 # Description
 

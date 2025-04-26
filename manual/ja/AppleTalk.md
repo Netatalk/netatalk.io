@@ -81,7 +81,7 @@ TCP への魔法の切り替えを実行しようとする時点では、これ�
 つが、他のアクティブな AppleTalk
 ルーターが存在せず、適切なルーティング設定を提供するネットワークに接続されている状況で、インターフェイスの自動構成が失敗する可能性がある。
 
-詳細については、[atalkd.conf](atalkd.conf.html) および開発者向けドキュメントを参照してください。
+詳細については、[atalkd.conf](atalkd.conf.5.html) および開発者向けドキュメントを参照してください。
 
 ### AppleTalk ルーターとして機能する atalkd
 
@@ -223,8 +223,8 @@ TechNote
 
 ### PAP 印刷サーバーの設定
 
-Netatalk の [papd](papd.html) は、Macintosh、またはより正確には一般的な PAP クライアントに AppleTalk
-印刷サービスを提供できる。 Netatalk 自体には本格的なスプーラ実装は含まれておらず、papd は双方向通信と PAP
+Netatalk の [papd](papd.8.html) は、Macintosh、またはより正確には一般的な PAP クライアントに
+AppleTalk 印刷サービスを提供できる。 Netatalk 自体には本格的なスプーラ実装は含まれておらず、papd は双方向通信と PAP
 クライアントからの印刷ジョブの送信のみを処理する。そのため、通常は、papd を Unix 印刷システム (例:クラシック SysV lpd、BSD
 lpr、LPRng、CUPS など。
 
@@ -237,7 +237,7 @@ Netatalk には以前、System V lpd 印刷のサポートが組み込まれて�
 実装との非互換性のため、通常の動作では、プリンタを名前で指定して lpd
 とのやり取りを使用するのではなく、パイプに直接印刷していました。Netatalk 2.0 では、別の代替手段が実装された。CUPS との直接のやり取り
 (注: CUPS サポートがコンパイルされている場合、SysV lpd
-サポートはまったく機能しない)。詳細な例は、[papd.conf](papd.conf.html) マニュアル ページにある。
+サポートはまったく機能しない)。詳細な例は、[papd.conf](papd.conf.5.html) マニュアル ページにある。
 
 #### papd と SysV lpd の統合
 
@@ -263,8 +263,8 @@ CUPSキューは、このグローバル共有に割り当てられたパラメ�
 
 ### AppleTalk プリンタの使用
 
-Netatalk の [papstatus](papstatus.html) は AppleTalk プリンタのクエリに使用でき、
-[pap](pap.html) はプリンタに印刷するのに使用できる。
+Netatalk の [papstatus](papstatus.8.html) は AppleTalk プリンタのクエリに使用でき、
+[pap](pap.1.html) はプリンタに印刷するのに使用できる。
 
 **pap** はスタンドアロンで使用することも、出力フィルタまたは CUPS バックエンドの一部として使用することもできる (すべてのプリンタを処理する必要がないため、この方法の方が推奨される)オプション)。
 
@@ -305,7 +305,7 @@ Netatalk の **timelord** は
 [メルボルン大学](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html)で開発された
 Macintosh 用の tardis クライアントと互換性がある。
 
-詳細については、[timelord](timelord.html) マニュアル ページをご覧ください。
+詳細については、[timelord](timelord.8.html) マニュアル ページをご覧ください。
 
 ## ネットブート サービス
 
@@ -315,4 +315,4 @@ Macintosh 用の tardis クライアントと互換性がある。
 
 Apple が提供する適切なブート ブロックとシステム ファイルを自分で用意する必要がある。
 
-詳細については、[a2boot](a2boot.html) マニュアル ページを参照してください。
+詳細については、[a2boot](a2boot.8.html) マニュアル ページを参照してください。
