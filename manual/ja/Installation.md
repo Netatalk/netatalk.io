@@ -85,14 +85,15 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
     Avahi を使用する場合は、D-Bus または D-Bus サポートを有効になっている
     Avahi ライブラリは必要になる。
 
-- cmark もしくは cmark-gfm
+- cmark、cmark-gfm、またはpandoc
 
-    Netatalk のドキュメントは Markdown 形式で作成されている。
-    マニュアル ページのソースは標準に準拠した CommonMark で構成され、
-    ドキュメントの残りの部分は GitHub 風の Markdown (gfm) で作成されている。
+    Netatalk のドキュメントはMarkdown形式で作成されている。
+    マニュアルページのソースは標準に準拠したCommonMarkで構成され、
+    ドキュメントの残りの部分はGitHub風の Markdown (gfm)で作成されている。
 
-    cmark を使用して Markdown ソースから roff マニュアル ページを生成し、cmark-gfm を使用して HTML ページを含むすべてのドキュメントを生成できる。
-    後者は利用可能な場合は、前者は必要ない。
+    pandocライブラリは最もきれいな出力を生成するが、他の2つのオプション
+    よりもはるかにリソースを消費する。cmarkのリファレンス実装が最も広く配布
+    されているが、cmark-gfm はテーブルのようなGitHub拡張機能をよりよく扱う。
 
 - CrackLib
 

@@ -32,7 +32,7 @@ Internal whitespace within a parameter value is retained verbatim.
 Any line beginning with a semicolon (“;”) or a hash (“\#”) character is
 ignored, as are lines containing only whitespace.
 
-Any line ending in a “ **\\** ” is continued on the next line in the
+Any line ending in a **\\** (backslash) is continued on the next line in the
 customary UNIX fashion.
 
 The values following the equals sign in parameters are all either a
@@ -47,11 +47,11 @@ place. Nested includes are not supported.
 
 # Section Descriptions
 
-Each section in the configuration file (except for the \[Global\]
+Each section in the configuration file (except for the [Global]
 section) describes a shared resource (known as a “volume”).
 The parameters within the section define the volume attributes and options.
 
-There are two special sections, \[Global\] and \[Homes\], which are
+There are two special sections, [Global] and [Homes], which are
 described under *special sections*. The following notes apply to
 ordinary section descriptions.
 
@@ -84,12 +84,12 @@ access to the path */foo/bar*. The share is accessed via the share name
 
 # Special Sections
 
-## The \[Global\] section
+## The [Global] section
 
 Parameters in this section apply to the server as a whole. Parameters
 denoted by a (G) below are must be set in this section.
 
-## The \[Homes\] section
+## The [Homes] section
 
 This section enable sharing of the UNIX server user home directories.
 The one mandatory option is **basedir regex**. It should be set to a path
@@ -130,10 +130,10 @@ Any parameter denoted by a **(H)** below can be used in the Homes section.
 
 Parameters define the specific attributes of sections.
 
-Some parameters are specific to the \[Global\] section (e.g., **log
+Some parameters are specific to the [Global] section (e.g., **log
 type**). All others are permissible only in volume sections. The letter
 *G* in parentheses indicates that a parameter is specific to the
-\[Global\] section. The letter *V* indicates that a parameter can be
+[Global] section. The letter *V* indicates that a parameter can be
 specified in a volume specific section.
 
 # Variable Substitutions
@@ -366,7 +366,7 @@ connections via SSH will increase the server's load significantly. On
 the other hand, Apple's client side implementation of this feature in
 MacOS X versions prior to 10.3.4 contained a security flaw.
 
-afp interfaces = <name \[name ...\]\> **(G)**
+afp interfaces = <name [name ...]\> **(G)**
 
 > Specifies the network interfaces that the server should listen on. The
 default is to advertise the first IP address of the system, while
@@ -376,7 +376,7 @@ listening for any incoming request.
 
 > Do not use at the same time as the **afp listen** option.
 
-afp listen = <ip address\[:port\] \[ip address\[:port\] ...\]\> **(G)**
+afp listen = <ip address[:port] [ip address[:port] ...]\> **(G)**
 
 > Specifies the IP address that the server should advertise **and**
 listens to. The default is advertise the first IP address of the system,
@@ -385,7 +385,7 @@ specified either in dotted-decimal format for IPv4 or in hexadecimal
 format for IPv6.
 
 > IPv6 address + port combination must use URL the format using square
-brackets \[IPv6\]:port
+brackets [IPv6]:port
 
 > **NOTE**
 
@@ -403,7 +403,7 @@ afp read locks = <BOOLEAN\> (default: *no*) **(G)**
 spec mandates this, but it's not really in line with UNIX semantics and
 is a performance hog.
 
-cnid listen = <ip address\[:port\] \[ip address\[:port\] ...\]\> **(G)**
+cnid listen = <ip address[:port] [ip address[:port] ...]\> **(G)**
 
 > Specifies the IP address and port that the CNID server should listen on.
 This should match the address and port of the **cnid server** option
@@ -424,7 +424,7 @@ increase throughput in fast local networks for volume to volume copies.
 large values will eat up large amount of memory (buffer size \* number
 of clients).
 
-fqdn = <name\[:port\]\> **(G)**
+fqdn = <name[:port]\> **(G)**
 
 > Specifies a fully-qualified domain name, with an optional port. This is
 discarded if the server cannot resolve it. This option is not honored by
@@ -510,7 +510,7 @@ cnid mysql db = <database name\> **(G)**
 > Name of an existing database for which the specified user has full
 privileges.
 
-cnid server = <ipaddress\[:port\]\> **(G)**/**(V)**
+cnid server = <ipaddress[:port]\> **(G)**/**(V)**
 
 > Specifies the IP address and port of a cnid_metad server, required
 for the CNID dbd backend. This should match the address and port of the
@@ -632,7 +632,7 @@ volume name is always limited to 27 bytes.
 vol preset = <name\> **(G)**/**(V)**
 
 > Use section <name\> as option preset for all volumes (when set in the
-\[Global\] section) or for one volume (when set in that volume's
+[Global] section) or for one volume (when set in that volume's
 section).
 
 ## Spotlight Options
@@ -677,7 +677,7 @@ log file = <logfile\> **(G)**
 > Write logs to **logfile** on the file system. If not specified, Netatalk
 logs to the syslog daemon facility.
 
-log level = <type:level \[type:level ...\]\> **(G)**; log level = <type:level,\[type:level, ...\]\> **(G)**
+log level = <type:level [type:level ...]\> **(G)**; log level = <type:level,[type:level, ...]\> **(G)**
 
 > Specify that any message of a loglevel up to the given **log level**
 should be logged.
@@ -726,7 +726,7 @@ The following FCE events are defined:
 
 - logout (**logout**)
 
-fce listener = <host\[:port\]\> **(G)**
+fce listener = <host[:port]\> **(G)**
 
 > Enables sending FCE events to the specified **host**, default **port** is
 12250 if not specified. Specifying multiple listeners is done by having
@@ -764,12 +764,12 @@ such an operation triggers can lead to UDP buffer overflow and
 subsequently to packet loss. Has to be a number between 0 and 999.
 Default: 0 milliseconds.
 
-fce ignore names = <NAME\[,NAME2,...\]\> **(G)**
+fce ignore names = <NAME[,NAME2,...]\> **(G)**
 
 > Comma-delimited list of filenames for which FCE events shall not be
 generated. Default: *.DS_Store*
 
-fce ignore directories = <PATH\[,PATH2,...\]\> **(G)**
+fce ignore directories = <PATH[,PATH2,...]\> **(G)**
 
 > Comma-delimited list of paths to directories for which FCE events
 shall not be generated. Has to be an absolute path on the host file system.
@@ -1070,7 +1070,7 @@ invalid users = <users/groups\> **(V)**
 > The deny option specifies users and groups who are not allowed access to
 the share. It follows the same format as the "valid users" option.
 
-hosts allow = <IP host address/IP netmask bits \[ ... \]\> **(V)**
+hosts allow = <IP host address/IP netmask bits [ ... ]\> **(V)**
 
 > Only listed hosts and networks are allowed, all others are rejected. The
 network address may be specified either in dotted-decimal format for
@@ -1078,7 +1078,7 @@ IPv4 or in hexadecimal format for IPv6.
 
 > Example: hosts allow = 10.1.0.0/16 10.2.1.100 2001:0db8:1234::/48
 
-hosts deny = <IP host address/IP netmask bits \[ ... \]\> **(V)**
+hosts deny = <IP host address/IP netmask bits [ ... ]\> **(V)**
 
 > Listed hosts and nets are rejected, all others are allowed.
 
@@ -1135,7 +1135,7 @@ mac charset = <charset\> **(V)**
 > specifies the Mac client charset for this Volume, e.g. *MAC_ROMAN*,
 *MAC_CYRILLIC*. If not specified the global setting is applied. This
 setting is only required if you need volumes, where the Mac charset
-differs from the one globally set in the \[Global\] section.
+differs from the one globally set in the [Global] section.
 
 casefold = <option\> **(V)**
 

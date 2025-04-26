@@ -27,11 +27,11 @@ Netatalk 2.1 以降では UNIX シンボリックリンクをサーバー上で�
 
 *afp.conf* は複数のサーバーセクションに分割できる。すなわち：
 
-\[Global\]
+[Global]
 
 > グローバルセクションで基本的なサーバーオプションを定義する
 
-\[Homes\]
+[Homes]
 
 > ホームセクションでユーザーのホームボリュームを定義する
 
@@ -225,9 +225,9 @@ Unicode キャラクターを ASCII 互換のやり方でエンコードする�
 方式を規定している。[Samba](http://www.samba.org)  はほとんどの UNIX ツールも好んで用いる
 *precomposed* Unicode を使用する。一方 Apple は *decomposed* normalization を使うことに決めた。
 
-例として、ドイツ語の文字 'ä' についてみてみる。Precomposed normalization を使えば Unicode はこの文字に 0xE4
-を対応付ける。Decomposed normalization では 'ä' を正確には 0x61 と 0x308 の二つの文字に対応付ける。0x61
-は 'a' に、0x308 は *COMBINING DIAERESIS*（訳注：いわゆるウムラウト）に対応付けられている。
+例として、文字 'ä'（小文字aにダイエリシスがついたもの）についてみてみる。Precomposed normalization を使えば
+Unicode はこの文字に 0xE4 を対応付ける。Decomposed normalization では 'ä' を正確には 0x61 と
+0x308 の二つの文字に対応付ける。0x61 は 'a' に、0x308 は *COMBINING DIAERESIS*に対応付けられている。
 
 Netatalk では precomposed UTF-8 を *UTF8* と、decomposed UTF-8 を *UTF8-MAC* と呼ぶ。
 
@@ -412,20 +412,15 @@ PAM を使用することで最も有利なのは、例えば LDAP 経由、あ�
 
 ### Netatalk UAM を概要表
 
-最も一般的に用いられる UAM の概観。
+公式にサポートされているUAMの概観。
 
-|  |  |  |  |  |  |  |
-|----|----|----|----|----|----|----|
-| UAM | No User Authent | Cleartxt Passwrd | (2-Way) Randnum exchange | DHCAST128 | DHX2 | Client Krb v2 |
+| UAM | No User Auth | Cleartxt Passwrd | RandNum Exchange | DHCAST128 | DHX2 | Kerberos V |
+|-----|--------------|------------------|------------------|-----------|------|------------|
 | パスワード長 | ゲストアクセス | 最大 8 文字 | 最大 8 文字 | 最大 64 文字 | 最大 256 文字 | Kerberos チケット |
 | サポートするクライアント | 全ての Mac OS のバージョンで組み込み済 | 10.0 を除く全ての Mac OS のバージョンで組み込み済。 最近のバージョンでは明示的にアクティブ化する必要がある。 | ほとんど全ての Mac OS のバージョンで組み込み済 | AppleShare クライアント 3.8.4 より組み込み済で、3.8.3 では macOS の AFP クライアントに統合したプラグインとしての用意あり。 | Mac OS X 10.2 より組み込み済 | Mac OS X 10.2 より組み込み済 |
 | 暗号化 | クライアント・サーバー間で認証なくゲストアクセス可能。 | パスワードがネットワーク上を暗号化されずに伝わっていく。 字句そのままに悪いので、可能ならば全面的に使用を回避すべき （注意：NetBoot サービスの提供には ClearTxt UAM が必要） | DES, 56 ビットに相当する 8 バイトの乱数がネットワーク上に送出。オフラインの辞書攻撃に対して脆弱。 パスワードがサーバー上で平文であることが求められる。 | パスワードは 128 ビット SSL で暗号化され、ユーザーはサーバーに認証されるが、“逆もまた真”ではない。 このため中間者攻撃に対して弱い。 | パスワードは libgcrypt の CAST 128、CBC モードを用いて暗号化される。 ユーザーはサーバーに認証されるが、“逆もまた真”ではない。このため中間者攻撃に対して弱い。 | パスワードがネットワークを通して送られることがない。サービスプリンシパル検知の方法が原因で、 この認証方法は中間者攻撃に対して脆弱である。 |
 | サーバーがサポートする共有オブジェクト | uams_guest.so | uams_cleartxt.so | uams_randnum.so | uams_dhx.so | uams_dhx2.so | uams_gss.so |
-| パスワードの保管方法 | なし | /etc/passwd (/etc/shadow) ないしは PAM | パスワードは別のテキストファイルに平文として保存される | /etc/passwd (/etc/shadow) ないしは PAM | /etc/passwd (/etc/shadow) ないしは PAM | Kerberos キー配布センター\* |
-
-\* [Kerberos
-概要](https://web.archive.org/web/20070705043002/http://cryptnet.net/fdp/admin/kerby-infra/en/kerby-infra.html)
-も一読のこと
+| パスワードの保管方法 | なし | システム認証ないしはPAM | パスワードは別のテキストファイルに平文として保存される | システム認証ないしはPAM | システム認証ないしはPAM | Kerberosキー配布センター |
 
 ### SSH トンネリング
 
@@ -695,17 +690,10 @@ FCE v2 イベントは、アクションを実行したユーザーなどの追�
 
 - ユーザーログアウト (logout)
 
-## Spotlight
+## Spotlight Compatible Search
 
-バージョン 3.1 から、Netatalk は Spotlight 検索をサポートしている。Netatalk
-はメタデータの保存、インデックス化およびサーチエンジンに GNOME
-[Tracker](https://projects.gnome.org/tracker/)  またはそれ以降のバージョンである
-TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
-を用いる。
-
-### 設定
-
-**spotlight** オプションを使って、グローバルで、あるいは、ボリューム単位ごとに Spotlight とインデックス化を有効にできる。
+**spotlight** オプションを使って、グローバルで、あるいは、ボリューム単位ごとに Netatalk の Spotlight
+互換検索とインデックス化を有効にできる。
 
 > **警告**
 
@@ -719,147 +707,3 @@ The **dbus-daemon** バイナリは Spotlight 機能のためにインストー�
 daemon** を用いなければならない。例えば Solaris 上で OpenCSW 由来の Tracker を用いている場合は以下のようにする：
 
     dbus daemon = /opt/csw/bin/dbus-daemon
-
-#### 制限と注意
-
-- 大きいファイルシステム
-
-    Linux 上の Tracker はファイルシステム変更の追跡に inotify
-    カーネルファイルシステム変更イベント API
-    を使用する。大きなファイルシステムではこれが問題になりやすい。なぜなら、この
-    inotofy API は再帰的ディレクトリ監視を提供してはおらず、
-    代わりにあらゆるサブディレクトリの監視が各々で追加されなければならないということを要求してくるからである。
-
-    Solarisではファイルイベント通知（FEN: File Event Notification)
-    が用いられる。このSolarisのサブシステムではどんな制限とリソース消費があるのか不明である。
-
-    それ故、ライブでのファイルシステム監視は無効にして、その代わりに定期的に
-    Tracker にファイルシステム変更のスキャンを行わせることを推奨する。下記
-    [Tracker オプション](#advanced-tracker-command-line-configuration)、enable-monitors および
-    crawling-interval を参照のこと。
-
-- home ディレクトリのインデックスは作成されない
-
-    現在の実装の既知の制限により、ユーザーのhomeディレクトリ内の共有ボリュームは Spotlight
-    によってインデックス付けされない。
-
-    回避策として、ファイルシステム別場所に共有ボリュームを設定する。
-
-### サーバー上での Tracker コマンドラインツールの使用
-
-Netatalk は動作中でなければならず、コマンドの実行は root 権限で行わなければならない。
-
-そしていくつかの環境変数を設定されなければならない。必要に応じて.tracker_profileを作成し、/root/.profile より
-source を指定する。PREFIX は Netatalk をインストールしたベースディレクトリにあわせて読み替える。
-
-    $ su
-    # cat .tracker_profile
-    PREFIX="/usr/local"
-    export XDG_DATA_HOME="$PREFIX/var/netatalk/"
-    export XDG_CACHE_HOME="$PREFIX/var/netatalk/"
-    export DBUS_SESSION_BUS_ADDRESS="unix:path=$PREFIX/var/netatalk/spotlight.ipc"
-    # . .tracker_profile
-    #
-
-OpenCSW の Tracker を使用していたら PATH も以下のように更新する：
-
-    # export PATH=/opt/csw/bin:$PATH
-
-#### Tracker コマンド
-
-Tracker の状態の問い合わせ:
-
->     # tracker daemon
-
-Tracker の停止:
-
->     # tracker daemon -t
-
-Tracker の開始:
-
->     # tracker daemon -s
-
-ディレクトリの再インデックス:
-
->     # tracker index -f PATH
-
-Tracker にファイルやディレクトリの情報を問い合わせる:
-
->     # tracker info PATH
-
-Tracker で検索:
-
->     # tracker search QUERY
-
-#### Tracker コマンドラインのより進んだ設定
-
-Tracker はその設定を Gnome dconf バックエンド経由で保管し、これ **gsettings** コマンドで変更できる。
-
-Gnome dconf の設定は各々のユーザーベースである。よって、Netatalk は Tracker プロセスを root
-権限で実行するため、設定は root ユーザーのコンテキストで保管され、これら設定の読み込み書き込みも root 権限で行われ、Netatalk
-はこのとき動作中でなければならない。（そして繰り返しになるが、環境を前記のように設定しなければならない）
-
-    # gsettings list-recursively | grep Tracker
-    org.freedesktop.Tracker.Writeback verbosity 'debug'
-    ...
-
-以下のリストで Tracker の一部重要なオプションおよびそのデフォルト設定について示す。
-
-org.freedesktop.Tracker.Miner.Files index-recursive-directories
-
-> このオプションは Tracker
-がどのディレクトリをインデックス化するかを制御する。本オプションは
-Netatalk ボリュームそれぞれの **spotlight**
-オプションの設定を反映して自動的に Netatalk
-によってセットされるので、手動で変更してはならない。
-
-org.freedesktop.Tracker.Miner.Files enable-monitors true
-
-> この値は Tracker が全ての設定パスの変更を監視するかどうかを制御する。
-ファイルシステムの変更バックエンド（Linux なら FAM、Solaris なら
-FEN）に依存しているので、
-この機能は期待するほどの信頼度をもって動作しないかもしれない。それ故、この機能は無効にして代わりに
-Tracker 自体の定期的なクローリングに頼るほうが安全であろう。オプション
-**crawling-interval** も参照のこと。
-
-org.freedesktop.Tracker.Miner.Files crawling-interval -1
-
-> ファイルシステムがデータベース上で最新であるかチェックする間隔（日にち単位）。最大は
-365 まで、デフォルトでは -1、-2 = クローリングは完全に行われない。-1 =
-スタートアップ時にクローリングが行われる“はず”（シャットダウンが完全でなかった場合）。0
-= 強制的にクローリングされる
-
-### サポートされているメタデータ属性
-
-下記表にサポートされている Spotlight メタデータ属性を挙げる。
-
-| 内容 | Spotlight キー |
-|----|----|
-| 名前 | kMDItemDisplayName, kMDItemFSName |
-| ドキュメントの内容（全文検索） | kMDItemTextContent |
-| ファイルタイプ | \_kMDItemGroupId, kMDItemContentTypeTree |
-| ファイル修正日付 | kMDItemFSContentChangeDate, kMDItemContentModificationDate, kMDItemAttributeChangeDate |
-| ファイルの内容の作成された日付 | kMDItemContentCreationDate |
-| ファイルの内容の著者・作成者 | kMDItemAuthors, kMDItemCreator |
-| ファイルが作成された国の名前 | kMDItemCountry |
-| 期間 | kMDItemDurationSeconds |
-| 総ページ数 | kMDItemNumberOfPages |
-| ドキュメントのタイトル | kMDItemTitle |
-| コンテンツの幅（ピクセル）：例えば、画像ならばピクセル幅、動画ならばフレームの幅 | kMDItemPixelWidth |
-| コンテンツの高さ（ピクセル）：例えば、画像ならばピクセルでの高さ、動画ならばフレームの高さ | kMDItemPixelHeight |
-| ドキュメント内コンテンツで使用されている色空間モデル | kMDItemColorSpace |
-| サンプルあたりのビット値（訳注：分解能、量子化ビット数、色深度など） | kMDItemBitsPerSample |
-| レンズの焦点距離（ミリメートル） | kMDItemFocalLength |
-| ISO 感度 | kMDItemISOSpeed |
-| ドキュメントの向き。許容される値は 0（ランドスケープ：横向き）と 1 （ポートレイト：縦向き） | kMDItemOrientation |
-| 水平解像度（DPI） | kMDItemResolutionWidthDPI |
-| 垂直解像度（DPI） | kMDItemResolutionHeightDPI |
-| シャッタースピード（秒） | kMDItemExposureTimeSeconds |
-| オーディオファイルに含まれている曲の作曲者 | kMDItemComposer |
-| 歌あるいは楽曲の音楽ジャンル | kMDItemMusicalGenre |
-
-#### 参考
-
-1.  [MDItem](https://developer.apple.com/documentation/coreservices/mditemref/)
-
-2.  [Tracker](https://gnome.pages.gitlab.gnome.org/tracker/docs/developer/)

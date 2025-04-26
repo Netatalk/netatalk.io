@@ -28,7 +28,7 @@ input.
 
 # Options
 
-**-a** \[<FILE\>|<DIR\>\]
+**-a** [<FILE\>|<DIR\>]
 
 > This is the default. Dump AppleSingle/AppleDouble data for <FILE\> or
 <DIR\> automatically. If FILE is not in AppleSingle/AppleDouble format,
@@ -40,11 +40,11 @@ look for extended attributes, <.AppleDouble/FILE\> and <.\_FILE\>. If
 
 > Dump extended attributes of <FILE\> or <DIR\>.
 
-**-f** \[<FILE\>\]
+**-f** [<FILE\>]
 
 > Dump <FILE\>. Assume FinderInfo to be FileInfo.
 
-**-d** \[<FILE\>\]
+**-d** [<FILE\>]
 
 > Dump <FILE\>. Assume FinderInfo to be DirInfo.
 

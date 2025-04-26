@@ -62,24 +62,22 @@ macOS拡張属性およびClassic Mac OS リソースフォークをファイル
 
 実装の詳細：
 
-- Mac のメタデータ（すなわち FinderInfo、AFP フラグ、コメント、CNID）は “*org.netatalk.Metadata*”
-という名前の拡張属性に保存される。
+- Mac のメタデータ（すなわち FinderInfo、AFP フラグ、コメント、CNID）は
+*org.netatalk.Metadata*という名前の拡張属性に保存される。
 
-- さらに、Netatalk 4.1.0以降を実行しているmacOSホストでは、FinderInfo はファイルシステムにネイティブに保存され、"com.apple.FinderInfo" という名前の拡張属性として表示される。
+- さらに、Netatalk 4.1.0以降を実行しているmacOSホストでは、FinderInfo はファイルシステムにネイティブに保存され、*com.apple.FinderInfo*という名前の拡張属性として表示される。
 
 - マックのリソースフォークは：
 
-- ZFS を用いた Solaris では “*org.netatalk.ResourceFork*” という拡張属性に保存される。
+- ZFSを用いたSolarisでは*org.netatalk.ResourceFork*という拡張属性に保存される。
 
-- ないしは、ファイル名が “*file*” であるものに対して各々、“*._file*” という名の別の AppleDouble ファイルに保存される。
+- ないしは、ファイル名が*file*であるものに対して各々、*._file*という名の別のAppleDoubleファイルに保存される。
 
 - Netatalk 4.1.0 以降、macOS ホスト上のリソース フォークにネイティブに保存されている。
 
-- ".\_" ファイルのフォーマットは、 たとえそのファイルシステムに CIFS サーバー (Samba) 経由でアクセスした場合でも、 マックの
-CIFS クライアントが想定しているフォーマットと全く同じである。 なので、データを失う危険性（リソースもメタデータも）なく、
-マックから同じデータセットに AFP 経由と CIFS 経由と並行してアクセスすることができる。 一方、ウィンドウズから当該データセットに CIFS
-経由でアクセスした場合は、未だに “*file*” と “*file*” の紐付けを失うこととなるであろう（非 ZFS
-ファイルシステムの場合。上記参照）。 今のところその点で拡張 Samba VFS モジュールが必要である（改善中）。
+- ".\_"
+ファイルのフォーマットは、たとえそのファイルシステムにCIFSサーバー（Samba）経由でアクセスした場合でも、マックのCIFSクライアントが想定しているフォーマットと全く同じである。なので、データを失う危険性（リソースもメタデータも）なく、マックから同じデータセットにAFP経由とCIFS経由と並行してアクセスすることができる。一方、Windowsクライアントから当該データセットにCIFS経由でアクセスした場合は、非ZFSファイルシステムでは未だに*file*と*._file*の紐付けを失うこととなるであろう（上記参照。）今のところその点で拡張Samba
+VFSモジュールが必要である。
 
 ### そのほかの主要な変更点
 
@@ -89,7 +87,7 @@ CIFS クライアントが想定しているフォーマットと全く同じで
 - CNID データベースはデフォルトで *$prefix/var/netatalk/CNID/*
 以下に保存される。以前は各共有ボリュームにて保存されていた。
 
-- Netatalk 2.x のボリュームオプション “**usedots**” 及び “**upriv**” はデフォルトとなった。
+- Netatalk 2.xのボリュームオプション**usedots**及び**upriv**はデフォルトとなった。
 
 - SLP 及び AFP プロキシのサポート機能は削除。
 
@@ -113,181 +111,180 @@ CIFS クライアントが想定しているフォーマットと全く同じで
 
 | 旧ファイル名 | 新ファイル名 | 注記 |
 |----|----|----|
-| \- | `etc/afp.conf` | 新しい "ini" 様式のフォーマット |
-| \- | `etc/extmap.conf` | netatalk 3.0.2 から採用 |
-| `etc/netatalk/afp_signature.conf` | `var/netatalk/afp_signature.conf` | 厳密には $localstatedir に移動 |
-| `etc/netatalk/afp_voluuid.conf` | `var/netatalk/afp_voluuid.conf` | 厳密には $localstatedir に移動 |
-| `etc/netatalk/netatalk.conf` (`/etc/default/netatalk`) | \- | 廃止 |
-| `etc/netatalk/afpd.conf` | \- | 廃止 |
-| `etc/netatalk/afp_ldap.conf` | \- | 廃止 |
-| `etc/netatalk/AppleVolumes.default` | \- | 廃止 |
-| `etc/netatalk/AppleVolumes.system` | \- | 廃止 |
-| `~/.AppleVolumes` | \- | 廃止 |
+| - | afp.conf | 新しい "ini" 様式のフォーマット |
+| afp_signature.conf | afp_signature.conf | 厳密には $localstatedir に移動 |
+| afp_voluuid.conf | afp_voluuid.conf | 厳密には $localstatedir に移動 |
+| netatalk.conf | - | 廃止 |
+| afpd.conf | - | 廃止 |
+| afp_ldap.conf | - | 廃止 |
+| AppleVolumes.default | - | 廃止 |
+| AppleVolumes.system | extmap.conf | netatalk 3.0.2 から採用 |
+| ~/.AppleVolumes | - | 廃止 |
 
 ### 新旧オプション対応表
 
-**netatalk.conf (/etc/default/netatalk) から afp.conf**
+**netatalk.conf (Debianの場合は/etc/default/netatalk) から afp.conf**
 
 | 旧 netatalk.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
-| ATALK_NAME | hostname | \- | \- | \(G\) | デフォルトでは gethostname() を使用 |
-| ATALK_UNIX_CHARSET | unix charset | LOCALE | UTF8 | \(G\) | \- |
-| ATALK_MAC_CHARSET | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | \- |
-| CNID_METAD_RUN | \- | yes | \- | \- | netatalk(8) で制御 |
-| AFPD_RUN | \- | yes | \- | \- | netatalk(8) で制御 |
-| AFPD_MAX_CLIENTS | max connections | 20 | 200 | \(G\) | \- |
-| AFPD_UAMLIST | uam list | -U uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | \(G\) | \- |
-| AFPD_GUEST | guest account | nobody | nobody | \(G\) | \- |
-| CNID_CONFIG | log level | -l log_note | cnid:note | \(G\) | \- |
-| CNID_CONFIG | log file | \- | \- | \(G\) | \- |
-| ATALKD_RUN | \- | no | \- | \- | 独自起動スクリプトで制御 |
-| PAPD_RUN | \- | no | \- | \- | 独自起動スクリプトで制御 |
-| TIMELORD_RUN | \- | no | \- | \- | 独自起動スクリプトで制御 |
-| A2BOOT_RUN | \- | no | \- | \- | 独自起動スクリプトで制御 |
-| ATALK_BGROUND | \- | no | \- | \- | 独自起動スクリプトで制御 |
-| ATALK_ZONE | ddp zone | \- | \- | \(G\) | 4.0.0で復活 |
+| ATALK_NAME | hostname | - | - | (G) | デフォルトでは gethostname() を使用 |
+| ATALK_UNIX_CHARSET | unix charset | LOCALE | UTF8 | (G) | - |
+| ATALK_MAC_CHARSET | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | - |
+| CNID_METAD_RUN | - | yes | - | - | netatalk(8) で制御 |
+| AFPD_RUN | - | yes | - | - | netatalk(8) で制御 |
+| AFPD_MAX_CLIENTS | max connections | 20 | 200 | (G) | - |
+| AFPD_UAMLIST | uam list | -U uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
+| AFPD_GUEST | guest account | nobody | nobody | (G) | - |
+| CNID_CONFIG | log level | -l log_note | cnid:note | (G) | - |
+| CNID_CONFIG | log file | - | - | (G) | - |
+| ATALKD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
+| PAPD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
+| TIMELORD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
+| A2BOOT_RUN | - | no | - | - | 独自起動スクリプトで制御 |
+| ATALK_BGROUND | - | no | - | - | 独自起動スクリプトで制御 |
+| ATALK_ZONE | ddp zone | - | - | (G) | 4.0.0で復活 |
 
 **afpd.conf から afp.conf**
 
 | 旧 afpd.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
-| 一番目のフィールド（"-" あるいは“サーバー名”) | hostname | \- | \- | \(G\) | 4.2.0で新規追加、デフォルトでは hostname を使用 |
-| -uamlist | uam list | uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | \(G\) | \- |
-| -nozeroconf | zeroconf | \- | （サポートされていれば） yes | \(G\) | \- |
-| -advertise_ssh | advertise ssh | \- | no | \(G\) | \- |
-| -\[no\]savepassword | save password | -savepassword | yes | \(G\) | \- |
-| -\[no\]setpassword | set password | -nosetpassword | no | \(G\) | \- |
-| -client_polling | client polling | \- | no | \(G\) | \- |
-| -hostname | hostname | \- | \- | \(G\) | デフォルトでは gethostname() を使用 |
-| -loginmesg | login message | \- | \- | (G)/(V) | \- |
-| -guestname | guest account | nobody | nobody | \(G\) | \- |
-| -passwdfile | passwd file | afppasswd | afppasswd | \(G\) | \- |
-| -passwdminlen | passwd minlen | \- | \- | \(G\) | \- |
-| -tickleval | tickleval | 30 | 30 | \(G\) | \- |
-| -timeout | timeout | 4 | 4 | \(G\) | \- |
-| -sleep | sleep time | 10 | 10 | \(G\) | \- |
-| -dsireadbuf | dsireadbuf | 12 | 12 | \(G\) | \- |
-| -server_quantum | server quantum | 303840 | 1048576 | \(G\) | \- |
-| -volnamelen | volnamelen | 80 | 80 | \(G\) | \- |
-| -setuplog | log level | default log_note | default:note | \(G\) | \- |
-| -setuplog | log file | \- | \- | \(G\) | \- |
-| -admingroup | admingroup | \- | \- | \(G\) | \- |
-| -k5service | k5 service | \- | \- | \(G\) | \- |
-| -k5realm | k5 realm | \- | \- | \(G\) | \- |
-| -k5keytab | k5 keytab | \- | \- | \(G\) | \- |
-| -uampath | uam path | etc/netatalk/uams/ | lib/netatalk/ | \(G\) | 厳密には $libdir に移動 |
-| -ipaddr | afp listen | \- | \- | \(G\) | \- |
-| -cnidserver | cnid server | localhost:4700 | localhost:4700 | (G)/(V) | \- |
-| -port | port | 548 | 548 | \(G\) | \- |
-| -signature | signature | auto | \- | \(G\) | \- |
-| -fqdn | fqdn | \- | \- | \(G\) | \- |
-| -unixcodepage | unix charset | LOCALE | UTF8 | \(G\) | \- |
-| -maccodepage | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | \- |
-| -closevol | close vol | \- | no | \(G\) | \- |
-| -ntdomain | nt domain | \- | \- | \(G\) | \- |
-| -ntseparator | nt separator | \- | \- | \(G\) | \- |
-| -dircachesize | dircachesize | 8192 | 8192 | \(G\) | \- |
-| -tcpsndbuf | tcpsndbuf | \- | \- | \(G\) | OS のデフォルト |
-| -tcprcvbuf | tcprcvbuf | \- | \- | \(G\) | OS のデフォルト |
-| -fcelistener | fce listener | \- | \- | \(G\) | \- |
-| -fcecoalesce | fce coalesce | \- | \- | \(G\) | \- |
-| -fceevents | fce events | \- | \- | \(G\) | \- |
-| -fceholdfmod | fce holdfmod | 60 | 60 | \(G\) | \- |
-| -mimicmodel | mimic model | \- | \- | \(G\) | \- |
-| -adminauthuser | admin auth user | \- | \- | \(G\) | \- |
-| -noacl2maccess | map acls | \- | rights | \(G\) | \- |
-| -\[no\]tcp | \- | -tcp | \- | \- | 常に TCP を有効 |
-| -\[no\]ddp | appletalk | -ddp | no | \(G\) | 4.0.0で復活 |
-| -\[no\]transall | \- | -transall | \- | \- | 常に TCP を有効 |
-| -nodebug | \- | \- | \- | \- | 廃止 |
-| -\[no\]slp | \- | -noslp | \- | \- | SLP サポートが廃止 |
-| -\[no\]uservolfirst | \- | -nouservolfirst | \- | \- | uservol が廃止 |
-| -\[no\]uservol | \- | -uservol | \- | \- | uservol が廃止 |
-| -proxy | \- | \- | \- | \- | 廃止 |
-| -defaultvol | \- | AppleVolumes.default | \- | \- | afp.conf のみ |
-| -systemvol | \- | AppleVolumes.system | \- | \- | extmap.conf のみ |
-| -loginmaxfail | \- | \- | \- | \- | そもそも最初からサポートされていない |
-| -unsetuplog | \- | \- | \- | \- | 廃止 |
-| -authprintdir | \- | \- | \- | \- | CAP スタイル認証印刷が廃止 |
-| -ddpaddr | ddp address | 0.0 | 0.0 | \(G\) | 4.0.0で復活 |
-| -\[no\]icon | legacy icon | -noicon | \- | \(G\) | 4.0.2で復活 |
-| -keepsessions | \- | \- | \- | \- | 廃止。kill -HUP を使用 |
+| - あるいは“サーバー名”) | hostname | - | - | (G) | 4.2.0で新規追加、デフォルトでは hostname を使用 |
+| -uamlist | uam list | uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
+| -nozeroconf | zeroconf | - | （サポートされていれば） yes | (G) | - |
+| -advertise_ssh | advertise ssh | - | no | (G) | - |
+| -[no]savepassword | save password | -savepassword | yes | (G) | - |
+| -[no]setpassword | set password | -nosetpassword | no | (G) | - |
+| -client_polling | client polling | - | no | (G) | - |
+| -hostname | hostname | - | - | (G) | デフォルトでは gethostname() を使用 |
+| -loginmesg | login message | - | - | (G)/(V) | - |
+| -guestname | guest account | nobody | nobody | (G) | - |
+| -passwdfile | passwd file | afppasswd | afppasswd | (G) | - |
+| -passwdminlen | passwd minlen | - | - | (G) | - |
+| -tickleval | tickleval | 30 | 30 | (G) | - |
+| -timeout | timeout | 4 | 4 | (G) | - |
+| -sleep | sleep time | 10 | 10 | (G) | - |
+| -dsireadbuf | dsireadbuf | 12 | 12 | (G) | - |
+| -server_quantum | server quantum | 303840 | 1048576 | (G) | - |
+| -volnamelen | volnamelen | 80 | 80 | (G) | - |
+| -setuplog | log level | default log_note | default:note | (G) | - |
+| -setuplog | log file | - | - | (G) | - |
+| -admingroup | admingroup | - | - | (G) | - |
+| -k5service | k5 service | - | - | (G) | - |
+| -k5realm | k5 realm | - | - | (G) | - |
+| -k5keytab | k5 keytab | - | - | (G) | - |
+| -uampath | uam path | etc/netatalk/uams | lib/netatalk | (G) | 厳密には $libdir に移動 |
+| -ipaddr | afp listen | - | - | (G) | - |
+| -cnidserver | cnid server | localhost:4700 | localhost:4700 | (G)/(V) | - |
+| -port | port | 548 | 548 | (G) | - |
+| -signature | signature | auto | - | (G) | - |
+| -fqdn | fqdn | - | - | (G) | - |
+| -unixcodepage | unix charset | LOCALE | UTF8 | (G) | - |
+| -maccodepage | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | - |
+| -closevol | close vol | - | no | (G) | - |
+| -ntdomain | nt domain | - | - | (G) | - |
+| -ntseparator | nt separator | - | - | (G) | - |
+| -dircachesize | dircachesize | 8192 | 8192 | (G) | - |
+| -tcpsndbuf | tcpsndbuf | - | - | (G) | OS のデフォルト |
+| -tcprcvbuf | tcprcvbuf | - | - | (G) | OS のデフォルト |
+| -fcelistener | fce listener | - | - | (G) | - |
+| -fcecoalesce | fce coalesce | - | - | (G) | - |
+| -fceevents | fce events | - | - | (G) | - |
+| -fceholdfmod | fce holdfmod | 60 | 60 | (G) | - |
+| -mimicmodel | mimic model | - | - | (G) | - |
+| -adminauthuser | admin auth user | - | - | (G) | - |
+| -noacl2maccess | map acls | - | rights | (G) | - |
+| -[no]tcp | - | -tcp | - | - | 常に TCP を有効 |
+| -[no]ddp | appletalk | -ddp | no | (G) | 4.0.0で復活 |
+| -[no]transall | - | -transall | - | - | 常に TCP を有効 |
+| -nodebug | - | - | - | - | 廃止 |
+| -[no]slp | - | -noslp | - | - | SLP サポートが廃止 |
+| -[no]uservolfirst | - | -nouservolfirst | - | - | uservol が廃止 |
+| -[no]uservol | - | -uservol | - | - | uservol が廃止 |
+| -proxy | - | - | - | - | 廃止 |
+| -defaultvol | - | AppleVolumes.default | - | - | afp.conf のみ |
+| -systemvol | - | AppleVolumes.system | - | - | extmap.conf のみ |
+| -loginmaxfail | - | - | - | - | 廃止 |
+| -unsetuplog | - | - | - | - | 廃止 |
+| -authprintdir | - | - | - | - | CAP スタイル認証印刷が廃止 |
+| -ddpaddr | ddp address | 0.0 | 0.0 | (G) | 4.0.0で復活 |
+| -[no]icon | legacy icon | -noicon | - | (G) | 4.0.2で復活 |
+| -keepsessions | - | - | - | - | 廃止。kill -HUP を使用 |
 
 **from afp_ldap.conf から afp.conf**
 
 | 旧 afp_ldap.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
-| ldap_server | ldap server | \- | \- | \(G\) | \- |
-| ldap_auth_method | ldap auth method | \- | \- | \(G\) | \- |
-| ldap_auth_dn | ldap auth dn | \- | \- | \(G\) | \- |
-| ldap_auth_pw | ldap auth pw | \- | \- | \(G\) | \- |
-| ldap_userbase | ldap userbase | \- | \- | \(G\) | \- |
-| ldap_userscope | ldap userscope | \- | \- | \(G\) | \- |
-| ldap_groupbase | ldap groupbase | \- | \- | \(G\) | \- |
-| ldap_groupscope | ldap groupscope | \- | \- | \(G\) | \- |
-| ldap_uuid_attr | ldap uuid attr | \- | \- | \(G\) | \- |
-| ldap_uuid_string | ldap uuid string | \- | \- | \(G\) | \- |
-| ldap_name_attr | ldap name attr | \- | \- | \(G\) | \- |
-| ldap_group_attr | ldap group attr | \- | \- | \(G\) | \- |
+| ldap_server | ldap server | - | - | (G) | - |
+| ldap_auth_method | ldap auth method | - | - | (G) | - |
+| ldap_auth_dn | ldap auth dn | - | - | (G) | - |
+| ldap_auth_pw | ldap auth pw | - | - | (G) | - |
+| ldap_userbase | ldap userbase | - | - | (G) | - |
+| ldap_userscope | ldap userscope | - | - | (G) | - |
+| ldap_groupbase | ldap groupbase | - | - | (G) | - |
+| ldap_groupscope | ldap groupscope | - | - | (G) | - |
+| ldap_uuid_attr | ldap uuid attr | - | - | (G) | - |
+| ldap_uuid_string | ldap uuid string | - | - | (G) | - |
+| ldap_name_attr | ldap name attr | - | - | (G) | - |
+| ldap_group_attr | ldap group attr | - | - | (G) | - |
 
 **AppleVolumes.\* から afp.conf**
 
 | 旧 AppleVolumes.\* | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
-| （ピリオドで始まる行） | \- | \- | \- | \- | extmap.conf で使用する |
-| :DEFAULT: | \- | options:upriv,usedots | \- | \- | "vol preset" を使用する |
-| 一番目のフィールド ("~") | \- | \- | \- | \- | \[Homes\] セクションを使用する |
-| 一番目のフィールド ("/path") | path | \- | \- | \(V\) | \- |
-| 二番目のフィールド | \- | \- | \- | \- | セクション名を使用する |
-| allow: | valid users | \- | \- | \(V\) | \- |
-| deny: | invalid users | \- | \- | \(V\) | \- |
-| rwlist: | rwlist | \- | \- | \(V\) | \- |
-| rolist: | rolist | \- | \- | \(V\) | \- |
-| volcharset: | vol charset | UTF8 | （unix charset と同じ） | (G)/(V) | \- |
-| maccharset: | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | \- |
-| veto: | veto files | \- | \- | \(V\) | \- |
-| cnidscheme: | cnid scheme | dbd | dbd | \(V\) | \- |
-| casefold: | casefold | \- | \- | \(V\) | \- |
-| adouble: | appledouble | v2 | ea | \(V\) | 4.2.0で廃止 |
-| cnidserver: | cnid server | localhost:4700 | localhost:4700 | (G)/(V) | \- |
-| dbpath: | vol dbpath | （ボリュームディレクトリ） | $prefix/var/netatalk/CNID/ | \(G\) | 厳密には $localstatedir に移動 |
-| umask: | umask | 0000 | 0000 | \(V\) | \- |
-| dperm: | directory perm | 0000 | 0000 | \(V\) | \- |
-| fperm: | file perm | 0000 | 0000 | \(V\) | \- |
-| password: | password | \- | \- | \(V\) | \- |
-| root_preexec: | \- | \- | \- |  | 4.1.0で廃止 |
-| preexec: | preexec | \- | \- | \(V\) | \- |
-| root_postexec: | \- | \- | \- | \- | 4.1.0で廃止 |
-| postexec: | postexec | \- | \- | \(V\) | \- |
-| allowed_hosts: | hosts allow | \- | \- | \(V\) | \- |
-| denied_hosts: | hosts deny | \- | \- | \(V\) | \- |
-| ea: | ea | auto | auto | \(V\) | \- |
-| volsizelimit: | vol size limit | \- | \- | \(V\) | 4.0.0で復活 |
-| perm: | \- | \- | \- | \- | "directory perm" 及び "file perm" を使用する |
-| forceuid: | \- | \- | \- | \- | 廃止 |
-| forcegid: | \- | \- | \- | \- | 廃止 |
-| options:ro | read only | \- | no | \(V\) | \- |
-| options:invisibledots | invisible dots | \- | no | \(V\) | \- |
-| options:nostat | stat vol | \- | yes | \(V\) | \- |
-| options:preexec_close | preexec close | \- | no | \(V\) | \- |
-| options:root_preexec_close | \- | \- | \- | \- | 4.1.0で廃止 |
-| options:upriv | unix priv | \- | yes | \(V\) | \- |
-| options:nodev | cnid dev | \- | yes | \(V\) | \- |
-| options:illegalseq | illegal seq | \- | no | \(V\) | \- |
-| options:tm | time machine | \- | no | \(V\) | \- |
-| options:searchdb | search db | \- | no | \(V\) | \- |
-| options:nonetids | network ids | \- | yes | \(V\) | \- |
-| options:noacls | acls | \- | yes | \(V\) | \- |
-| options:followsymlinks | follow symlinks | \- | no | \(V\) | \- |
-| options:nohex | \- | \- | \- | \- | ":2f" は ":" に自動変換される |
-| options:usedots | \- | \- | \- | \- | ":2e" は "." に自動変換される |
-| options:nofileid | \- | \- | \- | \- | 廃止 |
-| options:prodos | prodos | \- | no | \(V\) | 4.0.0で復活 |
-| options:mswindows | \- | \- | \- | \- | 廃止 |
-| options:crlf | \- | \- | \- | \- | 廃止 |
-| options:noadouble | \- | \- | \- | \- | 廃止 |
-| options:limitsize | legacy volume size | \- | no | \(V\) | 4.0.0で復活 |
-| options:dropbox | \- | \- | \- | \- | 廃止 |
-| options:dropkludge | \- | \- | \- | \- | 廃止 |
-| options:nocnidcache | \- | \- | \- | \- | 廃止 |
-| options:caseinsensitive | \- | \- | \- | \- | 廃止 |
+| （ピリオドで始まる行） | - | - | - | - | extmap.conf で使用する |
+| :DEFAULT: | - | options:upriv,usedots | - | - | "vol preset" を使用する |
+| 一番目のフィールド ("~") | - | - | - | - | [Homes] セクションを使用する |
+| 一番目のフィールド ("/path") | path | - | - | (V) | - |
+| 二番目のフィールド | - | - | - | - | セクション名を使用する |
+| allow: | valid users | - | - | (V) | - |
+| deny: | invalid users | - | - | (V) | - |
+| rwlist: | rwlist | - | - | (V) | - |
+| rolist: | rolist | - | - | (V) | - |
+| volcharset: | vol charset | UTF8 | （unix charset と同じ） | (G)/(V) | - |
+| maccharset: | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | - |
+| veto: | veto files | - | - | (V) | - |
+| cnidscheme: | cnid scheme | dbd | dbd | (V) | - |
+| casefold: | casefold | - | - | (V) | - |
+| adouble: | appledouble | v2 | ea | (V) | 4.2.0で廃止 |
+| cnidserver: | cnid server | localhost:4700 | localhost:4700 | (G)/(V) | - |
+| dbpath: | vol dbpath | （ボリュームディレクトリ） | $prefix/var/netatalk/CNID | (G) | 厳密には $localstatedir に移動 |
+| umask: | umask | 0000 | 0000 | (V) | - |
+| dperm: | directory perm | 0000 | 0000 | (V) | - |
+| fperm: | file perm | 0000 | 0000 | (V) | - |
+| password: | password | - | - | (V) | - |
+| root_preexec: | - | - | - |  | 4.1.0で廃止 |
+| preexec: | preexec | - | - | (V) | - |
+| root_postexec: | - | - | - | - | 4.1.0で廃止 |
+| postexec: | postexec | - | - | (V) | - |
+| allowed_hosts: | hosts allow | - | - | (V) | - |
+| denied_hosts: | hosts deny | - | - | (V) | - |
+| ea: | ea | auto | auto | (V) | - |
+| volsizelimit: | vol size limit | - | - | (V) | 4.0.0で復活 |
+| perm: | - | - | - | - | "directory perm" 及び "file perm" を使用する |
+| forceuid: | - | - | - | - | 廃止 |
+| forcegid: | - | - | - | - | 廃止 |
+| options:ro | read only | - | no | (V) | - |
+| options:invisibledots | invisible dots | - | no | (V) | - |
+| options:nostat | stat vol | - | yes | (V) | - |
+| options:preexec_close | preexec close | - | no | (V) | - |
+| options:root_preexec_close | - | - | - | - | 4.1.0で廃止 |
+| options:upriv | unix priv | - | yes | (V) | - |
+| options:nodev | cnid dev | - | yes | (V) | - |
+| options:illegalseq | illegal seq | - | no | (V) | - |
+| options:tm | time machine | - | no | (V) | - |
+| options:searchdb | search db | - | no | (V) | - |
+| options:nonetids | network ids | - | yes | (V) | - |
+| options:noacls | acls | - | yes | (V) | - |
+| options:followsymlinks | follow symlinks | - | no | (V) | - |
+| options:nohex | - | - | - | - | ":2f" は ":" に自動変換される |
+| options:usedots | - | - | - | - | ":2e" は "." に自動変換される |
+| options:nofileid | - | - | - | - | 廃止 |
+| options:prodos | prodos | - | no | (V) | 4.0.0で復活 |
+| options:mswindows | - | - | - | - | 廃止 |
+| options:crlf | - | - | - | - | 廃止 |
+| options:noadouble | - | - | - | - | 廃止 |
+| options:limitsize | legacy volume size | - | no | (V) | 4.0.0で復活 |
+| options:dropbox | - | - | - | - | 廃止 |
+| options:dropkludge | - | - | - | - | 廃止 |
+| options:nocnidcache | - | - | - | - | 廃止 |
+| options:caseinsensitive | - | - | - | - | 廃止 |
