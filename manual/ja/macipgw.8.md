@@ -4,9 +4,9 @@ macipgw — MacIP ゲートウェイ デーモン
 
 # 概要
 
-**macipgw** [-d debugclass] [-f configfile] [-n nameserver] [-u unprivileged-user] [-z zone] [network] [netmask]
+**macipgw** [-d *debugclass*] [-f *configfile*] [-n *nameserver*] [-u *unprivileged-user*] [-z *zone*] [*network*] [*netmask*]
 
-**macipgw** [ -v | -V ]
+**macipgw** [-v | -V]
 
 # 説明
 
@@ -29,41 +29,39 @@ MacIP (以前は KIP と呼ばれていました) は、IP パケットを Apple
 
 # オプション
 
-**-d** <debugclass>
+**-d** *debugclass*
 
 > デーモンがフォークせず、すべてのアクションのトレースが書き込まれるように指定する*stdout*
 に出力する。 debugclass の有用な値については、ソース
 コードを参照してください。
 
-**-f** <configfile>
+**-f** *configfile*
 
-> 設定情報については、*macipgw.conf* ではなく、<configfile>
-を参照する。
+> 設定情報については、*macipgw.conf*ではなく、*configfile*を参照する。
 
-**-n** <nameserver>
+**-n** *nameserver*
 
 > ゲートウェイ経由で接続された AppleTalk デバイスが使用する DNS ネーム
 サーバーの IP アドレスを指定する。
 
-**-u** <unprivileged-user>
+**-u** *unprivileged-user*
 
-> サーバーの起動後に、ルート権限を削除してユーザー unprivileged-user
-に変更する。
+> サーバーの起動後に、ルート権限を削除してユーザー *unprivileged-user* に変更する。
 
-**-z** <zone>
+**-z** *zone*
 
 > **macipgw**
-は、デフォルトのゾーンではなく、ゾーンに登録する必要がある。
+は、デフォルトのゾーンではなく、*zone*に登録する必要がある。
 
 **-v** | **-V**
 
 > バージョン情報を表示して終了する。
 
-<network>
+*network*
 
 > クライアントに使用するネットワーク番号を指定する。
 
-<netmask>
+*netmask*
 
 > ネットワークのネットマスクを指定する。
 

@@ -4,7 +4,7 @@ getzones — AppleTalk ゾーン名を一覧表示する
 
 # 概要
 
-**getzones** [ -m | -l ] [address]
+**getzones** [-m | -l] [*address*]
 
 # 説明
 

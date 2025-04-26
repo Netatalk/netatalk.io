@@ -4,7 +4,7 @@ dbd — CNID データベースの保守
 
 # 概要
 
-**dbd** [-cfFstuv] [volumepath]
+**dbd** [-cfFstuv] [*volumepath*]
 
 **dbd** [-V]
 

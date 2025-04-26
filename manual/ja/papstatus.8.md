@@ -4,7 +4,7 @@ papstatus — AppleTalk 接続プリンタのステータスを取得する
 
 # 概要
 
-**papstatus** [-d] [-p printer] [retrytime]
+**papstatus** [-d] [-p *printer*] [*retrytime*]
 
 # 説明
 
@@ -24,7 +24,7 @@ papstatus — AppleTalk 接続プリンタのステータスを取得する
 
 > デバッグ モードをオンにして、標準エラーに追加情報を出力する。
 
-**-p** <printer>
+**-p** *printer*
 
 > *printer* からステータスを取得する (他の*.paprc*
 ファイルでプリンタ名を検索する)。 *printer* の構文は、*.paprc*

@@ -4,7 +4,7 @@ pap — Printer Access Protocol を使用したネットワークプリンター
 
 # 概要
 
-**pap** [-A address] [-c] [-d] [-e] [-E] [-p nbpname] [-s statusfile] [-w] [-W] [FILES]
+**pap** [-A *address*] [-c] [-d] [-e] [-E] [-p *nbpname*] [-s *statusfile*] [-w] [-W] [*FILES*]
 
 # 説明
 
@@ -22,7 +22,7 @@ pap — Printer Access Protocol を使用したネットワークプリンター
 
 # オプション
 
-**-A** <address>
+**-A** *address*
 
 > Appletalk アドレス *address*
 を使用してプリンタに接続し、プリンタ名を見つけるために *.paprc*
@@ -51,13 +51,13 @@ pap — Printer Access Protocol を使用したネットワークプリンター
 EOF
 を返すのを待機する必要がある。一部のクライアントは待機しないため、一部のプリンタでは実装に関連するバグがある。
 
-**-p** <nbpname>
+**-p** *nbpname*
 
 > *nbpname* という名前のプリンタに接続し、プリンタ名を見つけるために
 *.paprc* ファイルを参照しない。 *nbpname*
 の構文については、**nbp_name**(3) を参照してください。
 
-**-s** <statusfile>
+**-s** *statusfile*
 
 > *statusfile* というファイルを更新して、プリンタからの最新のステータス
 メッセージを含める。 **pap**

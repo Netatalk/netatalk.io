@@ -4,7 +4,7 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 # 概要
 
-**afppasswd** [-acfn] [-p afppasswd file] [-u minimum uid] [-w password string]
+**afppasswd** [-acfn] [-p *afppasswd file*] [-u *minimum uid*] [-w *password string*]
 
 # 説明
 
@@ -41,7 +41,7 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 > 現在の動作を強制する。
 
-**-p** <パス>
+**-p** *パス*
 
 > *afppasswd*ファイルのパス。
 
@@ -49,12 +49,12 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 > もしcracklibサポートが*netatalk*に組み込まれており、cracklib辞書に対して実行されたパスワードを持つことをスーパユーザが望まないなら、このオプションはcracklibチェックを無効にできるだろう。
 
-**-u** <minimum uid>
+**-u** *minimum uid*
 
 > これは、**afppasswd**がユーザを作成するときに使う最小の*ユーザid*
 (uid)である。
 
-**-w** <パスワード文字列>
+**-w** *パスワード文字列*
 
 > パスワードを対話形式で入力するのではなく、文字列をパスワードとして使用する。
 パスワードは平文で端末履歴に残るため、このオプションは絶対に必要な場合にのみ使用してください。

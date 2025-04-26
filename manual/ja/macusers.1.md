@@ -6,7 +6,7 @@ macusers — AFP 経由で接続しているユーザをリストする
 
 **macusers**
 
-**macusers** [ -v | -version | --version | -h | -help | --help ]
+**macusers** [-v | -version | --version | -h | -help | --help]
 
 # 説明
 

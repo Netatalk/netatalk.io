@@ -4,9 +4,9 @@ timelord — Macintosh タイム サーバー デーモン
 
 # 概要
 
-**timelord** [-d] [-l] [-n nbpname]
+**timelord** [-d] [-l] [-n *nbpname*]
 
-**timelord** [ -v | -V ]
+**timelord** [-v | -V]
 
 # 説明
 
@@ -32,7 +32,7 @@ CDEV と同じ機能を備えている。
 > サーバーのタイム ゾーン調整されたローカル時間を返する。
 このオプションがない場合のデフォルトの動作は GMT になる。
 
-**-n** <nbpname>
+**-n** *nbpname*
 
 > このサーバーを *nbpname*
 として登録する。デフォルトではホスト名になる。

@@ -6,7 +6,7 @@ cnid_dbd — CNID データベースへのアクセスデーモン
 
 **cnid_dbd**
 
-**cnid_dbd** [ -v | -V ]
+**cnid_dbd** [-v | -V]
 
 # 説明
 
@@ -69,11 +69,11 @@ Netatalk 2.1.0 以降を使ってデータベースを作成した場合、自�
 
 - これからアップグレードする古いバージョンのNetatalkを停止する
 
-- 古いBerkeley DBユーティリティを使って、*db_checkpoint -1 -h <.AppleDBのパス>* を実行する
+- 古いBerkeley DBユーティリティを使って、*db_recover -h .AppleDBのパス* を実行する
 
-- 新しいBerkeley DBユーティリティを使って、*db_upgrade -v -h <.AppleDBのパス> -f cnid2.db* を実行する
+- 新しいBerkeley DBユーティリティを使って、*db_upgrade -v -h .AppleDBのパス -f cnid2.db* を実行する
 
-- 再び新しいBerkeley DBユーティリティを使って、*db_checkpoint -1 -h <.AppleDBのパス>* を実行する
+- 再び新しいBerkeley DBユーティリティを使って、*db_checkpoint -1 -h .AppleDBのパス* を実行する
 
 - 新しいバージョンのNetatalkを起動する
 

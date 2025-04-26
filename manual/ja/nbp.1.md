@@ -6,21 +6,19 @@ nbplkup, nbprgstr, nbpunrgstr — NBP データベースにアクセスするツ
 
 **nbplkup**
 
-**nbprgstr** [ -A address ] [ -m Mac charset ] [ -p port ] obj:type@zone
+**nbprgstr** [-A *address*] [-m *Mac charset*] [-p *port*] *obj:type@zone*
 
-**nbpunrgstr** [ -A address ] [ -m Mac charset ] obj:type@zone
+**nbpunrgstr** [-A *address*] [-m *Mac charset*] *obj:type@zone*
 
 # 説明
 
-**nbprgstr** は、指定された <port> で、**atalkd**(8) に <nbpname>
-を登録する。**nbpunrgstr** は、*atalkd* に、<nbpname>
-がアドバタイズされなくなったことを通知する。
+**nbprgstr** は、指定された *port* で、**atalkd**(8) に *nbpname*
+を登録する。**nbpunrgstr** は、*atalkd* に、*nbpname* がアドバタイズされなくなったことを通知する。
 
-**nbplkup** は、AppleTalk インターネットに登録されているエンティティを最大
-<maxresponses> (デフォルトは 1000) 個表示する。 <nbpname>
-は、**nbp_name**(3)によって解析される。 *object*
-または*type*の\`*=*'は任意のものに一致し、*zone*の\`*\**'はローカルゾーンを意味する。デフォルト値は、*NBPLKUP*
-環境変数から取得され、<nbpname> として解析される。
+**nbplkup**は、AppleTalkインターネットに登録されているエンティティを最大
+*maxresponses* (デフォルトは 1000) 個表示する。*nbpname*は、**nbp_name**(3)によって解析される。*object*
+または*type*の\`*=*'は任意のものに一致し、*zone*の\`*\**'はローカルゾーンを意味する。デフォルト値は、NBPLKUP
+環境変数から取得され、*nbpname*として解析される。
 
 # 環境変数
 

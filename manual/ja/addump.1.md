@@ -4,17 +4,17 @@ addump - AppleSingle/AppleDouble フォーマットのデータをダンプす�
 
 # 概要
 
-**addump** [-a] [ FILE | DIR ]
+**addump** [-a] [*FILE* | *DIR*]
 
-**addump** [-e] [ FILE | DIR ]
+**addump** [-e] [*FILE* | *DIR*]
 
-**addump** [-f] [FILE]
+**addump** [-f] [*FILE*]
 
-**addump** [-d] [FILE]
+**addump** [-d] [*FILE*]
 
-**addump** [ -h | -help | --help ]
+**addump** [-h | -help | --help]
 
-**addump** [ -v | -version | --version ]
+**addump** [-v | -version | --version]
 
 # 説明
 
@@ -23,25 +23,25 @@ addump - AppleSingle/AppleDouble フォーマットのデータをダンプす�
 このスクリプトはメーラ、アーカイバ、Mac OS
 X、Netatalkなどが生成する様々なAppleSingle/AppleDoubleデータをダンプできる。
 
-<FILE>\|<DIR>がない、または<FILE>\|<DIR>が「-」であるとき、標準入力を読み込む。
+*FILE*\|*DIR*がない、または*FILE*\|*DIR*が「-」であるとき、標準入力を読み込む。
 
 # オプション
 
-**-a** [<FILE>|<DIR>]
+**-a** [*FILE*|*DIR*]
 
-> これがデフォルトである。<FILE>または<DIR>のためのAppleSingle/AppleDoubleデータを自動的にダンプする。もしFILEがAppleSingle/AppleDoubleフォーマットでないなら、拡張属性と<.AppleDouble/FILE>と<.\_FILE>を探する。もし<DIR>なら、拡張属性と<DIR/.AppleDouble/.Parent>と<.\_DIR>を探する。
+> これがデフォルトである。*FILE*または*DIR*のためのAppleSingle/AppleDoubleデータを自動的にダンプする。もし*FILE*がAppleSingle/AppleDoubleフォーマットでないなら、拡張属性と*.AppleDouble/FILE*と*.\_FILE*を探す。もし*DIR*なら、拡張属性と*DIR/.AppleDouble/.Parent*と*.\_DIR*を探す。
 
-**-e** <FILE>|<DIR>
+**-e** *FILE*|*DIR*
 
-> <FILE>または<DIR>の拡張属性をダンプする。
+> *FILE*または*DIR*の拡張属性をダンプする。
 
-**-f** [<FILE>]
+**-f** [*FILE*]
 
-> <FILE>をダンプする。FinderInfoがFileInfoであると仮定する。
+> *FILE*をダンプする。FinderInfoがFileInfoであると仮定する。
 
-**-d** [<FILE>]
+**-d** [*FILE*]
 
-> <FILE>をダンプする。FinderInfoがDirInfoであると仮定する。
+> *FILE*をダンプする。FinderInfoがDirInfoであると仮定する。
 
 **-h**, **-help**, **--help**
 
