@@ -1,5 +1,19 @@
 # News Archive
 
+## Netatalk 4.1.2 is available
+
+*10th of February 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.1 release series. This fixes bugs in the Webmin module,
+while also improving compatibility with MacPorts.
+
+All users of previous Netatalk versions are encouraged to upgrade to
+4.1.2.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.1/ReleaseNotes4.1.2.html).
+
 ## Netatalk 4.1.1 is available
 
 *20th of January 2025*

@@ -54,9 +54,9 @@ only a subset of features enabled.
 Arrange a C compiler (we use *gcc* or *clang*), the
 [Meson](https://mesonbuild.com/) build system with
 [Ninja](https://ninja-build.org/), together with [required
-libraries](https://netatalk.io/install).
-Read more in the [Netatalk manual](stable/htmldocs/installation) or the
-OS specific guides in the [wiki](docs).
+libraries](/install.html).
+Read more in the [Netatalk manual](/manual/en/Installation.html) or the
+OS specific guides in the [wiki](/docs.html).
 
 ## How to Use
 
@@ -66,10 +66,10 @@ OS 9 and Mac OS 8.
 
 If you need a different setup, you have to configure the host system
 before starting Netatalk. Netatalk has a dizzying amount of options
-which can be daunting initially. The
-[Configuration](stable/htmldocs/configuration) chapter and
-[afp.conf](https://netatalk.io/stable/htmldocs/afp.conf.5) page in the
-Netatalk manual are good places to start.
+which can be daunting initially.
+The [Configuration](/manual/en/Configuration.html) chapter and
+[afp.conf](/manual/en/afp.conf.5.html) page in the Netatalk manual
+are good places to start.
 
 Once Netatalk is up and running, in the macOS Finder, active Netatalk
 file servers appear under *Locations*, or in the *Network* drawer. On
@@ -103,6 +103,23 @@ latest version of Netatalk provides.
 
 # Latest News
 
+## Netatalk 4.2.2 is available
+
+*27th of April 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.1 release series.
+
+This release contains overhauled documentation,
+improvements to the netatalk webmin module,
+and significant new containerization capabilities.
+
+All users of previous Netatalk versions are encouraged to upgrade to
+4.2.2.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.2.html).
+
 ## Netatalk 4.2.1 is available
 
 *14th of April 2025*
@@ -133,20 +150,6 @@ issues to the Netatalk development team.
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.0.html).
-
-## Netatalk 4.1.2 is available
-
-*10th of February 2025*
-
-The Netatalk development team is proud to announce the latest version in
-the Netatalk 4.1 release series. This fixes bugs in the Webmin module,
-while also improving compatibility with MacPorts.
-
-All users of previous Netatalk versions are encouraged to upgrade to
-4.1.2.
-
-For a summary of news and a detailed list of changes see the [Release
-Notes](/4.1/ReleaseNotes4.1.2.html).
 
 ## Older Stories
 
