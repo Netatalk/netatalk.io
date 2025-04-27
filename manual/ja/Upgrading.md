@@ -134,9 +134,9 @@ netatalk.conf (Debianの場合は/etc/default/netatalk) から afp.conf
 | CNID_METAD_RUN | - | yes | - | - | netatalk(8) で制御 |
 | AFPD_RUN | - | yes | - | - | netatalk(8) で制御 |
 | AFPD_MAX_CLIENTS | max connections | 20 | 200 | (G) | - |
-| AFPD_UAMLIST | uam list | -U uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
+| AFPD_UAMLIST | uam list | uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
 | AFPD_GUEST | guest account | nobody | nobody | (G) | - |
-| CNID_CONFIG | log level | -l log_note | cnid:note | (G) | - |
+| CNID_CONFIG | log level | log_note | cnid:note | (G) | - |
 | CNID_CONFIG | log file | - | - | (G) | - |
 | ATALKD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
 | PAPD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
@@ -259,7 +259,7 @@ AppleVolumes.\* から afp.conf への対応表
 | postexec: | postexec | - | - | (V) | - |
 | allowed_hosts: | hosts allow | - | - | (V) | - |
 | denied_hosts: | hosts deny | - | - | (V) | - |
-| ea: | ea | auto | 自動検出 | (V) | 空白にママにすると自動検出される |
+| ea: | ea | auto | 自動検出 | (V) | 空白のママにすると自動検出される |
 | volsizelimit: | vol size limit | - | - | (V) | 4.0.0で復活 |
 | perm: | - | - | - | - | *directory perm* 及び *file perm* を使用する |
 | forceuid: | - | - | - | - | 廃止 |
