@@ -107,4 +107,4 @@ devices are using the gateway.
 
 # Author
 
-Stefan Bethke <Stefan.Bethke@Hanse.DE>
+Stefan Bethke <Stefan.Bethke@Hanse.DE\>

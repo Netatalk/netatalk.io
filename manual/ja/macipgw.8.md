@@ -94,4 +94,4 @@ tun(4), ip(4), atalkd(8), syslog(3), syslogd(8)
 
 # 著者
 
-Stefan Bethke <Stefan.Bethke@Hanse.DE>
+Stefan Bethke <Stefan.Bethke@Hanse.DE\>

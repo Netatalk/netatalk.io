@@ -1057,7 +1057,7 @@ the band size from the Info.plist XML file of the sparsebundle, reading
 the bands/ directory counting the number of band files, and then
 multiplying one with the other.
 
-valid users = *user @group* **(V)**
+valid users = *user* / *@group* **(V)**
 
 > The allow option allows the users and groups that access a share to be
 specified. Users and groups are specified, delimited by spaces or
@@ -1065,7 +1065,7 @@ commas. Groups are designated by a @ prefix. Example:
 
     valid users = user @group
 
-invalid users = *users/groups* **(V)**
+invalid users = *user* / *@group* **(V)**
 
 > The deny option specifies users and groups who are not allowed access to
 the share. It follows the same format as the "valid users" option.

@@ -101,7 +101,7 @@ To achieve this, several different CNID
 backends are available and can be
 selected with the **cnid scheme** option in
 the *afp.conf* configuration file. A CNID backend is basically a
-database storing ID <-> name mappings.
+database storing ID <-\> name mappings.
 
 The CNID databases are by default located in
 *$prefix/var/netatalk/CNID*. You can change the location by configuring
@@ -322,7 +322,7 @@ installed, you can use any iconv provided charset as well.
 afpd needs a way to preserve extended Macintosh characters, or
 characters illegal in UNIX filenames, when saving files on a UNIX
 filesystem. Earlier versions used the the so called CAP
-encoding. An extended character (>0x7F)
+encoding. An extended character (\>0x7F)
 would be converted to a :xx hex sequence, e.g. the Apple Logo (MacRoman:
 0xF0) was saved as :f0. Some special characters will be converted as to
 :xx notation as well. '/' will be encoded to :2f, if **usedots** was not

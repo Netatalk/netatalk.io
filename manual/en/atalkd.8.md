@@ -39,6 +39,7 @@ for details on the configuration file format.
 debugging information to stdout.
 
 **-f** *configfile*
+
 > Consult *configfile* instead of **atalkd.conf** for the configuration
 information.
 

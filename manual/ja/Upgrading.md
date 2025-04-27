@@ -115,15 +115,16 @@ VFSモジュールが必要である。
 | afp_signature.conf | afp_signature.conf | 厳密には $localstatedir に移動 |
 | afp_voluuid.conf | afp_voluuid.conf | 厳密には $localstatedir に移動 |
 | netatalk.conf | - | 廃止 |
-| afpd.conf | - | 廃止 |
-| afp_ldap.conf | - | 廃止 |
-| AppleVolumes.default | - | 廃止 |
+| afpd.conf | - | afp.conf に統合された |
+| afp_ldap.conf | - | afp.conf に統合された |
+| AppleVolumes.default | - | afp.conf に統合された |
 | AppleVolumes.system | extmap.conf | netatalk 3.0.2 から採用 |
 | ~/.AppleVolumes | - | 廃止 |
 
 ### 新旧オプション対応表
 
-**netatalk.conf (Debianの場合は/etc/default/netatalk) から afp.conf**
+netatalk.conf (Debianの場合は/etc/default/netatalk) から afp.conf
+への対応表、および起動手段の対応表
 
 | 旧 netatalk.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
@@ -141,14 +142,14 @@ VFSモジュールが必要である。
 | PAPD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
 | TIMELORD_RUN | - | no | - | - | 独自起動スクリプトで制御 |
 | A2BOOT_RUN | - | no | - | - | 独自起動スクリプトで制御 |
-| ATALK_BGROUND | - | no | - | - | 独自起動スクリプトで制御 |
+| ATALK_BGROUND | - | no | - | - | 廃止 |
 | ATALK_ZONE | ddp zone | - | - | (G) | 4.0.0で復活 |
 
-**afpd.conf から afp.conf**
+afpd.conf から afp.conf への対応表
 
 | 旧 afpd.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
-| - あるいは“サーバー名”) | hostname | - | - | (G) | 4.2.0で新規追加、デフォルトでは hostname を使用 |
+| - あるいは“サーバー名”) | hostname | - | - | (G) | 4.2.0で新規追加、デフォルトでは*hostname*を使用 |
 | -uamlist | uam list | uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
 | -nozeroconf | zeroconf | - | （サポートされていれば） yes | (G) | - |
 | -advertise_ssh | advertise ssh | - | no | (G) | - |
@@ -210,7 +211,7 @@ VFSモジュールが必要である。
 | -[no]icon | legacy icon | -noicon | - | (G) | 4.0.2で復活 |
 | -keepsessions | - | - | - | - | 廃止。kill -HUP を使用 |
 
-**from afp_ldap.conf から afp.conf**
+afp_ldap.conf から afp.conf への対応表
 
 | 旧 afp_ldap.conf | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
@@ -227,7 +228,7 @@ VFSモジュールが必要である。
 | ldap_name_attr | ldap name attr | - | - | (G) | - |
 | ldap_group_attr | ldap group attr | - | - | (G) | - |
 
-**AppleVolumes.\* から afp.conf**
+AppleVolumes.\* から afp.conf への対応表
 
 | 旧 AppleVolumes.\* | 新 afp.conf | 旧デフォルト値 | 新デフォルト値 | セクション | 詳細 |
 |----|----|----|----|----|----|
@@ -235,12 +236,12 @@ VFSモジュールが必要である。
 | :DEFAULT: | - | options:upriv,usedots | - | - | "vol preset" を使用する |
 | 一番目のフィールド ("~") | - | - | - | - | [Homes] セクションを使用する |
 | 一番目のフィールド ("/path") | path | - | - | (V) | - |
-| 二番目のフィールド | - | - | - | - | セクション名を使用する |
+| 二番目のフィールド | volume name | - | セクション名を使用する | (V) | 4.2.0で追加 |
 | allow: | valid users | - | - | (V) | - |
 | deny: | invalid users | - | - | (V) | - |
 | rwlist: | rwlist | - | - | (V) | - |
 | rolist: | rolist | - | - | (V) | - |
-| volcharset: | vol charset | UTF8 | （unix charset と同じ） | (G)/(V) | - |
+| volcharset: | vol charset | UTF8 | *unix charset* を使用する | (G)/(V) | - |
 | maccharset: | mac charset | MAC_ROMAN | MAC_ROMAN | (G)/(V) | - |
 | veto: | veto files | - | - | (V) | - |
 | cnidscheme: | cnid scheme | dbd | dbd | (V) | - |
@@ -258,9 +259,9 @@ VFSモジュールが必要である。
 | postexec: | postexec | - | - | (V) | - |
 | allowed_hosts: | hosts allow | - | - | (V) | - |
 | denied_hosts: | hosts deny | - | - | (V) | - |
-| ea: | ea | auto | auto | (V) | - |
+| ea: | ea | auto | 自動検出 | (V) | 空白にママにすると自動検出される |
 | volsizelimit: | vol size limit | - | - | (V) | 4.0.0で復活 |
-| perm: | - | - | - | - | "directory perm" 及び "file perm" を使用する |
+| perm: | - | - | - | - | *directory perm* 及び *file perm* を使用する |
 | forceuid: | - | - | - | - | 廃止 |
 | forcegid: | - | - | - | - | 廃止 |
 | options:ro | read only | - | no | (V) | - |

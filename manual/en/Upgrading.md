@@ -135,15 +135,16 @@ default
 | afp_signature.conf   | afp_signature.conf | moved to $localstatedir       |
 | afp_voluuid.conf     | afp_voluuid.conf   | moved to $localstatedir       |
 | netatalk.conf        | -                  | obsolete                      |
-| afpd.conf            | -                  | obsolete                      |
-| afp_ldap.conf        | -                  | obsolete                      |
-| AppleVolumes.default | -                  | obsolete                      |
+| afpd.conf            | -                  | merged into afp.conf          |
+| afp_ldap.conf        | -                  | merged into afp.conf          |
+| AppleVolumes.default | -                  | merged into afp.conf          |
 | AppleVolumes.system  | extmap.conf        | introduced in netatalk 3.0.2  |
 | ~/.AppleVolumes      | -                  | obsolete                      |
 
 ### Old and new option names
 
-**From netatalk.conf (/etc/default/netatalk on Debian) to afp.conf**
+Mappings from netatalk.conf (Debian: */etc/default/netatalk*) to afp.conf or
+to the means of invocation
 
 | Old netatalk.conf  | New afp.conf    | Old Default Value | New Default Value | Section | Remarks                       |
 |--------------------|-----------------|-------------------|-------------------|---------|-------------------------------|
@@ -161,14 +162,14 @@ default
 | PAPD_RUN           | -               | no                | -                 | -       | controlled by the init system |
 | TIMELORD_RUN       | -               | no                | -                 | -       | controlled by the init system |
 | A2BOOT_RUN         | -               | no                | -                 | -       | controlled by the init system |
-| ATALK_BGROUND      | -               | no                | -                 | -       | controlled by the init system |
+| ATALK_BGROUND      | -               | no                | -                 | -       | obsolete                      |
 | ATALK_ZONE         | ddp zone        | -                 | -                 | (G)     | introduced in 4.0.0           |
 
-**From afpd.conf to afp.conf**
+Mappings from afpd.conf to afp.conf
 
 | Old afpd.conf      | New afp.conf    | Old Default Value    | New Default Value  | Section | Remarks |
 |--------------------|-----------------|----------------------|--------------------|---------|---------|
-| - or "server name" | server name     | -                    | -                  | (G)     | new in 4.2.0; default is hostname |
+| - or "server name" | server name     | -                    | -                  | (G)     | new in 4.2.0; default is *hostname* |
 | -uamlist           | uam list        | uams_dhx.so,uams_dhx2.so | uams_dhx.so uams_dhx2.so | (G) | - |
 | -nozeroconf        | zeroconf        | -                    | yes (if supported) | (G)     | -       |
 | -advertise_ssh     | advertise ssh   | -                    | no                 | (G)     | -       |
@@ -230,7 +231,7 @@ default
 | -[no]icon          | legacy icon     | -noicon              | -                  | (G)     | introduced in 4.0.2 |
 | -keepsessions      | -               | -                    | -                  | -       | obsolete; Use kill -HUP |
 
-**From afp_ldap.conf to afp.conf**
+Mappings from afp_ldap.conf to afp.conf
 
 | Old afp_ldap.conf | New afp.conf     | Old Default Value | New Default Value | Section | Remarks |
 |-------------------|------------------|-------------------|-------------------|---------|---------|
@@ -247,20 +248,20 @@ default
 | ldap_name_attr    | ldap name attr   | -                 | -                 | (G)     | -       |
 | ldap_group_attr   | ldap group attr  | -                 | -                 | (G)     | -       |
 
-**From AppleVolumes.\* to afp.conf**
+Mappings from AppleVolumes.\* to afp.conf
 
 | Old AppleVolumes.\*         | New afp.conf       | Old Default Value     | New Default Value | Section | Remarks |
 |----------------------------|--------------------|-----------------------|-------------------|---------|---------|
 | (leading-dot lines)        | -                  | -                     | -                 | -       | moved to extmap.conf |
-| :DEFAULT:                  | -                  | options:upriv,usedots | -                 | -       | use "vol preset" |
+| :DEFAULT:                  | -                  | options:upriv,usedots | -                 | -       | use *vol preset* |
 | 1st field ("~")            | -                  | -                     | -                 | -       | use [Homes] section |
 | 1st field ("/path")        | path               | -                     | -                 | (V)     | -       |
-| 2nd field                  | -                  | -                     | -                 | -       | use section name |
+| 2nd field                  | volume name        | -                     | *section name*      | (V)     | introduced in 4.2.0 |
 | allow:                     | valid users        | -                     | -                 | (V)     | -       |
 | deny:                      | invalid users      | -                     | -                 | (V)     | -       |
 | rwlist:                    | rwlist             | -                     | -                 | (V)     | -       |
 | rolist:                    | rolist             | -                     | -                 | (V)     | -       |
-| volcharset:                | vol charset        | UTF8                  | unix charset      | (G)/(V) | -       |
+| volcharset:                | vol charset        | UTF8                  | *unix charset*      | (G)/(V) | -       |
 | maccharset:                | mac charset        | MAC_ROMAN             | MAC_ROMAN         | (G)/(V) | -       |
 | veto:                      | veto files         | -                     | -                 | (V)     | -       |
 | cnidscheme:                | cnid scheme        | dbd                   | dbd               | (V)     | -       |
@@ -277,9 +278,9 @@ default
 | postexec:                  | postexec           | -                     | -                 | (V)     | -       |
 | allowed_hosts:             | hosts allow        | -                     | -                 | (V)     | -       |
 | denied_hosts:              | hosts deny         | -                     | -                 | (V)     | -       |
-| ea:                        | ea                 | auto                  | auto              | (V)     | -       |
+| ea:                        | ea                 | auto                  | *auto detection*    | (V)     | leave empty for auto detection |
 | volsizelimit:              | vol size limit     | -                     | -                 | (V)     | -       |
-| perm:                      | -                  | -                     | -                 | -       | Use "directory perm" and "file perm" |
+| perm:                      | -                  | -                     | -                 | -       | Use *directory perm* and *file perm* |
 | forceuid:                  | -                  | -                     | -                 | -       | obsolete |
 | forcegid:                  | -                  | -                     | -                 | -       | obsolete |
 | options:ro                 | read only          | -                     | no                | (V)     | -       |

@@ -891,14 +891,14 @@ sparsebundle の Info.plist XML
 バンド／ディレクトリ
 を読む、そしてお互いの乗算をする。ことによって行われる。
 
-valid users = *user @group* **(V)**
+valid users = *user* / *@group* **(V)**
 
 > この許可オプションは指定された共有にそのユーザーとグループのアクセスを許可する。ユーザーとグループはスペースかコンマで区切って指定する。グループは
 @ プレフィックスで明示する。例:
 
     valid users = user @group
 
-invalid users = *users/groups* **(V)**
+invalid users = *user* / *@group* **(V)**
 
 > この拒否オプションはその共有にアクセスを許可しないユーザーとグループを指定する。それ以外は
 "valid users" オプションと同じフォーマットである。
