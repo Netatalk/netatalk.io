@@ -28,7 +28,7 @@ networking that make great Netatalk companions.
 | [kea-mboot](https://github.com/saybur/kea-mboot) | Macintosh NetBoot Kea DHCP server hooks (depends on Netatalk) |
 | [lpstyl](https://github.com/Godzil/lpstyl) | *NIX StyleWriter driver with optional AppleTalk support (depends on Netatalk) |
 | [macipgw](https://macipgw.sourceforge.io) | [MacIP](https://en.wikipedia.org/wiki/MacIP) bridge for LocalTalk-only Macs (bundled with Netatalk as of v4.0.0) |
-| [MacIPRpi](https://www.macip.net/) | Read-made OS image for Raspberry Pi with vintage Mac networking software (bundles Netatalk) |
+| [MacIPRpi](https://www.macip.net/) | OS image for Raspberry Pi bundled with pre-configured vintage Mac networking software (bundles Netatalk) |
 | [MG's davex utils](https://github.com/mgcaret/davex-mg-utils) | Apple II toolsuite that includes a ProDOS *tardis* client for *timelord* |
 | [mDNS for Classic Mac OS](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | [DNS Service Discovery](https://github.com/apple-oss-distributions/mDNSResponder) (Zeroconf) extension for Mac OS 9 |
 | [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS UAM on which netatalk's historical *uams_pgp.so* authentication module was based |
