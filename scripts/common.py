@@ -202,7 +202,7 @@ def html_foot(path):
       <img style="border:0;width:88px;height:31px"
       src="https://www.w3.org/Icons/valid-css-v.svg" alt="Valid CSS">
     </a>
-    <p>Netatalk and the Netatalk website are licensed under the <a href="/stable/htmldocs/gpl">GNU
+    <p>Netatalk and the Netatalk website are licensed under the <a href="/manual/en/License">GNU
     General Public License 2.0</a>.</p>
 </div>
 </body>
