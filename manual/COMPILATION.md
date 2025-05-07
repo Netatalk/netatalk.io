@@ -18,7 +18,7 @@ apk add acl-dev avahi-compat-libdns_sd avahi-dev bison build-base cracklib crack
 Configure
 
 ```
-meson setup build -Dbuildtype=release -Dwith-appletalk=true -Dwith-cups-pap-backend=true -Dwith-dbus-sysconf-path=/usr/share/dbus-1/system.d -Dwith-tests=true -Dwith-testsuite=true
+meson setup build -Dbuildtype=release -Dwith-appletalk=true -Dwith-cups-pap-backend=true -Dwith-dbus-sysconf-path=/usr/share/dbus-1/system.d -Dwith-statedir-path=/var/lib -Dwith-tests=true -Dwith-testsuite=true
 ```
 
 Build
@@ -30,7 +30,7 @@ meson compile -C build
 Run integration tests
 
 ```
-cd build && meson test && cd ..
+meson test -C build
 ```
 
 Install
@@ -44,6 +44,11 @@ Check netatalk capabilities
 ```
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 ```
 
 Uninstall
@@ -75,7 +80,7 @@ meson compile -C build
 Run integration tests
 
 ```
-cd build && meson test && cd ..
+meson test -C build
 ```
 
 Install
@@ -89,6 +94,11 @@ Check netatalk capabilities
 ```
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 ```
 
 Uninstall
@@ -121,7 +131,7 @@ meson compile -C build
 Run integration tests
 
 ```
-cd build && meson test && cd ..
+meson test -C build
 ```
 
 Install
@@ -135,6 +145,11 @@ Check netatalk capabilities
 ```
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 ```
 
 Uninstall
@@ -166,7 +181,7 @@ meson compile -C build
 Run integration tests
 
 ```
-cd build && meson test && cd ..
+meson test -C build
 ```
 
 Install
@@ -180,6 +195,11 @@ Check netatalk capabilities
 ```
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 ```
 
 Uninstall
@@ -212,7 +232,7 @@ meson compile -C build
 Run distribution tests
 
 ```
-cd build && meson dist && cd ..
+meson dist -C build
 ```
 
 Install
@@ -226,6 +246,11 @@ Check netatalk capabilities
 ```
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 ```
 
 Start netatalk
@@ -272,7 +297,7 @@ meson compile -C build
 Run integration tests
 
 ```
-cd build && meson test && cd ..
+meson test -C build
 ```
 
 Install
@@ -342,9 +367,7 @@ Configure, compile, install, run, and uninstall
 set -e
 meson setup build -Dbuildtype=release -Dpkg_config_path=/usr/local/libdata/pkgconfig -Dwith-tests=true -Dwith-testsuite=true
 meson compile -C build
-cd build
-meson test
-cd ..
+meson test -C build
 meson install -C build
 netatalk -V
 afpd -V
@@ -371,12 +394,15 @@ Configure, compile, install, run, and uninstall
 set -e
 meson setup build -Dbuildtype=release -Dwith-appletalk=true -Dwith-cups-pap-backend=true -Dwith-dtrace=false -Dwith-tests=true -Dwith-testsuite=true
 meson compile -C build
-cd build
-meson test
-cd ..
+meson test -C build
 meson install -C build
 netatalk -V
 afpd -V
+atalkd -V
+a2boot -V
+macipgw -V
+papd -V
+timelord -V
 service netatalk onestart
 sleep 1
 asip-status localhost
@@ -389,7 +415,7 @@ ninja -C build uninstall
 Install required packages
 
 ```
-pkg_add -I avahi bison cmark db-4.6.21p7v0 dbus gcc-11.2.0p14 heimdal iniparser libevent libgcrypt libtalloc mariadb-client meson openldap-client-2.6.8v0 p5-Net-DBus pkgconf tracker3
+pkg_add -I avahi bison cmark db-4.6.21p7v0 dbus gcc-11.2.0p15 heimdal iniparser libevent libgcrypt libtalloc localsearch-3.8.2p0 mariadb-client meson openldap-client-2.6.9p0v0 p5-Net-DBus pkgconf tinysparql-3.8.2
 ```
 
 Configure, compile, install, run, and uninstall
@@ -428,9 +454,7 @@ set -e
 export PATH=/opt/local/sbin:/opt/local/bin:/usr/gnu/bin:/usr/bin:/usr/sbin:/sbin:$PATH
 meson setup build --prefix=/opt/local -Dbuildtype=release -Dpkg_config_path=/opt/local/lib/pkgconfig -Dwith-dbus-sysconf-path=/usr/share/dbus-1/system.d -Dwith-ldap-path=/opt/local -Dwith-tests=true -Dwith-testsuite=true
 meson compile -C build
-cd build
-meson test
-cd ..
+meson test -C build
 meson install -C build
 netatalk -V
 afpd -V
@@ -476,9 +500,7 @@ set -e
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 meson setup build --prefix=/usr/local -Dbuildtype=release -Dpkg_config_path=/usr/lib/amd64/pkgconfig -Dwith-dbus-sysconf-path=/usr/share/dbus-1/system.d -Dwith-iniparser-path=/usr/local -Dwith-tests=true -Dwith-testsuite=true
 meson compile -C build
-cd build
-meson test
-cd ..
+meson test -C build
 meson install -C build
 netatalk -V
 afpd -V

@@ -782,10 +782,9 @@ Charset オプションも参照のこと。
 
 appletalk = *BOOLEAN* (デフォルト: *no*) **(G)**
 
-> AFP-over-Appletalk
-のサポートを有効にする。このオプションを使用するには、オペレーティング
-システムが AppleTalk ネットワーク
-プロトコルをサポートしている必要がある。
+> AFPのAppleTalkトランスポート層を有効にする。このオプションを使用するには、オペレーティング
+システムが AppleTalk ネットワークプロトコルをサポートしている必要もあるし、
+Netatalk が AppleTalk サポートでビルドされている必要がある。
 
 ddp address = *ddp address* **(G)**
 
