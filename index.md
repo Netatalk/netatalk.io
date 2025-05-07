@@ -103,12 +103,27 @@ latest version of Netatalk provides.
 
 # Latest News
 
+## Netatalk 4.2.3 is available
+
+*7th of May 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.2 release series.
+
+In this version, we ship a handful of bug fixes and improvements to the
+documentation.
+All users of previous Netatalk versions are encouraged to upgrade to
+4.2.3.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.3.html).
+
 ## Netatalk 4.2.2 is available
 
 *27th of April 2025*
 
 The Netatalk development team is proud to announce the latest version in
-the Netatalk 4.1 release series.
+the Netatalk 4.2 release series.
 
 This release contains overhauled documentation,
 improvements to the netatalk webmin module,
@@ -132,24 +147,6 @@ All users of previous Netatalk versions are encouraged to upgrade to 4.2.1.
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.1.html).
-
-## Netatalk 4.2.0 is available
-
-*31st of March 2025*
-
-The Netatalk development team is proud to announce the first release of
-the Netatalk 4.2 release series. The theme for this release is
-security and reliability.
-
-There are a number of breaking changes and new dependencies in this release.
-Please read the [Release Notes](/4.2/ReleaseNotes4.2.0.html) carefully
-before upgrading.
-
-Early adopters are encouraged to test the new release and report any
-issues to the Netatalk development team.
-
-For a summary of news and a detailed list of changes see the [Release
-Notes](/4.2/ReleaseNotes4.2.0.html).
 
 ## Older Stories
 
