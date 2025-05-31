@@ -5,6 +5,7 @@ LOCALES = ["en", "ja"]
 # Netatalk releases 2023 onward which have release notes on GitHub.
 # Earlier versions have static release notes html pages.
 VERSIONS = [
+    "4.2.4",
     "4.2.3",
     "4.2.2",
     "4.2.1",

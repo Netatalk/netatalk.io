@@ -1,5 +1,18 @@
 # News Archive
 
+## Netatalk 4.2.1 is available
+
+*14th of April 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.2 release series.
+This release contains a range of important bug fixes,
+new options for downstream packaging, and improvements to testing.
+All users of previous Netatalk versions are encouraged to upgrade to 4.2.1.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.1.html).
+
 ## Netatalk 4.2.0 is available
 
 *31st of March 2025*
