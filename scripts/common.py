@@ -2,8 +2,8 @@ import re
 
 LOCALES = ["en", "ja"]
 
-# Netatalk releases 2023 onward which have release notes on GitHub.
-# Earlier versions have static release notes html pages.
+# List of Netatalk releases 2023 onwards, which have release notes on GitHub.
+# Earlier release notes are revision controlled in this repository.
 VERSIONS = [
     "4.2.4",
     "4.2.3",
