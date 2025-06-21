@@ -176,3 +176,4 @@ Records of historical Netatalk releases.
 - [Netatalk 1.6.0](/1.6/ReleaseNotes1.6.0.html)
 - [Netatalk 1.5.5](/1.5/ReleaseNotes1.5.5.html)
 - [Netatalk 1.5.0](/1.5/ReleaseNotes1.5.0.html)
+- [Netatalk 1.3](/1.3/ReleaseNotes1.3.html)
