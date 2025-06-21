@@ -1,4 +1,4 @@
-## Netatalk 2.2-beta3
+# Netatalk 2.2-beta3
 
 The Netatalk development team is proud to announce version 2.2-beta3 of
 the Netatalk File Sharing suite. This is an unstable version, published
@@ -29,7 +29,7 @@ The suite contains:
 
 - various supporting programs and utilities
 
-### Summary of hot stuff and enhancements since 2.1
+## Summary of hot stuff and enhancements since 2.1
 
 - AFP 3.3 support
 
@@ -50,7 +50,7 @@ The suite contains:
 - Support for ACLs without a common Directory Service between server and
   client
 
-### Important
+## Important
 
 The enhancements for fast AFP searches are only implemented for the CNID
 backend "dbd" and require changes to the underlying CNID database, ie an
@@ -58,7 +58,7 @@ additional index. This breaks drop-in compatibility between the CNID
 backends "cdb" and "dbd". Once "dbd" has upgraded a CNID database of a
 volume, "cdb" will reject to open it.
 
-### License
+## License
 
 Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPL). The full license text is available
@@ -66,7 +66,7 @@ at:
 
     <http://www.gnu.org/licenses/gpl.html>
 
-### Changes in 2.2-beta3
+## Changes in 2.2-beta3
 
 - FIX: afpd: fix option volsizelimit to return a usefull value for the
   volume free space using \`du -sh\` with popen
@@ -79,15 +79,13 @@ at:
 - FIX: afpd: better handling of very long filenames that contain many
   multibyte UTF-8 glyphs
 
-
-### Changes in 2.2-beta2
+## Changes in 2.2-beta2
 
 - NEW: afpd: AFP 3.3
 
 - UPD: afpd: AFP 3.x can't be disabled
 
-
-### Changes in 2.2-beta1
+## Changes in 2.2-beta1
 
 - FIX: composition of Surrogate Pair
 
@@ -96,8 +94,7 @@ at:
 
 - UPD: gentoo: rc-update install don't hook in the Makefile
 
-
-### Changes in 2.2alpha5
+## Changes in 2.2alpha5
 
 - UPD: afpd: new option "searchdb" which enables fast catalog searches
   using the CNID db.
@@ -109,8 +106,7 @@ at:
   ".AppleDesktop/.volinfo" file of the volume in order to figure out the
   CNID db path and the volume charset encoding.
 
-
-### Changes in 2.2alpha4
+## Changes in 2.2alpha4
 
 - NEW: Enhanced CNID "dbd" database for fast name search support.
   Important: this makes cnidscheme "cdb" incompatible with "dbd".
@@ -124,22 +120,19 @@ at:
 - UPD: cnid_dbd: CNID database versioning and upgrading. Additional CNID
   database index for fast name searches.
 
-
-### Changes in 2.2alpha3
+## Changes in 2.2alpha3
 
 - FIX: afpd: various fixes
 
 - FIX: Any daemon did not run if atalkd doesn't exist (redhat/debian)
 
-
-### Changes in 2.2alpha2
+## Changes in 2.2alpha2
 
 - FIX: afpd: fix compilation error when ACL support is not available
 
 - FIX: Ensure Appletalk manpages and config files are distributed
 
-
-### Changes in 2.2alpha1
+## Changes in 2.2alpha1
 
 - NEW: ad utility: ad cp
 
@@ -172,8 +165,7 @@ at:
 
 - REM: afile/achfile/apple_cm/apple_mv/apple_rm: use ad
 
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 2.2 the following operating systems are supported:
 
@@ -192,10 +184,9 @@ As of Netatalk 2.2 the following operating systems are supported:
 Netatalk may compile and run on other operating systems as well, but it
 is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
-stories. Please write to netatalk-devel@lists.sourceforge.net.
+stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -204,8 +195,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -214,19 +204,17 @@ For more information about Netatalk, see its web page at:
 The project is hosted at SourceForge. The SourceForge project page is
 located at:
 
-   
-[http://sourceforge.net/projects/netatalk](http://sourceforge.net/projects/netatalk/)
+    <http://sourceforge.net/projects/netatalk>
 
 The Netatalk development team can be reached via the mailing list
-netatalk-devel@lists.sourceforge.net. For subscription information and
+<netatalk-devel@lists.sourceforge.net>. For subscription information and
 archives see Netatalk's SourceForge project page.
 
-netatalk-admins@lists.sourceforge.net is a mailing list for Netatalk
+<netatalk-admins@lists.sourceforge.net> is a mailing list for Netatalk
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

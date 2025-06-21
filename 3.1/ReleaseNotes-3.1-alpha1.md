@@ -20,7 +20,7 @@ The suite contains:
 
 - various supporting programs and utilities
 
-### Summary of major new features and enhancements in 3.1
+## Summary of major new features and enhancements in 3.1
 
 - AFP Spotlight Support with Gnome Tracker:
   <https://projects.gnome.org/tracker/>
@@ -37,7 +37,7 @@ manual before trying to upgrade your system from version 2:
 
 <http://netatalk.sourceforge.net/3.1/htmldocs/upgrade.html>
 
-### License
+## License
 
 Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPLv2). The full license text is
@@ -45,7 +45,7 @@ available at:
 
 <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 
-### Changes in 3.1-alpha1
+## Changes in 3.1-alpha1
 
 - NEW: AFP Spotlight support with Gnome Tracker
 
@@ -62,7 +62,7 @@ available at:
 - UPD: Add configure option --with-afpstats for overriding the result of
   autodetecting dbus-glib presence
 
-### Changes in 3.0.4
+## Changes in 3.0.4
 
 - FIX: Opening files without metadata EA may result in an invalid
   metadata EA. Check for malformed metadata EAs and delete them. Fixes
@@ -93,7 +93,7 @@ available at:
 - NEW: New option "afp interfaces" which allows specifying where
   Netatalk listens for AFP connections by interface names. From FR \#79.
 
-### Changes in 3.0.3
+## Changes in 3.0.3
 
 - UPD: afpd: Increase default DSI server quantum to 1 MB
 
@@ -158,7 +158,7 @@ available at:
 - FIX: "ad ls" segfault if requested object is not in an AFP volume.
   Fixes bug \#496.
 
-### Changes in 3.0.2
+## Changes in 3.0.2
 
 - NEW: afpd: Put file extension type/creator mapping back in which had
   been removed in 3.0.
@@ -209,7 +209,7 @@ available at:
 - FIX: dbd failed to convert appledouble files of symlinks. Fixes bug
   \#490.
 
-### Changes in 3.0.1
+## Changes in 3.0.1
 
 - NEW: afpd: Optional "ldap uuid encoding = string \| ms-guid" parameter
   to afp.conf, allowing for usage of the binary objectGUID fields from
@@ -246,7 +246,7 @@ available at:
 - REM: Remove --with-smbsharemodes configure option, it was an empty
   stub not yet implemented
 
-### Changes in 3.0
+## Changes in 3.0
 
 - UPD: afpd: force read only mode if cnid scheme is last
 
@@ -254,13 +254,13 @@ available at:
 
 - FIX: CNID path for user homes
 
-### Changes in 3.0 beta2
+## Changes in 3.0 beta2
 
 - UPD: Solaris and friends: Replace initscript with SMF manifest
 
 - FIX: Solaris and friends: resource fork handling
 
-### Changes in 3.0 beta1
+## Changes in 3.0 beta1
 
 - UPD: afpd: Performance tuning of read/write AFP operations. New option
   "afp read locks" (default: no) which disables that the server applies
@@ -269,7 +269,7 @@ available at:
 - UPD: apple_dump: Extended Attributes AppleDouble support. (\*BSD is
   not supported yet)
 
-### Changes in 3.0 alpha3
+## Changes in 3.0 alpha3
 
 - NEW: afpd: Per volume "login message", NetAFP bug ID \#18
 
@@ -293,7 +293,7 @@ available at:
 - FIX: afpd: Byte order detection. Fixes an error where Netatalk on
   OpenIndiana returned wrong volume size information.
 
-### Changes in 3.0 alpha2
+## Changes in 3.0 alpha2
 
 - UPD: afpd: Store *.* as is and */* as *:* on the server, don’t CAP
   hexencode as "2e" and "2f" respectively
@@ -323,7 +323,7 @@ available at:
 
 - REM: Volumes options "use dots" and "hex encoding"
 
-### Changes in 3.0 alpha1
+## Changes in 3.0 alpha1
 
 - NEW: Central configuration file afp.conf which replaces all previous
   files
@@ -362,7 +362,7 @@ available at:
 
 - REM: afpd: AppleDouble backends v1, osx and sfm have been removed
 
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 3.0 the following operating systems are supported:
 
@@ -381,7 +381,7 @@ is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
 stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -390,7 +390,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -409,7 +409,7 @@ archives see Netatalk’s SourceForge project page.
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

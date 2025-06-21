@@ -1,4 +1,4 @@
-## Netatalk 1.5 The New Year's Release
+# Netatalk 1.5 The New Year's Release
 
 The Netatalk development team is proud to announce the final 1.5 release
 of the Netatalk File Sharing suite. Netatalk is a collection of server
@@ -21,7 +21,7 @@ Macintosh computers on Unix compatible systems. The suite contains
 
 - various other utilities
 
-### News in Netatalk 1.5.0
+## News in Netatalk 1.5.0
 
 Since the early pre-release versions of Netatalk 1.5, Netatalk has been
 hosted and developed on SourceForge ( <http://sourceforge.net/>). This
@@ -50,7 +50,7 @@ Apart from these larger changes, a lot of work has gone into the
 Netatalk source code and build process and we feel that the quality of
 the code base has greatly improved since earlier releases.
 
-### Future Enhancements
+## Future Enhancements
 
 Netatalk is an actively developed product and its functionality will be
 enhanced in future versions. Some of the upcoming features include:
@@ -73,8 +73,7 @@ enhanced in future versions. Some of the upcoming features include:
 
 - Improved Documentation
 
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 1.5.0 the following operating systems are supported:
 
@@ -92,15 +91,14 @@ Netatalk may compile and run on other operating systems as well, but it
 is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk, though.
 
-
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
     <http://sourceforge.net/project/showfiles.php?group_id=8642>
 
 Netatalk tar-balls can be found at
-http://me.in-berlin.de/~jroger/netatalk/. Binaries for Debian GNU/Linux
+<http://me.in-berlin.de/~jroger/netatalk/>. Binaries for Debian GNU/Linux
 will be added to the unstable distribution soon and will be available at
 every Debian non-US mirror. Binaries for other operating systems will be
 made available at the SourceForge site
@@ -111,8 +109,7 @@ project site for anonymous CVS instructions. The main development is
 happening in the trunk. Well-tested patches are back-ported to
 branch-1-5-prep branch, from which the tar-balls are created.
 
-
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 <http://netatalk.sourceforge.net/>
@@ -121,15 +118,14 @@ The project is hosted at SourceForge. The SourceForge project page is
 located at: <http://sourceforge.net/projects/netatalk/>
 
 The Netatalk development team can be reached via the mailing list
-netatalk-devel@lists.sourceforge.net. For subscription information and
+<netatalk-devel@lists.sourceforge.net>. For subscription information and
 archives see Netatalk's SourceForge project page.
 
-netatalk-admins@lists.sourceforge.net is a mailing list for Netatalk
+<netatalk-admins@lists.sourceforge.net> is a mailing list for Netatalk
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

@@ -1,4 +1,4 @@
-## Netatalk 2.2alpha2
+# Netatalk 2.2alpha2
 
 The Netatalk development team is proud to announce version 2.2alpha2 of
 the Netatalk File Sharing suite. This is an unstable version, published
@@ -35,14 +35,13 @@ at:
 
     <http://www.gnu.org/licenses/gpl.html>
 
-### Changes in 2.2alpha2
+## Changes in 2.2alpha2
 
 - FIX: afpd: fix compilation error when ACL support is not available
 
 - FIX: Ensure Appletalk manpages and config files are distributed
 
-
-### Changes in 2.2alpha1
+## Changes in 2.2alpha1
 
 - NEW: ad utility: ad cp
 
@@ -75,8 +74,7 @@ at:
 
 - REM: afile/achfile/apple_cm/apple_mv/apple_rm: use ad
 
-
-### Changes in not yet released 2.1.5
+## Changes in not yet released 2.1.5
 
 - UPD: afpd: support newlines in -loginmesg with \n escaping syntax
 
@@ -85,8 +83,7 @@ at:
 
 - FIX: afpd: fix leaking ressource when moving objects on the server
 
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 2.1.4 the following operating systems are supported:
 
@@ -105,10 +102,9 @@ As of Netatalk 2.1.4 the following operating systems are supported:
 Netatalk may compile and run on other operating systems as well, but it
 is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
-stories. Please write to netatalk-devel@lists.sourceforge.net.
+stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -117,8 +113,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -127,19 +122,17 @@ For more information about Netatalk, see its web page at:
 The project is hosted at SourceForge. The SourceForge project page is
 located at:
 
-   
-[http://sourceforge.net/projects/netatalk](http://sourceforge.net/projects/netatalk/)
+    <http://sourceforge.net/projects/netatalk>
 
 The Netatalk development team can be reached via the mailing list
-netatalk-devel@lists.sourceforge.net. For subscription information and
+<netatalk-devel@lists.sourceforge.net>. For subscription information and
 archives see Netatalk's SourceForge project page.
 
-netatalk-admins@lists.sourceforge.net is a mailing list for Netatalk
+<netatalk-admins@lists.sourceforge.net> is a mailing list for Netatalk
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

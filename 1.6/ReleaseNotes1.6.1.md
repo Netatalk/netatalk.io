@@ -1,4 +1,4 @@
-## Netatalk 1.6.1
+# Netatalk 1.6.1
 
 The Netatalk development team is proud to announce version 1.6.1 of the
 Netatalk File Sharing suite. Netatalk is a collection of server programs
@@ -29,7 +29,7 @@ Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPL). Please see
 <http://www.gnu.org/licenses/gpl.html> for the full license text.
 
-### News in Netatalk 1.6.1
+## News in Netatalk 1.6.1
 
 Netatalk 1.6.1 is a maintenance release for the 1.6 series that fixes
 various issues in Netatalk:
@@ -42,7 +42,7 @@ various issues in Netatalk:
 There are still some known issues with CNID DIDs and the Berkeley DB
 system. We hope to solve these in the next release.
 
-### Future Enhancements
+## Future Enhancements
 
 Netatalk is an actively developed product and its functionality will be
 enhanced in future versions. Some of the upcoming features include:
@@ -53,8 +53,7 @@ enhanced in future versions. Some of the upcoming features include:
 
 - Improved Documentation
 
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 1.6.1 the following operating systems are supported:
 
@@ -71,10 +70,9 @@ As of Netatalk 1.6.1 the following operating systems are supported:
 Netatalk may compile and run on other operating systems as well, but it
 is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
-stories. Please write to netatalk-devel@lists.sourceforge.net.
+stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -90,8 +88,7 @@ project site for anonymous CVS instructions. Main development is
 happening in the trunk. Well-tested patches are back-ported to
 branch-netatalk-1-6, which is also the basis for official releases.
 
-
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -103,15 +100,14 @@ located at:
     <http://sourceforge.net/projects/netatalk/>
 
 The Netatalk development team can be reached via the mailing list
-netatalk-devel@lists.sourceforge.net. For subscription information and
+<netatalk-devel@lists.sourceforge.net>. For subscription information and
 archives see Netatalk's SourceForge project page.
 
-netatalk-admins@lists.sourceforge.net is a mailing list for Netatalk
+<netatalk-admins@lists.sourceforge.net> is a mailing list for Netatalk
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

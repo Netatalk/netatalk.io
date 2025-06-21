@@ -20,7 +20,7 @@ The suite contains:
 
 - various supporting programs and utilities
 
-### Summary of major new features and enhancements in 3.0
+## Summary of major new features and enhancements in 3.0
 
 - New ini style configuration file afp.conf which replaces all previous
   configuration files
@@ -35,17 +35,16 @@ The suite contains:
 
 Please make sure to read the upgrading section in the Netatalk online
 manual before trying to upgrade your system to 3.0!
-### License
+
+## License
 
 Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPLv2). The full license text is
 available at:
 
+    <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 
-    http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
-
-
-### Changes in 3.0 alpha2
+## Changes in 3.0 alpha2
 
 - UPD: afpd: Store *.* as is and */* as *:* on the server, don’t CAP
   hexencode as "2e" and "2f" respectively
@@ -75,7 +74,7 @@ available at:
 
 - REM: Volumes options "use dots" and "hex encoding"
 
-### Changes in 3.0 alpha1
+## Changes in 3.0 alpha1
 
 - NEW: Central configuration file afp.conf which replaces all previous
   files
@@ -114,7 +113,7 @@ available at:
 
 - REM: afpd: AppleDouble backends v1, osx and sfm have been removed
 
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 3.0 the following operating systems are supported:
 
@@ -133,7 +132,7 @@ is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
 stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -142,7 +141,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -161,7 +160,7 @@ archives see Netatalk’s SourceForge project page.
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

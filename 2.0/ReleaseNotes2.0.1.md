@@ -1,4 +1,4 @@
-## Netatalk 2.0.1
+# Netatalk 2.0.1
 
 The Netatalk development team is proud to announce version 2.0.1 of the
 Netatalk File Sharing suite. This is the latest stable version. It
@@ -48,7 +48,7 @@ the GNU General Public License (GPL). Please see
 
 for the full license text.
 
-### New in Netatalk 2.0.1
+## New in Netatalk 2.0.1
 
 - NEW: --enable-debian configure option. Will install /etc/init.d/atalk
   to get not in conflict with standard debian /etc/init.d/netatalk.
@@ -82,7 +82,7 @@ for the full license text.
 - FIX: afpd: FPMapId wasn't using UTF8 for groups if requested by
   client.
 
-### Future Enhancements
+## Future Enhancements
 
 Netatalk is an actively developed product and its functionality will be
 enhanced in future versions. Some of the upcoming features include:
@@ -91,8 +91,7 @@ enhanced in future versions. Some of the upcoming features include:
 
 - Better integration of AppleDouble metadata and CNIDs with Samba
 
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 2.0.1 the following operating systems are supported:
 
@@ -113,10 +112,9 @@ As of Netatalk 2.0.1 the following operating systems are supported:
 Netatalk may compile and run on other operating systems as well, but it
 is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
-stories. Please write to netatalk-devel@lists.sourceforge.net.
+stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -125,8 +123,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous CVS. See the SourceForge
 project site for anonymous CVS instructions.
 
-
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -137,16 +134,15 @@ located at:
 
     <http://sourceforge.net/projects/netatalk/>
 
-Netatalk-admins@lists.sourceforge.net is a mailing list for Netatalk
+<netatalk-admins@lists.sourceforge.net> is a mailing list for Netatalk
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
 The Netatalk development team can be reached via the mailing list
-netatalk-devel@lists.sourceforge.net. For subscription information and
+<netatalk-devel@lists.sourceforge.net>. For subscription information and
 archives see Netatalk's SourceForge project page.
 
-
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

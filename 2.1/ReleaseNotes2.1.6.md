@@ -29,7 +29,7 @@ The suite contains:
 
 - various supporting programs and utilities
 
-### License
+## License
 
 Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPL). The full license text is available
@@ -37,8 +37,7 @@ at:
 
     http://www.gnu.org/licenses/gpl.html
 
-
-### Changes in 2.1.6
+## Changes in 2.1.6
 
 - FIX: afpd: Fix for LDAP user cache corruption
 
@@ -61,8 +60,7 @@ at:
 - UPD: dbd: use on-disk temporary rebuild db instead of in-memory db
 
 - UPD: suse: initscript update
-
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 2.2 the following operating systems are supported:
 
@@ -83,7 +81,7 @@ is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
 stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -92,7 +90,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -111,7 +109,7 @@ archives see Netatalk’s SourceForge project page.
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,

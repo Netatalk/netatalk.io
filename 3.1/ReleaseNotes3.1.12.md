@@ -21,7 +21,7 @@ The suite contains:
 
 - various supporting programs and utilities
 
-### Summary of major new features and enhancements in 3.1
+## Summary of major new features and enhancements in 3.1
 
 - AFP Spotlight Support with Gnome Tracker:
   <https://projects.gnome.org/tracker/>
@@ -38,7 +38,7 @@ manual before trying to upgrade your system from version 2:
 
 <http://netatalk.sourceforge.net/3.1/htmldocs/upgrade.html>
 
-### License
+## License
 
 Netatalk is a Free/Open Source Software project and is released under
 the GNU General Public License (GPLv2). The full license text is
@@ -46,7 +46,7 @@ available at:
 
 <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 
-### Changes in 3.1.12
+## Changes in 3.1.12
 
 - FIX: dhx uams: build with LibreSSL, GitHub#91
 
@@ -54,7 +54,7 @@ available at:
 
 - FIX: CVE-2018-1160
 
-### Supported Platforms
+## Supported Platforms
 
 As of Netatalk 3.0 the following operating systems are supported:
 
@@ -73,7 +73,7 @@ is not well-tested on those. We welcome patches and suggestions for
 enhancing the portability of Netatalk as well as success and failure
 stories. Please write to <netatalk-devel@lists.sourceforge.net>.
 
-### Availability
+## Availability
 
 Netatalk tar-balls can be found at:
 
@@ -82,7 +82,7 @@ Netatalk tar-balls can be found at:
 Netatalk is also available via anonymous git. See the SourceForge
 project site for anonymous git instructions.
 
-### Contact
+## Contact
 
 For more information about Netatalk, see its web page at:
 
@@ -101,7 +101,7 @@ archives see Netatalk’s SourceForge project page.
 system administrators. For subscription information and archives see the
 Netatalk web page.
 
-### Acknowledgements
+## Acknowledgements
 
 We would like to thank all contributors to the Netatalk project for
 their commitment. Without the many suggestions, bug and problem reports,
