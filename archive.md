@@ -1,6 +1,10 @@
 # News Archive
 
-## Netatalk 4.2.1 is available
+## Records of prior announcements
+
+Below is a full history of news announcements ever published on the website.
+
+### Netatalk 4.2.1 is available
 
 *14th of April 2025*
 
@@ -13,7 +17,7 @@ All users of previous Netatalk versions are encouraged to upgrade to 4.2.1.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.1.html).
 
-## Netatalk 4.2.0 is available
+### Netatalk 4.2.0 is available
 
 *31st of March 2025*
 
@@ -31,7 +35,7 @@ issues to the Netatalk development team.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.0.html).
 
-## Netatalk 4.1.2 is available
+### Netatalk 4.1.2 is available
 
 *10th of February 2025*
 
@@ -45,7 +49,7 @@ All users of previous Netatalk versions are encouraged to upgrade to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.1/ReleaseNotes4.1.2.html).
 
-## Netatalk 4.1.1 is available
+### Netatalk 4.1.1 is available
 
 *20th of January 2025*
 
@@ -59,7 +63,7 @@ All users of previous Netatalk versions are encouraged to upgrade to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.1/ReleaseNotes4.1.1.html).
 
-## End of Life policy published
+### End of Life policy published
 
 *18th of January 2025*
 
@@ -74,7 +78,7 @@ are encouraged to upgrade to the latest Netatalk 4.1 release series.
 For more information, see the [Security
 Policy](/security.html).
 
-## Netatalk 4.1.0 is available
+### Netatalk 4.1.0 is available
 
 *11th of January 2025*
 
@@ -90,7 +94,7 @@ All users of previous Netatalk versions are encouraged to upgrade to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.1/ReleaseNotes4.1.0.html).
 
-## Netatalk 4.0.8 is available
+### Netatalk 4.0.8 is available
 
 *9th of December 2024*
 
@@ -105,7 +109,7 @@ of previous Netatalk versions are encouraged to upgrade to 4.0!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.8.html).
 
-## Netatalk 4.0.7 is available
+### Netatalk 4.0.7 is available
 
 *24th of November 2024*
 
@@ -120,7 +124,7 @@ of previous Netatalk versions are encouraged to upgrade to 4.0!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.7.html).
 
-## Netatalk 4.0.6 is available
+### Netatalk 4.0.6 is available
 
 *15th of November 2024*
 
@@ -135,7 +139,7 @@ of previous Netatalk versions are encouraged to upgrade to 4.0!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.6.html).
 
-## Netatalk 4.0.5 is available
+### Netatalk 4.0.5 is available
 
 *10th of November 2024*
 
@@ -151,7 +155,7 @@ of previous Netatalk versions are now encouraged to upgrade!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.5.html).
 
-## Netatalk 4.0.4 is available
+### Netatalk 4.0.4 is available
 
 *2nd of November 2024*
 
@@ -168,7 +172,7 @@ forward to your feedback!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.4.html).
 
-## Netatalk 4.0.3 is available
+### Netatalk 4.0.3 is available
 
 *26th of October 2024*
 
@@ -185,7 +189,7 @@ forward to your feedback!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.3.html).
 
-## Netatalk 4.0.2 is available
+### Netatalk 4.0.2 is available
 
 *18th of October 2024*
 
@@ -202,7 +206,7 @@ forward to your feedback!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.2.html).
 
-## Netatalk 4.0.1 is available
+### Netatalk 4.0.1 is available
 
 *6th of October 2024*
 
@@ -218,7 +222,7 @@ forward to your feedback!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.1.html).
 
-## Netatalk 4.0.0 is available
+### Netatalk 4.0.0 is available
 
 *29th of September 2024*
 
@@ -235,7 +239,7 @@ forward to your feedback!
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.0/ReleaseNotes4.0.0.html).
 
-## Netatalk 2.4.10 is available
+### Netatalk 2.4.10 is available
 
 *24th of September 2024*
 
@@ -247,7 +251,7 @@ are encouraged to upgrade their systems to 2.4.10.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.10.html).
 
-## Netatalk 3.2.10 is available
+### Netatalk 3.2.10 is available
 
 *24th of September 2024*
 
@@ -259,7 +263,7 @@ are encouraged to upgrade their systems to 3.2.10.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.10.html).
 
-## Netatalk 2.4.9 is available
+### Netatalk 2.4.9 is available
 
 *15th of September 2024*
 
@@ -271,7 +275,7 @@ encouraged to upgrade their systems to 2.4.9.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.9.html).
 
-## Netatalk 3.2.9 is available
+### Netatalk 3.2.9 is available
 
 *15th of September 2024*
 
@@ -283,7 +287,7 @@ encouraged to upgrade their systems to 3.2.9.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.9.html).
 
-## Netatalk 2.4.8 is available
+### Netatalk 2.4.8 is available
 
 *8th of September 2024*
 
@@ -296,7 +300,7 @@ to 2.4.8.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.8.html).
 
-## Netatalk 3.2.8 is available
+### Netatalk 3.2.8 is available
 
 *8th of September 2024*
 
@@ -309,7 +313,7 @@ to 3.2.8.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.8.html).
 
-## Netatalk 2.4.7 is available
+### Netatalk 2.4.7 is available
 
 *19th of August 2024*
 
@@ -321,7 +325,7 @@ encouraged to upgrade their systems to 2.4.7.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.7.html).
 
-## Netatalk 3.2.7 is available
+### Netatalk 3.2.7 is available
 
 *19th of August 2024*
 
@@ -333,7 +337,7 @@ encouraged to upgrade their systems to 3.2.7.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.7.html).
 
-## Netatalk 2.4.6 is available
+### Netatalk 2.4.6 is available
 
 *11th of August 2024*
 
@@ -345,7 +349,7 @@ encouraged to upgrade their systems to 2.4.6.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.6.html).
 
-## Netatalk 3.2.6 is available
+### Netatalk 3.2.6 is available
 
 *11th of August 2024*
 
@@ -357,7 +361,7 @@ encouraged to upgrade their systems to 3.2.6.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.6.html).
 
-## Netatalk 2.4.5 is available
+### Netatalk 2.4.5 is available
 
 *1st of August 2024*
 
@@ -369,7 +373,7 @@ encouraged to upgrade their systems to 2.4.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.5.html).
 
-## Netatalk 3.2.5 is available
+### Netatalk 3.2.5 is available
 
 *1st of August 2024*
 
@@ -381,7 +385,7 @@ encouraged to upgrade their systems to 3.2.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.5.html).
 
-## Netatalk 2.4.4 is available
+### Netatalk 2.4.4 is available
 
 *19th of July 2024*
 
@@ -393,7 +397,7 @@ encouraged to upgrade their systems to 2.4.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.4.html).
 
-## Netatalk 3.2.4 is available
+### Netatalk 3.2.4 is available
 
 *19th of July 2024*
 
@@ -405,7 +409,7 @@ encouraged to upgrade their systems to 3.2.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.4.html).
 
-## Netatalk 2.4.3 is available
+### Netatalk 2.4.3 is available
 
 *14th of July 2024*
 
@@ -418,7 +422,7 @@ users of Netatalk 2.4 are encouraged to upgrade their systems to 2.4.3.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.3.html).
 
-## Netatalk 3.2.3 is available
+### Netatalk 3.2.3 is available
 
 *12th of July 2024*
 
@@ -431,7 +435,7 @@ users of Netatalk 3.2 are encouraged to upgrade their systems to 3.2.3.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.3.html).
 
-## Netatalk 2.4.2 is available
+### Netatalk 2.4.2 is available
 
 *6th of July 2024*
 
@@ -445,7 +449,7 @@ their systems to 2.4.2.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.2.html).
 
-## Netatalk 3.2.2 is available
+### Netatalk 3.2.2 is available
 
 *6th of July 2024*
 
@@ -459,7 +463,7 @@ their systems to 3.2.2.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.2.html).
 
-## Netatalk 2.4.1 is available
+### Netatalk 2.4.1 is available
 
 *29th of June 2024*
 
@@ -473,7 +477,7 @@ the Netatalk 2.4 release series. It includes a patch for security issues
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.1.html).
 
-## Netatalk 3.2.1 is available
+### Netatalk 3.2.1 is available
 
 *29th of June 2024*
 
@@ -488,7 +492,7 @@ users of Netatalk 3.2 are encouraged to upgrade their systems to 3.2.1.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.1.html).
 
-## Netatalk 3.1.19 is available
+### Netatalk 3.1.19 is available
 
 *29th of June 2024*
 
@@ -502,7 +506,7 @@ the Netatalk 3.1 release series. It includes a patch for security issues
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.19.html).
 
-## Netatalk 2.4.0 is available
+### Netatalk 2.4.0 is available
 
 *22nd of June 2024*
 
@@ -522,7 +526,7 @@ Notes](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk2-2.0).
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.4/ReleaseNotes2.4.0.html).
 
-## Netatalk 3.2.0 is available
+### Netatalk 3.2.0 is available
 
 *1st of June 2024*
 
@@ -542,7 +546,7 @@ Notes](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk3-1.1).
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.2/ReleaseNotes3.2.0.html).
 
-## Netatalk 3 Webmin Module 1.0 Released
+### Netatalk 3 Webmin Module 1.0 Released
 
 *20th of April 2024*
 
@@ -557,7 +561,7 @@ Simultaneously, a bugfix [v1.3 release of the Netatalk 2
 module](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk2-1.3)
 is also available now.
 
-## Netatalk 2.3.2 is available
+### Netatalk 2.3.2 is available
 
 *31st of March 2024*
 
@@ -570,7 +574,7 @@ installations to 2.3.2.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.3/ReleaseNotes2.3.2.html).
 
-## Netatalk 2.3.1 is available
+### Netatalk 2.3.1 is available
 
 *3rd of February 2024*
 
@@ -586,7 +590,7 @@ is also available which adds functionality and fixes bugs.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.3/ReleaseNotes2.3.1.html).
 
-## Netatalk 3 Webmin Module 0.3 Released
+### Netatalk 3 Webmin Module 0.3 Released
 
 *8th of January 2024*
 
@@ -597,7 +601,7 @@ more convenient.
 For more information, see the [Release
 Notes](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk3-0.3).
 
-## Netatalk 2 Webmin Module 1.1 Released
+### Netatalk 2 Webmin Module 1.1 Released
 
 *6th of January 2024*
 
@@ -607,7 +611,7 @@ Version 1.1 of the Netatalk 2 Webmin Module is a companion to Netatalk
 For more information, see the [Release
 Notes](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk2-1.1).
 
-## Netatalk 2.3.0 is available
+### Netatalk 2.3.0 is available
 
 *28th of December 2023*
 
@@ -623,7 +627,7 @@ improved.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.3/ReleaseNotes2.3.0.html).
 
-## Netatalk 3.1.18 is available
+### Netatalk 3.1.18 is available
 
 *5th of October 2023*
 
@@ -635,7 +639,7 @@ the Netatalk 3.1 release series. It includes a patch for security issue
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.18.html).
 
-## Netatalk Webmin modules updated
+### Netatalk Webmin modules updated
 
 *22nd of September 2023*
 
@@ -648,7 +652,7 @@ v0.2](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk3-0.2)
 and [Netatalk 2 module
 v1.0](https://github.com/Netatalk/netatalk-webmin/releases/tag/netatalk2-1.0).
 
-## Netatalk 3.1.17 is available
+### Netatalk 3.1.17 is available
 
 *16th of September 2023*
 
@@ -660,7 +664,7 @@ Netatalk 3.1 are encouraged to upgrade their systems to 3.1.17.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.17.html).
 
-## Netatalk 3.1.16 is available
+### Netatalk 3.1.16 is available
 
 *11th of September 2023*
 
@@ -672,7 +676,7 @@ are encouraged to upgrade their systems to 3.1.16.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.16.html).
 
-## Netatalk 2.2.10 is available
+### Netatalk 2.2.10 is available
 
 *17th of August 2023*
 
@@ -685,7 +689,7 @@ their systems to 2.2.10.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.10.html).
 
-## Netatalk 3.1.15 is available
+### Netatalk 3.1.15 is available
 
 *28th of April 2023*
 
@@ -698,7 +702,7 @@ other bug fixes. Additionally, Netatalk now runs on macOS Ventura hosts.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.15.html).
 
-## Netatalk 2.2.9 is available
+### Netatalk 2.2.9 is available
 
 *26th of April 2023*
 
@@ -711,7 +715,7 @@ their systems to 2.2.9.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.9.html).
 
-## Netatalk 2.2.8 is available
+### Netatalk 2.2.8 is available
 
 *25th of February 2023*
 
@@ -723,7 +727,7 @@ to upgrade their systems to 2.2.8.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.8.html).
 
-## Netatalk 3.1.14 is available
+### Netatalk 3.1.14 is available
 
 *10th of January 2023*
 
@@ -736,7 +740,7 @@ addition to a range of other minor improvements.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.14.html).
 
-## Netatalk 2.2.7 is available
+### Netatalk 2.2.7 is available
 
 *10th of January 2023*
 
@@ -755,7 +759,7 @@ systems to 2.2.7.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.7.html).
 
-## Netatalk releases moving to GitHub
+### Netatalk releases moving to GitHub
 
 *10th of January 2023*
 
@@ -766,7 +770,7 @@ moved to GitHub. This last move represents the next step in this
 process. Legacy release archives will remain on SourceForge, and so will
 this website as well as the mailing lists.
 
-## Netatalk 3.1.13 is available
+### Netatalk 3.1.13 is available
 
 *22th of March 2022*
 
@@ -784,7 +788,7 @@ issues: [CVE-2021-31439](/security/CVE-2021-31439.html),
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.13.html).
 
-## Netatalk 3.1.12 is available
+### Netatalk 3.1.12 is available
 
 *20th of December 2018*
 
@@ -796,7 +800,7 @@ soon as possible as this releases fixes a major security issue
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.12.html).
 
-## Netatalk 2.2.6 is available
+### Netatalk 2.2.6 is available
 
 *9rd of July 2017*
 
@@ -809,7 +813,7 @@ encouraged to upgrade their systems to 2.2.6.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.6.html).
 
-## Netatalk 3.1.11 is available
+### Netatalk 3.1.11 is available
 
 *15th of March 2017*
 
@@ -821,7 +825,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.11.html).
 
-## Netatalk 3.1.10 is available
+### Netatalk 3.1.10 is available
 
 *12th of September 2016*
 
@@ -833,7 +837,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.10.html).
 
-## Netatalk 3.1.9 is available
+### Netatalk 3.1.9 is available
 
 *19th of July 2016*
 
@@ -845,7 +849,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.9.html).
 
-## Netatalk 3.1.8 is available
+### Netatalk 3.1.8 is available
 
 *29th of December 2015*
 
@@ -857,7 +861,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.8.html).
 
-## Netatalk 3.1.7 is available
+### Netatalk 3.1.7 is available
 
 *28th of November 2014*
 
@@ -869,7 +873,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.7.html).
 
-## Netatalk 3.1.6 is available
+### Netatalk 3.1.6 is available
 
 *12th of August 2014*
 
@@ -881,7 +885,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.6.html).
 
-## Netatalk 3.1.5 is available
+### Netatalk 3.1.5 is available
 
 *12th of August 2014*
 
@@ -893,7 +897,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.5.html).
 
-## Netatalk 3.1.4 is available
+### Netatalk 3.1.4 is available
 
 *7th of August 2014*
 
@@ -905,7 +909,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.4.html).
 
-## Netatalk 3.1.3 is available
+### Netatalk 3.1.3 is available
 
 *3rd of July 2014*
 
@@ -917,7 +921,7 @@ version for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.3.html).
 
-## Netatalk 3.1.2 is available
+### Netatalk 3.1.2 is available
 
 *3rd of June 2014*
 
@@ -929,7 +933,7 @@ for production systems.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.2.html).
 
-## Netatalk 3.1.1 is available
+### Netatalk 3.1.1 is available
 
 *13th of Mar 2014*
 
@@ -941,7 +945,7 @@ to 3.1.1.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.1.html).
 
-## Netatalk 3.0.8 is available
+### Netatalk 3.0.8 is available
 
 *21st of Feb 2014*
 
@@ -952,7 +956,7 @@ series. All users are encouraged to upgrade their systems to 3.0.8.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.8.html).
 
-## Netatalk 3.0.7 is available
+### Netatalk 3.0.7 is available
 
 *2nd of Feb 2014*
 
@@ -963,7 +967,7 @@ series. All users are encouraged to upgrade their systems to 3.0.7.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.7.html).
 
-## Netatalk 3.1.0 is available
+### Netatalk 3.1.0 is available
 
 *28th of Oct 2013*
 
@@ -975,7 +979,7 @@ to 3.1.0.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes3.1.0.html).
 
-## Netatalk 3.0.6 is available
+### Netatalk 3.0.6 is available
 
 *25th of Oct 2013*
 
@@ -986,7 +990,7 @@ series. All users are encouraged to upgrade their systems to 3.0.6.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.6.html).
 
-## Netatalk 3.1-beta2 is available
+### Netatalk 3.1-beta2 is available
 
 *16th of September 2013*
 
@@ -997,7 +1001,7 @@ testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes-3.1-beta2.html).
 
-## Netatalk 3.0.5 is available
+### Netatalk 3.0.5 is available
 
 *14th of Aug 2013*
 
@@ -1008,7 +1012,7 @@ series. All users are encouraged to upgrade their systems to 3.0.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.5.html).
 
-## Netatalk 3.1-beta1 is available
+### Netatalk 3.1-beta1 is available
 
 *7th of August 2013*
 
@@ -1019,7 +1023,7 @@ testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes-3.1-beta1.html).
 
-## Netatalk 2.2.5 is available
+### Netatalk 2.2.5 is available
 
 *23rd of July 2013*
 
@@ -1030,7 +1034,7 @@ series. All users are encouraged to upgrade their systems to 2.2.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.5.html).
 
-## Netatalk 3.1-alpha1 is available
+### Netatalk 3.1-alpha1 is available
 
 *1st of July 2013*
 
@@ -1041,7 +1045,7 @@ testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.1/ReleaseNotes-3.1-alpha1.html).
 
-## Netatalk 3.0.4 is available
+### Netatalk 3.0.4 is available
 
 *24nd of May 2013*
 
@@ -1052,7 +1056,7 @@ series. All users are encouraged to upgrade their systems to 3.0.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.4.html).
 
-## Netatalk 3.0.3 is available
+### Netatalk 3.0.3 is available
 
 *26nd of March 2013*
 
@@ -1063,7 +1067,7 @@ series. All users are encouraged to upgrade their systems to 3.0.3.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.3.html).
 
-## Netatalk 3.0.2 is available
+### Netatalk 3.0.2 is available
 
 *22nd of January 2013*
 
@@ -1074,7 +1078,7 @@ series. All users are encouraged to upgrade their systems to 3.0.2.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.2.html).
 
-## Netatalk 3.0.1 is available
+### Netatalk 3.0.1 is available
 
 *28nd of September 2012*
 
@@ -1085,7 +1089,7 @@ series. All users are encouraged to upgrade their systems to 3.0.1.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes3.0.1.html).
 
-## Netatalk 2.2.4 is available
+### Netatalk 2.2.4 is available
 
 *28nd of September 2012*
 
@@ -1096,7 +1100,7 @@ series. All users are encouraged to upgrade their systems to 2.2.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.4.html).
 
-## Netatalk 3.0 is available
+### Netatalk 3.0 is available
 
 *9th of July 2012*
 
@@ -1107,7 +1111,7 @@ Netatalk 3.0. Early adopters are encouraged to upgrade their systems to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0.html).
 
-## Netatalk 3.0 beta2 is available
+### Netatalk 3.0 beta2 is available
 
 *1st of June 2012*
 
@@ -1119,7 +1123,7 @@ systems, but for testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0-beta2.html).
 
-## Netatalk 3.0 beta1 is available
+### Netatalk 3.0 beta1 is available
 
 *22nd of May 2012*
 
@@ -1131,7 +1135,7 @@ systems, but for testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0-beta1.html).
 
-## Netatalk 2.2.3 is available
+### Netatalk 2.2.3 is available
 
 *22nd of May 2012*
 
@@ -1142,7 +1146,7 @@ series. All users are encouraged to upgrade their systems to 2.2.3.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.3.html).
 
-## Netatalk 3.0 alpha3 is available
+### Netatalk 3.0 alpha3 is available
 
 *20th of April 2012*
 
@@ -1154,7 +1158,7 @@ systems, but for testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0-alpha3.html).
 
-## Netatalk 3.0 alpha2 is available
+### Netatalk 3.0 alpha2 is available
 
 *4th of April 2012*
 
@@ -1166,7 +1170,7 @@ systems, but for testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0-alpha2.html).
 
-## Netatalk 3.0 alpha1 is available
+### Netatalk 3.0 alpha1 is available
 
 *27th of March 2012*
 
@@ -1178,7 +1182,7 @@ systems, but for testing only.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/3.0/ReleaseNotes-3.0-alpha1.html).
 
-## Netatalk 2.2.2 is available
+### Netatalk 2.2.2 is available
 
 *16th of January 2012*
 
@@ -1190,7 +1194,7 @@ release series. All users are encouraged to upgrade their systems to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.2.html).
 
-## Netatalk 2.2.1 is available
+### Netatalk 2.2.1 is available
 
 *6th of September 2011*
 
@@ -1202,7 +1206,7 @@ release series. All users are encouraged to upgrade their systems to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.1.html).
 
-## Netatalk 2.1.6 is available
+### Netatalk 2.1.6 is available
 
 *5th of September 2011*
 
@@ -1213,7 +1217,7 @@ All users are encouraged to upgrade their systems to 2.1.6.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.6.html).
 
-## Netatalk 2.2.0 is available for testing!
+### Netatalk 2.2.0 is available for testing!
 
 *27th of July 2011*
 
@@ -1225,7 +1229,7 @@ Netatalk File Sharing suite. This is the first stable release of the new
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.2/ReleaseNotes2.2.0.html).
 
-## Netatalk 2.1.5 is available
+### Netatalk 2.1.5 is available
 
 *21st of December 2010*
 
@@ -1236,7 +1240,7 @@ users are encouraged to upgrade their systems to 2.1.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.5.html).
 
-## Netatalk 2.1.4 is available
+### Netatalk 2.1.4 is available
 
 *15th of October 2010*
 
@@ -1247,7 +1251,7 @@ users are encouraged to upgrade their systems to 2.1.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.4.html).
 
-## Netatalk 2.1.3 is available
+### Netatalk 2.1.3 is available
 
 *12th of July 2010*
 
@@ -1258,7 +1262,7 @@ users are encouraged to upgrade their systems to 2.1.3.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.3.html).
 
-## Netatalk 2.1.2 is available
+### Netatalk 2.1.2 is available
 
 *18th of June 2010*
 
@@ -1269,7 +1273,7 @@ users are encouraged to upgrade their systems to 2.1.2.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.2.html).
 
-## Netatalk 2.1.1 is available
+### Netatalk 2.1.1 is available
 
 *26th of May 2010*
 
@@ -1280,7 +1284,7 @@ users are encouraged to upgrade their systems to 2.1.1.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.1/ReleaseNotes2.1.1.html).
 
-## Netatalk 2.1 is available
+### Netatalk 2.1 is available
 
 *26th of April 2010*
 
@@ -1294,7 +1298,7 @@ In case, you want to upgrade an existing Netatalk 1.x installation,
 ensure you carefully read the upgrade guide before and follow the steps
 outlined there.
 
-## Netatalk 2.0.5 is available
+### Netatalk 2.0.5 is available
 
 *10th of November 2009*
 
@@ -1308,7 +1312,7 @@ encouraged to upgrade their systems to 2.0.5.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.5.html).
 
-## Netatalk 2.0.4 is available!
+### Netatalk 2.0.4 is available!
 
 *29th of May 2009*
 
@@ -1321,7 +1325,7 @@ users are encouraged to upgrade their systems to 2.0.4.*
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.4.html).
 
-## Netatalk 2.0.3 is available!
+### Netatalk 2.0.3 is available!
 
 *18th of May 2005*
 
@@ -1333,7 +1337,7 @@ to upgrade their systems to 2.0.3.*
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.3.html).
 
-## Netatalk 2.0.2 is available!
+### Netatalk 2.0.2 is available!
 
 *3rd of January 2005*
 
@@ -1345,7 +1349,7 @@ to upgrade their systems to 2.0.2.*
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.2.html).
 
-## Netatalk 1.6.4a released
+### Netatalk 1.6.4a released
 
 *28th of October 2004*
 
@@ -1353,7 +1357,7 @@ This release is a security fix for the etc2ps.sh script. See
 [CAN-2004-0974](/security/CVE-2004-0974.html) for details. No other
 changes were made from Netatalk 1.6.4.
 
-## Netatalk 2.0.1 is available!
+### Netatalk 2.0.1 is available!
 
 *27th of October 2004*
 
@@ -1369,7 +1373,7 @@ has been found to be vulnerable to symlink attacks. See
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.1.html).
 
-## Netatalk 2.0.0 is available!
+### Netatalk 2.0.0 is available!
 
 *11th of October 2004*
 
