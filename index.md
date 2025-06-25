@@ -34,24 +34,19 @@ for a list of known packages.
 
 ### 2. Deploy a container image
 
-This option is either for you who already leverage containers in your
-setup, or for when a binary package is outdated and you want to run the
-latest Netatalk version without building from source.
+The project publishes images on [Docker Hub](https://hub.docker.com/r/netatalk/netatalk)
+that can be deployed with a container runtime such as docker or podman.
 
-With Docker Engine or compatible container runtime installed, do:
-
-    $ docker pull netatalk/netatalk:latest
-
-Then follow the [instructions](/docker.html) on how to
+Refer to the [container documentation](/docker.html) for details on how to
 configure the container.
 
 ### 3. Build from source
 
 You want to build from source when neither of the previous options are
-feasible, or when you want to do an optimized Netatalk deployment with
+feasible, or when you want to do a hardened Netatalk deployment with
 only a subset of features enabled.
 
-Arrange a C compiler (we use *gcc* or *clang*), the
+You need a C compiler (we use *gcc* or *clang*), the
 [Meson](https://mesonbuild.com/) build system with
 [Ninja](https://ninja-build.org/), together with [required
 libraries](/install.html).
@@ -76,34 +71,21 @@ file servers appear under *Locations*, or in the *Network* drawer. On
 Classic Mac OS, you use the *AppleShare* client within the *Chooser*
 desk accessory.
 
-## Features
+## How to Contribute
 
-Below is an overview of the capabilities and bundled utilities that the
-latest version of Netatalk provides.
+If you found a bug or have an idea for a new feature,
+please file a ticket at the [GitHub issue tracker](https://github.com/Netatalk/netatalk/issues/new/choose).
 
-| Feature | Details |
-|----|----|
-| Host OS Support | Linux (glibc & musl), DragonFlyBSD, FreeBSD, NetBSD, OpenBSD, macOS, OmniOS, Solaris 11 |
-| Client OS Support | macOS, Mac OS X, Mac OS 8/9, Macintosh System Software 6.0.x/7.x, GS/OS, ProDOS |
-| AFP Protocol Versions | 1.1, 2.0, 2.1, 2.2, 3.0, 3.1, 3.2, 3.3. 3.4 |
-| AFP over TCP | Yes |
-| AFP over [AppleTalk](https://en.wikipedia.org/wiki/AppleTalk) | Yes (supported on Linux, NetBSD) |
-| Macintosh File System Metadata | macOS / OSX extended attributes, Classic Mac OS resource forks |
-| Service Discovery | *[Bonjour](https://en.wikipedia.org/wiki/Bonjour_(software))*-compatible on macOS / OSX, *AppleTalk* on Classic Mac OS |
-| Remote Backups | *[Time Machine](https://en.wikipedia.org/wiki/Time_Machine_(macOS))*-compatible |
-| Indexed Search | *[Spotlight](https://en.wikipedia.org/wiki/Spotlight_(Apple))*-compatible on macOS / OSX, *CatalogSearch* on Classic Mac OS |
-| Macintosh Network Booting | *[NetBoot](https://en.wikipedia.org/wiki/NetBoot)* 1.0-compatible (usage example: [kea-mboot](https://github.com/saybur/kea-mboot)) |
-| Apple II Network Booting | Yes: //e and IIGS (via `a2boot`) |
-| AppleTalk Printing to modern printers | Yes (via `papd`) |
-| Printing to [LocalTalk](https://en.wikipedia.org/wiki/LocalTalk) printers | Yes (via `pap`) |
-| AppleTalk Time Server | *[Timelord](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html)*-compatible (via `timelord`) |
-| AppleTalk Router | Yes (via `atalkd`) |
-| [MacIP](https://en.wikipedia.org/wiki/MacIP) Gateway | Yes (via `macipgw`) |
-| Administrative GUI | *[Webmin](https://webmin.com/)* module |
+If you want to contribute code, please familiarize yourself with
+the [Contributor Guidelines](https://netatalk.io/docs/Developer-Notes)
+and then file a [Pull Request](https://github.com/Netatalk/netatalk/pulls)
+with the project.
 
-# Latest News
+We are looking forward to your contribution!
 
-## Netatalk 4.2.4 is available
+## Latest News
+
+### Netatalk 4.2.4 is available
 
 *31st of May 2025*
 
@@ -116,7 +98,7 @@ All users of previous Netatalk versions are encouraged to upgrade to 4.2.4.
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.4.html).
 
-## Netatalk 4.2.3 is available
+### Netatalk 4.2.3 is available
 
 *7th of May 2025*
 
@@ -131,7 +113,7 @@ All users of previous Netatalk versions are encouraged to upgrade to
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.3.html).
 
-## Netatalk 4.2.2 is available
+### Netatalk 4.2.2 is available
 
 *27th of April 2025*
 
