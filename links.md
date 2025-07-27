@@ -35,7 +35,7 @@ networking that make great Netatalk companions.
 
 | Project | Description | Relationship |
 |---|---|---|
-| [AFPBrige](https://github.com/sheumann/AFPBridge) | Let an Apple IIGS use AFP-over-TCP instead of AppleTalk | Compatible with Netatalk AFP serveres |
+| [AFPBridge](https://github.com/sheumann/AFPBridge) | Let an Apple IIGS use AFP-over-TCP instead of AppleTalk | Compatible with Netatalk AFP servers |
 | [MG's davex utils](https://github.com/mgcaret/davex-mg-utils) | Apple II toolsuite that includes a ProDOS *tardis* client | Compatible with Netatalk's *timelord* time server |
 | [mDNSResponder extension](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | DNS Service Discovery (Zeroconf) extension for Mac OS 9 |  |
 | [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS AppleShare UAM that uses PGP encryption | The inspiration for Netatalk's now-defunct *uams_pgp.so* UAM |
