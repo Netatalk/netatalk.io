@@ -28,12 +28,18 @@ networking that make great Netatalk companions.
 | [lpstyl](https://github.com/Godzil/lpstyl) | \*NIX StyleWriter driver with optional AppleTalk support | Depends on Netatalk |
 | [macipgw](https://macipgw.sourceforge.io) | [MacIP](https://en.wikipedia.org/wiki/MacIP) bridge for LocalTalk-only Macs | Included with Netatalk as of v4.0 |
 | [MacIPRpi](https://www.macip.net/) | OS image for Raspberry Pi bundled with pre-configured vintage Mac networking software | Bundles Netatalk |
+| [RetroNAS](https://github.com/danmons/retronas) | NAS software distribution that specializes in retro networking | Bundles Netatalk |
+| [TashRouter](https://github.com/lampmerchant/tashrouter) | AppleTalk router for LocalTalk and EtherTalk written in Python |  |
+
+### Software for old Macs and Apple IIs
+
+| Project | Description | Relationship |
+|---|---|---|
+| [AFPBrige](https://github.com/sheumann/AFPBridge) | Let an Apple IIGS use AFP-over-TCP instead of AppleTalk | Compatible with Netatalk AFP serveres |
 | [MG's davex utils](https://github.com/mgcaret/davex-mg-utils) | Apple II toolsuite that includes a ProDOS *tardis* client | Compatible with Netatalk's *timelord* time server |
 | [mDNSResponder extension](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | DNS Service Discovery (Zeroconf) extension for Mac OS 9 |  |
 | [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS AppleShare UAM that uses PGP encryption | The inspiration for Netatalk's now-defunct *uams_pgp.so* UAM |
-| [RetroNAS](https://github.com/danmons/retronas) | NAS software distribution that specializes in retro networking | Bundles Netatalk |
 | [tardis/Timelord](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html) | Classic Mac OS time client/server | Netatalk's *timelord* server is compatible with Tardis |
-| [TashRouter](https://github.com/lampmerchant/tashrouter) | AppleTalk router for LocalTalk and EtherTalk written in Python |  |
 
 ### Open source networking devices
 
