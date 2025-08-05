@@ -14,7 +14,7 @@ might want to use.
 
 To build from a release tarball, download and unpack the tarball.
 
-```
+```shell
 tar xjf netatalk-*.tar.xz                               # unpack the sources
 cd netatalk-*                                           # change to the toplevel directory
 ```
@@ -22,7 +22,7 @@ cd netatalk-*                                           # change to the toplevel
 To build from the Netatalk GitHub repo, make sure you have Git installed,
 then clone the source tree.
 
-```
+```shell
 git clone https://github.com/netatalk/netatalk.git      # clone the repository
 cd netatalk                                             # change to the repo directory
 ```
@@ -39,31 +39,47 @@ documentation for more details.
 
 ### Required
 
+These are the libraries that are hard requirements for netatalk.
+
 | Package      | Details |
 |--------------|---------|
-| Berkeley DB  | v4.6.0 or later (often packaged as `bdb` or sometimes `db`) |
+| bstring      | built as subproject when shared library not found |
 | iniparser    | v3.1 or later |
 | libevent     | v2.0 or later |
 | libgcrypt    | v1.2.3 or later |
 
-### Required to Build
+### CNID Backend Requirements
 
-| Package | Details |
-|---------|---------|
-| meson   | v0.61.2 or later |
-| ninja   | Often packaged as `ninja-build` |
+One or more of the below is required to build the respective CNID backend.
 
-### Required for Spotlight Support
+| Package      | Backend | Details |
+|--------------|---------|---------|
+| Berkeley DB  | dbd     | v4.6.0 or later (often packaged as `bdb` or sometimes `db`) |
+| mysql-client **OR** mariadb-client | mysql |  |
+| sqlite3      | sqlite  |  |
+
+### Required for Build Environment
+
+In order to build netatalk from source code, the following components are
+required at the bare minimum.
+
+| Package    | Details |
+|------------|---------|
+| C compiler | clang or gcc are recommended |
+| meson      | v0.61.2 or later |
+| ninja      | Often packaged as `ninja-build` |
+
+### Optional Spotlight Support
 
 | Package    | Details |
 |------------|---------|
 | D-Bus      | Also used by avahi and afpstats |
+| localsearch **OR** tracker | v3.0 or later |
 | talloc     |  |
-| tracker **OR** localsearch | v0.12 or later|
 | bison      |  |
 | flex       |  |
 
-### Optional
+### Optional Features
 
 | Package      | Details |
 |--------------|---------|
@@ -85,7 +101,7 @@ documentation for more details.
 
 Use the `meson` command to compile and install Netatalk.
 
-```
+```shell
 meson setup build                                       # configure the build
 meson compile -C build                                  # build Netatalk
 
@@ -96,13 +112,13 @@ sudo meson install -C build                             # install Netatalk
 
 To uninstall Netatalk:
 
-```
+```shell
 sudo ninja -C build uninstall                           # uninstall Netatalk
 ```
 
 To test (requires the `-Dwith-tests=true` flag at configure time):
 
-```
+```shell
 cd build && meson test
 ```
 
@@ -110,7 +126,7 @@ cd build && meson test
 
 When using Meson, to review the options which Meson chose, run:
 
-```
+```shell
 meson configure
 ```
 
@@ -120,7 +136,7 @@ this command take the form `-Doption=value`.
 
 For example, to install Netatalk in a specific location:
 
-```
+```shell
 meson setup build -Dprefix=/tmp/install
 ```
 
@@ -136,7 +152,7 @@ for full details of all Netatalk-specific options,
 and the [Meson documentation](https://mesonbuild.com/Builtin-options.html)
 for details of generic Meson options.
 
-# See also
+## See also
 
 The Netatalk manual has further resources to aid building and installation.
 

@@ -10,7 +10,9 @@ macipgw — MacIP ゲートウェイ デーモン
 
 # 説明
 
-**macipgw** は、AppleTalk のみのネットワークを介して接続されたデバイスに IP 接続を提供する。つまり、LocalTalk または Apple Remote Access (ARA)。**macipgw** は通常、*/etc/rc* から起動される。
+**macipgw** は、AppleTalk のみのネットワークを介して接続されたデバイスに IP 接続を提供する。
+つまり、LocalTalk または Apple Remote Access (ARA)。
+**macipgw** は通常、*/etc/rc* から起動される。
 
 MacIP (以前は KIP と呼ばれていました) は、IP パケットを AppleTalk パケットにカプセル化できるプロトコルである。
 **macipgw** は、AppleTalk ネットワーク上の MacIP ゲートウェイとして自身を登録し、トンネル
@@ -24,7 +26,8 @@ MacIP (以前は KIP と呼ばれていました) は、IP パケットを Apple
 
 存在する場合、**macipgw**はsysconfパス下の*macipgw.conf*から構成オプションを読み取る。コマンドラインオプションは、構成ファイルオプションよりも優先される。例については以下を参照してください。
 
-**macipgw** は、*LOG_DAEMON* 機能の下で、**syslog**(3) を介して操作メッセージをログに記録する。
+**macipgw** は、*LOG_DAEMON* 機能の下で、**syslog**(3) を介して
+操作メッセージをログに記録する。
 
 # オプション
 
@@ -68,7 +71,7 @@ MacIP (以前は KIP と呼ばれていました) は、IP パケットを Apple
 
 ## 例： macipgw 呼び出し
 
-    /usr/local/libexec/macipgw -n 192.168.1.1 -z "Remote Users" 192.168.1.0 255.255.255.0
+    macipgw -n 192.168.1.1 -z "Remote Users" 192.168.1.0 255.255.255.0
 
 **macipgw** を起動し、ゲートウェイ経由で接続されたデバイスにクラス C ネットワーク 192.168.1.0
 を割り当て、**macipgw** が動作しているシステムをネーム サーバーとして使用でき、ゾーン Remote Users
@@ -93,4 +96,4 @@ tun(4), ip(4), atalkd(8), syslog(3), syslogd(8)
 
 # 著者
 
-Stefan Bethke <Stefan.Bethke@Hanse.DE\>
+Stefan Bethke <Stefan.Bethke@Hanse.DE>

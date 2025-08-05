@@ -10,7 +10,16 @@ netatalk — Netatalk AFP サーバのサービス コントローラ デーモ�
 
 # 説明
 
-**netatalk**は、AFPデーモン**afpd**とCNIDデーモン**cnid_metad**の起動と再起動を請け負うサービスコントローラデーモンである。
+**netatalk** は、複数のフォーク型デーモンで構成される Netatalk AFP ファイルサーバーを
+制御するためのデーモンである。
+ほとんどの導入では、各デーモンを個別に起動・停止するのではなく、
+netatalk を集中管理に使用する。
+netatalk デーモンは通常、ブート時に init システムによって起動される。
+
+コントローラーデーモンは、AFP デーモン **afpd** と CNID メタデーモン **cnid_metad** を起動する。後者は、CNID
+データベースデーモン **cnid_dbd** を起動する。
+
+4つのデーモンの設定はすべて、afp.conf という単一の設定ファイルで管理される。
 
 # オプション
 
@@ -30,11 +39,11 @@ netatalk — Netatalk AFP サーバのサービス コントローラ デーモ�
 
 SIGTERM
 
-> Netatalkサービス、AFPデーモンとCNIDデーモンを停止する
+> NetatalkのAFPデーモンとCNIDデーモンを停止する
 
 SIGHUP
 
-> *SIGHUP*を送るとAFPデーモンが設定ファイルを再読み込みする。
+> *SIGHUP*を送るとNetatalkのAFPデーモンとCNIDデーモンが設定ファイルを再読み込みする。
 
 # ファイル
 

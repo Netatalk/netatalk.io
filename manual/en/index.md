@@ -1,16 +1,4 @@
-# Introduction
-
-## Legal Notice
-
-The Netatalk software package as well as this documentation are
-distributed under the GNU General Public License (GPL) version 2. A copy
-of the license is included in this documentation, as well as within the
-Netatalk source distribution.
-
-The Free Software Foundation distributes an
-[online copy of the license](http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt).
-
-## Overview of Netatalk
+# Introduction to Netatalk
 
 Netatalk is an Open Source software package that can be used to turn a
 \*NIX machine into a performant and light-weight file server for

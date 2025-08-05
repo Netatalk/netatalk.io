@@ -8,7 +8,7 @@ If you need a different setup, please use the manual configuration option.
 
 Make sure you have a container runtime installed, then build the netatalk container:
 
-```
+```shell
 docker build -t netatalk:latest .
 ```
 
@@ -18,21 +18,27 @@ Alternatively, pull a pre-built Docker image from [Docker Hub](https://hub.docke
 
 Once you have the netatalk image on your machine run it with `docker`, `podman` or equivalent container runtime.
 
-The easiest way to enable full functionality including Zeroconf service discovery and AppleTalk, is to use the `host` network driver.
+The easiest way to enable full functionality including Zeroconf service discovery and AppleTalk
+is to use the `host` network driver.
 
 For a hardened deployment, use the `bridge` network driver and expose port 548 for AFP.
-However, Zeroconf service discovery may not work and you will have to manually specify the IP address in the client when connecting to the file server.
+However, Zeroconf service discovery may not work and you will have to manually specify
+the IP address in the client when connecting to the file server.
 
 It is recommended to set up either a bind mount, or a Docker managed volume for persistent storage.
 Without this, the shared volume be stored in volatile storage that is lost upon container shutdown.
 
-For Docker Compose, you can use the sample [docker-compose.yml](https://github.com/Netatalk/netatalk/blob/main/docker-compose.yml) file that is distributed with this source code.
+For Docker Compose, you can use the sample [docker-compose.yml](https://github.com/Netatalk/netatalk/blob/main/docker-compose.yml)
+file that is distributed with this source code.
 
-Below follows a sample `docker run` command. Substitute `/path/to/share` with an actual path on your file system with appropriate permissions, `AFP_USER` and `AFP_PASS` with the appropriate user and password, and `ATALKD_INTERFACE` with the network interface to use for AppleTalk.
+Below follows a sample `docker run` command. Substitute `/path/to/share` with an actual path
+on your file system with appropriate permissions, `AFP_USER` and `AFP_PASS` with the appropriate user and password,
+and `ATALKD_INTERFACE` with the network interface to use for AppleTalk.
 
-You also need to set the timezone with `TZ` to the [IANA time zone ID](https://nodatime.org/TimeZones) for your location, in order to get the correct time synchronized with the Timelord time server.
+You also need to set the timezone with `TZ` to the [IANA time zone ID](https://nodatime.org/TimeZones)
+for your location, in order to get the correct time synchronized with the Timelord time server.
 
-```
+```shell
 docker run --rm \
   --network host \
   --cap-add=NET_ADMIN \
@@ -49,22 +55,31 @@ docker run --rm \
 
 ## Constraints
 
-The most straight forward way to enable Zeroconf service discovery as well as the AppleTalk transport layer, is to use the `host` network driver and `NET_ADMIN` capabilities.
+The most straight forward way to enable Zeroconf service discovery as well as the AppleTalk transport layer,
+is to use the `host` network driver and `NET_ADMIN` capabilities.
 
-Additionally, we rely on the host's D-Bus for Zeroconf, achieved with a bind mount such as `/var/run/dbus:/var/run/dbus`. The left hand side of the bind mount is the host machine, and the right hand side is the container. The host machine path may have to be changed to match the location of D-Bus on the host machine.
+Additionally, we rely on the host's D-Bus for Zeroconf, achieved with a bind mount such as `/var/run/dbus:/var/run/dbus`.
+The left hand side of the bind mount is the host machine, and the right hand side is the container.
+The host machine path may have to be changed to match the location of D-Bus on the host machine.
 
-On certain host OSes, notably Ubuntu: if the Apparmor security policy restricts D-Bus messages, enable the `unconfined` security option.
+On certain host OSes, notably Ubuntu: if the Apparmor security policy restricts D-Bus messages,
+enable the `unconfined` security option.
 
 Example for the docker compose yaml configuration file:
 
-```
+```yaml
     security_opt:
       - apparmor=unconfined
 ```
 
-See the [Docker AppArmor security profiles documentation](https://docs.docker.com/engine/security/apparmor/) for further details.
+See the [Docker AppArmor security profiles documentation](https://docs.docker.com/engine/security/apparmor/)
+for further details.
 
-The container is hard coded to output `afpd` (the Netatalk file server daemon) logs to the container's stdout, with default log level `info`. Logs from the AppleTalk daemons are sent to the syslog.
+The container is hard coded to output `afpd` (the Netatalk file server daemon) logs to the container's stdout,
+with default log level `info`. Logs from the AppleTalk daemons are sent to the syslog.
+
+Spotlight compatible search is currently not supported in a containerized environment
+due to constraints when running file system indexing on the D-Bus.
 
 ## MySQL CNID Backend
 
@@ -75,7 +90,7 @@ plus a web interface to administer the database for good measure.
 
 Set `AFP_CNID_SQL_PASS` and `MARIADB_ROOT_PASSWORD` to the same password.
 
-```
+```yaml
 services:
   netatalk:
     image: netatalk:latest
@@ -119,8 +134,11 @@ services:
 
 volumes:
   afpshare:
+    name: afpshare
   afpbackup:
+    name: afpbackup
   cnid_db_data:
+    name: cnid_db_data
 
 networks:
   afp_network:
@@ -138,7 +156,7 @@ the services directly. Instead, activate polling of changes to the afp.conf
 configuration file. Set `AFP_CONFIG_POLLING` to the number of seconds to wait between
 polling attempts.
 
-```
+```yaml
 services:
   netatalk:
     image: netatalk:latest
@@ -177,8 +195,11 @@ services:
 
 volumes:
   afpshare:
+    name: afpshare
   afpbackup:
+    name: afpbackup
   afpconf:
+    name: afpconf
 
 networks:
   afp_network:
@@ -187,9 +208,12 @@ networks:
 
 ## Printing
 
-The CUPS administrative web app is running on port 631 in the container, which is exposed to the host machine by default when using the `host` network driver. This is used to configure CUPS compatible printers for printing from an old Mac or Apple IIGS.
+The CUPS administrative web app is running on port 631 in the container,
+which is exposed to the host machine by default when using the `host` network driver.
+This is used to configure CUPS compatible printers for printing from an old Mac or Apple IIGS.
 
-You may have to restart papd (or the entire container) after adding a CUPS printer for it to be picked up as an AppleTalk printer.
+You may have to restart papd (or the entire container) after adding a CUPS printer
+for it to be picked up as an AppleTalk printer.
 
 ## Environment Variables
 
@@ -200,7 +224,7 @@ These are required to set the credentials used to authenticate with the file ser
 | Variable  | Description                                    |
 |-----------|------------------------------------------------|
 | AFP_USER  | Primary user of the shared volumes             |
-| AFP_PASS  | Password to authenticate with the primary user |
+| AFP_PASS  | Password to authenticate with the primary user (8 chars or less when using INSECURE_AUTH) |
 | AFP_GROUP | Group that owns the shared volume dirs         |
 
 ### Mandatory for AppleTalk
@@ -221,7 +245,7 @@ These are required to set the credentials used to authenticate with the file ser
 | AFP_PASS2         | Password for the secondary user                                        |
 | SERVER_NAME       | The name of the server (AFP and Zeroconf)                              |
 | SHARE_NAME        | The name of the primary shared volume                                  |
-| SHARE2_NAME       | The name of the secondary shared (Time Machine) volume                 |
+| SHARE_NAME2       | The name of the secondary shared (Time Machine) volume                 |
 | AFP_LOGLEVEL      | The verbosity of logs; default is "info"                               |
 | AFP_MIMIC_MODEL   | Use a custom modern AFP icon, such as `Tower` or `RackMount`           |
 | AFP_LEGACY_ICON   | Use a custom legacy AFP icon, such as `daemon` or `sdcard`             |
@@ -241,7 +265,6 @@ Set this environment variable to a non-zero value to enable, ex. "1"
 |---------------------|------------------------------------------------------------------------------------------------|
 | AFP_DROPBOX         | Enable dropbox mode; secondary user is guest with read only access to the second shared volume |
 | AFP_EXTMAP          | Enable mapping of filename extension to Classic Mac OS type/creator                            |
-| INSECURE_AUTH       | Enable the "ClearTxt" and "Guest" UAMs                                                         |
+| INSECURE_AUTH       | Enable the "ClearTxt" and "Guest" UAMs; the AFP password must be 8 chars or shorter            |
 | DISABLE_TIMEMACHINE | The secondary shared volume is a regular volume, not a backup volume                           |
-| DISABLE_SPOTLIGHT   | Spotlight compatible indexing is disabled                                                      |
 | MANUAL_CONFIG       | Enable manual management of configurations; overrides most other options                       |

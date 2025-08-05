@@ -10,8 +10,23 @@ connections, and the like.
 Netatalk implements the AppleTalk protocols to serve files over AFP and
 provide other services to old Mac and Apple II clients.
 
-A complete overview can be found inside the [developer
-documentation](/appletalk.html).
+It supports EtherTalk Phase I and II, RTMP, NBP, ZIP, AEP, ATP,
+PAP, and ASP, while expecting the host OS kernel to supply DDP.
+
+- DDP is a socket to socket protocol that all other AppleTalk protocols
+  are built on top of.
+
+- ATP, ASP, and NBP are implemented as statically linked libraries
+  in Netatalk's *libatalk* shared library.
+
+- The **atalkd** daemon implements RTMP, ZIP, and AEP.
+
+- The **papd** daemon implements PAP, allowing Mac clients to spool
+  to a Unix print spooler on the netatalk host computer.
+
+A diagram of the network stack can be found inside the [developer
+readme](/developer.html), while the latest information about DDP support
+in the kernel can be found in the [AppleTalk readme](/appletalk.html).
 
 ### To use AppleTalk or not
 
@@ -150,9 +165,7 @@ interfaces. A seed router has to supply information about:
 
 - The so called "default zone" for this segment
 
-> **WARNING**
-
-> Unless you are the network admin yourself, consider asking them before
+> ***WARNING:*** Unless you are the network admin yourself, consider asking them before
 changing anything related to AppleTalk routing, as changing these
 settings might have side effects for all of your AppleTalk network
 clients!

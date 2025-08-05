@@ -1,9 +1,7 @@
 # Installation
 
-> **WARNING**
-
-> Before upgrading to Netatalk 4 from an earlier version, please read the
-[Upgrade](Upgrading.html) chapter in this manual.
+> ***WARNING:*** Before upgrading to Netatalk 4 from an earlier version,
+please read the [Upgrade](Upgrading.html) chapter in this manual.
 
 ## How to obtain Netatalk
 
@@ -48,14 +46,17 @@ packages that can be installed to enhance Netatalk's functionality.
 
 ### Required third-party software
 
-- Berkeley DB
+- bstring
 
-    The default dbd CNID backend for netatalk uses Berkeley DB to store
-    unique file identifiers. At the time of writing you need at least
-    version 4.6.
+    Netatalk relies on the Better String Library for memory safe
+    string data manipulation and retrieval.
+    Version 1.0.1 or later of Mike Steinert's
+    [bstring](https://github.com/msteinert/bstring) fork is recommended,
+    but any version of the original [bstrlib](https://bstring.sourceforge.net/)
+    library by Paul Hsieh should theoretically work just as well.
 
-    The recommended version is 5.3, the final release under the permissive
-    Sleepycat license, and therefore the most widely distributed version.
+    In the absence of a shared *bstring* library, the Netatalk build system
+    will build and install the library as a Meson subproject.
 
 - iniparser
 
@@ -72,6 +73,37 @@ packages that can be installed to enhance Netatalk's functionality.
     The [Libgcrypt](https://gnupg.org/software/libgcrypt/) library
     supplies the encryption for the standard User Authentication Modules
     (UAMs). They are: DHX2, DHCAST128 (a.k.a. DHX) and RandNum.
+
+#### CNID database backends
+
+At least one of the below database libraries is required
+to power the CNID scheme of your choice.
+Without one of these, only the *last* backend will be available
+which operates in read-only mode and therefore not recommended
+for daily use.
+
+- Berkeley DB
+
+    The default dbd CNID backend for netatalk uses Berkeley DB to store
+    unique file identifiers. At the time of writing you need at least
+    version 4.6.
+
+    The recommended version is 5.3, the final release under the permissive
+    Sleepycat license, and therefore the most widely distributed version.
+
+- MySQL or MariaDB
+
+    By leveraging a MySQL-compatible client library, netatalk can be built
+    with a MySQL CNID backend that is highly scalable and reliable.
+    The administrator has to provide a separate database instance for use with
+    this backend.
+
+- SQLite v3
+
+    The SQLite library version 3 enables the SQLite CNID backend
+    which is an alternative zero-configuration backend.
+    This backend is **experimental** and should be used only for
+    testing purposes.
 
 ### Optional third-party software
 
@@ -141,13 +173,6 @@ functionality.
     library, netatalk can produce the GSS UAM library for authentication
     with existing Kerberos infrastructure.
 
-- MySQL or MariaDB
-
-    By leveraging a MySQL-compatible client library, netatalk can be built
-    with a MySQL CNID backend that is highly scalable and reliable. The
-    administrator has to provide a separate database instance for use with
-    this backend.
-
 - PAM
 
     PAM provides a flexible mechanism for authenticating users. PAM was
@@ -176,15 +201,11 @@ functionality.
     detection of host name spoofing or host address spoofing; booby traps
     to implement an early-warning system.
 
-- Tracker, or TinySPARQL / LocalSearch
+- LocalSearch or Tracker
 
-    Netatalk uses [Tracker](https://tracker.gnome.org) or its later
-    incarnation
-    TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
-    as the metadata backend for Spotlight
-    search indexing. The minimum required version is 0.12 as this was the
-    first version to support
-    [SPARQL](https://gnome.pages.gitlab.gnome.org/tracker/).
+    Netatalk uses [GNOME LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/index.html),
+    or Tracker as it was previously known, version 3 or later as the metadata backend for Spotlight
+    compatible search indexing.
 
 - talloc / bison / flex
 

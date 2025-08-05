@@ -13,14 +13,14 @@ Netatalk 3 から Netatalk 4 へのアップグレードは簡単。古いバー
 
 Netatalk 4 の主要な変更は以下の3点：
 
-1.  これまでの AFP 設定ファイルすべてが廃止され、AFP に関してのほぼ全オプション名を変更し、新しい設定ファイルを追加した：
-    *afp.conf* と *extmap.conf*
+1. これまでの AFP 設定ファイルすべてが廃止され、AFP に関してのほぼ全オプション名を変更し、新しい設定ファイルを追加した：
+   *afp.conf* と *extmap.conf*
 
-2.  ファイルメタデータをファイルシステムの拡張属性に保存する新しいバックエンド。
+2. ファイルメタデータをファイルシステムの拡張属性に保存する新しいバックエンド。
 
-3.  AppleTalk トランスポート層はデフォルトで無効になっている。非常に古い Mac で Netatalk
-    を使用する場合は、*afp.conf* にて **appletalk = yes** オプションで有効にしてください。
-    それから、**netatalk** を起動する前に **atalkd** デーモンを立ち上げてください。
+3. AppleTalk トランスポート層はデフォルトで無効になっている。非常に古い Mac で Netatalk
+   を使用する場合は、*afp.conf* にて **appletalk = yes** オプションで有効にしてください。
+   それから、**netatalk** を起動する前に **atalkd** デーモンを立ち上げてください。
 
 ### 設定まわりの変更点
 
@@ -33,9 +33,7 @@ Netatalk 4 の主要な変更は以下の3点：
 - *afpd.conf*、 *netatalk.conf*、 *AppleVolumes.default* 及び、 *afp_ldap.conf*
 の廃止
 
-> **警告**
-
-> ほとんどのオプション名は変更されたので、 詳細については
+> **【警告】** ほとんどのオプション名は変更されたので、詳細については
 [afp.conf](afp.conf.5.html) の manpage 全体を読むこと
 
 #### extmap.conf
@@ -65,15 +63,16 @@ macOS拡張属性およびClassic Mac OS リソースフォークをファイル
 - Mac のメタデータ（すなわち FinderInfo、AFP フラグ、コメント、CNID）は
 *org.netatalk.Metadata*という名前の拡張属性に保存される。
 
-- さらに、Netatalk 4.1.0以降を実行しているmacOSホストでは、FinderInfo はファイルシステムにネイティブに保存され、*com.apple.FinderInfo*という名前の拡張属性として表示される。
+  - さらに、Netatalk 4.1.0以降を実行しているmacOSホストでは、FinderInfo
+    はファイルシステムにネイティブに保存され、*com.apple.FinderInfo*という名前の拡張属性として表示される。
 
 - マックのリソースフォークは：
 
-- ZFSを用いたSolarisでは*org.netatalk.ResourceFork*という拡張属性に保存される。
+  - ZFSを用いたSolarisでは*org.netatalk.ResourceFork*という拡張属性に保存される。
 
-- ないしは、ファイル名が*file*であるものに対して各々、*._file*という名の別のAppleDoubleファイルに保存される。
+  - ないしは、ファイル名が*file*であるものに対して各々、*._file*という名の別のAppleDoubleファイルに保存される。
 
-- Netatalk 4.1.0 以降、macOS ホスト上のリソース フォークにネイティブに保存されている。
+  - Netatalk 4.1.0 以降、macOS ホスト上のリソースフォークにネイティブに保存されている。
 
 - ".\_"
 ファイルのフォーマットは、たとえそのファイルシステムにCIFSサーバー（Samba）経由でアクセスした場合でも、マックのCIFSクライアントが想定しているフォーマットと全く同じである。なので、データを失う危険性（リソースもメタデータも）なく、マックから同じデータセットにAFP経由とCIFS経由と並行してアクセスすることができる。一方、Windowsクライアントから当該データセットにCIFS経由でアクセスした場合は、非ZFSファイルシステムでは未だに*file*と*._file*の紐付けを失うこととなるであろう（上記参照。）今のところその点で拡張Samba
@@ -93,19 +92,19 @@ VFSモジュールが必要である。
 
 ### アップグレード手段
 
-1.  Netatalk 2.x を停止する
+1. Netatalk 2.x を停止する
 
-2.  Netatalk 4 をインストールする
+2. Netatalk 4 をインストールする
 
-3.  設定 *afp.conf* 及び *extmap.conf* を自力で書き換える
+3. 設定 *afp.conf* 及び *extmap.conf* を自力で書き換える
 
-4.  **afpd** と **cnid_metad** の代わりに **netatalk** 起動にのみ関連している、 Netatalk
-    起動スクリプトを更新するか、標準の起動スクリプトに置き換える。
+4. **afpd** と **cnid_metad** の代わりに **netatalk** 起動にのみ関連している、 Netatalk
+   起動スクリプトを更新するか、標準の起動スクリプトに置き換える。
 
-5.  *afp_voluuid.conf* 及び *afp_signature.conf* を localstate ディレクトリ （デフォルトでは
-    *$prefix/var/netatalk/*）、に移動。 正しいパスを見つけるために **afpd -v** コマンドが有用
+5. *afp_voluuid.conf* 及び *afp_signature.conf* を localstate ディレクトリ （デフォルトでは
+   *$prefix/var/netatalk/*）、に移動。 正しいパスを見つけるために **afpd -v** コマンドが有用
 
-6.  Netatalk 4 を起動する
+6. Netatalk 4 を起動する
 
 ### 新旧設定ファイル名
 

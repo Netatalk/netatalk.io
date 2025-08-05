@@ -26,7 +26,7 @@ AppleTalk プロトコル ファミリのソケットは、次のアドレス構
         short sat_family;
         unsigned char sat_port;
         struct at_addr sat_addr;
-        char sat_zero[ 8 ];
+        char sat_zero[8];
     };
 
 ソケットのポートは、**bind**(2) で設定できる。 *bind* のノードは、常に *ATADDR_ANYNODE*:

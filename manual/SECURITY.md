@@ -18,14 +18,15 @@ For instance, if 4.0 and 4.1 are supported, and we release 4.2, then support for
 | 4.1.x   | ✓         | Mar 31, 2026        |
 | 4.0.x   | X         | -                   |
 | 3.2.x   | ✓         | Sep 28, 2025        |
-| 3.1.x   | ✓         | May 31, 2025        |
+| 3.1.x   | X         | -                   |
 | 3.0.x   | X         | -                   |
 | 2.4.x   | ✓         | Sep 28, 2025        |
 | < 2.4   | X         | -                   |
 
 ## Reporting a Vulnerability
 
-If you think you have found an exploitable security vulnerability in Netatalk, the Netatalk Team would be eager to hear from you!
+If you think you have found an exploitable security vulnerability in Netatalk,
+the Netatalk Team would be eager to hear from you!
 
 The best way to get in touch with us is by filing a report via the
 [private security vulnerability reporting](https://github.com/Netatalk/netatalk/security/advisories/new)

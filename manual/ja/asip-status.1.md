@@ -12,8 +12,10 @@ asip-status — AFP サーバに機能を問い合わせる
 
 # 説明
 
-**asip-status**は、*HOSTNAME*:*PORT*で示したAFPサーバにFPGetSrvrInfoリクエストを送信し、その結果を表示する。すなわち、そのサーバがAFPサービスで提供する"Machine
-type"、サーバ名、サポートするAFPバージョン、ユーザ認証モジュール(UAM)、AFPフラグ、サーバシグネチャ、ネットワークアドレスである。
+**asip-status**は、*HOSTNAME*:*PORT*で示したAFPサーバにFPGetSrvrInfoリクエストを送信し、
+その結果を表示する。すなわち、そのサーバがAFPサービスで提供する"Machine
+type"、サーバ名、サポートするAFPバージョン、ユーザ認証モジュール(UAM)、
+AFPフラグ、サーバシグネチャ、ネットワークアドレスである。
 
 *PORT*を与えない場合は、デフォルトのAFPポートである548が使われる。
 

@@ -7,10 +7,9 @@ atalk_aton — AppleTalk アドレス解析
     #include <sys/types.h>
     #include <netatalk/at.h>
 
-    atalk_aton(	cp, 	 
-        ata);	 
-    char * cp;
-    struct at_addr * ata;
+    atalk_aton(cp, ata);
+    char *cp;
+    struct at_addr *ata;
 
 # 説明
 

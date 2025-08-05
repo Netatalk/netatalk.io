@@ -81,29 +81,30 @@ to the [afp.conf](afp.conf.5.html) man page.
 ## CNID backends
 
 Unlike other protocols like SMB or NFS, the AFP protocol mostly refers
-to files and directories by ID and not by a path (the IDs are also
-called CNID, which stand for Catalog Node ID). A typical AFP request
-uses a directory ID and a filename,
+to files and directories by ID and not by a path. These IDs are
+called CNID, which stand for Catalog Node ID.
+A typical AFP request uses a directory ID and a filename,
 something like "server, please open the file named 'Test' in the
 directory with id 167". For example "Aliases" on the Mac basically work
 by ID (with a fallback to the absolute path in more recent AFP clients.
 But this applies only to Finder, not to applications).
 
-Every file in an AFP volume has to have a unique file
-ID, IDs must, according to the specs,
-never be reused, and IDs are 32 bit numbers (Directory IDs use the same
-ID pool). So, after ~4 billion files/folders have been written to an AFP
+Every file in an AFP volume has to have a unique file ID.
+CNIDs must, according to the AFP specification, never be reused.
+The IDs are represented as 32 bit numbers, and directory IDs use the same
+ID pool. So, after ~4 billion files/folders have been written to an AFP
 volume, the ID pool is depleted and no new file can be written to the
-volume. No whining please :-)
+volume. Some of Netatalk's CNID backends may attempt to reuse available
+IDs after depletion, which is technically in violation of the spec,
+but may enable continuous use on long-lived volumes.
 
 Netatalk needs to map IDs to files and folders in the host filesystem.
-To achieve this, several different CNID
-backends are available and can be
-selected with the **cnid scheme** option in
-the *afp.conf* configuration file. A CNID backend is basically a
-database storing ID <-\> name mappings.
+To achieve this, several different CNID backends are available and can be
+selected with the **cnid scheme** option in the *afp.conf* configuration file.
+A CNID backend is basically a database storing ID <-\> name mappings.
 
-The CNID databases are by default located in a *netatalk/CNID* subdirectory
+For the CNID backends which use a zero-configuration database,
+the database files are by default located in a *netatalk/CNID* subdirectory
 of your system's state directory path, e.g. */var/lib*.
 You can change the state directory path with *-Dwith-statedir-path=PATH*
 at compile time.
@@ -111,38 +112,40 @@ at compile time.
 There is a command line utility called **dbd** available which can be used
 to verify, repair and rebuild the CNID database.
 
-> **NOTE**
-
-> There are some CNID related things you should keep in mind when
+***NOTE:*** There are some CNID related things you should keep in mind when
 working with netatalk:
 
-> - Don't nest volumes unless "**vol dbnest = yes**" is set.
+- Don't nest volumes unless "**vol dbnest = yes**" is set.
+- CNID backends are databases, so they turn afpd into a file
+  server/database mix.
+- If there's no more space on the filesystem left, the database will
+  get corrupted. You can work around this by using the **vol dbpath**
+  option and put the database files into another location.
+- Be careful with CNID databases for volumes that are mounted via NFS.
+  That is a pretty audacious decision to make anyway, but putting a
+  database there as well is really asking for trouble, i.e. database
+  corruption. Use the **vol dbpath** directive to put the databases onto
+  a local disk if you must use NFS mounted volumes.
 
-> - CNID backends are databases, so they turn afpd into a file
-server/database mix.
-
-> - If there's no more space on the filesystem left, the database will
-get corrupted. You can work around this by using the **vol dbpath**
-option and put the database files into another location.
-
-> - Be careful with CNID databases for volumes that are mounted via NFS.
-That is a pretty audacious decision to make anyway, but putting a
-database there as well is really asking for trouble, i.e. database
-corruption. Use the **vol dbpath** directive to put the databases onto
-a local disk if you must use NFS mounted volumes.
+Below follows descriptions of the various CNID backends that are
+included with netatalk.
+You can choose to build one or several of them at compile time.
+Run the command *afpd -v* to see which backends are available to you,
+as well as which one is the default.
 
 ### dbd
 
 The "Database Daemon" backend is built on Berkeley DB. Access to the
-CNID database is restricted to the cnid_dbd daemon process. afpd
-processes communicate with the daemon for database reads and updates.
-The probability for database corruption is practically zero.
+CNID database is restricted to the **cnid_dbd** daemon process.
+**afpd** processes communicate with the **cnid_dbd** daemon
+for database reads and updates, which is in turn launched and
+controlled by the **cnid_metad** daemon.
 
-This is the default backend since Netatalk 2.1.
+This is the most reliable and proven backend for daily use.
 
 ### last
 
-The last backend is an in-memory tdb database. It is not persistent,
+The last backend is an in-memory Trivial Database (tdb). It is not persistent,
 with IDs valid only for the current session. Starting with netatalk 3.0,
 it operates in *read only mode*. This backend is useful e.g. for
 mounting CD-ROMs, or for automated testing.
@@ -153,7 +156,18 @@ This is basically equivalent to how **afpd** stored CNID data in netatalk
 ### mysql
 
 CNID backend using a MySQL server. The MySQL server has to be
-provisioned by the system administrator.
+provisioned by the system administrator, and Netatalk configured
+to connect to it over the network.
+
+See **afp.conf**(5) for documentation of the configuration options.
+
+### sqlite
+
+A zero-configuration database backend that uses the SQLite v3
+embedded database engine.
+
+This backend is considered experimental and should only be used
+for testing.
 
 ## Charsets/Unicode
 
@@ -604,7 +618,7 @@ add a new one) to you directory server (e.g. OpenLDAP).
 
 In detail:
 
-1.  For Solaris/ZFS: ZFS Volumes
+1. For Solaris/ZFS: ZFS Volumes
 
     You should configure a ZFS ACL know for any volume you want to use
     with Netatalk:
@@ -615,7 +629,7 @@ In detail:
     For an explanation of what this knob does and how to apply it, check
     your hosts ZFS documentation (e.g. man zfs).
 
-2.  Authentication Domain
+2. Authentication Domain
 
     Your server and the clients must be part of a security association
     where identity data is coming from a common source. ACLs in Darwin
@@ -820,10 +834,8 @@ action. When using FCE v2 you also get the following events:
 You can enable Netatalk's Spotlight compatible search and indexing
 either globally or on a per volume basis with the **spotlight** option.
 
-> **WARNING**
-
-> Once Spotlight is enabled for a single volume, all other volumes for
-which spotlight is disabled won't be searchable at all.
+> ***WARNING:*** Once Spotlight is enabled for a single volume,
+all other volumes for which spotlight is disabled won't be searchable at all.
 
 The **dbus-daemon** binary has to be installed for Spotlight feature. The
 path to dbus-daemon is determined at compile time the dbus-daemon build

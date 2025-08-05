@@ -29,7 +29,9 @@ X、Netatalkなどが生成する様々なAppleSingle/AppleDoubleデータをダ
 
 **-a** *FILE* | *DIR*
 
-> これがデフォルトである。*FILE*または*DIR*のためのAppleSingle/AppleDoubleデータを自動的にダンプする。もし*FILE*がAppleSingle/AppleDoubleフォーマットでないなら、拡張属性と*.AppleDouble/FILE*と*.\_FILE*を探す。もし*DIR*なら、拡張属性と*DIR/.AppleDouble/.Parent*と*.\_DIR*を探す。
+> これがデフォルトである。*FILE*または*DIR*のためのAppleSingle/AppleDoubleデータを自動的にダンプする。
+もし*FILE*がAppleSingle/AppleDoubleフォーマットでないなら、拡張属性と*.AppleDouble/FILE*と*.\_FILE*を探す。
+もし*DIR*なら、拡張属性と*DIR/.AppleDouble/.Parent*と*.\_DIR*を探す。
 
 **-e** *FILE* | *DIR*
 

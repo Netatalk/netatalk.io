@@ -1,10 +1,7 @@
 # インストール
 
-> **警告**
-
-> 以前のバージョン から Netatalk 4
-にアップグレードする前に、このマニュアルの[アップグレード](Upgrading.html)
-の章を必ずお読みください。
+> 【警告】 以前のバージョンからNetatalk 4にアップグレードする前に、
+このマニュアルの[アップグレード](Upgrading.html)の章を必ずお読みください。
 
 ## Netatalk の入手の仕方
 
@@ -40,12 +37,16 @@ Netatalk は、いくつかのサードパーティのライブラリとユー�
 
 ### 必要なサードパーティソフトウェア
 
-- Berkeley DB
+- bstring
 
-    デフォルトのdbd CNIDバックエンドは、Berkeley DBを使用して一意のファイル識別子を保存します。書き込みの時に最低でもバージョン 4.6 が必要となる。
+    Netatalk は、メモリセーフな文字列データの操作と取得のために「Better String Library」を活用している。
+    Mike Steinert氏の [bstring](https://github.com/msteinert/bstring) 
+    フォークのバージョン 1.0.1 以降を推奨するが、
+    Paul Hsieh氏によるオリジナルの [bstrlib](https://bstring.sourceforge.net/) 
+    ライブラリのどのバージョンでも、理論的には同様に動作するはず。
 
-    推奨バージョンは 5.3 である Sleepycat
-    ライセンスで提供された最終リリースである。
+    共有 *bstring* ライブラリがない場合、Netatalk ビルドシステムはライブラリを 
+    Meson サブプロジェクトとしてビルドおよびインストールする。
 
 - iniparser
 
@@ -63,6 +64,32 @@ Netatalk は、いくつかのサードパーティのライブラリとユー�
     ライブラリは、標準のユーザー認証モジュール (UAM)
     の暗号化を提供する。これらは、DHX2、DHCAST128 (別名 DHX)、および
     RandNum である。
+
+#### CNID データベースバックエンド一覧
+
+CNIDスキームを有効するには、以下のデータベースライブラリの少なくとも1つが必要になる。いずれか1つがない場合は、*last*
+バックエンドのみ利用可能となりるが、これは読み取り専用モードで動作するため、日常的な使用には推奨しない。
+
+- Berkeley DB
+
+    デフォルトのdbd CNIDバックエンドは、Berkeley DBを使用して一意のファイル識別子を保存します。
+    書き込みの時に最低でもバージョン 4.6 が必要となる。
+
+    推奨バージョンは 5.3 である Sleepycat
+    ライセンスで提供された最終リリースである。
+
+- MySQL または MariaDB
+
+    MySQL 互換のクライアント ライブラリを活用することで、netatalk
+    は、スケーラビリティと信頼性に優れた MySQL CNID
+    バックエンドを使用して構築できる。管理者は、このバックエンドで使用するために別のデータベース
+    インスタンスを用意する必要がある。
+
+- SQLite v3
+
+    SQLite ライブラリ バージョン3は、SQLite CNID バックエンドが有効にする。
+    設定不要の代替バックエンドである。
+    本バックエンドは**実験的**であり、テスト目的でのみ使用すること。
 
 ### 任意のサードパーティソフトウェア
 
@@ -129,13 +156,6 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
     ライブラリを使用すると、netatalk は既存の Kerberos
     インフラストラクチャでの認証用に GSS UAM ライブラリを作成できる。
 
-- MySQL または MariaDB
-
-    MySQL 互換のクライアント ライブラリを活用することで、netatalk
-    は、スケーラビリティと信頼性に優れた MySQL CNID
-    バックエンドを使用して構築できる。管理者は、このバックエンドで使用するために別のデータベース
-    インスタンスを用意する必要がある。
-
 - PAM
 
     PAM は、ユーザーを認証するための柔軟なメカニズムを提供する。 PAM は
@@ -160,17 +180,15 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
 
     Wietse Venema のネットワーク ロガー。TCPD または LOG_TCP とも呼ばれる。
 
-    セキュリティオプションは次のとおり。ホスト、ドメイン、および/またはサービスごとのアクセス制御、ホスト名のスプーフィングまたはホスト
+    セキュリティオプションは次のとおり。
+    ホスト、ドメイン、および/またはサービスごとのアクセス制御、ホスト名のスプーフィングまたはホスト
     アドレスのスプーフィングの検出。ブービートラップを使用して早期警告システムを実装する。
 
-- Tracker もしくは TinySPARQL / LocalSearch
+- LocalSearch または Tracker
 
-    Netatalkは、Spotlight検索インデックスのメタデータ バックエンドとして
-    [Tracker](https://tracker.gnome.org) またはそれ以降のバージョンである
-    TinySPARQL/[LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/)
-    を使用する。必要な最小限のバージョンは 0.12 である。これは
-    [SPARQL](https://gnome.pages.gitlab.gnome.org/tracker/)
-    をサポートする最初のバージョンだからである。
+    Netatalk は、Spotlight 互換の検索インデックスのメタデータバックエンドとして、
+    [GNOME LocalSearch](https://gnome.pages.gitlab.gnome.org/localsearch/index.html)
+    （以前は Tracker）バージョン3以降を使用する。
 
 - talloc / bison / flex
 
@@ -179,10 +197,12 @@ Netatalk はその機能性を拡充するために以下のサードパーテ�
 
 - UnicodeData.txt
 
-    Netatalk の Unicode 文字変換テーブルを再生成するには、[Unicode 文字データベース](https://www.unicode.org/Public/UNIDATA/UnicodeData.txt)
+    Netatalk の Unicode 文字変換テーブルを再生成するには、
+    [Unicode 文字データベース](https://www.unicode.org/Public/UNIDATA/UnicodeData.txt)
     が必要である。
 
-    これは、開発者やパッケージ マネージャーが Netatalk の Unicode 文字変換テーブルを再生成したい場合に関連する。
+    これは、開発者やパッケージ マネージャーが Netatalk の Unicode 
+    文字変換テーブルを再生成したい場合に関連する。
 
 ## Netatalk の起動と停止
 

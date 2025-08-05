@@ -8,22 +8,29 @@ Manual
 * [AppleTalk](AppleTalk.html)
 * [Upgrading](Upgrading.html)
 * [License](License.html)
+* [Legal Notices](Legal.html)
 
 User Tools
 
 * [ad](ad.1.html)
 * [addump](addump.1.html)
 * [aecho](aecho.1.html)
+* [afp_lantest](afp_lantest.1.html)
+* [afp_logintest](afp_logintest.1.html)
+* [afp_spectest](afp_spectest.1.html)
+* [afp_speedtest](afp_speedtest.1.html)
+* [afparg](afparg.1.html)
 * [afpldaptest](afpldaptest.1.html)
 * [afppasswd](afppasswd.1.html)
 * [afpstats](afpstats.1.html)
-* [afptest](afptest.1.html)
 * [asip-status](asip-status.1.html)
 * [dbd](dbd.1.html)
+* [fce_listen](fce_listen.1.html)
 * [getzones](getzones.1.html)
 * [macusers](macusers.1.html)
 * [nbp](nbp.1.html)
 * [pap](pap.1.html)
+* [rtmpqry](rtmpqry.1.html)
 
 Configuration Files
 
