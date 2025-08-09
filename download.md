@@ -13,7 +13,7 @@ download the corresponding GPG signature file. The signatures are
 signed with the GPG key of the Netatalk project, which can be fetched
 from the keystore at [https://keys.openpgp.org](https://keys.openpgp.org).
 
-The GPG key fingerprint is: **Primary key fingerprint: 835A 6542 8C82 2F69 C45B  817A 7B13 E1BF E4DD E8BD**
+The GPG key fingerprint is: **835A 6542 8C82 2F69 C45B  817A 7B13 E1BF E4DD E8BD**
 
     $ gpg --keyserver keys.openpgp.org --recv-keys 7B13E1BFE4DDE8BD
     gpg: key 7B13E1BFE4DDE8BD: public key "Netatalk Distribution <distribution@netatalk.io>" imported

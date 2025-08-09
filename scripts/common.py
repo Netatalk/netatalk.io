@@ -133,7 +133,7 @@ def html_navbar(version):
         <a
         title="download {version} signature"
         href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.asc">
-        Netatalk {version} (GPG signature)
+        Netatalk {version} (GPG sign)
         </a>
       </li>
       <li>
