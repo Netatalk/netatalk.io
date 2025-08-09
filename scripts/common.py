@@ -131,6 +131,13 @@ def html_navbar(version):
       </li>
       <li>
         <a
+        title="download {version} signature"
+        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.asc">
+        Netatalk {version} (GPG signature)
+        </a>
+      </li>
+      <li>
+        <a
         title="download {version} Webmin module"
         href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.wbm.gz">
         Webmin Module
