@@ -1,6 +1,6 @@
 # 名前
 
-fce_listen — Netatalk ファイルシステム変更イベントリスナーアプリケーション
+fce_listen — Netatalk Filesystem Change Event リスナーアプリケーション
 
 # 概要
 
