@@ -11,7 +11,8 @@ notes](https://github.com/Netatalk/netatalk/releases) on GitHub.
 To validate the integrity of the downloaded source code, you can
 download the corresponding GPG signature file. The signatures are
 signed with the GPG key of the Netatalk project, which can be fetched
-from the keystore at [https://keys.openpgp.org](https://keys.openpgp.org).
+from the keystore at [https://keys.openpgp.org](keys.openpgp.org)
+or [https://keys.mailvelope.com](keys.mailvelope.com).
 
 The GPG key fingerprint is: **835A 6542 8C82 2F69 C45B  817A 7B13 E1BF E4DD E8BD**
 
