@@ -4,6 +4,21 @@
 
 Below is a full history of news announcements ever published on the website.
 
+### Netatalk 4.2.3 is available
+
+*7th of May 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.2 release series.
+
+In this version, we ship a handful of bug fixes and improvements to the
+documentation.
+All users of previous Netatalk versions are encouraged to upgrade to
+4.2.3.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.3.html).
+
 ### Netatalk 4.2.2 is available
 
 *27th of April 2025*

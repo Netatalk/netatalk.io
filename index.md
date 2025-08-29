@@ -85,6 +85,21 @@ We are looking forward to your contribution!
 
 ## Latest News
 
+### Netatalk 4.3.1 is available
+
+*29th of August 2025*
+
+The Netatalk development team is proud to announce the latest release of
+the Netatalk 4.3 release series.
+
+The afp_lantest utility has been given a major overhaul,
+and is now capable of thoroughly testing caching in the AFP server.
+
+All users of previous Netatalk versions are encouraged to upgrade to 4.3.1.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.3/ReleaseNotes4.3.1.html).
+
 ### Netatalk 4.3.0 is available
 
 *5th of August 2025*
@@ -118,21 +133,6 @@ All users of previous Netatalk versions are encouraged to upgrade to 4.2.4.
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.2/ReleaseNotes4.2.4.html).
-
-### Netatalk 4.2.3 is available
-
-*7th of May 2025*
-
-The Netatalk development team is proud to announce the latest version in
-the Netatalk 4.2 release series.
-
-In this version, we ship a handful of bug fixes and improvements to the
-documentation.
-All users of previous Netatalk versions are encouraged to upgrade to
-4.2.3.
-
-For a summary of news and a detailed list of changes see the [Release
-Notes](/4.2/ReleaseNotes4.2.3.html).
 
 ## Older Stories
 
