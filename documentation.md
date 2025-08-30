@@ -31,20 +31,7 @@ If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you c
 A series of articles covering various technical topics on Netatalk and
 Mac networking.
 
-- [\[TN#011\] Capturing AFP network traffic](blog/tn011.html)
-- [\[TN#010\] Using libatalk from third party apps](blog/tn010.html)
-- [\[TN#009\] Netatalk and ZFS nbmand property](blog/tn009.html)
-- [\[TN#008\] Limiting the available size of Time Machine
-  volumes](blog/tn008.html)
-- [\[TN#007\] Announcing remote Netatalk AFP servers with
-  Avahi](blog/tn007.html)
-- [\[TN#006\] Fix Time Machine Sparsebundle](blog/tn006.html)
-- [\[TN#005\] 10.7 LION, Time Machine and Netatalk/AFP](blog/tn005.html)
-- [\[TN#004\] 10.6.3 and TimeMachine over AFP image size
-  limitation](blog/tn004.html)
-- [\[TN#003\] Slow AFP read performance](blog/tn003.html)
-- [\[TN#002\] TimeMachine Warning](blog/tn002.html)
-- [\[TN#001\] Snow Leopard permission errors](blog/tn001.html)
+They can now be found in the [Netatalk Wiki](/docs).
 
 ## Release Notes
 
