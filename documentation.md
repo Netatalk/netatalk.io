@@ -22,7 +22,7 @@ Start here to get an overview of the installation process when not using a packa
 - [Version History](/news.html) (News)
 - [Netatalk Contributors](/contributors.html) (Contributors)
 - [AppleTalk Transport Layer](/appletalk.html) (AppleTalk)
-- [Implementation Notes for Developers](/developer.html) (Developer)
+- [Notes for Developers](/developer.html) (Developer)
 
 If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
