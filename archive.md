@@ -4,6 +4,19 @@
 
 Below is a full history of news announcements ever published on the website.
 
+### Netatalk 4.2.4 is available
+
+*31st of May 2025*
+
+The Netatalk development team is proud to announce the latest version in
+the Netatalk 4.2 release series.
+This release has fixes for building on macOS with MacPorts,
+as well as the latest Solaris 11.4.81 CBE release.
+All users of previous Netatalk versions are encouraged to upgrade to 4.2.4.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.2/ReleaseNotes4.2.4.html).
+
 ### Netatalk 4.2.3 is available
 
 *7th of May 2025*

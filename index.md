@@ -85,6 +85,21 @@ We are looking forward to your contribution!
 
 ## Latest News
 
+### Netatalk 4.3.2 is available
+
+*7th of September 2025*
+
+The Netatalk development team is proud to announce the latest release of
+the Netatalk 4.3 release series.
+
+A critical bug preventing authentication with an AD domain via PAM has been
+fixed.
+
+All users of previous Netatalk versions are encouraged to upgrade to 4.3.2.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.3/ReleaseNotes4.3.2.html).
+
 ### Netatalk 4.3.1 is available
 
 *29th of August 2025*
@@ -120,19 +135,6 @@ issues to the Netatalk development team.
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/4.3/ReleaseNotes4.3.0.html).
-
-### Netatalk 4.2.4 is available
-
-*31st of May 2025*
-
-The Netatalk development team is proud to announce the latest version in
-the Netatalk 4.2 release series.
-This release has fixes for building on macOS with MacPorts,
-as well as the latest Solaris 11.4.81 CBE release.
-All users of previous Netatalk versions are encouraged to upgrade to 4.2.4.
-
-For a summary of news and a detailed list of changes see the [Release
-Notes](/4.2/ReleaseNotes4.2.4.html).
 
 ## Older Stories
 
