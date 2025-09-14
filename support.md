@@ -28,9 +28,5 @@ release announcements are posted here as well.
 
 ## Security
 
-The Netatalk Project takes cyber security very seriously.
-For more information, please visit our [Security Policy](/security.html) page.
-
-Here you can find out how to report a new security bug in Netatalk,
-read previous security advisories, or understand our security
-patching policy.
+See the [Netatalk Security Policy](/security.html) for a list of security vulnerability advisories,
+as well as information on reporting security issues to the project.
