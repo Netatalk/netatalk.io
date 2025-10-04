@@ -115,7 +115,7 @@ def html_navbar(version):
     return f"""
 <div id="navbars">
   <div class="navbar">
-    <h2>current releases</h2>
+    <h2>current release</h2>
     <ul>
       <li>
         <a
@@ -128,28 +128,28 @@ def html_navbar(version):
         <a
         title="download {version} checksum"
         href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.sha256sum">
-        Netatalk {version} (sha256sum)
+        #️⃣ sha256 checksum
         </a>
       </li>
       <li>
         <a
         title="download {version} signature"
         href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.asc">
-        Netatalk {version} (GPG sign)
+        🔑 GPG signature
         </a>
       </li>
       <li>
         <a
         title="download {version} Webmin module"
         href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.wbm.gz">
-        Webmin Module
+        🧰 Webmin Module
         </a>
       </li>
       <li>
         <a
         title="view {version} Release Notes"
         href="/{minor_version}/ReleaseNotes{version}.html">
-        Release Notes
+        📝 Release Notes
         </a>
       </li>
     </ul>
