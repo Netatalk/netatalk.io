@@ -28,8 +28,10 @@ networking that make great Netatalk companions.
 | [lpstyl](https://github.com/Godzil/lpstyl) | \*NIX StyleWriter driver with optional AppleTalk support | Depends on Netatalk |
 | [macipgw](https://macipgw.sourceforge.io) | [MacIP](https://en.wikipedia.org/wiki/MacIP) bridge for LocalTalk-only Macs | Included with Netatalk as of v4.0 |
 | [MacIPRpi](https://www.macip.net/) | OS image for Raspberry Pi bundled with pre-configured vintage Mac networking software | Bundles Netatalk |
+| [NuLib](https://nulib.com/) | Archiver utility that can handle Apple II compression formats like ShrinkIt |  |
 | [RetroNAS](https://github.com/danmons/retronas) | NAS software distribution that specializes in retro networking | Bundles Netatalk |
 | [TashRouter](https://github.com/lampmerchant/tashrouter) | AppleTalk router for LocalTalk and EtherTalk written in Python |  |
+| [unar](https://github.com/MacPaw/XADMaster) | Archiver utility that can handle Mac formats like StuffIt and MacBinary |  |
 
 ### Software for old Macs and Apple IIs
 
