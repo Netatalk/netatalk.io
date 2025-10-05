@@ -125,7 +125,7 @@ the Netatalk 4.3 release series.
 Notable in this release, is the addition of an experimental SQLite
 CNID backend, as well as a new AppleTalk tool called *rtmpqry*.
 
-A major breaking change is the mandatory dependency on the *bstring*
+A major breaking change is the mandatory dependency on a shared [bstring](https://github.com/msteinert/bstring)
 library. This library was previously vendored in the Netatalk source tree.
 In the absense of a packaged version of *bstring* for your operating system,
 the Meson build system can build it on the fly as a subproject.
