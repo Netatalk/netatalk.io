@@ -1,0 +1,38 @@
+var spotlight_8h =
+[
+    [ "sl_uuid_t", "structsl__uuid__t.html", "structsl__uuid__t" ],
+    [ "sl_cnids_t", "structsl__cnids__t.html", "structsl__cnids__t" ],
+    [ "sl_rslts", "structsl__rslts.html", "structsl__rslts" ],
+    [ "_slq_t", "struct__slq__t.html", "struct__slq__t" ],
+    [ "sl_ctx", "structsl__ctx.html", "structsl__ctx" ],
+    [ "SL_ENC_BIG_ENDIAN", "spotlight_8h.html#a66422b4f2ea5e8e5254411225de4b932", null ],
+    [ "SL_ENC_LITTLE_ENDIAN", "spotlight_8h.html#adc66d76336f1a99975987763fcdac10b", null ],
+    [ "SL_ENC_UTF_16", "spotlight_8h.html#af572e2f36af0cf9d2d635a69a00beaf4", null ],
+    [ "SPOTLIGHT_CMD_FLAGS", "spotlight_8h.html#a370fbfdc3f7348b71539455a275e5ffa", null ],
+    [ "SPOTLIGHT_CMD_OPEN", "spotlight_8h.html#a7dd1add10582485ec3fbc9b44a253ab0", null ],
+    [ "SPOTLIGHT_CMD_OPEN2", "spotlight_8h.html#afa7b0caf9909c70089e79d78f0df7ffb", null ],
+    [ "SPOTLIGHT_CMD_RPC", "spotlight_8h.html#ab8333942738ad49dba578bf2d6ce9e02", null ],
+    [ "SPOTLIGHT_H", "spotlight_8h.html#aa25261d01b885381a72a6162ced57618", null ],
+    [ "sl_array_t", "spotlight_8h.html#a503b1b536808ed5b4fca1501d078f7f6", null ],
+    [ "sl_bool_t", "spotlight_8h.html#a11a3b1763b653fa2d4fdd0d69b35196a", null ],
+    [ "sl_dict_t", "spotlight_8h.html#a629ce1cc995cd5cb2f19bb7207105ee3", null ],
+    [ "sl_filemeta_t", "spotlight_8h.html#abcdbc0b0a0d0fa2aace11dd7f0dfe6f4", null ],
+    [ "sl_nil_t", "spotlight_8h.html#a57564fbfaae82646820340b0de9b916f", null ],
+    [ "sl_time_t", "spotlight_8h.html#a61fe2225c3f05d1d0ccf26f1e0b8084e", null ],
+    [ "slq_t", "spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5", null ],
+    [ "slq_state_t", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33d", [
+      [ "SLQ_STATE_NEW", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da03678475552748696585434d701543da", null ],
+      [ "SLQ_STATE_RUNNING", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da1235af82f9dc967f124d2a495ae8ec6f", null ],
+      [ "SLQ_STATE_RESULTS", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da87f5488a4996db5a1998a16b09e4049a", null ],
+      [ "SLQ_STATE_FULL", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da8aa1680f5bc57c1035c3caefc07a5fe9", null ],
+      [ "SLQ_STATE_DONE", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da663f3406445ae43937ec8aadb089ecc8", null ],
+      [ "SLQ_STATE_CANCEL_PENDING", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da7181900f0e5149c358e1af2a5dc226bc", null ],
+      [ "SLQ_STATE_CANCELLED", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3", null ],
+      [ "SLQ_STATE_ERROR", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3", null ]
+    ] ],
+    [ "afp_spotlight_rpc", "spotlight_8h.html#abdef5befd3dbeb22f9b822e388145a89", null ],
+    [ "configure_spotlight_attributes", "spotlight_8h.html#a09859b9b9b17c89969f3e6fdb8739312", null ],
+    [ "sl_pack", "spotlight_8h.html#a34f2023c533ff31bb1ce854182e7407f", null ],
+    [ "sl_unpack", "spotlight_8h.html#a838d95f10dfcad456af2111d396cdc00", null ],
+    [ "spotlight_init", "spotlight_8h.html#a30d4ba9553ad2102d7343e717fd60896", null ]
+];

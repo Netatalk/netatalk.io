@@ -1,0 +1,27 @@
+var cnid__private_8h =
+[
+    [ "CNID_DEV_LEN", "cnid__private_8h.html#a1eca48e22565ece0d43d0f9be1946752", null ],
+    [ "CNID_DEV_OFS", "cnid__private_8h.html#aaeb5c8b1878bbfa0c2e7a1262f042120", null ],
+    [ "CNID_DEVINO_LEN", "cnid__private_8h.html#a14798ef47d146d93d017a722334fe4e9", null ],
+    [ "CNID_DEVINO_OFS", "cnid__private_8h.html#a9696218250e3dc66f9da4be66e6589a7", null ],
+    [ "CNID_DID_LEN", "cnid__private_8h.html#a52e7dbe126390196cf44cf070aa2fc4d", null ],
+    [ "CNID_DID_OFS", "cnid__private_8h.html#a95f9ae14330a626246af256af0c8d6c5", null ],
+    [ "CNID_HEADER_LEN", "cnid__private_8h.html#ad7a0d8d7c5d1e27ea871e9b453a2b56f", null ],
+    [ "CNID_INO_LEN", "cnid__private_8h.html#a9283385cdf49f8a33444615469fcef35", null ],
+    [ "CNID_INO_OFS", "cnid__private_8h.html#a57cef614c38278973679a5da33dcc1ec", null ],
+    [ "CNID_LEN", "cnid__private_8h.html#a3bf26c2e231468e22c51ca676d79498f", null ],
+    [ "CNID_NAME_OFS", "cnid__private_8h.html#a30e952c38bc7234fd76223b225ff0269", null ],
+    [ "CNID_OFS", "cnid__private_8h.html#a95c6db22fdaba7917d337c09d6288a52", null ],
+    [ "CNID_TYPE_LEN", "cnid__private_8h.html#aef4fbf3d1a76a9b6bbe7ed8e5671f9c0", null ],
+    [ "CNID_TYPE_OFS", "cnid__private_8h.html#ad9b909f521ac45db1e135b1b600f5505", null ],
+    [ "CNID_VERSION", "cnid__private_8h.html#aec968fe3956adfd7529a8c7beea92a76", null ],
+    [ "CNID_VERSION_0", "cnid__private_8h.html#aff3463b977a743fc4eddc61abd285369", null ],
+    [ "CNID_VERSION_1", "cnid__private_8h.html#a72753592647ff1e09f4d53414e398d25", null ],
+    [ "CNID_VERSION_UNINTIALIZED_DB", "cnid__private_8h.html#a34cddc64efd7d119bd7fdcecb0557c28", null ],
+    [ "CNIDFLAG_DB_RO", "cnid__private_8h.html#a7f56dfc13893db34a98bd3a2e77be446", null ],
+    [ "CNIDFLAG_ROOTINFO_RO", "cnid__private_8h.html#a4f7083bad3a7cbd1065b921b2141a392", null ],
+    [ "ROOTINFO_DATA", "cnid__private_8h.html#a6a615f151d99fda366482321c62ff86f", null ],
+    [ "ROOTINFO_DATALEN", "cnid__private_8h.html#a24d0ad761e3b2b9efb264f9e6a0fef71", null ],
+    [ "ROOTINFO_KEY", "cnid__private_8h.html#abe4e0ae73e15f7aba3924f15f61740fc", null ],
+    [ "ROOTINFO_KEYLEN", "cnid__private_8h.html#aad837159f8905a7dcb6790dedd6c9385", null ]
+];

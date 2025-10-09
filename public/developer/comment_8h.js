@@ -1,0 +1,25 @@
+var comment_8h =
+[
+    [ "papd_comment", "structpapd__comment.html", "structpapd__comment" ],
+    [ "comstate", "structcomstate.html", "structcomstate" ],
+    [ "C_CONTINUE", "comment_8h.html#a300f3b47dfe930fa2ddc43d7d584bb2c", null ],
+    [ "C_FULL", "comment_8h.html#a95110e8a4d01a95ff02089d54583bbf0", null ],
+    [ "CH_DONE", "comment_8h.html#a213fa6768784ebf9e58d7131877b366c", null ],
+    [ "CH_ERROR", "comment_8h.html#a24b94d321625a9d6795eb429236de9f2", null ],
+    [ "CH_MORE", "comment_8h.html#a309e1f4a7a0c13cba399b32df79429a7", null ],
+    [ "CM_NOPRINT", "comment_8h.html#aa936d77d1cce4c36a0c1f0941f63641c", null ],
+    [ "comgetflags", "comment_8h.html#a6a0cb9e7dca9e8cf452f174ab9b4110e", null ],
+    [ "compeek", "comment_8h.html#a460dbb9c009ca37b6518cbdca5d12d1d", null ],
+    [ "comsetflags", "comment_8h.html#ae0f1cee697aab3094d3e4bc594e9f99b", null ],
+    [ "comcmp", "comment_8h.html#a7f32dff8c889fdea96d68651c650b84a", null ],
+    [ "commatch", "comment_8h.html#a999ff080b83901b49d9969960de2b27e", null ],
+    [ "compop", "comment_8h.html#a8a173c137ce2d6c612c125700cb4c599", null ],
+    [ "compush", "comment_8h.html#a391810ce8d75860d003efcaff5c1d929", null ],
+    [ "comswitch", "comment_8h.html#acf2a19e5cacdc1d96bffb608fc948b96", null ],
+    [ "comtoken", "comment_8h.html#a9b35aee25b50922078374684b2121ff2", null ],
+    [ "comcont", "comment_8h.html#a5fb21c9745b480ff6a19a14b61bd0d8d", null ],
+    [ "comstate", "comment_8h.html#a2a46b7ff8afcb14b84d8c24066d76670", null ],
+    [ "headers", "comment_8h.html#a13b647bf828705da2b6efb35c48f993c", null ],
+    [ "magics", "comment_8h.html#a3abb0987158e32fdaa5f02b11bde7158", null ],
+    [ "queries", "comment_8h.html#a35e6466b1533e0c3732745077bf65996", null ]
+];

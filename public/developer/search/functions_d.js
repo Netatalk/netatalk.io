@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['ochdir_0',['ochdir',['../include_2atalk_2util_8h.html#a5c01f97ac47d90ccf6a00ab540ce702d',1,'util.h']]],
+  ['ochmod_1',['ochmod',['../include_2atalk_2util_8h.html#a3537baf3b2b1e9eb9013690c3a7f8488',1,'util.h']]],
+  ['ochown_2',['ochown',['../include_2atalk_2util_8h.html#a4689e229e35ba860cd4acd3f19e0b1b1',1,'util.h']]],
+  ['of_5fad_3',['of_ad',['../fork_8h.html#a7b30e8570107c7bbcb9ed01cd22e14f4',1,'fork.h']]],
+  ['of_5falloc_4',['of_alloc',['../fork_8h.html#a5e494959b71274030c10831a260df0f8',1,'fork.h']]],
+  ['of_5fclose_5fall_5fforks_5',['of_close_all_forks',['../fork_8h.html#afc6023c0f8a3838ed97a656b0c999036',1,'fork.h']]],
+  ['of_5fclosefork_6',['of_closefork',['../fork_8h.html#ae6e9ce16c37775017aee5d065b7272e9',1,'fork.h']]],
+  ['of_5fclosevol_7',['of_closevol',['../fork_8h.html#a5d82cad14f11ed7d34a8a28630b80b8e',1,'fork.h']]],
+  ['of_5fdealloc_8',['of_dealloc',['../fork_8h.html#a093cd4c75dc3efd9a958fd446a7a3a57',1,'fork.h']]],
+  ['of_5ffind_9',['of_find',['../fork_8h.html#a151e8730e4e854a054bc1a94e8d59593',1,'fork.h']]],
+  ['of_5ffindname_10',['of_findname',['../fork_8h.html#a0e6cf6597cb429c40c409e198fc11e30',1,'fork.h']]],
+  ['of_5ffindnameat_11',['of_findnameat',['../fork_8h.html#a2d25be1459a2c6cb7c452722e4768951',1,'fork.h']]],
+  ['of_5fflush_12',['of_flush',['../fork_8h.html#a082177ef0329e6b68e2211b69cfacc77',1,'fork.h']]],
+  ['of_5ffstatat_13',['of_fstatat',['../fork_8h.html#ad430ec41fa64e04e57456f771146dc41',1,'fork.h']]],
+  ['of_5fpforkdesc_14',['of_pforkdesc',['../fork_8h.html#a536104230f1626cdc65cca5eeedd76f3',1,'fork.h']]],
+  ['of_5frename_15',['of_rename',['../fork_8h.html#a80df72ac3a6ed21ad45e8a32b828b51c',1,'fork.h']]],
+  ['of_5fstat_16',['of_stat',['../fork_8h.html#a07f6be2a7d9c2035a16bec1d73d9313f',1,'fork.h']]],
+  ['of_5fstatdir_17',['of_statdir',['../fork_8h.html#a18d4eae05ab07ffef2912bd38581b516',1,'fork.h']]],
+  ['openclientsocket_18',['OpenClientSocket',['../afpclient_8h.html#a3e7a7015d6fce77a40636781c50f6953',1,'afpclient.h']]],
+  ['opendirat_19',['opendirat',['../include_2atalk_2unix_8h.html#aa9b06db32381f9b8aee4eceb29de62be',1,'unix.h']]],
+  ['openvol_20',['openvol',['../nad_8h.html#a2b4e80dd9c31d6e015220c30754db321',1,'openvol(AFPObj *obj, const char *path, afpvol_t *vol):&#160;nad.h'],['../afpfunc__helpers_8h.html#a1cdadf7ba0b31c677cba2e965167133d',1,'openvol(AFPObj *obj, const char *name):&#160;afpfunc_helpers.h']]],
+  ['ostat_21',['ostat',['../include_2atalk_2util_8h.html#a5c2b2b5ff8cd8921f74350b382a23d0c',1,'util.h']]],
+  ['ostatat_22',['ostatat',['../include_2atalk_2util_8h.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'util.h']]]
+];

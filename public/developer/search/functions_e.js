@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['pack_5fcnid_5fdata_0',['pack_cnid_data',['../pack_8h.html#a60f1609977bd9872389db4e799af42af',1,'pack.h']]],
+  ['pack_5fsetvol_1',['pack_setvol',['../pack_8h.html#ae669f4128f13302bdab15a0bd52e6de4',1,'pack.h']]],
+  ['parseline_2',['parseline',['../include_2atalk_2util_8h.html#a25a0733c503ef8f93abf18fe8cb87006',1,'util.h']]],
+  ['path_5ferror_3',['path_error',['../etc_2afpd_2directory_8h.html#aaf8e4f73d3ae187e24b19cc4e8c7e793',1,'directory.h']]],
+  ['path_5fisadir_4',['path_isadir',['../include_2atalk_2directory_8h.html#ac6e09e734bf677af74f699aeed5385a9',1,'directory.h']]],
+  ['pgetent_5',['pgetent',['../printcap_8h.html#a7be59bf25bdb3c9507fcfb3c81a5e79a',1,'printcap.h']]],
+  ['pgetflag_6',['pgetflag',['../printcap_8h.html#a7b018d51487c2da26ec8d5dce34c64d3',1,'printcap.h']]],
+  ['pgetnum_7',['pgetnum',['../printcap_8h.html#a9748e98c54a541a85be75ebcaecf1730',1,'printcap.h']]],
+  ['pnamatch_8',['pnamatch',['../printcap_8h.html#addd23acfc8385f4f0111e50e1018a551',1,'printcap.h']]],
+  ['pnchktc_9',['pnchktc',['../printcap_8h.html#a70bc476b9299bd64b52e7aa88ebf1941',1,'printcap.h']]],
+  ['pollvoltime_10',['pollvoltime',['../etc_2afpd_2volume_8h.html#ac10cee4d43605d308eb207eb5d20ed1b',1,'volume.h']]],
+  ['ppd_5ffeature_11',['ppd_feature',['../ppd_8h.html#ac05cb58cc17ef0cad91c53b47bac8a33',1,'ppd.h']]],
+  ['ppd_5ffont_12',['ppd_font',['../ppd_8h.html#ae28e43012f1b457a84b88b2051bc1446',1,'ppd.h']]],
+  ['precompose_5fw_13',['precompose_w',['../unicode_8h.html#a0f83b7f8fd70fe94e0620a630a96185f',1,'unicode.h']]],
+  ['prequeue_14',['prequeue',['../queue_8h.html#acaf430dde18eeb4009f82e3bb211c273',1,'queue.h']]],
+  ['print_5fgroups_15',['print_groups',['../include_2atalk_2unix_8h.html#a7b08fa6eb8f98ce8c88a646b901dc06d',1,'unix.h']]]
+];

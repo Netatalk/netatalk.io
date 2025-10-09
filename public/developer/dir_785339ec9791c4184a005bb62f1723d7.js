@@ -1,0 +1,26 @@
+var dir_785339ec9791c4184a005bb62f1723d7 =
+[
+    [ "acl_mappings.h", "acl__mappings_8h.html", "acl__mappings_8h" ],
+    [ "acls.h", "acls_8h.html", "acls_8h" ],
+    [ "afp_config.h", "afp__config_8h.html", "afp__config_8h" ],
+    [ "afpstats.h", "afpstats_8h.html", "afpstats_8h" ],
+    [ "afpstats_obj.h", "afpstats__obj_8h.html", "afpstats__obj_8h" ],
+    [ "auth.h", "auth_8h.html", "auth_8h" ],
+    [ "desktop.h", "desktop_8h.html", "desktop_8h" ],
+    [ "dircache.h", "dircache_8h.html", "dircache_8h" ],
+    [ "directory.h", "etc_2afpd_2directory_8h.html", "etc_2afpd_2directory_8h" ],
+    [ "extattrs.h", "extattrs_8h.html", "extattrs_8h" ],
+    [ "fce_api_internal.h", "fce__api__internal_8h.html", "fce__api__internal_8h" ],
+    [ "file.h", "afpd_2file_8h.html", "afpd_2file_8h" ],
+    [ "filedir.h", "filedir_8h.html", "filedir_8h" ],
+    [ "fork.h", "fork_8h.html", "fork_8h" ],
+    [ "hash.h", "etc_2afpd_2hash_8h.html", "etc_2afpd_2hash_8h" ],
+    [ "icon.h", "icon_8h.html", "icon_8h" ],
+    [ "mangle.h", "mangle_8h.html", "mangle_8h" ],
+    [ "misc.h", "misc_8h.html", "misc_8h" ],
+    [ "status.h", "status_8h.html", "status_8h" ],
+    [ "switch.h", "switch_8h.html", "switch_8h" ],
+    [ "uam_auth.h", "afpd_2uam__auth_8h.html", "afpd_2uam__auth_8h" ],
+    [ "unix.h", "etc_2afpd_2unix_8h.html", "etc_2afpd_2unix_8h" ],
+    [ "volume.h", "etc_2afpd_2volume_8h.html", "etc_2afpd_2volume_8h" ]
+];

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['big_5fendian_0',['BIG_ENDIAN',['../endian_8h.html#a23eb5e058a210efdde3d64e69679fafa',1,'endian.h']]],
+  ['biterr_5faccess_1',['BITERR_ACCESS',['../test_2testsuite_2afp_8h.html#a5ce14bcfc956f01652319ff3982d4db0',1,'afp.h']]],
+  ['biterr_5fbadtype_2',['BITERR_BADTYPE',['../test_2testsuite_2afp_8h.html#a7cdbd8ee5519645d10aaa71b35668810',1,'afp.h']]],
+  ['biterr_5fbitmap_3',['BITERR_BITMAP',['../test_2testsuite_2afp_8h.html#a7638dd11816df5cddc9fe9c893f19058',1,'afp.h']]],
+  ['biterr_5fbusy_4',['BITERR_BUSY',['../test_2testsuite_2afp_8h.html#a7f4c93f19558c9dca255da08d3c237e1',1,'afp.h']]],
+  ['biterr_5fdenyconf_5',['BITERR_DENYCONF',['../test_2testsuite_2afp_8h.html#a6e5e2494b207f5428ab698a770aa06af',1,'afp.h']]],
+  ['biterr_5fmisc_6',['BITERR_MISC',['../test_2testsuite_2afp_8h.html#ab97b4777d9aeb40e94c7e1b378841314',1,'afp.h']]],
+  ['biterr_5fnfile_7',['BITERR_NFILE',['../test_2testsuite_2afp_8h.html#a4115d008711f6f4a57ab0f8ad201a9ab',1,'afp.h']]],
+  ['biterr_5fnodir_8',['BITERR_NODIR',['../test_2testsuite_2afp_8h.html#a8a7ab06a1ccd21b6f2c08a21c8624c02',1,'afp.h']]],
+  ['biterr_5fnoid_9',['BITERR_NOID',['../test_2testsuite_2afp_8h.html#a62c30b3eef53beb20cfc79d18aa5540f',1,'afp.h']]],
+  ['biterr_5fnoitem_10',['BITERR_NOITEM',['../test_2testsuite_2afp_8h.html#a1e93a126f419f0631dfd852b505af6df',1,'afp.h']]],
+  ['biterr_5fnoobj_11',['BITERR_NOOBJ',['../test_2testsuite_2afp_8h.html#a3c8a5248339106838b3bf680751e74a4',1,'afp.h']]],
+  ['biterr_5fparam_12',['BITERR_PARAM',['../test_2testsuite_2afp_8h.html#aa21a4eca0974a5c0fda7d52b656c8993',1,'afp.h']]],
+  ['bstring_5fstrip_5fslash_13',['BSTRING_STRIP_SLASH',['../include_2atalk_2util_8h.html#ab4cdf3b96fbf596e8966aa1603282a41',1,'util.h']]],
+  ['bswap_5f64_14',['bswap_64',['../afpclient_8h.html#a0c0b427a2547aa727e2c5262a174e26b',1,'afpclient.h']]],
+  ['byte_5forder_15',['BYTE_ORDER',['../endian_8h.html#a1771b7fb65ee640524d0052f229768c3',1,'endian.h']]],
+  ['bytelock_5fmax_16',['BYTELOCK_MAX',['../adouble_8h.html#a4e0c5ea6640018bd8e8c45b16defd4fa',1,'adouble.h']]]
+];

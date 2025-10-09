@@ -1,0 +1,25 @@
+var structadouble =
+[
+    [ "ad_adflags", "structadouble.html#a4506b1f7ca87ed5bc28a087ac03092eb", null ],
+    [ "ad_data", "structadouble.html#a4157058b3c84e69ef8d5034d8dbe759b", null ],
+    [ "ad_data_fork", "structadouble.html#afe64d5f28dd3251e934755ca8d50f3c6", null ],
+    [ "ad_data_refcount", "structadouble.html#af0be6c13ea7e80636a31f91d7ced4a31", null ],
+    [ "ad_eid", "structadouble.html#a9d78ec3f6c7c914930d569b2fd3ebfea", null ],
+    [ "ad_filler", "structadouble.html#ac1d21380113207f4d1d19f72dd6244fc", null ],
+    [ "ad_inited", "structadouble.html#a17d3ce0756c301bd305e6183786555e6", null ],
+    [ "ad_magic", "structadouble.html#a4e0ec6ba43e1f0e1ba98d94b27335aba", null ],
+    [ "ad_mdp", "structadouble.html#a0ae2472dcadfe3675e5210845176aff4", null ],
+    [ "ad_meta_refcount", "structadouble.html#a0bff9aca87295b586ba16a39eaf1d7f6", null ],
+    [ "ad_name", "structadouble.html#a733a4de94d7006bdda6490183847223f", null ],
+    [ "ad_open_forks", "structadouble.html#aa263677a9f9e404e8ea9924e846846d9", null ],
+    [ "ad_ops", "structadouble.html#a3c5251916b083638b12922ac05b95586", null ],
+    [ "ad_options", "structadouble.html#ad38fccbc208a380715f09de35090000b", null ],
+    [ "ad_refcount", "structadouble.html#aebd4aecc8887878a04fb5f9358d29f16", null ],
+    [ "ad_reso_refcount", "structadouble.html#a5f8c6f54c0d20d9bf8b416f7703d2313", null ],
+    [ "ad_resource_fork", "structadouble.html#a70cf46c671d665dee77133b70667256f", null ],
+    [ "ad_rfp", "structadouble.html#aab9c5b235ae0f8f5575efc7ac51807c1", null ],
+    [ "ad_rlen", "structadouble.html#a53da0a4fba500345f36f63f9b7521f59", null ],
+    [ "ad_vers", "structadouble.html#a203d999eb42378350ad72df233a86cca", null ],
+    [ "ad_version", "structadouble.html#a043a74f3578fe876dc5d99cb2c1d210b", null ],
+    [ "valid_data_len", "structadouble.html#a21fd4ed44f86f9cc25dd1058a4e0d53a", null ]
+];

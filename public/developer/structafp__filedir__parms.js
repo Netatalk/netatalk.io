@@ -1,0 +1,27 @@
+var structafp__filedir__parms =
+[
+    [ "access", "structafp__filedir__parms.html#afa6a2d99eb69fa44793a638e5dc1c778", null ],
+    [ "attr", "structafp__filedir__parms.html#a212ae320c094f571bf0448469e056f08", null ],
+    [ "bdate", "structafp__filedir__parms.html#a7cda32bf9fee043f1158af3618b8b880", null ],
+    [ "bitmap", "structafp__filedir__parms.html#aeb3b45ec76200f032e9a0062768fa2ab", null ],
+    [ "cdate", "structafp__filedir__parms.html#a397a7a25b2047b128d0f54683ea017b5", null ],
+    [ "dflen", "structafp__filedir__parms.html#ac67c9c0b356a7e3b1773bf6f4dcfd6c2", null ],
+    [ "did", "structafp__filedir__parms.html#aada64ba352edfdeb77f5cad292648a98", null ],
+    [ "ext_dflen", "structafp__filedir__parms.html#aa6ba20f203b6a614c0df02982d9947c5", null ],
+    [ "ext_rflen", "structafp__filedir__parms.html#aab05a392ab433b85e8718453be004d46", null ],
+    [ "finder_info", "structafp__filedir__parms.html#a71d794ccf240b287f6bb9d46e9e01123", null ],
+    [ "gid", "structafp__filedir__parms.html#a53afc8a614679f19351484bc54e3d888", null ],
+    [ "isdir", "structafp__filedir__parms.html#a102c15a7f6f67110f711e28c02725b12", null ],
+    [ "lname", "structafp__filedir__parms.html#acd58aec37b94705b83927c13156b884c", null ],
+    [ "mdate", "structafp__filedir__parms.html#a50fc91ad82e89f2f9b64c66112959a16", null ],
+    [ "name_type", "structafp__filedir__parms.html#a2917fc65acb5a3f56efadf9660587715", null ],
+    [ "offcnt", "structafp__filedir__parms.html#a0b9d9f06f530dda4d2eaf52a60e9d8df", null ],
+    [ "pdid", "structafp__filedir__parms.html#ad2171f07ae1ed622f6ed3afe500583a1", null ],
+    [ "pdinfo", "structafp__filedir__parms.html#aa30b34ce2a30366c66c3ba024175ef46", null ],
+    [ "rflen", "structafp__filedir__parms.html#a3f69c8d544ea84cd7082e6774ac82e02", null ],
+    [ "sname", "structafp__filedir__parms.html#a50ad2c0dc69b61c83eb75e3cccc0a029", null ],
+    [ "uid", "structafp__filedir__parms.html#ab5d86ac19d5f7acfc5496e890693752f", null ],
+    [ "unix_priv", "structafp__filedir__parms.html#ada9fb5f86386f6d1a0bdb345f6210614", null ],
+    [ "utf8_name", "structafp__filedir__parms.html#a540610f25ec78ca1309fd39890be8cef", null ],
+    [ "vid", "structafp__filedir__parms.html#a9120c4a8ff0a6f195d15da02a6b3a3a8", null ]
+];

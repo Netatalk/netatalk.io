@@ -1,0 +1,28 @@
+var include_2atalk_2nbp_8h =
+[
+    [ "nbphdr", "structnbphdr.html", "structnbphdr" ],
+    [ "nbptuple", "structnbptuple.html", "structnbptuple" ],
+    [ "nbpnve", "structnbpnve.html", "structnbpnve" ],
+    [ "ATP_OPEN_2ARGS", "include_2atalk_2nbp_8h.html#a83bd4feaf2c8a562ab6c3e8a91c63128", null ],
+    [ "NBP_UNRGSTR_4ARGS", "include_2atalk_2nbp_8h.html#a2ccf5788042641e46d02e6f42f3434c5", null ],
+    [ "NBPMATCH_NOGLOB", "include_2atalk_2nbp_8h.html#a33db7d98f913ee4ebb04866dec12ff3d", null ],
+    [ "NBPMATCH_NOZONE", "include_2atalk_2nbp_8h.html#a5e7f9c1ebe729835a094f2c21d4df619", null ],
+    [ "NBPOP_BRRQ", "include_2atalk_2nbp_8h.html#a461a4f20ba1d4bc9627e1585da625d27", null ],
+    [ "NBPOP_CLOSE_NOTE", "include_2atalk_2nbp_8h.html#a21ca40440f4b8c99efa3cdc2094a44b8", null ],
+    [ "NBPOP_CONFIRM", "include_2atalk_2nbp_8h.html#a3cfc7721846c064e3eddcc7fec07f429", null ],
+    [ "NBPOP_ERROR", "include_2atalk_2nbp_8h.html#a14a63971f33008b827bbab7230857b47", null ],
+    [ "NBPOP_FWD", "include_2atalk_2nbp_8h.html#a55eacca94285453e14e866fc61c86952", null ],
+    [ "NBPOP_LKUP", "include_2atalk_2nbp_8h.html#a74e04f87445f8cb1b9069e9b84838149", null ],
+    [ "NBPOP_LKUPREPLY", "include_2atalk_2nbp_8h.html#a293eaf3b52797a2dd5d782c1fe6a673a", null ],
+    [ "NBPOP_OK", "include_2atalk_2nbp_8h.html#a6cd8f421f5142d159ee2c420d66c4ee4", null ],
+    [ "NBPOP_RGSTR", "include_2atalk_2nbp_8h.html#ab269fcb1ad9e2a3f00a46a94418f3647", null ],
+    [ "NBPOP_UNRGSTR", "include_2atalk_2nbp_8h.html#aac7eab08c77652df11a705c6714dcae7", null ],
+    [ "NBPSTRLEN", "include_2atalk_2nbp_8h.html#aad5e17e0bd4fb549e772899c64b9f218", null ],
+    [ "SZ_NBPHDR", "include_2atalk_2nbp_8h.html#af64f76c697ff809153f3c042ac7e0070", null ],
+    [ "SZ_NBPTUPLE", "include_2atalk_2nbp_8h.html#aa7aa01871ee6464a4cca7eb7678a3b0d", null ],
+    [ "nbp_do_lookup_op", "include_2atalk_2nbp_8h.html#ae80b4d9f0a0d47e48641689a09f5fcd5", null ],
+    [ "nbp_lookup", "include_2atalk_2nbp_8h.html#a1b73cc3c57af154c49fd022bcd227e99", null ],
+    [ "nbp_name", "include_2atalk_2nbp_8h.html#aa10eae13e7e599c55a0a5c70f465e0ab", null ],
+    [ "nbp_rgstr", "include_2atalk_2nbp_8h.html#aef4d1b40c70e585a2acb70e34f042028", null ],
+    [ "nbp_unrgstr", "include_2atalk_2nbp_8h.html#adba23fd563ea0879c3de10bac0cf011a", null ]
+];
