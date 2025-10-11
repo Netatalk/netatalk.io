@@ -1,10 +1,20 @@
 # Netatalk Documentation
 
-The manual is the primary source of documentation for the Netatalk suite of programs.
+## Manual
+
+The [Netatalk Manual](/manual/en) is the primary source of documentation for the Netatalk suite of programs.
 It also contains the full suite of Unix man pages in html format.
 
-- [Netatalk Manual](/manual/en)
+Available languages:
+
+- [Netatalk Manual (English)](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
+
+## Developer Documentation
+
+The <a href="/developer/" target="_blank">Developer Documentation</a> contains information for developers
+interested in contributing to the Netatalk project, including
+implemetation details and API documentation.
 
 ## Readmes
 
@@ -22,7 +32,6 @@ Start here to get an overview of the installation process when not using a packa
 - [Version History](/news.html) (News)
 - [Netatalk Contributors](/contributors.html) (Contributors)
 - [AppleTalk Transport Layer](/appletalk.html) (AppleTalk)
-- [Notes for Developers](/developer.html) (Developer)
 
 If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
