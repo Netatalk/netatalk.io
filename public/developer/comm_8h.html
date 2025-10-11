@@ -134,17 +134,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int comm_init </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structdb__param.html">db_param</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structdb__param.html">db_param</a> *</td>          <td class="paramname"><span class="paramname"><em>dbp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ctrlfd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>clntfd</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -177,22 +177,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int comm_rcv </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *</td>          <td class="paramname"><span class="paramname"><em>rqst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">time_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sigset_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const sigset_t *</td>          <td class="paramname"><span class="paramname"><em>sigmask</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">time_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">time_t *</td>          <td class="paramname"><span class="paramname"><em>now</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -208,7 +208,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int comm_snd </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *</td>          <td class="paramname"><span class="paramname"><em>rply</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

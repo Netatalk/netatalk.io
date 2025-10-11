@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['slq_5fstate_5ft_0',['slq_state_t',['../spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33d',1,'spotlight.h']]],
-  ['ssm_5ftype_1',['ssm_type',['../sparql__map_8h.html#aee379e0778c1c096dd3de5e9affef35f',1,'sparql_map.h']]]
+  ['loglevels_0',['loglevels',['../logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983e',1,'logger.h']]],
+  ['logtype_1',['logtype',['../nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af',1,'logtype:&#160;nad.h'],['../cmd__dbd_8h.html#a39c57ea9c9abd4808b31871bda91a3af',1,'logtype:&#160;cmd_dbd.h']]],
+  ['logtypes_2',['logtypes',['../logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4',1,'logger.h']]],
+  ['lv_5fflags_5ft_3',['lv_flags_t',['../include_2atalk_2volume_8h.html#a93895477a246ceefb8f62520711e425e',1,'volume.h']]]
 ];

@@ -58,6 +58,5 @@ var config_8h =
     [ "USE_CRACKLIB", "config_8h.html#a418dd7a48470a7fcb00b210636e5d16c", null ],
     [ "USE_ZEROCONF", "config_8h.html#a7cb92b3761d0e0d94516c4364b88d2e8", null ],
     [ "WITH_DTRACE", "config_8h.html#a94783e86e6e8e497a5978084d4bb2045", null ],
-    [ "WITH_TESTS", "config_8h.html#a130289aab84043812fdff6a1f37e7937", null ],
     [ "XATTR_ADD_OPT", "config_8h.html#aa747a204184f95d6b569b08d973f574d", null ]
 ];

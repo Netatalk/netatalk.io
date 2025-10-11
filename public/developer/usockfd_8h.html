@@ -102,7 +102,7 @@ $(function(){initNavTree('usockfd_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:acb9279d227a31ffd1d2497e509c96732" id="r_acb9279d227a31ffd1d2497e509c96732"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb9279d227a31ffd1d2497e509c96732">OSSH_ALIGNBYTES</a>&#160;&#160;&#160;(sizeof(int) - 1)</td></tr>
 <tr class="memitem:ab09bb81ef0886db7361777fcfa8b2dff" id="r_ab09bb81ef0886db7361777fcfa8b2dff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09bb81ef0886db7361777fcfa8b2dff">u_int</a>&#160;&#160;&#160;unsigned int</td></tr>
-<tr class="memitem:a636ee603816965ef7dfc464221975baf" id="r_a636ee603816965ef7dfc464221975baf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636ee603816965ef7dfc464221975baf">__CMSG_ALIGN</a>(p)</td></tr>
+<tr class="memitem:a636ee603816965ef7dfc464221975baf" id="r_a636ee603816965ef7dfc464221975baf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636ee603816965ef7dfc464221975baf">__CMSG_ALIGN</a>(<a class="el" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a>)</td></tr>
 <tr class="memitem:a1cf31f7d0320e1fa024ebced6d54c8b9" id="r_a1cf31f7d0320e1fa024ebced6d54c8b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cf31f7d0320e1fa024ebced6d54c8b9">CMSG_LEN</a>(len)</td></tr>
 <tr class="memitem:a6a6d1e8e926f5b43e45353c7e8c3c7fa" id="r_a6a6d1e8e926f5b43e45353c7e8c3c7fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a6d1e8e926f5b43e45353c7e8c3c7fa">CMSG_SPACE</a>(len)</td></tr>
 </table><table class="memberdecls">
@@ -122,12 +122,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">#define __CMSG_ALIGN</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="#ab09bb81ef0886db7361777fcfa8b2dff">u_int</a>)(p) + <a class="code hl_define" href="#acb9279d227a31ffd1d2497e509c96732">OSSH_ALIGNBYTES</a>) &amp;~ OSSH_ALIGNBYTES)</div>
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_define" href="#ab09bb81ef0886db7361777fcfa8b2dff">u_int</a>)(<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a>) + <a class="code hl_define" href="#acb9279d227a31ffd1d2497e509c96732">OSSH_ALIGNBYTES</a>) &amp;~ OSSH_ALIGNBYTES)</div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a49c6a1596dbb420280d9aa047ecc4c31"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></div><div class="ttdeci">static gcry_mpi_t p</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
 <div class="ttc" id="ausockfd_8h_html_ab09bb81ef0886db7361777fcfa8b2dff"><div class="ttname"><a href="#ab09bb81ef0886db7361777fcfa8b2dff">u_int</a></div><div class="ttdeci">#define u_int</div><div class="ttdef"><b>Definition</b> usockfd.h:24</div></div>
 <div class="ttc" id="ausockfd_8h_html_acb9279d227a31ffd1d2497e509c96732"><div class="ttname"><a href="#acb9279d227a31ffd1d2497e509c96732">OSSH_ALIGNBYTES</a></div><div class="ttdeci">#define OSSH_ALIGNBYTES</div><div class="ttdef"><b>Definition</b> usockfd.h:20</div></div>
 </div><!-- fragment -->
@@ -208,17 +209,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int tsockfd_create </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>host</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>backlog</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -234,12 +235,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int usockfd_check </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sockfd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const sigset_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const sigset_t *</td>          <td class="paramname"><span class="paramname"><em>sigset</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

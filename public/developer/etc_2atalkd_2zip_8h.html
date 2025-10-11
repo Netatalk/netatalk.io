@@ -107,7 +107,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7c935138270341f893734f9e582eccef" id="r_a7c935138270341f893734f9e582eccef"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structziptab.html">ziptab</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c935138270341f893734f9e582eccef">newzt</a> (const int, const char *)</td></tr>
 <tr class="memitem:a1ddfb62eff59a306a48d3d4f237cd258" id="r_a1ddfb62eff59a306a48d3d4f237cd258"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ddfb62eff59a306a48d3d4f237cd258">addzone</a> (struct <a class="el" href="structrtmptab.html">rtmptab</a> *, int, char *)</td></tr>
 <tr class="memitem:a8b4995c35f31076d9c940fa0b67222bc" id="r_a8b4995c35f31076d9c940fa0b67222bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4995c35f31076d9c940fa0b67222bc">zip_getnetinfo</a> (struct <a class="el" href="structinterface.html">interface</a> *)</td></tr>
-<tr class="memitem:a9b4eb93847aa15d04fe1a16517df3fe2" id="r_a9b4eb93847aa15d04fe1a16517df3fe2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b4eb93847aa15d04fe1a16517df3fe2">zip_packet</a> (struct <a class="el" href="structatport.html">atport</a> *ap, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *from, char *data, int len)</td></tr>
+<tr class="memitem:a9b4eb93847aa15d04fe1a16517df3fe2" id="r_a9b4eb93847aa15d04fe1a16517df3fe2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b4eb93847aa15d04fe1a16517df3fe2">zip_packet</a> (struct <a class="el" href="structatport.html">atport</a> *ap, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *from, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int len)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -124,17 +124,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int addzone </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structrtmptab.html">rtmptab</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structrtmptab.html">rtmptab</a> *</td>          <td class="paramname"><span class="paramname"><em>rt</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>zone</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -150,12 +150,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">struct <a class="el" href="structziptab.html">ziptab</a> * newzt </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,7 +171,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int zip_getnetinfo </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structinterface.html">interface</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structinterface.html">interface</a> *</td>          <td class="paramname"><span class="paramname"><em>iface</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

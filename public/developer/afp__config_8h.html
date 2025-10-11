@@ -118,12 +118,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void configfree </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_d_s_i.html">DSI</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_d_s_i.html">DSI</a> *</td>          <td class="paramname"><span class="paramname"><em>dsi</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -132,6 +132,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a></p>
+<p>"dsi" can be NULL in which case all <a class="el" href="struct_d_s_i.html">DSI</a> objects and the config object is freed, otherwise its an afpd session child and only any unneeded <a class="el" href="struct_d_s_i.html">DSI</a> objects are freed </p>
 
 </div>
 </div>
@@ -147,12 +149,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int configinit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>dsi_obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>asp_obj</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -161,6 +163,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get everything running </p>
 
 </div>
 </div>

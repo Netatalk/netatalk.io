@@ -110,7 +110,7 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:adeb221174d92a51f5a4598b23d563a88" id="r_adeb221174d92a51f5a4598b23d563a88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb221174d92a51f5a4598b23d563a88">uam_attach</a>(a,  b)</td></tr>
 <tr class="memitem:a71027094343b2e19af6692844d152e60" id="r_a71027094343b2e19af6692844d152e60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71027094343b2e19af6692844d152e60">uam_detach</a>(a)</td></tr>
-<tr class="memitem:ada28333df602268b91ccd9111743bc83" id="r_ada28333df602268b91ccd9111743bc83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada28333df602268b91ccd9111743bc83">UAM_LIST</a>(type)</td></tr>
+<tr class="memitem:ada28333df602268b91ccd9111743bc83" id="r_ada28333df602268b91ccd9111743bc83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada28333df602268b91ccd9111743bc83">UAM_LIST</a>(<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:aa955635ec35e229bfdc931325a08253c" id="r_aa955635ec35e229bfdc931325a08253c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa955635ec35e229bfdc931325a08253c">auth_unregister</a>(a)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -200,14 +200,18 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">#define UAM_LIST</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                (((type) == <a class="code hl_define" href="uam_8h.html#aacb6606fc64448f0f0dce9ec432baf50">UAM_SERVER_LOGIN</a>) ? &amp;uam_login : \</div>
-<div class="line">                (((type) == <a class="code hl_define" href="uam_8h.html#a7993a81f0c61a632577a185f6d4b9f21">UAM_SERVER_CHANGEPW</a>) ? &amp;uam_changepw : \</div>
-<div class="line">                (((type) == <a class="code hl_define" href="uam_8h.html#a8576b9570bf21933ac59cab313a39185">UAM_SERVER_PRINTAUTH</a>) ? &amp;uam_printer : NULL)))</div>
+<b>Value:</b><div class="fragment"><div class="line">                (((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>) == <a class="code hl_define" href="uam_8h.html#aacb6606fc64448f0f0dce9ec432baf50">UAM_SERVER_LOGIN</a>) ? &amp;<a class="code hl_variable" href="afpd_2auth_8c.html#ab17ee054f992951a128f916dcb313d02">uam_login</a> : \</div>
+<div class="line">                (((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>) == <a class="code hl_define" href="uam_8h.html#a7993a81f0c61a632577a185f6d4b9f21">UAM_SERVER_CHANGEPW</a>) ? &amp;<a class="code hl_variable" href="afpd_2auth_8c.html#a3444372341941b76890826c7ada10b7e">uam_changepw</a> : \</div>
+<div class="line">                (((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>) == <a class="code hl_define" href="uam_8h.html#a8576b9570bf21933ac59cab313a39185">UAM_SERVER_PRINTAUTH</a>) ? &amp;<a class="code hl_variable" href="papd_2auth_8c.html#a02dea05164128807e2c01b886cf1f0ef">uam_printer</a> : NULL)))</div>
+<div class="ttc" id="aafpd_2auth_8c_html_a3444372341941b76890826c7ada10b7e"><div class="ttname"><a href="afpd_2auth_8c.html#a3444372341941b76890826c7ada10b7e">uam_changepw</a></div><div class="ttdeci">static struct uam_obj uam_changepw</div><div class="ttdef"><b>Definition</b> auth.c:56</div></div>
+<div class="ttc" id="aafpd_2auth_8c_html_ab17ee054f992951a128f916dcb313d02"><div class="ttname"><a href="afpd_2auth_8c.html#ab17ee054f992951a128f916dcb313d02">uam_login</a></div><div class="ttdeci">static struct uam_obj uam_login</div><div class="ttdef"><b>Definition</b> auth.c:53</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
+<div class="ttc" id="apapd_2auth_8c_html_a02dea05164128807e2c01b886cf1f0ef"><div class="ttname"><a href="papd_2auth_8c.html#a02dea05164128807e2c01b886cf1f0ef">uam_printer</a></div><div class="ttdeci">static struct uam_obj uam_printer</div><div class="ttdef"><b>Definition</b> auth.c:35</div></div>
 <div class="ttc" id="auam_8h_html_a7993a81f0c61a632577a185f6d4b9f21"><div class="ttname"><a href="uam_8h.html#a7993a81f0c61a632577a185f6d4b9f21">UAM_SERVER_CHANGEPW</a></div><div class="ttdeci">#define UAM_SERVER_CHANGEPW</div><div class="ttdef"><b>Definition</b> uam.h:28</div></div>
 <div class="ttc" id="auam_8h_html_a8576b9570bf21933ac59cab313a39185"><div class="ttname"><a href="uam_8h.html#a8576b9570bf21933ac59cab313a39185">UAM_SERVER_PRINTAUTH</a></div><div class="ttdeci">#define UAM_SERVER_PRINTAUTH</div><div class="ttdef"><b>Definition</b> uam.h:29</div></div>
 <div class="ttc" id="auam_8h_html_aacb6606fc64448f0f0dce9ec432baf50"><div class="ttname"><a href="uam_8h.html#aacb6606fc64448f0f0dce9ec432baf50">UAM_SERVER_LOGIN</a></div><div class="ttdeci">#define UAM_SERVER_LOGIN</div><div class="ttdef"><b>Definition</b> uam.h:27</div></div>
@@ -224,12 +228,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int auth_load </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -245,12 +249,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int auth_register </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structuam__obj.html">uam_obj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">struct <a class="el" href="structuam__obj.html">uam_obj</a> *</td>          <td class="paramname"><span class="paramname"><em>uam</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -266,17 +270,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">struct <a class="el" href="structuam__obj.html">uam_obj</a> * auth_uamfind </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -309,12 +313,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int getuamnames </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>uamnames</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -333,12 +337,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">struct <a class="el" href="structuam__mod.html">uam_mod</a> * uam_load </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -362,7 +366,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void uam_unload </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structuam__mod.html">uam_mod</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structuam__mod.html">uam_mod</a> *</td>          <td class="paramname"><span class="paramname"><em>mod</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -1,0 +1,28 @@
+var afphelper_8c =
+[
+    [ "afp_print_postfix", "afphelper_8c.html#adeaee688c017b4e56b4720c4861d5b68", null ],
+    [ "afp_print_prefix", "afphelper_8c.html#a2701d960c51196e5a2cc5312d5c3174d", null ],
+    [ "afp_printf", "afphelper_8c.html#a4e4afa6186e97bf66272d3dfed357a62", null ],
+    [ "bitmap2text", "afphelper_8c.html#aaeccc307db66bc27275d0e9025d24d2a", null ],
+    [ "clear_volume", "afphelper_8c.html#a19cdf39467a0ea8456f144383c6f548a", null ],
+    [ "delete_directory_tree", "afphelper_8c.html#a91672fb9fb1e23440a0e61f4f118210d", null ],
+    [ "delete_folder", "afphelper_8c.html#a028213725953723bc2d56ec00656e4c5", null ],
+    [ "delete_folder_with_file", "afphelper_8c.html#a7798c0d8bf4fd15c2ef285587e5ef562", null ],
+    [ "error_in_list", "afphelper_8c.html#a8dce370c9902433228a2a9307ed47ae4", null ],
+    [ "get_did", "afphelper_8c.html#adf1f82db2ee5d32b05967ce53dd10b03", null ],
+    [ "get_fid", "afphelper_8c.html#aeb385e9e5140af8959032f692249c980", null ],
+    [ "get_forklen", "afphelper_8c.html#a93087689e86cc44d65cf2f57c80b01ec", null ],
+    [ "get_vol_attrib", "afphelper_8c.html#a6aacfebd732a8ce1f475d49a7d3ebab8", null ],
+    [ "get_vol_free", "afphelper_8c.html#ac863e1b02a349b6b715c434bb4e3120c", null ],
+    [ "group_folder", "afphelper_8c.html#abf612e289417acec0460975ae5f326d7", null ],
+    [ "illegal_fork", "afphelper_8c.html#aa6247903d3aad6134a2953f1583c8a4b", null ],
+    [ "is_there", "afphelper_8c.html#af343aaddfabd80d4e1494cfbc321e525", null ],
+    [ "no_access_folder", "afphelper_8c.html#a8a850ff87829e30d32667cde984bb618", null ],
+    [ "not_valid", "afphelper_8c.html#aba01dd3135ca6eb0af7eb0ff3e2ea502", null ],
+    [ "not_valid_bitmap", "afphelper_8c.html#a82d57a82580c2e86f2360c4465b3da58", null ],
+    [ "read_fork", "afphelper_8c.html#acc2161a4c0b34966c553bd2c6de06e22", null ],
+    [ "read_only_folder", "afphelper_8c.html#a2979153bfcb252dadc170c311fb10537", null ],
+    [ "read_only_folder_with_file", "afphelper_8c.html#a0d92617c2163e153e9fafde3c840be02", null ],
+    [ "write_fork", "afphelper_8c.html#a8bd6b5877970c32bfbe741cdb16453b8", null ],
+    [ "Loglevel", "afphelper_8c.html#a8856e3d8d55ad881deeda11f685f5891", null ]
+];

@@ -111,13 +111,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a460dbb9c009ca37b6518cbdca5d12d1d" id="r_a460dbb9c009ca37b6518cbdca5d12d1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a460dbb9c009ca37b6518cbdca5d12d1d">compeek</a>()</td></tr>
 <tr class="memitem:a6a0cb9e7dca9e8cf452f174ab9b4110e" id="r_a6a0cb9e7dca9e8cf452f174ab9b4110e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a0cb9e7dca9e8cf452f174ab9b4110e">comgetflags</a>()</td></tr>
 <tr class="memitem:ae0f1cee697aab3094d3e4bc594e9f99b" id="r_ae0f1cee697aab3094d3e4bc594e9f99b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0f1cee697aab3094d3e4bc594e9f99b">comsetflags</a>(f)</td></tr>
-<tr class="memitem:a95110e8a4d01a95ff02089d54583bbf0" id="r_a95110e8a4d01a95ff02089d54583bbf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95110e8a4d01a95ff02089d54583bbf0">C_FULL</a>&#160;&#160;&#160;(1&lt;&lt;0)				/* or prefix */</td></tr>
+<tr class="memitem:a95110e8a4d01a95ff02089d54583bbf0" id="r_a95110e8a4d01a95ff02089d54583bbf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95110e8a4d01a95ff02089d54583bbf0">C_FULL</a>&#160;&#160;&#160;(1&lt;&lt;0)				/* or <a class="el" href="extattr_8c.html#a0d6a15a751de424e52f8a7062133915b">prefix</a> */</td></tr>
 <tr class="memitem:a300f3b47dfe930fa2ddc43d7d584bb2c" id="r_a300f3b47dfe930fa2ddc43d7d584bb2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a300f3b47dfe930fa2ddc43d7d584bb2c">C_CONTINUE</a>&#160;&#160;&#160;(1&lt;&lt;1)</td></tr>
 <tr class="memitem:aa936d77d1cce4c36a0c1f0941f63641c" id="r_aa936d77d1cce4c36a0c1f0941f63641c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa936d77d1cce4c36a0c1f0941f63641c">CM_NOPRINT</a>&#160;&#160;&#160;(1&lt;&lt;16)				/* or print */</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a999ff080b83901b49d9969960de2b27e" id="r_a999ff080b83901b49d9969960de2b27e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpapd__comment.html">papd_comment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999ff080b83901b49d9969960de2b27e">commatch</a> (char *start, char *end, struct <a class="el" href="structpapd__comment.html">papd_comment</a> *table)</td></tr>
+<tr class="memitem:a999ff080b83901b49d9969960de2b27e" id="r_a999ff080b83901b49d9969960de2b27e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpapd__comment.html">papd_comment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999ff080b83901b49d9969960de2b27e">commatch</a> (char *start, char *end, struct <a class="el" href="structpapd__comment.html">papd_comment</a> *<a class="el" href="hash_8c.html#a5703a0eddc658df60e6a6b1bebcd301d">table</a>)</td></tr>
 <tr class="memitem:a8a173c137ce2d6c612c125700cb4c599" id="r_a8a173c137ce2d6c612c125700cb4c599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a173c137ce2d6c612c125700cb4c599">compop</a> (void)</td></tr>
 <tr class="memitem:a391810ce8d75860d003efcaff5c1d929" id="r_a391810ce8d75860d003efcaff5c1d929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391810ce8d75860d003efcaff5c1d929">compush</a> (struct <a class="el" href="structpapd__comment.html">papd_comment</a> *)</td></tr>
 <tr class="memitem:acf2a19e5cacdc1d96bffb608fc948b96" id="r_acf2a19e5cacdc1d96bffb608fc948b96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf2a19e5cacdc1d96bffb608fc948b96">comswitch</a> (struct <a class="el" href="structpapd__comment.html">papd_comment</a> *, int(*)(struct <a class="el" href="structpapfile.html">papfile</a> *, struct <a class="el" href="structpapfile.html">papfile</a> *, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *))</td></tr>
@@ -154,7 +154,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define C_FULL&#160;&#160;&#160;(1&lt;&lt;0)				/* or prefix */</td>
+          <td class="memname">#define C_FULL&#160;&#160;&#160;(1&lt;&lt;0)				/* or <a class="el" href="extattr_8c.html#a0d6a15a751de424e52f8a7062133915b">prefix</a> */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,22 +284,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int comcmp </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>stop</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>how</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -366,7 +366,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void compush </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structpapd__comment.html">papd_comment</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structpapd__comment.html">papd_comment</a> *</td>          <td class="paramname"><span class="paramname"><em>comment</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

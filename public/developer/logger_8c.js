@@ -1,0 +1,28 @@
+var logger_8c =
+[
+    [ "COUNT_ARRAY", "logger_8c.html#a44b216ce98668a015a83d9f7f75e9b3d", null ],
+    [ "DEFAULT_LOG_CONFIG", "logger_8c.html#a6e6c70b24bc916d22df7ba56ede97e0d", null ],
+    [ "LOGLEVEL_STRING_IDENTIFIERS", "logger_8c.html#af744fbd0c6f7d66a04d16b3eafaac398", null ],
+    [ "LOGTYPE_STRING_IDENTIFIERS", "logger_8c.html#a10394a00b1adebbb1379c267b5276a19", null ],
+    [ "MAXLOGSIZE", "logger_8c.html#ad9c049e4f532b0b081fe30543f91e9c3", null ],
+    [ "generate_message", "logger_8c.html#ab0af3ac5b44716cd944c9d209dc64793", null ],
+    [ "get_syslog_equivalent", "logger_8c.html#aadff3d071362e154fa44681a30eac7a6", null ],
+    [ "log_init", "logger_8c.html#a8cbf849de9da0b561bc201d34343e63b", null ],
+    [ "log_setup", "logger_8c.html#a6c82ade539c01bc64e5a2afe12820f39", null ],
+    [ "make_log_entry", "logger_8c.html#aaf986e5534b5e0609c7c8a49fc3cb50a", null ],
+    [ "make_syslog_entry", "logger_8c.html#a99d19c8c55c88abacdb295cf0ffe3bb0", null ],
+    [ "set_processname", "logger_8c.html#a452222bed63f4149ad1b87841ba5edb1", null ],
+    [ "setuplog", "logger_8c.html#a1f4712ac06fd52965e065225295a99cd", null ],
+    [ "setuplog_internal", "logger_8c.html#add11fa2b5c5244e6580e247c439b9ada", null ],
+    [ "syslog_setup", "logger_8c.html#a7987d52dd28e8c9c96db3901d19fdf91", null ],
+    [ "arr_loglevel_chars", "logger_8c.html#ad2709444fd271312887a64b9ad6996b7", null ],
+    [ "arr_loglevel_strings", "logger_8c.html#abf1ab130bb2c7de178a2de5ba4a9a4bc", null ],
+    [ "arr_logtype_strings", "logger_8c.html#a68fdfa9e8df53c3b5216568c8e250c72", null ],
+    [ "log_config", "logger_8c.html#a4d42e93557e51e2742d12a0545b67c97", null ],
+    [ "log_src_filename", "logger_8c.html#a565357f4a14af267f9919b22a484418f", null ],
+    [ "log_src_linenumber", "logger_8c.html#a7ca2e4730019ea6e2f91b244145cae5b", null ],
+    [ "num_loglevel_chars", "logger_8c.html#a6cb6c0eb5e5775e7a0ba8984d4c1ad24", null ],
+    [ "num_loglevel_strings", "logger_8c.html#af8be2516841d9d3fb2167313d8b811b4", null ],
+    [ "num_logtype_strings", "logger_8c.html#ace97191ea78e086de60fb071085fa5cd", null ],
+    [ "type_configs", "logger_8c.html#a47ba869ff173f873eb997fc22bdf9ca3", null ]
+];

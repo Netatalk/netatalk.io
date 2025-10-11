@@ -97,7 +97,6 @@ $(function(){initNavTree('etc_2afpd_2unix_8h.html','',''); });
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2volume_8h_source.html">volume.h</a>&quot;</code><br />
-<code>#include &lt;sys/mount.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
@@ -113,13 +112,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac27cd9c82f97151ac5513b6aaa5910a9" id="r_ac27cd9c82f97151ac5513b6aaa5910a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac27cd9c82f97151ac5513b6aaa5910a9">getnfsquota</a> (struct <a class="el" href="structvol.html">vol</a> *, const int, const uint32_t, struct dqblk *)</td></tr>
-<tr class="memitem:aa8935c7578d76f74beaede5bfad0f40a" id="r_aa8935c7578d76f74beaede5bfad0f40a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8935c7578d76f74beaede5bfad0f40a">uquota_getvolspace</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, const uint32_t)</td></tr>
+<tr class="memitem:aa8935c7578d76f74beaede5bfad0f40a" id="r_aa8935c7578d76f74beaede5bfad0f40a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8935c7578d76f74beaede5bfad0f40a">uquota_getvolspace</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, const uint32_t)</td></tr>
 <tr class="memitem:aeb7aa8beec105935ef66ff08a1d7ca0c" id="r_aeb7aa8beec105935ef66ff08a1d7ca0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb7aa8beec105935ef66ff08a1d7ca0c">setdirunixmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, char *, mode_t)</td></tr>
 <tr class="memitem:a9fcdcdac4687a5baaa9af541fe3ca6bc" id="r_a9fcdcdac4687a5baaa9af541fe3ca6bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fcdcdac4687a5baaa9af541fe3ca6bc">setdirmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, const char *, mode_t)</td></tr>
 <tr class="memitem:a434ddf96ccf0bc1e8bfbf371a990ecd3" id="r_a434ddf96ccf0bc1e8bfbf371a990ecd3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434ddf96ccf0bc1e8bfbf371a990ecd3">setdirowner</a> (const struct <a class="el" href="structvol.html">vol</a> *, const char *, const uid_t, const gid_t)</td></tr>
 <tr class="memitem:ac07521905fea5ff9f0e85adc893a4d47" id="r_ac07521905fea5ff9f0e85adc893a4d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac07521905fea5ff9f0e85adc893a4d47">setfilunixmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structpath.html">path</a> *, const mode_t)</td></tr>
 <tr class="memitem:a4987a05afefda58bac2989d75a50f825" id="r_a4987a05afefda58bac2989d75a50f825"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4987a05afefda58bac2989d75a50f825">setfilowner</a> (const struct <a class="el" href="structvol.html">vol</a> *, const uid_t, const gid_t, struct <a class="el" href="structpath.html">path</a> *)</td></tr>
-<tr class="memitem:a380d0232cc6dc1f4fd5ba3d5ce5aa19a" id="r_a380d0232cc6dc1f4fd5ba3d5ce5aa19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380d0232cc6dc1f4fd5ba3d5ce5aa19a">accessmode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, const struct <a class="el" href="structvol.html">vol</a> *, char *, struct <a class="el" href="structmaccess.html">maccess</a> *, struct <a class="el" href="structdir.html">dir</a> *, struct stat *)</td></tr>
+<tr class="memitem:a380d0232cc6dc1f4fd5ba3d5ce5aa19a" id="r_a380d0232cc6dc1f4fd5ba3d5ce5aa19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380d0232cc6dc1f4fd5ba3d5ce5aa19a">accessmode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *, char *, struct <a class="el" href="structmaccess.html">maccess</a> *, struct <a class="el" href="structdir.html">dir</a> *, struct stat *)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -216,22 +215,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int getnfsquota </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>bsize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em>dqp</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -289,22 +288,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int setdirowner </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uid_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const uid_t</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const gid_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const gid_t</td>          <td class="paramname"><span class="paramname"><em>gid</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -328,17 +327,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int setdirunixmode </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -362,22 +361,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int setfilowner </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uid_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const uid_t</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const gid_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const gid_t</td>          <td class="paramname"><span class="paramname"><em>gid</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structpath.html">path</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">struct <a class="el" href="structpath.html">path</a> *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -401,17 +400,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int setfilunixmode </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structpath.html">path</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structpath.html">path</a> *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const mode_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -440,22 +439,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em>bfree</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em>btotal</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>bsize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

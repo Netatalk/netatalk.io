@@ -1,11 +1,13 @@
 var searchData=
 [
-  ['cnid_5fbdb_5fprivate_0',['CNID_bdb_private',['../cnid__bdb__private_8h.html#ad8811bde12570c7f7d50bb87b409a486',1,'cnid_bdb_private.h']]],
-  ['cnid_5fdb_1',['cnid_db',['../cnid_8h.html#a0e3bc72ee867dc6146ddf706dd04c2eb',1,'cnid.h']]],
-  ['cnid_5fmodule_2',['cnid_module',['../cnid_8h.html#a9b67032ac16f7b1e1f225664d480ea88',1,'cnid.h']]],
-  ['cnid_5fmysql_5fprivate_3',['CNID_mysql_private',['../cnid__mysql__private_8h.html#aa9a650881ae2122abd6198a7ee308c40',1,'cnid_mysql_private.h']]],
-  ['cnid_5fsqlite_5fprivate_4',['CNID_sqlite_private',['../cnid__sqlite__private_8h.html#af6b3f90f1103fcef85db1ced4389c81e',1,'cnid_sqlite_private.h']]],
-  ['cnid_5ft_5',['cnid_t',['../adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422',1,'adouble.h']]],
-  ['conn_6',['CONN',['../afpclient_8h.html#a2ac162291539cccdf7b1cb8f52199d28',1,'afpclient.h']]],
-  ['creatortype_7',['CreatorType',['../desktop_8h.html#a6d1e97e45fc2161840ab641650738835',1,'desktop.h']]]
+  ['adf_5flock_5ft_0',['adf_lock_t',['../adouble_8h.html#a37f7dd7c918be11402b6d5962d222e67',1,'adouble.h']]],
+  ['afp_5fchild_5ft_1',['afp_child_t',['../server__child_8h.html#ae26588dd753c21bdee6d807ec70a5269',1,'server_child.h']]],
+  ['afpcmd_2',['AFPCmd',['../globals_8h.html#a0cce22132e270062d3cde9d65386ed1d',1,'globals.h']]],
+  ['afpobj_3',['AFPObj',['../globals_8h.html#ac392cb99e7e788934b1802230fbc50ed',1,'globals.h']]],
+  ['afpstatsobj_4',['AFPStatsObj',['../afpstats__obj_8h.html#ac397bba282be362ece5d93fcbf9e7bd1',1,'afpstats_obj.h']]],
+  ['afpstatsobjclass_5',['AFPStatsObjClass',['../afpstats__obj_8h.html#aa42f0cdeae5f8a3789f449a186dc7780',1,'afpstats_obj.h']]],
+  ['afpuserbytes_6',['AFPUserBytes',['../include_2atalk_2afp_8h.html#af67592f6dbcab79aa9cbac528d29f570',1,'afp.h']]],
+  ['asp_7',['ASP',['../asp_8h.html#a362f1595674974d9a299ea0ab6465aa1',1,'asp.h']]],
+  ['atalk_5fuuid_5ft_8',['atalk_uuid_t',['../uuid_8h.html#a4c1144f57ab625d69ec7efc74ada8e75',1,'uuid.h']]],
+  ['atp_9',['ATP',['../atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652',1,'atp.h']]]
 ];

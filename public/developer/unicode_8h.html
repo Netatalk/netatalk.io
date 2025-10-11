@@ -602,27 +602,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t atalk_iconv </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structatalk__iconv__t.html">atalk_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="structatalk__iconv__t.html">atalk_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char **</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>inbytesleft</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -631,6 +631,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This is a simple portable iconv() implementaion.</p>
+<p>It only knows about a very small number of character sets - just enough that netatalk works on systems that don't have iconv. </p>
 
 </div>
 </div>
@@ -646,7 +648,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int atalk_iconv_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structatalk__iconv__t.html">atalk_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structatalk__iconv__t.html">atalk_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em>cd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -671,12 +673,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structatalk__iconv__t.html">atalk_iconv_t</a> atalk_iconv_open </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>tocode</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fromcode</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -700,7 +702,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int atalk_register_charset </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structcharset__functions.html">charset_functions</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structcharset__functions.html">charset_functions</a> *</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -725,27 +727,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_decompose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -769,27 +771,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_precompose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -813,27 +815,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_strlower </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -857,27 +859,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_strupper </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -901,7 +903,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_to_ucs2_allocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -920,6 +922,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Copy a string from a <a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a> char* src to a UCS2 destination, allocating a buffer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination or -1 in case of error. </dd></dl>
 
 </div>
 </div>
@@ -935,7 +945,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t charset_to_utf8_allocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -954,6 +964,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<hr  />
+<p> Copy a string from a <a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a> char* src to a UTF-8 destination, allocating a buffer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination </dd></dl>
 
 </div>
 </div>
@@ -969,42 +988,42 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t convert_charset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>from_set</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>to_set</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>cap_charset</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>src_len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>dest_len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1028,32 +1047,32 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t convert_string </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1077,27 +1096,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t convert_string_allocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>to</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">void const *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1121,22 +1140,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t decompose_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inplen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>comp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1160,7 +1179,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">struct <a class="el" href="structcharset__functions.html">charset_functions</a> * find_charset_functions </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1220,6 +1239,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Initialize iconv conversion descriptors.</p>
+<p>This is called the first time it is needed, and also called again every time the configuration is reloaded, because the charset or codepage might have changed. </p>
 
 </div>
 </div>
@@ -1235,7 +1256,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int islower_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1260,7 +1281,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int isupper_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1285,22 +1306,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t precompose_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inplen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>comp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1324,12 +1345,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int set_charset_name </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1382,12 +1403,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strcasecmp_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1411,12 +1432,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strcasestr_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ins</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1440,12 +1461,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strcat_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1469,12 +1490,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strchr_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1498,12 +1519,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strcmp_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1527,7 +1548,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strdup_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1552,7 +1573,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t strlen_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1577,7 +1598,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strlower_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1602,17 +1623,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strncasecmp_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1636,17 +1657,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strncat_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1670,17 +1691,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strncmp_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1704,17 +1725,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strncpy_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1738,12 +1759,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strndup_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1767,12 +1788,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t strnlen_w </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1825,7 +1846,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int strupper_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1850,7 +1871,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint32_t tolower_sp </td>
           <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1875,7 +1896,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> tolower_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1900,7 +1921,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">uint32_t toupper_sp </td>
           <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1925,7 +1946,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> toupper_w </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1950,7 +1971,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t ucs2_to_charset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1965,7 +1986,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1974,6 +1995,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<hr  />
+<p> Copy a string from a UCS2 src to a unix char * destination, allocating a buffer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination </dd></dl>
 
 </div>
 </div>
@@ -1989,7 +2019,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t ucs2_to_charset_allocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2023,22 +2053,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t unix_strlower </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2062,22 +2092,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t unix_strupper </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2101,7 +2131,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_charlen </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>utf8</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2126,22 +2156,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_decompose </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2165,22 +2195,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_precompose </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2204,7 +2234,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_strlen_validate </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>utf8</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2229,22 +2259,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_strlower </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2268,22 +2298,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_strupper </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2307,7 +2337,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">size_t utf8_to_charset_allocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2326,6 +2356,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<hr  />
+<p> Copy a string from a UTF-8 src to a unix char * destination, allocating a buffer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination </dd></dl>
 
 </div>
 </div>

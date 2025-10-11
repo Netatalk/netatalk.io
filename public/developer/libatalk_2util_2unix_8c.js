@@ -1,0 +1,26 @@
+var libatalk_2util_2unix_8c =
+[
+    [ "GROUPSTR_BUFSIZE", "libatalk_2util_2unix_8c.html#aee0b2b0c78692bd83d343d8935cd888c", null ],
+    [ "basename_safe", "libatalk_2util_2unix_8c.html#abe14028da3f858d72b056cd958b89607", null ],
+    [ "become_root", "libatalk_2util_2unix_8c.html#a1b54993e0e08ced06950937bbe070e5c", null ],
+    [ "closeall", "libatalk_2util_2unix_8c.html#aa51ecce65ff83085e23921e3a54dabc9", null ],
+    [ "daemonize", "libatalk_2util_2unix_8c.html#ac07150628d4bd483b1f3f43c2350c80b", null ],
+    [ "fullpathname", "libatalk_2util_2unix_8c.html#a5f74cdb0e844197972226e6911be1351", null ],
+    [ "getcwdpath", "libatalk_2util_2unix_8c.html#a1db4bee5fe8d20344de599be7cdc591c", null ],
+    [ "gmem", "libatalk_2util_2unix_8c.html#a94fab3022bd14af900bd0a9dec7ad8ee", null ],
+    [ "ochdir", "libatalk_2util_2unix_8c.html#a5c01f97ac47d90ccf6a00ab540ce702d", null ],
+    [ "ochmod", "libatalk_2util_2unix_8c.html#a3537baf3b2b1e9eb9013690c3a7f8488", null ],
+    [ "ochown", "libatalk_2util_2unix_8c.html#a4689e229e35ba860cd4acd3f19e0b1b1", null ],
+    [ "ostat", "libatalk_2util_2unix_8c.html#a5c2b2b5ff8cd8921f74350b382a23d0c", null ],
+    [ "ostatat", "libatalk_2util_2unix_8c.html#a1f73e3719511b5c1ba80c5129d08f283", null ],
+    [ "print_groups", "libatalk_2util_2unix_8c.html#a7b08fa6eb8f98ce8c88a646b901dc06d", null ],
+    [ "randombytes", "libatalk_2util_2unix_8c.html#aefde7f9f477f2f182845eee2663363f7", null ],
+    [ "realpath_safe", "libatalk_2util_2unix_8c.html#a5a34db058713ee9086a16f7f5f981082", null ],
+    [ "run_cmd", "libatalk_2util_2unix_8c.html#aa0c145c2be4be8dfb51359f295c79708", null ],
+    [ "set_groups", "libatalk_2util_2unix_8c.html#a340fab622a9f1c88af54d2a5bf5529ee", null ],
+    [ "stripped_slashes_basename", "libatalk_2util_2unix_8c.html#a34763dcda0093297fce36aad07ac64e6", null ],
+    [ "strtok_quote", "libatalk_2util_2unix_8c.html#a7b98011d737b8b3bc282951555f3f287", null ],
+    [ "tmpdir", "libatalk_2util_2unix_8c.html#a0a2fa46e0cef80809cd77873559868ff", null ],
+    [ "unbecome_root", "libatalk_2util_2unix_8c.html#a0a6f1ae64eb437edd88944c89ae4dab7", null ],
+    [ "saved_uid", "libatalk_2util_2unix_8c.html#a05b5621aa2d6f54e521ca527b44dbb87", null ]
+];

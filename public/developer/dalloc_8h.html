@@ -105,12 +105,12 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a36ef4e487feaf1c70f09df0c355b0f20" id="r_a36ef4e487feaf1c70f09df0c355b0f20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ef4e487feaf1c70f09df0c355b0f20">DALLOC_H</a></td></tr>
-<tr class="memitem:ad64e08b4686af9ccd27123b015f338c9" id="r_ad64e08b4686af9ccd27123b015f338c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(d,  obj,  type)</td></tr>
-<tr class="memitem:a88c18365d92a2f64b078599ac8251b86" id="r_a88c18365d92a2f64b078599ac8251b86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(d,  obj,  type)</td></tr>
+<tr class="memitem:ad64e08b4686af9ccd27123b015f338c9" id="r_ad64e08b4686af9ccd27123b015f338c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(d,  <a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>,  <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
+<tr class="memitem:a88c18365d92a2f64b078599ac8251b86" id="r_a88c18365d92a2f64b078599ac8251b86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(d,  <a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>,  <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abb6184e5323caab45ac611798b12b59a" id="r_abb6184e5323caab45ac611798b12b59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *dd, void *talloc_chunk, void *obj, size_t size)</td></tr>
+<tr class="memitem:abb6184e5323caab45ac611798b12b59a" id="r_abb6184e5323caab45ac611798b12b59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *dd, void *talloc_chunk, void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, size_t size)</td></tr>
 <tr class="memitem:a44ab837d36956a2311193d97f93fb6f5" id="r_a44ab837d36956a2311193d97f93fb6f5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
 <tr class="memitem:ad5bb4465c8e47189370859fb3e2ed35e" id="r_ad5bb4465c8e47189370859fb3e2ed35e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
 <tr class="memitem:a8d1a0348d7484dbe1ff1854f96f25cf5" id="r_a8d1a0348d7484dbe1ff1854f96f25cf5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a> (const void *ctx, const char *string)</td></tr>
@@ -131,17 +131,18 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a>((d), NULL, (obj), 0);</div>
-<div class="ttc" id="adalloc_8h_html_abb6184e5323caab45ac611798b12b59a"><div class="ttname"><a href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a></div><div class="ttdeci">int dalloc_add_talloc_chunk(DALLOC_CTX *dd, void *talloc_chunk, void *obj, size_t size)</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a>((d), NULL, (<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>), 0);</div>
+<div class="ttc" id="adalloc_8h_html_abb6184e5323caab45ac611798b12b59a"><div class="ttname"><a href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a></div><div class="ttdeci">int dalloc_add_talloc_chunk(DALLOC_CTX *dd, void *talloc_chunk, void *obj, size_t size)</div><div class="ttdef"><b>Definition</b> dalloc.c:127</div></div>
+<div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -159,16 +160,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a>((d), talloc((d), type), (obj), <span class="keyword">sizeof</span>(type));</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a>((d), talloc((d), <a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>), (<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>), <span class="keyword">sizeof</span>(<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>));</div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
 </div><!-- fragment -->
 </div>
 </div>

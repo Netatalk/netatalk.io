@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['ldap_5fgetnamefromuuid_0',['ldap_getnamefromuuid',['../aclldap_8h.html#a30002eb32b1325e488e96508bda6099f',1,'aclldap.h']]],
-  ['ldap_5fgetuuidfromname_1',['ldap_getuuidfromname',['../aclldap_8h.html#a5d769831adeb5c48c3364ffc4eb53b0d',1,'aclldap.h']]],
-  ['list_5feas_2',['list_eas',['../ea_8h.html#a3574633f00604a1fa13bc278d52bcf88',1,'ea.h']]],
-  ['load_5fcharset_3',['load_charset',['../netatalk__conf_8h.html#a2d92d4ec9f9f0a8e165d39c10d9574cf',1,'netatalk_conf.h']]],
-  ['load_5fvolumes_4',['load_volumes',['../netatalk__conf_8h.html#aa051b28df16f69cdbffebc533455f4e7',1,'netatalk_conf.h']]],
-  ['localuuid_5ffrom_5fid_5',['localuuid_from_id',['../uuid_8h.html#a560d4a3a668fc59df0046765e7f166f1',1,'uuid.h']]],
-  ['lock_5freg_6',['lock_reg',['../include_2atalk_2util_8h.html#a4ab0e28b73047bfea6b7f02ae5527bab',1,'util.h']]],
-  ['log_5fdircache_5fstat_7',['log_dircache_stat',['../dircache_8h.html#a634fc2bdbe6d1b5d9def7b568faae939',1,'dircache.h']]],
-  ['looproute_8',['looproute',['../etc_2atalkd_2rtmp_8h.html#a5a4dc501bba8f6a3017a95d5f310b354',1,'rtmp.h']]],
-  ['lp_5fcancel_9',['lp_cancel',['../lp_8h.html#a286d7f04a36e727f949549c893aee051',1,'lp.h']]],
-  ['lp_5fclose_10',['lp_close',['../lp_8h.html#af7147716a23f46fccae91a51c2ac9fa7',1,'lp.h']]],
-  ['lp_5ffor_11',['lp_for',['../lp_8h.html#a0f5f8a92954cd16a1d0ef0edb813e476',1,'lp.h']]],
-  ['lp_5fhost_12',['lp_host',['../lp_8h.html#aa3b1cfe013bbdd44aefd7bf9c1c42402',1,'lp.h']]],
-  ['lp_5fjob_13',['lp_job',['../lp_8h.html#a79f49d83b5632895e0364ae7c6761150',1,'lp.h']]],
-  ['lp_5fopen_14',['lp_open',['../lp_8h.html#ab3cdb5c6f3cd182dc1ab1839cf9a63bd',1,'lp.h']]],
-  ['lp_5forigin_15',['lp_origin',['../lp_8h.html#acf6de7bbdd6fb3b40be8c7f51fb954c7',1,'lp.h']]],
-  ['lp_5fpagecost_16',['lp_pagecost',['../lp_8h.html#a2a3bb331484ce1692ebf87f9be0000db',1,'lp.h']]],
-  ['lp_5fperson_17',['lp_person',['../lp_8h.html#ac1cd4702d5a7c74d1f96d0ae14b1106c',1,'lp.h']]],
-  ['lp_5fprint_18',['lp_print',['../lp_8h.html#a499501ebabac7d35779960f81565aa40',1,'lp.h']]],
-  ['lp_5fqueue_19',['lp_queue',['../lp_8h.html#a91a267940ff3acfcf52c318b51ab9ccc',1,'lp.h']]],
-  ['lp_5frmjob_20',['lp_rmjob',['../lp_8h.html#af88b20ba1c0c30cca3890ae5ad8e8ea2',1,'lp.h']]],
-  ['lp_5fwrite_21',['lp_write',['../lp_8h.html#ad48ab27c542be7ff219ba9441e7f2098',1,'lp.h']]]
+  ['kill_5fchild_0',['kill_child',['../server__child_8c.html#af28990b672c546dfdc862d5b67d78329',1,'server_child.c']]],
+  ['kill_5fchilds_1',['kill_childs',['../netatalk_8c.html#ae19b278e512fbf3c0e01f4b54e0b12b4',1,'netatalk.c']]]
 ];

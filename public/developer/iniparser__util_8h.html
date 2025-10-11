@@ -102,8 +102,8 @@ $(function(){initNavTree('iniparser__util_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:ab93aa6ff676773dcd02d55276c9386c0" id="r_ab93aa6ff676773dcd02d55276c9386c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab93aa6ff676773dcd02d55276c9386c0">INISEC_GLOBAL</a>&#160;&#160;&#160;&quot;global&quot;</td></tr>
 <tr class="memitem:a386fccea5c336cf47783a345924cd504" id="r_a386fccea5c336cf47783a345924cd504"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a386fccea5c336cf47783a345924cd504">INISEC_HOMES</a>&#160;&#160;&#160;&quot;homes&quot;</td></tr>
-<tr class="memitem:a0b989a6da359aab2502009b353482812" id="r_a0b989a6da359aab2502009b353482812"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b989a6da359aab2502009b353482812">INIPARSER_GETSTR</a>(config,  section,  key,  default)</td></tr>
-<tr class="memitem:abc22f5e223e4d5a82f4bc3904ffdeb9f" id="r_abc22f5e223e4d5a82f4bc3904ffdeb9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc22f5e223e4d5a82f4bc3904ffdeb9f">INIPARSER_GETSTRDUP</a>(config,  section,  key,  default)</td></tr>
+<tr class="memitem:a0b989a6da359aab2502009b353482812" id="r_a0b989a6da359aab2502009b353482812"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b989a6da359aab2502009b353482812">INIPARSER_GETSTR</a>(config,  section,  <a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>,  default)</td></tr>
+<tr class="memitem:abc22f5e223e4d5a82f4bc3904ffdeb9f" id="r_abc22f5e223e4d5a82f4bc3904ffdeb9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc22f5e223e4d5a82f4bc3904ffdeb9f">INIPARSER_GETSTRDUP</a>(config,  section,  <a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>,  default)</td></tr>
 <tr class="memitem:a9a4d109ab88fabfb054b5ccf731995e2" id="r_a9a4d109ab88fabfb054b5ccf731995e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a4d109ab88fabfb054b5ccf731995e2">CONFIG_ARG_FREE</a>(a)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -147,7 +147,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -158,10 +158,11 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ({            \</div>
 <div class="line">    <span class="keywordtype">char</span> _option[<a class="code hl_define" href="globals_8h.html#a20f71fe4c23117621f9f37432af54111">MAXOPTLEN</a>];                                          \</div>
-<div class="line">    snprintf(_option, <span class="keyword">sizeof</span>(_option), <span class="stringliteral">&quot;%s:%s&quot;</span>, section, key);        \</div>
+<div class="line">    snprintf(_option, <span class="keyword">sizeof</span>(_option), <span class="stringliteral">&quot;%s:%s&quot;</span>, section, <a class="code hl_define" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>);        \</div>
 <div class="line">    iniparser_getstring(config, _option, <span class="keywordflow">default</span>);                    \</div>
 <div class="line">})</div>
 <div class="ttc" id="aglobals_8h_html_a20f71fe4c23117621f9f37432af54111"><div class="ttname"><a href="globals_8h.html#a20f71fe4c23117621f9f37432af54111">MAXOPTLEN</a></div><div class="ttdeci">#define MAXOPTLEN</div><div class="ttdef"><b>Definition</b> globals.h:48</div></div>
+<div class="ttc" id="ahash_8c_html_ae57736c8a0ddeb64dc394712624d8209"><div class="ttname"><a href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a></div><div class="ttdeci">#define key</div><div class="ttdef"><b>Definition</b> hash.c:36</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -184,7 +185,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -195,7 +196,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ({         \</div>
 <div class="line">    <span class="keywordtype">char</span> _option[<a class="code hl_define" href="globals_8h.html#a20f71fe4c23117621f9f37432af54111">MAXOPTLEN</a>];                                          \</div>
-<div class="line">    snprintf(_option, <span class="keyword">sizeof</span>(_option), <span class="stringliteral">&quot;%s:%s&quot;</span>, section, key);        \</div>
+<div class="line">    snprintf(_option, <span class="keyword">sizeof</span>(_option), <span class="stringliteral">&quot;%s:%s&quot;</span>, section, <a class="code hl_define" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>);        \</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *_tmp = iniparser_getstring(config, _option, <span class="keywordflow">default</span>); \</div>
 <div class="line">    _tmp ? strdup(_tmp) : NULL;                                       \</div>
 <div class="line">})</div>

@@ -125,7 +125,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a9279d6cfdae3baf5fd439b20a76fa91a" id="r_a9279d6cfdae3baf5fd439b20a76fa91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9279d6cfdae3baf5fd439b20a76fa91a">AFP_WRITE_START</a>(a)</td></tr>
 <tr class="memitem:a505dfdddb1564de7de1c9f54d5897c4e" id="r_a505dfdddb1564de7de1c9f54d5897c4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505dfdddb1564de7de1c9f54d5897c4e">AFP_WRITE_DONE</a>()</td></tr>
 <tr class="memitem:a56940c80dd3ee0216586b20730c8a199" id="r_a56940c80dd3ee0216586b20730c8a199"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56940c80dd3ee0216586b20730c8a199">MACFILELEN</a>&#160;&#160;&#160;31                   /* Type2, HFS-compat */</td></tr>
-<tr class="memitem:a9b041055346d857429d4a8d889d4710b" id="r_a9b041055346d857429d4a8d889d4710b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b041055346d857429d4a8d889d4710b">UTF8FILELEN_EARLY</a>&#160;&#160;&#160;255           /* Type3, early <a class="el" href="testhelper_8h.html#ac1f45edfd9d501d2972db7aa6b23084c">Mac</a> OS X 10.0-10.4.? */</td></tr>
+<tr class="memitem:a9b041055346d857429d4a8d889d4710b" id="r_a9b041055346d857429d4a8d889d4710b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b041055346d857429d4a8d889d4710b">UTF8FILELEN_EARLY</a>&#160;&#160;&#160;255           /* Type3, early <a class="el" href="afparg_8c.html#ac1f45edfd9d501d2972db7aa6b23084c">Mac</a> OS X 10.0-10.4.? */</td></tr>
 <tr class="memitem:a071bf1dd4eb2de6ebffc327141658618" id="r_a071bf1dd4eb2de6ebffc327141658618"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071bf1dd4eb2de6ebffc327141658618">MAXUSERLEN</a>&#160;&#160;&#160;256</td></tr>
 <tr class="memitem:a20f71fe4c23117621f9f37432af54111" id="r_a20f71fe4c23117621f9f37432af54111"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f71fe4c23117621f9f37432af54111">MAXOPTLEN</a>&#160;&#160;&#160;256</td></tr>
 <tr class="memitem:aac2fb78a5373af34bc69284dd6d3fa29" id="r_aac2fb78a5373af34bc69284dd6d3fa29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac2fb78a5373af34bc69284dd6d3fa29">DEFAULT_MAX_DIRCACHE_SIZE</a>&#160;&#160;&#160;8192</td></tr>
@@ -136,43 +136,43 @@ Macros</h2></td></tr>
 <tr class="memitem:a0c163c1ab37c04b03cbca1bed5d4d82c" id="r_a0c163c1ab37c04b03cbca1bed5d4d82c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c163c1ab37c04b03cbca1bed5d4d82c">OPTION_CLOSEVOL</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
 <tr class="memitem:a45442b5656e8890122e1b8905e365605" id="r_a45442b5656e8890122e1b8905e365605"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45442b5656e8890122e1b8905e365605">OPTION_SERVERNOTIF</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
 <tr class="memitem:a4839da88fe1fe6810a54f7a61b93fd3a" id="r_a4839da88fe1fe6810a54f7a61b93fd3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4839da88fe1fe6810a54f7a61b93fd3a">OPTION_NOSENDFILE</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
-<tr class="memitem:ab2967fab7eb8a425c1f234304fdc9385" id="r_ab2967fab7eb8a425c1f234304fdc9385"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2967fab7eb8a425c1f234304fdc9385">OPTION_VETOMSG</a>&#160;&#160;&#160;(1 &lt;&lt; 4) /* whether to send an AFP message for veto file access */</td></tr>
-<tr class="memitem:a0d463788023602c4df261824ecaad983" id="r_a0d463788023602c4df261824ecaad983"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d463788023602c4df261824ecaad983">OPTION_AFP_READ_LOCK</a>&#160;&#160;&#160;(1 &lt;&lt; 5) /* whether to do AFP spec conforming read locks (default: no) */</td></tr>
+<tr class="memitem:ab2967fab7eb8a425c1f234304fdc9385" id="r_ab2967fab7eb8a425c1f234304fdc9385"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2967fab7eb8a425c1f234304fdc9385">OPTION_VETOMSG</a>&#160;&#160;&#160;(1 &lt;&lt; 4) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> send an AFP message for veto file access */</td></tr>
+<tr class="memitem:a0d463788023602c4df261824ecaad983" id="r_a0d463788023602c4df261824ecaad983"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d463788023602c4df261824ecaad983">OPTION_AFP_READ_LOCK</a>&#160;&#160;&#160;(1 &lt;&lt; 5) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> do AFP spec conforming read locks (default: no) */</td></tr>
 <tr class="memitem:a187004cb95ba80b9221d75cc085593f4" id="r_a187004cb95ba80b9221d75cc085593f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a187004cb95ba80b9221d75cc085593f4">OPTION_ANNOUNCESSH</a>&#160;&#160;&#160;(1 &lt;&lt; 6)</td></tr>
 <tr class="memitem:a68b11ba17dbdb656b737cebc2d2f15e6" id="r_a68b11ba17dbdb656b737cebc2d2f15e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b11ba17dbdb656b737cebc2d2f15e6">OPTION_UUID</a>&#160;&#160;&#160;(1 &lt;&lt; 7)</td></tr>
 <tr class="memitem:ac919c31f2215fbb09e107eed51fe4a4a" id="r_ac919c31f2215fbb09e107eed51fe4a4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac919c31f2215fbb09e107eed51fe4a4a">OPTION_ACL2MACCESS</a>&#160;&#160;&#160;(1 &lt;&lt; 8)</td></tr>
 <tr class="memitem:ad3bd9388222b2d5cba7f5fa572f325da" id="r_ad3bd9388222b2d5cba7f5fa572f325da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3bd9388222b2d5cba7f5fa572f325da">OPTION_NOZEROCONF</a>&#160;&#160;&#160;(1 &lt;&lt; 9)</td></tr>
 <tr class="memitem:a85fc69b3fc2ef08c514fd3f120ec194c" id="r_a85fc69b3fc2ef08c514fd3f120ec194c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85fc69b3fc2ef08c514fd3f120ec194c">OPTION_ACL2MODE</a>&#160;&#160;&#160;(1 &lt;&lt; 10)</td></tr>
-<tr class="memitem:af6d208681acff7bcdc6fb4e282ec30ae" id="r_af6d208681acff7bcdc6fb4e282ec30ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6d208681acff7bcdc6fb4e282ec30ae">OPTION_SHARE_RESERV</a>&#160;&#160;&#160;(1 &lt;&lt; 11) /* whether to use Solaris fcntl F_SHARE locks */</td></tr>
-<tr class="memitem:a5e146f35af3cc37a8f29a5699cff7263" id="r_a5e146f35af3cc37a8f29a5699cff7263"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e146f35af3cc37a8f29a5699cff7263">OPTION_DBUS_AFPSTATS</a>&#160;&#160;&#160;(1 &lt;&lt; 12) /* whether to run dbus thread for afpstats */</td></tr>
-<tr class="memitem:a67da011e8c2250ea6f68d0bfc2fa2fea" id="r_a67da011e8c2250ea6f68d0bfc2fa2fea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67da011e8c2250ea6f68d0bfc2fa2fea">OPTION_SPOTLIGHT</a>&#160;&#160;&#160;(1 &lt;&lt; 13) /* whether to initialize Spotlight support */</td></tr>
+<tr class="memitem:af6d208681acff7bcdc6fb4e282ec30ae" id="r_af6d208681acff7bcdc6fb4e282ec30ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6d208681acff7bcdc6fb4e282ec30ae">OPTION_SHARE_RESERV</a>&#160;&#160;&#160;(1 &lt;&lt; 11) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> use Solaris fcntl F_SHARE locks */</td></tr>
+<tr class="memitem:a5e146f35af3cc37a8f29a5699cff7263" id="r_a5e146f35af3cc37a8f29a5699cff7263"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e146f35af3cc37a8f29a5699cff7263">OPTION_DBUS_AFPSTATS</a>&#160;&#160;&#160;(1 &lt;&lt; 12) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> run dbus thread for afpstats */</td></tr>
+<tr class="memitem:a67da011e8c2250ea6f68d0bfc2fa2fea" id="r_a67da011e8c2250ea6f68d0bfc2fa2fea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67da011e8c2250ea6f68d0bfc2fa2fea">OPTION_SPOTLIGHT</a>&#160;&#160;&#160;(1 &lt;&lt; 13) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> initialize Spotlight support */</td></tr>
 <tr class="memitem:a155281ed9fa273fe7e8e79efdf6129d7" id="r_a155281ed9fa273fe7e8e79efdf6129d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a155281ed9fa273fe7e8e79efdf6129d7">OPTION_SPOTLIGHT_VOL</a>&#160;&#160;&#160;(1 &lt;&lt; 14) /* whether spotlight shall be enabled by default for volumes */</td></tr>
 <tr class="memitem:a280b84ce5c8a0ae29a76b577fea698e8" id="r_a280b84ce5c8a0ae29a76b577fea698e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a280b84ce5c8a0ae29a76b577fea698e8">OPTION_RECVFILE</a>&#160;&#160;&#160;(1 &lt;&lt; 15)</td></tr>
-<tr class="memitem:a3dfe577fcade4c4fc7fc484cba5fc60e" id="r_a3dfe577fcade4c4fc7fc484cba5fc60e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dfe577fcade4c4fc7fc484cba5fc60e">OPTION_SPOTLIGHT_EXPR</a>&#160;&#160;&#160;(1 &lt;&lt; 16) /* whether to allow Spotlight logic expressions */</td></tr>
-<tr class="memitem:a86de2e72a7bcc70cb4781da3d7a09c13" id="r_a86de2e72a7bcc70cb4781da3d7a09c13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86de2e72a7bcc70cb4781da3d7a09c13">OPTION_DDP</a>&#160;&#160;&#160;(1 &lt;&lt; 17) /* whether to allow connections via appletalk/ddp */</td></tr>
-<tr class="memitem:ad2ea5f02a0d025a49658d61efd494fa7" id="r_ad2ea5f02a0d025a49658d61efd494fa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2ea5f02a0d025a49658d61efd494fa7">OPTION_VALID_SHELLCHECK</a>&#160;&#160;&#160;(1 &lt;&lt; 18) /* whether to check for valid login shell */</td></tr>
+<tr class="memitem:a3dfe577fcade4c4fc7fc484cba5fc60e" id="r_a3dfe577fcade4c4fc7fc484cba5fc60e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dfe577fcade4c4fc7fc484cba5fc60e">OPTION_SPOTLIGHT_EXPR</a>&#160;&#160;&#160;(1 &lt;&lt; 16) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> allow Spotlight logic expressions */</td></tr>
+<tr class="memitem:a86de2e72a7bcc70cb4781da3d7a09c13" id="r_a86de2e72a7bcc70cb4781da3d7a09c13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86de2e72a7bcc70cb4781da3d7a09c13">OPTION_DDP</a>&#160;&#160;&#160;(1 &lt;&lt; 17) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> allow connections via appletalk/ddp */</td></tr>
+<tr class="memitem:ad2ea5f02a0d025a49658d61efd494fa7" id="r_ad2ea5f02a0d025a49658d61efd494fa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2ea5f02a0d025a49658d61efd494fa7">OPTION_VALID_SHELLCHECK</a>&#160;&#160;&#160;(1 &lt;&lt; 18) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> check for valid <a class="el" href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a> shell */</td></tr>
 <tr class="memitem:a054a5ddd303468d32b02a36f4082f790" id="r_a054a5ddd303468d32b02a36f4082f790"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a054a5ddd303468d32b02a36f4082f790">PASSWD_NONE</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:a0489d783e63279a8cb531124e96ef6a7" id="r_a0489d783e63279a8cb531124e96ef6a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0489d783e63279a8cb531124e96ef6a7">PASSWD_SET</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
 <tr class="memitem:a24b13f89c974a437b531a3a523d78b9e" id="r_a24b13f89c974a437b531a3a523d78b9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24b13f89c974a437b531a3a523d78b9e">PASSWD_NOSAVE</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
 <tr class="memitem:a3119a3230044847545621458ab06b2a4" id="r_a3119a3230044847545621458ab06b2a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3119a3230044847545621458ab06b2a4">PASSWD_ALL</a>&#160;&#160;&#160;(<a class="el" href="#a0489d783e63279a8cb531124e96ef6a7">PASSWD_SET</a> | <a class="el" href="#a24b13f89c974a437b531a3a523d78b9e">PASSWD_NOSAVE</a>)</td></tr>
-<tr class="memitem:a1e9b80a3afa3365ab5f6ad23cc18d799" id="r_a1e9b80a3afa3365ab5f6ad23cc18d799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9b80a3afa3365ab5f6ad23cc18d799">IS_AFP_SESSION</a>(obj)</td></tr>
+<tr class="memitem:a1e9b80a3afa3365ab5f6ad23cc18d799" id="r_a1e9b80a3afa3365ab5f6ad23cc18d799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9b80a3afa3365ab5f6ad23cc18d799">IS_AFP_SESSION</a>(<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a0fe5f67550e19e0be2a071e49c072c74" id="r_a0fe5f67550e19e0be2a071e49c072c74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe5f67550e19e0be2a071e49c072c74">AFPOBJ_TMPSIZ</a>&#160;&#160;&#160;(MAXPATHLEN)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ac392cb99e7e788934b1802230fbc50ed" id="r_ac392cb99e7e788934b1802230fbc50ed"><td class="memItemLeft" align="right" valign="top">typedef struct AFPObj&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac392cb99e7e788934b1802230fbc50ed">AFPObj</a></td></tr>
-<tr class="memitem:a0cce22132e270062d3cde9d65386ed1d" id="r_a0cce22132e270062d3cde9d65386ed1d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cce22132e270062d3cde9d65386ed1d">AFPCmd</a>) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, char *ibuf, size_t ibuflen, char *rbuf, size_t *rbuflen)</td></tr>
+<tr class="memitem:a0cce22132e270062d3cde9d65386ed1d" id="r_a0cce22132e270062d3cde9d65386ed1d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cce22132e270062d3cde9d65386ed1d">AFPCmd</a>) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2f08e97a51b5a57276f6a8c7444dd357" id="r_a2f08e97a51b5a57276f6a8c7444dd357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f08e97a51b5a57276f6a8c7444dd357">get_afp_errno</a> (const int param)</td></tr>
+<tr class="memitem:a2f08e97a51b5a57276f6a8c7444dd357" id="r_a2f08e97a51b5a57276f6a8c7444dd357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f08e97a51b5a57276f6a8c7444dd357">get_afp_errno</a> (const int <a class="el" href="structparam.html">param</a>)</td></tr>
 <tr class="memitem:a94f8ad25c0a55d1ed5acdeb5fe997a65" id="r_a94f8ad25c0a55d1ed5acdeb5fe997a65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f8ad25c0a55d1ed5acdeb5fe997a65">afp_options_init</a> (struct <a class="el" href="structafp__options.html">afp_options</a> *)</td></tr>
-<tr class="memitem:a80420ae6cd5324bec232e2dcaf2a1f3c" id="r_a80420ae6cd5324bec232e2dcaf2a1f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80420ae6cd5324bec232e2dcaf2a1f3c">afp_options_parse_cmdline</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, int ac, char **av)</td></tr>
+<tr class="memitem:a80420ae6cd5324bec232e2dcaf2a1f3c" id="r_a80420ae6cd5324bec232e2dcaf2a1f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80420ae6cd5324bec232e2dcaf2a1f3c">afp_options_parse_cmdline</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, int ac, char **av)</td></tr>
 <tr class="memitem:a02cff118dfba900c7d11398cf8a7cf5b" id="r_a02cff118dfba900c7d11398cf8a7cf5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02cff118dfba900c7d11398cf8a7cf5b">setmessage</a> (const char *)</td></tr>
 <tr class="memitem:a5fbeb7f115163dbf6561c5a73f2a47d8" id="r_a5fbeb7f115163dbf6561c5a73f2a47d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fbeb7f115163dbf6561c5a73f2a47d8">readmessage</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
 <tr class="memitem:afb2c0ed8e24464b4012b99711531bf8d" id="r_afb2c0ed8e24464b4012b99711531bf8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2c0ed8e24464b4012b99711531bf8d">afp_over_asp</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
 <tr class="memitem:a9d80cfd8bd355bbcb764c7e285e203c2" id="r_a9d80cfd8bd355bbcb764c7e285e203c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d80cfd8bd355bbcb764c7e285e203c2">afp_over_dsi</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
-<tr class="memitem:ae8b9e51376694933a19193b52f6e7c53" id="r_ae8b9e51376694933a19193b52f6e7c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8b9e51376694933a19193b52f6e7c53">afp_over_dsi_sighandlers</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj)</td></tr>
+<tr class="memitem:ae8b9e51376694933a19193b52f6e7c53" id="r_ae8b9e51376694933a19193b52f6e7c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8b9e51376694933a19193b52f6e7c53">afp_over_dsi_sighandlers</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -410,12 +410,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">#define IS_AFP_SESSION</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((obj)-&gt;dsi &amp;&amp; (obj)-&gt;dsi-&gt;serversock == -1) || ((obj)-&gt;Type))</div>
+<b>Value:</b><div class="fragment"><div class="line">(((<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)-&gt;dsi &amp;&amp; (<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)-&gt;dsi-&gt;serversock == -1) || ((<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)-&gt;Type))</div>
+<div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -496,7 +497,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_AFP_READ_LOCK&#160;&#160;&#160;(1 &lt;&lt; 5) /* whether to do AFP spec conforming read locks (default: no) */</td>
+          <td class="memname">#define OPTION_AFP_READ_LOCK&#160;&#160;&#160;(1 &lt;&lt; 5) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> do AFP spec conforming read locks (default: no) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -538,7 +539,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_DBUS_AFPSTATS&#160;&#160;&#160;(1 &lt;&lt; 12) /* whether to run dbus thread for afpstats */</td>
+          <td class="memname">#define OPTION_DBUS_AFPSTATS&#160;&#160;&#160;(1 &lt;&lt; 12) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> run dbus thread for afpstats */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -552,7 +553,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_DDP&#160;&#160;&#160;(1 &lt;&lt; 17) /* whether to allow connections via appletalk/ddp */</td>
+          <td class="memname">#define OPTION_DDP&#160;&#160;&#160;(1 &lt;&lt; 17) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> allow connections via appletalk/ddp */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -636,7 +637,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_SHARE_RESERV&#160;&#160;&#160;(1 &lt;&lt; 11) /* whether to use Solaris fcntl F_SHARE locks */</td>
+          <td class="memname">#define OPTION_SHARE_RESERV&#160;&#160;&#160;(1 &lt;&lt; 11) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> use Solaris fcntl F_SHARE locks */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -650,7 +651,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_SPOTLIGHT&#160;&#160;&#160;(1 &lt;&lt; 13) /* whether to initialize Spotlight support */</td>
+          <td class="memname">#define OPTION_SPOTLIGHT&#160;&#160;&#160;(1 &lt;&lt; 13) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> initialize Spotlight support */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -664,7 +665,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_SPOTLIGHT_EXPR&#160;&#160;&#160;(1 &lt;&lt; 16) /* whether to allow Spotlight logic expressions */</td>
+          <td class="memname">#define OPTION_SPOTLIGHT_EXPR&#160;&#160;&#160;(1 &lt;&lt; 16) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> allow Spotlight logic expressions */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -706,7 +707,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_VALID_SHELLCHECK&#160;&#160;&#160;(1 &lt;&lt; 18) /* whether to check for valid login shell */</td>
+          <td class="memname">#define OPTION_VALID_SHELLCHECK&#160;&#160;&#160;(1 &lt;&lt; 18) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> check for valid <a class="el" href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a> shell */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -720,7 +721,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define OPTION_VETOMSG&#160;&#160;&#160;(1 &lt;&lt; 4) /* whether to send an AFP message for veto file access */</td>
+          <td class="memname">#define OPTION_VETOMSG&#160;&#160;&#160;(1 &lt;&lt; 4) /* whether <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> send an AFP message for veto file access */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -790,7 +791,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define UTF8FILELEN_EARLY&#160;&#160;&#160;255           /* Type3, early <a class="el" href="testhelper_8h.html#ac1f45edfd9d501d2972db7aa6b23084c">Mac</a> OS X 10.0-10.4.? */</td>
+          <td class="memname">#define UTF8FILELEN_EARLY&#160;&#160;&#160;255           /* Type3, early <a class="el" href="afparg_8c.html#ac1f45edfd9d501d2972db7aa6b23084c">Mac</a> OS X 10.0-10.4.? */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -805,7 +806,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* AFPCmd) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, char *ibuf, size_t ibuflen, char *rbuf, size_t *rbuflen)</td>
+          <td class="memname">typedef int(* AFPCmd) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -898,7 +899,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void afp_over_asp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -923,7 +924,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void afp_over_dsi </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -998,7 +999,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void readmessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1023,7 +1024,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int setmessage </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1033,6 +1034,13 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Copy AFP message to message buffer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>(r) message to send </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if this message is being set the first time, return 1 if the preceeding message was the same </dd></dl>
 
 </div>
 </div>

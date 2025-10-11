@@ -106,7 +106,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ac4012f22742a8e9c8d74c232373f5c5c" id="r_ac4012f22742a8e9c8d74c232373f5c5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a>(name)</td></tr>
 <tr class="memitem:a8e5490451f2e0aa5d911ec3b40ea8810" id="r_a8e5490451f2e0aa5d911ec3b40ea8810"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e5490451f2e0aa5d911ec3b40ea8810">ATALK_LIST_HEAD</a>(name)</td></tr>
 <tr class="memitem:aa097666f64c35ddd963f60e3d8ea28eb" id="r_aa097666f64c35ddd963f60e3d8ea28eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa097666f64c35ddd963f60e3d8ea28eb">ATALK_INIT_LIST_HEAD</a>(ptr)</td></tr>
-<tr class="memitem:a26c976b7f654e70df318c1843e5094de" id="r_a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  type,  member)</td></tr>
+<tr class="memitem:a26c976b7f654e70df318c1843e5094de" id="r_a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>,  member)</td></tr>
 <tr class="memitem:ab8b24e6660ab3760c923e4b4db3fa502" id="r_ab8b24e6660ab3760c923e4b4db3fa502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b24e6660ab3760c923e4b4db3fa502">list_for_each</a>(pos,  head)</td></tr>
 <tr class="memitem:a19fc06b83f3502a83ce566b8887e6aec" id="r_a19fc06b83f3502a83ce566b8887e6aec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fc06b83f3502a83ce566b8887e6aec">list_for_each_prev</a>(pos,  head)</td></tr>
 </table>
@@ -126,8 +126,9 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">    (ptr)-&gt;next = (ptr); (ptr)-&gt;prev = (ptr); \</div>
+<div class="line">    (ptr)-&gt;<a class="code hl_define" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a> = (ptr); (ptr)-&gt;prev = (ptr); \</div>
 <div class="line">} <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="ahash_8c_html_a2f905a9c4868f5f248b12d584a78dfbd"><div class="ttname"><a href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a></div><div class="ttdeci">#define next</div><div class="ttdef"><b>Definition</b> hash.c:35</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -183,7 +184,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -192,7 +193,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    ((type *)((<span class="keywordtype">char</span> *)(ptr)-(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(&amp;((type *)0)-&gt;member)))</div>
+<b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)((<span class="keywordtype">char</span> *)(ptr)-(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(&amp;((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)0)-&gt;member)))</div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
 </div><!-- fragment --><p>list_entry - get the struct for this entry @ptr: the &amp;struct <a class="el" href="structlist__head.html">list_head</a> pointer. @type: the type of the struct this is embedded in. @member: the name of the list_struct within the struct. </p>
 
 </div>
@@ -215,7 +217,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;next; pos != (head); \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;<a class="code hl_define" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a>; pos != (head); \</div>
 <div class="line">        pos = pos-&gt;next)</div>
 </div><!-- fragment --><p>list_for_each - iterate over a list @pos: the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. <br  />
 : another &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as temporary storage @head: the head for your list. </p>

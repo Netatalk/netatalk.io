@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['server_5fchild_2eh_0',['server_child.h',['../server__child_8h.html',1,'']]],
-  ['server_5fipc_2eh_1',['server_ipc.h',['../server__ipc_8h.html',1,'']]],
-  ['session_2eh_2',['session.h',['../session_8h.html',1,'']]],
-  ['sparql_5fmap_2eh_3',['sparql_map.h',['../sparql__map_8h.html',1,'']]],
-  ['spotlight_2eh_4',['spotlight.h',['../spotlight_8h.html',1,'']]],
-  ['status_2eh_5',['status.h',['../status_8h.html',1,'']]],
-  ['subtests_2eh_6',['subtests.h',['../subtests_8h.html',1,'']]],
-  ['switch_2eh_7',['switch.h',['../switch_8h.html',1,'']]]
+  ['rotest_2ec_0',['rotest.c',['../rotest_8c.html',1,'']]],
+  ['route_2ec_1',['route.c',['../route_8c.html',1,'']]],
+  ['route_2eh_2',['route.h',['../route_8h.html',1,'']]],
+  ['rpc_2eh_3',['rpc.h',['../rpc_8h.html',1,'']]],
+  ['rquota_5fxdr_2ec_4',['rquota_xdr.c',['../rquota__xdr_8c.html',1,'']]],
+  ['rtmp_2ec_5',['rtmp.c',['../rtmp_8c.html',1,'']]],
+  ['rtmp_2eh_6',['rtmp.h',['../etc_2atalkd_2rtmp_8h.html',1,'(Global Namespace)'],['../include_2atalk_2rtmp_8h.html',1,'(Global Namespace)']]],
+  ['rtmpqry_2ec_7',['rtmpqry.c',['../rtmpqry_8c.html',1,'']]]
 ];

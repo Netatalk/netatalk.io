@@ -101,18 +101,19 @@ $(function(){initNavTree('index.html','',''); });
 <div class="line">  |                            |</div>
 <div class="line"> <a class="code hl_struct" href="struct_a_s_p.html">ASP</a>    PAP                   <a class="code hl_struct" href="struct_d_s_i.html">DSI</a></div>
 <div class="line">   \   /                       |</div>
-<div class="line">    <a class="code hl_typedef" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> RTMP NBP ZIP AEP       |</div>
+<div class="line">    <a class="code hl_typedef" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> RTMP NBP ZIP AEP       | (<a class="code hl_variable" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>:548)</div>
 <div class="line">     |    |   |   |   |        |</div>
 <div class="line">-+---------------------------------------------------+- (kernel boundary)</div>
 <div class="line"> |                    Socket                         |</div>
 <div class="line"> +-----------------------+------------+--------------+</div>
 <div class="line"> |                       |     TCP    |    UDP       |</div>
 <div class="line"> |          DDP          +------------+--------------+</div>
-<div class="line"> |                       |           IP              |</div>
+<div class="line"> |                       |       IP v4 or v6         |</div>
 <div class="line"> +-----------------------+---------------------------+</div>
-<div class="line"> |                Network-Interface                  |</div>
+<div class="line"> |                Network Interface                  |</div>
 <div class="line"> +---------------------------------------------------+</div>
 <div class="ttc" id="aatp_8h_html_a5e38c8b2e7bc161a9a0dd3f131026652"><div class="ttname"><a href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a></div><div class="ttdeci">struct atp_handle * ATP</div><div class="ttdef"><b>Definition</b> atp.h:116</div></div>
+<div class="ttc" id="apap_8c_html_ac89e2c19de60b8f23bdd3789b2af094d"><div class="ttname"><a href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a></div><div class="ttdeci">static unsigned char port</div><div class="ttdef"><b>Definition</b> pap.c:504</div></div>
 <div class="ttc" id="astruct_a_s_p_html"><div class="ttname"><a href="struct_a_s_p.html">ASP</a></div><div class="ttdef"><b>Definition</b> asp.h:43</div></div>
 <div class="ttc" id="astruct_d_s_i_html"><div class="ttname"><a href="struct_d_s_i.html">DSI</a></div><div class="ttdef"><b>Definition</b> dsi.h:52</div></div>
 </div><!-- fragment --><p>When built without AppleTalk support, the network stack looks something like this:</p>
@@ -120,7 +121,7 @@ $(function(){initNavTree('index.html','',''); });
 <div class="line">        |</div>
 <div class="line">       <a class="code hl_struct" href="struct_d_s_i.html">DSI</a></div>
 <div class="line">        |</div>
-<div class="line">        | (port:548)</div>
+<div class="line">        | (<a class="code hl_variable" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>:548)</div>
 <div class="line">        |</div>
 <div class="line">-+---------------------------+- (kernel boundary)</div>
 <div class="line"> |         Socket            |</div>

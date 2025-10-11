@@ -111,8 +111,8 @@ Macros</h2></td></tr>
 <tr class="memitem:acc477a33aff0f95a621e2c55c759a2a8" id="r_acc477a33aff0f95a621e2c55c759a2a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc477a33aff0f95a621e2c55c759a2a8">logoption_nsrcinfo</a>&#160;&#160;&#160;0x04   /* don't log source info */</td></tr>
 <tr class="memitem:a0a0bf8fcd322b8d760e5064aada18458" id="r_a0a0bf8fcd322b8d760e5064aada18458"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a0bf8fcd322b8d760e5064aada18458">logoption_pid</a>&#160;&#160;&#160;0x01   /* log the pid with each message */</td></tr>
 <tr class="memitem:a4fbce505a7252246109c8001d7b7ed2b" id="r_a4fbce505a7252246109c8001d7b7ed2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fbce505a7252246109c8001d7b7ed2b">logoption_cons</a>&#160;&#160;&#160;0x02   /* log on the console if error logging */</td></tr>
-<tr class="memitem:ad84b2ec4aa5a1d31734692292f9887b5" id="r_ad84b2ec4aa5a1d31734692292f9887b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad84b2ec4aa5a1d31734692292f9887b5">logoption_ndelay</a>&#160;&#160;&#160;0x08   /* don't delay open */</td></tr>
-<tr class="memitem:aeb8cce1dc3c86c1eca5dad874cbbca56" id="r_aeb8cce1dc3c86c1eca5dad874cbbca56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8cce1dc3c86c1eca5dad874cbbca56">logoption_perror</a>&#160;&#160;&#160;0x20   /* log to stderr as well */</td></tr>
+<tr class="memitem:ad84b2ec4aa5a1d31734692292f9887b5" id="r_ad84b2ec4aa5a1d31734692292f9887b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad84b2ec4aa5a1d31734692292f9887b5">logoption_ndelay</a>&#160;&#160;&#160;0x08   /* don't <a class="el" href="cnid__dbd_8c.html#a43dc1c6a2ba8247a2e673fc150a25682">delay</a> open */</td></tr>
+<tr class="memitem:aeb8cce1dc3c86c1eca5dad874cbbca56" id="r_aeb8cce1dc3c86c1eca5dad874cbbca56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8cce1dc3c86c1eca5dad874cbbca56">logoption_perror</a>&#160;&#160;&#160;0x20   /* log <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> stderr as well */</td></tr>
 <tr class="memitem:a85f8bfc496caba193e17edf7535ed93f" id="r_a85f8bfc496caba193e17edf7535ed93f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85f8bfc496caba193e17edf7535ed93f">logoption_nfile</a>&#160;&#160;&#160;0x40   /* ignore the file that called the log */</td></tr>
 <tr class="memitem:a6e254a3b9986e46387c92d21d4bd7a46" id="r_a6e254a3b9986e46387c92d21d4bd7a46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e254a3b9986e46387c92d21d4bd7a46">logoption_nline</a>&#160;&#160;&#160;0x80   /* ignore the line that called the log*/</td></tr>
 <tr class="memitem:a6103e8a3de8a9006a8c7188d9b41a2ca" id="r_a6103e8a3de8a9006a8c7188d9b41a2ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6103e8a3de8a9006a8c7188d9b41a2ca">logfacility_user</a>&#160;&#160;&#160;(1&lt;&lt;3)  /* random user-level messages */</td></tr>
@@ -124,7 +124,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a50e14fdf303c0cc97e7bb39ae5f4aae5" id="r_a50e14fdf303c0cc97e7bb39ae5f4aae5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e14fdf303c0cc97e7bb39ae5f4aae5">logfacility_authpriv</a>&#160;&#160;&#160;(10&lt;&lt;3) /* security/auth messages (private) */</td></tr>
 <tr class="memitem:a30c47bd8d0aad6c1abfe54d77bb84245" id="r_a30c47bd8d0aad6c1abfe54d77bb84245"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30c47bd8d0aad6c1abfe54d77bb84245">logfacility_ftp</a>&#160;&#160;&#160;(11&lt;&lt;3) /* ftp daemon */</td></tr>
 <tr class="memitem:ac964c67ea194ec22067081ea9fd4870f" id="r_ac964c67ea194ec22067081ea9fd4870f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac964c67ea194ec22067081ea9fd4870f">LOG_MAX</a>&#160;&#160;&#160;<a class="el" href="#ac1351f9d0e583b8918401dd4f3d7983ea8597fbc71d80f4997540c7e0e0dfdb77">log_info</a></td></tr>
-<tr class="memitem:a398fd485682fa9eab022ac4586642c09" id="r_a398fd485682fa9eab022ac4586642c09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398fd485682fa9eab022ac4586642c09">LOG</a>(log_level,  type, ...)</td></tr>
+<tr class="memitem:a398fd485682fa9eab022ac4586642c09" id="r_a398fd485682fa9eab022ac4586642c09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398fd485682fa9eab022ac4586642c09">LOG</a>(log_level,  <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, ...)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -190,7 +190,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -200,10 +200,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                                \</div>
-<div class="line">        if (log_level &lt;= <a class="code hl_variable" href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a>[type].level)                      \</div>
-<div class="line">            make_log_entry((log_level), (type), __FILE__, <a class="code hl_variable" href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a>[type].timestamp_us, __LINE__,  __VA_ARGS__); \</div>
+<div class="line">        if (log_level &lt;= <a class="code hl_variable" href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a>[<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>].level)                      \</div>
+<div class="line">            make_log_entry((log_level), (<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>), __FILE__, <a class="code hl_variable" href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a>[<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>].timestamp_us, __LINE__,  __VA_ARGS__); \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="alogger_8h_html_a47ba869ff173f873eb997fc22bdf9ca3"><div class="ttname"><a href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a></div><div class="ttdeci">UAM_MODULE_EXPORT logtype_conf_t type_configs[logtype_end_of_list_marker]</div></div>
+<div class="ttc" id="alogger_8h_html_a47ba869ff173f873eb997fc22bdf9ca3"><div class="ttname"><a href="#a47ba869ff173f873eb997fc22bdf9ca3">type_configs</a></div><div class="ttdeci">UAM_MODULE_EXPORT logtype_conf_t type_configs[logtype_end_of_list_marker]</div><div class="ttdef"><b>Definition</b> logger.c:84</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -354,7 +355,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define logoption_ndelay&#160;&#160;&#160;0x08   /* don't delay open */</td>
+          <td class="memname">#define logoption_ndelay&#160;&#160;&#160;0x08   /* don't <a class="el" href="cnid__dbd_8c.html#a43dc1c6a2ba8247a2e673fc150a25682">delay</a> open */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -410,7 +411,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define logoption_perror&#160;&#160;&#160;0x20   /* log to stderr as well */</td>
+          <td class="memname">#define logoption_perror&#160;&#160;&#160;0x20   /* log <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> stderr as well */</td>
         </tr>
       </table>
 </div><div class="memdoc">

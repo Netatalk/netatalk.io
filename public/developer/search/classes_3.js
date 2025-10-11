@@ -11,6 +11,9 @@ var searchData=
   ['ddpshdr_8',['ddpshdr',['../structddpshdr.html',1,'']]],
   ['ddpstat_9',['ddpstat',['../structddpstat.html',1,'']]],
   ['dir_10',['dir',['../structdir.html',1,'']]],
-  ['dsi_11',['DSI',['../struct_d_s_i.html',1,'']]],
-  ['dsi_5fblock_12',['dsi_block',['../structdsi__block.html',1,'']]]
+  ['dir_5fdata_11',['dir_data',['../structdir__data.html',1,'']]],
+  ['dircache_5fstat_12',['dircache_stat',['../structdircache__stat.html',1,'']]],
+  ['dsi_13',['DSI',['../struct_d_s_i.html',1,'']]],
+  ['dsi_5fblock_14',['dsi_block',['../structdsi__block.html',1,'']]],
+  ['dsitem_15',['dsitem',['../structdsitem.html',1,'']]]
 ];

@@ -117,9 +117,9 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ad7e0dab3c378a7589a28344754e3eaaa" id="r_ad7e0dab3c378a7589a28344754e3eaaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e0dab3c378a7589a28344754e3eaaa">status_versions</a> (char *, const <a class="el" href="struct_a_s_p.html">ASP</a>, const <a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
 <tr class="memitem:a73182dbfb540d44ed3e3d2617c07190f" id="r_a73182dbfb540d44ed3e3d2617c07190f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73182dbfb540d44ed3e3d2617c07190f">status_uams</a> (char *, const char *)</td></tr>
-<tr class="memitem:addb16b588064906c768e55905d2eb5f3" id="r_addb16b588064906c768e55905d2eb5f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb16b588064906c768e55905d2eb5f3">status_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_d_s_i.html">DSI</a> *dsi)</td></tr>
+<tr class="memitem:addb16b588064906c768e55905d2eb5f3" id="r_addb16b588064906c768e55905d2eb5f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb16b588064906c768e55905d2eb5f3">status_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:a89d07a53502c9632275fe456778b6738" id="r_a89d07a53502c9632275fe456778b6738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89d07a53502c9632275fe456778b6738">set_signature</a> (struct <a class="el" href="structafp__options.html">afp_options</a> *)</td></tr>
-<tr class="memitem:a182166f42bad34cbe562b21fe282af39" id="r_a182166f42bad34cbe562b21fe282af39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182166f42bad34cbe562b21fe282af39">afp_getsrvrinfo</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, char *ibuf, size_t ibuflen, char *rbuf, size_t *rbuflen)</td></tr>
+<tr class="memitem:a182166f42bad34cbe562b21fe282af39" id="r_a182166f42bad34cbe562b21fe282af39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182166f42bad34cbe562b21fe282af39">afp_getsrvrinfo</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a5f8abd288e6099bb07cc11fa6f89c52b" name="a5f8abd288e6099bb07cc11fa6f89c52b"></a>
@@ -297,7 +297,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void set_signature </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structafp__options.html">afp_options</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct <a class="el" href="structafp__options.html">afp_options</a> *</td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -322,12 +322,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void status_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>dsi_obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>asp_obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -356,12 +356,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void status_uams </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>authlist</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -385,17 +385,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void status_versions </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_a_s_p.html">ASP</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="struct_a_s_p.html">ASP</a></td>          <td class="paramname"><span class="paramname"><em>asp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_d_s_i.html">DSI</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="struct_d_s_i.html">DSI</a> *</td>          <td class="paramname"><span class="paramname"><em>dsi</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
