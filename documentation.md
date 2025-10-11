@@ -10,41 +10,30 @@ Available languages:
 - [Netatalk Manual (English)](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
 
+If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
+
+## Installation
+
+How to install Netatalk when not using a package manager, either from source code or using container technology.
+
+- [Installation Quick Start](/install.html)
+- [Compile from Source](/compilation.html)
+- [Container Deployment](/docker.html)
+
 ## Developer Documentation
 
 The <a href="/developer/" target="_blank">Developer Documentation</a> contains information for developers
 interested in contributing to the Netatalk project, including
 implemetation details and API documentation.
 
-## Readmes
+## Release History
 
-### Installation
+The [Changelog](/news.html) (a.k.a. NEWS) contains a summary of changes for each release.
 
-Start here to get an overview of the installation process when not using a package manager.
+For a complete list of everyone who has contributed to the Netatalk project,
+see the [Contributors](/contributors.html) page.
 
-- [Installation Quick Start](/install.html) (Install)
-- [Compile from Source](/compilation.html) (Compilation)
-- [Container Deployment](/docker.html) (Docker)
-
-### Supplementary Documentation
-
-- [Security Policy and Advisories](/security.html) (Security)
-- [Version History](/news.html) (News)
-- [Netatalk Contributors](/contributors.html) (Contributors)
-- [AppleTalk Transport Layer](/appletalk.html) (AppleTalk)
-
-If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
-
-## Tech Notes
-
-A series of articles covering various technical topics on Netatalk and
-Mac networking.
-
-They can now be found in the [Netatalk Wiki](/docs).
-
-## Release Notes
-
-Records of historical Netatalk releases.
+Below follows release notes for historical Netatalk releases.
 
 ### Netatalk Version 4 Release Series
 
