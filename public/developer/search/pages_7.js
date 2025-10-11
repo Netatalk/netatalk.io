@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['metadata_20attributes_0',['Supported metadata attributes',['../index.html#autotoc_md9',1,'']]]
+  ['indexing_0',['Spotlight Compatible Indexing',['../index.html#autotoc_md12',1,'']]],
+  ['installation_20and_20configuration_1',['Installation and configuration',['../index.html#autotoc_md10',1,'']]]
 ];

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['daemons_0',['CNID Database Daemons',['../index.html#autotoc_md2',1,'']]],
-  ['database_20daemons_1',['CNID Database Daemons',['../index.html#autotoc_md2',1,'']]],
-  ['developers_2',['Documentation for Netatalk Developers',['../index.html',1,'']]],
-  ['disadvantages_3',['Disadvantages',['../index.html#autotoc_md4',1,'']]],
-  ['documentation_20for_20netatalk_20developers_4',['Documentation for Netatalk Developers',['../index.html',1,'']]]
+  ['checking_20and_20logging_0',['Error checking and logging',['../index.html#autotoc_md5',1,'']]],
+  ['cnid_20database_20daemons_1',['CNID Database Daemons',['../index.html#autotoc_md7',1,'']]],
+  ['compatible_20indexing_2',['Spotlight Compatible Indexing',['../index.html#autotoc_md12',1,'']]],
+  ['configuration_3',['Installation and configuration',['../index.html#autotoc_md10',1,'']]],
+  ['current_20shortcomings_4',['Current shortcomings',['../index.html#autotoc_md11',1,'']]]
 ];

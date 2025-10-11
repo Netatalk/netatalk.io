@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: Name</title>
+<title>netatalk: AppleTalk Transport Layer</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -65,7 +65,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('md_manpages_2man3_2nbp__name_83.html','',''); });
+$(function(){initNavTree('md_developer_2ddp.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -91,33 +91,41 @@ $(function(){initNavTree('md_manpages_2man3_2nbp__name_83.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Name </div></div>
+  <div class="headertitle"><div class="title">AppleTalk Transport Layer </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md222"></a></p>
-<p>nbp_name — NBP name parsing</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
-Synopsis</h1>
-<pre class="fragment">int nbp_name(name,
-    obj,
-    type,
-    zone);
-char *name;
-char **obj;
-char **type;
-char **zone;
-</pre><h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
-Description</h1>
-<p><b><a class="el" href="include_2atalk_2nbp_8h.html#aa10eae13e7e599c55a0a5c70f465e0ab">nbp_name()</a></b> parses user supplied names into their component object, type, and zone. <em>obj</em>, <em>type</em>, and <em>zone</em> should be passed by reference, and should point to the caller's default values. <b><a class="el" href="include_2atalk_2nbp_8h.html#aa10eae13e7e599c55a0a5c70f465e0ab">nbp_name()</a></b> will change the pointers to the parsed-out values. <em>name</em> is of the form *object:type@zone*, where each of <em>object</em>, <em>:type</em>, and <em>@zone</em> replace <em>obj</em>, <em>type</em>, and <em>zone</em>, respectively. <em>type</em> must be proceeded by `*:<em>', and *zone</em> must be preceded by `*@*'.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md225"></a>
-Examples</h1>
-<p>The argument of <b>afpd</b>(8)'s <b>-n</b> option is parsed with <b><a class="el" href="include_2atalk_2nbp_8h.html#aa10eae13e7e599c55a0a5c70f465e0ab">nbp_name()</a></b>. The default value of <em>obj</em> is the first component of the machine's hostname (as returned by <b>gethostbyname</b>(3)). The default value of <em>type</em> is "AFPServer", and of <em>zone</em> is "\*", the default zone. To cause <em>afpd</em> to register itself in some zone other than the default, one would invoke it as below where <em>obj</em> and <em>type</em> would retain their default values. </p><pre class="fragment">afpd -n @some-other-zone
-</pre><h1 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
-Bugs</h1>
-<p><em>obj</em>, <em>type</em>, and <em>zone</em> return pointers into static area which may be over-written on each call.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
-Author</h1>
-<p><a href="https://netatalk.io/contributors">Contributors to the Netatalk Project</a> </p>
+<div class="textblock"><p>AppleTalk is a network protocol family created by Apple which predates TCP/IP. It contains different protocols for different uses: address resolution, address/name mapping, service location, establishing connections, and the like.</p>
+<p>The protocol family is also often referred to as "DDP", the Datagram Delivery Protocol, which is the core transport layer protocol of AppleTalk.</p>
+<p>Netatalk implements the AppleTalk protocols to serve files over AFP and provide other services to old Mac and Apple II clients.</p>
+<p>It supports EtherTalk Phase I and II, RTMP, NBP, ZIP, AEP, <a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, PAP, and <a class="el" href="struct_a_s_p.html">ASP</a>, while expecting the host OS kernel to supply DDP.</p>
+<ul>
+<li>DDP is a socket to socket protocol that all other AppleTalk protocols are built on top of.</li>
+<li><a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, <a class="el" href="struct_a_s_p.html">ASP</a>, and NBP are implemented as statically linked libraries in Netatalk's <em>libatalk</em> shared library.</li>
+<li>The <b>atalkd</b> daemon implements RTMP, ZIP, and AEP.</li>
+<li>The <b>papd</b> daemon implements PAP, allowing Mac clients to spool to a Unix print spooler on the netatalk host computer.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+Linux</h1>
+<p>The Linux kernel has had AppleTalk support since version 1.3.0, released in June 1995. See the <a href="https://www.kernel.org/pub/linux/kernel/v1.3/">Linux 1.3.0 Changes file</a>.</p>
+<p>The source code for the AppleTalk driver lives under <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/net/appletalk">net/appletalk</a> in the Linux kernel source tree.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+NetBSD</h1>
+<p>Kernel support for AppleTalk appeared in NetBSD 1.3 in April 1997. See the <a href="http://www.netbsd.org/changes/changes-1.3.html">NetBSD 1.3 release notes</a></p>
+<p>The NetBSD kernel comes with an AppleTalk kernel module, confusingly named <em>netatalk</em>, located under <em>sys/netatalk</em> in the kernel source tree.</p>
+<p>The AppleTalk kernel module is available in NetBSD's default configuration, and should work with <em>atalkd</em> out of the box.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Other BSDs</h1>
+<p>Kernel support for AppleTalk appears in FreeBSD 2.2-current dated after 12 September 1996, as well as OpenBSD 2.2, or openbsd-current dated after Aug 1, 1997.</p>
+<p>However, both distributions deprecated AppleTalk in the 2010s. You can still run Netatalk as an AFP over TCP server on any BSD-derived operating system.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Solaris</h1>
+<p>Historical versions of Netatalk (until v2.3) distributed code for a Solaris STREAMS module that implements AppleTalk. The source code is located under <a href="https://github.com/Netatalk/netatalk/tree/branch-netatalk-2-3/sys/solaris">sys/solaris</a> in the netatalk source tree. It is written for the SPARC architecture.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Generic</h1>
+<p>If you would like AppleTalk support on another operating system, you will need either need a kernel module for your operating system, or a userland AppleTalk stack.</p>
+<p>Look at the above Solaris STREAMS module if your operating system supports that framework.</p>
+<p>Otherwise, look at the ddp code in NetBSD if your operating system is BSDish in nature.</p>
+<p>If your operating system looks different than these two cases, you'll have to roll your own implementation. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

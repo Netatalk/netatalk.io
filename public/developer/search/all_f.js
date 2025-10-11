@@ -94,7 +94,8 @@ var searchData=
   ['ossh_5falignbytes_91',['OSSH_ALIGNBYTES',['../usockfd_8h.html#acb9279d227a31ffd1d2497e509c96732',1,'usockfd.h']]],
   ['ostat_92',['ostat',['../include_2atalk_2util_8h.html#a5c2b2b5ff8cd8921f74350b382a23d0c',1,'ostat(const char *path, struct stat *buf, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a5c2b2b5ff8cd8921f74350b382a23d0c',1,'ostat(const char *path, struct stat *buf, int options):&#160;unix.c']]],
   ['ostatat_93',['ostatat',['../include_2atalk_2util_8h.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a1f73e3719511b5c1ba80c5129d08f283',1,'ostatat(int dirfd _U_, const char *path, struct stat *st, int options):&#160;unix.c']]],
-  ['outputfunc_5ft_94',['outputfunc_t',['../common_8h.html#a69dbbba09a6de7e489aae29310488247',1,'common.h']]],
-  ['overlap_95',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]],
-  ['overquota_96',['overquota',['../quota_8c.html#ad26afec8c2e2a7804f8cd03707a0a79f',1,'quota.c']]]
+  ['other_20bsds_94',['Other BSDs',['../md_developer_2ddp.html#autotoc_md2',1,'']]],
+  ['outputfunc_5ft_95',['outputfunc_t',['../common_8h.html#a69dbbba09a6de7e489aae29310488247',1,'common.h']]],
+  ['overlap_96',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]],
+  ['overquota_97',['overquota',['../quota_8c.html#ad26afec8c2e2a7804f8cd03707a0a79f',1,'quota.c']]]
 ];

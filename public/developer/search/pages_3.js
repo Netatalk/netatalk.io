@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['error_20checking_20and_20logging_0',['Error checking and logging',['../index.html#autotoc_md0',1,'']]],
-  ['examples_1',['Examples',['../index.html#autotoc_md1',1,'']]]
+  ['daemons_0',['CNID Database Daemons',['../index.html#autotoc_md7',1,'']]],
+  ['database_20daemons_1',['CNID Database Daemons',['../index.html#autotoc_md7',1,'']]],
+  ['developers_2',['Documentation for Netatalk Developers',['../index.html',1,'']]],
+  ['disadvantages_3',['Disadvantages',['../index.html#autotoc_md9',1,'']]],
+  ['documentation_20for_20netatalk_20developers_4',['Documentation for Netatalk Developers',['../index.html',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['indexing_0',['Spotlight Compatible Indexing',['../index.html#autotoc_md7',1,'']]],
-  ['installation_20and_20configuration_1',['Installation and configuration',['../index.html#autotoc_md5',1,'']]]
+  ['for_20netatalk_20developers_0',['Documentation for Netatalk Developers',['../index.html',1,'']]]
 ];

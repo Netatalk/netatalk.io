@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['for_20netatalk_20developers_0',['Documentation for Netatalk Developers',['../index.html',1,'']]]
+  ['error_20checking_20and_20logging_0',['Error checking and logging',['../index.html#autotoc_md5',1,'']]],
+  ['examples_1',['Examples',['../index.html#autotoc_md6',1,'']]]
 ];

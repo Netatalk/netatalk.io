@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: Information for Netatalk Developers</title>
+<title>netatalk: Documentation for Netatalk Developers</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -65,7 +65,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('md__d_e_v_e_l_o_p_e_r.html','',''); });
+$(function(){initNavTree('md_developer_2developer.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -91,28 +91,28 @@ $(function(){initNavTree('md__d_e_v_e_l_o_p_e_r.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Information for Netatalk Developers </div></div>
+  <div class="headertitle"><div class="title">Documentation for Netatalk Developers </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>To get started with a development environment, read the [<a href="https://netatalk.io/manual/en/Installation">https://netatalk.io/manual/en/Installation</a>](Installation chapter) in the Netatalk manual, followed by the <a href="https://netatalk.io/install">Installation Quick Start Guide</a>.</p>
-<p>Netatalk is an implementation of Apple Filing Protocol (AFP) over TCP. The session layer used to carry AFP over TCP is called <a class="el" href="struct_d_s_i.html">DSI</a>. Netatalk also supports the AppleTalk Protocol Suite for legacy Macs, Lisas and Apple IIs via the <b>atalkd</b> daemon.</p>
+<div class="textblock"><p>Netatalk is an implementation of Apple Filing Protocol (AFP) over TCP. The session layer used to carry AFP over TCP is called <a class="el" href="struct_d_s_i.html">DSI</a>. Netatalk also supports the AppleTalk Protocol Suite for legacy Macs, Lisas and Apple IIs via the <b>atalkd</b> daemon.</p>
 <p>The complete stack looks like this on a BSD-derived system:</p>
 <div class="fragment"><div class="line"> AFP                          AFP</div>
 <div class="line">  |                            |</div>
 <div class="line"> <a class="code hl_struct" href="struct_a_s_p.html">ASP</a>    PAP                   <a class="code hl_struct" href="struct_d_s_i.html">DSI</a></div>
 <div class="line">   \   /                       |</div>
-<div class="line">    <a class="code hl_typedef" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> RTMP NBP ZIP AEP       |</div>
+<div class="line">    <a class="code hl_typedef" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> RTMP NBP ZIP AEP       | (<a class="code hl_variable" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>:548)</div>
 <div class="line">     |    |   |   |   |        |</div>
 <div class="line">-+---------------------------------------------------+- (kernel boundary)</div>
 <div class="line"> |                    Socket                         |</div>
 <div class="line"> +-----------------------+------------+--------------+</div>
 <div class="line"> |                       |     TCP    |    UDP       |</div>
 <div class="line"> |          DDP          +------------+--------------+</div>
-<div class="line"> |                       |           IP              |</div>
+<div class="line"> |                       |       IP v4 or v6         |</div>
 <div class="line"> +-----------------------+---------------------------+</div>
-<div class="line"> |                Network-Interface                  |</div>
+<div class="line"> |                Network Interface                  |</div>
 <div class="line"> +---------------------------------------------------+</div>
 <div class="ttc" id="aatp_8h_html_a5e38c8b2e7bc161a9a0dd3f131026652"><div class="ttname"><a href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a></div><div class="ttdeci">struct atp_handle * ATP</div><div class="ttdef"><b>Definition</b> atp.h:116</div></div>
+<div class="ttc" id="apap_8c_html_ac89e2c19de60b8f23bdd3789b2af094d"><div class="ttname"><a href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a></div><div class="ttdeci">static unsigned char port</div><div class="ttdef"><b>Definition</b> pap.c:504</div></div>
 <div class="ttc" id="astruct_a_s_p_html"><div class="ttname"><a href="struct_a_s_p.html">ASP</a></div><div class="ttdef"><b>Definition</b> asp.h:43</div></div>
 <div class="ttc" id="astruct_d_s_i_html"><div class="ttname"><a href="struct_d_s_i.html">DSI</a></div><div class="ttdef"><b>Definition</b> dsi.h:52</div></div>
 </div><!-- fragment --><p>When built without AppleTalk support, the network stack looks something like this:</p>
@@ -120,7 +120,7 @@ $(function(){initNavTree('md__d_e_v_e_l_o_p_e_r.html','',''); });
 <div class="line">        |</div>
 <div class="line">       <a class="code hl_struct" href="struct_d_s_i.html">DSI</a></div>
 <div class="line">        |</div>
-<div class="line">        | (port:548)</div>
+<div class="line">        | (<a class="code hl_variable" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>:548)</div>
 <div class="line">        |</div>
 <div class="line">-+---------------------------+- (kernel boundary)</div>
 <div class="line"> |         Socket            |</div>
@@ -131,7 +131,7 @@ $(function(){initNavTree('md__d_e_v_e_l_o_p_e_r.html','',''); });
 <div class="line"> +---------------------------+</div>
 <div class="line"> |     Network Interface     |</div>
 <div class="line"> +---------------------------+</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Error checking and logging</h1>
 <p>We want rigid error checking and concise log messages. This often leads to significant code bloat where the relevant function call is buried in error checking and logging statements. In order to alleviate error checking and code readability, we provide a set of error checking macros in &lt;<a class="el" href="errchk_8h.html">atalk/errchk.h</a>&gt;. These macros compare the return value of statements against 0, NULL, -1 (and maybe more, check it out). Every macro comes in four flavours: EC_CHECK, EC_CHECK_LOG, EC_CHECK_LOG_ERR and EC_CHECK_CUSTOM:</p>
 <ul>
@@ -141,7 +141,7 @@ Error checking and logging</h1>
 <li>EC_CHECK_CUSTOM allows custom actions</li>
 </ul>
 <p>The macros EC_CHECK* unconditionally jump to a cleanup label where the necessary cleanup can be done alongside controlling the return value. EC_CHECK_CUSTOM doesn't do that, so an extra "goto EC_CLEANUP" may be performed as appropriate.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Examples</h2>
 <p>stat() without EC macro:</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> func(<span class="keyword">const</span> <span class="keywordtype">char</span> *name) {</div>
@@ -199,10 +199,10 @@ Examples</h2>
 <div class="line"><a class="code hl_define" href="errchk_8h.html#a208c47735e7b17af5ca81a04922369cc">EC_CLEANUP</a>:</div>
 <div class="line">    <a class="code hl_define" href="errchk_8h.html#a804bc28329904e97d787e565f2b3c666">EC_EXIT</a>;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 CNID Database Daemons</h1>
 <p>The CNID database daemons cnid_metad and cnid_dbd are an implementation of the netatalk CNID database support that attempts to put all functionality into separate daemons. There is one cnid_dbd daemon per netatalk volume. The underlying database structure is based on Berkeley DB.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Advantages</h2>
 <ul>
 <li>No locking issues or leftover locks due to crashed afpd daemons any more. Since there is only one thread of control accessing the database, no locking is needed and changes appear atomic.</li>
@@ -210,7 +210,7 @@ Advantages</h2>
 <li>No problems with user permissions and access to underlying database files, the cnid_dbd process runs under a configurable user ID that normally also owns the underlying database and can be contacted by whatever afpd daemon accesses a volume.</li>
 <li>If an afpd process crashes, the CNID database is unaffected. If the process was making changes to the database at the time of the crash, those changes will be rolled back entirely (transactions). If the process was not using the database at the time of the crash, no corrective action is necessary. In any case, database consistency is assured.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Disadvantages</h2>
 <ul>
 <li><p class="startli">Performance in an environment of processes sharing the database (files) is potentially better for two reasons:</p>
@@ -219,20 +219,20 @@ Disadvantages</h2>
 <p class="startli">I have not measured the effects of the advantages of simultaneous database access.</p>
 </li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Installation and configuration</h2>
 <p>There are two executables that will be built in etc/cnid_dbd and installed into the systems binaries directories of netatalk cnid_metad and cnid_dbd. cnid_metad should run all the time with root permissions. It will be notified when an instance of afpd starts up and will in turn make sure that a cnid_dbd daemon is started for the volume that afpd wishes to access. The cnid_dbd daemon runs as long as necessary and services any other instances of afpd that access the volume. You can safely kill it with SIGTERM, it will be restarted automatically by cnid_metad as soon as the volume is accessed again.</p>
 <p>cnid_dbd changes to the Berkeley DB directory on startup and sets effective UID and GID to owner and group of that directory. Database and supporting files should therefore be writeable by that user/group.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Current shortcomings</h2>
 <ul>
 <li>The parameter file parsing of <a class="el" href="structdb__param.html">db_param</a> is very simpleminded. It is easy to cause buffer overruns and the like. Also, there is no support for blanks (or weird characters) in filenames for the usock_file parameter.</li>
 <li>There is no protection against a malicious user connecting to the cnid_dbd socket and changing the database.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 Spotlight Compatible Indexing</h1>
 <p>Starting with version 3.1 Netatalk supports Spotlight searching. Netatalk uses GNOME TinySPARQL/<a href="https://gnome.pages.gitlab.gnome.org/localsearch/">LocalSearch</a> (previously known as Tracker) as metadata store, indexer and search engine.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Limitations and notes</h2>
 <ul>
 <li><p class="startli">Large filesystems</p>
@@ -245,7 +245,7 @@ Limitations and notes</h2>
 <p class="startli">As a workaround, keep the shared volumes you want to have indexed elsewhere on the host filesystem.</p>
 </li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
 Supported metadata attributes</h2>
 <p>The following table lists the supported Spotlight metadata attributes, based on Apple's <a href="https://developer.apple.com/documentation/coreservices/mditemref/">MDItem object</a> Core Services file metadata standard.</p>
 <table class="markdownTable">
