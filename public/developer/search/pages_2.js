@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['checking_20and_20logging_0',['Error checking and logging',['../index.html#autotoc_md5',1,'']]],
-  ['cnid_20database_20daemons_1',['CNID Database Daemons',['../index.html#autotoc_md7',1,'']]],
-  ['compatible_20indexing_2',['Spotlight Compatible Indexing',['../index.html#autotoc_md12',1,'']]],
-  ['configuration_3',['Installation and configuration',['../index.html#autotoc_md10',1,'']]],
-  ['current_20shortcomings_4',['Current shortcomings',['../index.html#autotoc_md11',1,'']]]
+  ['3_3a_20why_20this_20goes_20unnoticed_0',['Part 3: Why This Goes Unnoticed',['../md_developer_2dircache.html#autotoc_md24',1,'']]]
 ];

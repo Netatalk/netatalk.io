@@ -32,12 +32,13 @@ var searchData=
   ['nftw_5fname_29',['NFTW_NAME',['../ftw_8c.html#a55aff3d9febd79ad7742f039bf83c67d',1,'ftw.c']]],
   ['nftw_5fnew_5fname_30',['NFTW_NEW_NAME',['../ftw_8c.html#a1e84e4b34a2b55e298fccd913b0c5813',1,'ftw.c']]],
   ['nftw_5fold_5fname_31',['NFTW_OLD_NAME',['../ftw_8c.html#a7d6a35424620390a7642d390588f1811',1,'ftw.c']]],
-  ['nodecount_32',['nodecount',['../hash_8c.html#a6c4460881d4f0e0099ca771141c157d6',1,'hash.c']]],
-  ['not_5fnetatalk_5fea_33',['NOT_NETATALK_EA',['../ea_8h.html#a91f9f75b84f560bb41d9813f9dd68cb6',1,'NOT_NETATALK_EA:&#160;ea.h'],['../adoublehelper_8h.html#a91f9f75b84f560bb41d9813f9dd68cb6',1,'NOT_NETATALK_EA:&#160;adoublehelper.h']]],
-  ['notsupported_34',['NOTSUPPORTED',['../sparql__map_8c.html#a0d8ea2480bdec71b156da8302bd72309',1,'sparql_map.c']]],
-  ['ntoh64_35',['ntoh64',['../include_2atalk_2util_8h.html#aaf585d610d5f8adb46a60e787a68ca3d',1,'util.h']]],
-  ['num_5fcharsets_36',['NUM_CHARSETS',['../unicode_8h.html#aac4653f1e1b7a374fac1851edd798805',1,'unicode.h']]],
-  ['num_5fmeasurements_37',['NUM_MEASUREMENTS',['../lantest_8c.html#a7f7d2e47a92b8cec3c9f9e8527fd35f8',1,'lantest.c']]],
-  ['num_5frounds_38',['NUM_ROUNDS',['../catsearch_8c.html#af2026dc96be6266acdb392a2ca2f02cf',1,'catsearch.c']]],
-  ['numtests_39',['NUMTESTS',['../lantest_8c.html#a43073ae95bea8b1174cf5a9822fe9b43',1,'lantest.c']]]
+  ['no_5fddp_32',['NO_DDP',['../config_8h.html#ad3dc011509b52231600cfa01fa8e3e8b',1,'config.h']]],
+  ['nodecount_33',['nodecount',['../hash_8c.html#a6c4460881d4f0e0099ca771141c157d6',1,'hash.c']]],
+  ['not_5fnetatalk_5fea_34',['NOT_NETATALK_EA',['../ea_8h.html#a91f9f75b84f560bb41d9813f9dd68cb6',1,'NOT_NETATALK_EA:&#160;ea.h'],['../adoublehelper_8h.html#a91f9f75b84f560bb41d9813f9dd68cb6',1,'NOT_NETATALK_EA:&#160;adoublehelper.h']]],
+  ['notsupported_35',['NOTSUPPORTED',['../sparql__map_8c.html#a0d8ea2480bdec71b156da8302bd72309',1,'sparql_map.c']]],
+  ['ntoh64_36',['ntoh64',['../include_2atalk_2util_8h.html#aaf585d610d5f8adb46a60e787a68ca3d',1,'util.h']]],
+  ['num_5fcharsets_37',['NUM_CHARSETS',['../unicode_8h.html#aac4653f1e1b7a374fac1851edd798805',1,'unicode.h']]],
+  ['num_5fmeasurements_38',['NUM_MEASUREMENTS',['../lantest_8c.html#a7f7d2e47a92b8cec3c9f9e8527fd35f8',1,'lantest.c']]],
+  ['num_5frounds_39',['NUM_ROUNDS',['../catsearch_8c.html#af2026dc96be6266acdb392a2ca2f02cf',1,'catsearch.c']]],
+  ['numtests_40',['NUMTESTS',['../lantest_8c.html#a43073ae95bea8b1174cf5a9822fe9b43',1,'lantest.c']]]
 ];

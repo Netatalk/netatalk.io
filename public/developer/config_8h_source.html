@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.14.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
@@ -21,12 +22,13 @@
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectlogo"><a href="/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign">
    <div id="projectname">netatalk<span id="projectnumber">&#160;4.4.0dev</span>
    </div>
@@ -101,7 +103,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/* #undef BSD4_4 */</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/* Define if CNID Database Daemon backend should be compiled. */</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="config_8h.html#ae32ea9bc8c8b4b7fc408bc1554a3a69a">    8</a></span><span class="preprocessor">#define CNID_BACKEND_DBD 1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/* #undef CNID_BACKEND_DBD */</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/* Define if CNID LAST scheme backend should be compiled. */</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="config_8h.html#a6c15f928f942f155b0286c663c856ef7">   11</a></span><span class="preprocessor">#define CNID_BACKEND_LAST 1</span></div>
@@ -113,7 +115,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="config_8h.html#a97a5ee56116c60ad677ce9b07830248f">   17</a></span><span class="preprocessor">#define CNID_BACKEND_SQLITE 1</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* CUPS API Version */</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="config_8h.html#a6dc05326e75da36b7941a55c2ee60392">   20</a></span><span class="preprocessor">#define CUPS_API_VERSION &quot;2.3&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/* #undef CUPS_API_VERSION */</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/* Path to dbus-daemon */</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="config_8h.html#a4ed265fbc7f31d8e16272d8574e378d6">   23</a></span><span class="preprocessor">#define DBUS_DAEMON_PATH &quot;/opt/homebrew/bin/dbus-daemon&quot;</span></div>
@@ -125,7 +127,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/* #undef DEBUGGING */</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/* Default CNID scheme to be used */</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="config_8h.html#a7eb2e6e2aa7b9e1c85c17316b0262f6c">   32</a></span><span class="preprocessor">#define DEFAULT_CNID_SCHEME &quot;dbd&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="config_8h.html#a7eb2e6e2aa7b9e1c85c17316b0262f6c">   32</a></span><span class="preprocessor">#define DEFAULT_CNID_SCHEME &quot;sqlite&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/* Available Extended Attributes modules */</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="config_8h.html#a1dafc1d8780f658b13367453b1bc26fb">   35</a></span><span class="preprocessor">#define EA_MODULES &quot;ad | sys&quot;</span></div>
@@ -170,7 +172,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">/* #undef HAVE_CRYPT_H */</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/* Define to enable CUPS Support */</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="config_8h.html#afbd52425b2304774c3cb176fa5c00126">   77</a></span><span class="preprocessor">#define HAVE_CUPS 1</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">/* #undef HAVE_CUPS */</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">/* Define if support for dbus-glib was found */</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="config_8h.html#aed346407dd84a81b34dee1ec91aea152">   80</a></span><span class="preprocessor">#define HAVE_DBUS_GLIB 1</span></div>
@@ -248,7 +250,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="config_8h.html#adba5247326e2a907b5af05435f53c4ea">  152</a></span><span class="preprocessor">#define HAVE_GETXATTR 1</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">/* Whether to enable GSSAPI support */</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">/* #undef HAVE_GSSAPI */</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="config_8h.html#a19f13d76df4135185d088b3aa00e980a">  155</a></span><span class="preprocessor">#define HAVE_GSSAPI 1</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">/* Define to 1 if you have the &lt;gssapi/gssapi.h&gt; header file. */</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="config_8h.html#a42329c0b85f243adecd62462f002e69f">  158</a></span><span class="preprocessor">#define HAVE_GSSAPI_GSSAPI_H 1</span></div>
@@ -260,16 +262,16 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">/* #undef HAVE_INIPARSER_INIPARSER_H */</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">/* Define if Kerberos 5 is available */</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">/* #undef HAVE_KERBEROS */</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="config_8h.html#a734bce2ef2cb8455a2c15c7a7f53ff06">  167</a></span><span class="preprocessor">#define HAVE_KERBEROS 1</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">/* Define to 1 if you have the `krb5_free_error_message&#39; function. */</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">/* #undef HAVE_KRB5_FREE_ERROR_MESSAGE */</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="config_8h.html#a98f72ac4f69a08a55297e21eecf91cd8">  170</a></span><span class="preprocessor">#define HAVE_KRB5_FREE_ERROR_MESSAGE 1</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">/* Define to 1 if you have the `krb5_free_keytab_entry_contents&#39; function. */</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">/* #undef HAVE_KRB5_FREE_KEYTAB_ENTRY_CONTENTS */</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="config_8h.html#a772a79934bdc39b14337a0fe1366dd00">  173</a></span><span class="preprocessor">#define HAVE_KRB5_FREE_KEYTAB_ENTRY_CONTENTS 1</span></div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">/* Define to 1 if you have the `krb5_free_unparsed_name&#39; function. */</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">/* #undef HAVE_KRB5_FREE_UNPARSED_NAME */</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="config_8h.html#a3d438377b25d7745b0f0b016ef738e91">  176</a></span><span class="preprocessor">#define HAVE_KRB5_FREE_UNPARSED_NAME 1</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">/* Define to 1 if you have the &lt;krb5.h&gt; header file. */</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="config_8h.html#ab93e8093cf89478ee67cf4b246af57ac">  179</a></span><span class="preprocessor">#define HAVE_KRB5_H 1</span></div>
@@ -452,7 +454,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="comment">/* #undef NETBSD */</span></div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment">/* Define if DDP should be disabled */</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="comment">/* #undef NO_DDP */</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="config_8h.html#ad3dc011509b52231600cfa01fa8e3e8b">  359</a></span><span class="preprocessor">#define NO_DDP 1</span></div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="comment">/* Define if Quota support should be disabled */</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">/* #undef NO_QUOTA_SUPPORT */</span></div>
@@ -497,7 +499,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="comment">/* #undef INDEXER_DBUS_NAME */</span></div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="comment">/* Define if cracklib should be used */</span></div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno"><a class="line" href="config_8h.html#a418dd7a48470a7fcb00b210636e5d16c">  404</a></span><span class="preprocessor">#define USE_CRACKLIB 1</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="comment">/* #undef USE_CRACKLIB */</span></div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="comment">/* Define to enable Zeroconf support */</span></div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="config_8h.html#a7cb92b3761d0e0d94516c4364b88d2e8">  407</a></span><span class="preprocessor">#define USE_ZEROCONF 1</span></div>
@@ -545,7 +547,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="comment">/* #undef _ISOC9X_SOURCE */</span></div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="comment">/* path to cracklib dictionary */</span></div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno"><a class="line" href="config_8h.html#ad724504755b71074db399a0d300bca56">  452</a></span><span class="preprocessor">#define _PATH_CRACKLIB &quot;/opt/homebrew/var/cracklib/cracklib-words&quot;</span></div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="comment">/* #undef _PATH_CRACKLIB */</span></div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span> </div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span><span class="comment">/* Solaris compilation environment */</span></div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="comment">/* #undef _XOPEN_SOURCE */</span></div>
@@ -564,6 +566,7 @@ $(function(){initNavTree('config_8h_source.html','',''); });
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
+<!-- HTML footer for doxygen 1.14.0-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

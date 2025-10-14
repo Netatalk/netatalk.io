@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['for_20netatalk_20developers_0',['Documentation for Netatalk Developers',['../index.html',1,'']]]
+  ['6_3a_20understanding_20cache_20lifetimes_0',['Part 6: Understanding Cache Lifetimes',['../md_developer_2dircache.html#autotoc_md33',1,'']]]
 ];

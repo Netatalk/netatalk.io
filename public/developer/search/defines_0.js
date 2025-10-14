@@ -15,6 +15,5 @@ var searchData=
   ['_5f_5ftsearch_12',['__tsearch',['../ftw_8c.html#a4cc2e2917d2f72537a0a51b2102e4113',1,'ftw.c']]],
   ['_5ffile_5foffset_5fbits_13',['_FILE_OFFSET_BITS',['../config_8h.html#a44d01ba0a136b8e27ad362f5a823d14e',1,'config.h']]],
   ['_5fpath_5fatalkdtmp_14',['_PATH_ATALKDTMP',['../main_8h.html#a97c8a66b6219cc3ccc8788bfda8ee2f3',1,'main.h']]],
-  ['_5fpath_5fcracklib_15',['_PATH_CRACKLIB',['../config_8h.html#ad724504755b71074db399a0d300bca56',1,'config.h']]],
-  ['_5fpath_5fpaprc_16',['_PATH_PAPRC',['../pap_8c.html#a118264105efb4c0d7f9d9c1c0f9878a2',1,'_PATH_PAPRC:&#160;pap.c'],['../papstatus_8c.html#a118264105efb4c0d7f9d9c1c0f9878a2',1,'_PATH_PAPRC:&#160;papstatus.c']]]
+  ['_5fpath_5fpaprc_15',['_PATH_PAPRC',['../pap_8c.html#a118264105efb4c0d7f9d9c1c0f9878a2',1,'_PATH_PAPRC:&#160;pap.c'],['../papstatus_8c.html#a118264105efb4c0d7f9d9c1c0f9878a2',1,'_PATH_PAPRC:&#160;papstatus.c']]]
 ];
