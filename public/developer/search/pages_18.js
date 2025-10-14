@@ -11,6 +11,7 @@ var searchData=
   ['the_20precedence_20hierarchy_8',['The Precedence Hierarchy',['../md_developer_2dircache.html#autotoc_md28',1,'']]],
   ['the_20probabilistic_20solution_9',['Part 5: The Probabilistic Solution',['../md_developer_2dircache.html#autotoc_md30',1,'']]],
   ['the_20storage_20stack_10',['Part 1: The Storage Stack',['../md_developer_2dircache.html#autotoc_md18',1,'']]],
-  ['this_20goes_20unnoticed_11',['Part 3: Why This Goes Unnoticed',['../md_developer_2dircache.html#autotoc_md24',1,'']]],
-  ['transport_20layer_12',['AppleTalk Transport Layer',['../md_developer_2ddp.html',1,'']]]
+  ['third_20party_20apps_11',['Using libatalk from third party apps',['../md_developer_2libatalk.html',1,'']]],
+  ['this_20goes_20unnoticed_12',['Part 3: Why This Goes Unnoticed',['../md_developer_2dircache.html#autotoc_md24',1,'']]],
+  ['transport_20layer_13',['AppleTalk Transport Layer',['../md_developer_2ddp.html',1,'']]]
 ];

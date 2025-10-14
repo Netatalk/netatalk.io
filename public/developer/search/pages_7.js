@@ -5,6 +5,7 @@ var searchData=
   ['and_20logging_2',['Error checking and logging',['../index.html#autotoc_md5',1,'']]],
   ['and_20notes_3',['Limitations and notes',['../index.html#autotoc_md13',1,'']]],
   ['appletalk_20transport_20layer_4',['AppleTalk Transport Layer',['../md_developer_2ddp.html',1,'']]],
-  ['are_20found_20the_20lookup_20hierarchy_5',['Part 4: How Files Are Found - The Lookup Hierarchy',['../md_developer_2dircache.html#autotoc_md26',1,'']]],
-  ['attributes_6',['Supported metadata attributes',['../index.html#autotoc_md14',1,'']]]
+  ['apps_5',['Using libatalk from third party apps',['../md_developer_2libatalk.html',1,'']]],
+  ['are_20found_20the_20lookup_20hierarchy_6',['Part 4: How Files Are Found - The Lookup Hierarchy',['../md_developer_2dircache.html#autotoc_md26',1,'']]],
+  ['attributes_7',['Supported metadata attributes',['../index.html#autotoc_md14',1,'']]]
 ];

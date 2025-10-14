@@ -57,6 +57,7 @@ var NAVTREE =
         [ "Key Takeaways", "md_developer_2dircache.html#autotoc_md39", null ]
       ] ]
     ] ],
+    [ "Using libatalk from third party apps", "md_developer_2libatalk.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -105,20 +106,20 @@ var NAVTREEINDEX =
 "lantest_8c.html#acff680f2eba42a604b9084714238e6ad",
 "lp_8c.html#aabc62c13d8a7dbb3bbf818f2847b2e6d",
 "macip_8c.html#afdabe07d92351f24a8de11dd2229429f",
-"nad__rm_8c.html#ac61cacbac0fac0cf8bba1580255c06d9",
-"pack_8h.html#a18bcd0d61a8d06415abf6edb95738961",
-"queries_8c.html#a0732a2ed2f7a86758d2513592c8de390",
-"spectest_8c.html#a41129ad24f76b30c70507c389bc67f80",
-"spotlight__marshalling_8c.html#a29e901098b48a4797750f661ae5f8582",
-"struct_d_s_i.html#a7c9b7c3510397154452d9bf6a9d947a4",
-"structat__ifaddr.html#a882d212fd1240670c341ac7892fe77c2",
-"structextmap.html#af8d07e526e19b5684274c9ee99f12d9b",
-"structpath.html#a2266ce57e6ce7312074e2206914820a2",
-"structvol.html#a34b2fff8b3698d3805cd7ceb351278e0",
-"test_2testsuite_2afp_8h.html#af5b537d7a50536390f3ca9fac295a0af",
-"uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9",
-"unicode_8h.html#af153ec19ae548b53b7c1cc9829359210af781f244c467f78d9f48b3a394267802",
-"zip_8c.html#abd6a51156b39b2a3a2f50b775d471376"
+"nad__rm_8c.html#ac5ad226c7d45e3c6277db74e28b450cc",
+"pack_8h.html",
+"queries_8c.html#a06588a470e5e430d8b36c5d9fa476307",
+"spectest_8c.html#a3d877c7b94ca5cb08c4a15c162dd716b",
+"spotlight__marshalling_8c.html#a21c2415169c45d019e67f337672abba8",
+"struct_d_s_i.html#a6ffc18c9062350762a83f55085bd38e8",
+"structat__ifaddr.html#a6d441b9acc6d5ebc35b03eb87fd47844",
+"structextmap.html#ad7992dca4f2ea2d306bcf0d131aaaa2e",
+"structpath.html#a1d136a148df934a80a5cc8564a0e1e64",
+"structvol.html#a2dc2e9f21b13a9a6a57d1a586acd5f9b",
+"test_2testsuite_2afp_8h.html#af4fe9919880ed00dd12e6c97aacfbdd5",
+"uams__dhx2__pam_8c.html#a962ab893fec19b16c1614a7d1cd527b3",
+"unicode_8h.html#af153ec19ae548b53b7c1cc9829359210aa6b63db6ae07ecbac0f851b3d0006e14",
+"zip_8c.html#a9b4eb93847aa15d04fe1a16517df3fe2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

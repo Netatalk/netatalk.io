@@ -9,10 +9,11 @@ var searchData=
   ['part_205_3a_20the_20probabilistic_20solution_6',['Part 5: The Probabilistic Solution',['../md_developer_2dircache.html#autotoc_md30',1,'']]],
   ['part_206_3a_20understanding_20cache_20lifetimes_7',['Part 6: Understanding Cache Lifetimes',['../md_developer_2dircache.html#autotoc_md33',1,'']]],
   ['part_207_3a_20monitoring_20the_20improvement_8',['Part 7: Monitoring the Improvement',['../md_developer_2dircache.html#autotoc_md35',1,'']]],
-  ['performance_20tax_9',['Introduction: The Invisible Performance Tax',['../md_developer_2dircache.html#autotoc_md16',1,'']]],
-  ['points_10',['Key Points',['../md_developer_2dircache.html#autotoc_md29',1,'']]],
-  ['pollutes_20the_20page_20cache_11',['How Directory Enumeration Pollutes the Page Cache',['../md_developer_2dircache.html#autotoc_md21',1,'']]],
-  ['precedence_20hierarchy_12',['The Precedence Hierarchy',['../md_developer_2dircache.html#autotoc_md28',1,'']]],
-  ['probabilistic_20solution_13',['Part 5: The Probabilistic Solution',['../md_developer_2dircache.html#autotoc_md30',1,'']]],
-  ['problem_14',['Problem',['../md_developer_2dircache.html#autotoc_md20',1,'Part 2: The Page Cache Problem'],['../md_developer_2dircache.html#autotoc_md22',1,'The LRU Scanning Problem']]]
+  ['party_20apps_9',['Using libatalk from third party apps',['../md_developer_2libatalk.html',1,'']]],
+  ['performance_20tax_10',['Introduction: The Invisible Performance Tax',['../md_developer_2dircache.html#autotoc_md16',1,'']]],
+  ['points_11',['Key Points',['../md_developer_2dircache.html#autotoc_md29',1,'']]],
+  ['pollutes_20the_20page_20cache_12',['How Directory Enumeration Pollutes the Page Cache',['../md_developer_2dircache.html#autotoc_md21',1,'']]],
+  ['precedence_20hierarchy_13',['The Precedence Hierarchy',['../md_developer_2dircache.html#autotoc_md28',1,'']]],
+  ['probabilistic_20solution_14',['Part 5: The Probabilistic Solution',['../md_developer_2dircache.html#autotoc_md30',1,'']]],
+  ['problem_15',['Problem',['../md_developer_2dircache.html#autotoc_md20',1,'Part 2: The Page Cache Problem'],['../md_developer_2dircache.html#autotoc_md22',1,'The LRU Scanning Problem']]]
 ];
