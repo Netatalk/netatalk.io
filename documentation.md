@@ -10,7 +10,8 @@ Available languages:
 - [Netatalk Manual (English)](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
 
-If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
+If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download
+[this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
 ## Installation
 
@@ -22,9 +23,8 @@ How to install Netatalk when not using a package manager, either from source cod
 
 ## Developer Documentation
 
-The <a href="/developer/" target="_blank">Developer Documentation</a> contains information for developers
-interested in contributing to the Netatalk project, including
-implemetation details and API documentation.
+The [Developer Documentation](/developer) contains information for developers interested in contributing to the Netatalk project,
+including implemetation details and API documentation.
 
 ## Release History
 
