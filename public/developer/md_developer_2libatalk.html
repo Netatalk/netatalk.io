@@ -108,10 +108,12 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
 <li>Directly integrate libatalk from the Netatalk source tree</li>
 <li>Link with libatalk which is a shared library in its own right starting with Netatalk 3</li>
 </ol>
-<p>This examples uses approach 2. Assuming Netatalk has been installed to /usr/local/netatalk, compiling backup_demo.c is done like this:</p>
+<p>Please note that you need at least Netatalk 3.0.1 for approach 2 to work, because in earlier Netatalk versions some necessary headers are not installed correctly.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+Example</h1>
+<p>This examples links a trivial example program with the libatalk shared library. Assuming Netatalk has been installed to /usr/local/netatalk, compiling backup_demo.c is done like this:</p>
 <div class="fragment"><div class="line">c99 -I/usr/local/netatalk/include -o backup_demo backup_demo.c -L/usr/local/netatalk/lib -latalk -Wl,-rpath=/usr/local/netatalk/lib</div>
-</div><!-- fragment --><p>Please note that you need at least Netatalk 3.0.1 for this to work, because in earlier Netatalk versions some necessary headers are not installed correctly.</p>
-<p>Example program <em>backup_demo.c</em> which copies metadata and resource from one file to another:</p>
+</div><!-- fragment --><p>Here follows the <em>backup_demo.c</em> code which copies metadata and resource from one file to another:</p>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">    Copyright (c) 2012, Frank Lahm </span></div>
 <div class="line"><span class="comment"></span> </div>
@@ -127,7 +129,7 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
 <div class="line"><span class="comment">    */</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#ifdef HAVE_CONFIG_H</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;config.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">/* HAVE_CONFIG_H */</span><span class="preprocessor"></span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
@@ -244,7 +246,7 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
 <div class="ttc" id="aadouble_8h_html_a44b00e0fe4ea0978a7e59fc799dc6dac"><div class="ttname"><a href="adouble_8h.html#a44b00e0fe4ea0978a7e59fc799dc6dac">AD_DATE_START</a></div><div class="ttdeci">#define AD_DATE_START</div><div class="ttdef"><b>Definition</b> adouble.h:294</div></div>
 <div class="ttc" id="aadouble_8h_html_a4da3134c7d2b15eaa81e22b77e1eb40c"><div class="ttname"><a href="adouble_8h.html#a4da3134c7d2b15eaa81e22b77e1eb40c">ADFLAGS_RDWR</a></div><div class="ttdeci">#define ADFLAGS_RDWR</div><div class="ttdef"><b>Definition</b> adouble.h:241</div></div>
 <div class="ttc" id="aadouble_8h_html_a52a3e26c7d9d28053881d7c52af08cb7"><div class="ttname"><a href="adouble_8h.html#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a></div><div class="ttdeci">void ad_init(struct adouble *, const struct vol *restrict)</div></div>
-<div class="ttc" id="aadouble_8h_html_a79142df106145a9b4666421725a62a54"><div class="ttname"><a href="adouble_8h.html#a79142df106145a9b4666421725a62a54">ad_open</a></div><div class="ttdeci">int ad_open(struct adouble *ad, const char *path, int adflags,...)</div><div class="ttdef"><b>Definition</b> ad_open.c:2298</div></div>
+<div class="ttc" id="aadouble_8h_html_a79142df106145a9b4666421725a62a54"><div class="ttname"><a href="adouble_8h.html#a79142df106145a9b4666421725a62a54">ad_open</a></div><div class="ttdeci">int ad_open(struct adouble *ad, const char *path, int adflags,...)</div><div class="ttdef"><b>Definition</b> ad_open.c:2299</div></div>
 <div class="ttc" id="aadouble_8h_html_a7a371cabc2d5f806b16b4d840d436f78"><div class="ttname"><a href="adouble_8h.html#a7a371cabc2d5f806b16b4d840d436f78">ad_size</a></div><div class="ttdeci">off_t ad_size(const struct adouble *, uint32_t)</div><div class="ttdef"><b>Definition</b> ad_size.c:18</div></div>
 <div class="ttc" id="aadouble_8h_html_a860e10c9459b8c26f559b94d762d78ed"><div class="ttname"><a href="adouble_8h.html#a860e10c9459b8c26f559b94d762d78ed">AD_DATE_UNIX</a></div><div class="ttdeci">#define AD_DATE_UNIX</div><div class="ttdef"><b>Definition</b> adouble.h:293</div></div>
 <div class="ttc" id="aadouble_8h_html_a989f1a72a0df8cb6cb508bed7d11e830"><div class="ttname"><a href="adouble_8h.html#a989f1a72a0df8cb6cb508bed7d11e830">AD_DATE_BACKUP</a></div><div class="ttdeci">#define AD_DATE_BACKUP</div><div class="ttdef"><b>Definition</b> adouble.h:289</div></div>
@@ -259,7 +261,6 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
 <div class="ttc" id="aadouble_8h_html_ad9d2b9c985fda571bb7a8aeb38768445"><div class="ttname"><a href="adouble_8h.html#ad9d2b9c985fda571bb7a8aeb38768445">ADFLAGS_RF</a></div><div class="ttdeci">#define ADFLAGS_RF</div><div class="ttdef"><b>Definition</b> adouble.h:234</div></div>
 <div class="ttc" id="aadouble_8h_html_ae02997c24b0c5428a00a3e53bdc0ed57"><div class="ttname"><a href="adouble_8h.html#ae02997c24b0c5428a00a3e53bdc0ed57">AD_DATE_ACCESS</a></div><div class="ttdeci">#define AD_DATE_ACCESS</div><div class="ttdef"><b>Definition</b> adouble.h:290</div></div>
 <div class="ttc" id="aadouble_8h_html_ae0af80603af004b0bf35c73c2db9def3"><div class="ttname"><a href="adouble_8h.html#ae0af80603af004b0bf35c73c2db9def3">ad_setdate</a></div><div class="ttdeci">int ad_setdate(struct adouble *, unsigned int, uint32_t)</div><div class="ttdef"><b>Definition</b> ad_date.c:10</div></div>
-<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
 <div class="ttc" id="ainclude_2atalk_2volume_8h_html"><div class="ttname"><a href="include_2atalk_2volume_8h.html">volume.h</a></div></div>
 <div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
 <div class="ttc" id="alogger_8h_html_a9c70839fb4f958f9bce6346d0e69698e"><div class="ttname"><a href="logger_8h.html#a9c70839fb4f958f9bce6346d0e69698e">setuplog</a></div><div class="ttdeci">void setuplog(const char *loglevel, const char *logfile, const bool log_us_timestamp)</div><div class="ttdef"><b>Definition</b> logger.c:547</div></div>
@@ -274,16 +275,23 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
 <div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:154</div></div>
 <div class="ttc" id="astructadouble_html"><div class="ttname"><a href="structadouble.html">adouble</a></div><div class="ttdef"><b>Definition</b> adouble.h:191</div></div>
 <div class="ttc" id="astructvfs__ops_html_a43562fdd47b71e80c85440f879f27e6b"><div class="ttname"><a href="structvfs__ops.html#a43562fdd47b71e80c85440f879f27e6b">vfs_ops::vfs_copyfile</a></div><div class="ttdeci">int(* vfs_copyfile)(VFS_FUNC_ARGS_COPYFILE)</div><div class="ttdef"><b>Definition</b> vfs.h:109</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> volume.h:32</div></div>
-<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> volume.h:51</div></div>
-<div class="ttc" id="astructvol_html_a61bcc7b5bff6f68926fdfd01e4b55bd2"><div class="ttname"><a href="structvol.html#a61bcc7b5bff6f68926fdfd01e4b55bd2">vol::v_path</a></div><div class="ttdeci">char * v_path</div><div class="ttdef"><b>Definition</b> volume.h:37</div></div>
-<div class="ttc" id="astructvol_html_a7a370fc7017e1105edc9b2664125e503"><div class="ttname"><a href="structvol.html#a7a370fc7017e1105edc9b2664125e503">vol::vfs</a></div><div class="ttdeci">struct vfs_ops * vfs</div><div class="ttdef"><b>Definition</b> volume.h:79</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
+<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:51</div></div>
+<div class="ttc" id="astructvol_html_a61bcc7b5bff6f68926fdfd01e4b55bd2"><div class="ttname"><a href="structvol.html#a61bcc7b5bff6f68926fdfd01e4b55bd2">vol::v_path</a></div><div class="ttdeci">char * v_path</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:37</div></div>
+<div class="ttc" id="astructvol_html_a7a370fc7017e1105edc9b2664125e503"><div class="ttname"><a href="structvol.html#a7a370fc7017e1105edc9b2664125e503">vol::vfs</a></div><div class="ttdeci">struct vfs_ops * vfs</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:79</div></div>
 <div class="ttc" id="atest_8c_html_a46412c89a7731ffc8811e98a65c63fbd"><div class="ttname"><a href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a></div><div class="ttdeci">static char * args[]</div><div class="ttdef"><b>Definition</b> test.c:48</div></div>
 </div><!-- fragment --><hr  />
 <p>Authored by Ralph Böhme </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- HTML footer for doxygen 1.14.0-->
 <!-- modified for netatalk -->

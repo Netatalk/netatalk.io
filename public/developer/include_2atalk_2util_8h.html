@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/util.h File Reference</title>
+<title>netatalk: util.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -108,7 +108,7 @@ $(function(){initNavTree('include_2atalk_2util_8h.html','',''); });
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="at_8h_source.html">netatalk/at.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="unicode_8h_source.html">atalk/unicode.h</a>&gt;</code><br />
@@ -211,7 +211,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aba71ee1225cc8faf2997c1cdf542d7f6" id="r_aba71ee1225cc8faf2997c1cdf542d7f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba71ee1225cc8faf2997c1cdf542d7f6">ostatat</a> (int dirfd, const char *<a class="el" href="structpath.html">path</a>, struct stat *st, int options)</td></tr>
 <tr class="memitem:a4689e229e35ba860cd4acd3f19e0b1b1" id="r_a4689e229e35ba860cd4acd3f19e0b1b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4689e229e35ba860cd4acd3f19e0b1b1">ochown</a> (const char *<a class="el" href="structpath.html">path</a>, uid_t owner, gid_t group, int options)</td></tr>
 <tr class="memitem:a3537baf3b2b1e9eb9013690c3a7f8488" id="r_a3537baf3b2b1e9eb9013690c3a7f8488"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3537baf3b2b1e9eb9013690c3a7f8488">ochmod</a> (char *<a class="el" href="structpath.html">path</a>, mode_t mode, const struct stat *st, int options)</td></tr>
-<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top">bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
+<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
 <tr class="memitem:acc5e34d9d4ff3cbad83b2b5bc5d9bbb7" id="r_acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5e34d9d4ff3cbad83b2b5bc5d9bbb7">cnid_for_path</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *volpath, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *<a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 <tr class="memitem:ac65b6ebd1c4479dee2bb4120e1b747b1" id="r_ac65b6ebd1c4479dee2bb4120e1b747b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac65b6ebd1c4479dee2bb4120e1b747b1">initline</a> (int, char *)</td></tr>
 <tr class="memitem:a25a0733c503ef8f93abf18fe8cb87006" id="r_a25a0733c503ef8f93abf18fe8cb87006"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a0733c503ef8f93abf18fe8cb87006">parseline</a> (int, char *)</td></tr>
@@ -290,9 +290,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                            \</div>
-<div class="line">        while (bchar((a), blength(a) - 1) == <span class="charliteral">&#39;/&#39;</span>)   \</div>
-<div class="line">            bdelete((a), blength(a) - 1, 1);        \</div>
+<div class="line">        while (<a class="code hl_define" href="bstrlib_8h.html#a7d5203b5518eb6a79911185ad22fad42">bchar</a>((a), <a class="code hl_define" href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a>(a) - 1) == <span class="charliteral">&#39;/&#39;</span>)   \</div>
+<div class="line">            bdelete((a), <a class="code hl_define" href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a>(a) - 1, 1);        \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0);</div>
+<div class="ttc" id="abstrlib_8h_html_a462176ab60e31a2ead1b575b50b1124d"><div class="ttname"><a href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a></div><div class="ttdeci">#define blength(b)</div><div class="ttdef"><b>Definition</b> bstrlib.h:1427</div></div>
+<div class="ttc" id="abstrlib_8h_html_a7d5203b5518eb6a79911185ad22fad42"><div class="ttname"><a href="bstrlib_8h.html#a7d5203b5518eb6a79911185ad22fad42">bchar</a></div><div class="ttdeci">#define bchar(b, p)</div><div class="ttdef"><b>Definition</b> bstrlib.h:1481</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -330,7 +332,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="#a4ab05d39ff1faad524c790fb0c879452">_dialowermap</a>[(<span class="keywordtype">unsigned</span> char) (x)]</div>
-<div class="ttc" id="ainclude_2atalk_2util_8h_html_a4ab05d39ff1faad524c790fb0c879452"><div class="ttname"><a href="#a4ab05d39ff1faad524c790fb0c879452">_dialowermap</a></div><div class="ttdeci">const int _dialowermap[]</div><div class="ttdef"><b>Definition</b> util.h:91</div></div>
+<div class="ttc" id="ainclude_2atalk_2util_8h_html_a4ab05d39ff1faad524c790fb0c879452"><div class="ttname"><a href="#a4ab05d39ff1faad524c790fb0c879452">_dialowermap</a></div><div class="ttdeci">const int _dialowermap[]</div><div class="ttdef"><b>Definition</b> include/atalk/util.h:91</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -505,7 +507,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#abc3afb1d08885fc11076985ce06e27ef">hton64</a>(x))</div>
-<div class="ttc" id="ainclude_2atalk_2util_8h_html_abc3afb1d08885fc11076985ce06e27ef"><div class="ttname"><a href="#abc3afb1d08885fc11076985ce06e27ef">hton64</a></div><div class="ttdeci">#define hton64(x)</div><div class="ttdef"><b>Definition</b> util.h:77</div></div>
+<div class="ttc" id="ainclude_2atalk_2util_8h_html_abc3afb1d08885fc11076985ce06e27ef"><div class="ttname"><a href="#abc3afb1d08885fc11076985ce06e27ef">hton64</a></div><div class="ttdeci">#define hton64(x)</div><div class="ttdef"><b>Definition</b> include/atalk/util.h:77</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -828,7 +830,8 @@ Variables</h2></td></tr>
 <p>Modifies IP address in sa-&gt;sin[6]_addr-s[6]_addr. The caller is responsible for passing a value for mask that is sensible to the passed address, e.g. 0 &lt;= mask &lt;= 32 for IPv4 or 0&lt;= mask &lt;= 128 for IPv6. mask &gt; 32 for IPv4 is treated as mask = 32, mask &gt; 128 is set to 128 for IPv6.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ai</td><td>(rw) pointer to an struct sockaddr @parma mask (r) number of maskbits </td></tr>
+    <tr><td class="paramname">sa</td><td>(rw) pointer to an struct sockaddr </td></tr>
+    <tr><td class="paramname">mask</td><td>(r) number of maskbits </td></tr>
   </table>
   </dd>
 </dl>
@@ -1675,8 +1678,8 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">path</td><td>(r) path </td></tr>
     <tr><td class="paramname">mode</td><td>(r) requested mode </td></tr>
-    <tr><td class="paramname">sb</td><td>(r) stat() of path or NULL </td></tr>
-    <tr><td class="paramname">option</td><td>(r) O_NOFOLLOW | O_NETATALK_ACL</td></tr>
+    <tr><td class="paramname">st</td><td>(r) stat() of path or NULL </td></tr>
+    <tr><td class="paramname">options</td><td>(r) O_NOFOLLOW | O_NETATALK_ACL</td></tr>
   </table>
   </dd>
 </dl>
@@ -1901,7 +1904,7 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">socket</td><td>(r) socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
     <tr><td class="paramname">data</td><td>(rw) buffer for the read data </td></tr>
-    <tr><td class="paramname">lenght</td><td>(r) how many bytes to read </td></tr>
+    <tr><td class="paramname">length</td><td>(r) how many bytes to read </td></tr>
     <tr><td class="paramname">setnonblocking</td><td>(r) when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
     <tr><td class="paramname">timeout</td><td>(r) number of seconds to try reading, 0 means no timeout</td></tr>
   </table>
@@ -1962,6 +1965,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Receive a fd on a suitable socket </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>(r) PF_UNIX socket to receive on </td></tr>
+    <tr><td class="paramname">nonblocking</td><td>(r) 0: fd is in blocking mode - 1: fd is nonblocking, poll for 1 sec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>fd on success, -1 on error </dd></dl>
 
 </div>
 </div>
@@ -1975,7 +1986,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bstring rel_path_in_vol </td>
+          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> rel_path_in_vol </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
@@ -2381,7 +2392,7 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">socket</td><td>(r) socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
     <tr><td class="paramname">data</td><td>(rw) buffer for the read data </td></tr>
-    <tr><td class="paramname">lenght</td><td>(r) how many bytes to read </td></tr>
+    <tr><td class="paramname">length</td><td>(r) how many bytes to read </td></tr>
     <tr><td class="paramname">setnonblocking</td><td>(r) when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
     <tr><td class="paramname">timeout</td><td>(r) number of seconds to try reading</td></tr>
   </table>

@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/libatalk/acl/cache.h File Reference</title>
+<title>netatalk: cache.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -242,7 +242,15 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Search cache by name and uuid type</p>
-<p>@args name (r) name to search @args type (rw) type (user or group) of name, returns found type here which might mark it as a negative entry @args uuid (w) found uuid is returned here </p><dl class="section return"><dt>Returns</dt><dd>0 on sucess, entry found -1 no entry found </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>(r) name to search </td></tr>
+    <tr><td class="paramname">type</td><td>(rw) type (user or group) of name, returns found type here which might mark it as a negative entry </td></tr>
+    <tr><td class="paramname">uuid</td><td>(w) found uuid is returned here </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, entry found -1 no entry found </dd></dl>
 
 </div>
 </div>

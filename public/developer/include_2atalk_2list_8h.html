@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/list.h File Reference</title>
+<title>netatalk: list.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -155,8 +155,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structlist__head.html">list_head</a> name = <a class="code hl_define" href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a>(name)</div>
-<div class="ttc" id="ainclude_2atalk_2list_8h_html_ac4012f22742a8e9c8d74c232373f5c5c"><div class="ttname"><a href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a></div><div class="ttdeci">#define ATALK_LIST_HEAD_INIT(name)</div><div class="ttdef"><b>Definition</b> list.h:21</div></div>
-<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> list.h:17</div></div>
+<div class="ttc" id="ainclude_2atalk_2list_8h_html_ac4012f22742a8e9c8d74c232373f5c5c"><div class="ttname"><a href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a></div><div class="ttdeci">#define ATALK_LIST_HEAD_INIT(name)</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:21</div></div>
+<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:17</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,7 +203,14 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)((<span class="keywordtype">char</span> *)(ptr)-(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(&amp;((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)0)-&gt;member)))</div>
 <div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
-</div><!-- fragment --><p>list_entry - get the struct for this entry @ptr: the &amp;struct <a class="el" href="structlist__head.html">list_head</a> pointer. @type: the type of the struct this is embedded in. @member: the name of the list_struct within the struct. </p>
+</div><!-- fragment --><p>list_entry - get the struct for this entry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> pointer. </td></tr>
+    <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
+    <tr><td class="paramname">member</td><td>the name of the list_struct within the struct. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -227,8 +234,13 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;<a class="code hl_define" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a>; pos != (head); \</div>
 <div class="line">        pos = pos-&gt;next)</div>
-</div><!-- fragment --><p>list_for_each - iterate over a list @pos: the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. <br  />
-: another &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as temporary storage @head: the head for your list. </p>
+</div><!-- fragment --><p>list_for_each - iterate over a list </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -252,7 +264,13 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;prev; pos != (head); \</div>
 <div class="line">        pos = pos-&gt;prev)</div>
-</div><!-- fragment --><p>list_for_each_prev - iterate over a list in reverse order @pos: the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. @head: the head for your list. </p>
+</div><!-- fragment --><p>list_for_each_prev - iterate over a list in reverse order </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. </td></tr>
+    <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

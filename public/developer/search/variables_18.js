@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['z_0',['z',['../structzones.html#a8fc27e582457f53fa24813e3aed93126',1,'zones']]],
-  ['zh_5fcnt_1',['zh_cnt',['../structziphdr.html#a8281cbc00a137c62694bee1486d3962d',1,'ziphdr']]],
-  ['zh_5fop_2',['zh_op',['../structziphdr.html#acf7fda64a24b452d8bbf2ef963efa871',1,'ziphdr']]],
-  ['ziplast_3',['ziplast',['../zip_8c.html#adb7827ef1ab276f241183307ec67897c',1,'ziplast:&#160;zip.c'],['../etc_2atalkd_2zip_8h.html#adb7827ef1ab276f241183307ec67897c',1,'ziplast:&#160;zip.h']]],
-  ['ziptab_4',['ziptab',['../zip_8c.html#a35d8575aba309e18f94b2e09346cb01d',1,'ziptab:&#160;zip.c'],['../etc_2atalkd_2zip_8h.html#a35d8575aba309e18f94b2e09346cb01d',1,'ziptab:&#160;zip.c']]],
-  ['ziptimeout_5',['ziptimeout',['../etc_2atalkd_2main_8c.html#a480f60bb0baaad5b869dd5b6aa065583',1,'main.c']]],
-  ['zone_6',['Zone',['../struct_a_f_p_obj.html#a30ff827281975225b9b445891cec222b',1,'AFPObj::Zone'],['../nbplkup_8c.html#ae2c0460d4a9136b6801c0ab055d5e80a',1,'Zone:&#160;nbplkup.c']]],
-  ['zone_7',['zone',['../structmacip__options.html#a2e6dff228ac7459e6f475e1779583a11',1,'macip_options::zone'],['../structmacip__data.html#a0d093fc388de7d2770aeaf5b4d28e3c0',1,'macip_data::zone'],['../structafp__options.html#a3ca0c9118f6b8ac58a4e0a059e00d349',1,'afp_options::zone']]],
-  ['zre_5fnet_8',['zre_net',['../structzipreplent.html#ae6ecd147f9e781d79c19138ab17139f2',1,'zipreplent']]],
-  ['zre_5fzonelen_9',['zre_zonelen',['../structzipreplent.html#a170dca8d93c1e94e313f6d6e9d7f734e',1,'zipreplent']]],
-  ['zt_5fbcast_10',['zt_bcast',['../structziptab.html#ac29189c934bc3a8c6369f74fd01f462f',1,'ziptab']]],
-  ['zt_5flen_11',['zt_len',['../structziptab.html#a00ebc3e4bd596729058834a127339faa',1,'ziptab']]],
-  ['zt_5fname_12',['zt_name',['../structziptab.html#aacb96cbeea9dfb2fec0e5bb79dd0a102',1,'ziptab']]],
-  ['zt_5fnext_13',['zt_next',['../structziptab.html#ad91899a42184b5580bbc317c5afdf374',1,'ziptab']]],
-  ['zt_5fprev_14',['zt_prev',['../structziptab.html#afbcbd66699a859b5f165e00d6436de25',1,'ziptab']]],
-  ['zt_5frt_15',['zt_rt',['../structziptab.html#afa49ed872d660273c1fff843a4f86526',1,'ziptab']]]
+  ['xxxxxbstring_0',['xxxxxBstring',['../bstest_8c.html#a896b39e1cde957196aef2f2540b29eaa',1,'bstest.c']]]
 ];

@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/libatalk/adouble/ad_open.c File Reference</title>
+<title>netatalk: ad_open.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -693,6 +693,7 @@ Variables</h2></td></tr>
 <p>Map ADFLAGS to open() flags</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">ad</td><td>(r) the adouble structure </td></tr>
     <tr><td class="paramname">adfile</td><td>(r) the file you really want to open: ADFLAGS_DF or ADFLAGS_HF </td></tr>
     <tr><td class="paramname">adflags</td><td>(r) flags from ad_open(..., adflags, ...) </td></tr>
   </table>
@@ -1385,7 +1386,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Takes a path to an AppleDouble file and creates the parrent .AppleDouble directory</p>
+<p>Takes a path to an AppleDouble file and creates the parent .AppleDouble directory</p>
 <p>Example: path: "/path/.AppleDouble/file" =&gt; mkdir("/path/.AppleDouble/") (in <a class="el" href="#ac3cd3458d16aef30117deb466b4d94d3">ad_mkdir()</a>) </p>
 
 </div>
@@ -1529,9 +1530,9 @@ Variables</h2></td></tr>
 </p><div class="fragment"><div class="line"><span class="keyword">struct </span>adoube ad;</div>
 <div class="line"><a class="code hl_function" href="adouble_8h.html#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a>(&amp;ad, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">v_adouble</a>, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">v_ad_options</a>);</div>
 <div class="ttc" id="aadouble_8h_html_a52a3e26c7d9d28053881d7c52af08cb7"><div class="ttname"><a href="adouble_8h.html#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a></div><div class="ttdeci">void ad_init(struct adouble *, const struct vol *restrict)</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> volume.h:32</div></div>
-<div class="ttc" id="astructvol_html_a5e1dcdf6a2c973aec02be40d64960ba1"><div class="ttname"><a href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">vol::v_ad_options</a></div><div class="ttdeci">int v_ad_options</div><div class="ttdef"><b>Definition</b> volume.h:53</div></div>
-<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> volume.h:51</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
+<div class="ttc" id="astructvol_html_a5e1dcdf6a2c973aec02be40d64960ba1"><div class="ttname"><a href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">vol::v_ad_options</a></div><div class="ttdeci">int v_ad_options</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:53</div></div>
+<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:51</div></div>
 </div><!-- fragment --><p>Open a files data fork, metadata fork or resource fork.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1545,7 +1546,7 @@ Variables</h2></td></tr>
 <p>Creation flags: ADFLAGS_CREATE: create if not existing ADFLAGS_TRUNC: truncate</p>
 <p>Special flags: ADFLAGS_CHECK_OF: check for open forks from us and other afpd's ADFLAGS_SETSHRMD: this adouble struct will be used to set sharemode locks. This basically results in the files being opened RW instead of RDONLY. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>(r) mode used with O_CREATE</td></tr>
+    <tr><td class="paramname">...</td><td>(r) mode used with O_CREATE</td></tr>
   </table>
   </dd>
 </dl>
@@ -2226,7 +2227,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aad__open_8c_html_a5ddfa7f0dab22a0c5efb16f0cca00050"><div class="ttname"><a href="#a5ddfa7f0dab22a0c5efb16f0cca00050">ad_mkrf</a></div><div class="ttdeci">static int ad_mkrf(const char *path)</div><div class="ttdef"><b>Definition</b> ad_open.c:954</div></div>
 <div class="ttc" id="aad__open_8c_html_af79cf3d5305d5f3607a01684405a5b20"><div class="ttname"><a href="#af79cf3d5305d5f3607a01684405a5b20">ad_header_read</a></div><div class="ttdeci">static int ad_header_read(const char *path, struct adouble *ad, const struct stat *hst)</div><div class="ttdef"><b>Definition</b> ad_open.c:518</div></div>
 <div class="ttc" id="aadouble_8h_html_a4ccff4a67c02800e6c2da84f252e2e3e"><div class="ttname"><a href="adouble_8h.html#a4ccff4a67c02800e6c2da84f252e2e3e">ad_rebuild_adouble_header_v2</a></div><div class="ttdeci">int ad_rebuild_adouble_header_v2(struct adouble *)</div><div class="ttdef"><b>Definition</b> ad_flush.c:55</div></div>
-<div class="ttc" id="aadouble_8h_html_a5905dbd0a0c277d79b72fb2817b0839d"><div class="ttname"><a href="adouble_8h.html#a5905dbd0a0c277d79b72fb2817b0839d">ad_path</a></div><div class="ttdeci">const char * ad_path(const char *, int)</div><div class="ttdef"><b>Definition</b> ad_open.c:2032</div></div>
+<div class="ttc" id="aadouble_8h_html_a5905dbd0a0c277d79b72fb2817b0839d"><div class="ttname"><a href="adouble_8h.html#a5905dbd0a0c277d79b72fb2817b0839d">ad_path</a></div><div class="ttdeci">const char * ad_path(const char *, int)</div><div class="ttdef"><b>Definition</b> ad_open.c:2033</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2265,7 +2266,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aad__open_8c_html_a8c42ae626f646115cc632c62702c8794"><div class="ttname"><a href="#a8c42ae626f646115cc632c62702c8794">ad_header_upgrade_ea</a></div><div class="ttdeci">static int ad_header_upgrade_ea(struct adouble *ad, const char *name)</div></div>
 <div class="ttc" id="aad__open_8c_html_ad034655423063ed2e6c5c9c5eef4b9c7"><div class="ttname"><a href="#ad034655423063ed2e6c5c9c5eef4b9c7">ad_mkrf_osx</a></div><div class="ttdeci">static int ad_mkrf_osx(const char *path)</div></div>
 <div class="ttc" id="aadouble_8h_html_a67568dec8dfbcb51f129be1caff62eb1"><div class="ttname"><a href="adouble_8h.html#a67568dec8dfbcb51f129be1caff62eb1">ad_rebuild_adouble_header_ea</a></div><div class="ttdeci">int ad_rebuild_adouble_header_ea(struct adouble *)</div><div class="ttdef"><b>Definition</b> ad_flush.c:95</div></div>
-<div class="ttc" id="aadouble_8h_html_a8d05785bc656ec0ab867f0beb63fff2d"><div class="ttname"><a href="adouble_8h.html#a8d05785bc656ec0ab867f0beb63fff2d">ad_path_osx</a></div><div class="ttdeci">const char * ad_path_osx(const char *path, int adflags)</div><div class="ttdef"><b>Definition</b> ad_open.c:1981</div></div>
+<div class="ttc" id="aadouble_8h_html_a8d05785bc656ec0ab867f0beb63fff2d"><div class="ttname"><a href="adouble_8h.html#a8d05785bc656ec0ab867f0beb63fff2d">ad_path_osx</a></div><div class="ttdeci">const char * ad_path_osx(const char *path, int adflags)</div><div class="ttdef"><b>Definition</b> ad_open.c:1982</div></div>
 </div><!-- fragment -->
 </div>
 </div>

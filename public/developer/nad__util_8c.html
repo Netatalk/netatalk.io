@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/bin/nad/nad_util.c File Reference</title>
+<title>netatalk: nad_util.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -110,7 +110,7 @@ $(function(){initNavTree('nad__util_8c.html','',''); });
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;sys/mman.h&gt;</code><br />
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2b4e80dd9c31d6e015220c30754db321" id="r_a2b4e80dd9c31d6e015220c30754db321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4e80dd9c31d6e015220c30754db321">openvol</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a6c7050350fe59fbcfb81553ff4693589" id="r_a6c7050350fe59fbcfb81553ff4693589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7050350fe59fbcfb81553ff4693589">closevol</a> (<a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:adf1993c7c11da619f592c6cceb28e3e6" id="r_adf1993c7c11da619f592c6cceb28e3e6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1993c7c11da619f592c6cceb28e3e6">utompath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *upath)</td></tr>
-<tr class="memitem:a99e8493f2468f99853c745057199b50f" id="r_a99e8493f2468f99853c745057199b50f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99e8493f2468f99853c745057199b50f">convert_dots_encoding</a> (const <a class="el" href="structafpvol__t.html">afpvol_t</a> *svol, const <a class="el" href="structafpvol__t.html">afpvol_t</a> *dvol, char *<a class="el" href="structpath.html">path</a>, size_t buflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a34f6b8a4fb86a7bfe7a7da75d63a2132" id="r_a34f6b8a4fb86a7bfe7a7da75d63a2132"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f6b8a4fb86a7bfe7a7da75d63a2132">convert_dots_encoding</a> (const <a class="el" href="structafpvol__t.html">afpvol_t</a> *svol, const <a class="el" href="structafpvol__t.html">afpvol_t</a> *dvol, char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:aa2e657903c9d26c6d7500d771744bbf8" id="r_aa2e657903c9d26c6d7500d771744bbf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e657903c9d26c6d7500d771744bbf8">cnid_for_paths_parent</a> (const <a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *<a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -221,8 +221,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a99e8493f2468f99853c745057199b50f" name="a99e8493f2468f99853c745057199b50f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99e8493f2468f99853c745057199b50f">&#9670;&#160;</a></span>convert_dots_encoding()</h2>
+<a id="a34f6b8a4fb86a7bfe7a7da75d63a2132" name="a34f6b8a4fb86a7bfe7a7da75d63a2132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f6b8a4fb86a7bfe7a7da75d63a2132">&#9670;&#160;</a></span>convert_dots_encoding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,12 +240,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t buflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -254,13 +249,12 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">svol</td><td>(r) source volume </td></tr>
-    <tr><td class="paramname">dvol</td><td>(r) destinatio volume </td></tr>
-    <tr><td class="paramname">path</td><td>(rw) path to convert <em>in place</em> </td></tr>
-    <tr><td class="paramname">buflen</td><td>(r) size of path buffer (max strlen == buflen - 1)</td></tr>
+    <tr><td class="paramname">dvol</td><td>(r) destination volume </td></tr>
+    <tr><td class="paramname">path</td><td>(rw) path to convert <em>in place</em></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on sucess, -1 on error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error </dd></dl>
 
 </div>
 </div>
@@ -290,6 +284,7 @@ Variables</h2></td></tr>
 <p>Load volinfo and initialize struct vol</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">obj</td><td>(r) <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> of the current connection </td></tr>
     <tr><td class="paramname">path</td><td>(r) path to evaluate </td></tr>
     <tr><td class="paramname">vol</td><td>(rw) structure to initialize</td></tr>
   </table>

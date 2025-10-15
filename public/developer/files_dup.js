@@ -7,6 +7,7 @@ var files_dup =
     [ "etc", "dir_34c6163d67acbbcfc56107279c411fb1.html", "dir_34c6163d67acbbcfc56107279c411fb1" ],
     [ "include", "dir_d44c64559bbebec7f509842c48db8b23.html", "dir_d44c64559bbebec7f509842c48db8b23" ],
     [ "libatalk", "dir_f7a34ca911643fbe46878d1e60e6cd22.html", "dir_f7a34ca911643fbe46878d1e60e6cd22" ],
+    [ "subprojects", "dir_f8b92b099185c2eecab759fa5fb24630.html", "dir_f8b92b099185c2eecab759fa5fb24630" ],
     [ "sys", "dir_a408b6d3a4a484720bc3ecfeac8947e3.html", "dir_a408b6d3a4a484720bc3ecfeac8947e3" ],
     [ "test", "dir_13e138d54eb8818da29c3992edef070a.html", "dir_13e138d54eb8818da29c3992edef070a" ],
     [ "meson_config.h", "meson__config_8h.html", null ]

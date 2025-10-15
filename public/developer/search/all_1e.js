@@ -25,8 +25,10 @@ var searchData=
   ['write_5ftest_22',['write_test',['../_f_p_read_8c.html#ace79f87f78647814486e698645325ccc',1,'FPRead.c']]],
   ['write_5fvec_23',['write_vec',['../cnid__dbd_8c.html#ab7f11a27ce892a06fb42b5548f1d355f',1,'cnid_dbd.c']]],
   ['writeconf_24',['writeconf',['../config_8c.html#aec196d2570cf8f529eb6b23b10d4726b',1,'writeconf(char *cf):&#160;config.c'],['../etc_2atalkd_2main_8c.html#aeb1444331345dd4114188606f15c3d02',1,'writeconf(char *):&#160;config.c']]],
-  ['writefooter_25',['writefooter',['../structvfs.html#a1fb8e3703027c0d2fb7a02d674ef4259',1,'vfs']]],
-  ['writeheader_26',['writeheader',['../structvfs.html#a8b0e7dba443285efa880d8830b62b74f',1,'vfs']]],
-  ['writet_27',['writet',['../include_2atalk_2util_8h.html#ae2d02957f53e178b7cd1f83cef6c8379',1,'writet(int socket, void *data, const size_t length, int setnonblocking, int timeout):&#160;socket.c'],['../socket_8c.html#ae2d02957f53e178b7cd1f83cef6c8379',1,'writet(int socket, void *data, const size_t length, int setnonblocking, int timeout):&#160;socket.c']]],
-  ['wtermsig_28',['WTERMSIG',['../cnid__metad_8c.html#a94ec02a12424092a8391069adcd2ff73',1,'WTERMSIG:&#160;cnid_metad.c'],['../server__child_8c.html#a94ec02a12424092a8391069adcd2ff73',1,'WTERMSIG:&#160;server_child.c']]]
+  ['writefn_25',['writeFn',['../structbwrite_stream.html#aebefd7836a45d2ab56bd7f2e850263c3',1,'bwriteStream']]],
+  ['writefooter_26',['writefooter',['../structvfs.html#a1fb8e3703027c0d2fb7a02d674ef4259',1,'vfs']]],
+  ['writeheader_27',['writeheader',['../structvfs.html#a8b0e7dba443285efa880d8830b62b74f',1,'vfs']]],
+  ['writet_28',['writet',['../include_2atalk_2util_8h.html#ae2d02957f53e178b7cd1f83cef6c8379',1,'writet(int socket, void *data, const size_t length, int setnonblocking, int timeout):&#160;socket.c'],['../socket_8c.html#ae2d02957f53e178b7cd1f83cef6c8379',1,'writet(int socket, void *data, const size_t length, int setnonblocking, int timeout):&#160;socket.c']]],
+  ['wspace_29',['wspace',['../bstrlib_8c.html#aa2515fc6722e119738d604c68bfcf48e',1,'bstrlib.c']]],
+  ['wtermsig_30',['WTERMSIG',['../cnid__metad_8c.html#a94ec02a12424092a8391069adcd2ff73',1,'WTERMSIG:&#160;cnid_metad.c'],['../server__child_8c.html#a94ec02a12424092a8391069adcd2ff73',1,'WTERMSIG:&#160;server_child.c']]]
 ];

@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/dsi.h File Reference</title>
+<title>netatalk: dsi.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -1074,11 +1074,14 @@ Functions</h2></td></tr>
 <p>Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> structure </td></tr>
+    <tr><td class="paramname">serv_children</td><td>(rw) pointer to our structure with all childs </td></tr>
+    <tr><td class="paramname">tickleval</td><td>(r) tickle interval in seconds </td></tr>
     <tr><td class="paramname">childp</td><td>(w) after fork: parent return pointer to child, child returns NULL </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on sucess, any other value denotes failure </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, any other value denotes failure </dd></dl>
 
 </div>
 </div>

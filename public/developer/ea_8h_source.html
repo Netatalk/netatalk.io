@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/ea.h Source File</title>
+<title>netatalk: ea.h Source File</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -120,7 +120,7 @@ $(function(){initNavTree('ea_8h_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define ATALK_EA_H</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef HAVE_CONFIG_H</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;config.h&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#if HAVE_ATTR_XATTR_H</span></div>
@@ -352,7 +352,6 @@ $(function(){initNavTree('ea_8h_source.html','',''); });
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">#endif </span><span class="comment">/* ATALK_EA_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="acmd__dbd_8c_html_a5b5dc5446eb7e7a502a06d67b7ea302c"><div class="ttname"><a href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a></div><div class="ttdeci">static dbd_flags_t flags</div><div class="ttdef"><b>Definition</b> cmd_dbd.c:45</div></div>
-<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
 <div class="ttc" id="aea_8h_html_a0c25b99e3a8f9221c4b1860febfa324a"><div class="ttname"><a href="ea_8h.html#a0c25b99e3a8f9221c4b1860febfa324a">sys_lsetxattr</a></div><div class="ttdeci">int sys_lsetxattr(const char *path, const char *name, const void *value, size_t size, int flags)</div><div class="ttdef"><b>Definition</b> extattr.c:756</div></div>
 <div class="ttc" id="aea_8h_html_a1a49716405104fc0bd6c7bcde5ab5502"><div class="ttname"><a href="ea_8h.html#a1a49716405104fc0bd6c7bcde5ab5502">sys_flistxattr</a></div><div class="ttdeci">ssize_t sys_flistxattr(int filedes, const char *path, char *list, size_t size)</div><div class="ttdef"><b>Definition</b> extattr.c:468</div></div>
 <div class="ttc" id="aea_8h_html_a1b05b8e72b7753a9b201d1cd14f0bb8c"><div class="ttname"><a href="ea_8h.html#a1b05b8e72b7753a9b201d1cd14f0bb8c">sys_listxattr</a></div><div class="ttdeci">ssize_t sys_listxattr(const char *path, char *list, size_t size)</div><div class="ttdef"><b>Definition</b> extattr.c:435</div></div>
@@ -411,9 +410,9 @@ $(function(){initNavTree('ea_8h_source.html','',''); });
 <div class="ttc" id="astructea_html_add619f528150158215141ca2fd8bdba8"><div class="ttname"><a href="structea.html#add619f528150158215141ca2fd8bdba8">ea::ea_inited</a></div><div class="ttdeci">uint32_t ea_inited</div><div class="ttdef"><b>Definition</b> ea.h:166</div></div>
 <div class="ttc" id="astructea_html_af78c4d703f257a3ebb3e3f6621d354d9"><div class="ttname"><a href="structea.html#af78c4d703f257a3ebb3e3f6621d354d9">ea::vol</a></div><div class="ttdeci">const struct vol * vol</div><div class="ttdef"><b>Definition</b> ea.h:168</div></div>
 <div class="ttc" id="astructea_html_af8ebc5b7a73761d98037d6f9c4031d59"><div class="ttname"><a href="structea.html#af8ebc5b7a73761d98037d6f9c4031d59">ea::ea_entries</a></div><div class="ttdeci">struct ea_entry(* ea_entries)[]</div><div class="ttdef"><b>Definition</b> ea.h:176</div></div>
-<div class="ttc" id="astructlist_html"><div class="ttname"><a href="structlist.html">list</a></div><div class="ttdef"><b>Definition</b> list.h:6</div></div>
-<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> directory.h:97</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> volume.h:32</div></div>
+<div class="ttc" id="astructlist_html"><div class="ttname"><a href="structlist.html">list</a></div><div class="ttdef"><b>Definition</b> etc/atalkd/list.h:6</div></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:97</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
 <div class="ttc" id="avfs_8h_html"><div class="ttname"><a href="vfs_8h.html">vfs.h</a></div></div>
 <div class="ttc" id="avfs_8h_html_a294a7e2eb0d859e81a39516c4ce77236"><div class="ttname"><a href="vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a></div><div class="ttdeci">#define VFS_FUNC_ARGS_SETFILEMODE</div><div class="ttdef"><b>Definition</b> vfs.h:44</div></div>
 <div class="ttc" id="avfs_8h_html_a30cbeb73710eda08012f65bbefe4c2d4"><div class="ttname"><a href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a></div><div class="ttdeci">#define VFS_FUNC_ARGS_SETDIRUNIXMODE</div><div class="ttdef"><b>Definition</b> vfs.h:50</div></div>

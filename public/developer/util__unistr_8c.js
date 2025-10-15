@@ -27,7 +27,5 @@ var util__unistr_8c =
     [ "strndup_w", "util__unistr_8c.html#a85c8723f0a8d3b927d3ee11b490d9b50", null ],
     [ "strnlen_w", "util__unistr_8c.html#aaba991713d52dec803e416d83f975af1", null ],
     [ "strstr_w", "util__unistr_8c.html#ae38c168893922033c2a777a9e3e58ea8", null ],
-    [ "strupper_w", "util__unistr_8c.html#a001bc31ee586f13019b13a874d176f83", null ],
-    [ "utf8_charlen", "util__unistr_8c.html#a720a4e20a38712695cdc2b805f9d2e1d", null ],
-    [ "utf8_strlen_validate", "util__unistr_8c.html#ab60c4e04ed645857bb7a0e7a6914b7e5", null ]
+    [ "strupper_w", "util__unistr_8c.html#a001bc31ee586f13019b13a874d176f83", null ]
 ];

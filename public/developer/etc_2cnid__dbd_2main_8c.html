@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/cnid_dbd/main.c File Reference</title>
+<title>netatalk: main.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -115,7 +115,7 @@ $(function(){initNavTree('etc_2cnid__dbd_2main_8c.html','',''); });
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid__bdb__private_8h_source.html">atalk/cnid_bdb_private.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="errchk_8h_source.html">atalk/errchk.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
@@ -150,7 +150,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a4fb19e123d86c30825553b6983720f42" id="r_a4fb19e123d86c30825553b6983720f42"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_d_b_d.html">DBD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fb19e123d86c30825553b6983720f42">dbd</a></td></tr>
 <tr class="memitem:a62198ea3dedabeecb5afb6bee7d7e30f" id="r_a62198ea3dedabeecb5afb6bee7d7e30f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62198ea3dedabeecb5afb6bee7d7e30f">exit_sig</a> = 0</td></tr>
 <tr class="memitem:a8d123fc8decf963c436fddfd7531389a" id="r_a8d123fc8decf963c436fddfd7531389a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d123fc8decf963c436fddfd7531389a">db_locked</a></td></tr>
-<tr class="memitem:a2e1879860bff0fb8da8105a1cb9c23a5" id="r_a2e1879860bff0fb8da8105a1cb9c23a5"><td class="memItemLeft" align="right" valign="top">static bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a></td></tr>
+<tr class="memitem:a2e1879860bff0fb8da8105a1cb9c23a5" id="r_a2e1879860bff0fb8da8105a1cb9c23a5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a></td></tr>
 <tr class="memitem:adad0b853d0341ebe36b84382a60fac47" id="r_adad0b853d0341ebe36b84382a60fac47"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structdb__param.html">db_param</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad0b853d0341ebe36b84382a60fac47">dbp</a></td></tr>
 <tr class="memitem:a5979f6731f9ed377c95eab32232edfa1" id="r_a5979f6731f9ed377c95eab32232edfa1"><td class="memItemLeft" align="right" valign="top">static struct vol *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5979f6731f9ed377c95eab32232edfa1">vol</a></td></tr>
 </table>
@@ -247,7 +247,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Get lock on db lock file</p>
-<p>@args cmd (r) lock command: LOCK_FREE: close lockfd LOCK_UNLOCK: unlock lockm keep lockfd open LOCK_EXCL: F_WRLCK on lockfd LOCK_SHRD: F_RDLCK on lockfd @args dbpath (r) path to lockfile, only used on first call, later the stored fd is used </p><dl class="section return"><dt>Returns</dt><dd>LOCK_FREE/LOCK_UNLOCK return 0 on success, -1 on error LOCK_EXCL/LOCK_SHRD return LOCK_EXCL or LOCK_SHRD respectively on success, 0 if the lock couldn't be acquired, -1 on other errors </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>(r) lock command: LOCK_FREE: close lockfd LOCK_UNLOCK: unlock lockm keep lockfd open LOCK_EXCL: F_WRLCK on lockfd LOCK_SHRD: F_RDLCK on lockfd </td></tr>
+    <tr><td class="paramname">dbpath</td><td>(r) path to lockfile, only used on first call, later the stored fd is used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LOCK_FREE/LOCK_UNLOCK return 0 on success, -1 on error LOCK_EXCL/LOCK_SHRD return LOCK_EXCL or LOCK_SHRD respectively on success, 0 if the lock couldn't be acquired, -1 on other errors </dd></dl>
 
 </div>
 </div>
@@ -526,7 +533,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bstring dbpath</td>
+          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> dbpath</td>
         </tr>
       </table>
   </td>

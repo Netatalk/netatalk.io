@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/libatalk/util/netatalk_conf.c File Reference</title>
+<title>netatalk: netatalk_conf.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -119,7 +119,7 @@ $(function(){initNavTree('netatalk__conf_8c.html','',''); });
 <code>#include &lt;sys/socket.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;utime.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;iniparser.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
@@ -319,7 +319,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>check access list</p>
-<p>this function wants a string consisting of names seperated by comma or space. Names may be quoted within a pair of quotes. Groups are denoted by a leading @ symbol. Example: user1 user2, user3, @group1 @group2, @group3 "user name1", "@group name1" A NULL argument allows everybody to have access. We return three things: -1: no list 0: list exists, but name isn't in it 1: in list </p>
+<p>this function wants a string consisting of names seperated by comma or space. Names may be quoted within a pair of quotes. Groups are denoted by a leading @ symbol. Example: user1 user2, user3, "@group1", "@group2", "@group3", "user name1", "@group name1" A NULL argument allows everybody to have access. We return three things: -1: no list 0: list exists, but name isn't in it 1: in list </p>
 
 </div>
 </div>

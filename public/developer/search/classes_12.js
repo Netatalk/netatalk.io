@@ -1,5 +1,19 @@
 var searchData=
 [
-  ['test_5fentry_0',['test_entry',['../structtest__entry.html',1,'']]],
-  ['test_5ffn_1',['test_fn',['../structtest__fn.html',1,'']]]
+  ['savedir_0',['savedir',['../structsavedir.html',1,'']]],
+  ['savedt_1',['savedt',['../structsavedt.html',1,'']]],
+  ['sbstr_2',['sbstr',['../structsbstr.html',1,'']]],
+  ['scrit_3',['scrit',['../structscrit.html',1,'']]],
+  ['server_4',['server',['../structserver.html',1,'']]],
+  ['server_5fchild_5ft_5',['server_child_t',['../structserver__child__t.html',1,'']]],
+  ['session_5finfo_6',['session_info',['../structsession__info.html',1,'']]],
+  ['sl_5fcnids_5ft_7',['sl_cnids_t',['../structsl__cnids__t.html',1,'']]],
+  ['sl_5fctx_8',['sl_ctx',['../structsl__ctx.html',1,'']]],
+  ['sl_5frslts_9',['sl_rslts',['../structsl__rslts.html',1,'']]],
+  ['sl_5fuuid_5ft_10',['sl_uuid_t',['../structsl__uuid__t.html',1,'']]],
+  ['slq_5fstate_5fnames_11',['slq_state_names',['../structslq__state__names.html',1,'']]],
+  ['sockaddr_5fat_12',['sockaddr_at',['../structsockaddr__at.html',1,'']]],
+  ['spotlight_5fsparql_5fmap_13',['spotlight_sparql_map',['../structspotlight__sparql__map.html',1,'']]],
+  ['sreq_5fst_14',['sreq_st',['../structsreq__st.html',1,'']]],
+  ['sres_5fst_15',['sres_st',['../structsres__st.html',1,'']]]
 ];

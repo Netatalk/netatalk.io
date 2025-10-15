@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/afpd/directory.c File Reference</title>
+<title>netatalk: directory.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -113,7 +113,7 @@ $(function(){initNavTree('directory_8c.html','',''); });
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;utime.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
@@ -152,7 +152,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f08e97a51b5a57276f6a8c7444dd357" id="r_a2f08e97a51b5a57276f6a8c7444dd357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f08e97a51b5a57276f6a8c7444dd357">get_afp_errno</a> (const int <a class="el" href="structparam.html">param</a>)</td></tr>
 <tr class="memitem:a1d42d13b8257907a411a2704e37dfe93" id="r_a1d42d13b8257907a411a2704e37dfe93"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d42d13b8257907a411a2704e37dfe93">dirlookup</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 <tr class="memdesc:a1d42d13b8257907a411a2704e37dfe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a DID.  <br /></td></tr>
-<tr class="memitem:a644916c3887056adc8a5d28505f488f4" id="r_a644916c3887056adc8a5d28505f488f4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644916c3887056adc8a5d28505f488f4">dir_new</a> (const char *m_name, const char *u_name, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, bstring <a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
+<tr class="memitem:a644916c3887056adc8a5d28505f488f4" id="r_a644916c3887056adc8a5d28505f488f4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644916c3887056adc8a5d28505f488f4">dir_new</a> (const char *m_name, const char *u_name, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> <a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
 <tr class="memdesc:a644916c3887056adc8a5d28505f488f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct struct dir.  <br /></td></tr>
 <tr class="memitem:a273dba2fb5d492e91b9bdfa667e5387e" id="r_a273dba2fb5d492e91b9bdfa667e5387e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a273dba2fb5d492e91b9bdfa667e5387e">dir_free</a> (struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memdesc:a273dba2fb5d492e91b9bdfa667e5387e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a struct dir and all its members.  <br /></td></tr>
@@ -700,7 +700,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vol</td><td>(r) pointer to struct vol, possibly modified in callee </td></tr>
-    <tr><td class="paramname">dir</td><td>(r) pointer to parrent directory </td></tr>
+    <tr><td class="paramname">dir</td><td>(r) pointer to parent directory </td></tr>
     <tr><td class="paramname">path</td><td>(rw) pointer to struct path with valid path-&gt;u_name </td></tr>
     <tr><td class="paramname">len</td><td>(r) strlen of path-&gt;u_name</td></tr>
   </table>
@@ -729,7 +729,7 @@ Variables</h2></td></tr>
 <p>Free a struct dir and all its members. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">(rw)</td><td>pointer to struct dir </td></tr>
+    <tr><td class="paramname">dir</td><td>(rw) pointer to struct dir </td></tr>
   </table>
   </dd>
 </dl>
@@ -789,7 +789,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bstring</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+          <td class="paramtype"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

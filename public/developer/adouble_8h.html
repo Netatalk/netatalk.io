@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/adouble.h File Reference</title>
+<title>netatalk: adouble.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -3688,9 +3688,9 @@ Functions</h2></td></tr>
 </p><div class="fragment"><div class="line"><span class="keyword">struct </span>adoube ad;</div>
 <div class="line"><a class="code hl_function" href="#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a>(&amp;ad, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">v_adouble</a>, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">v_ad_options</a>);</div>
 <div class="ttc" id="aadouble_8h_html_a52a3e26c7d9d28053881d7c52af08cb7"><div class="ttname"><a href="#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a></div><div class="ttdeci">void ad_init(struct adouble *, const struct vol *restrict)</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> volume.h:32</div></div>
-<div class="ttc" id="astructvol_html_a5e1dcdf6a2c973aec02be40d64960ba1"><div class="ttname"><a href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">vol::v_ad_options</a></div><div class="ttdeci">int v_ad_options</div><div class="ttdef"><b>Definition</b> volume.h:53</div></div>
-<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> volume.h:51</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
+<div class="ttc" id="astructvol_html_a5e1dcdf6a2c973aec02be40d64960ba1"><div class="ttname"><a href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">vol::v_ad_options</a></div><div class="ttdeci">int v_ad_options</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:53</div></div>
+<div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:51</div></div>
 </div><!-- fragment --><p>Open a files data fork, metadata fork or resource fork.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3704,7 +3704,7 @@ Functions</h2></td></tr>
 <p>Creation flags: ADFLAGS_CREATE: create if not existing ADFLAGS_TRUNC: truncate</p>
 <p>Special flags: ADFLAGS_CHECK_OF: check for open forks from us and other afpd's ADFLAGS_SETSHRMD: this adouble struct will be used to set sharemode locks. This basically results in the files being opened RW instead of RDONLY. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>(r) mode used with O_CREATE</td></tr>
+    <tr><td class="paramname">...</td><td>(r) mode used with O_CREATE</td></tr>
   </table>
   </dd>
 </dl>

@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/include/atalk/list.h Source File</title>
+<title>netatalk: list.h Source File</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -99,7 +99,7 @@ $(function(){initNavTree('include_2atalk_2list_8h_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">list.h</div></div>
+  <div class="headertitle"><div class="title">include/atalk/list.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="include_2atalk_2list_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* This code has been stolen from Linux kernel :) */</span></div>
@@ -214,26 +214,26 @@ $(function(){initNavTree('include_2atalk_2list_8h_source.html','',''); });
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">    ((type *)((char *)(ptr)-(unsigned long)(&amp;((type *)0)-&gt;member)))</span></div>
 </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
-<div class="foldopen" id="foldopen00151" data-start="" data-end="">
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="include_2atalk_2list_8h.html#ab8b24e6660ab3760c923e4b4db3fa502">  151</a></span><span class="preprocessor">#define list_for_each(pos, head) \</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    for (pos = (head)-&gt;next; pos != (head); \</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">        pos = pos-&gt;next)</span></div>
+<div class="foldopen" id="foldopen00150" data-start="" data-end="">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="include_2atalk_2list_8h.html#ab8b24e6660ab3760c923e4b4db3fa502">  150</a></span><span class="preprocessor">#define list_for_each(pos, head) \</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    for (pos = (head)-&gt;next; pos != (head); \</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">        pos = pos-&gt;next)</span></div>
 </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
-<div class="foldopen" id="foldopen00160" data-start="" data-end="">
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="include_2atalk_2list_8h.html#a19fc06b83f3502a83ce566b8887e6aec">  160</a></span><span class="preprocessor">#define list_for_each_prev(pos, head) \</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">    for (pos = (head)-&gt;prev; pos != (head); \</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">        pos = pos-&gt;prev)</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00159" data-start="" data-end="">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="include_2atalk_2list_8h.html#a19fc06b83f3502a83ce566b8887e6aec">  159</a></span><span class="preprocessor">#define list_for_each_prev(pos, head) \</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">    for (pos = (head)-&gt;prev; pos != (head); \</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">        pos = pos-&gt;prev)</span></div>
 </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ahash_8c_html_a2f905a9c4868f5f248b12d584a78dfbd"><div class="ttname"><a href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a></div><div class="ttdeci">#define next</div><div class="ttdef"><b>Definition</b> hash.c:35</div></div>
-<div class="ttc" id="ainclude_2atalk_2list_8h_html_aa097666f64c35ddd963f60e3d8ea28eb"><div class="ttname"><a href="include_2atalk_2list_8h.html#aa097666f64c35ddd963f60e3d8ea28eb">ATALK_INIT_LIST_HEAD</a></div><div class="ttdeci">#define ATALK_INIT_LIST_HEAD(ptr)</div><div class="ttdef"><b>Definition</b> list.h:26</div></div>
+<div class="ttc" id="ainclude_2atalk_2list_8h_html_aa097666f64c35ddd963f60e3d8ea28eb"><div class="ttname"><a href="include_2atalk_2list_8h.html#aa097666f64c35ddd963f60e3d8ea28eb">ATALK_INIT_LIST_HEAD</a></div><div class="ttdeci">#define ATALK_INIT_LIST_HEAD(ptr)</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:26</div></div>
 <div class="ttc" id="anad__ls_8c_html_a6c8ec3c3e77241328358d43697f6f840"><div class="ttname"><a href="nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840">first</a></div><div class="ttdeci">static int first</div><div class="ttdef"><b>Definition</b> nad_ls.c:54</div></div>
 <div class="ttc" id="astructentry_html"><div class="ttname"><a href="structentry.html">entry</a></div><div class="ttdef"><b>Definition</b> ad_open.c:97</div></div>
-<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> list.h:17</div></div>
-<div class="ttc" id="astructlist__head_html_aaa0eabda8877e1d6de73a33f223ad004"><div class="ttname"><a href="structlist__head.html#aaa0eabda8877e1d6de73a33f223ad004">list_head::prev</a></div><div class="ttdeci">struct list_head * prev</div><div class="ttdef"><b>Definition</b> list.h:18</div></div>
-<div class="ttc" id="astructlist__head_html_ac3b0ff0dfb978a0cfbdad6b9d19cdcfe"><div class="ttname"><a href="structlist__head.html#ac3b0ff0dfb978a0cfbdad6b9d19cdcfe">list_head::next</a></div><div class="ttdeci">struct list_head * next</div><div class="ttdef"><b>Definition</b> list.h:18</div></div>
-<div class="ttc" id="astructlist_html"><div class="ttname"><a href="structlist.html">list</a></div><div class="ttdef"><b>Definition</b> list.h:6</div></div>
+<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:17</div></div>
+<div class="ttc" id="astructlist__head_html_aaa0eabda8877e1d6de73a33f223ad004"><div class="ttname"><a href="structlist__head.html#aaa0eabda8877e1d6de73a33f223ad004">list_head::prev</a></div><div class="ttdeci">struct list_head * prev</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:18</div></div>
+<div class="ttc" id="astructlist__head_html_ac3b0ff0dfb978a0cfbdad6b9d19cdcfe"><div class="ttname"><a href="structlist__head.html#ac3b0ff0dfb978a0cfbdad6b9d19cdcfe">list_head::next</a></div><div class="ttdeci">struct list_head * next</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:18</div></div>
+<div class="ttc" id="astructlist_html"><div class="ttname"><a href="structlist.html">list</a></div><div class="ttdef"><b>Definition</b> etc/atalkd/list.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

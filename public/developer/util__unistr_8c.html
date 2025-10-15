@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/libatalk/unicode/util_unistr.c File Reference</title>
+<title>netatalk: util_unistr.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -144,8 +144,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a4b5c0310ba524a7d7209037fd3a85416" id="r_a4b5c0310ba524a7d7209037fd3a85416"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b5c0310ba524a7d7209037fd3a85416">do_decomposition_sp</a> (unsigned int <a class="el" href="precompose_8h.html#a1859436f57807621f4acdbfd64d5e8cb">base_sp</a>)</td></tr>
 <tr class="memitem:ac4d07daa1b85651c92b4c52cd79b5f0e" id="r_ac4d07daa1b85651c92b4c52cd79b5f0e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4d07daa1b85651c92b4c52cd79b5f0e">precompose_w</a> (<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *name, size_t inplen, <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *comp, size_t *outlen)</td></tr>
 <tr class="memitem:a9a928af14b946b149fc3838f9a6dcee2" id="r_a9a928af14b946b149fc3838f9a6dcee2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a928af14b946b149fc3838f9a6dcee2">decompose_w</a> (<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *name, size_t inplen, <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *comp, size_t *outlen)</td></tr>
-<tr class="memitem:a720a4e20a38712695cdc2b805f9d2e1d" id="r_a720a4e20a38712695cdc2b805f9d2e1d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a720a4e20a38712695cdc2b805f9d2e1d">utf8_charlen</a> (char *utf8)</td></tr>
-<tr class="memitem:ab60c4e04ed645857bb7a0e7a6914b7e5" id="r_ab60c4e04ed645857bb7a0e7a6914b7e5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab60c4e04ed645857bb7a0e7a6914b7e5">utf8_strlen_validate</a> (char *utf8)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a9a928af14b946b149fc3838f9a6dcee2" name="a9a928af14b946b149fc3838f9a6dcee2"></a>
@@ -761,40 +759,6 @@ Functions</h2></td></tr>
           <td class="memname">int strupper_w </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a720a4e20a38712695cdc2b805f9d2e1d" name="a720a4e20a38712695cdc2b805f9d2e1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720a4e20a38712695cdc2b805f9d2e1d">&#9670;&#160;</a></span>utf8_charlen()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_charlen </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>utf8</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab60c4e04ed645857bb7a0e7a6914b7e5" name="ab60c4e04ed645857bb7a0e7a6914b7e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab60c4e04ed645857bb7a0e7a6914b7e5">&#9670;&#160;</a></span>utf8_strlen_validate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_strlen_validate </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>utf8</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -14,7 +14,7 @@ var catsearch_8c =
     [ "afp_catsearch_ext", "catsearch_8c.html#ab58ad704184a04a604059011e4b17672", null ],
     [ "catsearch", "catsearch_8c.html#a1593cc9dcab6f400c40d57c5e3cdf40f", null ],
     [ "catsearch_afp", "catsearch_8c.html#ae55407b65c573db8d95e11b2f7a2ffc3", null ],
-    [ "catsearch_db", "catsearch_8c.html#a8e2ae631d5a8cfa9c5395bad5deec8f7", null ],
+    [ "catsearch_db", "catsearch_8c.html#afe5e6ececec58e47327aa5b248de0419", null ],
     [ "clearstack", "catsearch_8c.html#ab586991280cf34ae06586a780a2034d4", null ],
     [ "crit_check", "catsearch_8c.html#a808300d31334e930c2aac1e60f899082", null ],
     [ "reducestack", "catsearch_8c.html#a7821c6be69d2c02717a20c334f3155a7", null ],

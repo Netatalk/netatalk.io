@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/cnid_dbd/dbif.h File Reference</title>
+<title>netatalk: dbif.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -661,6 +661,8 @@ Functions</h2></td></tr>
 <p>Search the database by name</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">dbd</td><td>(r) database handle </td></tr>
+    <tr><td class="paramname">key</td><td>(r) key to search for, must be initialized with name to search for (key-&gt;data, key-&gt;size) </td></tr>
     <tr><td class="paramname">resbuf</td><td>(w) buffer for search results CNIDs, maxsize is assumed to be DBD_MAX_SRCH_RSLTS * sizefof(cnid_t)</td></tr>
   </table>
   </dd>

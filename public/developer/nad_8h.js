@@ -20,7 +20,7 @@ var nad_8h =
     [ "ad_set", "nad_8h.html#a7639fd4c45ad5bda9d1b12509dcc72f1", null ],
     [ "closevol", "nad_8h.html#a6c7050350fe59fbcfb81553ff4693589", null ],
     [ "cnid_for_paths_parent", "nad_8h.html#aa2e657903c9d26c6d7500d771744bbf8", null ],
-    [ "convert_dots_encoding", "nad_8h.html#a12a4b8fddc78fbc1d00c00150d0c4381", null ],
+    [ "convert_dots_encoding", "nad_8h.html#a34f6b8a4fb86a7bfe7a7da75d63a2132", null ],
     [ "openvol", "nad_8h.html#a2b4e80dd9c31d6e015220c30754db321", null ],
     [ "utompath", "nad_8h.html#a351c5f199941e98943e4ae0cf996c3a7", null ],
     [ "fflag", "nad_8h.html#aab9e30d72b4b6af02ce19b24422ad2ce", null ],

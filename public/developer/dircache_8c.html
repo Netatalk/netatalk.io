@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/afpd/dircache.c File Reference</title>
+<title>netatalk: dircache.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -108,7 +108,7 @@ $(function(){initNavTree('dircache_8c.html','',''); });
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2directory_8h_source.html">atalk/directory.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="globals_8h_source.html">atalk/globals.h</a>&gt;</code><br />
@@ -260,7 +260,8 @@ Variables</h2></td></tr>
 <p>Add a struct dir to the cache and its indexes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td>(r) pointer to parrent directory</td></tr>
+    <tr><td class="paramname">vol</td><td>(r) pointer to volume </td></tr>
+    <tr><td class="paramname">dir</td><td>(r) pointer to parent directory</td></tr>
   </table>
   </dd>
 </dl>
@@ -336,13 +337,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize the dircache and indexes. </p>
-<p>This is called in child afpd initialisation. The maximum cache size will be max(DEFAULT_MAX_DIRCACHE_SIZE, min(size, MAX_POSSIBLE_DIRCACHE_SIZE)). It initializes a hashtable which we use to store a directory cache in. It also initializes two indexes:</p><ul>
+<p>This is called in child afpd initialization. The maximum cache size will be max(DEFAULT_MAX_DIRCACHE_SIZE, min(size, MAX_POSSIBLE_DIRCACHE_SIZE)). It initializes a hashtable which we use to store a directory cache in. It also initializes two indexes:</p><ul>
 <li>a DID/name index on the main dircache</li>
 <li>a queue index on the dircache</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>(r) requested maximum size from afp.conf</td></tr>
+    <tr><td class="paramname">reqsize</td><td>(r) requested maximum size from afp.conf</td></tr>
   </table>
   </dd>
 </dl>
@@ -523,7 +524,8 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">vol</td><td>(r) volume </td></tr>
     <tr><td class="paramname">dir</td><td>(r) directory </td></tr>
-    <tr><td class="paramname">name</td><td>(r) name (server side encoding) @parma len (r) strlen of name</td></tr>
+    <tr><td class="paramname">name</td><td>(r) name (server side encoding) </td></tr>
+    <tr><td class="paramname">len</td><td>(r) strlen of name</td></tr>
   </table>
   </dd>
 </dl>

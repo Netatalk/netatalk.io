@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/libatalk/unicode/charcnv.c File Reference</title>
+<title>netatalk: charcnv.c File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -142,19 +142,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a5def8882fb04ea022a0f4e59d084e922" id="r_a5def8882fb04ea022a0f4e59d084e922"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5def8882fb04ea022a0f4e59d084e922">convert_string_allocate</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> from, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a>, void const *src, size_t srclen, char **dest)</td></tr>
 <tr class="memitem:ac12079b644498779040991063cd8799d" id="r_ac12079b644498779040991063cd8799d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac12079b644498779040991063cd8799d">charset_strupper</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
 <tr class="memitem:a4d140b220b29358e19d09c9fcc39b31b" id="r_a4d140b220b29358e19d09c9fcc39b31b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d140b220b29358e19d09c9fcc39b31b">charset_strlower</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
-<tr class="memitem:ac2ed44b74d79d014ac26de94e9a6517d" id="r_ac2ed44b74d79d014ac26de94e9a6517d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2ed44b74d79d014ac26de94e9a6517d">unix_strupper</a> (const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
-<tr class="memitem:a9a92cc7177efebdca9269b760bf0b42f" id="r_a9a92cc7177efebdca9269b760bf0b42f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a92cc7177efebdca9269b760bf0b42f">unix_strlower</a> (const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
-<tr class="memitem:af47e7f4eb0179031745297b113d743ce" id="r_af47e7f4eb0179031745297b113d743ce"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af47e7f4eb0179031745297b113d743ce">utf8_strupper</a> (const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
-<tr class="memitem:a89bdf14c38d503428a1b05c1aa0963f1" id="r_a89bdf14c38d503428a1b05c1aa0963f1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89bdf14c38d503428a1b05c1aa0963f1">utf8_strlower</a> (const char *src, size_t srclen, char *dest, size_t destlen)</td></tr>
-<tr class="memitem:a25194932ab37ad3b39527b2afe5692d5" id="r_a25194932ab37ad3b39527b2afe5692d5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25194932ab37ad3b39527b2afe5692d5">charset_to_ucs2_allocate</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> **dest, const char *src)</td></tr>
-<tr class="memitem:afba013d0c111859be6bdb6b9721c7212" id="r_afba013d0c111859be6bdb6b9721c7212"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afba013d0c111859be6bdb6b9721c7212">charset_to_utf8_allocate</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, char **dest, const char *src)</td></tr>
 <tr class="memitem:a798ab55e8ea1dcedb26eae301ac994d8" id="r_a798ab55e8ea1dcedb26eae301ac994d8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a798ab55e8ea1dcedb26eae301ac994d8">ucs2_to_charset</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *src, char *dest, size_t destlen)</td></tr>
 <tr class="memitem:a5f15e86574dbf6fb644550bb6d4eca0c" id="r_a5f15e86574dbf6fb644550bb6d4eca0c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f15e86574dbf6fb644550bb6d4eca0c">ucs2_to_charset_allocate</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, char **dest, const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *src)</td></tr>
-<tr class="memitem:ad9f63a378288e43abfb2d281f5198044" id="r_ad9f63a378288e43abfb2d281f5198044"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f63a378288e43abfb2d281f5198044">utf8_to_charset_allocate</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, char **dest, const char *src)</td></tr>
 <tr class="memitem:ae1fa6f0d46aa4fcf98ea2bbe3bf3ba8b" id="r_ae1fa6f0d46aa4fcf98ea2bbe3bf3ba8b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1fa6f0d46aa4fcf98ea2bbe3bf3ba8b">charset_precompose</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, char *src, size_t inlen, char *dst, size_t outlen)</td></tr>
 <tr class="memitem:ac568676b00445ad9b14822c1915095a1" id="r_ac568676b00445ad9b14822c1915095a1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac568676b00445ad9b14822c1915095a1">charset_decompose</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> ch, char *src, size_t inlen, char *dst, size_t outlen)</td></tr>
-<tr class="memitem:af5a76ed35889a9cc08a13aadac8c19bd" id="r_af5a76ed35889a9cc08a13aadac8c19bd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a76ed35889a9cc08a13aadac8c19bd">utf8_precompose</a> (char *src, size_t inlen, char *dst, size_t outlen)</td></tr>
-<tr class="memitem:a39cc54bf8bc45494fdb555d8a6c5fcdc" id="r_a39cc54bf8bc45494fdb555d8a6c5fcdc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39cc54bf8bc45494fdb555d8a6c5fcdc">utf8_decompose</a> (char *src, size_t inlen, char *dst, size_t outlen)</td></tr>
 <tr class="memitem:a078338b2d84aec84b44e1f3cce6feeab" id="r_a078338b2d84aec84b44e1f3cce6feeab"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a078338b2d84aec84b44e1f3cce6feeab">pull_charset_flags</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> from_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_set, const char *src, size_t srclen, char *dest, size_t destlen, uint16_t *<a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:a1736e720feb8ec5600fe46279099b2a1" id="r_a1736e720feb8ec5600fe46279099b2a1"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1736e720feb8ec5600fe46279099b2a1">push_charset_flags</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_set, char *src, size_t srclen, char *dest, size_t destlen, uint16_t *<a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:ad63604b009913e1d68125fa5dbb56608" id="r_ad63604b009913e1d68125fa5dbb56608"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad63604b009913e1d68125fa5dbb56608">convert_charset</a> (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> from_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_charset, const char *src, size_t src_len, char *dest, size_t dest_len, uint16_t *<a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
@@ -452,75 +443,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a25194932ab37ad3b39527b2afe5692d5" name="a25194932ab37ad3b39527b2afe5692d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25194932ab37ad3b39527b2afe5692d5">&#9670;&#160;</a></span>charset_to_ucs2_allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t charset_to_ucs2_allocate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> **</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Copy a string from a <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> char* src to a UCS2 destination, allocating a buffer</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination or -1 in case of error. </dd></dl>
-
-</div>
-</div>
-<a id="afba013d0c111859be6bdb6b9721c7212" name="afba013d0c111859be6bdb6b9721c7212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afba013d0c111859be6bdb6b9721c7212">&#9670;&#160;</a></span>charset_to_utf8_allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t charset_to_utf8_allocate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<hr  />
-<p> Copy a string from a <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> char* src to a UTF-8 destination, allocating a buffer</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination </dd></dl>
-
-</div>
-</div>
 <a id="ad63604b009913e1d68125fa5dbb56608" name="ad63604b009913e1d68125fa5dbb56608"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad63604b009913e1d68125fa5dbb56608">&#9670;&#160;</a></span>convert_charset()</h2>
 
@@ -693,6 +615,9 @@ Variables</h2></td></tr>
 <p>Convert between character sets, allocating a new buffer for the result.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">from</td><td>source character set </td></tr>
+    <tr><td class="paramname">to</td><td>destination character set </td></tr>
+    <tr><td class="paramname">src</td><td>pointer to source string (multibyte or singlebyte) </td></tr>
     <tr><td class="paramname">srclen</td><td>length of source buffer. </td></tr>
     <tr><td class="paramname">dest</td><td>always set at least to NULL </td></tr>
   </table>
@@ -752,6 +677,8 @@ Variables</h2></td></tr>
 <p>Convert string from one encoding to another, making error checking etc</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">from</td><td>source character set </td></tr>
+    <tr><td class="paramname">to</td><td>destination character set </td></tr>
     <tr><td class="paramname">src</td><td>pointer to source string (multibyte or singlebyte) </td></tr>
     <tr><td class="paramname">srclen</td><td>length of the source string in bytes </td></tr>
     <tr><td class="paramname">dest</td><td>pointer to destination string (multibyte or singlebyte) </td></tr>
@@ -1047,227 +974,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a92cc7177efebdca9269b760bf0b42f" name="a9a92cc7177efebdca9269b760bf0b42f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a92cc7177efebdca9269b760bf0b42f">&#9670;&#160;</a></span>unix_strlower()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t unix_strlower </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac2ed44b74d79d014ac26de94e9a6517d" name="ac2ed44b74d79d014ac26de94e9a6517d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ed44b74d79d014ac26de94e9a6517d">&#9670;&#160;</a></span>unix_strupper()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t unix_strupper </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a39cc54bf8bc45494fdb555d8a6c5fcdc" name="a39cc54bf8bc45494fdb555d8a6c5fcdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39cc54bf8bc45494fdb555d8a6c5fcdc">&#9670;&#160;</a></span>utf8_decompose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_decompose </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af5a76ed35889a9cc08a13aadac8c19bd" name="af5a76ed35889a9cc08a13aadac8c19bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5a76ed35889a9cc08a13aadac8c19bd">&#9670;&#160;</a></span>utf8_precompose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_precompose </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a89bdf14c38d503428a1b05c1aa0963f1" name="a89bdf14c38d503428a1b05c1aa0963f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89bdf14c38d503428a1b05c1aa0963f1">&#9670;&#160;</a></span>utf8_strlower()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_strlower </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af47e7f4eb0179031745297b113d743ce" name="af47e7f4eb0179031745297b113d743ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af47e7f4eb0179031745297b113d743ce">&#9670;&#160;</a></span>utf8_strupper()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_strupper </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>srclen</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>destlen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad9f63a378288e43abfb2d281f5198044" name="ad9f63a378288e43abfb2d281f5198044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9f63a378288e43abfb2d281f5198044">&#9670;&#160;</a></span>utf8_to_charset_allocate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t utf8_to_charset_allocate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a></td>          <td class="paramname"><span class="paramname"><em>ch</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<hr  />
-<p> Copy a string from a UTF-8 src to a unix char * destination, allocating a buffer</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dest</td><td>always set at least to NULL</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of bytes occupied by the string in the destination </dd></dl>
 
 </div>
 </div>

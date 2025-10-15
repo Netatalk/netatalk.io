@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/afpd/directory.h File Reference</title>
+<title>netatalk: directory.h File Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -148,13 +148,13 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a26f60139d7ddb55a95b0d9ca862afece" id="r_a26f60139d7ddb55a95b0d9ca862afece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f60139d7ddb55a95b0d9ca862afece">dir_free_invalid_q</a> (void)</td></tr>
-<tr class="memitem:a7419a6a048ebda2d6dd6a5656c6f6f4e" id="r_a7419a6a048ebda2d6dd6a5656c6f6f4e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7419a6a048ebda2d6dd6a5656c6f6f4e">dir_new</a> (const char *mname, const char *uname, const struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, bstring fullpath, struct stat *)</td></tr>
+<tr class="memitem:a7419a6a048ebda2d6dd6a5656c6f6f4e" id="r_a7419a6a048ebda2d6dd6a5656c6f6f4e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7419a6a048ebda2d6dd6a5656c6f6f4e">dir_new</a> (const char *mname, const char *uname, const struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> fullpath, struct stat *)</td></tr>
 <tr class="memdesc:a7419a6a048ebda2d6dd6a5656c6f6f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct struct dir.  <br /></td></tr>
 <tr class="memitem:afbd4926563a4e4a36ddebc2a79b5cc51" id="r_afbd4926563a4e4a36ddebc2a79b5cc51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbd4926563a4e4a36ddebc2a79b5cc51">dir_free</a> (struct <a class="el" href="structdir.html">dir</a> *)</td></tr>
 <tr class="memdesc:afbd4926563a4e4a36ddebc2a79b5cc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a struct dir and all its members.  <br /></td></tr>
 <tr class="memitem:a57de32689ff7d2a2f52214a1132057fd" id="r_a57de32689ff7d2a2f52214a1132057fd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57de32689ff7d2a2f52214a1132057fd">dir_add</a> (struct <a class="el" href="structvol.html">vol</a> *, const struct <a class="el" href="structdir.html">dir</a> *, struct <a class="el" href="structpath.html">path</a> *, int)</td></tr>
 <tr class="memdesc:a57de32689ff7d2a2f52214a1132057fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create struct dir from struct path.  <br /></td></tr>
-<tr class="memitem:afc7ef5b06012f9911249c5a111d88d11" id="r_afc7ef5b06012f9911249c5a111d88d11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7ef5b06012f9911249c5a111d88d11">dir_modify</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *new_mname, const char *new_uname, bstring pdir_fullpath)</td></tr>
+<tr class="memitem:afc7ef5b06012f9911249c5a111d88d11" id="r_afc7ef5b06012f9911249c5a111d88d11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7ef5b06012f9911249c5a111d88d11">dir_modify</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *new_mname, const char *new_uname, <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> pdir_fullpath)</td></tr>
 <tr class="memitem:ad9fbc8ab01c3318e8da4a88258e4b68f" id="r_ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9fbc8ab01c3318e8da4a88258e4b68f">dir_remove</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache.  <br /></td></tr>
 <tr class="memitem:ab10b9050bf845ab1cac053e7230c561c" id="r_ab10b9050bf845ab1cac053e7230c561c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab10b9050bf845ab1cac053e7230c561c">dirlookup</a> (const struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>)</td></tr>
@@ -1155,7 +1155,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vol</td><td>(r) pointer to struct vol, possibly modified in callee </td></tr>
-    <tr><td class="paramname">dir</td><td>(r) pointer to parrent directory </td></tr>
+    <tr><td class="paramname">dir</td><td>(r) pointer to parent directory </td></tr>
     <tr><td class="paramname">path</td><td>(rw) pointer to struct path with valid path-&gt;u_name </td></tr>
     <tr><td class="paramname">len</td><td>(r) strlen of path-&gt;u_name</td></tr>
   </table>
@@ -1192,7 +1192,7 @@ Variables</h2></td></tr>
 <p>Free a struct dir and all its members. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">(rw)</td><td>pointer to struct dir </td></tr>
+    <tr><td class="paramname">dir</td><td>(rw) pointer to struct dir </td></tr>
   </table>
   </dd>
 </dl>
@@ -1268,7 +1268,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bstring</td>          <td class="paramname"><span class="paramname"><em>pdir_fullpath</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>pdir_fullpath</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1317,7 +1317,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bstring</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+          <td class="paramtype"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

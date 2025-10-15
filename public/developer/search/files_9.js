@@ -9,12 +9,15 @@ var searchData=
   ['ldap_5fconfig_2ec_6',['ldap_config.c',['../ldap__config_8c.html',1,'']]],
   ['ldapconfig_2eh_7',['ldapconfig.h',['../ldapconfig_8h.html',1,'']]],
   ['libatalk_2emd_8',['libatalk.md',['../libatalk_8md.html',1,'']]],
-  ['list_2eh_9',['list.h',['../etc_2atalkd_2list_8h.html',1,'(Global Namespace)'],['../include_2atalk_2list_8h.html',1,'(Global Namespace)']]],
-  ['locking_2ec_10',['locking.c',['../locking_8c.html',1,'']]],
-  ['logger_2ec_11',['logger.c',['../logger_8c.html',1,'']]],
-  ['logger_2eh_12',['logger.h',['../logger_8h.html',1,'']]],
-  ['logger_5ftest_2ec_13',['logger_test.c',['../logger__test_8c.html',1,'']]],
-  ['logintest_2ec_14',['logintest.c',['../logintest_8c.html',1,'']]],
-  ['lp_2ec_15',['lp.c',['../lp_8c.html',1,'']]],
-  ['lp_2eh_16',['lp.h',['../lp_8h.html',1,'']]]
+  ['libatalk_2facl_2funix_2ec_9',['unix.c',['../libatalk_2acl_2unix_8c.html',1,'']]],
+  ['libatalk_2funicode_2futf8_2ec_10',['utf8.c',['../libatalk_2unicode_2_utf8_8c.html',1,'']]],
+  ['libatalk_2futil_2funix_2ec_11',['unix.c',['../libatalk_2util_2unix_8c.html',1,'']]],
+  ['libatalk_2fvfs_2funix_2ec_12',['unix.c',['../libatalk_2vfs_2unix_8c.html',1,'']]],
+  ['locking_2ec_13',['locking.c',['../locking_8c.html',1,'']]],
+  ['logger_2ec_14',['logger.c',['../logger_8c.html',1,'']]],
+  ['logger_2eh_15',['logger.h',['../logger_8h.html',1,'']]],
+  ['logger_5ftest_2ec_16',['logger_test.c',['../logger__test_8c.html',1,'']]],
+  ['logintest_2ec_17',['logintest.c',['../logintest_8c.html',1,'']]],
+  ['lp_2ec_18',['lp.c',['../lp_8c.html',1,'']]],
+  ['lp_2eh_19',['lp.h',['../lp_8h.html',1,'']]]
 ];

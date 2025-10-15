@@ -42,8 +42,6 @@ var unicode_8h =
     [ "charset_precompose", "unicode_8h.html#a7896810074129437def3c5959db0596f", null ],
     [ "charset_strlower", "unicode_8h.html#a800c256e8b759a2783f20f9d26486abe", null ],
     [ "charset_strupper", "unicode_8h.html#a9297ac1d0dc484d84c4d68b915a9a067", null ],
-    [ "charset_to_ucs2_allocate", "unicode_8h.html#a923441dfadc7365a609153a763e1c1aa", null ],
-    [ "charset_to_utf8_allocate", "unicode_8h.html#af99d2e197619ca7fa2fe57dd03335249", null ],
     [ "convert_charset", "unicode_8h.html#abf5f1a21e10d7a7c334568e7eedbf8a0", null ],
     [ "convert_string", "unicode_8h.html#afea882366444f93cc114024e9a9484e6", null ],
     [ "convert_string_allocate", "unicode_8h.html#afc08cc6f2f65d6e54e1c70b2444cfdc4", null ],
@@ -77,14 +75,5 @@ var unicode_8h =
     [ "toupper_sp", "unicode_8h.html#a268b6f0efd5fd752575d0752d599cb1a", null ],
     [ "toupper_w", "unicode_8h.html#a4249d8aae2558180183bd37a3e280e45", null ],
     [ "ucs2_to_charset", "unicode_8h.html#a0bd0e31bd07fb06f8c57284cf5a1b92d", null ],
-    [ "ucs2_to_charset_allocate", "unicode_8h.html#aec127b3dffe51cb63c946116c049f72c", null ],
-    [ "unix_strlower", "unicode_8h.html#af831b37e4a2970298eb06299dfc999e1", null ],
-    [ "unix_strupper", "unicode_8h.html#abda21b2bf84c448f2b062b66e2376261", null ],
-    [ "utf8_charlen", "unicode_8h.html#a57ca6823d9843e1ad2f0d1d73ca2ad38", null ],
-    [ "utf8_decompose", "unicode_8h.html#a58886892e5573b1478cbfb9a66d140d3", null ],
-    [ "utf8_precompose", "unicode_8h.html#a6d812652271e9f055768613f9c7e9da1", null ],
-    [ "utf8_strlen_validate", "unicode_8h.html#a290e7112e6e5648358d127f086764df6", null ],
-    [ "utf8_strlower", "unicode_8h.html#a03447ba2618c86d4f9c74a93f40459ca", null ],
-    [ "utf8_strupper", "unicode_8h.html#a00ed2e5f815881f2b1c35bd48a76ff94", null ],
-    [ "utf8_to_charset_allocate", "unicode_8h.html#a2623fffae4d12db19842c386b29a6110", null ]
+    [ "ucs2_to_charset_allocate", "unicode_8h.html#aec127b3dffe51cb63c946116c049f72c", null ]
 ];

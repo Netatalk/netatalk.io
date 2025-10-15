@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: /Users/dmark/dev/netatalk/etc/afpd/unix.h Source File</title>
+<title>netatalk: unix.h Source File</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -99,7 +99,7 @@ $(function(){initNavTree('etc_2afpd_2unix_8h_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">unix.h</div></div>
+  <div class="headertitle"><div class="title">etc/afpd/unix.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="etc_2afpd_2unix_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef AFPD_UNIX_H</span></div>
@@ -107,7 +107,7 @@ $(function(){initNavTree('etc_2afpd_2unix_8h_source.html','',''); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;config.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="etc_2afpd_2volume_8h.html">volume.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#if defined(HAVE_SYS_VFS_H)</span></div>
@@ -314,26 +314,25 @@ $(function(){initNavTree('etc_2afpd_2unix_8h_source.html','',''); });
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">#endif </span><span class="comment">/* UNIX_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aa2boot_8c_html_a56abfaab87c46691c1ef3ad0df23e864"><div class="ttname"><a href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a></div><div class="ttdeci">static char * version</div><div class="ttdef"><b>Definition</b> a2boot.c:60</div></div>
-<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
 <div class="ttc" id="aetc_2afpd_2directory_8h_html"><div class="ttname"><a href="etc_2afpd_2directory_8h.html">directory.h</a></div></div>
 <div class="ttc" id="aetc_2afpd_2unix_8h_html_a380d0232cc6dc1f4fd5ba3d5ce5aa19a"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a380d0232cc6dc1f4fd5ba3d5ce5aa19a">accessmode</a></div><div class="ttdeci">void accessmode(const AFPObj *obj, const struct vol *, char *, struct maccess *, struct dir *, struct stat *)</div></div>
-<div class="ttc" id="aetc_2afpd_2unix_8h_html_a434ddf96ccf0bc1e8bfbf371a990ecd3"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a434ddf96ccf0bc1e8bfbf371a990ecd3">setdirowner</a></div><div class="ttdeci">int setdirowner(const struct vol *, const char *, const uid_t, const gid_t)</div><div class="ttdef"><b>Definition</b> unix.c:258</div></div>
-<div class="ttc" id="aetc_2afpd_2unix_8h_html_a4987a05afefda58bac2989d75a50f825"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a4987a05afefda58bac2989d75a50f825">setfilowner</a></div><div class="ttdeci">int setfilowner(const struct vol *, const uid_t, const gid_t, struct path *)</div><div class="ttdef"><b>Definition</b> unix.c:235</div></div>
+<div class="ttc" id="aetc_2afpd_2unix_8h_html_a434ddf96ccf0bc1e8bfbf371a990ecd3"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a434ddf96ccf0bc1e8bfbf371a990ecd3">setdirowner</a></div><div class="ttdeci">int setdirowner(const struct vol *, const char *, const uid_t, const gid_t)</div><div class="ttdef"><b>Definition</b> etc/afpd/unix.c:258</div></div>
+<div class="ttc" id="aetc_2afpd_2unix_8h_html_a4987a05afefda58bac2989d75a50f825"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a4987a05afefda58bac2989d75a50f825">setfilowner</a></div><div class="ttdeci">int setfilowner(const struct vol *, const uid_t, const gid_t, struct path *)</div><div class="ttdef"><b>Definition</b> etc/afpd/unix.c:235</div></div>
 <div class="ttc" id="aetc_2afpd_2unix_8h_html_a9fcdcdac4687a5baaa9af541fe3ca6bc"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#a9fcdcdac4687a5baaa9af541fe3ca6bc">setdirmode</a></div><div class="ttdeci">int setdirmode(const struct vol *, const char *, mode_t)</div></div>
 <div class="ttc" id="aetc_2afpd_2unix_8h_html_aa8935c7578d76f74beaede5bfad0f40a"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#aa8935c7578d76f74beaede5bfad0f40a">uquota_getvolspace</a></div><div class="ttdeci">int uquota_getvolspace(const AFPObj *obj, struct vol *, VolSpace *, VolSpace *, const uint32_t)</div><div class="ttdef"><b>Definition</b> quota.c:725</div></div>
-<div class="ttc" id="aetc_2afpd_2unix_8h_html_ac07521905fea5ff9f0e85adc893a4d47"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#ac07521905fea5ff9f0e85adc893a4d47">setfilunixmode</a></div><div class="ttdeci">int setfilunixmode(const struct vol *, struct path *, const mode_t)</div><div class="ttdef"><b>Definition</b> unix.c:181</div></div>
+<div class="ttc" id="aetc_2afpd_2unix_8h_html_ac07521905fea5ff9f0e85adc893a4d47"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#ac07521905fea5ff9f0e85adc893a4d47">setfilunixmode</a></div><div class="ttdeci">int setfilunixmode(const struct vol *, struct path *, const mode_t)</div><div class="ttdef"><b>Definition</b> etc/afpd/unix.c:181</div></div>
 <div class="ttc" id="aetc_2afpd_2unix_8h_html_ac27cd9c82f97151ac5513b6aaa5910a9"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#ac27cd9c82f97151ac5513b6aaa5910a9">getnfsquota</a></div><div class="ttdeci">int getnfsquota(struct vol *, const int, const uint32_t, struct dqblk *)</div><div class="ttdef"><b>Definition</b> nfsquota.c:108</div></div>
-<div class="ttc" id="aetc_2afpd_2unix_8h_html_aeb7aa8beec105935ef66ff08a1d7ca0c"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#aeb7aa8beec105935ef66ff08a1d7ca0c">setdirunixmode</a></div><div class="ttdeci">int setdirunixmode(const struct vol *, char *, mode_t)</div><div class="ttdef"><b>Definition</b> unix.c:203</div></div>
+<div class="ttc" id="aetc_2afpd_2unix_8h_html_aeb7aa8beec105935ef66ff08a1d7ca0c"><div class="ttname"><a href="etc_2afpd_2unix_8h.html#aeb7aa8beec105935ef66ff08a1d7ca0c">setdirunixmode</a></div><div class="ttdeci">int setdirunixmode(const struct vol *, char *, mode_t)</div><div class="ttdef"><b>Definition</b> etc/afpd/unix.c:203</div></div>
 <div class="ttc" id="aetc_2afpd_2volume_8h_html"><div class="ttname"><a href="etc_2afpd_2volume_8h.html">volume.h</a></div></div>
 <div class="ttc" id="afiledir_8h_html_ab1e958668b3930d0c2ee5af4a15a0f55"><div class="ttname"><a href="filedir_8h.html#ab1e958668b3930d0c2ee5af4a15a0f55">default_options</a></div><div class="ttdeci">struct afp_options default_options</div></div>
-<div class="ttc" id="ainclude_2atalk_2volume_8h_html_aaafd36fcf24940e0a7f1ae6a1dac846f"><div class="ttname"><a href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a></div><div class="ttdeci">uint64_t VolSpace</div><div class="ttdef"><b>Definition</b> volume.h:23</div></div>
+<div class="ttc" id="ainclude_2atalk_2volume_8h_html_aaafd36fcf24940e0a7f1ae6a1dac846f"><div class="ttname"><a href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a></div><div class="ttdeci">uint64_t VolSpace</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:23</div></div>
 <div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>
 <div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:154</div></div>
 <div class="ttc" id="astructafp__options_html"><div class="ttname"><a href="structafp__options.html">afp_options</a></div><div class="ttdef"><b>Definition</b> globals.h:93</div></div>
-<div class="ttc" id="astructdir_html"><div class="ttname"><a href="structdir.html">dir</a></div><div class="ttdef"><b>Definition</b> directory.h:62</div></div>
-<div class="ttc" id="astructmaccess_html"><div class="ttname"><a href="structmaccess.html">maccess</a></div><div class="ttdef"><b>Definition</b> directory.h:68</div></div>
-<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> directory.h:97</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> volume.h:32</div></div>
+<div class="ttc" id="astructdir_html"><div class="ttname"><a href="structdir.html">dir</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:62</div></div>
+<div class="ttc" id="astructmaccess_html"><div class="ttname"><a href="structmaccess.html">maccess</a></div><div class="ttdef"><b>Definition</b> etc/afpd/directory.h:68</div></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:97</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

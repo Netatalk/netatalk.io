@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['ziphdr_0',['ziphdr',['../structziphdr.html',1,'']]],
-  ['zipreplent_1',['zipreplent',['../structzipreplent.html',1,'']]],
-  ['ziptab_2',['ziptab',['../structziptab.html',1,'']]],
-  ['zones_3',['zones',['../structzones.html',1,'']]]
+  ['vfgetc_0',['vfgetc',['../structvfgetc.html',1,'']]],
+  ['vfs_1',['vfs',['../structvfs.html',1,'']]],
+  ['vfs_5fops_2',['vfs_ops',['../structvfs__ops.html',1,'']]],
+  ['vol_3',['vol',['../structvol.html',1,'']]]
 ];
