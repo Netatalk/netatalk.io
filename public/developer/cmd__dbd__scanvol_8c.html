@@ -138,9 +138,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac04ccba4a8f10d09108474a37ec231e7" id="r_ac04ccba4a8f10d09108474a37ec231e7"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac04ccba4a8f10d09108474a37ec231e7">check_special_dirs</a> (const char *name)</td></tr>
 <tr class="memitem:afb434eeddcf7e925b81548d498e70b01" id="r_afb434eeddcf7e925b81548d498e70b01"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb434eeddcf7e925b81548d498e70b01">update_cnid</a> (<a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const struct stat *sp, const char *oldname, const char *newname)</td></tr>
 <tr class="memitem:abd6926f7fe2d2b74801e49d0f11c065d" id="r_abd6926f7fe2d2b74801e49d0f11c065d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd6926f7fe2d2b74801e49d0f11c065d">check_adfile</a> (const char *fname, const struct stat *st, const char **newname)</td></tr>
-<tr class="memitem:a6d30db5855597f1906f1d0cf61e3fa0e" id="r_a6d30db5855597f1906f1d0cf61e3fa0e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d30db5855597f1906f1d0cf61e3fa0e">remove_eafiles</a> (const char *name, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a> <a class="el" href="#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a12804bc307afd906193e4e6bc57a2074" id="r_a12804bc307afd906193e4e6bc57a2074"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12804bc307afd906193e4e6bc57a2074">remove_eafiles</a> (const char *name, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
 <tr class="memitem:ab6ebe248d85291d8007bfd5e632c2fc6" id="r_ab6ebe248d85291d8007bfd5e632c2fc6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ebe248d85291d8007bfd5e632c2fc6">check_eafiles</a> (const char *fname)</td></tr>
-<tr class="memitem:a09c3ab06b5f3ffeea33c842273d442ea" id="r_a09c3ab06b5f3ffeea33c842273d442ea"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c3ab06b5f3ffeea33c842273d442ea">check_addir</a> (int volroot <a class="el" href="#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a5f01049521dedb878683950ba10b29a6" id="r_a5f01049521dedb878683950ba10b29a6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f01049521dedb878683950ba10b29a6">check_addir</a> (int volroot)</td></tr>
 <tr class="memitem:a8800ce0eca5d31ccbe58676d9679c22c" id="r_a8800ce0eca5d31ccbe58676d9679c22c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8800ce0eca5d31ccbe58676d9679c22c">check_eafile_in_adouble</a> (const char *name)</td></tr>
 <tr class="memitem:ad3d2bfa5d91e90647afea5324b7709a9" id="r_ad3d2bfa5d91e90647afea5324b7709a9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3d2bfa5d91e90647afea5324b7709a9">read_addir</a> (void)</td></tr>
 <tr class="memitem:a62bb1828366a66fa90ce48078e9ef044" id="r_a62bb1828366a66fa90ce48078e9ef044"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62bb1828366a66fa90ce48078e9ef044">check_cnid</a> (const char *name, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, struct stat *st, int adfile_ok)</td></tr>
@@ -156,7 +156,8 @@ Variables</h2></td></tr>
 <tr class="memitem:affcc56d24f5c3d6b6824b537b37afa6d" id="r_affcc56d24f5c3d6b6824b537b37afa6d"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affcc56d24f5c3d6b6824b537b37afa6d">stamp</a> [<a class="el" href="cnid__private_8h.html#a1eca48e22565ece0d43d0f9be1946752">CNID_DEV_LEN</a>]</td></tr>
 <tr class="memitem:ac61cacbac0fac0cf8bba1580255c06d9" id="r_ac61cacbac0fac0cf8bba1580255c06d9"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac61cacbac0fac0cf8bba1580255c06d9">netatalk_dirs</a> []</td></tr>
 <tr class="memitem:adecc404925892e9ea6e7be4304128d90" id="r_adecc404925892e9ea6e7be4304128d90"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adecc404925892e9ea6e7be4304128d90">special_dirs</a> []</td></tr>
-<tr class="memitem:a8fa487913fdb31da1be2f0b18ece0755" id="r_a8fa487913fdb31da1be2f0b18ece0755"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> rqst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fa487913fdb31da1be2f0b18ece0755">_U_</a></td></tr>
+<tr class="memitem:a73fcb26279d6555a66fd8205e04295de" id="r_a73fcb26279d6555a66fd8205e04295de"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73fcb26279d6555a66fd8205e04295de">rqst</a></td></tr>
+<tr class="memitem:a6dc856a83db9a256210ebd13e86b1009" id="r_a6dc856a83db9a256210ebd13e86b1009"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dc856a83db9a256210ebd13e86b1009">rply</a></td></tr>
 <tr class="memitem:ab8ebbfeb517fea7812af441dc3718d02" id="r_ab8ebbfeb517fea7812af441dc3718d02"><td class="memItemLeft" align="right" valign="top">static jmp_buf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8ebbfeb517fea7812af441dc3718d02">jmp</a></td></tr>
 <tr class="memitem:a7c55a55c9b6c6211ee11b27c7d1ecefd" id="r_a7c55a55c9b6c6211ee11b27c7d1ecefd"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c55a55c9b6c6211ee11b27c7d1ecefd">pname</a> [MAXPATHLEN] = &quot;../&quot;</td></tr>
 </table>
@@ -190,8 +191,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a09c3ab06b5f3ffeea33c842273d442ea" name="a09c3ab06b5f3ffeea33c842273d442ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09c3ab06b5f3ffeea33c842273d442ea">&#9670;&#160;</a></span>check_addir()</h2>
+<a id="a5f01049521dedb878683950ba10b29a6" name="a5f01049521dedb878683950ba10b29a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f01049521dedb878683950ba10b29a6">&#9670;&#160;</a></span>check_addir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +203,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int check_addir </td>
           <td>(</td>
-          <td class="paramtype">int volroot</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>volroot</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -488,8 +489,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6d30db5855597f1906f1d0cf61e3fa0e" name="a6d30db5855597f1906f1d0cf61e3fa0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d30db5855597f1906f1d0cf61e3fa0e">&#9670;&#160;</a></span>remove_eafiles()</h2>
+<a id="a12804bc307afd906193e4e6bc57a2074" name="a12804bc307afd906193e4e6bc57a2074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12804bc307afd906193e4e6bc57a2074">&#9670;&#160;</a></span>remove_eafiles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,7 +506,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">struct <a class="el" href="structea.html">ea</a> *</td>          <td class="paramname"><span class="paramname"><em>ea</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -582,28 +583,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="a8fa487913fdb31da1be2f0b18ece0755" name="a8fa487913fdb31da1be2f0b18ece0755"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fa487913fdb31da1be2f0b18ece0755">&#9670;&#160;</a></span>_U_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> rply _U_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4bf70874a547107a15b09ac22d6d04e7" name="a4bf70874a547107a15b09ac22d6d04e7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bf70874a547107a15b09ac22d6d04e7">&#9670;&#160;</a></span>cwdbuf</h2>
 
@@ -708,6 +687,50 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">char pname[MAXPATHLEN] = &quot;../&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dc856a83db9a256210ebd13e86b1009" name="a6dc856a83db9a256210ebd13e86b1009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc856a83db9a256210ebd13e86b1009">&#9670;&#160;</a></span>rply</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> rply</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73fcb26279d6555a66fd8205e04295de" name="a73fcb26279d6555a66fd8205e04295de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73fcb26279d6555a66fd8205e04295de">&#9670;&#160;</a></span>rqst</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> rqst</td>
         </tr>
       </table>
   </td>

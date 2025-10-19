@@ -131,6 +131,10 @@ $(function(){initNavTree('etc_2papd_2main_8c.html','',''); });
 <code>#include &quot;<a class="el" href="papd_2uam__auth_8h_source.html">uam_auth.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="print__cups_8h_source.html">print_cups.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:rbuf_5Ft" id="r_rbuf_5Ft"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrbuf__t.html">rbuf_t</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a7a9fed9392a51acd68e5f469e63f7961" id="r_a7a9fed9392a51acd68e5f469e63f7961"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9fed9392a51acd68e5f469e63f7961">WEXITSTATUS</a>(stat_val)</td></tr>
@@ -140,21 +144,19 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad09246453a4dabd919c7541484046a87" id="r_ad09246453a4dabd919c7541484046a87"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad09246453a4dabd919c7541484046a87">__attribute__</a> ((__packed__))</td></tr>
-<tr class="memitem:a0cadd553391543137621fb4106a0a307" id="r_a0cadd553391543137621fb4106a0a307"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cadd553391543137621fb4106a0a307">getstatus</a> (struct <a class="el" href="structprinter.html">printer</a> *pr, <a class="el" href="#a6b893e674a9a741b5777e21b90cff33c">rbuf_t</a> *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
+<tr class="memitem:a0cadd553391543137621fb4106a0a307" id="r_a0cadd553391543137621fb4106a0a307"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cadd553391543137621fb4106a0a307">getstatus</a> (struct <a class="el" href="structprinter.html">printer</a> *pr, <a class="el" href="structrbuf__t.html">rbuf_t</a> *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
 <tr class="memitem:ad0952671a41105c23f188a5e07fd91e4" id="r_ad0952671a41105c23f188a5e07fd91e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0952671a41105c23f188a5e07fd91e4">rprintcap</a> (struct <a class="el" href="structprinter.html">printer</a> *pr)</td></tr>
 <tr class="memitem:a141328e757cb2a4435f48724ed469078" id="r_a141328e757cb2a4435f48724ed469078"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a141328e757cb2a4435f48724ed469078">getprinters</a> (char *cf)</td></tr>
 <tr class="memitem:a53506cbc7da4dbd011b56e47aeadeafa" id="r_a53506cbc7da4dbd011b56e47aeadeafa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53506cbc7da4dbd011b56e47aeadeafa">papd_exit</a> (const int i)</td></tr>
 <tr class="memitem:af92bdc862950fb471cdbed45a6288d0a" id="r_af92bdc862950fb471cdbed45a6288d0a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af92bdc862950fb471cdbed45a6288d0a">die</a> (int n)</td></tr>
-<tr class="memitem:a65ad0b08aaf9765b4fa96077b36470a3" id="r_a65ad0b08aaf9765b4fa96077b36470a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ad0b08aaf9765b4fa96077b36470a3">reap</a> (int sig <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a81705ce41c349f18f442006ceb915315" id="r_a81705ce41c349f18f442006ceb915315"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81705ce41c349f18f442006ceb915315">reap</a> (int sig)</td></tr>
 <tr class="memitem:a0c99d968a34e803d378692bde2e3f18f" id="r_a0c99d968a34e803d378692bde2e3f18f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c99d968a34e803d378692bde2e3f18f">main</a> (int ac, char **av)</td></tr>
 <tr class="memitem:abd8b33bf033119344a542afb8bab8ef4" id="r_abd8b33bf033119344a542afb8bab8ef4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8b33bf033119344a542afb8bab8ef4">pgetstr</a> (char *id, char **area)</td></tr>
 <tr class="memitem:a7428f8938c9b1047729b8edc9495856b" id="r_a7428f8938c9b1047729b8edc9495856b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7428f8938c9b1047729b8edc9495856b">getpname</a> (char **area, int bufsize)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6b893e674a9a741b5777e21b90cff33c" id="r_a6b893e674a9a741b5777e21b90cff33c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b893e674a9a741b5777e21b90cff33c">rbuf_t</a></td></tr>
-<tr class="memitem:ae9418c19f326463071a49a47b9b91386" id="r_ae9418c19f326463071a49a47b9b91386"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a6b893e674a9a741b5777e21b90cff33c">rbuf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9418c19f326463071a49a47b9b91386">r_buf</a></td></tr>
+<tr class="memitem:ae9418c19f326463071a49a47b9b91386" id="r_ae9418c19f326463071a49a47b9b91386"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structrbuf__t.html">rbuf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9418c19f326463071a49a47b9b91386">r_buf</a></td></tr>
 <tr class="memitem:acff54f7610ef788116a1a280fc9088e2" id="r_acff54f7610ef788116a1a280fc9088e2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprinter.html">printer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff54f7610ef788116a1a280fc9088e2">defprinter</a></td></tr>
 <tr class="memitem:a9a452f19a970380c4f6d1964fceb9e34" id="r_a9a452f19a970380c4f6d1964fceb9e34"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprinter.html">printer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a452f19a970380c4f6d1964fceb9e34">printers</a> = NULL</td></tr>
 <tr class="memitem:ac3e1795766a80ec63b157951b4b9a7d4" id="r_ac3e1795766a80ec63b157951b4b9a7d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3e1795766a80ec63b157951b4b9a7d4">debug</a> = 0</td></tr>
@@ -167,7 +169,7 @@ Variables</h2></td></tr>
 <tr class="memitem:acdc1869d5f239729aa12bf81739205de" id="r_acdc1869d5f239729aa12bf81739205de"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdc1869d5f239729aa12bf81739205de">cannedstatus</a> = &quot;status: print spooler processing job&quot;</td></tr>
 <tr class="memitem:a237c840df5a69121500b05c750248490" id="r_a237c840df5a69121500b05c750248490"><td class="memItemLeft" align="right" valign="top">struct printer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237c840df5a69121500b05c750248490">printer</a> = NULL</td></tr>
 <tr class="memitem:a56abfaab87c46691c1ef3ad0df23e864" id="r_a56abfaab87c46691c1ef3ad0df23e864"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56abfaab87c46691c1ef3ad0df23e864">version</a> = VERSION</td></tr>
-<tr class="memitem:a9319f4233d0597188c3119f4dc7b3f0f" id="r_a9319f4233d0597188c3119f4dc7b3f0f"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a> = <a class="el" href="config_8h.html#a5ed9536beb24af3eb9e77623f23025d2">PATH_PAPD_LOCK</a></td></tr>
+<tr class="memitem:a9319f4233d0597188c3119f4dc7b3f0f" id="r_a9319f4233d0597188c3119f4dc7b3f0f"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a> = PATH_PAPD_LOCK</td></tr>
 <tr class="memitem:adfe6b2ce6b17ae40d15a17c690710b1b" id="r_adfe6b2ce6b17ae40d15a17c690710b1b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfe6b2ce6b17ae40d15a17c690710b1b">uamlist</a></td></tr>
 <tr class="memitem:aaa7d81e82e984c6b3710f86da75b4cd8" id="r_aaa7d81e82e984c6b3710f86da75b4cd8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa7d81e82e984c6b3710f86da75b4cd8">uampath</a> = _PATH_PAPDUAMPATH</td></tr>
 </table>
@@ -237,23 +239,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ad09246453a4dabd919c7541484046a87" name="ad09246453a4dabd919c7541484046a87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad09246453a4dabd919c7541484046a87">&#9670;&#160;</a></span>__attribute__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct __attribute__ </td>
-          <td>(</td>
-          <td class="paramtype">(__packed__)</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af92bdc862950fb471cdbed45a6288d0a" name="af92bdc862950fb471cdbed45a6288d0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af92bdc862950fb471cdbed45a6288d0a">&#9670;&#160;</a></span>die()</h2>
 
@@ -339,7 +324,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#a6b893e674a9a741b5777e21b90cff33c">rbuf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structrbuf__t.html">rbuf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -413,8 +398,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a65ad0b08aaf9765b4fa96077b36470a3" name="a65ad0b08aaf9765b4fa96077b36470a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ad0b08aaf9765b4fa96077b36470a3">&#9670;&#160;</a></span>reap()</h2>
+<a id="a81705ce41c349f18f442006ceb915315" name="a81705ce41c349f18f442006ceb915315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81705ce41c349f18f442006ceb915315">&#9670;&#160;</a></span>reap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +410,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void reap </td>
           <td>(</td>
-          <td class="paramtype">int sig</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sig</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -558,7 +543,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char* pidfile = <a class="el" href="config_8h.html#a5ed9536beb24af3eb9e77623f23025d2">PATH_PAPD_LOCK</a></td>
+          <td class="memname">char* pidfile = PATH_PAPD_LOCK</td>
         </tr>
       </table>
   </td>
@@ -636,7 +621,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a6b893e674a9a741b5777e21b90cff33c">rbuf_t</a> r_buf</td>
+          <td class="memname"><a class="el" href="structrbuf__t.html">rbuf_t</a> r_buf</td>
         </tr>
       </table>
   </td>
@@ -644,20 +629,6 @@ Variables</h2></td></tr>
 <span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6b893e674a9a741b5777e21b90cff33c" name="a6b893e674a9a741b5777e21b90cff33c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b893e674a9a741b5777e21b90cff33c">&#9670;&#160;</a></span>rbuf_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">rbuf_t</td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>

@@ -9,8 +9,8 @@ var dir_15cabb4189fa593303dcf53b35bdd1c0 =
     [ "ad_mmap.c", "ad__mmap_8c.html", null ],
     [ "ad_open.c", "ad__open_8c.html", "ad__open_8c" ],
     [ "ad_read.c", "ad__read_8c.html", "ad__read_8c" ],
-    [ "ad_recvfile.c", "ad__recvfile_8c.html", null ],
-    [ "ad_sendfile.c", "ad__sendfile_8c.html", null ],
+    [ "ad_recvfile.c", "ad__recvfile_8c.html", "ad__recvfile_8c" ],
+    [ "ad_sendfile.c", "ad__sendfile_8c.html", "ad__sendfile_8c" ],
     [ "ad_size.c", "ad__size_8c.html", "ad__size_8c" ],
     [ "ad_write.c", "ad__write_8c.html", "ad__write_8c" ]
 ];

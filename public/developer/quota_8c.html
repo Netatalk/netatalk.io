@@ -121,134 +121,16 @@ $(function(){initNavTree('quota_8c.html','',''); });
 <code>#include &quot;<a class="el" href="etc_2afpd_2directory_8h_source.html">directory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2volume_8h_source.html">volume.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2unix_8h_source.html">unix.h</a>&quot;</code><br />
+<code>#include &lt;quota.h&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a19b2950073ccaefefda1fcbed259371f" id="r_a19b2950073ccaefefda1fcbed259371f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19b2950073ccaefefda1fcbed259371f">WANT_USER_QUOTA</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memitem:aaebb8cad8d4e6906d98fb7cbab43ceab" id="r_aaebb8cad8d4e6906d98fb7cbab43ceab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaebb8cad8d4e6906d98fb7cbab43ceab">WANT_GROUP_QUOTA</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memitem:a1e64c3d73e993779c259f706771f47a3" id="r_a1e64c3d73e993779c259f706771f47a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e64c3d73e993779c259f706771f47a3">USRQUOTA</a>&#160;&#160;&#160;0</td></tr>
-<tr class="memitem:a8fb8a9dcd1461eb42f44c769968ef697" id="r_a8fb8a9dcd1461eb42f44c769968ef697"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fb8a9dcd1461eb42f44c769968ef697">QCMD</a>(a,  b)</td></tr>
-<tr class="memitem:a1258638b22c5b5f8b3d46a67804fc6c0" id="r_a1258638b22c5b5f8b3d46a67804fc6c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1258638b22c5b5f8b3d46a67804fc6c0">dbtob</a>(a)</td></tr>
-<tr class="memitem:ab9f9b76d80be539e1f66576fb7dc986e" id="r_ab9f9b76d80be539e1f66576fb7dc986e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f9b76d80be539e1f66576fb7dc986e">tobytes</a>(a,  b)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad26afec8c2e2a7804f8cd03707a0a79f" id="r_ad26afec8c2e2a7804f8cd03707a0a79f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad26afec8c2e2a7804f8cd03707a0a79f">overquota</a> (struct dqblk *)</td></tr>
-<tr class="memitem:a1ae07cc671e3a58d7e89ce8d2916ae3b" id="r_a1ae07cc671e3a58d7e89ce8d2916ae3b"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ae07cc671e3a58d7e89ce8d2916ae3b">special</a> (char *file, int *nfs)</td></tr>
-<tr class="memitem:af5be5dfcdbca0d0a20cdc1104602a651" id="r_af5be5dfcdbca0d0a20cdc1104602a651"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5be5dfcdbca0d0a20cdc1104602a651">getfsquota</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const int uid, struct dqblk *dq)</td></tr>
-<tr class="memitem:a1b0951d634b80d4490d515c5e07fd5f9" id="r_a1b0951d634b80d4490d515c5e07fd5f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0951d634b80d4490d515c5e07fd5f9">getquota</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dqblk *dq, const uint32_t bsize)</td></tr>
+<tr class="memitem:aae4ebe297a9c15de8e660e11efd3b65a" id="r_aae4ebe297a9c15de8e660e11efd3b65a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae4ebe297a9c15de8e660e11efd3b65a">getfreespace</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *bfree, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *btotal, id_t id, int idtype)</td></tr>
 <tr class="memitem:a9390a03cc4a50230a934db21bf891675" id="r_a9390a03cc4a50230a934db21bf891675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9390a03cc4a50230a934db21bf891675">uquota_getvolspace</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *bfree, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *btotal, const uint32_t bsize)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a1258638b22c5b5f8b3d46a67804fc6c0" name="a1258638b22c5b5f8b3d46a67804fc6c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1258638b22c5b5f8b3d46a67804fc6c0">&#9670;&#160;</a></span>dbtob</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define dbtob</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((a) &lt;&lt; 10)</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a8fb8a9dcd1461eb42f44c769968ef697" name="a8fb8a9dcd1461eb42f44c769968ef697"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fb8a9dcd1461eb42f44c769968ef697">&#9670;&#160;</a></span>QCMD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QCMD</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(a)</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ab9f9b76d80be539e1f66576fb7dc986e" name="ab9f9b76d80be539e1f66576fb7dc986e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9f9b76d80be539e1f66576fb7dc986e">&#9670;&#160;</a></span>tobytes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define tobytes</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a1258638b22c5b5f8b3d46a67804fc6c0">dbtob</a>((<a class="code hl_typedef" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a>) (a))</div>
-<div class="ttc" id="ainclude_2atalk_2volume_8h_html_aaafd36fcf24940e0a7f1ae6a1dac846f"><div class="ttname"><a href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a></div><div class="ttdeci">uint64_t VolSpace</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:23</div></div>
-<div class="ttc" id="aquota_8c_html_a1258638b22c5b5f8b3d46a67804fc6c0"><div class="ttname"><a href="#a1258638b22c5b5f8b3d46a67804fc6c0">dbtob</a></div><div class="ttdeci">#define dbtob(a)</div><div class="ttdef"><b>Definition</b> quota.c:714</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a1e64c3d73e993779c259f706771f47a3" name="a1e64c3d73e993779c259f706771f47a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e64c3d73e993779c259f706771f47a3">&#9670;&#160;</a></span>USRQUOTA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USRQUOTA&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaebb8cad8d4e6906d98fb7cbab43ceab" name="aaebb8cad8d4e6906d98fb7cbab43ceab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaebb8cad8d4e6906d98fb7cbab43ceab">&#9670;&#160;</a></span>WANT_GROUP_QUOTA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define WANT_GROUP_QUOTA&#160;&#160;&#160;1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a19b2950073ccaefefda1fcbed259371f" name="a19b2950073ccaefefda1fcbed259371f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19b2950073ccaefefda1fcbed259371f">&#9670;&#160;</a></span>WANT_USER_QUOTA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define WANT_USER_QUOTA&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="af5be5dfcdbca0d0a20cdc1104602a651" name="af5be5dfcdbca0d0a20cdc1104602a651"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5be5dfcdbca0d0a20cdc1104602a651">&#9670;&#160;</a></span>getfsquota()</h2>
+<a id="aae4ebe297a9c15de8e660e11efd3b65a" name="aae4ebe297a9c15de8e660e11efd3b65a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4ebe297a9c15de8e660e11efd3b65a">&#9670;&#160;</a></span>getfreespace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +139,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int getfsquota </td>
+          <td class="memname">int getfreespace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
@@ -269,105 +151,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
+          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em>bfree</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em>dq</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1b0951d634b80d4490d515c5e07fd5f9" name="a1b0951d634b80d4490d515c5e07fd5f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b0951d634b80d4490d515c5e07fd5f9">&#9670;&#160;</a></span>getquota()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getquota </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+          <td class="paramtype"><a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *</td>          <td class="paramname"><span class="paramname"><em>btotal</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">id_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em>dq</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>bsize</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad26afec8c2e2a7804f8cd03707a0a79f" name="ad26afec8c2e2a7804f8cd03707a0a79f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad26afec8c2e2a7804f8cd03707a0a79f">&#9670;&#160;</a></span>overquota()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int overquota </td>
-          <td>(</td>
-          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em>dqblk</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1ae07cc671e3a58d7e89ce8d2916ae3b" name="a1ae07cc671e3a58d7e89ce8d2916ae3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ae07cc671e3a58d7e89ce8d2916ae3b">&#9670;&#160;</a></span>special()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * special </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>nfs</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idtype</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

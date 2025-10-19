@@ -115,8 +115,11 @@ Macros</h2></td></tr>
 <tr class="memitem:a8e5490451f2e0aa5d911ec3b40ea8810" id="r_a8e5490451f2e0aa5d911ec3b40ea8810"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e5490451f2e0aa5d911ec3b40ea8810">ATALK_LIST_HEAD</a>(name)</td></tr>
 <tr class="memitem:aa097666f64c35ddd963f60e3d8ea28eb" id="r_aa097666f64c35ddd963f60e3d8ea28eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa097666f64c35ddd963f60e3d8ea28eb">ATALK_INIT_LIST_HEAD</a>(ptr)</td></tr>
 <tr class="memitem:a26c976b7f654e70df318c1843e5094de" id="r_a26c976b7f654e70df318c1843e5094de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c976b7f654e70df318c1843e5094de">list_entry</a>(ptr,  <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>,  member)</td></tr>
+<tr class="memdesc:a26c976b7f654e70df318c1843e5094de"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the struct for this entry  <br /></td></tr>
 <tr class="memitem:ab8b24e6660ab3760c923e4b4db3fa502" id="r_ab8b24e6660ab3760c923e4b4db3fa502"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b24e6660ab3760c923e4b4db3fa502">list_for_each</a>(pos,  head)</td></tr>
+<tr class="memdesc:ab8b24e6660ab3760c923e4b4db3fa502"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list  <br /></td></tr>
 <tr class="memitem:a19fc06b83f3502a83ce566b8887e6aec" id="r_a19fc06b83f3502a83ce566b8887e6aec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fc06b83f3502a83ce566b8887e6aec">list_for_each_prev</a>(pos,  head)</td></tr>
+<tr class="memdesc:a19fc06b83f3502a83ce566b8887e6aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list in reverse order  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aa097666f64c35ddd963f60e3d8ea28eb" name="aa097666f64c35ddd963f60e3d8ea28eb"></a>
@@ -203,7 +206,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)((<span class="keywordtype">char</span> *)(ptr)-(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(&amp;((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)0)-&gt;member)))</div>
 <div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
-</div><!-- fragment --><p>list_entry - get the struct for this entry </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>get the struct for this entry </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> pointer. </td></tr>
     <tr><td class="paramname">type</td><td>the type of the struct this is embedded in. </td></tr>
@@ -234,7 +239,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;<a class="code hl_define" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a>; pos != (head); \</div>
 <div class="line">        pos = pos-&gt;next)</div>
-</div><!-- fragment --><p>list_for_each - iterate over a list </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>iterate over a list </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. </td></tr>
     <tr><td class="paramname">head</td><td>the head for your list. </td></tr>
@@ -264,7 +271,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">for</span> (pos = (head)-&gt;prev; pos != (head); \</div>
 <div class="line">        pos = pos-&gt;prev)</div>
-</div><!-- fragment --><p>list_for_each_prev - iterate over a list in reverse order </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment -->
+<p>iterate over a list in reverse order </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>the &amp;struct <a class="el" href="structlist__head.html">list_head</a> to use as a loop counter. </td></tr>
     <tr><td class="paramname">head</td><td>the head for your list. </td></tr>

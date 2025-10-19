@@ -2,8 +2,8 @@ var cache_8c =
 [
     [ "cacheduser", "structcacheduser.html", "structcacheduser" ],
     [ "cacheduser_t", "cache_8c.html#ae4be6acf6f0dc405df38d9ec6cbe7297", null ],
-    [ "add_cachebyname", "cache_8c.html#ab2ec363241aea6d2522f384de4234e58", null ],
-    [ "add_cachebyuuid", "cache_8c.html#a857a9e057bfbba2dc0f4ced4ebfa27ce", null ],
+    [ "add_cachebyname", "cache_8c.html#afafe1a50b8bd76951af821793a2c0e20", null ],
+    [ "add_cachebyuuid", "cache_8c.html#aad47c9650c59dd1a48d1e2413e985365", null ],
     [ "hashstring", "cache_8c.html#ace7048da2a4612b4140b7006dd33597c", null ],
     [ "hashuuid", "cache_8c.html#a064a37f8f0a352d41353e5a5aa1e5df3", null ],
     [ "search_cachebyname", "cache_8c.html#ab57499dde4c01cf797157b96799441d0", null ],

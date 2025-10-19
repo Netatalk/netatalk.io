@@ -16,7 +16,7 @@ var ofork_8c =
     [ "of_fstatat", "ofork_8c.html#ad430ec41fa64e04e57456f771146dc41", null ],
     [ "of_hash", "ofork_8c.html#a09a13d84533de7ad2dff405600daaabc", null ],
     [ "of_pforkdesc", "ofork_8c.html#abd41af0d29b18d24e88603110cea9a4f", null ],
-    [ "of_rename", "ofork_8c.html#a11b0fa2a81ee0b4425d5f4be2add4fb4", null ],
+    [ "of_rename", "ofork_8c.html#a1288a620f86b025197526c38afcb70f7", null ],
     [ "of_stat", "ofork_8c.html#a737db37faaee3e48a42c5303d245bbcf", null ],
     [ "of_statdir", "ofork_8c.html#adacc70ca2a9366695f1a2ea5d0337279", null ],
     [ "of_unhash", "ofork_8c.html#a8c3b17c001e8021cfe163c90c51ad674", null ],

@@ -114,7 +114,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3e7a7015d6fce77a40636781c50f6953" id="r_a3e7a7015d6fce77a40636781c50f6953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7a7015d6fce77a40636781c50f6953">OpenClientSocket</a> (char *host, int <a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
-<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int fd)</td></tr>
+<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
 <tr class="memitem:ab8cd6d203bce911123672b83b2c219e2" id="r_ab8cd6d203bce911123672b83b2c219e2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8cd6d203bce911123672b83b2c219e2">my_dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
 <tr class="memitem:af865ec94544db4b0bd6ec8d2411bcaa1" id="r_af865ec94544db4b0bd6ec8d2411bcaa1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af865ec94544db4b0bd6ec8d2411bcaa1">dsi_read_header</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:ac49cdb9fdfe705fff0f4ca43b0ca7dd5" id="r_ac49cdb9fdfe705fff0f4ca43b0ca7dd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac49cdb9fdfe705fff0f4ca43b0ca7dd5">my_dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const size_t ilength, size_t *rlength)</td></tr>
@@ -146,7 +146,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a09da2bf2e00e204029b196b609fe8c95" id="r_a09da2bf2e00e204029b196b609fe8c95"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09da2bf2e00e204029b196b609fe8c95">AFPCloseFork</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork)</td></tr>
 <tr class="memitem:a23a197c1082bf909d76a1972871e1d34" id="r_a23a197c1082bf909d76a1972871e1d34"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23a197c1082bf909d76a1972871e1d34">AFPByteLock</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int end, int mode, int offset, int size)</td></tr>
 <tr class="memitem:a2767640fa9ebe25c5fc45b48f001bd7a" id="r_a2767640fa9ebe25c5fc45b48f001bd7a"><td class="memItemLeft" align="right" valign="top">static off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2767640fa9ebe25c5fc45b48f001bd7a">get_off_t</a> (unsigned char **ibuf, int is64)</td></tr>
-<tr class="memitem:a5acd3550905a7c829fd5d46fb1d677dd" id="r_a5acd3550905a7c829fd5d46fb1d677dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5acd3550905a7c829fd5d46fb1d677dd">set_off_t</a> (off_t offset, uint8_t *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, int is64)</td></tr>
+<tr class="memitem:a5acd3550905a7c829fd5d46fb1d677dd" id="r_a5acd3550905a7c829fd5d46fb1d677dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5acd3550905a7c829fd5d46fb1d677dd">set_off_t</a> (off_t offset, uint8_t *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, int is64)</td></tr>
 <tr class="memitem:a184028b08efa57e4908faa4c5d671f4f" id="r_a184028b08efa57e4908faa4c5d671f4f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a184028b08efa57e4908faa4c5d671f4f">AFPByteLock_ext</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int end, int mode, off_t offset, off_t size)</td></tr>
 <tr class="memitem:ab3a5426cf4788213b60d1b861a6005b8" id="r_ab3a5426cf4788213b60d1b861a6005b8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a5426cf4788213b60d1b861a6005b8">AFPSetForkParam</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, uint16_t bitmap, off_t size)</td></tr>
 <tr class="memitem:a17a086e5c861ce0c99cd727d116d3b8e" id="r_a17a086e5c861ce0c99cd727d116d3b8e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a086e5c861ce0c99cd727d116d3b8e">AFPFlush</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>)</td></tr>
@@ -167,7 +167,7 @@ Functions</h2></td></tr>
 <tr class="memitem:abca973b0cc120f9bb75f762bc1c1b5e8" id="r_abca973b0cc120f9bb75f762bc1c1b5e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abca973b0cc120f9bb75f762bc1c1b5e8">FPset_name</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, int ofs, char *name)</td></tr>
 <tr class="memitem:acafd3b2bf35561339b2016ee99783103" id="r_acafd3b2bf35561339b2016ee99783103"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acafd3b2bf35561339b2016ee99783103">AFPCreateFile</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, char <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, char *name)</td></tr>
 <tr class="memitem:a4fa74782eba97ffd073391c253e69736" id="r_a4fa74782eba97ffd073391c253e69736"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa74782eba97ffd073391c253e69736">AFPWriteHeader</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, char whence)</td></tr>
-<tr class="memitem:a3d7b2a630f8a828df4c771ef61e09824" id="r_a3d7b2a630f8a828df4c771ef61e09824"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d7b2a630f8a828df4c771ef61e09824">AFPWriteFooter</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char whence)</td></tr>
+<tr class="memitem:a1843969164ab680042e1ecd30932483c" id="r_a1843969164ab680042e1ecd30932483c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1843969164ab680042e1ecd30932483c">AFPWriteFooter</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, char whence)</td></tr>
 <tr class="memitem:ad8499d3b594e8430a8c7e21fc67e0124" id="r_ad8499d3b594e8430a8c7e21fc67e0124"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8499d3b594e8430a8c7e21fc67e0124">AFPWrite</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, char whence)</td></tr>
 <tr class="memitem:ad1f443a947b989fc69eaa38c960eeda7" id="r_ad1f443a947b989fc69eaa38c960eeda7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1f443a947b989fc69eaa38c960eeda7">AFPWrite_ext</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, off_t offset, off_t size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, char whence)</td></tr>
 <tr class="memitem:a660ba06cdba1514ca6ce5ff42f6bbb32" id="r_a660ba06cdba1514ca6ce5ff42f6bbb32"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a660ba06cdba1514ca6ce5ff42f6bbb32">AFPWrite_ext_async</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, off_t offset, off_t size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, char whence)</td></tr>
@@ -182,11 +182,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a44e4a57e03c9e1f37b660be2de3c09ee" id="r_a44e4a57e03c9e1f37b660be2de3c09ee"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44e4a57e03c9e1f37b660be2de3c09ee">AFPMapID</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, char fn, int id)</td></tr>
 <tr class="memitem:a43542ef714c883aaffb67e9e84263b6c" id="r_a43542ef714c883aaffb67e9e84263b6c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43542ef714c883aaffb67e9e84263b6c">AFPMapName</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, char fn, char *name)</td></tr>
 <tr class="memitem:a7d7f08d7028c76fc157cbac28645d68e" id="r_a7d7f08d7028c76fc157cbac28645d68e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d7f08d7028c76fc157cbac28645d68e">AFPBadPacket</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, char fn, char *name)</td></tr>
-<tr class="memitem:a76e6feaab5d1a8dbc527fcabda97c63f" id="r_a76e6feaab5d1a8dbc527fcabda97c63f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e6feaab5d1a8dbc527fcabda97c63f">AFPReadHeader</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a97f11d3b4e62481145a8d76d17ce2d20" id="r_a97f11d3b4e62481145a8d76d17ce2d20"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f11d3b4e62481145a8d76d17ce2d20">AFPReadFooter</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int offset <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
+<tr class="memitem:a9ad87f05dd5f97ac168abfd0497459d4" id="r_a9ad87f05dd5f97ac168abfd0497459d4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad87f05dd5f97ac168abfd0497459d4">AFPReadHeader</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
+<tr class="memitem:ac0cdd2617f550fd813076f2d5cf99851" id="r_ac0cdd2617f550fd813076f2d5cf99851"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0cdd2617f550fd813076f2d5cf99851">AFPReadFooter</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a85d32214b7b3896ab59f261fa602e07c" id="r_a85d32214b7b3896ab59f261fa602e07c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d32214b7b3896ab59f261fa602e07c">AFPRead</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int offset, int size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:aa3e245e60bb9dd17ac36357cc5dfc526" id="r_aa3e245e60bb9dd17ac36357cc5dfc526"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3e245e60bb9dd17ac36357cc5dfc526">AFPRead_ext</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, off_t offset, off_t size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
-<tr class="memitem:a69054da10971c8e234df5676e8f13b52" id="r_a69054da10971c8e234df5676e8f13b52"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69054da10971c8e234df5676e8f13b52">AFPRead_ext_async</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, off_t offset, off_t size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:acd78ab6e350e5b41545f7e4820ad5ff1" id="r_acd78ab6e350e5b41545f7e4820ad5ff1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd78ab6e350e5b41545f7e4820ad5ff1">AFPRead_ext_async</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, off_t offset, off_t size, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a4eb7d9b10b16fa5f6a80d55036a13b8a" id="r_a4eb7d9b10b16fa5f6a80d55036a13b8a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb7d9b10b16fa5f6a80d55036a13b8a">AFPCreateDir</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, char *name)</td></tr>
 <tr class="memitem:a1fb47dcb3f8ebe59e062a5c73422c4ac" id="r_a1fb47dcb3f8ebe59e062a5c73422c4ac"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fb47dcb3f8ebe59e062a5c73422c4ac">AFPGetForkParam</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, uint16_t bitmap)</td></tr>
 <tr class="memitem:a02c0dd649464d23a00072134f4377ee4" id="r_a02c0dd649464d23a00072134f4377ee4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c0dd649464d23a00072134f4377ee4">AFPGetAPPL</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t dt, char *name, uint16_t index, uint16_t f_bitmap)</td></tr>
@@ -1582,8 +1582,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a69054da10971c8e234df5676e8f13b52" name="a69054da10971c8e234df5676e8f13b52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69054da10971c8e234df5676e8f13b52">&#9670;&#160;</a></span>AFPRead_ext_async()</h2>
+<a id="acd78ab6e350e5b41545f7e4820ad5ff1" name="acd78ab6e350e5b41545f7e4820ad5ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd78ab6e350e5b41545f7e4820ad5ff1">&#9670;&#160;</a></span>AFPRead_ext_async()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1611,15 +1611,15 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a97f11d3b4e62481145a8d76d17ce2d20" name="a97f11d3b4e62481145a8d76d17ce2d20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97f11d3b4e62481145a8d76d17ce2d20">&#9670;&#160;</a></span>AFPReadFooter()</h2>
+<a id="ac0cdd2617f550fd813076f2d5cf99851" name="ac0cdd2617f550fd813076f2d5cf99851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cdd2617f550fd813076f2d5cf99851">&#9670;&#160;</a></span>AFPReadFooter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1632,12 +1632,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t fork</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>fork</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int offset</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1654,8 +1654,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a76e6feaab5d1a8dbc527fcabda97c63f" name="a76e6feaab5d1a8dbc527fcabda97c63f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76e6feaab5d1a8dbc527fcabda97c63f">&#9670;&#160;</a></span>AFPReadHeader()</h2>
+<a id="a9ad87f05dd5f97ac168abfd0497459d4" name="a9ad87f05dd5f97ac168abfd0497459d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad87f05dd5f97ac168abfd0497459d4">&#9670;&#160;</a></span>AFPReadHeader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1683,7 +1683,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2029,8 +2029,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d7b2a630f8a828df4c771ef61e09824" name="a3d7b2a630f8a828df4c771ef61e09824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d7b2a630f8a828df4c771ef61e09824">&#9670;&#160;</a></span>AFPWriteFooter()</h2>
+<a id="a1843969164ab680042e1ecd30932483c" name="a1843969164ab680042e1ecd30932483c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1843969164ab680042e1ecd30932483c">&#9670;&#160;</a></span>AFPWriteFooter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2043,7 +2043,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t fork</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>fork</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2058,7 +2058,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

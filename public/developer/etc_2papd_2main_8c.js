@@ -1,10 +1,10 @@
 var etc_2papd_2main_8c =
 [
+    [ "rbuf_t", "structrbuf__t.html", "structrbuf__t" ],
     [ "MACCHARSET", "etc_2papd_2main_8c.html#a3c0bb3281ee918653bebb5800f41696b", null ],
     [ "PF_CONFBUFFER", "etc_2papd_2main_8c.html#a8e0c177b6178feee3f30801f24f52022", null ],
     [ "WEXITSTATUS", "etc_2papd_2main_8c.html#a7a9fed9392a51acd68e5f469e63f7961", null ],
     [ "WIFEXITED", "etc_2papd_2main_8c.html#a2052fe8e0f1198edea1a2f36dda706e6", null ],
-    [ "__attribute__", "etc_2papd_2main_8c.html#ad09246453a4dabd919c7541484046a87", null ],
     [ "die", "etc_2papd_2main_8c.html#af92bdc862950fb471cdbed45a6288d0a", null ],
     [ "getpname", "etc_2papd_2main_8c.html#a7428f8938c9b1047729b8edc9495856b", null ],
     [ "getprinters", "etc_2papd_2main_8c.html#a141328e757cb2a4435f48724ed469078", null ],
@@ -12,7 +12,7 @@ var etc_2papd_2main_8c =
     [ "main", "etc_2papd_2main_8c.html#a0c99d968a34e803d378692bde2e3f18f", null ],
     [ "papd_exit", "etc_2papd_2main_8c.html#a53506cbc7da4dbd011b56e47aeadeafa", null ],
     [ "pgetstr", "etc_2papd_2main_8c.html#abd8b33bf033119344a542afb8bab8ef4", null ],
-    [ "reap", "etc_2papd_2main_8c.html#a65ad0b08aaf9765b4fa96077b36470a3", null ],
+    [ "reap", "etc_2papd_2main_8c.html#a81705ce41c349f18f442006ceb915315", null ],
     [ "rprintcap", "etc_2papd_2main_8c.html#ad0952671a41105c23f188a5e07fd91e4", null ],
     [ "cannedstatus", "etc_2papd_2main_8c.html#acdc1869d5f239729aa12bf81739205de", null ],
     [ "conffile", "etc_2papd_2main_8c.html#a3daacdd94d6359cac5567e9ed7b60b00", null ],
@@ -26,7 +26,6 @@ var etc_2papd_2main_8c =
     [ "printers", "etc_2papd_2main_8c.html#a9a452f19a970380c4f6d1964fceb9e34", null ],
     [ "quantum", "etc_2papd_2main_8c.html#ac594cfb861bd08045c1ecc0abfe4710f", null ],
     [ "r_buf", "etc_2papd_2main_8c.html#ae9418c19f326463071a49a47b9b91386", null ],
-    [ "rbuf_t", "etc_2papd_2main_8c.html#a6b893e674a9a741b5777e21b90cff33c", null ],
     [ "sock", "etc_2papd_2main_8c.html#a8ae0788857ced1e0e24b4c46afe088c7", null ],
     [ "uamlist", "etc_2papd_2main_8c.html#adfe6b2ce6b17ae40d15a17c690710b1b", null ],
     [ "uampath", "etc_2papd_2main_8c.html#aaa7d81e82e984c6b3710f86da75b4cd8", null ],

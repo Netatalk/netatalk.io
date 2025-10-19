@@ -102,8 +102,491 @@ $(function(){initNavTree('ldapconfig_8h.html','',''); });
   <div class="headertitle"><div class="title">ldapconfig.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;iniparser.h&gt;</code><br />
+</div>
 <p><a href="ldapconfig_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:ldap_5Fpref" id="r_ldap_5Fpref"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structldap__pref.html">ldap_pref</a></td></tr>
+<tr class="memitem:pref_5Farray" id="r_pref_5Farray"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpref__array.html">pref_array</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:afb5211e31175766a4647662b0aa12031" id="r_afb5211e31175766a4647662b0aa12031"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb5211e31175766a4647662b0aa12031">ldap_uuid_encoding_type</a> { <a class="el" href="#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a> = 0
+, <a class="el" href="#afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f">LDAP_UUID_ENCODING_MSGUID</a> = 1
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac889bf44363f22b0f9b5a1f7899420eb" id="r_ac889bf44363f22b0f9b5a1f7899420eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac889bf44363f22b0f9b5a1f7899420eb">acl_ldap_readconfig</a> (dictionary *iniconfig)</td></tr>
+<tr class="memitem:a6cec2cb2689fb59653f79abbd7e599a7" id="r_a6cec2cb2689fb59653f79abbd7e599a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cec2cb2689fb59653f79abbd7e599a7">acl_ldap_freeconfig</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aaccd10cdf57362a3da6cf06bc85e1134" id="r_aaccd10cdf57362a3da6cf06bc85e1134"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaccd10cdf57362a3da6cf06bc85e1134">ldap_server</a></td></tr>
+<tr class="memitem:a66bc92e36b097496e20a66b37231ad58" id="r_a66bc92e36b097496e20a66b37231ad58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66bc92e36b097496e20a66b37231ad58">ldap_auth_method</a></td></tr>
+<tr class="memitem:a77806b881c8c9427d19d2f59952fa5d7" id="r_a77806b881c8c9427d19d2f59952fa5d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77806b881c8c9427d19d2f59952fa5d7">ldap_auth_dn</a></td></tr>
+<tr class="memitem:a88933619fa5259c734fce6f54adc574c" id="r_a88933619fa5259c734fce6f54adc574c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88933619fa5259c734fce6f54adc574c">ldap_auth_pw</a></td></tr>
+<tr class="memitem:a02424c499beb85707040eba832f515c1" id="r_a02424c499beb85707040eba832f515c1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02424c499beb85707040eba832f515c1">ldap_userbase</a></td></tr>
+<tr class="memitem:a1996d3a7f03bbfeeebb7e79b5c9bd4dd" id="r_a1996d3a7f03bbfeeebb7e79b5c9bd4dd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">ldap_groupbase</a></td></tr>
+<tr class="memitem:a8b5597eb2a926d2dfe31e149bd485f7a" id="r_a8b5597eb2a926d2dfe31e149bd485f7a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b5597eb2a926d2dfe31e149bd485f7a">ldap_uuid_attr</a></td></tr>
+<tr class="memitem:a52f7dd07d602f0365bec47a478a5278e" id="r_a52f7dd07d602f0365bec47a478a5278e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52f7dd07d602f0365bec47a478a5278e">ldap_uuid_string</a></td></tr>
+<tr class="memitem:af48a991b3c515bb8644d63162881df61" id="r_af48a991b3c515bb8644d63162881df61"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48a991b3c515bb8644d63162881df61">ldap_name_attr</a></td></tr>
+<tr class="memitem:a5ebef82d479c727d0b8f32787da16784" id="r_a5ebef82d479c727d0b8f32787da16784"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebef82d479c727d0b8f32787da16784">ldap_group_attr</a></td></tr>
+<tr class="memitem:ab57d8984ae3faadd519f5485e0ded091" id="r_ab57d8984ae3faadd519f5485e0ded091"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab57d8984ae3faadd519f5485e0ded091">ldap_uid_attr</a></td></tr>
+<tr class="memitem:adf5140a19d07a13b1a05aa5dc18fe93a" id="r_adf5140a19d07a13b1a05aa5dc18fe93a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf5140a19d07a13b1a05aa5dc18fe93a">ldap_userfilter</a></td></tr>
+<tr class="memitem:ac88f093fda7ff2db2179b62a2d7682e4" id="r_ac88f093fda7ff2db2179b62a2d7682e4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac88f093fda7ff2db2179b62a2d7682e4">ldap_groupfilter</a></td></tr>
+<tr class="memitem:a3f427bc43402e8d672c14b4b22964a3d" id="r_a3f427bc43402e8d672c14b4b22964a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f427bc43402e8d672c14b4b22964a3d">ldap_uuid_encoding</a></td></tr>
+<tr class="memitem:a9ef1e6c89203c40a8ff59c42d4a61d5a" id="r_a9ef1e6c89203c40a8ff59c42d4a61d5a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structldap__pref.html">ldap_pref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef1e6c89203c40a8ff59c42d4a61d5a">ldap_prefs</a> []</td></tr>
+<tr class="memitem:a91b80f9667358bd711c3e38ad5d8a293" id="r_a91b80f9667358bd711c3e38ad5d8a293"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpref__array.html">pref_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b80f9667358bd711c3e38ad5d8a293">prefs_array</a> []</td></tr>
+<tr class="memitem:afa52b77b42786e97a038f3d99a56ce1f" id="r_afa52b77b42786e97a038f3d99a56ce1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa52b77b42786e97a038f3d99a56ce1f">ldap_config_valid</a></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="afb5211e31175766a4647662b0aa12031" name="afb5211e31175766a4647662b0aa12031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb5211e31175766a4647662b0aa12031">&#9670;&#160;</a></span>ldap_uuid_encoding_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#afb5211e31175766a4647662b0aa12031">ldap_uuid_encoding_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2" name="afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2"></a>LDAP_UUID_ENCODING_STRING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f" name="afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f"></a>LDAP_UUID_ENCODING_MSGUID&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a6cec2cb2689fb59653f79abbd7e599a7" name="a6cec2cb2689fb59653f79abbd7e599a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cec2cb2689fb59653f79abbd7e599a7">&#9670;&#160;</a></span>acl_ldap_freeconfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acl_ldap_freeconfig </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac889bf44363f22b0f9b5a1f7899420eb" name="ac889bf44363f22b0f9b5a1f7899420eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac889bf44363f22b0f9b5a1f7899420eb">&#9670;&#160;</a></span>acl_ldap_readconfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int acl_ldap_readconfig </td>
+          <td>(</td>
+          <td class="paramtype">dictionary *</td>          <td class="paramname"><span class="paramname"><em>iniconfig</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a77806b881c8c9427d19d2f59952fa5d7" name="a77806b881c8c9427d19d2f59952fa5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77806b881c8c9427d19d2f59952fa5d7">&#9670;&#160;</a></span>ldap_auth_dn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_auth_dn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bc92e36b097496e20a66b37231ad58" name="a66bc92e36b097496e20a66b37231ad58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bc92e36b097496e20a66b37231ad58">&#9670;&#160;</a></span>ldap_auth_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_auth_method</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88933619fa5259c734fce6f54adc574c" name="a88933619fa5259c734fce6f54adc574c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88933619fa5259c734fce6f54adc574c">&#9670;&#160;</a></span>ldap_auth_pw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_auth_pw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa52b77b42786e97a038f3d99a56ce1f" name="afa52b77b42786e97a038f3d99a56ce1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa52b77b42786e97a038f3d99a56ce1f">&#9670;&#160;</a></span>ldap_config_valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_config_valid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ebef82d479c727d0b8f32787da16784" name="a5ebef82d479c727d0b8f32787da16784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebef82d479c727d0b8f32787da16784">&#9670;&#160;</a></span>ldap_group_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_group_attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1996d3a7f03bbfeeebb7e79b5c9bd4dd" name="a1996d3a7f03bbfeeebb7e79b5c9bd4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">&#9670;&#160;</a></span>ldap_groupbase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_groupbase</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac88f093fda7ff2db2179b62a2d7682e4" name="ac88f093fda7ff2db2179b62a2d7682e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88f093fda7ff2db2179b62a2d7682e4">&#9670;&#160;</a></span>ldap_groupfilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_groupfilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af48a991b3c515bb8644d63162881df61" name="af48a991b3c515bb8644d63162881df61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48a991b3c515bb8644d63162881df61">&#9670;&#160;</a></span>ldap_name_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_name_attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ef1e6c89203c40a8ff59c42d4a61d5a" name="a9ef1e6c89203c40a8ff59c42d4a61d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef1e6c89203c40a8ff59c42d4a61d5a">&#9670;&#160;</a></span>ldap_prefs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structldap__pref.html">ldap_pref</a> ldap_prefs[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaccd10cdf57362a3da6cf06bc85e1134" name="aaccd10cdf57362a3da6cf06bc85e1134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaccd10cdf57362a3da6cf06bc85e1134">&#9670;&#160;</a></span>ldap_server</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_server</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab57d8984ae3faadd519f5485e0ded091" name="ab57d8984ae3faadd519f5485e0ded091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57d8984ae3faadd519f5485e0ded091">&#9670;&#160;</a></span>ldap_uid_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uid_attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02424c499beb85707040eba832f515c1" name="a02424c499beb85707040eba832f515c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02424c499beb85707040eba832f515c1">&#9670;&#160;</a></span>ldap_userbase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_userbase</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf5140a19d07a13b1a05aa5dc18fe93a" name="adf5140a19d07a13b1a05aa5dc18fe93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5140a19d07a13b1a05aa5dc18fe93a">&#9670;&#160;</a></span>ldap_userfilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_userfilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b5597eb2a926d2dfe31e149bd485f7a" name="a8b5597eb2a926d2dfe31e149bd485f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b5597eb2a926d2dfe31e149bd485f7a">&#9670;&#160;</a></span>ldap_uuid_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uuid_attr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f427bc43402e8d672c14b4b22964a3d" name="a3f427bc43402e8d672c14b4b22964a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f427bc43402e8d672c14b4b22964a3d">&#9670;&#160;</a></span>ldap_uuid_encoding</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_uuid_encoding</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52f7dd07d602f0365bec47a478a5278e" name="a52f7dd07d602f0365bec47a478a5278e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f7dd07d602f0365bec47a478a5278e">&#9670;&#160;</a></span>ldap_uuid_string</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uuid_string</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91b80f9667358bd711c3e38ad5d8a293" name="a91b80f9667358bd711c3e38ad5d8a293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b80f9667358bd711c3e38ad5d8a293">&#9670;&#160;</a></span>prefs_array</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structpref__array.html">pref_array</a> prefs_array[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

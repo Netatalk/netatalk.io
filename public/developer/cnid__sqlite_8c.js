@@ -11,7 +11,7 @@ var cnid__sqlite_8c =
     [ "cnid_sqlite_lookup", "cnid__sqlite_8c.html#ac22d641eb86035cb91ee241a1784f7ff", null ],
     [ "cnid_sqlite_new", "cnid__sqlite_8c.html#af567403aeeceb5584af607a9fd9406c6", null ],
     [ "cnid_sqlite_open", "cnid__sqlite_8c.html#a9d1e1d8326088ee5f132d758e86c6bba", null ],
-    [ "cnid_sqlite_rebuild_add", "cnid__sqlite_8c.html#afbcc909c267055a797e46fecd7860c32", null ],
+    [ "cnid_sqlite_rebuild_add", "cnid__sqlite_8c.html#a94e36df390823c76f29ab3fe58436a7a", null ],
     [ "cnid_sqlite_resolve", "cnid__sqlite_8c.html#a88394942f2c0d786bbb13b40306f9bd6", null ],
     [ "cnid_sqlite_update", "cnid__sqlite_8c.html#ae4ca673c87f570bd6003734c3f8d6033", null ],
     [ "cnid_sqlite_wipe", "cnid__sqlite_8c.html#ab129de567f88929807428818468e7f20", null ],

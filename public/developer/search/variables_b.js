@@ -11,7 +11,5 @@ var searchData=
   ['key_8',['key',['../structnode__t.html#a6e19a2667bdabda55cf673c2533bdde1',1,'node_t::key'],['../structofork.html#a1e03204e847822fd00b43678ad9bcc15',1,'ofork::key']]],
   ['keyfile_9',['keyfile',['../structafp__options.html#ab1efe64de28ad37b8040b8063936a216',1,'afp_options']]],
   ['known_5fobjects_10',['known_objects',['../structftw__data.html#ae413d57881c8bc3a19c65b3886723322',1,'ftw_data']]],
-  ['ktextencoding_11',['kTextEncoding',['../structcharset__functions.html#aa75989902a51f1f40ce96668887adafe',1,'charset_functions']]],
-  ['kw_5factive_12',['kw_active',['../lp_8c.html#a94a3f4ea349e6d79124114e11ea0210b',1,'lp.c']]],
-  ['kw_5frank_13',['kw_rank',['../lp_8c.html#a17c1d99f91f8e6c45ebdbdb728a6cffd',1,'lp.c']]]
+  ['ktextencoding_11',['kTextEncoding',['../structcharset__functions.html#aa75989902a51f1f40ce96668887adafe',1,'charset_functions']]]
 ];

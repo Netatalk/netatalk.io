@@ -116,6 +116,7 @@ $(function(){initNavTree('etc_2afpd_2unix_8c.html','',''); });
 <code>#include &lt;<a class="el" href="include_2atalk_2unix_8h_source.html">atalk/unix.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vfs_8h_source.html">atalk/vfs.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="acls_8h_source.html">acls.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="auth_8h_source.html">auth.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2directory_8h_source.html">directory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fork_8h_source.html">fork.h</a>&quot;</code><br />
@@ -127,7 +128,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a68047797883f789614e92ae456213b" id="r_a5a68047797883f789614e92ae456213b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a68047797883f789614e92ae456213b">ustatfs_getvolspace</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *bfree, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *btotal, uint32_t *bsize)</td></tr>
 <tr class="memitem:a92db6fd2bd4a42681781b4865b176a1b" id="r_a92db6fd2bd4a42681781b4865b176a1b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92db6fd2bd4a42681781b4865b176a1b">utombits</a> (mode_t bits)</td></tr>
 <tr class="memitem:a2d4011568d17dbea07a5993818530e66" id="r_a2d4011568d17dbea07a5993818530e66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d4011568d17dbea07a5993818530e66">utommode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct stat *stat, struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
-<tr class="memitem:aa60a9b872d418ea84e559da3d5b0d316" id="r_aa60a9b872d418ea84e559da3d5b0d316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa60a9b872d418ea84e559da3d5b0d316">accessmode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structmaccess.html">maccess</a> *ma, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct stat *st)</td></tr>
+<tr class="memitem:a9e8418f8a159536e7fe1232c1544c41b" id="r_a9e8418f8a159536e7fe1232c1544c41b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e8418f8a159536e7fe1232c1544c41b">accessmode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structmaccess.html">maccess</a> *ma, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, struct stat *st)</td></tr>
 <tr class="memitem:aa596b9e5f940b08e7a066990fd74c995" id="r_aa596b9e5f940b08e7a066990fd74c995"><td class="memItemLeft" align="right" valign="top">static mode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa596b9e5f940b08e7a066990fd74c995">mtoubits</a> (uint8_t bits)</td></tr>
 <tr class="memitem:a75dcf68ecffe3ccdd27e81794f0a28e6" id="r_a75dcf68ecffe3ccdd27e81794f0a28e6"><td class="memItemLeft" align="right" valign="top">mode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75dcf68ecffe3ccdd27e81794f0a28e6">mtoumode</a> (struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
 <tr class="memitem:a9e160d4442c336067bb3132e70f6ffc9" id="r_a9e160d4442c336067bb3132e70f6ffc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e160d4442c336067bb3132e70f6ffc9">setfilunixmode</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, mode_t mode)</td></tr>
@@ -136,8 +137,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7420fdeb0394c2de1ed1b60c4f788b5" id="r_ac7420fdeb0394c2de1ed1b60c4f788b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7420fdeb0394c2de1ed1b60c4f788b5">setdirowner</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, const uid_t uid, const gid_t gid)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="aa60a9b872d418ea84e559da3d5b0d316" name="aa60a9b872d418ea84e559da3d5b0d316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa60a9b872d418ea84e559da3d5b0d316">&#9670;&#160;</a></span>accessmode()</h2>
+<a id="a9e8418f8a159536e7fe1232c1544c41b" name="a9e8418f8a159536e7fe1232c1544c41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8418f8a159536e7fe1232c1544c41b">&#9670;&#160;</a></span>accessmode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +166,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structdir.html">dir</a> *</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

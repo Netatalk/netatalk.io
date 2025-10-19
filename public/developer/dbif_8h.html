@@ -139,6 +139,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a63a20b67c64cbbb9100c55aa50a98233" id="r_a63a20b67c64cbbb9100c55aa50a98233"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63a20b67c64cbbb9100c55aa50a98233">dbif_del</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *, const int, DBT *, uint32_t)</td></tr>
 <tr class="memitem:a6c53734445c39e252cedaa218a38a2fd" id="r_a6c53734445c39e252cedaa218a38a2fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c53734445c39e252cedaa218a38a2fd">dbif_count</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *, const int, uint32_t *)</td></tr>
 <tr class="memitem:a7b4e1048d423dec1a01fe3a1efc63ce5" id="r_a7b4e1048d423dec1a01fe3a1efc63ce5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b4e1048d423dec1a01fe3a1efc63ce5">dbif_search</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, DBT *<a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>, char *resbuf)</td></tr>
+<tr class="memdesc:a7b4e1048d423dec1a01fe3a1efc63ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the database by name.  <br /></td></tr>
 <tr class="memitem:a771ec86c13f4e061fd4f43a5d8b6394e" id="r_a771ec86c13f4e061fd4f43a5d8b6394e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a771ec86c13f4e061fd4f43a5d8b6394e">dbif_copy_rootinfokey</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *srcdbd, <a class="el" href="struct_d_b_d.html">DBD</a> *destdbd)</td></tr>
 <tr class="memitem:aae3ad65ed7bb488b68ee103a711a1449" id="r_aae3ad65ed7bb488b68ee103a711a1449"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae3ad65ed7bb488b68ee103a711a1449">dbif_txn_begin</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *)</td></tr>
 <tr class="memitem:a1990245b21f57b59ad5c4e6e18185e93" id="r_a1990245b21f57b59ad5c4e6e18185e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1990245b21f57b59ad5c4e6e18185e93">dbif_txn_commit</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *)</td></tr>
@@ -658,12 +659,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Search the database by name</p>
+
+<p>Search the database by name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dbd</td><td>(r) database handle </td></tr>
-    <tr><td class="paramname">key</td><td>(r) key to search for, must be initialized with name to search for (key-&gt;data, key-&gt;size) </td></tr>
-    <tr><td class="paramname">resbuf</td><td>(w) buffer for search results CNIDs, maxsize is assumed to be DBD_MAX_SRCH_RSLTS * sizefof(cnid_t)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbd</td><td>database handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>key to search for, must be initialized with name to search for (key-&gt;data, key-&gt;size) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">resbuf</td><td>buffer for search results CNIDs, maxsize is assumed to be DBD_MAX_SRCH_RSLTS * sizefof(cnid_t)</td></tr>
   </table>
   </dd>
 </dl>

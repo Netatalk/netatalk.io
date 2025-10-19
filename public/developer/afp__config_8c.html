@@ -122,6 +122,7 @@ $(function(){initNavTree('afp__config_8c.html','',''); });
 <code>#include &lt;<a class="el" href="globals_8h_source.html">atalk/globals.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2nbp_8h_source.html">atalk/nbp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2zip_8h_source.html">atalk/zip.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ldapconfig_8h_source.html">atalk/ldapconfig.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="iniparser__util_8h_source.html">atalk/iniparser_util.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="netatalk__conf_8h_source.html">atalk/netatalk_conf.h</a>&gt;</code><br />
@@ -136,8 +137,11 @@ $(function(){initNavTree('afp__config_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a70881fc9dc5211861b7ed880ebdfb766" id="r_a70881fc9dc5211861b7ed880ebdfb766"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70881fc9dc5211861b7ed880ebdfb766">safe_atoi</a> (const char *str, const char *param_name, int min_val, int max_val, int default_val)</td></tr>
+<tr class="memdesc:a70881fc9dc5211861b7ed880ebdfb766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe string to integer conversion with bounds checking.  <br /></td></tr>
 <tr class="memitem:aee670260d69bc8601e7e9c3496067bfd" id="r_aee670260d69bc8601e7e9c3496067bfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee670260d69bc8601e7e9c3496067bfd">configfree</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
+<tr class="memdesc:aee670260d69bc8601e7e9c3496067bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a>.  <br /></td></tr>
 <tr class="memitem:a7da853571cfdb6dc32978d9e6e5fd4cf" id="r_a7da853571cfdb6dc32978d9e6e5fd4cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7da853571cfdb6dc32978d9e6e5fd4cf">configinit</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="etc_2afpd_2main_8c.html#ae6bf9ab64efc34c4e2d6b4ebf5e09706">dsi_obj</a>, <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="etc_2afpd_2main_8c.html#a686fa76fa0365a07168b4ae34cd7e9e6">asp_obj</a>)</td></tr>
+<tr class="memdesc:a7da853571cfdb6dc32978d9e6e5fd4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get everything running.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aee670260d69bc8601e7e9c3496067bfd" name="aee670260d69bc8601e7e9c3496067bfd"></a>
@@ -158,7 +162,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a></p>
+
+<p>Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a>. </p>
 <p>"dsi" can be NULL in which case all <a class="el" href="struct_d_s_i.html">DSI</a> objects and the config object is freed, otherwise its an afpd session child and only any unneeded <a class="el" href="struct_d_s_i.html">DSI</a> objects are freed </p>
 
 </div>
@@ -181,7 +186,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get everything running </p>
+
+<p>Get everything running. </p>
 
 </div>
 </div>
@@ -226,7 +232,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Safe string to integer conversion with bounds checking</p>
+
+<p>Safe string to integer conversion with bounds checking. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>String to convert </td></tr>

@@ -5,7 +5,7 @@ var nad__mv_8c =
     [ "copy", "nad__mv_8c.html#a85fab4a862d5eedd9fee7a6ef9ded1b4", null ],
     [ "do_move", "nad__mv_8c.html#a5605a83544ae3a6484359e29c4dd239f", null ],
     [ "set_signal", "nad__mv_8c.html#a5636ad417e8a37f1104264394c47a0e4", null ],
-    [ "sig_handler", "nad__mv_8c.html#ae5e5c5971fc3b5e9b1acf9e1397bcbc8", null ],
+    [ "sig_handler", "nad__mv_8c.html#a366471b5822de7615f33cbe5eab9726a", null ],
     [ "usage_mv", "nad__mv_8c.html#a11b51eed634f79b9a2b5cef379ee073c", null ],
     [ "alarmed", "nad__mv_8c.html#a763a0c2bfa935b16b925deff83c28731", null ],
     [ "did", "nad__mv_8c.html#a39466504497f1ab95465d7daf62514c1", null ],

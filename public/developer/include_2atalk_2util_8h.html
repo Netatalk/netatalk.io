@@ -102,13 +102,16 @@ $(function(){initNavTree('include_2atalk_2util_8h.html','',''); });
   <div class="headertitle"><div class="title">util.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Netatalk utility functions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;poll.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;sys/socket.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="at_8h_source.html">netatalk/at.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="unicode_8h_source.html">atalk/unicode.h</a>&gt;</code><br />
@@ -118,7 +121,9 @@ $(function(){initNavTree('include_2atalk_2util_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:asev_5Fdata" id="r_asev_5Fdata"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasev__data.html">asev_data</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">atalk socket event data  <a href="structasev__data.html#details">More...</a><br /></td></tr>
 <tr class="memitem:asev" id="r_asev"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasev.html">asev</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">atalk socket event  <a href="structasev.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -144,11 +149,11 @@ Macros</h2></td></tr>
 <tr class="memitem:a991df84e1583da786e368435b9bc59a6" id="r_a991df84e1583da786e368435b9bc59a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a991df84e1583da786e368435b9bc59a6">strequal</a>(a,  b)</td></tr>
 <tr class="memitem:a101b6412bf1aef59d8e68327aadf8aed" id="r_a101b6412bf1aef59d8e68327aadf8aed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a101b6412bf1aef59d8e68327aadf8aed">cfrombstr</a>(b)</td></tr>
 <tr class="memitem:ab4cdf3b96fbf596e8966aa1603282a41" id="r_ab4cdf3b96fbf596e8966aa1603282a41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4cdf3b96fbf596e8966aa1603282a41">BSTRING_STRIP_SLASH</a>(a)</td></tr>
-<tr class="memitem:af3fd37d69e7035b61796f211cc74d329" id="r_af3fd37d69e7035b61796f211cc74d329"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3fd37d69e7035b61796f211cc74d329">read_lock</a>(fd,  offset,  whence,  len)</td></tr>
+<tr class="memitem:af3fd37d69e7035b61796f211cc74d329" id="r_af3fd37d69e7035b61796f211cc74d329"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3fd37d69e7035b61796f211cc74d329">read_lock</a>(<a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>,  offset,  whence,  len)</td></tr>
 <tr class="memdesc:af3fd37d69e7035b61796f211cc74d329"><td class="mdescLeft">&#160;</td><td class="mdescRight">place read lock on file  <br /></td></tr>
-<tr class="memitem:a38e68ca5822fa748ff9b8971a17ee4a9" id="r_a38e68ca5822fa748ff9b8971a17ee4a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e68ca5822fa748ff9b8971a17ee4a9">write_lock</a>(fd,  offset,  whence,  len)</td></tr>
+<tr class="memitem:a38e68ca5822fa748ff9b8971a17ee4a9" id="r_a38e68ca5822fa748ff9b8971a17ee4a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e68ca5822fa748ff9b8971a17ee4a9">write_lock</a>(<a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>,  offset,  whence,  len)</td></tr>
 <tr class="memdesc:a38e68ca5822fa748ff9b8971a17ee4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">place write lock on file  <br /></td></tr>
-<tr class="memitem:aa8bef19a0b52f4d4fcc1b414fb50d318" id="r_aa8bef19a0b52f4d4fcc1b414fb50d318"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bef19a0b52f4d4fcc1b414fb50d318">unlock</a>(fd,  offset,  whence,  len)</td></tr>
+<tr class="memitem:aa8bef19a0b52f4d4fcc1b414fb50d318" id="r_aa8bef19a0b52f4d4fcc1b414fb50d318"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bef19a0b52f4d4fcc1b414fb50d318">unlock</a>(<a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>,  offset,  whence,  len)</td></tr>
 <tr class="memdesc:aa8bef19a0b52f4d4fcc1b414fb50d318"><td class="mdescLeft">&#160;</td><td class="mdescRight">unlock a file  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -159,6 +164,7 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a96bbb0ddf55b6fe926b2c9236ea7eebc" id="r_a96bbb0ddf55b6fe926b2c9236ea7eebc"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96bbb0ddf55b6fe926b2c9236ea7eebc">sys_sendfile</a> (int __out_fd, int __in_fd, off_t *__offset, size_t __count)</td></tr>
 <tr class="memitem:ad4d87b30be4a0662bd341c7ac8735d24" id="r_ad4d87b30be4a0662bd341c7ac8735d24"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d87b30be4a0662bd341c7ac8735d24">getifacelist</a> (void)</td></tr>
 <tr class="memitem:a080fd079be56d28ecf20993c67a80a9b" id="r_a080fd079be56d28ecf20993c67a80a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a080fd079be56d28ecf20993c67a80a9b">freeifacelist</a> (char **)</td></tr>
 <tr class="memitem:af84b1b7ecd3f64230bf3781a65323036" id="r_af84b1b7ecd3f64230bf3781a65323036"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af84b1b7ecd3f64230bf3781a65323036">atalk_aton</a> (char *, struct <a class="el" href="structat__addr.html">at_addr</a> *)</td></tr>
@@ -167,18 +173,22 @@ Functions</h2></td></tr>
 <tr class="memitem:af7ffc14b49fe31b5155adca59a523eb2" id="r_af7ffc14b49fe31b5155adca59a523eb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7ffc14b49fe31b5155adca59a523eb2">strndiacasecmp</a> (const char *, const char *, size_t)</td></tr>
 <tr class="memitem:a2b60abbbd7780a7d26478b918e208a48" id="r_a2b60abbbd7780a7d26478b918e208a48"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b60abbbd7780a7d26478b918e208a48">server_lock</a> (char *, char *, int)</td></tr>
 <tr class="memitem:ac9938f3ac5793f48a20b40a9d99c761f" id="r_ac9938f3ac5793f48a20b40a9d99c761f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9938f3ac5793f48a20b40a9d99c761f">check_lockfile</a> (const char *program, const char *<a class="el" href="etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a>)</td></tr>
+<tr class="memdesc:ac9938f3ac5793f48a20b40a9d99c761f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check lockfile.  <br /></td></tr>
 <tr class="memitem:a9a4e61d9a074881adcf845bd284ca9d9" id="r_a9a4e61d9a074881adcf845bd284ca9d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a4e61d9a074881adcf845bd284ca9d9">create_lockfile</a> (const char *program, const char *<a class="el" href="etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a>)</td></tr>
+<tr class="memdesc:a9a4e61d9a074881adcf845bd284ca9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check and create lockfile.  <br /></td></tr>
 <tr class="memitem:ac93b5a75558bfbc3ba02fd9341bf705a" id="r_ac93b5a75558bfbc3ba02fd9341bf705a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93b5a75558bfbc3ba02fd9341bf705a">fault_setup</a> (void(*fn)(void *))</td></tr>
 <tr class="memitem:ac573483c955b58625b0361d190bd0def" id="r_ac573483c955b58625b0361d190bd0def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac573483c955b58625b0361d190bd0def">netatalk_panic</a> (const char *why)</td></tr>
 <tr class="memitem:aa981e3041a522fb416cd8b1a5ef2b2d6" id="r_aa981e3041a522fb416cd8b1a5ef2b2d6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa981e3041a522fb416cd8b1a5ef2b2d6">mod_open</a> (const char *)</td></tr>
 <tr class="memitem:a7cc8b66bf3af5773036a84023f4c6ec6" id="r_a7cc8b66bf3af5773036a84023f4c6ec6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cc8b66bf3af5773036a84023f4c6ec6">mod_symbol</a> (void *, const char *)</td></tr>
 <tr class="memitem:ae8bd839fd185d132c78f4adff9a6b182" id="r_ae8bd839fd185d132c78f4adff9a6b182"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8bd839fd185d132c78f4adff9a6b182">mod_close</a> (void *)</td></tr>
-<tr class="memitem:a4ab0e28b73047bfea6b7f02ae5527bab" id="r_a4ab0e28b73047bfea6b7f02ae5527bab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a> (int fd, int cmd, int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, off_t offest, int whence, off_t len)</td></tr>
+<tr class="memitem:a4ab0e28b73047bfea6b7f02ae5527bab" id="r_a4ab0e28b73047bfea6b7f02ae5527bab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int cmd, int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, off_t offest, int whence, off_t len)</td></tr>
 <tr class="memdesc:a4ab0e28b73047bfea6b7f02ae5527bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock a file with fctnl  <br /></td></tr>
-<tr class="memitem:afc08abc318ec657fed2938d72854b0db" id="r_afc08abc318ec657fed2938d72854b0db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc08abc318ec657fed2938d72854b0db">setnonblock</a> (int fd, int cmd)</td></tr>
+<tr class="memitem:afc08abc318ec657fed2938d72854b0db" id="r_afc08abc318ec657fed2938d72854b0db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc08abc318ec657fed2938d72854b0db">setnonblock</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int cmd)</td></tr>
 <tr class="memdesc:afc08abc318ec657fed2938d72854b0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">set or unset non-blocking IO on a fd  <br /></td></tr>
 <tr class="memitem:a1725a600b8e4bf87748b54f4ea37b1f2" id="r_a1725a600b8e4bf87748b54f4ea37b1f2"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1725a600b8e4bf87748b54f4ea37b1f2">readt</a> (int socket, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length, int setnonblocking, int timeout)</td></tr>
+<tr class="memdesc:a1725a600b8e4bf87748b54f4ea37b1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">non-blocking drop-in replacement for read with timeout using select  <br /></td></tr>
 <tr class="memitem:ae2d02957f53e178b7cd1f83cef6c8379" id="r_ae2d02957f53e178b7cd1f83cef6c8379"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2d02957f53e178b7cd1f83cef6c8379">writet</a> (int socket, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length, int setnonblocking, int timeout)</td></tr>
+<tr class="memdesc:ae2d02957f53e178b7cd1f83cef6c8379"><td class="mdescLeft">&#160;</td><td class="mdescRight">non-blocking drop-in replacement for read with timeout using select  <br /></td></tr>
 <tr class="memitem:a1bed6f0917db55c430f48cb998bbc92d" id="r_a1bed6f0917db55c430f48cb998bbc92d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bed6f0917db55c430f48cb998bbc92d">getip_string</a> (const struct sockaddr *<a class="el" href="appl_8c.html#aecc9aae410e8a74515e139045478bbb5">sa</a>)</td></tr>
 <tr class="memdesc:a1bed6f0917db55c430f48cb998bbc92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert an IPv4 or IPv6 address to a static string using inet_ntop  <br /></td></tr>
 <tr class="memitem:a76337cb0069f84b38a436ae0c7d886bd" id="r_a76337cb0069f84b38a436ae0c7d886bd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76337cb0069f84b38a436ae0c7d886bd">getip_port</a> (const struct sockaddr *<a class="el" href="appl_8c.html#aecc9aae410e8a74515e139045478bbb5">sa</a>)</td></tr>
@@ -188,31 +198,46 @@ Functions</h2></td></tr>
 <tr class="memitem:a4995bc1b8c67102a5cf5d36f2f4eaedf" id="r_a4995bc1b8c67102a5cf5d36f2f4eaedf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4995bc1b8c67102a5cf5d36f2f4eaedf">compare_ip</a> (const struct sockaddr *sa1, const struct sockaddr *sa2)</td></tr>
 <tr class="memdesc:a4995bc1b8c67102a5cf5d36f2f4eaedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">compare IP addresses for equality  <br /></td></tr>
 <tr class="memitem:a6639de1eb1eaad095e3612d03eb17c1b" id="r_a6639de1eb1eaad095e3612d03eb17c1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6639de1eb1eaad095e3612d03eb17c1b">tokenize_ip_port</a> (const char *ipurl, char **address, char **<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
+<tr class="memdesc:a6639de1eb1eaad095e3612d03eb17c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenize IP(4/6) addresses with an optional port into address and port.  <br /></td></tr>
 <tr class="memitem:a89ecc05c47ace160dbf3d012df3404b0" id="r_a89ecc05c47ace160dbf3d012df3404b0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structasev.html">asev</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ecc05c47ace160dbf3d012df3404b0">asev_init</a> (int max)</td></tr>
-<tr class="memitem:a752a1a75255a7790491b64548cef350c" id="r_a752a1a75255a7790491b64548cef350c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752a1a75255a7790491b64548cef350c">asev_add_fd</a> (struct <a class="el" href="structasev.html">asev</a> *sev, int fd, enum <a class="el" href="#a49cf568515560e546c50ea9cc363d122">asev_fdtype</a> fdtype, void *private, int protocol)</td></tr>
-<tr class="memitem:af74797a43f98081da688908dee28cc26" id="r_af74797a43f98081da688908dee28cc26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af74797a43f98081da688908dee28cc26">asev_del_fd</a> (struct <a class="el" href="structasev.html">asev</a> *sev, int fd)</td></tr>
-<tr class="memitem:abaeb6c0ea9882e50e387cc4bb8edd00b" id="r_abaeb6c0ea9882e50e387cc4bb8edd00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaeb6c0ea9882e50e387cc4bb8edd00b">send_fd</a> (int socket, int fd)</td></tr>
-<tr class="memitem:af32134bd62d1e48eb57310a8d5fc5404" id="r_af32134bd62d1e48eb57310a8d5fc5404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af32134bd62d1e48eb57310a8d5fc5404">recv_fd</a> (int fd, int nonblocking)</td></tr>
+<tr class="memdesc:a89ecc05c47ace160dbf3d012df3404b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and initialize atalk socket event struct.  <br /></td></tr>
+<tr class="memitem:a752a1a75255a7790491b64548cef350c" id="r_a752a1a75255a7790491b64548cef350c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752a1a75255a7790491b64548cef350c">asev_add_fd</a> (struct <a class="el" href="structasev.html">asev</a> *sev, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, enum <a class="el" href="#a49cf568515560e546c50ea9cc363d122">asev_fdtype</a> fdtype, void *private, int protocol)</td></tr>
+<tr class="memdesc:a752a1a75255a7790491b64548cef350c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a fd to a dynamic pollfd array and associated data array.  <br /></td></tr>
+<tr class="memitem:af74797a43f98081da688908dee28cc26" id="r_af74797a43f98081da688908dee28cc26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af74797a43f98081da688908dee28cc26">asev_del_fd</a> (struct <a class="el" href="structasev.html">asev</a> *sev, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memdesc:af74797a43f98081da688908dee28cc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove fd from asev.  <br /></td></tr>
+<tr class="memitem:abaeb6c0ea9882e50e387cc4bb8edd00b" id="r_abaeb6c0ea9882e50e387cc4bb8edd00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaeb6c0ea9882e50e387cc4bb8edd00b">send_fd</a> (int socket, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:af32134bd62d1e48eb57310a8d5fc5404" id="r_af32134bd62d1e48eb57310a8d5fc5404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af32134bd62d1e48eb57310a8d5fc5404">recv_fd</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int nonblocking)</td></tr>
+<tr class="memdesc:af32134bd62d1e48eb57310a8d5fc5404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a fd on a suitable socket.  <br /></td></tr>
 <tr class="memitem:a1db4bee5fe8d20344de599be7cdc591c" id="r_a1db4bee5fe8d20344de599be7cdc591c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1db4bee5fe8d20344de599be7cdc591c">getcwdpath</a> (void)</td></tr>
 <tr class="memdesc:a1db4bee5fe8d20344de599be7cdc591c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get cwd in static buffer  <br /></td></tr>
 <tr class="memitem:a6a4b38355d441fa79597eebcb89daf79" id="r_a6a4b38355d441fa79597eebcb89daf79"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a4b38355d441fa79597eebcb89daf79">fullpathname</a> (const char *)</td></tr>
 <tr class="memdesc:a6a4b38355d441fa79597eebcb89daf79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request absolute path.  <br /></td></tr>
 <tr class="memitem:a34763dcda0093297fce36aad07ac64e6" id="r_a34763dcda0093297fce36aad07ac64e6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34763dcda0093297fce36aad07ac64e6">stripped_slashes_basename</a> (char *<a class="el" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a>)</td></tr>
+<tr class="memdesc:a34763dcda0093297fce36aad07ac64e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes a buffer with a path, strips slashs, returns basename.  <br /></td></tr>
 <tr class="memitem:aefde7f9f477f2f182845eee2663363f7" id="r_aefde7f9f477f2f182845eee2663363f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefde7f9f477f2f182845eee2663363f7">randombytes</a> (void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int n)</td></tr>
+<tr class="memdesc:aefde7f9f477f2f182845eee2663363f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store n random bytes an buf.  <br /></td></tr>
 <tr class="memitem:ac07150628d4bd483b1f3f43c2350c80b" id="r_ac07150628d4bd483b1f3f43c2350c80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac07150628d4bd483b1f3f43c2350c80b">daemonize</a> (void)</td></tr>
+<tr class="memdesc:ac07150628d4bd483b1f3f43c2350c80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fork, exit parent, setsid(), chdir("/"), close all fds.  <br /></td></tr>
 <tr class="memitem:aa0c145c2be4be8dfb51359f295c79708" id="r_aa0c145c2be4be8dfb51359f295c79708"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0c145c2be4be8dfb51359f295c79708">run_cmd</a> (const char *cmd, char **cmd_argv)</td></tr>
+<tr class="memdesc:aa0c145c2be4be8dfb51359f295c79708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run command in a child and wait for it to finish.  <br /></td></tr>
 <tr class="memitem:a5a34db058713ee9086a16f7f5f981082" id="r_a5a34db058713ee9086a16f7f5f981082"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a34db058713ee9086a16f7f5f981082">realpath_safe</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:abe14028da3f858d72b056cd958b89607" id="r_abe14028da3f858d72b056cd958b89607"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe14028da3f858d72b056cd958b89607">basename_safe</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:abe14028da3f858d72b056cd958b89607"><td class="mdescLeft">&#160;</td><td class="mdescRight">safe basename() replacement  <br /></td></tr>
 <tr class="memitem:a7b98011d737b8b3bc282951555f3f287" id="r_a7b98011d737b8b3bc282951555f3f287"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b98011d737b8b3bc282951555f3f287">strtok_quote</a> (char *s, const char *delim)</td></tr>
+<tr class="memdesc:a7b98011d737b8b3bc282951555f3f287"><td class="mdescLeft">&#160;</td><td class="mdescRight">extended strtok allows the quoted strings  <br /></td></tr>
 <tr class="memitem:a0a2fa46e0cef80809cd77873559868ff" id="r_a0a2fa46e0cef80809cd77873559868ff"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2fa46e0cef80809cd77873559868ff">tmpdir</a> (void)</td></tr>
 <tr class="memitem:a5c01f97ac47d90ccf6a00ab540ce702d" id="r_a5c01f97ac47d90ccf6a00ab540ce702d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c01f97ac47d90ccf6a00ab540ce702d">ochdir</a> (const char *<a class="el" href="structdir.html">dir</a>, int options)</td></tr>
 <tr class="memdesc:a5c01f97ac47d90ccf6a00ab540ce702d"><td class="mdescLeft">&#160;</td><td class="mdescRight">symlink safe chdir replacement  <br /></td></tr>
 <tr class="memitem:a5c2b2b5ff8cd8921f74350b382a23d0c" id="r_a5c2b2b5ff8cd8921f74350b382a23d0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c2b2b5ff8cd8921f74350b382a23d0c">ostat</a> (const char *<a class="el" href="structpath.html">path</a>, struct stat *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int options)</td></tr>
 <tr class="memitem:aba71ee1225cc8faf2997c1cdf542d7f6" id="r_aba71ee1225cc8faf2997c1cdf542d7f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba71ee1225cc8faf2997c1cdf542d7f6">ostatat</a> (int dirfd, const char *<a class="el" href="structpath.html">path</a>, struct stat *st, int options)</td></tr>
+<tr class="memdesc:aba71ee1225cc8faf2997c1cdf542d7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ostat/fsstatat multiplexer  <br /></td></tr>
 <tr class="memitem:a4689e229e35ba860cd4acd3f19e0b1b1" id="r_a4689e229e35ba860cd4acd3f19e0b1b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4689e229e35ba860cd4acd3f19e0b1b1">ochown</a> (const char *<a class="el" href="structpath.html">path</a>, uid_t owner, gid_t group, int options)</td></tr>
 <tr class="memitem:a3537baf3b2b1e9eb9013690c3a7f8488" id="r_a3537baf3b2b1e9eb9013690c3a7f8488"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3537baf3b2b1e9eb9013690c3a7f8488">ochmod</a> (char *<a class="el" href="structpath.html">path</a>, mode_t mode, const struct stat *st, int options)</td></tr>
-<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
+<tr class="memdesc:a3537baf3b2b1e9eb9013690c3a7f8488"><td class="mdescLeft">&#160;</td><td class="mdescRight">chmod() wrapper for symlink and ACL handling  <br /></td></tr>
+<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top">bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
+<tr class="memdesc:a2ed50bf96a3179dba7ce4fea0229f161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build path relativ to volume root.  <br /></td></tr>
 <tr class="memitem:acc5e34d9d4ff3cbad83b2b5bc5d9bbb7" id="r_acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5e34d9d4ff3cbad83b2b5bc5d9bbb7">cnid_for_path</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *volpath, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *<a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
+<tr class="memdesc:acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves CNID of a given path.  <br /></td></tr>
 <tr class="memitem:ac65b6ebd1c4479dee2bb4120e1b747b1" id="r_ac65b6ebd1c4479dee2bb4120e1b747b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac65b6ebd1c4479dee2bb4120e1b747b1">initline</a> (int, char *)</td></tr>
 <tr class="memitem:a25a0733c503ef8f93abf18fe8cb87006" id="r_a25a0733c503ef8f93abf18fe8cb87006"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a0733c503ef8f93abf18fe8cb87006">parseline</a> (int, char *)</td></tr>
 </table><table class="memberdecls">
@@ -222,13 +247,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a4ab05d39ff1faad524c790fb0c879452" id="r_a4ab05d39ff1faad524c790fb0c879452"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ab05d39ff1faad524c790fb0c879452">_dialowermap</a> []</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Netatalk utility functions</p>
-<p>Utility functions for these areas: <br  />
-</p><ul>
-<li>sockets <br  />
-</li>
-<li>locking <br  />
-</li>
+<div class="textblock"><p>Netatalk utility functions. </p>
+<p>Utility functions for these areas:</p><ul>
+<li>sockets</li>
+<li>locking</li>
 <li>misc UNIX function wrappers, e.g. for getcwd </li>
 </ul>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -290,11 +312,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                            \</div>
-<div class="line">        while (<a class="code hl_define" href="bstrlib_8h.html#a7d5203b5518eb6a79911185ad22fad42">bchar</a>((a), <a class="code hl_define" href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a>(a) - 1) == <span class="charliteral">&#39;/&#39;</span>)   \</div>
-<div class="line">            bdelete((a), <a class="code hl_define" href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a>(a) - 1, 1);        \</div>
+<div class="line">        while (bchar((a), blength(a) - 1) == <span class="charliteral">&#39;/&#39;</span>)   \</div>
+<div class="line">            bdelete((a), blength(a) - 1, 1);        \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0);</div>
-<div class="ttc" id="abstrlib_8h_html_a462176ab60e31a2ead1b575b50b1124d"><div class="ttname"><a href="bstrlib_8h.html#a462176ab60e31a2ead1b575b50b1124d">blength</a></div><div class="ttdeci">#define blength(b)</div><div class="ttdef"><b>Definition</b> bstrlib.h:1427</div></div>
-<div class="ttc" id="abstrlib_8h_html_a7d5203b5518eb6a79911185ad22fad42"><div class="ttname"><a href="bstrlib_8h.html#a7d5203b5518eb6a79911185ad22fad42">bchar</a></div><div class="ttdeci">#define bchar(b, p)</div><div class="ttdef"><b>Definition</b> bstrlib.h:1481</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -520,7 +540,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">#define read_lock</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -539,16 +559,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((fd), F_SETLK, F_RDLCK, (offset), (whence), (len))</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((<a class="code hl_variable" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>), F_SETLK, F_RDLCK, (offset), (whence), (len))</div>
 <div class="ttc" id="ainclude_2atalk_2util_8h_html_a4ab0e28b73047bfea6b7f02ae5527bab"><div class="ttname"><a href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a></div><div class="ttdeci">int lock_reg(int fd, int cmd, int type, off_t offest, int whence, off_t len)</div><div class="ttdoc">lock a file with fctnl</div><div class="ttdef"><b>Definition</b> locking.c:86</div></div>
+<div class="ttc" id="avfs_8c_html_a642ae48927769266f4a87cf5efb4b344"><div class="ttname"><a href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></div><div class="ttdeci">const struct vol *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int fd</div><div class="ttdef"><b>Definition</b> vfs.c:750</div></div>
 </div><!-- fragment -->
 <p>place read lock on file </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">offset</td><td>(r) byte offset relative to l_whence </td></tr>
-    <tr><td class="paramname">whence</td><td>(r) SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
-    <tr><td class="paramname">len</td><td>(r) no. of bytes (0 means to EOF)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>byte offset relative to l_whence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>no. of bytes (0 means to EOF)</td></tr>
   </table>
   </dd>
 </dl>
@@ -664,7 +685,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">#define unlock</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -683,15 +704,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((fd), F_SETLK, F_UNLCK, (offset), (whence), (len))</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((<a class="code hl_variable" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>), F_SETLK, F_UNLCK, (offset), (whence), (len))</div>
 </div><!-- fragment -->
 <p>unlock a file </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">offset</td><td>(r) byte offset relative to l_whence </td></tr>
-    <tr><td class="paramname">whence</td><td>(r) SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
-    <tr><td class="paramname">len</td><td>(r) no. of bytes (0 means to EOF)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>byte offset relative to l_whence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>no. of bytes (0 means to EOF)</td></tr>
   </table>
   </dd>
 </dl>
@@ -708,7 +729,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">#define write_lock</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -727,15 +748,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((fd), F_SETLK, F_WRLCK, (offset), (whence), (len))</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_function" href="#a4ab0e28b73047bfea6b7f02ae5527bab">lock_reg</a>((<a class="code hl_variable" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>), F_SETLK, F_WRLCK, (offset), (whence), (len))</div>
 </div><!-- fragment -->
 <p>place write lock on file </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">offset</td><td>(r) byte offset relative to l_whence </td></tr>
-    <tr><td class="paramname">whence</td><td>(r) SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
-    <tr><td class="paramname">len</td><td>(r) no. of bytes (0 means to EOF)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>byte offset relative to l_whence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>no. of bytes (0 means to EOF)</td></tr>
   </table>
   </dd>
 </dl>
@@ -830,8 +851,8 @@ Variables</h2></td></tr>
 <p>Modifies IP address in sa-&gt;sin[6]_addr-s[6]_addr. The caller is responsible for passing a value for mask that is sensible to the passed address, e.g. 0 &lt;= mask &lt;= 32 for IPv4 or 0&lt;= mask &lt;= 128 for IPv6. mask &gt; 32 for IPv4 is treated as mask = 32, mask &gt; 128 is set to 128 for IPv6.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sa</td><td>(rw) pointer to an struct sockaddr </td></tr>
-    <tr><td class="paramname">mask</td><td>(r) number of maskbits </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">sa</td><td>pointer to an struct sockaddr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>number of maskbits </td></tr>
   </table>
   </dd>
 </dl>
@@ -879,7 +900,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a fd to a dynamic pollfd array and associated data array</p>
+
+<p>Add a fd to a dynamic pollfd array and associated data array. </p>
 <p>This uses an additional array of struct polldata which stores type information (enum fdtype) and a pointer to anciliary user data. </p>
 
 </div>
@@ -910,7 +932,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Remove fd from asev</p>
+
+<p>Remove fd from asev. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the fd was deleted, otherwise false </dd></dl>
 
 </div>
@@ -937,7 +960,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Allocate and initialize atalk socket event struct </p>
+
+<p>Allocate and initialize atalk socket event struct. </p>
 
 </div>
 </div>
@@ -992,7 +1016,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns pointer to static buffer with basename of path </p>
+
+<p>safe basename() replacement </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to static buffer with basename of path </dd></dl>
 
 </div>
 </div>
@@ -1051,7 +1077,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check lockfile </p>
+
+<p>Check lockfile. </p>
 
 </div>
 </div>
@@ -1091,15 +1118,19 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Resolves CNID of a given path</p>
-<p>path might be: (a) relative: "dir/subdir" with cwd: "/afp_volume/topdir" (b) absolute: "/afp_volume/dir/subdir"</p>
+
+<p>Resolves CNID of a given path. </p>
+<p>path might be:</p><ol type="1">
+<li>relative: "dir/subdir" with cwd: "/afp_volume/topdir"</li>
+<li>absolute: "/afp_volume/dir/subdir"</li>
+</ol>
 <p>path MUST be pointing inside vol, this is usually the case as vol has been build from path using loadvolinfo and friends.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cdb</td><td>(r) CNID db handle </td></tr>
-    <tr><td class="paramname">volpath</td><td>(r) UNIX path of volume </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path, see above </td></tr>
-    <tr><td class="paramname">did</td><td>(w) parent CNID of returned CNID</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cdb</td><td>CNID db handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volpath</td><td>UNIX path of volume </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path, see above </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">did</td><td>parent CNID of returned CNID</td></tr>
   </table>
   </dd>
 </dl>
@@ -1137,8 +1168,8 @@ Variables</h2></td></tr>
 <p>compare IP addresses for equality </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sa1</td><td>(r) pointer to an struct sockaddr </td></tr>
-    <tr><td class="paramname">sa2</td><td>(r) pointer to an struct sockaddr</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sa1</td><td>pointer to an struct sockaddr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sa2</td><td>pointer to an struct sockaddr</td></tr>
   </table>
   </dd>
 </dl>
@@ -1173,7 +1204,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check and create lockfile </p>
+
+<p>Check and create lockfile. </p>
 
 </div>
 </div>
@@ -1199,9 +1231,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Daemonize</p>
-<p>Fork, exit parent, setsid(), chdir("/"), close all fds</p>
-<p>returns -1 on failure, but you can't do much except exit in that case since we may already have forked </p>
+
+<p>Fork, exit parent, setsid(), chdir("/"), close all fds. </p>
+<dl class="section return"><dt>Returns</dt><dd>-1 on failure, but you can't do much except exit in that case since we may already have forked </dd></dl>
 
 </div>
 </div>
@@ -1362,7 +1394,7 @@ Variables</h2></td></tr>
 <p>return port number from struct sockaddr </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sa</td><td>(r) pointer to an struct sockaddr</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sa</td><td>pointer to an struct sockaddr</td></tr>
   </table>
   </dd>
 </dl>
@@ -1397,7 +1429,7 @@ Variables</h2></td></tr>
 <p>IPv6 mapped IPv4 addresses are returned as IPv4 addreses e.g. ::ffff:10.0.0.0 is returned as "10.0.0.0".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sa</td><td>(r) pointer to an struct sockaddr</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sa</td><td>pointer to an struct sockaddr</td></tr>
   </table>
   </dd>
 </dl>
@@ -1486,12 +1518,12 @@ Variables</h2></td></tr>
 <p>This function is called via the macros: read_lock, write_lock, un_lock</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">cmd</td><td>(r) cmd to fcntl, only F_SETLK is usable here </td></tr>
-    <tr><td class="paramname">type</td><td>(r) F_RDLCK, F_WRLCK, F_UNLCK </td></tr>
-    <tr><td class="paramname">offset</td><td>(r) byte offset relative to l_whence </td></tr>
-    <tr><td class="paramname">whence</td><td>(r) SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
-    <tr><td class="paramname">len</td><td>(r) no. of bytes (0 means to EOF)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>cmd to fcntl, only F_SETLK is usable here </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>F_RDLCK, F_WRLCK, F_UNLCK </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>byte offset relative to l_whence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>no. of bytes (0 means to EOF)</td></tr>
   </table>
   </dd>
 </dl>
@@ -1673,17 +1705,23 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>chmod() wrapper for symlink and ACL handling</p>
+
+<p>chmod() wrapper for symlink and ACL handling </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>(r) path </td></tr>
-    <tr><td class="paramname">mode</td><td>(r) requested mode </td></tr>
-    <tr><td class="paramname">st</td><td>(r) stat() of path or NULL </td></tr>
-    <tr><td class="paramname">options</td><td>(r) O_NOFOLLOW | O_NETATALK_ACL</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>requested mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">st</td><td>stat() of path or NULL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>O_NOFOLLOW | O_NETATALK_ACL</td></tr>
   </table>
   </dd>
 </dl>
-<p>Options description: O_NOFOLLOW: don't chmod() symlinks, do nothing, return 0 O_NETATALK_ACL: call <a class="el" href="acl_8h.html#a7185fda25b1479981f200898f3a3e4cd">chmod_acl()</a> instead of chmod() O_IGNORE: ignore chmod() request, directly return 0 </p>
+<p>Option descriptions:</p>
+<ul>
+<li>O_NOFOLLOW: don't chmod() symlinks, do nothing, return 0</li>
+<li>O_NETATALK_ACL: call <a class="el" href="acl_8h.html#a7185fda25b1479981f200898f3a3e4cd">chmod_acl()</a> instead of chmod()</li>
+<li>O_IGNORE: ignore chmod() request, directly return 0 </li>
+</ul>
 
 </div>
 </div>
@@ -1797,6 +1835,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>ostat/fsstatat multiplexer </p>
+<p>ostatat mulitplexes ostat and fstatat.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirfd</td><td>-1 gives AT_FDCWD </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>pathname </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">st</td><td>pointer to struct stat </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>file options </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a25a0733c503ef8f93abf18fe8cb87006" name="a25a0733c503ef8f93abf18fe8cb87006"></a>
@@ -1854,7 +1904,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Store n random bytes an buf </p>
+
+<p>Store n random bytes an buf. </p>
 
 </div>
 </div>
@@ -1899,14 +1950,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>non-blocking drop-in replacement for read with timeout using select</p>
+
+<p>non-blocking drop-in replacement for read with timeout using select </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">socket</td><td>(r) socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
-    <tr><td class="paramname">data</td><td>(rw) buffer for the read data </td></tr>
-    <tr><td class="paramname">length</td><td>(r) how many bytes to read </td></tr>
-    <tr><td class="paramname">setnonblocking</td><td>(r) when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
-    <tr><td class="paramname">timeout</td><td>(r) number of seconds to try reading, 0 means no timeout</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>buffer for the read data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>how many bytes to read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">setnonblocking</td><td>when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>number of seconds to try reading, 0 means no timeout</td></tr>
   </table>
   </dd>
 </dl>
@@ -1965,10 +2017,12 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Receive a fd on a suitable socket </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Receive a fd on a suitable socket. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) PF_UNIX socket to receive on </td></tr>
-    <tr><td class="paramname">nonblocking</td><td>(r) 0: fd is in blocking mode - 1: fd is nonblocking, poll for 1 sec </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>PF_UNIX socket to receive on </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nonblocking</td><td>0: fd is in blocking mode - 1: fd is nonblocking, poll for 1 sec </td></tr>
   </table>
   </dd>
 </dl>
@@ -1986,7 +2040,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> rel_path_in_vol </td>
+          <td class="memname">bstring rel_path_in_vol </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
@@ -2002,12 +2056,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Build path relativ to volume root</p>
-<p>path might be: (a) relative: "dir/subdir" with cwd: "/afp_volume/topdir" (b) absolute: "/afp_volume/dir/subdir"</p>
+
+<p>Build path relativ to volume root. </p>
+<p>path might be:</p><ol type="1">
+<li>relative: "dir/subdir" with cwd: "/afp_volume/topdir"</li>
+<li>absolute: "/afp_volume/dir/subdir"</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>(r) path relative to cwd() or absolute </td></tr>
-    <tr><td class="paramname">volpath</td><td>(r) volume path that path is a subdir of (has been computed in volinfo funcs)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path relative to cwd() or absolute </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volpath</td><td>volume path that path is a subdir of (has been computed in volinfo funcs)</td></tr>
   </table>
   </dd>
 </dl>
@@ -2041,7 +2099,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Run command in a child and wait for it to finish </p>
+
+<p>Run command in a child and wait for it to finish. </p>
 
 </div>
 </div>
@@ -2138,8 +2197,8 @@ Variables</h2></td></tr>
 <p>set or unset non-blocking IO on a fd </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">cmd</td><td>(r) 0: disable non-blocking IO, i.e. block<br  />
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>0: disable non-blocking IO, i.e. block<br  />
  &lt;&gt;0: enable non-blocking IO</td></tr>
   </table>
   </dd>
@@ -2199,13 +2258,17 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Takes a buffer with a path, strips slashs, returns basename</p>
+
+<p>Takes a buffer with a path, strips slashs, returns basename. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>(rw) path path may be "[/][dir/[...]]file" or "[/][dir/[...]]dir/[/]" Result is "file" or "dir"</td></tr>
+    <tr><td class="paramname">p</td><td>(rw) path</td></tr>
   </table>
   </dd>
 </dl>
+<p>path may be </p><div class="fragment"><div class="line"><span class="stringliteral">&quot;[/][dir/[...]]file&quot;</span></div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="stringliteral">&quot;[/][dir/[...]]dir/[/]&quot;</span></div>
+</div><!-- fragment --><p> Result is "file" or "dir"</p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to basename in path buffer, buffer is possibly modified </dd></dl>
 
 </div>
@@ -2270,7 +2333,48 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>extended strtok allows the quoted strings modified strtok.c in glibc 2.0.6 </p>
+
+<p>extended strtok allows the quoted strings </p>
+<p>modified strtok.c in glibc 2.0.6 </p>
+
+</div>
+</div>
+<a id="a96bbb0ddf55b6fe926b2c9236ea7eebc" name="a96bbb0ddf55b6fe926b2c9236ea7eebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96bbb0ddf55b6fe926b2c9236ea7eebc">&#9670;&#160;</a></span>sys_sendfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t sys_sendfile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>__out_fd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>__in_fd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t *</td>          <td class="paramname"><span class="paramname"><em>__offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>__count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2330,12 +2434,13 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Tokenize IP(4/6) addresses with an optional port into address and port</p>
+
+<p>Tokenize IP(4/6) addresses with an optional port into address and port. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ipurl</td><td>(r) IP URL string </td></tr>
-    <tr><td class="paramname">address</td><td>(w) IP address </td></tr>
-    <tr><td class="paramname">port</td><td>(w) IP port</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ipurl</td><td>IP URL string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">address</td><td>IP address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">port</td><td>IP port</td></tr>
   </table>
   </dd>
 </dl>
@@ -2387,14 +2492,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>non-blocking drop-in replacement for read with timeout using select</p>
+
+<p>non-blocking drop-in replacement for read with timeout using select </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">socket</td><td>(r) socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
-    <tr><td class="paramname">data</td><td>(rw) buffer for the read data </td></tr>
-    <tr><td class="paramname">length</td><td>(r) how many bytes to read </td></tr>
-    <tr><td class="paramname">setnonblocking</td><td>(r) when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
-    <tr><td class="paramname">timeout</td><td>(r) number of seconds to try reading</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>socket, if in blocking mode, pass "setnonblocking" arg as 1 </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>buffer for the read data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>how many bytes to read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">setnonblocking</td><td>when non-zero this func will enable and disable non blocking io mode for the socket </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>number of seconds to try reading</td></tr>
   </table>
   </dd>
 </dl>

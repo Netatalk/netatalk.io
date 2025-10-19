@@ -117,7 +117,7 @@ $(function(){initNavTree('cnid__metad_8c.html','',''); });
 <code>#include &lt;sys/un.h&gt;</code><br />
 <code>#include &lt;sys/wait.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;pwd.h&gt;</code><br />
 <code>#include &lt;grp.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
@@ -157,8 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1ee1c53cf345098b4cbfd9d7517cd203" id="r_a1ee1c53cf345098b4cbfd9d7517cd203"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ee1c53cf345098b4cbfd9d7517cd203">sig_handler</a> (int sig)</td></tr>
 <tr class="memitem:ad99353393ef659dc5a56ba3b02f430bd" id="r_ad99353393ef659dc5a56ba3b02f430bd"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structserver.html">server</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad99353393ef659dc5a56ba3b02f430bd">test_usockfn</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:a4cf69489c0f2624d67d81c38d95b4f75" id="r_a4cf69489c0f2624d67d81c38d95b4f75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cf69489c0f2624d67d81c38d95b4f75">maybe_start_dbd</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *dbdpn, const char *volpath, const char *username)</td></tr>
+<tr class="memdesc:a4cf69489c0f2624d67d81c38d95b4f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass connection request to existing cnid_dbd process or start a new one.  <br /></td></tr>
 <tr class="memitem:a9afaae52bbda6948eea6a2a0c4aecda8" id="r_a9afaae52bbda6948eea6a2a0c4aecda8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9afaae52bbda6948eea6a2a0c4aecda8">set_dbdir</a> (const char *dbdir, const char *vpath)</td></tr>
-<tr class="memitem:a26ea66348f37b214ef7271be9215fe5c" id="r_a26ea66348f37b214ef7271be9215fe5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26ea66348f37b214ef7271be9215fe5c">catch_child</a> (int sig <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a5ee9d9dde821d96a16a8edf81df04c35" id="r_a5ee9d9dde821d96a16a8edf81df04c35"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ee9d9dde821d96a16a8edf81df04c35">catch_child</a> (int sig)</td></tr>
 <tr class="memitem:a5636ad417e8a37f1104264394c47a0e4" id="r_a5636ad417e8a37f1104264394c47a0e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5636ad417e8a37f1104264394c47a0e4">set_signal</a> (void)</td></tr>
 <tr class="memitem:a9b254d737d76e9781a1fcd9e64566517" id="r_a9b254d737d76e9781a1fcd9e64566517"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b254d737d76e9781a1fcd9e64566517">setlimits</a> (void)</td></tr>
 <tr class="memitem:a3ace94495688c3c906f7d5270fb19f19" id="r_a3ace94495688c3c906f7d5270fb19f19"><td class="memItemLeft" align="right" valign="top">static uid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ace94495688c3c906f7d5270fb19f19">uid_from_name</a> (const char *name)</td></tr>
@@ -401,8 +402,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a26ea66348f37b214ef7271be9215fe5c" name="a26ea66348f37b214ef7271be9215fe5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ea66348f37b214ef7271be9215fe5c">&#9670;&#160;</a></span>catch_child()</h2>
+<a id="a5ee9d9dde821d96a16a8edf81df04c35" name="a5ee9d9dde821d96a16a8edf81df04c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee9d9dde821d96a16a8edf81df04c35">&#9670;&#160;</a></span>catch_child()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,7 +414,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void catch_child </td>
           <td>(</td>
-          <td class="paramtype">int sig</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sig</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -460,7 +461,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">int argc</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -500,7 +501,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pass connection request to existing cnid_dbd process or start a new one</p>
+
+<p>Pass connection request to existing cnid_dbd process or start a new one. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>

@@ -111,7 +111,7 @@ $(function(){initNavTree('nad__rm_8c.html','',''); });
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="queue_8h_source.html">atalk/queue.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2unix_8h_source.html">atalk/unix.h</a>&gt;</code><br />
@@ -130,11 +130,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ad578fb1ed83978169d738409d400d1fc" id="r_ad578fb1ed83978169d738409d400d1fc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad578fb1ed83978169d738409d400d1fc">rm</a> (const char *fpath, const struct stat *sb, int tflag, struct <a class="el" href="struct_f_t_w.html">FTW</a> *ftwbuf)</td></tr>
 <tr class="memitem:add4030b9aa004f2eff16d0c3029b977d" id="r_add4030b9aa004f2eff16d0c3029b977d"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add4030b9aa004f2eff16d0c3029b977d">check_netatalk_dirs</a> (const char *name)</td></tr>
 <tr class="memitem:aaaa4c1ea9761a14206b2d48ade990c1d" id="r_aaaa4c1ea9761a14206b2d48ade990c1d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa4c1ea9761a14206b2d48ade990c1d">upfunc</a> (void)</td></tr>
-<tr class="memitem:ae5e5c5971fc3b5e9b1acf9e1397bcbc8" id="r_ae5e5c5971fc3b5e9b1acf9e1397bcbc8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5e5c5971fc3b5e9b1acf9e1397bcbc8">sig_handler</a> (int signo <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a366471b5822de7615f33cbe5eab9726a" id="r_a366471b5822de7615f33cbe5eab9726a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a366471b5822de7615f33cbe5eab9726a">sig_handler</a> (int signo)</td></tr>
 <tr class="memitem:a5636ad417e8a37f1104264394c47a0e4" id="r_a5636ad417e8a37f1104264394c47a0e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5636ad417e8a37f1104264394c47a0e4">set_signal</a> (void)</td></tr>
 <tr class="memitem:a4c8c003c7b83278077318673728bfdf6" id="r_a4c8c003c7b83278077318673728bfdf6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c8c003c7b83278077318673728bfdf6">usage_rm</a> (void)</td></tr>
 <tr class="memitem:af91946119d268d4720ec2e6be798f6fd" id="r_af91946119d268d4720ec2e6be798f6fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91946119d268d4720ec2e6be798f6fd">ad_rm</a> (int argc, char *argv[], <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
-<tr class="memitem:a479bf81b6911a67b4a56d8ff0b1ff0f0" id="r_a479bf81b6911a67b4a56d8ff0b1ff0f0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a479bf81b6911a67b4a56d8ff0b1ff0f0">rm</a> (const char *<a class="el" href="structpath.html">path</a>, const struct stat *statp, int tflag <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct <a class="el" href="struct_f_t_w.html">FTW</a> *ftw <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -223,7 +222,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ad578fb1ed83978169d738409d400d1fc" name="ad578fb1ed83978169d738409d400d1fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad578fb1ed83978169d738409d400d1fc">&#9670;&#160;</a></span>rm() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad578fb1ed83978169d738409d400d1fc">&#9670;&#160;</a></span>rm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,45 +260,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a479bf81b6911a67b4a56d8ff0b1ff0f0" name="a479bf81b6911a67b4a56d8ff0b1ff0f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a479bf81b6911a67b4a56d8ff0b1ff0f0">&#9670;&#160;</a></span>rm() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int rm </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const struct stat *</td>          <td class="paramname"><span class="paramname"><em>statp</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int tflag</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="struct_f_t_w.html">FTW</a> *ftw</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5636ad417e8a37f1104264394c47a0e4" name="a5636ad417e8a37f1104264394c47a0e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5636ad417e8a37f1104264394c47a0e4">&#9670;&#160;</a></span>set_signal()</h2>
 
@@ -325,8 +285,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5e5c5971fc3b5e9b1acf9e1397bcbc8" name="ae5e5c5971fc3b5e9b1acf9e1397bcbc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e5c5971fc3b5e9b1acf9e1397bcbc8">&#9670;&#160;</a></span>sig_handler()</h2>
+<a id="a366471b5822de7615f33cbe5eab9726a" name="a366471b5822de7615f33cbe5eab9726a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366471b5822de7615f33cbe5eab9726a">&#9670;&#160;</a></span>sig_handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +297,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sig_handler </td>
           <td>(</td>
-          <td class="paramtype">int signo</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>signo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

@@ -123,13 +123,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a630959772254ed339bab36ce0f7818b4" id="r_a630959772254ed339bab36ce0f7818b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630959772254ed339bab36ce0f7818b4">uam_unload</a> (struct <a class="el" href="structuam__mod.html">uam_mod</a> *mod)</td></tr>
 <tr class="memitem:ab238597a251061121005dad7f2e977c7" id="r_ab238597a251061121005dad7f2e977c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab238597a251061121005dad7f2e977c7">uam_register</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *<a class="el" href="structpath.html">path</a>, const char *name,...)</td></tr>
 <tr class="memitem:aff8135e4110e7170bedfaacf90baad5d" id="r_aff8135e4110e7170bedfaacf90baad5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8135e4110e7170bedfaacf90baad5d">uam_unregister</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *name)</td></tr>
-<tr class="memitem:a969033583200da9dc8a49b5b7b71a4fd" id="r_a969033583200da9dc8a49b5b7b71a4fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a969033583200da9dc8a49b5b7b71a4fd">uam_afpserver_option</a> (void *private <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, const int what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *option <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *len <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a16be9059c423b6887d777869e68ab95f" id="r_a16be9059c423b6887d777869e68ab95f"><td class="memItemLeft" align="right" valign="top">struct passwd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16be9059c423b6887d777869e68ab95f">uam_getname</a> (void *dummy <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *name, const int len)</td></tr>
-<tr class="memitem:a6d2df46d46d1abba1b8ad2b47e8d2777" id="r_a6d2df46d46d1abba1b8ad2b47e8d2777"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d2df46d46d1abba1b8ad2b47e8d2777">uam_checkuser</a> (void *private <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, const struct passwd *pwd)</td></tr>
+<tr class="memitem:a5feff44740965738c73862875e7fa393" id="r_a5feff44740965738c73862875e7fa393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5feff44740965738c73862875e7fa393">uam_afpserver_option</a> (void *private, const int what, void *option, size_t *len)</td></tr>
+<tr class="memitem:a855fc38de5012062abfd4dc3fd9bf5b7" id="r_a855fc38de5012062abfd4dc3fd9bf5b7"><td class="memItemLeft" align="right" valign="top">struct passwd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855fc38de5012062abfd4dc3fd9bf5b7">uam_getname</a> (void *dummy, char *name, const int len)</td></tr>
+<tr class="memitem:a4ac7f72a4be9997db081530449fafc43" id="r_a4ac7f72a4be9997db081530449fafc43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac7f72a4be9997db081530449fafc43">uam_checkuser</a> (void *private, const struct passwd *pwd)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a969033583200da9dc8a49b5b7b71a4fd" name="a969033583200da9dc8a49b5b7b71a4fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a969033583200da9dc8a49b5b7b71a4fd">&#9670;&#160;</a></span>uam_afpserver_option()</h2>
+<a id="a5feff44740965738c73862875e7fa393" name="a5feff44740965738c73862875e7fa393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5feff44740965738c73862875e7fa393">&#9670;&#160;</a></span>uam_afpserver_option()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,30 +137,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int uam_afpserver_option </td>
           <td>(</td>
-          <td class="paramtype">void *private</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>private</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *option</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>option</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *len</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6d2df46d46d1abba1b8ad2b47e8d2777" name="a6d2df46d46d1abba1b8ad2b47e8d2777"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d2df46d46d1abba1b8ad2b47e8d2777">&#9670;&#160;</a></span>uam_checkuser()</h2>
+<a id="a4ac7f72a4be9997db081530449fafc43" name="a4ac7f72a4be9997db081530449fafc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac7f72a4be9997db081530449fafc43">&#9670;&#160;</a></span>uam_checkuser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int uam_checkuser </td>
           <td>(</td>
-          <td class="paramtype">void *private</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>private</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -180,8 +180,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a16be9059c423b6887d777869e68ab95f" name="a16be9059c423b6887d777869e68ab95f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16be9059c423b6887d777869e68ab95f">&#9670;&#160;</a></span>uam_getname()</h2>
+<a id="a855fc38de5012062abfd4dc3fd9bf5b7" name="a855fc38de5012062abfd4dc3fd9bf5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855fc38de5012062abfd4dc3fd9bf5b7">&#9670;&#160;</a></span>uam_getname()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +189,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">struct passwd * uam_getname </td>
           <td>(</td>
-          <td class="paramtype">void *dummy</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>dummy</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -128,6 +128,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f43fece0132fb1de646d503fbe7970b" id="r_a0f43fece0132fb1de646d503fbe7970b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f43fece0132fb1de646d503fbe7970b">getnamefromuuid</a> (const unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>, char **name, <a class="el" href="#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:a560d4a3a668fc59df0046765e7f166f1" id="r_a560d4a3a668fc59df0046765e7f166f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560d4a3a668fc59df0046765e7f166f1">localuuid_from_id</a> (unsigned char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, <a class="el" href="#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, unsigned int id)</td></tr>
 <tr class="memitem:a5e72a455c23f1ff9de956d54af236c39" id="r_a5e72a455c23f1ff9de956d54af236c39"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e72a455c23f1ff9de956d54af236c39">uuid_bin2string</a> (const unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>)</td></tr>
+<tr class="memdesc:a5e72a455c23f1ff9de956d54af236c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert 16 byte binary uuid to neat ascii represantation including dashes.  <br /></td></tr>
 <tr class="memitem:aaecfa09256b1da388592eb82388dfece" id="r_aaecfa09256b1da388592eb82388dfece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecfa09256b1da388592eb82388dfece">uuid_string2bin</a> (const char *uuidstring, unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>)</td></tr>
 <tr class="memitem:abe17f3e60a4f85bb54b21f4ded8e3ac2" id="r_abe17f3e60a4f85bb54b21f4ded8e3ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe17f3e60a4f85bb54b21f4ded8e3ac2">uuidcache_dump</a> (void)</td></tr>
 </table><table class="memberdecls">
@@ -338,7 +339,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Convert 16 byte binary uuid to neat ascii represantation including dashes. Use defined or default ascii mask for dash placement Returns pointer to static buffer. </p>
+
+<p>Convert 16 byte binary uuid to neat ascii represantation including dashes. </p>
+<p>Use defined or default ascii mask for dash placement </p><dl class="section return"><dt>Returns</dt><dd>pointer to static buffer </dd></dl>
 
 </div>
 </div>

@@ -12,7 +12,7 @@ var ad__lock_8c =
     [ "adf_findxlock", "ad__lock_8c.html#a373f25d9238f88b8d19b32694a6212d2", null ],
     [ "adf_freelock", "ad__lock_8c.html#a56b9ac0b30334b8936ff4e6758ff3486", null ],
     [ "adf_relockrange", "ad__lock_8c.html#ae48eaaea571593b53ac6cef379f9f664", null ],
-    [ "adf_unlock", "ad__lock_8c.html#a9d654d0be75c268d1989b9074577f0da", null ],
+    [ "adf_unlock", "ad__lock_8c.html#a8432748990ec305a141a6163a46d7652", null ],
     [ "locktypetostr", "ad__lock_8c.html#a4ce2c10a871de6b61922c78b12f3c9ae", null ],
     [ "OVERLAP", "ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889", null ],
     [ "rf2off", "ad__lock_8c.html#aba830911c858bb28d6d65e0f448d7093", null ],

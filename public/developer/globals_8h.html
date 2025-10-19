@@ -113,6 +113,7 @@ $(function(){initNavTree('globals_8h.html','',''); });
 <code>#include &lt;<a class="el" href="compat_8h_source.html">atalk/compat.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="uam_8h_source.html">atalk/uam.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="unicode_8h_source.html">atalk/unicode.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="afp__dtrace_8h_source.html">atalk/afp_dtrace.h</a>&gt;</code><br />
 </div>
 <p><a href="globals_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,14 +125,6 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7bdcb468380fa56ab9d7d6834e98815b" id="r_a7bdcb468380fa56ab9d7d6834e98815b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bdcb468380fa56ab9d7d6834e98815b">AFP_AFPFUNC_START</a>(a,  b)</td></tr>
-<tr class="memitem:a73f1c30859dfb889709446683abba2a6" id="r_a73f1c30859dfb889709446683abba2a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f1c30859dfb889709446683abba2a6">AFP_AFPFUNC_DONE</a>(a,  b)</td></tr>
-<tr class="memitem:a9697049ead6e400aed0e1fe81113fa77" id="r_a9697049ead6e400aed0e1fe81113fa77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9697049ead6e400aed0e1fe81113fa77">AFP_CNID_START</a>(a)</td></tr>
-<tr class="memitem:ad8f89a06e1d7cffcb4e8ee0ee7a5a774" id="r_ad8f89a06e1d7cffcb4e8ee0ee7a5a774"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8f89a06e1d7cffcb4e8ee0ee7a5a774">AFP_CNID_DONE</a>()</td></tr>
-<tr class="memitem:a3f08de6d20c20d00b846852136925a0f" id="r_a3f08de6d20c20d00b846852136925a0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f08de6d20c20d00b846852136925a0f">AFP_READ_START</a>(a)</td></tr>
-<tr class="memitem:ab1eb5704ae204b629a33957573b84245" id="r_ab1eb5704ae204b629a33957573b84245"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1eb5704ae204b629a33957573b84245">AFP_READ_DONE</a>()</td></tr>
-<tr class="memitem:a9279d6cfdae3baf5fd439b20a76fa91a" id="r_a9279d6cfdae3baf5fd439b20a76fa91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9279d6cfdae3baf5fd439b20a76fa91a">AFP_WRITE_START</a>(a)</td></tr>
-<tr class="memitem:a505dfdddb1564de7de1c9f54d5897c4e" id="r_a505dfdddb1564de7de1c9f54d5897c4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505dfdddb1564de7de1c9f54d5897c4e">AFP_WRITE_DONE</a>()</td></tr>
 <tr class="memitem:a56940c80dd3ee0216586b20730c8a199" id="r_a56940c80dd3ee0216586b20730c8a199"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56940c80dd3ee0216586b20730c8a199">MACFILELEN</a>&#160;&#160;&#160;31                   /* Type2, HFS-compat */</td></tr>
 <tr class="memitem:a9b041055346d857429d4a8d889d4710b" id="r_a9b041055346d857429d4a8d889d4710b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b041055346d857429d4a8d889d4710b">UTF8FILELEN_EARLY</a>&#160;&#160;&#160;255           /* Type3, early <a class="el" href="afparg_8c.html#ac1f45edfd9d501d2972db7aa6b23084c">Mac</a> OS X 10.0-10.4.? */</td></tr>
 <tr class="memitem:a071bf1dd4eb2de6ebffc327141658618" id="r_a071bf1dd4eb2de6ebffc327141658618"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071bf1dd4eb2de6ebffc327141658618">MAXUSERLEN</a>&#160;&#160;&#160;256</td></tr>
@@ -169,7 +162,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ac392cb99e7e788934b1802230fbc50ed" id="r_ac392cb99e7e788934b1802230fbc50ed"><td class="memItemLeft" align="right" valign="top">typedef struct AFPObj&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac392cb99e7e788934b1802230fbc50ed">AFPObj</a></td></tr>
-<tr class="memitem:a0cce22132e270062d3cde9d65386ed1d" id="r_a0cce22132e270062d3cde9d65386ed1d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cce22132e270062d3cde9d65386ed1d">AFPCmd</a>) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a0cce22132e270062d3cde9d65386ed1d" id="r_a0cce22132e270062d3cde9d65386ed1d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cce22132e270062d3cde9d65386ed1d">AFPCmd</a>) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -177,6 +170,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a94f8ad25c0a55d1ed5acdeb5fe997a65" id="r_a94f8ad25c0a55d1ed5acdeb5fe997a65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f8ad25c0a55d1ed5acdeb5fe997a65">afp_options_init</a> (struct <a class="el" href="structafp__options.html">afp_options</a> *)</td></tr>
 <tr class="memitem:a80420ae6cd5324bec232e2dcaf2a1f3c" id="r_a80420ae6cd5324bec232e2dcaf2a1f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80420ae6cd5324bec232e2dcaf2a1f3c">afp_options_parse_cmdline</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, int ac, char **av)</td></tr>
 <tr class="memitem:a02cff118dfba900c7d11398cf8a7cf5b" id="r_a02cff118dfba900c7d11398cf8a7cf5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02cff118dfba900c7d11398cf8a7cf5b">setmessage</a> (const char *)</td></tr>
+<tr class="memdesc:a02cff118dfba900c7d11398cf8a7cf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy AFP message to message buffer.  <br /></td></tr>
 <tr class="memitem:a5fbeb7f115163dbf6561c5a73f2a47d8" id="r_a5fbeb7f115163dbf6561c5a73f2a47d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fbeb7f115163dbf6561c5a73f2a47d8">readmessage</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
 <tr class="memitem:afb2c0ed8e24464b4012b99711531bf8d" id="r_afb2c0ed8e24464b4012b99711531bf8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2c0ed8e24464b4012b99711531bf8d">afp_over_asp</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
 <tr class="memitem:a9d80cfd8bd355bbcb764c7e285e203c2" id="r_a9d80cfd8bd355bbcb764c7e285e203c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d80cfd8bd355bbcb764c7e285e203c2">afp_over_dsi</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
@@ -195,150 +189,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ab9a7f18f1645120f767ed9ae89028237" id="r_ab9a7f18f1645120f767ed9ae89028237"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9a7f18f1645120f767ed9ae89028237">Cnid_port</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a73f1c30859dfb889709446683abba2a6" name="a73f1c30859dfb889709446683abba2a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73f1c30859dfb889709446683abba2a6">&#9670;&#160;</a></span>AFP_AFPFUNC_DONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_AFPFUNC_DONE</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7bdcb468380fa56ab9d7d6834e98815b" name="a7bdcb468380fa56ab9d7d6834e98815b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bdcb468380fa56ab9d7d6834e98815b">&#9670;&#160;</a></span>AFP_AFPFUNC_START</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_AFPFUNC_START</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad8f89a06e1d7cffcb4e8ee0ee7a5a774" name="ad8f89a06e1d7cffcb4e8ee0ee7a5a774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8f89a06e1d7cffcb4e8ee0ee7a5a774">&#9670;&#160;</a></span>AFP_CNID_DONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_CNID_DONE</td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9697049ead6e400aed0e1fe81113fa77" name="a9697049ead6e400aed0e1fe81113fa77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9697049ead6e400aed0e1fe81113fa77">&#9670;&#160;</a></span>AFP_CNID_START</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_CNID_START</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab1eb5704ae204b629a33957573b84245" name="ab1eb5704ae204b629a33957573b84245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1eb5704ae204b629a33957573b84245">&#9670;&#160;</a></span>AFP_READ_DONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_READ_DONE</td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3f08de6d20c20d00b846852136925a0f" name="a3f08de6d20c20d00b846852136925a0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f08de6d20c20d00b846852136925a0f">&#9670;&#160;</a></span>AFP_READ_START</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_READ_START</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a505dfdddb1564de7de1c9f54d5897c4e" name="a505dfdddb1564de7de1c9f54d5897c4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a505dfdddb1564de7de1c9f54d5897c4e">&#9670;&#160;</a></span>AFP_WRITE_DONE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_WRITE_DONE</td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9279d6cfdae3baf5fd439b20a76fa91a" name="a9279d6cfdae3baf5fd439b20a76fa91a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9279d6cfdae3baf5fd439b20a76fa91a">&#9670;&#160;</a></span>AFP_WRITE_START</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AFP_WRITE_START</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0fe5f67550e19e0be2a071e49c072c74" name="a0fe5f67550e19e0be2a071e49c072c74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fe5f67550e19e0be2a071e49c072c74">&#9670;&#160;</a></span>AFPOBJ_TMPSIZ</h2>
 
@@ -814,7 +664,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* AFPCmd) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td>
+          <td class="memname">typedef int(* AFPCmd) (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1042,9 +892,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy AFP message to message buffer </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Copy AFP message to message buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>(r) message to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>message to send </td></tr>
   </table>
   </dd>
 </dl>

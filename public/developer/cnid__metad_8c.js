@@ -15,7 +15,7 @@ var cnid__metad_8c =
     [ "WIFSIGNALED", "cnid__metad_8c.html#add863a14eeaad9d01db1bae7e46aff1a", null ],
     [ "WIFSTOPPED", "cnid__metad_8c.html#aa2687811d048892a4fa1f14f74843767", null ],
     [ "WTERMSIG", "cnid__metad_8c.html#a94ec02a12424092a8391069adcd2ff73", null ],
-    [ "catch_child", "cnid__metad_8c.html#a26ea66348f37b214ef7271be9215fe5c", null ],
+    [ "catch_child", "cnid__metad_8c.html#a5ee9d9dde821d96a16a8edf81df04c35", null ],
     [ "daemon_exit", "cnid__metad_8c.html#a15ef69ceac020a38784bd2d9d4c90eba", null ],
     [ "main", "cnid__metad_8c.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
     [ "maybe_start_dbd", "cnid__metad_8c.html#a4cf69489c0f2624d67d81c38d95b4f75", null ],

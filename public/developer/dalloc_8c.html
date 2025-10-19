@@ -102,6 +102,9 @@ $(function(){initNavTree('dalloc_8c.html','',''); });
   <div class="headertitle"><div class="title">dalloc.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Typesafe, dynamic object store based on talloc.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;inttypes.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
@@ -120,34 +123,56 @@ Functions</h2></td></tr>
 <tr class="memitem:abb6184e5323caab45ac611798b12b59a" id="r_abb6184e5323caab45ac611798b12b59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *dd, void *talloc_chunk, void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, size_t size)</td></tr>
 <tr class="memitem:a44ab837d36956a2311193d97f93fb6f5" id="r_a44ab837d36956a2311193d97f93fb6f5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
 <tr class="memitem:ad5bb4465c8e47189370859fb3e2ed35e" id="r_ad5bb4465c8e47189370859fb3e2ed35e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
-<tr class="memitem:a8d1a0348d7484dbe1ff1854f96f25cf5" id="r_a8d1a0348d7484dbe1ff1854f96f25cf5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a> (const void *ctx, const char *string)</td></tr>
-<tr class="memitem:a505194aa9c66120deeb73de2ae432a4b" id="r_a505194aa9c66120deeb73de2ae432a4b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505194aa9c66120deeb73de2ae432a4b">dalloc_strndup</a> (const void *ctx, const char *string, size_t n)</td></tr>
+<tr class="memitem:a8d1a0348d7484dbe1ff1854f96f25cf5" id="r_a8d1a0348d7484dbe1ff1854f96f25cf5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a> (const void *<a class="el" href="afp__avahi_8c.html#a358710cfcf73fed67a687def258a60e7">ctx</a>, const char *string)</td></tr>
+<tr class="memitem:a505194aa9c66120deeb73de2ae432a4b" id="r_a505194aa9c66120deeb73de2ae432a4b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505194aa9c66120deeb73de2ae432a4b">dalloc_strndup</a> (const void *<a class="el" href="afp__avahi_8c.html#a358710cfcf73fed67a687def258a60e7">ctx</a>, const char *string, size_t n)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Typesafe, dynamic object store based on talloc</p>
+<div class="textblock"><p>Typesafe, dynamic object store based on talloc. </p>
 <p>Usage:</p>
 <p>Define some terminal types:</p>
-<p>A key/value store aka dictionary that supports retrieving elements by key typedef dict_t <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>;</p>
-<p>An ordered set that can store different objects which can be retrieved by number typedef set_t <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>;</p>
-<p>Create an dalloc object and add elementes of different type</p>
-<p>Allocate a new talloc context TALLOC_CTX *mem_ctx = talloc_new(NULL); Create a new dalloc object <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d = talloc_zero(mem_ctx, DALLOC_CTX);</p>
-<p>Store an int value in the object uint64_t i = 1; <a class="el" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy(d, &amp;i, uint64_t)</a>;</p>
-<p>Store a string char *str = dalloc_strdup(d, "hello world"); <a class="el" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add(d, str, char *)</a>;</p>
-<p>Add a nested object, you later can't fetch this directly <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *nested = talloc_zero(d, DALLOC_CTX); <a class="el" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add(d, nested, DALLOC_CTX)</a>;</p>
-<p>Add an int value to the nested object, this can be fetched i = 2; <a class="el" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy(nested, &amp;i, uint64_t)</a>;</p>
-<p>Add a nested set set_t *set = talloc_zero(nested, set_t); <a class="el" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add(nested, set, set_t)</a>;</p>
-<p>Add an int value to the set i = 3; <a class="el" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy(set, &amp;i, uint64_t)</a>;</p>
-<p>Add a dictionary (key/value store) dict_t *dict = talloc_zero(nested, dict_t); <a class="el" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add(nested, dict, dict_t)</a>;</p>
-<p>Store a string as key in the dict str = dalloc_strdup(d, "key"); <a class="el" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add(dict, str, char *)</a>;</p>
-<p>Add a value for the key i = 4; <a class="el" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy(dict, &amp;i, uint64_t)</a>;</p>
-<p>Fetching value references</p>
+<p>A key/value store aka dictionary that supports retrieving elements by key </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> dict_t <a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>;</div>
+<div class="ttc" id="astruct_d_a_l_l_o_c___c_t_x_html"><div class="ttname"><a href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a></div><div class="ttdef"><b>Definition</b> dalloc.h:25</div></div>
+</div><!-- fragment --><p>An ordered set that can store different objects which can be retrieved by number </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> set_t <a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>;</div>
+</div><!-- fragment --><p>Create an dalloc object and add elementes of different type</p>
+<p>Allocate a new talloc context </p><div class="fragment"><div class="line">TALLOC_CTX *mem_ctx = talloc_new(NULL);</div>
+</div><!-- fragment --><p>Create a new dalloc object </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d = talloc_zero(mem_ctx, <a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>);</div>
+</div><!-- fragment --><p>Store an int value in the object </p><div class="fragment"><div class="line">uint64_t i = 1;</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(d, &amp;i, uint64_t);</div>
+<div class="ttc" id="adalloc_8h_html_ad64e08b4686af9ccd27123b015f338c9"><div class="ttname"><a href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a></div><div class="ttdeci">#define dalloc_add_copy(d, obj, type)</div><div class="ttdef"><b>Definition</b> dalloc.h:33</div></div>
+</div><!-- fragment --><p>Store a string </p><div class="fragment"><div class="line"><span class="keywordtype">char</span> *str = <a class="code hl_function" href="dalloc_8h.html#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a>(d, <span class="stringliteral">&quot;hello world&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(d, str, <span class="keywordtype">char</span> *);</div>
+<div class="ttc" id="adalloc_8h_html_a88c18365d92a2f64b078599ac8251b86"><div class="ttname"><a href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a></div><div class="ttdeci">#define dalloc_add(d, obj, type)</div><div class="ttdef"><b>Definition</b> dalloc.h:34</div></div>
+<div class="ttc" id="adalloc_8h_html_a8d1a0348d7484dbe1ff1854f96f25cf5"><div class="ttname"><a href="dalloc_8h.html#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a></div><div class="ttdeci">char * dalloc_strdup(const void *ctx, const char *string)</div><div class="ttdef"><b>Definition</b> dalloc.c:295</div></div>
+</div><!-- fragment --><p>Add a nested object, you later can't fetch this directly </p><div class="fragment"><div class="line"><a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *nested = talloc_zero(d, <a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>);</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(d, nested, <a class="code hl_struct" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a>);</div>
+</div><!-- fragment --><p>Add an int value to the nested object, this can be fetched </p><div class="fragment"><div class="line">i = 2;</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(nested, &amp;i, uint64_t);</div>
+</div><!-- fragment --><p>Add a nested set </p><div class="fragment"><div class="line">set_t *set = talloc_zero(nested, set_t);</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(nested, set, set_t);</div>
+</div><!-- fragment --><p>Add an int value to the set </p><div class="fragment"><div class="line">i = 3;</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(set, &amp;i, uint64_t);</div>
+</div><!-- fragment --><p>Add a dictionary (key/value store) </p><div class="fragment"><div class="line">dict_t *dict = talloc_zero(nested, dict_t);</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(nested, dict, dict_t);</div>
+</div><!-- fragment --><p>Store a string as key in the dict </p><div class="fragment"><div class="line">str = <a class="code hl_function" href="dalloc_8h.html#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a>(d, <span class="stringliteral">&quot;key&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#a88c18365d92a2f64b078599ac8251b86">dalloc_add</a>(dict, str, <span class="keywordtype">char</span> *);</div>
+</div><!-- fragment --><p>Add a value for the key </p><div class="fragment"><div class="line">i = 4;</div>
+<div class="line"><a class="code hl_define" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(dict, &amp;i, uint64_t);</div>
+</div><!-- fragment --><p>Fetching value references</p>
 <p>You can fetch anything that is not a DALLOC_CTXs, because passing "DALLOC_CTXs" as type to the functions <a class="el" href="#a44ab837d36956a2311193d97f93fb6f5">dalloc_get()</a> and <a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key()</a> tells the function to step into that object and expect more arguments that specify which element to fetch.</p>
-<p>Get reference to an objects element by position uint64_t *p = dalloc_get(d, "uint64_t", 0); p now points to the first int with a value of 1</p>
-<p>Get reference to the "hello world" string str = dalloc_get(d, "char *", 1);</p>
-<p>You can't fetch a pure <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> nested = dalloc_get(d, "DALLOC_CTX", 2); But you can do this p = dalloc_get(d, "DALLOC_CTX", 2, "uint64_t", 0); p now points to the value 2</p>
-<p>You can fetch types that are typedefd DALLOC_CTXs set = dalloc_get(d, "DALLOC_CTX", 2, "set_t", 1);</p>
-<p>Fetch int from set, note that you must use <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> as type for the set p = dalloc_get(d, "DALLOC_CTX", 2, "DALLOC_CTX", 1, "uint64_t", 0); p points to 3</p>
-<p>Fetch value by key from dictionary p = dalloc_value_for_key(d, "DALLOC_CTX", 2, "DALLOC_CTX", 2, "key"); p now point to 4 </p>
+<p>Get reference to an objects element by position </p><div class="fragment"><div class="line">uint64_t *<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;uint64_t&quot;</span>, 0);</div>
+<div class="ttc" id="adalloc_8h_html_a44ab837d36956a2311193d97f93fb6f5"><div class="ttname"><a href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a></div><div class="ttdeci">void * dalloc_get(const DALLOC_CTX *d,...)</div><div class="ttdef"><b>Definition</b> dalloc.c:199</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a49c6a1596dbb420280d9aa047ecc4c31"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></div><div class="ttdeci">static gcry_mpi_t p</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
+</div><!-- fragment --><p> p now points to the first int with a value of 1</p>
+<p>Get reference to the "hello world" string </p><div class="fragment"><div class="line">str = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;char *&quot;</span>, 1);</div>
+</div><!-- fragment --><p>You can't fetch a pure <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> </p><div class="fragment"><div class="line">nested = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2);</div>
+</div><!-- fragment --><p> But you can do this </p><div class="fragment"><div class="line"><a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2, <span class="stringliteral">&quot;uint64_t&quot;</span>, 0);</div>
+</div><!-- fragment --><p> p now points to the value 2</p>
+<p>You can fetch types that are typedefd DALLOC_CTXs </p><div class="fragment"><div class="line">set = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2, <span class="stringliteral">&quot;set_t&quot;</span>, 1);</div>
+</div><!-- fragment --><p>Fetch int from set, note that you must use <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> as type for the set </p><div class="fragment"><div class="line"><a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 1, <span class="stringliteral">&quot;uint64_t&quot;</span>, 0);</div>
+</div><!-- fragment --><p> p points to 3</p>
+<p>Fetch value by key from dictionary </p><div class="fragment"><div class="line"><a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> = <a class="code hl_function" href="dalloc_8h.html#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key</a>(d, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2, <span class="stringliteral">&quot;DALLOC_CTX&quot;</span>, 2, <span class="stringliteral">&quot;key&quot;</span>);</div>
+<div class="ttc" id="adalloc_8h_html_ad5bb4465c8e47189370859fb3e2ed35e"><div class="ttname"><a href="dalloc_8h.html#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key</a></div><div class="ttdeci">void * dalloc_value_for_key(const DALLOC_CTX *d,...)</div><div class="ttdef"><b>Definition</b> dalloc.c:245</div></div>
+</div><!-- fragment --><p> p now point to 4 </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="abb6184e5323caab45ac611798b12b59a" name="abb6184e5323caab45ac611798b12b59a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb6184e5323caab45ac611798b12b59a">&#9670;&#160;</a></span>dalloc_add_talloc_chunk()</h2>

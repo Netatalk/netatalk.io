@@ -9,6 +9,7 @@ var dsi__stream_8c =
     [ "dsi_header_pack_reply", "dsi__stream_8c.html#aacecc5ece75db48a1b99abf11287a337", null ],
     [ "dsi_peek", "dsi__stream_8c.html#a0aa521be4781a7758a104267ae14f36b", null ],
     [ "dsi_stream_read", "dsi__stream_8c.html#a91514f1127598ab63de788766e64c32f", null ],
+    [ "dsi_stream_read_file", "dsi__stream_8c.html#a787fa415b687859a14a661c5450c8475", null ],
     [ "dsi_stream_receive", "dsi__stream_8c.html#a3b03a8898f3d8c9e2781cee5c92a5c07", null ],
     [ "dsi_stream_send", "dsi__stream_8c.html#ac39b4c877c87a570a425d15dbf5e0c39", null ],
     [ "dsi_stream_write", "dsi__stream_8c.html#a94bd186e5b2b5777dc8a884659b96f9d", null ],

@@ -162,7 +162,7 @@ Macros</h2></td></tr>
 <tr class="memitem:aca31edf76492657d5b5666bfd5598242" id="r_aca31edf76492657d5b5666bfd5598242"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca31edf76492657d5b5666bfd5598242">DSI_NOREPLY</a>&#160;&#160;&#160;(1 &lt;&lt; 6) /* in <a class="el" href="#a03e86d9cd34244fe4e18c9fe84f361f3">dsi_write</a> we generate our own replies */</td></tr>
 <tr class="memitem:af595ab38a791fcaa9b2cf71beebcab09" id="r_af595ab38a791fcaa9b2cf71beebcab09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af595ab38a791fcaa9b2cf71beebcab09">DSI_RECONSOCKET</a>&#160;&#160;&#160;(1 &lt;&lt; 7) /* we have a new socket from primary reconnect */</td></tr>
 <tr class="memitem:a4bfba8ebc0a7f915e2ecb5f95cf7fcac" id="r_a4bfba8ebc0a7f915e2ecb5f95cf7fcac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfba8ebc0a7f915e2ecb5f95cf7fcac">DSI_RECONINPROG</a>&#160;&#160;&#160;(1 &lt;&lt; 8) /* used in the new <a class="el" href="session_8c.html#a197f333abd6afc2a22561e1efdf474ea">session</a> in reconnect */</td></tr>
-<tr class="memitem:a4eb21fa010dbae820a00fe6b81a87c73" id="r_a4eb21fa010dbae820a00fe6b81a87c73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb21fa010dbae820a00fe6b81a87c73">DSI_AFP_LOGGED_OUT</a>&#160;&#160;&#160;(1 &lt;&lt; 9) /* client called <a class="el" href="afpd_2auth_8c.html#ab9ad33d4fb0d8380e860afaa53ecc0e9">afp_logout</a>, quit on <a class="el" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a> EOF from socket */</td></tr>
+<tr class="memitem:a4eb21fa010dbae820a00fe6b81a87c73" id="r_a4eb21fa010dbae820a00fe6b81a87c73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb21fa010dbae820a00fe6b81a87c73">DSI_AFP_LOGGED_OUT</a>&#160;&#160;&#160;(1 &lt;&lt; 9) /* client called <a class="el" href="afpd_2auth_8c.html#a513697bcbadf397052cbb25cb9df2051">afp_logout</a>, quit on <a class="el" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a> EOF from socket */</td></tr>
 <tr class="memitem:a299e76c45f46eab621b8829178d5b898" id="r_a299e76c45f46eab621b8829178d5b898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a299e76c45f46eab621b8829178d5b898">DSI_NOWAIT</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:afd09bb9191088f52bb0e030b8e6b5040" id="r_afd09bb9191088f52bb0e030b8e6b5040"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd09bb9191088f52bb0e030b8e6b5040">DSI_MSG_MORE</a>&#160;&#160;&#160;2</td></tr>
 <tr class="memitem:af139776eec52a4d140f200b089d9bcd3" id="r_af139776eec52a4d140f200b089d9bcd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af139776eec52a4d140f200b089d9bcd3">dsi_wrtreply</a>(a,  b)</td></tr>
@@ -178,8 +178,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a37cb0c1e2f72f75dd2cc61ab5ae82725" id="r_a37cb0c1e2f72f75dd2cc61ab5ae82725"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_d_s_i.html">DSI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37cb0c1e2f72f75dd2cc61ab5ae82725">dsi_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe">hostname</a>, const char *address, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
 <tr class="memitem:a32eab4361ae5442dd820de14f3ce261d" id="r_a32eab4361ae5442dd820de14f3ce261d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32eab4361ae5442dd820de14f3ce261d">dsi_setstatus</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, char *, const size_t)</td></tr>
 <tr class="memitem:a631107a01ab315692886e3d018e2b091" id="r_a631107a01ab315692886e3d018e2b091"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a631107a01ab315692886e3d018e2b091">dsi_tcp_init</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, const char *<a class="el" href="lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe">hostname</a>, const char *address, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
+<tr class="memdesc:a631107a01ab315692886e3d018e2b091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP.  <br /></td></tr>
 <tr class="memitem:aac0e5cdd680eb680317a7b71c8c0ba2f" id="r_aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac0e5cdd680eb680317a7b71c8c0ba2f">dsi_free</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
+<tr class="memdesc:aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket.  <br /></td></tr>
 <tr class="memitem:a37e427a4637c74233ad1d17f39751bf8" id="r_a37e427a4637c74233ad1d17f39751bf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37e427a4637c74233ad1d17f39751bf8">dsi_getsession</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, <a class="el" href="structserver__child__t.html">server_child_t</a> *, const int, <a class="el" href="server__child_8h.html#ae26588dd753c21bdee6d807ec70a5269">afp_child_t</a> **)</td></tr>
+<tr class="memdesc:a37e427a4637c74233ad1d17f39751bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process.  <br /></td></tr>
 <tr class="memitem:ab118d3c06cebd03856d692b2ffe1c241" id="r_ab118d3c06cebd03856d692b2ffe1c241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab118d3c06cebd03856d692b2ffe1c241">dsi_kill</a> (int)</td></tr>
 <tr class="memitem:a8d02c90625aa6831786d8d70c6f5b114" id="r_a8d02c90625aa6831786d8d70c6f5b114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d02c90625aa6831786d8d70c6f5b114">dsi_opensession</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
 <tr class="memitem:a0612f2dd4d16f369912daef047bc0672" id="r_a0612f2dd4d16f369912daef047bc0672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0612f2dd4d16f369912daef047bc0672">dsi_attention</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, <a class="el" href="include_2atalk_2afp_8h.html#af67592f6dbcab79aa9cbac528d29f570">AFPUserBytes</a>)</td></tr>
@@ -188,10 +191,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7f5b1e93eb97fca2ee20bcb8be0e208" id="r_ac7f5b1e93eb97fca2ee20bcb8be0e208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7f5b1e93eb97fca2ee20bcb8be0e208">dsi_getstatus</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
 <tr class="memitem:ac7d2ddd6bfaad668e88fbc79ab26a291" id="r_ac7d2ddd6bfaad668e88fbc79ab26a291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7d2ddd6bfaad668e88fbc79ab26a291">dsi_close</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
 <tr class="memitem:a11e338d3cc639fc8a2b36687b2357e2c" id="r_a11e338d3cc639fc8a2b36687b2357e2c"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11e338d3cc639fc8a2b36687b2357e2c">dsi_stream_write</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t, const int mode)</td></tr>
+<tr class="memdesc:a11e338d3cc639fc8a2b36687b2357e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">write raw <a class="el" href="struct_d_s_i.html">DSI</a> data  <br /></td></tr>
 <tr class="memitem:a0e3adabf3642168ba72df020c12739c3" id="r_a0e3adabf3642168ba72df020c12739c3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e3adabf3642168ba72df020c12739c3">dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
+<tr class="memdesc:a0e3adabf3642168ba72df020c12739c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from <a class="el" href="struct_d_s_i.html">DSI</a> buffer.  <br /></td></tr>
 <tr class="memitem:a354933e43ceb9e503bcb6b176cd2e91c" id="r_a354933e43ceb9e503bcb6b176cd2e91c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a354933e43ceb9e503bcb6b176cd2e91c">dsi_stream_send</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, size_t)</td></tr>
 <tr class="memitem:aa8ed662cafd0572718c46609e9ab3ebb" id="r_aa8ed662cafd0572718c46609e9ab3ebb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
+<tr class="memdesc:aa8ed662cafd0572718c46609e9ab3ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <a class="el" href="struct_d_s_i.html">DSI</a> command and data.  <br /></td></tr>
 <tr class="memitem:a9b5a0094ceb62bf133a685a2007c2149" id="r_a9b5a0094ceb62bf133a685a2007c2149"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5a0094ceb62bf133a685a2007c2149">dsi_disconnect</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
+<tr class="memdesc:a9b5a0094ceb62bf133a685a2007c2149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Communication error with the client, enter disconnected state.  <br /></td></tr>
+<tr class="memitem:a3c83765737c393d974e16c0b5823c015" id="r_a3c83765737c393d974e16c0b5823c015"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c83765737c393d974e16c0b5823c015">dsi_stream_read_file</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, int, off_t off, const size_t len, const int err)</td></tr>
 <tr class="memitem:a1e4c29a16d9bd754e7df19454c6c673e" id="r_a1e4c29a16d9bd754e7df19454c6c673e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e4c29a16d9bd754e7df19454c6c673e">dsi_writeinit</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
 <tr class="memitem:a03e86d9cd34244fe4e18c9fe84f361f3" id="r_a03e86d9cd34244fe4e18c9fe84f361f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e86d9cd34244fe4e18c9fe84f361f3">dsi_write</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
 <tr class="memitem:a8ee5fb02d74d0ebf105c416a9835f292" id="r_a8ee5fb02d74d0ebf105c416a9835f292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ee5fb02d74d0ebf105c416a9835f292">dsi_writeflush</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
@@ -207,7 +215,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DSI_AFP_LOGGED_OUT&#160;&#160;&#160;(1 &lt;&lt; 9) /* client called <a class="el" href="afpd_2auth_8c.html#ab9ad33d4fb0d8380e860afaa53ecc0e9">afp_logout</a>, quit on <a class="el" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a> EOF from socket */</td>
+          <td class="memname">#define DSI_AFP_LOGGED_OUT&#160;&#160;&#160;(1 &lt;&lt; 9) /* client called <a class="el" href="afpd_2auth_8c.html#a513697bcbadf397052cbb25cb9df2051">afp_logout</a>, quit on <a class="el" href="hash_8c.html#a2f905a9c4868f5f248b12d584a78dfbd">next</a> EOF from socket */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1000,12 +1008,13 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Communication error with the client, enter disconnected state</p>
+
+<p>Communication error with the client, enter disconnected state. </p>
 <ol type="1">
 <li>close the socket</li>
 <li>set the DSI_DISCONNECTED flag, remove possible sleep flags</li>
 </ol>
-<dl class="section return"><dt>Returns</dt><dd>0 if successfully entered disconnected state -1 if ppid is 1 which means afpd master died or euid == 0 i.e. where still running as root (unauthenticated session) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successfully entered disconnected state, -1 if ppid is 1 which means afpd master died, or euid == 0 i.e. where still running as root (unauthenticated session) </dd></dl>
 
 </div>
 </div>
@@ -1031,7 +1040,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket </p>
+
+<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket. </p>
 
 </div>
 </div>
@@ -1071,13 +1081,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process</p>
+
+<p>Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> structure </td></tr>
-    <tr><td class="paramname">serv_children</td><td>(rw) pointer to our structure with all childs </td></tr>
-    <tr><td class="paramname">tickleval</td><td>(r) tickle interval in seconds </td></tr>
-    <tr><td class="paramname">childp</td><td>(w) after fork: parent return pointer to child, child returns NULL </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dsi</td><td><a class="el" href="struct_d_s_i.html">DSI</a> structure </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">serv_children</td><td>pointer to our structure with all childs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tickleval</td><td>tickle interval in seconds </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">childp</td><td>after fork: parent return pointer to child, child returns NULL </td></tr>
   </table>
   </dd>
 </dl>
@@ -1368,6 +1379,54 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Read data from <a class="el" href="struct_d_s_i.html">DSI</a> buffer. </p>
+<p>Essentially a loop around <a class="el" href="dsi__stream_8c.html#a8ded949de30884027fa9785521848b0c" title="Get bytes from buffer dsi-&gt;buffer or read from socket.">buf_read()</a> to ensure "length" bytes are read from dsi-&gt;buffer and/or the socket.</p>
+<dl class="section return"><dt>Returns</dt><dd>length on success, some value smaller than length indicates an error </dd></dl>
+
+</div>
+</div>
+<a id="a3c83765737c393d974e16c0b5823c015" name="a3c83765737c393d974e16c0b5823c015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c83765737c393d974e16c0b5823c015">&#9670;&#160;</a></span>dsi_stream_read_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t dsi_stream_read_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_d_s_i.html">DSI</a> *</td>          <td class="paramname"><span class="paramname"><em>dsi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fromfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t</td>          <td class="paramname"><span class="paramname"><em>off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="aa8ed662cafd0572718c46609e9ab3ebb" name="aa8ed662cafd0572718c46609e9ab3ebb"></a>
@@ -1392,7 +1451,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read <a class="el" href="struct_d_s_i.html">DSI</a> command and data</p>
+
+<p>Read <a class="el" href="struct_d_s_i.html">DSI</a> command and data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> handle</td></tr>
@@ -1464,7 +1524,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1473,6 +1533,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>write raw <a class="el" href="struct_d_s_i.html">DSI</a> data </p>
+<p>Checks against EINTR aren't necessary if all of the signals have SA_RESTART specified.</p>
+<dl class="section return"><dt>Returns</dt><dd>actual bytes written, -1 on error </dd></dl>
 
 </div>
 </div>
@@ -1512,13 +1576,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP</p>
+
+<p>Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> handle </td></tr>
-    <tr><td class="paramname">hostname</td><td>(r) pointer to hostname string </td></tr>
-    <tr><td class="paramname">inaddress</td><td>(r) Optional IPv4 or IPv6 address with an optional port, may be NULL </td></tr>
-    <tr><td class="paramname">inport</td><td>(r) pointer to port string</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dsi</td><td><a class="el" href="struct_d_s_i.html">DSI</a> handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hostname</td><td>pointer to hostname string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inaddress</td><td>Optional IPv4 or IPv6 address with an optional port, may be NULL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inport</td><td>pointer to port string</td></tr>
   </table>
   </dd>
 </dl>

@@ -120,6 +120,7 @@ $(function(){initNavTree('dsi__getsess_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ace339defacf3758522d5bd5ace7a9d42" id="r_ace339defacf3758522d5bd5ace7a9d42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace339defacf3758522d5bd5ace7a9d42">dsi_getsession</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, <a class="el" href="structserver__child__t.html">server_child_t</a> *serv_children, int tickleval, <a class="el" href="server__child_8h.html#ae26588dd753c21bdee6d807ec70a5269">afp_child_t</a> **childp)</td></tr>
+<tr class="memdesc:ace339defacf3758522d5bd5ace7a9d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ace339defacf3758522d5bd5ace7a9d42" name="ace339defacf3758522d5bd5ace7a9d42"></a>
@@ -150,13 +151,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process</p>
+
+<p>Start a <a class="el" href="struct_d_s_i.html">DSI</a> session, fork an afpd process. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> structure </td></tr>
-    <tr><td class="paramname">serv_children</td><td>(rw) pointer to our structure with all childs </td></tr>
-    <tr><td class="paramname">tickleval</td><td>(r) tickle interval in seconds </td></tr>
-    <tr><td class="paramname">childp</td><td>(w) after fork: parent return pointer to child, child returns NULL </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dsi</td><td><a class="el" href="struct_d_s_i.html">DSI</a> structure </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">serv_children</td><td>pointer to our structure with all childs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tickleval</td><td>tickle interval in seconds </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">childp</td><td>after fork: parent return pointer to child, child returns NULL </td></tr>
   </table>
   </dd>
 </dl>

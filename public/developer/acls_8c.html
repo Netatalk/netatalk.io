@@ -109,7 +109,8 @@ $(function(){initNavTree('acls_8c.html','',''); });
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;strings.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
+<code>#include &lt;sys/acl.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="acl_8h_source.html">atalk/acl.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
@@ -145,14 +146,32 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aba5338687e46ed472598da091519a0a4" id="r_aba5338687e46ed472598da091519a0a4"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba5338687e46ed472598da091519a0a4">posix_permset_to_darwin_rights</a> (acl_entry_t e, int is_dir)</td></tr>
+<tr class="memitem:a6527676865aa81da9eb32f9cddf10907" id="r_a6527676865aa81da9eb32f9cddf10907"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6527676865aa81da9eb32f9cddf10907">posix_acl_rights</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, const struct stat *sb, uint32_t *result)</td></tr>
+<tr class="memdesc:a6527676865aa81da9eb32f9cddf10907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile access rights for a user to one file-system object.  <br /></td></tr>
+<tr class="memitem:a4fa03c88d396ff2bdfd9f5fd40f5e18d" id="r_a4fa03c88d396ff2bdfd9f5fd40f5e18d"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa03c88d396ff2bdfd9f5fd40f5e18d">acl_permset_to_uarights</a> (acl_entry_t <a class="el" href="structentry.html">entry</a>)</td></tr>
+<tr class="memdesc:a4fa03c88d396ff2bdfd9f5fd40f5e18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Posix ACL permissions into access rights.  <br /></td></tr>
+<tr class="memitem:a70631a81ef4027e23a44823e5b68b410" id="r_a70631a81ef4027e23a44823e5b68b410"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70631a81ef4027e23a44823e5b68b410">posix_acls_to_uaperms</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, struct stat *sb, struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
+<tr class="memdesc:a70631a81ef4027e23a44823e5b68b410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update FPUnixPrivs for a file-system object on a volume supporting ACLs.  <br /></td></tr>
+<tr class="memitem:a76cc44703b14dfd07ce783805ef546cb" id="r_a76cc44703b14dfd07ce783805ef546cb"><td class="memItemLeft" align="right" valign="top">static acl_perm_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76cc44703b14dfd07ce783805ef546cb">map_darwin_right_to_posix_permset</a> (uint32_t darwin_ace_rights, int is_dir)</td></tr>
+<tr class="memdesc:a76cc44703b14dfd07ce783805ef546cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map Darwin ACE rights to POSIX 1e perm.  <br /></td></tr>
+<tr class="memitem:a03809e3a98e9e8ee55ffef80c7a602f1" id="r_a03809e3a98e9e8ee55ffef80c7a602f1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03809e3a98e9e8ee55ffef80c7a602f1">posix_acl_add_perm</a> (acl_t *aclp, acl_tag_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, uid_t id, acl_perm_t <a class="el" href="structperm.html">perm</a>)</td></tr>
+<tr class="memdesc:a03809e3a98e9e8ee55ffef80c7a602f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a ACL_USER or ACL_GROUP permission to an ACL, extending existing ACEs.  <br /></td></tr>
+<tr class="memitem:a50af431a7c630d5c55ff91f71535d66c" id="r_a50af431a7c630d5c55ff91f71535d66c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50af431a7c630d5c55ff91f71535d66c">map_aces_darwin_to_posix</a> (const <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, acl_t *def_aclp, acl_t *acc_aclp, int ace_count, uint32_t *default_acl_flags)</td></tr>
+<tr class="memdesc:a50af431a7c630d5c55ff91f71535d66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map Darwin ACL to POSIX ACL.  <br /></td></tr>
+<tr class="memitem:ad868b77af881c5df41054e8cfcf1c5c8" id="r_ad868b77af881c5df41054e8cfcf1c5c8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad868b77af881c5df41054e8cfcf1c5c8">map_acl_posix_to_darwin</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const acl_t acl, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces)</td></tr>
 <tr class="memitem:a61669376af43d2e225aa6e15515312ef" id="r_a61669376af43d2e225aa6e15515312ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61669376af43d2e225aa6e15515312ef">map_acl</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, void *acl, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int ace_count)</td></tr>
-<tr class="memitem:a5febce7f304b053500157b101ed6d15b" id="r_a5febce7f304b053500157b101ed6d15b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febce7f304b053500157b101ed6d15b">get_and_map_acl</a> (char *name, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a5febce7f304b053500157b101ed6d15b" id="r_a5febce7f304b053500157b101ed6d15b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febce7f304b053500157b101ed6d15b">get_and_map_acl</a> (char *name, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:aab30b2409594c4fdabf56fac01e34b6e" id="r_aab30b2409594c4fdabf56fac01e34b6e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab30b2409594c4fdabf56fac01e34b6e">remove_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memitem:a859dd30b415908f5984d372491436df0" id="r_a859dd30b415908f5984d372491436df0"><td class="memItemLeft" align="right" valign="top">static acl_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859dd30b415908f5984d372491436df0">acl_from_mode</a> (mode_t mode)</td></tr>
+<tr class="memitem:a5c89f423215f5ed9d354f62a486bb09c" id="r_a5c89f423215f5ed9d354f62a486bb09c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c89f423215f5ed9d354f62a486bb09c">set_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, int inherit, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *daces, uint32_t ace_count)</td></tr>
 <tr class="memitem:a6d67884d0596464697dbea60ac79cabb" id="r_a6d67884d0596464697dbea60ac79cabb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d67884d0596464697dbea60ac79cabb">check_acl_access</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, const char *<a class="el" href="structpath.html">path</a>, const <a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> <a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>, uint32_t requested_rights)</td></tr>
-<tr class="memitem:a101cee4cbaf1fd0ecde5c347b3bc382a" id="r_a101cee4cbaf1fd0ecde5c347b3bc382a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a101cee4cbaf1fd0ecde5c347b3bc382a">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:aaed7a9581ef7a635c2ac4ed9d0e1996c" id="r_aaed7a9581ef7a635c2ac4ed9d0e1996c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaed7a9581ef7a635c2ac4ed9d0e1996c">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a2fd19a53bb11879eddf10a9d2d626e9d" id="r_a2fd19a53bb11879eddf10a9d2d626e9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd19a53bb11879eddf10a9d2d626e9d">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memdesc:a6d67884d0596464697dbea60ac79cabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given UUID has requested_rights (type darwin_ace_rights) for path.  <br /></td></tr>
+<tr class="memitem:aa0ab90bb6fae969c7f5eece718fac6ba" id="r_aa0ab90bb6fae969c7f5eece718fac6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ab90bb6fae969c7f5eece718fac6ba">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a4942a67314f08c075b5487302f646a35" id="r_a4942a67314f08c075b5487302f646a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4942a67314f08c075b5487302f646a35">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a68af66c7445133403863e81e438be2eb" id="r_a68af66c7445133403863e81e438be2eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af66c7445133403863e81e438be2eb">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:a76ea2a5d940e030476c196fd9f6309cf" id="r_a76ea2a5d940e030476c196fd9f6309cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ea2a5d940e030476c196fd9f6309cf">acltoownermode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, struct stat *st, struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
+<tr class="memdesc:a76ea2a5d940e030476c196fd9f6309cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">map ACL to user maccess  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ae7c6af8aa43fc88bde43d318caacc7cb" name="ae7c6af8aa43fc88bde43d318caacc7cb"></a>
@@ -296,6 +315,66 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a859dd30b415908f5984d372491436df0" name="a859dd30b415908f5984d372491436df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859dd30b415908f5984d372491436df0">&#9670;&#160;</a></span>acl_from_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">acl_t acl_from_mode </td>
+          <td>(</td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fa03c88d396ff2bdfd9f5fd40f5e18d" name="a4fa03c88d396ff2bdfd9f5fd40f5e18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa03c88d396ff2bdfd9f5fd40f5e18d">&#9670;&#160;</a></span>acl_permset_to_uarights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t acl_permset_to_uarights </td>
+          <td>(</td>
+          <td class="paramtype">acl_entry_t</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert Posix ACL permissions into access rights. </p>
+<p>Helper function for <a class="el" href="#a70631a81ef4027e23a44823e5b68b410" title="Update FPUnixPrivs for a file-system object on a volume supporting ACLs.">posix_acls_to_uaperms()</a> to convert Posix ACL permissions into access rights needed to fill ua_permissions of a FPUnixPrivs structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>Posix ACL entry</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>access rights </dd></dl>
+
+</div>
+</div>
 <a id="a76ea2a5d940e030476c196fd9f6309cf" name="a76ea2a5d940e030476c196fd9f6309cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76ea2a5d940e030476c196fd9f6309cf">&#9670;&#160;</a></span>acltoownermode()</h2>
 
@@ -329,13 +408,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>map ACL to user maccess</p>
+
+<p>map ACL to user maccess </p>
 <p>This is the magic function that makes ACLs usable by calculating the access granted by ACEs to the logged in user. </p>
 
 </div>
 </div>
-<a id="a101cee4cbaf1fd0ecde5c347b3bc382a" name="a101cee4cbaf1fd0ecde5c347b3bc382a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a101cee4cbaf1fd0ecde5c347b3bc382a">&#9670;&#160;</a></span>afp_access()</h2>
+<a id="aa0ab90bb6fae969c7f5eece718fac6ba" name="aa0ab90bb6fae969c7f5eece718fac6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ab90bb6fae969c7f5eece718fac6ba">&#9670;&#160;</a></span>afp_access()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,12 +433,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -370,8 +450,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaed7a9581ef7a635c2ac4ed9d0e1996c" name="aaed7a9581ef7a635c2ac4ed9d0e1996c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaed7a9581ef7a635c2ac4ed9d0e1996c">&#9670;&#160;</a></span>afp_getacl()</h2>
+<a id="a4942a67314f08c075b5487302f646a35" name="a4942a67314f08c075b5487302f646a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4942a67314f08c075b5487302f646a35">&#9670;&#160;</a></span>afp_getacl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,12 +469,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -406,8 +486,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2fd19a53bb11879eddf10a9d2d626e9d" name="a2fd19a53bb11879eddf10a9d2d626e9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fd19a53bb11879eddf10a9d2d626e9d">&#9670;&#160;</a></span>afp_setacl()</h2>
+<a id="a68af66c7445133403863e81e438be2eb" name="a68af66c7445133403863e81e438be2eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68af66c7445133403863e81e438be2eb">&#9670;&#160;</a></span>afp_setacl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,12 +505,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -488,16 +568,17 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks if a given UUID has requested_rights(type darwin_ace_rights) for path.</p>
-<p>Note: this gets called frequently and is a good place for optimizations !</p>
+
+<p>Checks if a given UUID has requested_rights (type darwin_ace_rights) for path. </p>
+<dl class="section note"><dt>Note</dt><dd>this gets called frequently and is a good place for optimizations !</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(r) AFP object </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume </td></tr>
-    <tr><td class="paramname">dir</td><td>(rw) directory </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path to filesystem object </td></tr>
-    <tr><td class="paramname">uuid</td><td>(r) UUID of user </td></tr>
-    <tr><td class="paramname">requested_rights</td><td>(r) requested Darwin ACE</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>AFP object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dir</td><td>directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to filesystem object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuid</td><td>UUID of user </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">requested_rights</td><td>requested Darwin ACE</td></tr>
   </table>
   </dd>
 </dl>
@@ -536,6 +617,67 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50af431a7c630d5c55ff91f71535d66c" name="a50af431a7c630d5c55ff91f71535d66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50af431a7c630d5c55ff91f71535d66c">&#9670;&#160;</a></span>map_aces_darwin_to_posix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_aces_darwin_to_posix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>darwin_aces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">acl_t *</td>          <td class="paramname"><span class="paramname"><em>def_aclp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">acl_t *</td>          <td class="paramname"><span class="paramname"><em>acc_aclp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>default_acl_flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map Darwin ACL to POSIX ACL. </p>
+<p>aclp must point to a acl_init'ed acl_t or an acl_t that can e.g. contain default ACEs. Mapping pecularities:</p><ul>
+<li>we create a default ace (which inherits to files and dirs) if either DARWIN_ACE_FLAGS_FILE_INHERIT or DARWIN_ACE_FLAGS_DIRECTORY_INHERIT is requested</li>
+<li>we throw away DARWIN_ACE_FLAGS_LIMIT_INHERIT (can't be mapped), thus the ACL will not be limited</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">darwin_aces</td><td>pointer to darwin_aces buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">def_aclp</td><td>directories: pointer to an initialized acl_t with the default acl files: *def_aclp will be NULL </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">acc_aclp</td><td>pointer to an initialized acl_t with the access acl </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ace_count</td><td>number of ACEs in darwin_aces buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">default_acl_flags</td><td>flags to indicate if the object has a basic default acl or an extended default acl.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success storing the result in aclp, -1 on error. default_acl_flags is set to HAS_DEFAULT_ACL|HAS_EXT_DEFAULT_ACL in case there is at least one extended default ace. Otherwise default_acl_flags is left unchanged. </dd></dl>
 
 </div>
 </div>
@@ -578,6 +720,270 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad868b77af881c5df41054e8cfcf1c5c8" name="ad868b77af881c5df41054e8cfcf1c5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad868b77af881c5df41054e8cfcf1c5c8">&#9670;&#160;</a></span>map_acl_posix_to_darwin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_acl_posix_to_darwin </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const acl_t</td>          <td class="paramname"><span class="paramname"><em>acl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>darwin_aces</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76cc44703b14dfd07ce783805ef546cb" name="a76cc44703b14dfd07ce783805ef546cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cc44703b14dfd07ce783805ef546cb">&#9670;&#160;</a></span>map_darwin_right_to_posix_permset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">acl_perm_t map_darwin_right_to_posix_permset </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>darwin_ace_rights</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>is_dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map Darwin ACE rights to POSIX 1e perm. </p>
+<p>We can only map few rights:</p><ul>
+<li>DARWIN_ACE_READ_DATA -&gt; ACL_READ</li>
+<li>DARWIN_ACE_WRITE_DATA -&gt; ACL_WRITE</li>
+<li>DARWIN_ACE_DELETE_CHILD &amp; (is_dir == 1) -&gt; ACL_WRITE</li>
+<li>DARWIN_ACE_EXECUTE -&gt; ACL_EXECUTE</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">darwin_ace_rights</td><td>result of the mapping </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_dir</td><td>1 for dirs, 0 for files</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>mapping result as acl_perm_t, -1 on error </dd></dl>
+
+</div>
+</div>
+<a id="a03809e3a98e9e8ee55ffef80c7a602f1" name="a03809e3a98e9e8ee55ffef80c7a602f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03809e3a98e9e8ee55ffef80c7a602f1">&#9670;&#160;</a></span>posix_acl_add_perm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posix_acl_add_perm </td>
+          <td>(</td>
+          <td class="paramtype">acl_t *</td>          <td class="paramname"><span class="paramname"><em>aclp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">acl_tag_t</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uid_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">acl_perm_t</td>          <td class="paramname"><span class="paramname"><em>perm</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a ACL_USER or ACL_GROUP permission to an ACL, extending existing ACEs. </p>
+<p>Add a permission of "type" for user or group "id" to an ACL. Scan the ACL for existing permissions for this type/id, if there is one add the perm, otherwise create a new ACL entry. perm can be or'ed ACL_READ, ACL_WRITE and ACL_EXECUTE.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">aclp</td><td>pointer to ACL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>acl_tag_t of ACL_USER or ACL_GROUP </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>uid_t uid for ACL_USER, or gid casted to uid_t for ACL_GROUP </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">perm</td><td>acl_perm_t permissions to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure </dd></dl>
+
+</div>
+</div>
+<a id="a6527676865aa81da9eb32f9cddf10907" name="a6527676865aa81da9eb32f9cddf10907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6527676865aa81da9eb32f9cddf10907">&#9670;&#160;</a></span>posix_acl_rights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posix_acl_rights </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct stat *</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile access rights for a user to one file-system object. </p>
+<p>This combines combines all access rights for a user to one fs-object and returns the result as a Darwin allowed rights ACE. This must honor trivial ACEs which are a mode_t mapping.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to filesystem object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sb</td><td>struct stat of path </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">result</td><td>resulting Darwin allow ACE</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 or -1 on error </dd></dl>
+
+</div>
+</div>
+<a id="a70631a81ef4027e23a44823e5b68b410" name="a70631a81ef4027e23a44823e5b68b410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70631a81ef4027e23a44823e5b68b410">&#9670;&#160;</a></span>posix_acls_to_uaperms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posix_acls_to_uaperms </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structmaccess.html">maccess</a> *</td>          <td class="paramname"><span class="paramname"><em>ma</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update FPUnixPrivs for a file-system object on a volume supporting ACLs. </p>
+<p>Checks permissions granted by ACLS for a user to one fs-object and updates user and group permissions in given struct maccess. As OS X doesn't conform to Posix 1003.1e Draft 17 it expects proper group permissions in st_mode of struct stat even if the fs-object has an ACL_MASK entry, st_mode gets modified to properly reflect group permissions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to filesystem object </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">sb</td><td>struct stat of path </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ma</td><td>struct maccess of path</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 or -1 on error </dd></dl>
+
+</div>
+</div>
+<a id="aba5338687e46ed472598da091519a0a4" name="aba5338687e46ed472598da091519a0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba5338687e46ed472598da091519a0a4">&#9670;&#160;</a></span>posix_permset_to_darwin_rights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t posix_permset_to_darwin_rights </td>
+          <td>(</td>
+          <td class="paramtype">acl_entry_t</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>is_dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aab30b2409594c4fdabf56fac01e34b6e" name="aab30b2409594c4fdabf56fac01e34b6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab30b2409594c4fdabf56fac01e34b6e">&#9670;&#160;</a></span>remove_acl()</h2>
 
@@ -601,6 +1007,50 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c89f423215f5ed9d354f62a486bb09c" name="a5c89f423215f5ed9d354f62a486bb09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c89f423215f5ed9d354f62a486bb09c">&#9670;&#160;</a></span>set_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_acl </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>inherit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>daces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

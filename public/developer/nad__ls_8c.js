@@ -16,7 +16,7 @@ var nad__ls_8c =
     [ "print_owner", "nad__ls_8c.html#ad1d7c12120c0ab870fe9789fd6311e15", null ],
     [ "print_size", "nad__ls_8c.html#a99cb16e4cf689f99e9fc1a713b1deca0", null ],
     [ "set_signal", "nad__ls_8c.html#a5636ad417e8a37f1104264394c47a0e4", null ],
-    [ "sig_handler", "nad__ls_8c.html#ae5e5c5971fc3b5e9b1acf9e1397bcbc8", null ],
+    [ "sig_handler", "nad__ls_8c.html#a366471b5822de7615f33cbe5eab9726a", null ],
     [ "usage_ls", "nad__ls_8c.html#aa6759fc077649ab6a42d51abf7f4dc18", null ],
     [ "alarmed", "nad__ls_8c.html#a763a0c2bfa935b16b925deff83c28731", null ],
     [ "first", "nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840", null ],

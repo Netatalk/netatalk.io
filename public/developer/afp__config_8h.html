@@ -111,7 +111,9 @@ $(function(){initNavTree('afp__config_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aae95a236167c1cd21f9bb7d96c1b2422" id="r_aae95a236167c1cd21f9bb7d96c1b2422"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae95a236167c1cd21f9bb7d96c1b2422">configinit</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *)</td></tr>
+<tr class="memdesc:aae95a236167c1cd21f9bb7d96c1b2422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get everything running.  <br /></td></tr>
 <tr class="memitem:aabd1c5b434b871a502cc116fa1ad5626" id="r_aabd1c5b434b871a502cc116fa1ad5626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd1c5b434b871a502cc116fa1ad5626">configfree</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *, <a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
+<tr class="memdesc:aabd1c5b434b871a502cc116fa1ad5626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aabd1c5b434b871a502cc116fa1ad5626" name="aabd1c5b434b871a502cc116fa1ad5626"></a>
@@ -140,7 +142,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a></p>
+
+<p>Free and cleanup config and <a class="el" href="struct_d_s_i.html">DSI</a>. </p>
 <p>"dsi" can be NULL in which case all <a class="el" href="struct_d_s_i.html">DSI</a> objects and the config object is freed, otherwise its an afpd session child and only any unneeded <a class="el" href="struct_d_s_i.html">DSI</a> objects are freed </p>
 
 </div>
@@ -171,7 +174,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get everything running </p>
+
+<p>Get everything running. </p>
 
 </div>
 </div>

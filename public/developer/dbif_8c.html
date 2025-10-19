@@ -123,13 +123,18 @@ $(function(){initNavTree('dbif_8c.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:a4be916ee3cca6a0fd92efa9153e3b1c9" id="r_a4be916ee3cca6a0fd92efa9153e3b1c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be916ee3cca6a0fd92efa9153e3b1c9">DB_ERRLOGFILE</a>&#160;&#160;&#160;&quot;db_errlog&quot;</td></tr>
 <tr class="memitem:ab176ec495787759afd2ccb02c10ba117" id="r_ab176ec495787759afd2ccb02c10ba117"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab176ec495787759afd2ccb02c10ba117">UNINTIALIZED_DB</a>&#160;&#160;&#160;UINT32_MAX</td></tr>
+<tr class="memdesc:ab176ec495787759afd2ccb02c10ba117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upgrade CNID database versions, initialize rootinfo key as as necessary in <a class="el" href="#aaff21d6f5a04263069f3aaec703f4498" title="Set CNID database version number.">dbif_setversion()</a>  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6c026dafdcdb4c17b6b591a7ec9dbfb6" id="r_a6c026dafdcdb4c17b6b591a7ec9dbfb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c026dafdcdb4c17b6b591a7ec9dbfb6">dbif_stamp</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, int size)</td></tr>
+<tr class="memdesc:a6c026dafdcdb4c17b6b591a7ec9dbfb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the db stamp which is the st_ctime of the file "cnid2.db" and store it in buffer.  <br /></td></tr>
 <tr class="memitem:ac1501cf694ea1c990332e621dfe19bf1" id="r_ac1501cf694ea1c990332e621dfe19bf1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1501cf694ea1c990332e621dfe19bf1">dbif_init_rootinfo</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, int <a class="el" href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a>)</td></tr>
+<tr class="memdesc:ac1501cf694ea1c990332e621dfe19bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inititialize rootinfo key (which has CNID 0 as key)  <br /></td></tr>
 <tr class="memitem:acc0f2bc988942fcc4d419ced1fc222c6" id="r_acc0f2bc988942fcc4d419ced1fc222c6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc0f2bc988942fcc4d419ced1fc222c6">dbif_getversion</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, uint32_t *<a class="el" href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a>)</td></tr>
+<tr class="memdesc:acc0f2bc988942fcc4d419ced1fc222c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return CNID database version number.  <br /></td></tr>
 <tr class="memitem:aaff21d6f5a04263069f3aaec703f4498" id="r_aaff21d6f5a04263069f3aaec703f4498"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaff21d6f5a04263069f3aaec703f4498">dbif_setversion</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, uint32_t <a class="el" href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a>)</td></tr>
+<tr class="memdesc:aaff21d6f5a04263069f3aaec703f4498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set CNID database version number.  <br /></td></tr>
 <tr class="memitem:ad61c00cdff9ec6a940d671476615087c" id="r_ad61c00cdff9ec6a940d671476615087c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61c00cdff9ec6a940d671476615087c">dbif_upgrade</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:ace80373e9e55ee848e2e46248d155db4" id="r_ace80373e9e55ee848e2e46248d155db4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace80373e9e55ee848e2e46248d155db4">dbif_openlog</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:a4b1e6217375b7c541d113b5609d4a876" id="r_a4b1e6217375b7c541d113b5609d4a876"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b1e6217375b7c541d113b5609d4a876">dbif_logautorem</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
@@ -143,6 +148,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a16524686fb9be98b7e11be3a8b4aa6ca" id="r_a16524686fb9be98b7e11be3a8b4aa6ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16524686fb9be98b7e11be3a8b4aa6ca">dbif_put</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, const int dbi, DBT *<a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>, DBT *val, uint32_t <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:a33e4feda566209ea64c79929c5d592f0" id="r_a33e4feda566209ea64c79929c5d592f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33e4feda566209ea64c79929c5d592f0">dbif_del</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, const int dbi, DBT *<a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>, uint32_t <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:a7b4e1048d423dec1a01fe3a1efc63ce5" id="r_a7b4e1048d423dec1a01fe3a1efc63ce5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b4e1048d423dec1a01fe3a1efc63ce5">dbif_search</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, DBT *<a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>, char *resbuf)</td></tr>
+<tr class="memdesc:a7b4e1048d423dec1a01fe3a1efc63ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the database by name.  <br /></td></tr>
 <tr class="memitem:abbb8c91d985208e926e6ae8a4e5ebb37" id="r_abbb8c91d985208e926e6ae8a4e5ebb37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb8c91d985208e926e6ae8a4e5ebb37">dbif_txn_begin</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:a820d8b0d767dfd9baf1679565d48a439" id="r_a820d8b0d767dfd9baf1679565d48a439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a820d8b0d767dfd9baf1679565d48a439">dbif_txn_commit</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:aff5921ca0d73f4f0112d5860616e0b65" id="r_aff5921ca0d73f4f0112d5860616e0b65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff5921ca0d73f4f0112d5860616e0b65">dbif_txn_abort</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
@@ -179,7 +185,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Upgrade CNID database versions, initialize rootinfo key as as necessary in <a class="el" href="#aaff21d6f5a04263069f3aaec703f4498">dbif_setversion()</a></p>
+
+<p>Upgrade CNID database versions, initialize rootinfo key as as necessary in <a class="el" href="#aaff21d6f5a04263069f3aaec703f4498" title="Set CNID database version number.">dbif_setversion()</a> </p>
 <p>For now this does nothing, as upgrading from ver. 0 to 1 is done in dbif_open </p>
 
 </div>
@@ -431,9 +438,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return CNID database version number</p>
+
+<p>Return CNID database version number. </p>
 <p>Returns version in *version</p>
-<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 if theres no rootinfo key yet, 1 if *version is returned </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 if there's no rootinfo key yet, 1 if *version is returned </dd></dl>
 
 </div>
 </div>
@@ -510,12 +518,13 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Inititialize rootinfo key (which has CNID 0 as key)</p>
+
+<p>Inititialize rootinfo key (which has CNID 0 as key) </p>
 <p>This also "stamps" the database, which means storing st.st_ctime of the "cnid2.db" file in the rootinfo data at the DEV offset</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dbd</td><td>(rw) database handle </td></tr>
-    <tr><td class="paramname">version</td><td>(r) database version number</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dbd</td><td>database handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">version</td><td>database version number</td></tr>
   </table>
   </dd>
 </dl>
@@ -658,12 +667,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Search the database by name</p>
+
+<p>Search the database by name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dbd</td><td>(r) database handle </td></tr>
-    <tr><td class="paramname">key</td><td>(r) key to search for, must be initialized with name to search for (key-&gt;data, key-&gt;size) </td></tr>
-    <tr><td class="paramname">resbuf</td><td>(w) buffer for search results CNIDs, maxsize is assumed to be DBD_MAX_SRCH_RSLTS * sizefof(cnid_t)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbd</td><td>database handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>key to search for, must be initialized with name to search for (key-&gt;data, key-&gt;size) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">resbuf</td><td>buffer for search results CNIDs, maxsize is assumed to be DBD_MAX_SRCH_RSLTS * sizefof(cnid_t)</td></tr>
   </table>
   </dd>
 </dl>
@@ -697,7 +707,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set CNID database version number</p>
+
+<p>Set CNID database version number. </p>
 <p>Initializes rootinfo key as neccessary </p><dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 on success </dd></dl>
 
 </div>
@@ -733,7 +744,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the db stamp which is the st_ctime of the file "cnid2.db" and store it in buffer </p>
+
+<p>Get the db stamp which is the st_ctime of the file "cnid2.db" and store it in buffer. </p>
 
 </div>
 </div>

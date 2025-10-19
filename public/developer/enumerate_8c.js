@@ -8,7 +8,7 @@ var enumerate_8c =
     [ "afp_enumerate_ext", "enumerate_8c.html#a05a3cc844fbaf1a030a2ac5f0b722b88", null ],
     [ "afp_enumerate_ext2", "enumerate_8c.html#acaa576e7fc8e86bc98d5389d325deb1d", null ],
     [ "check_dirent", "enumerate_8c.html#a24ca839730602f38db65c6551f6dc453", null ],
-    [ "enumerate", "enumerate_8c.html#aa957427b0f3ee003a4cd68df820d7b98", null ],
-    [ "enumerate_loop", "enumerate_8c.html#a917a74496269f9ba8c6048a6c003b155", null ],
+    [ "enumerate", "enumerate_8c.html#ad01c1f933340a12a9345b1052a0e3806", null ],
+    [ "enumerate_loop", "enumerate_8c.html#ac6dcc4659445412305086252a65cca9e", null ],
     [ "for_each_dirent", "enumerate_8c.html#aacb13518cea8c0e3195a346103e521fc", null ]
 ];

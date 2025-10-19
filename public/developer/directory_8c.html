@@ -113,7 +113,7 @@ $(function(){initNavTree('directory_8c.html','',''); });
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;utime.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
@@ -152,34 +152,36 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f08e97a51b5a57276f6a8c7444dd357" id="r_a2f08e97a51b5a57276f6a8c7444dd357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f08e97a51b5a57276f6a8c7444dd357">get_afp_errno</a> (const int <a class="el" href="structparam.html">param</a>)</td></tr>
 <tr class="memitem:a1d42d13b8257907a411a2704e37dfe93" id="r_a1d42d13b8257907a411a2704e37dfe93"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d42d13b8257907a411a2704e37dfe93">dirlookup</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 <tr class="memdesc:a1d42d13b8257907a411a2704e37dfe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a DID.  <br /></td></tr>
-<tr class="memitem:a644916c3887056adc8a5d28505f488f4" id="r_a644916c3887056adc8a5d28505f488f4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644916c3887056adc8a5d28505f488f4">dir_new</a> (const char *m_name, const char *u_name, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> <a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
+<tr class="memitem:a644916c3887056adc8a5d28505f488f4" id="r_a644916c3887056adc8a5d28505f488f4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644916c3887056adc8a5d28505f488f4">dir_new</a> (const char *m_name, const char *u_name, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, bstring <a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
 <tr class="memdesc:a644916c3887056adc8a5d28505f488f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct struct dir.  <br /></td></tr>
 <tr class="memitem:a273dba2fb5d492e91b9bdfa667e5387e" id="r_a273dba2fb5d492e91b9bdfa667e5387e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a273dba2fb5d492e91b9bdfa667e5387e">dir_free</a> (struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memdesc:a273dba2fb5d492e91b9bdfa667e5387e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a struct dir and all its members.  <br /></td></tr>
 <tr class="memitem:ad4203a175074d5440643ce9ac1fd3092" id="r_ad4203a175074d5440643ce9ac1fd3092"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4203a175074d5440643ce9ac1fd3092">dir_add</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, int len)</td></tr>
 <tr class="memdesc:ad4203a175074d5440643ce9ac1fd3092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create struct dir from struct path.  <br /></td></tr>
 <tr class="memitem:a26f60139d7ddb55a95b0d9ca862afece" id="r_a26f60139d7ddb55a95b0d9ca862afece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f60139d7ddb55a95b0d9ca862afece">dir_free_invalid_q</a> (void)</td></tr>
+<tr class="memdesc:a26f60139d7ddb55a95b0d9ca862afece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the queue with invalid struct dirs.  <br /></td></tr>
 <tr class="memitem:ad9fbc8ab01c3318e8da4a88258e4b68f" id="r_ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9fbc8ab01c3318e8da4a88258e4b68f">dir_remove</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache.  <br /></td></tr>
 <tr class="memitem:a27d7b5a570e9482afe6b8b66b436f53f" id="r_a27d7b5a570e9482afe6b8b66b436f53f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpath.html">path</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d7b5a570e9482afe6b8b66b436f53f">cname</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char **cpath)</td></tr>
 <tr class="memdesc:a27d7b5a570e9482afe6b8b66b436f53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a catalog node name path.  <br /></td></tr>
 <tr class="memitem:a5925bf05d5c8936f589eb204333ac383" id="r_a5925bf05d5c8936f589eb204333ac383"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5925bf05d5c8936f589eb204333ac383">movecwd</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memdesc:a5925bf05d5c8936f589eb204333ac383"><td class="mdescLeft">&#160;</td><td class="mdescRight">chdir() to dir  <br /></td></tr>
 <tr class="memitem:a61505d8c1d2da0f511a57da46baabc59" id="r_a61505d8c1d2da0f511a57da46baabc59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61505d8c1d2da0f511a57da46baabc59">check_access</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, int mode)</td></tr>
 <tr class="memitem:a1c034d115ffd2f6219c15cc7bcabc32c" id="r_a1c034d115ffd2f6219c15cc7bcabc32c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c034d115ffd2f6219c15cc7bcabc32c">file_access</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, int mode)</td></tr>
 <tr class="memitem:aa22676a20516192cf6f49bae2add29db" id="r_aa22676a20516192cf6f49bae2add29db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22676a20516192cf6f49bae2add29db">setdiroffcnt</a> (struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, struct stat *st, uint32_t count)</td></tr>
 <tr class="memitem:a7455b5ea2e7a8383a0d3da4e33414882" id="r_a7455b5ea2e7a8383a0d3da4e33414882"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7455b5ea2e7a8383a0d3da4e33414882">dirreenumerate</a> (struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, struct stat *st)</td></tr>
 <tr class="memitem:ad86beed07a8111c83b1372c845c7f675" id="r_ad86beed07a8111c83b1372c845c7f675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86beed07a8111c83b1372c845c7f675">getdirparams</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, uint16_t bitmap, struct <a class="el" href="structpath.html">path</a> *s_path, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t *buflen)</td></tr>
 <tr class="memitem:acff49b6bd0a34aa7106b1ad58affe0b3" id="r_acff49b6bd0a34aa7106b1ad58affe0b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff49b6bd0a34aa7106b1ad58affe0b3">path_error</a> (struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, int error)</td></tr>
-<tr class="memitem:a4f96eb29a990866f9ccf312a399eaa85" id="r_a4f96eb29a990866f9ccf312a399eaa85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f96eb29a990866f9ccf312a399eaa85">afp_setdirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a4874098416bbc7f822ebdf5faf5dae43" id="r_a4874098416bbc7f822ebdf5faf5dae43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4874098416bbc7f822ebdf5faf5dae43">afp_setdirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:a7bac9da0f32775d518f404c6eab23417" id="r_a7bac9da0f32775d518f404c6eab23417"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bac9da0f32775d518f404c6eab23417">setdirparams</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, uint16_t d_bitmap, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
-<tr class="memitem:ad385955134a295f068f000f202770d9f" id="r_ad385955134a295f068f000f202770d9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad385955134a295f068f000f202770d9f">afp_syncdir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a50a672551446dd52e3804311300e5a2f" id="r_a50a672551446dd52e3804311300e5a2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a672551446dd52e3804311300e5a2f">afp_createdir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:ac4b1fb9013f1d58a3685812dfb8ffe5e" id="r_ac4b1fb9013f1d58a3685812dfb8ffe5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b1fb9013f1d58a3685812dfb8ffe5e">afp_syncdir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:aec28ef702d94da36cbcc45b864d5b67c" id="r_aec28ef702d94da36cbcc45b864d5b67c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec28ef702d94da36cbcc45b864d5b67c">afp_createdir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:a6bb6e6110b332a0a59ee3093f08025b0" id="r_a6bb6e6110b332a0a59ee3093f08025b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb6e6110b332a0a59ee3093f08025b0">renamedir</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, char *src, char *dst, struct <a class="el" href="structdir.html">dir</a> *newparent, char *newname)</td></tr>
 <tr class="memitem:abdc3efb68d9e433fd85541bcb4f3dd29" id="r_abdc3efb68d9e433fd85541bcb4f3dd29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdc3efb68d9e433fd85541bcb4f3dd29">deletecurdir</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
-<tr class="memitem:ae01afd79c7063f0e563684669573ac04" id="r_ae01afd79c7063f0e563684669573ac04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae01afd79c7063f0e563684669573ac04">afp_mapid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:ac4555876f44d424cdb9e29e6aa1ccb16" id="r_ac4555876f44d424cdb9e29e6aa1ccb16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4555876f44d424cdb9e29e6aa1ccb16">afp_mapname</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a8852a2e38c5fdaf1cf49ec280e39f796" id="r_a8852a2e38c5fdaf1cf49ec280e39f796"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8852a2e38c5fdaf1cf49ec280e39f796">afp_closedir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a6f49298622ae1e89538b70344036451d" id="r_a6f49298622ae1e89538b70344036451d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f49298622ae1e89538b70344036451d">afp_opendir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a580ee7d2a86b1216ee973e9849159964" id="r_a580ee7d2a86b1216ee973e9849159964"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580ee7d2a86b1216ee973e9849159964">afp_mapid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:aef5012d6d1378e440e45a30602f1dfe3" id="r_aef5012d6d1378e440e45a30602f1dfe3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef5012d6d1378e440e45a30602f1dfe3">afp_mapname</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:ae5c1bcf67593b5bbe136007e182ab668" id="r_ae5c1bcf67593b5bbe136007e182ab668"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5c1bcf67593b5bbe136007e182ab668">afp_closedir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a650f0d9bc378d9e279fb70c637fb6077" id="r_a650f0d9bc378d9e279fb70c637fb6077"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650f0d9bc378d9e279fb70c637fb6077">afp_opendir</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -190,8 +192,8 @@ Variables</h2></td></tr>
 <tr class="memitem:aeb00a5666ec47da33ceaf4ca045d96bf" id="r_aeb00a5666ec47da33ceaf4ca045d96bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue_8h.html#a0150f5145b7cc9ec8c12f7c526057ffe">q_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb00a5666ec47da33ceaf4ca045d96bf">invalid_dircache_entries</a></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a8852a2e38c5fdaf1cf49ec280e39f796" name="a8852a2e38c5fdaf1cf49ec280e39f796"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8852a2e38c5fdaf1cf49ec280e39f796">&#9670;&#160;</a></span>afp_closedir()</h2>
+<a id="ae5c1bcf67593b5bbe136007e182ab668" name="ae5c1bcf67593b5bbe136007e182ab668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c1bcf67593b5bbe136007e182ab668">&#9670;&#160;</a></span>afp_closedir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,22 +201,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int afp_closedir </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *ibuf</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -226,8 +228,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a50a672551446dd52e3804311300e5a2f" name="a50a672551446dd52e3804311300e5a2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50a672551446dd52e3804311300e5a2f">&#9670;&#160;</a></span>afp_createdir()</h2>
+<a id="aec28ef702d94da36cbcc45b864d5b67c" name="aec28ef702d94da36cbcc45b864d5b67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec28ef702d94da36cbcc45b864d5b67c">&#9670;&#160;</a></span>afp_createdir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +247,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -262,8 +264,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae01afd79c7063f0e563684669573ac04" name="ae01afd79c7063f0e563684669573ac04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae01afd79c7063f0e563684669573ac04">&#9670;&#160;</a></span>afp_mapid()</h2>
+<a id="a580ee7d2a86b1216ee973e9849159964" name="a580ee7d2a86b1216ee973e9849159964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580ee7d2a86b1216ee973e9849159964">&#9670;&#160;</a></span>afp_mapid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +283,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -298,8 +300,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4555876f44d424cdb9e29e6aa1ccb16" name="ac4555876f44d424cdb9e29e6aa1ccb16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4555876f44d424cdb9e29e6aa1ccb16">&#9670;&#160;</a></span>afp_mapname()</h2>
+<a id="aef5012d6d1378e440e45a30602f1dfe3" name="aef5012d6d1378e440e45a30602f1dfe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5012d6d1378e440e45a30602f1dfe3">&#9670;&#160;</a></span>afp_mapname()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +319,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -334,8 +336,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f49298622ae1e89538b70344036451d" name="a6f49298622ae1e89538b70344036451d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f49298622ae1e89538b70344036451d">&#9670;&#160;</a></span>afp_opendir()</h2>
+<a id="a650f0d9bc378d9e279fb70c637fb6077" name="a650f0d9bc378d9e279fb70c637fb6077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650f0d9bc378d9e279fb70c637fb6077">&#9670;&#160;</a></span>afp_opendir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +345,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int afp_opendir </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -353,7 +355,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -370,8 +372,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f96eb29a990866f9ccf312a399eaa85" name="a4f96eb29a990866f9ccf312a399eaa85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f96eb29a990866f9ccf312a399eaa85">&#9670;&#160;</a></span>afp_setdirparams()</h2>
+<a id="a4874098416bbc7f822ebdf5faf5dae43" name="a4874098416bbc7f822ebdf5faf5dae43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4874098416bbc7f822ebdf5faf5dae43">&#9670;&#160;</a></span>afp_setdirparams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,12 +391,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -406,8 +408,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad385955134a295f068f000f202770d9f" name="ad385955134a295f068f000f202770d9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad385955134a295f068f000f202770d9f">&#9670;&#160;</a></span>afp_syncdir()</h2>
+<a id="ac4b1fb9013f1d58a3685812dfb8ffe5e" name="ac4b1fb9013f1d58a3685812dfb8ffe5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b1fb9013f1d58a3685812dfb8ffe5e">&#9670;&#160;</a></span>afp_syncdir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,7 +417,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int afp_syncdir </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -425,12 +427,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -699,10 +701,10 @@ Variables</h2></td></tr>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vol</td><td>(r) pointer to struct vol, possibly modified in callee </td></tr>
-    <tr><td class="paramname">dir</td><td>(r) pointer to parent directory </td></tr>
-    <tr><td class="paramname">path</td><td>(rw) pointer to struct path with valid path-&gt;u_name </td></tr>
-    <tr><td class="paramname">len</td><td>(r) strlen of path-&gt;u_name</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol, possibly modified in callee </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>pointer to parent directory </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>pointer to struct path with valid path-&gt;u_name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>strlen of path-&gt;u_name</td></tr>
   </table>
   </dd>
 </dl>
@@ -750,7 +752,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free the queue with invalid struct dirs</p>
+
+<p>Free the queue with invalid struct dirs. </p>
 <p>This gets called at the end of every AFP func. </p>
 
 </div>
@@ -789,7 +792,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+          <td class="paramtype">bstring</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -803,13 +806,13 @@ Variables</h2></td></tr>
 <p>Construct struct dir from parameters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">m_name</td><td>(r) directory name in UTF8-dec </td></tr>
-    <tr><td class="paramname">u_name</td><td>(r) directory name in server side encoding </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) pointer to struct vol </td></tr>
-    <tr><td class="paramname">pdid</td><td>(r) Parent CNID </td></tr>
-    <tr><td class="paramname">did</td><td>(r) CNID </td></tr>
-    <tr><td class="paramname">path</td><td>(r) Full unix path to object </td></tr>
-    <tr><td class="paramname">st</td><td>(r) struct stat of object</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m_name</td><td>directory name in UTF8-dec </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">u_name</td><td>directory name in server side encoding </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pdid</td><td>Parent CNID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>CNID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Full unix path to object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">st</td><td>struct stat of object</td></tr>
   </table>
   </dd>
 </dl>
@@ -847,8 +850,8 @@ Variables</h2></td></tr>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vol</td><td>(r) volume pointer </td></tr>
-    <tr><td class="paramname">dir</td><td>(rw) directory/file entry to remove from cache </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume pointer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dir</td><td>directory/file entry to remove from cache </td></tr>
   </table>
   </dd>
 </dl>
@@ -877,7 +880,11 @@ Variables</h2></td></tr>
 
 <p>Resolve a DID. </p>
 <p>Resolve a DID, allocate a struct dir for it</p><ol type="1">
-<li>Check for special CNIDs 0 (invalid), 1 and 2. 2a. Check if the DID is in the cache. 2b. Check if it's really a dir because we cache files too.</li>
+<li>Check for special CNIDs 0 (invalid), 1 and 2.<ol type="a">
+<li>Check if the DID is in the cache.</li>
+<li>Check if it's really a dir because we cache files too.</li>
+</ol>
+</li>
 <li>If it's not in the cache resolve it via the database.</li>
 <li>Build complete server-side path to the dir.</li>
 <li>Check if it exists and is a directory.</li>
@@ -886,8 +893,8 @@ Variables</h2></td></tr>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vol</td><td>(r) pointer to struct vol </td></tr>
-    <tr><td class="paramname">did</td><td>(r) DID to resolve</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>DID to resolve</td></tr>
   </table>
   </dd>
 </dl>
@@ -1086,6 +1093,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>chdir() to dir </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>pointer to struct dir</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error with afp_errno set appropriately </dd></dl>
 
 </div>
 </div>

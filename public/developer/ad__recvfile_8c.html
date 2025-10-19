@@ -102,6 +102,227 @@ $(function(){initNavTree('ad__recvfile_8c.html','',''); });
   <div class="headertitle"><div class="title">ad_recvfile.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;sys/select.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;sys/uio.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:afee004ef7bbd8190ed3f3df47cbbc7eb" id="r_afee004ef7bbd8190ed3f3df47cbbc7eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee004ef7bbd8190ed3f3df47cbbc7eb">TRANSFER_BUF_SIZE</a>&#160;&#160;&#160;(128*1024)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae947a6d1519e390017dde71762b7cf8d" id="r_ae947a6d1519e390017dde71762b7cf8d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae947a6d1519e390017dde71762b7cf8d">ad_recvfile_init</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, int eid, off_t *off)</td></tr>
+<tr class="memitem:aafac8c627781845999fde788e12773b6" id="r_aafac8c627781845999fde788e12773b6"><td class="memItemLeft" align="right" valign="top">static ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafac8c627781845999fde788e12773b6">default_sys_recvfile</a> (int fromfd, int tofd, off_t offset, size_t count)</td></tr>
+<tr class="memitem:a676799117cdbcc85b115999ca64577f2" id="r_a676799117cdbcc85b115999ca64577f2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a676799117cdbcc85b115999ca64577f2">waitfordata</a> (int socket)</td></tr>
+<tr class="memitem:a73f689a25716756e81b414a854226520" id="r_a73f689a25716756e81b414a854226520"><td class="memItemLeft" align="right" valign="top">static ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f689a25716756e81b414a854226520">sys_recvfile</a> (int fromfd, int tofd, off_t offset, size_t count, int splice_size)</td></tr>
+<tr class="memitem:a3514b016065d96775860a54885b74e92" id="r_a3514b016065d96775860a54885b74e92"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3514b016065d96775860a54885b74e92">ad_recvfile</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, int eid, int <a class="el" href="aecho_8c.html#a5903d0b282fc5eae503de618f896b5e1">sock</a>, off_t off, size_t len, int splice_size)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="afee004ef7bbd8190ed3f3df47cbbc7eb" name="afee004ef7bbd8190ed3f3df47cbbc7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee004ef7bbd8190ed3f3df47cbbc7eb">&#9670;&#160;</a></span>TRANSFER_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRANSFER_BUF_SIZE&#160;&#160;&#160;(128*1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a3514b016065d96775860a54885b74e92" name="a3514b016065d96775860a54885b74e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3514b016065d96775860a54885b74e92">&#9670;&#160;</a></span>ad_recvfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t ad_recvfile </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *</td>          <td class="paramname"><span class="paramname"><em>ad</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>eid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sock</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t</td>          <td class="paramname"><span class="paramname"><em>off</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>splice_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae947a6d1519e390017dde71762b7cf8d" name="ae947a6d1519e390017dde71762b7cf8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae947a6d1519e390017dde71762b7cf8d">&#9670;&#160;</a></span>ad_recvfile_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ad_recvfile_init </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structadouble.html">adouble</a> *</td>          <td class="paramname"><span class="paramname"><em>ad</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>eid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t *</td>          <td class="paramname"><span class="paramname"><em>off</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafac8c627781845999fde788e12773b6" name="aafac8c627781845999fde788e12773b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafac8c627781845999fde788e12773b6">&#9670;&#160;</a></span>default_sys_recvfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t default_sys_recvfile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fromfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tofd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73f689a25716756e81b414a854226520" name="a73f689a25716756e81b414a854226520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f689a25716756e81b414a854226520">&#9670;&#160;</a></span>sys_recvfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t sys_recvfile </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fromfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tofd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>splice_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a676799117cdbcc85b115999ca64577f2" name="a676799117cdbcc85b115999ca64577f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676799117cdbcc85b115999ca64577f2">&#9670;&#160;</a></span>waitfordata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int waitfordata </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>socket</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

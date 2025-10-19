@@ -119,7 +119,7 @@ $(function(){initNavTree('netatalk__conf_8c.html','',''); });
 <code>#include &lt;sys/socket.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;utime.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;iniparser.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
@@ -151,18 +151,27 @@ Functions</h2></td></tr>
 <tr class="memitem:aa64a0aaa380f74b8e2b36a797d70ab2c" id="r_aa64a0aaa380f74b8e2b36a797d70ab2c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa64a0aaa380f74b8e2b36a797d70ab2c">do_check_ea_support</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:ac7680e27acaaac72fabd78f8e7e8d168" id="r_ac7680e27acaaac72fabd78f8e7e8d168"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7680e27acaaac72fabd78f8e7e8d168">check_ea_support</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a81c406ca6cb39227f31954c008ca1178" id="r_a81c406ca6cb39227f31954c008ca1178"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c406ca6cb39227f31954c008ca1178">check_vol_acl_support</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a81c406ca6cb39227f31954c008ca1178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a volume supports ACLs.  <br /></td></tr>
 <tr class="memitem:a1d8199207489c45ee6dd43826eafd007" id="r_a1d8199207489c45ee6dd43826eafd007"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d8199207489c45ee6dd43826eafd007">volxlate</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *dest, size_t destlen, const char *src, const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const char *volname)</td></tr>
 <tr class="memitem:a0c4f8e039667d0900ff17e8ce162a17f" id="r_a0c4f8e039667d0900ff17e8ce162a17f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f8e039667d0900ff17e8ce162a17f">accessvol</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>, const char *name)</td></tr>
-<tr class="memitem:a5c2c8b4bb192a237cf55910510dbc592" id="r_a5c2c8b4bb192a237cf55910510dbc592"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c2c8b4bb192a237cf55910510dbc592">hostaccessvol</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *volname <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, const char *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>)</td></tr>
+<tr class="memdesc:a0c4f8e039667d0900ff17e8ce162a17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">check access list  <br /></td></tr>
+<tr class="memitem:a433f8ba07ffecbed6150ed1e7300f205" id="r_a433f8ba07ffecbed6150ed1e7300f205"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a433f8ba07ffecbed6150ed1e7300f205">hostaccessvol</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *volname, const char *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>)</td></tr>
 <tr class="memitem:aaa81c6cd48c648a38d79d0d118d91327" id="r_aaa81c6cd48c648a38d79d0d118d91327"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa81c6cd48c648a38d79d0d118d91327">getoption_str</a> (const dictionary *conf, const char *<a class="el" href="structvol.html">vol</a>, const char *opt, const char *defsec, const char *defval)</td></tr>
+<tr class="memdesc:aaa81c6cd48c648a38d79d0d118d91327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option string from config, use default value if not set.  <br /></td></tr>
 <tr class="memitem:a8f51f4b21349623593c0bc88135b8f24" id="r_a8f51f4b21349623593c0bc88135b8f24"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f51f4b21349623593c0bc88135b8f24">getoption_strdup</a> (const dictionary *conf, const char *<a class="el" href="structvol.html">vol</a>, const char *opt, const char *defsec, const char *defval)</td></tr>
+<tr class="memdesc:a8f51f4b21349623593c0bc88135b8f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get option string from config, use default value if not set.  <br /></td></tr>
 <tr class="memitem:ae16bdcd3eee13d62b6dd7fd947f72187" id="r_ae16bdcd3eee13d62b6dd7fd947f72187"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae16bdcd3eee13d62b6dd7fd947f72187">getoption_bool</a> (const dictionary *conf, const char *<a class="el" href="structvol.html">vol</a>, const char *opt, const char *defsec, int defval)</td></tr>
+<tr class="memdesc:ae16bdcd3eee13d62b6dd7fd947f72187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get boolean option from config, use default value if not set.  <br /></td></tr>
 <tr class="memitem:a0d03bf9c325c65624f3bf75f901fe476" id="r_a0d03bf9c325c65624f3bf75f901fe476"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d03bf9c325c65624f3bf75f901fe476">getoption_int</a> (const dictionary *conf, const char *<a class="el" href="structvol.html">vol</a>, const char *opt, const char *defsec, int defval)</td></tr>
+<tr class="memdesc:a0d03bf9c325c65624f3bf75f901fe476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get integer option from config, use default value if not set.  <br /></td></tr>
 <tr class="memitem:a2c9cafea397f7163c725014d0bc6cff1" id="r_a2c9cafea397f7163c725014d0bc6cff1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c9cafea397f7163c725014d0bc6cff1">vdgoption_bool</a> (const dictionary *conf, const char *<a class="el" href="structvol.html">vol</a>, const char *opt, const char *defsec, int defval)</td></tr>
+<tr class="memdesc:a2c9cafea397f7163c725014d0bc6cff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get boolean option from volume, default section or global - use default value if not set.  <br /></td></tr>
 <tr class="memitem:ac1e160d9d95acefa55f13e951b46a5a3" id="r_ac1e160d9d95acefa55f13e951b46a5a3"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e160d9d95acefa55f13e951b46a5a3">creatvol</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct passwd *pwd, const char *section, const char *name, const char *path_in, const char *preset)</td></tr>
+<tr class="memdesc:ac1e160d9d95acefa55f13e951b46a5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create volume struct.  <br /></td></tr>
 <tr class="memitem:acddab6c45235686bf39a66e541acf0ca" id="r_acddab6c45235686bf39a66e541acf0ca"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acddab6c45235686bf39a66e541acf0ca">volfile_changed</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a46c172e30ae84d8bac2b62708886d2d1" id="r_a46c172e30ae84d8bac2b62708886d2d1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46c172e30ae84d8bac2b62708886d2d1">vol_section</a> (const char *sec)</td></tr>
 <tr class="memitem:a1323f588695af431ebfaf85061ca6d96" id="r_a1323f588695af431ebfaf85061ca6d96"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1323f588695af431ebfaf85061ca6d96">readvolfile</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct passwd *pwent)</td></tr>
+<tr class="memdesc:a1323f588695af431ebfaf85061ca6d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read volumes from iniconfig and add the volumes contained within to the global volume list.  <br /></td></tr>
 <tr class="memitem:ad3cd9aaaac1baee742b6c30ddb24c063" id="r_ad3cd9aaaac1baee742b6c30ddb24c063"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3cd9aaaac1baee742b6c30ddb24c063">setextmap</a> (char *ext, char *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, char *creator)</td></tr>
 <tr class="memitem:a5c1fa6942f7269d9079b4bfd9d4b495e" id="r_a5c1fa6942f7269d9079b4bfd9d4b495e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c1fa6942f7269d9079b4bfd9d4b495e">extmap_cmp</a> (const void *map1, const void *map2)</td></tr>
 <tr class="memitem:ae7590c1dbe5a630161dc7b0976e1e9e4" id="r_ae7590c1dbe5a630161dc7b0976e1e9e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7590c1dbe5a630161dc7b0976e1e9e4">sortextmap</a> (void)</td></tr>
@@ -172,16 +181,23 @@ Functions</h2></td></tr>
 <tr class="memitem:a1dd9d970666884e1c2d21d59cf204adf" id="r_a1dd9d970666884e1c2d21d59cf204adf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd9d970666884e1c2d21d59cf204adf">getdefextmap</a> (void)</td></tr>
 <tr class="memitem:a2a39e398df33bd070fca3c4102cd0bbe" id="r_a2a39e398df33bd070fca3c4102cd0bbe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a39e398df33bd070fca3c4102cd0bbe">readextmap</a> (const char *file)</td></tr>
 <tr class="memitem:a34da44df52290f1745015140589ad212" id="r_a34da44df52290f1745015140589ad212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34da44df52290f1745015140589ad212">volume_unlink</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a>)</td></tr>
+<tr class="memdesc:a34da44df52290f1745015140589ad212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a volume from the linked list of volumes.  <br /></td></tr>
 <tr class="memitem:a4327f5a87fce86a37525485b8d26caa3" id="r_a4327f5a87fce86a37525485b8d26caa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4327f5a87fce86a37525485b8d26caa3">volume_free</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a4327f5a87fce86a37525485b8d26caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free all resources allocated in a struct vol in <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>  <br /></td></tr>
 <tr class="memitem:a2d92d4ec9f9f0a8e165d39c10d9574cf" id="r_a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d92d4ec9f9f0a8e165d39c10d9574cf">load_charset</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load charsets for a volume.  <br /></td></tr>
 <tr class="memitem:aa051b28df16f69cdbffebc533455f4e7" id="r_aa051b28df16f69cdbffebc533455f4e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="include_2atalk_2volume_8h.html#a93895477a246ceefb8f62520711e425e">lv_flags_t</a> <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
+<tr class="memdesc:aa051b28df16f69cdbffebc533455f4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize volumes and load ini configfile.  <br /></td></tr>
 <tr class="memitem:a95d5c38b0997be2581319b937878f63e" id="r_a95d5c38b0997be2581319b937878f63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d5c38b0997be2581319b937878f63e">unload_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:ac469454bc0d153324821952c87816bb4" id="r_ac469454bc0d153324821952c87816bb4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac469454bc0d153324821952c87816bb4">getvolumes</a> (void)</td></tr>
 <tr class="memitem:af5f8748dd998b913a238dcd1d6600b0a" id="r_af5f8748dd998b913a238dcd1d6600b0a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5f8748dd998b913a238dcd1d6600b0a">getvolbyvid</a> (const uint16_t vid)</td></tr>
 <tr class="memitem:a6d35900509d808ec3b422a0e5f8bbc6c" id="r_a6d35900509d808ec3b422a0e5f8bbc6c"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d35900509d808ec3b422a0e5f8bbc6c">getuserbypath</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a6d35900509d808ec3b422a0e5f8bbc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get username by path  <br /></td></tr>
 <tr class="memitem:a078796270be4438a00a963d87e8d332b" id="r_a078796270be4438a00a963d87e8d332b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a078796270be4438a00a963d87e8d332b">getvolbypath</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a078796270be4438a00a963d87e8d332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search volume by path, creating user home vols as necessary.  <br /></td></tr>
 <tr class="memitem:ab955be2ccb9cf905ece60435a9fc7036" id="r_ab955be2ccb9cf905ece60435a9fc7036"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab955be2ccb9cf905ece60435a9fc7036">getvolbyname</a> (const char *name)</td></tr>
 <tr class="memitem:acbcfd852eb42810ca616b221bd359905" id="r_acbcfd852eb42810ca616b221bd359905"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbcfd852eb42810ca616b221bd359905">afp_config_parse</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="struct_a_f_p_obj.html">AFPObj</a>, char *processname)</td></tr>
+<tr class="memdesc:acbcfd852eb42810ca616b221bd359905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file.  <br /></td></tr>
 <tr class="memitem:ac001e643f465d9fe85fe41e3cbc3428f" id="r_ac001e643f465d9fe85fe41e3cbc3428f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac001e643f465d9fe85fe41e3cbc3428f">afp_config_free</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -318,8 +334,12 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>check access list</p>
-<p>this function wants a string consisting of names seperated by comma or space. Names may be quoted within a pair of quotes. Groups are denoted by a leading @ symbol. Example: user1 user2, user3, "@group1", "@group2", "@group3", "user name1", "@group name1" A NULL argument allows everybody to have access. We return three things: -1: no list 0: list exists, but name isn't in it 1: in list </p>
+
+<p>check access list </p>
+<p>this function wants a string consisting of names seperated by comma or space. Names may be quoted within a pair of quotes. Groups are denoted by a leading @ symbol.</p>
+<p>Example: </p><div class="fragment"><div class="line">user1 user2, user3, @group1, @group2, @group3, <span class="stringliteral">&quot;user name1&quot;</span>, <span class="stringliteral">&quot;@group name1&quot;</span></div>
+</div><!-- fragment --><p>A NULL argument allows everybody to have access.</p>
+<dl class="section return"><dt>Returns</dt><dd>three things: -1: no list 0: list exists, but name isn't in it 1: in list </dd></dl>
 
 </div>
 </div>
@@ -358,7 +378,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file </p>
+
+<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file. </p>
 
 </div>
 </div>
@@ -409,10 +430,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check whether a volume supports ACLs</p>
+
+<p>Check whether a volume supports ACLs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vol</td><td>(r) volume</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume</td></tr>
   </table>
   </dd>
 </dl>
@@ -466,15 +488,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create volume struct</p>
+
+<p>Create volume struct. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(r) handle </td></tr>
-    <tr><td class="paramname">pwd</td><td>(r) struct passwd of logged in user, may be NULL in master afpd </td></tr>
-    <tr><td class="paramname">section</td><td>(r) volume name wo variables expanded (exactly as in iniconfig) </td></tr>
-    <tr><td class="paramname">name</td><td>(r) volume name </td></tr>
-    <tr><td class="paramname">path_in</td><td>(r) volume path </td></tr>
-    <tr><td class="paramname">preset</td><td>(r) default preset, may be NULL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwd</td><td>struct passwd of logged in user, may be NULL in master afpd </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>volume name wo variables expanded (exactly as in iniconfig) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>volume name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path_in</td><td>volume path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">preset</td><td>default preset, may be NULL </td></tr>
   </table>
   </dd>
 </dl>
@@ -694,14 +717,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get boolean option from config, use default value if not set</p>
+
+<p>Get boolean option from config, use default value if not set. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>(r) config handle </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume name (must be section name i.e. wo vars expanded) </td></tr>
-    <tr><td class="paramname">opt</td><td>(r) option </td></tr>
-    <tr><td class="paramname">defsec</td><td>(r) if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
-    <tr><td class="paramname">defval</td><td>(r) if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf</td><td>config handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume name (must be section name i.e. wo vars expanded) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>option </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defsec</td><td>if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defval</td><td>if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
   </table>
   </dd>
 </dl>
@@ -750,14 +774,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get integer option from config, use default value if not set</p>
+
+<p>Get integer option from config, use default value if not set. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>(r) config handle </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume name (must be section name i.e. wo vars expanded) </td></tr>
-    <tr><td class="paramname">opt</td><td>(r) option </td></tr>
-    <tr><td class="paramname">defsec</td><td>(r) if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
-    <tr><td class="paramname">defval</td><td>(r) if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf</td><td>config handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume name (must be section name i.e. wo vars expanded) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>option </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defsec</td><td>if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defval</td><td>if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
   </table>
   </dd>
 </dl>
@@ -806,14 +831,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get option string from config, use default value if not set</p>
+
+<p>Get option string from config, use default value if not set. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>(r) config handle </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume name (must be section name i.e. wo vars expanded) </td></tr>
-    <tr><td class="paramname">opt</td><td>(r) option </td></tr>
-    <tr><td class="paramname">defsec</td><td>(r) if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
-    <tr><td class="paramname">defval</td><td>(r) if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf</td><td>config handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume name (must be section name i.e. wo vars expanded) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>option </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defsec</td><td>if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defval</td><td>if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
   </table>
   </dd>
 </dl>
@@ -862,14 +888,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get option string from config, use default value if not set Returns a dynamically allocated string which caller must free</p>
+
+<p>Get option string from config, use default value if not set. </p>
+<p>Returns a dynamically allocated string which caller must free</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>(r) config handle </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume name (must be section name i.e. wo vars expanded) </td></tr>
-    <tr><td class="paramname">opt</td><td>(r) option </td></tr>
-    <tr><td class="paramname">defsec</td><td>(r) if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
-    <tr><td class="paramname">defval</td><td>(r) if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf</td><td>config handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume name (must be section name i.e. wo vars expanded) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>option </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defsec</td><td>if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defval</td><td>if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
   </table>
   </dd>
 </dl>
@@ -899,6 +927,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>get username by path </p>
+<p><a class="el" href="#a078796270be4438a00a963d87e8d332b" title="Search volume by path, creating user home vols as necessary.">getvolbypath()</a> assumes that the user home directory has the same name as the username. If that is not true, <a class="el" href="#a6d35900509d808ec3b422a0e5f8bbc6c" title="get username by path">getuserbypath()</a> is called and tries to retrieve the username from the directory owner, checking its validity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>absolute volume path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL if no match is found, pointer to username if successful </dd></dl>
 
 </div>
 </div>
@@ -937,13 +975,25 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Search volume by path, creating user home vols as necessary</p>
-<p>Path may be absolute or relative. Ordinary volume structs are created when the ini config is initially parsed (<a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a>), but user volumes are as <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a> only can create the user volume of the logged in user in an AFP session in afpd, but not when called from e.g. cnid_metad or dbd. Both cnid_metad and dbd thus need a way to lookup and create struct vols for user home by path. This is what this func does as well.</p>
-<p>(1) Search "normal" volume list (2) Check if theres a [Homes] section, <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a> remembers this for us (3) If there is, match "path" with "basedir regex" to get the user home parent dir (4) Built user home path by appending the basedir matched in (3) and appending the username (5) The next path element then is the username (5b) <a class="el" href="#a078796270be4438a00a963d87e8d332b">getvolbypath()</a> assumes that the user home directory has the same name as the username. If that is not true, <a class="el" href="#a6d35900509d808ec3b422a0e5f8bbc6c">getuserbypath()</a> is called and tries to retrieve the username from the directory owner, checking its validity (6) Append [Homes]-&gt;path subdirectory if defined (7) Create volume</p>
+
+<p>Search volume by path, creating user home vols as necessary. </p>
+<p>Path may be absolute or relative. Ordinary volume structs are created when the ini config is initially parsed (<a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>), but user volumes are as <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> only can create the user volume of the logged in user in an AFP session in afpd, but not when called from e.g. cnid_metad or dbd. Both cnid_metad and dbd thus need a way to lookup and create struct vols for user home by path. This is what this func does as well.</p>
+<ol type="1">
+<li>Search "normal" volume list</li>
+<li>Check if theres a [Homes] section, <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> remembers this for us</li>
+<li>If there is, match "path" with "basedir regex" to get the user home parent dir</li>
+<li>Built user home path by appending the basedir matched in (3) and appending the username</li>
+<li>The next path element then is the username<ul>
+<li><a class="el" href="#a078796270be4438a00a963d87e8d332b" title="Search volume by path, creating user home vols as necessary.">getvolbypath()</a> assumes that the user home directory has the same name as the username. If that is not true, <a class="el" href="#a6d35900509d808ec3b422a0e5f8bbc6c" title="get username by path">getuserbypath()</a> is called and tries to retrieve the username from the directory owner, checking its validity</li>
+</ul>
+</li>
+<li>Append [Homes]-&gt;path subdirectory if defined</li>
+<li>Create volume</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(rw) handle </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path, may be relative or absolute </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path, may be relative or absolute </td></tr>
   </table>
   </dd>
 </dl>
@@ -984,8 +1034,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5c2c8b4bb192a237cf55910510dbc592" name="a5c2c8b4bb192a237cf55910510dbc592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c2c8b4bb192a237cf55910510dbc592">&#9670;&#160;</a></span>hostaccessvol()</h2>
+<a id="a433f8ba07ffecbed6150ed1e7300f205" name="a433f8ba07ffecbed6150ed1e7300f205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a433f8ba07ffecbed6150ed1e7300f205">&#9670;&#160;</a></span>hostaccessvol()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1001,7 +1051,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *volname</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>volname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1032,7 +1082,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load charsets for a volume </p>
+
+<p>Load charsets for a volume. </p>
 
 </div>
 </div>
@@ -1054,11 +1105,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize volumes and load ini configfile</p>
+
+<p>Initialize volumes and load ini configfile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(r) handle </td></tr>
-    <tr><td class="paramname">flags</td><td>(r) flags controlling volume load behaviour: LV_DEFAULT: load shares in a user/session context, this honors authorisation LV_ALL: load shares that are available in the config file LV_FORCE: reload file even though the timestamp wasn't changed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>flags controlling volume load behaviour:<ul>
+<li>LV_DEFAULT: load shares in a user/session context, this honors authorization</li>
+<li>LV_ALL: load shares that are available in the config file</li>
+<li>LV_FORCE: reload file even though the timestamp wasn't changed </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1116,7 +1173,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read volumes from iniconfig and add the volumes contained within to the global volume list. This gets called from the forked afpd childs. The master now reads this too for Zeroconf announcements. </p>
+
+<p>Read volumes from iniconfig and add the volumes contained within to the global volume list. </p>
+<p>This gets called from the forked afpd childs. The master now reads this too for Zeroconf announcements. </p>
 
 </div>
 </div>
@@ -1266,16 +1325,17 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get boolean option from volume, default section or global - use default value if not set</p>
+
+<p>Get boolean option from volume, default section or global - use default value if not set. </p>
 <p>Order of precedence: volume -&gt; default section -&gt; global -&gt; default value</p>
 <p>"vdg" means volume, default section or global</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>(r) config handle </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume name (must be section name i.e. wo vars expanded) </td></tr>
-    <tr><td class="paramname">opt</td><td>(r) option </td></tr>
-    <tr><td class="paramname">defsec</td><td>(r) if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
-    <tr><td class="paramname">defval</td><td>(r) if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf</td><td>config handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume name (must be section name i.e. wo vars expanded) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>option </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defsec</td><td>if "option" is not found in "vol", try to find it in section "defsec" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defval</td><td>if neither "vol" nor "defsec" contain "opt" return "defval"</td></tr>
   </table>
   </dd>
 </dl>
@@ -1347,8 +1407,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free all resources allocated in a struct vol in <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a></p>
-<p>Actually opening a volume (<a class="el" href="volume_8c.html#a40cbf720c669c4788c33a937f843f788">afp_openvol()</a>) will allocate additional resources which are freed in <a class="el" href="nad_8h.html#a6c7050350fe59fbcfb81553ff4693589">closevol()</a> </p>
+
+<p>Free all resources allocated in a struct vol in <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> </p>
+<p>Actually opening a volume (<a class="el" href="volume_8c.html#a1837c0cf5e1d8bd06791cf2afabcabd2">afp_openvol()</a>) will allocate additional resources which are freed in <a class="el" href="nad_8h.html#a6c7050350fe59fbcfb81553ff4693589">closevol()</a> </p>
 
 </div>
 </div>
@@ -1366,7 +1427,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Remove a volume from the linked list of volumes </p>
+
+<p>Remove a volume from the linked list of volumes. </p>
 
 </div>
 </div>

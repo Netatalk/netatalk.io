@@ -105,21 +105,15 @@ $(function(){initNavTree('etc_2afpd_2unix_8h.html','',''); });
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &quot;config.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2volume_8h_source.html">volume.h</a>&quot;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;sys/types.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="etc_2afpd_2directory_8h_source.html">directory.h</a>&quot;</code><br />
 </div>
 <p><a href="etc_2afpd_2unix_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad12d17be822155052987bc472a14dd8d" id="r_ad12d17be822155052987bc472a14dd8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad12d17be822155052987bc472a14dd8d">f_frsize</a>&#160;&#160;&#160;f_bsize</td></tr>
-<tr class="memitem:aacfe99589653a1e0634c92cf5fd990ed" id="r_aacfe99589653a1e0634c92cf5fd990ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacfe99589653a1e0634c92cf5fd990ed">dqb_btimelimit</a>&#160;&#160;&#160;dqb_btime</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac27cd9c82f97151ac5513b6aaa5910a9" id="r_ac27cd9c82f97151ac5513b6aaa5910a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac27cd9c82f97151ac5513b6aaa5910a9">getnfsquota</a> (struct <a class="el" href="structvol.html">vol</a> *, const int, const uint32_t, struct dqblk *)</td></tr>
 <tr class="memitem:aa8935c7578d76f74beaede5bfad0f40a" id="r_aa8935c7578d76f74beaede5bfad0f40a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8935c7578d76f74beaede5bfad0f40a">uquota_getvolspace</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, <a class="el" href="include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f">VolSpace</a> *, const uint32_t)</td></tr>
 <tr class="memitem:aeb7aa8beec105935ef66ff08a1d7ca0c" id="r_aeb7aa8beec105935ef66ff08a1d7ca0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb7aa8beec105935ef66ff08a1d7ca0c">setdirunixmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, char *, mode_t)</td></tr>
 <tr class="memitem:a9fcdcdac4687a5baaa9af541fe3ca6bc" id="r_a9fcdcdac4687a5baaa9af541fe3ca6bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fcdcdac4687a5baaa9af541fe3ca6bc">setdirmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, const char *, mode_t)</td></tr>
@@ -133,20 +127,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ab1e958668b3930d0c2ee5af4a15a0f55" id="r_ab1e958668b3930d0c2ee5af4a15a0f55"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structafp__options.html">afp_options</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e958668b3930d0c2ee5af4a15a0f55">default_options</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="aacfe99589653a1e0634c92cf5fd990ed" name="aacfe99589653a1e0634c92cf5fd990ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacfe99589653a1e0634c92cf5fd990ed">&#9670;&#160;</a></span>dqb_btimelimit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define dqb_btimelimit&#160;&#160;&#160;dqb_btime</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad12d17be822155052987bc472a14dd8d" name="ad12d17be822155052987bc472a14dd8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad12d17be822155052987bc472a14dd8d">&#9670;&#160;</a></span>f_frsize</h2>
 
@@ -179,66 +159,27 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structmaccess.html">maccess</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structmaccess.html">maccess</a> *</td>          <td class="paramname"><span class="paramname"><em>ma</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="structdir.html">dir</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structdir.html">dir</a> *</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac27cd9c82f97151ac5513b6aaa5910a9" name="ac27cd9c82f97151ac5513b6aaa5910a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac27cd9c82f97151ac5513b6aaa5910a9">&#9670;&#160;</a></span>getnfsquota()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getnfsquota </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>bsize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct dqblk *</td>          <td class="paramname"><span class="paramname"><em>dqp</em></span>&#160;)</td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

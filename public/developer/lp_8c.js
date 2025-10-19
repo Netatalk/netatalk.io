@@ -24,21 +24,11 @@ var lp_8c =
     [ "lp_origin", "lp_8c.html#ab9c3cdbc4bcae1e485b48590966a7c24", null ],
     [ "lp_person", "lp_8c.html#acd44a65aa07b7cfd54cd015134f0a1e8", null ],
     [ "lp_print", "lp_8c.html#a499501ebabac7d35779960f81565aa40", null ],
-    [ "lp_queue", "lp_8c.html#a98d3248dc243007b52ce488c1fd88aa2", null ],
-    [ "lp_rmjob", "lp_8c.html#a7681fb6a52f79bf5db18575a4b4f8b28", null ],
     [ "lp_setup_comments", "lp_8c.html#abd194dfa07ce7e8b93bdb7b2e6cc9d3e", null ],
     [ "lp_write", "lp_8c.html#aff0a71df395cb27602d61fe253e55afd", null ],
     [ "rresvport", "lp_8c.html#a651cf4dfb270f320cc4afa6b540a618e", null ],
     [ "translate", "lp_8c.html#a07ec7ce928bc0f96bd6f6d052ae54432", null ],
     [ "hostname", "lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe", null ],
-    [ "kw_active", "lp_8c.html#a94a3f4ea349e6d79124114e11ea0210b", null ],
-    [ "kw_rank", "lp_8c.html#a17c1d99f91f8e6c45ebdbdb728a6cffd", null ],
     [ "lp", "lp_8c.html#aa1b7b2ae2be506eab82cd2035ba5b710", null ],
-    [ "sat", "lp_8c.html#a356a6e5b8011e9adbdb538dd90ada764", null ],
-    [ "tag_files", "lp_8c.html#aa1747faee35b041dd3aec1743770e763", null ],
-    [ "tag_job", "lp_8c.html#a1d0d4d6c04627b99b2ccf898edf000b9", null ],
-    [ "tag_owner", "lp_8c.html#a40d4acc9b41b04e944ac8dc110dd5df4", null ],
-    [ "tag_rank", "lp_8c.html#a3fc1d8f2cde9af39a5193a3d302703ed", null ],
-    [ "tag_size", "lp_8c.html#ad5fff80415e67ec36d6aafce44f14ef1", null ],
-    [ "tag_status", "lp_8c.html#a34ffcb08a96ce11a0b6613b33f74bbe7", null ]
+    [ "sat", "lp_8c.html#a356a6e5b8011e9adbdb538dd90ada764", null ]
 ];

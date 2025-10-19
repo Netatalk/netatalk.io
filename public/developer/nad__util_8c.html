@@ -110,13 +110,14 @@ $(function(){initNavTree('nad__util_8c.html','',''); });
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;sys/mman.h&gt;</code><br />
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sysexits.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/acl.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="errchk_8h_source.html">atalk/errchk.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="globals_8h_source.html">atalk/globals.h</a>&gt;</code><br />
@@ -130,10 +131,13 @@ $(function(){initNavTree('nad__util_8c.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:a2b05d1cb3aac54a3e1fc93febf7ad05e" id="r_a2b05d1cb3aac54a3e1fc93febf7ad05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b05d1cb3aac54a3e1fc93febf7ad05e">_log</a> (enum <a class="el" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a> lt, char *fmt,...)</td></tr>
 <tr class="memitem:a2b4e80dd9c31d6e015220c30754db321" id="r_a2b4e80dd9c31d6e015220c30754db321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4e80dd9c31d6e015220c30754db321">openvol</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a2b4e80dd9c31d6e015220c30754db321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load volinfo and initialize struct vol.  <br /></td></tr>
 <tr class="memitem:a6c7050350fe59fbcfb81553ff4693589" id="r_a6c7050350fe59fbcfb81553ff4693589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7050350fe59fbcfb81553ff4693589">closevol</a> (<a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:adf1993c7c11da619f592c6cceb28e3e6" id="r_adf1993c7c11da619f592c6cceb28e3e6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1993c7c11da619f592c6cceb28e3e6">utompath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *upath)</td></tr>
 <tr class="memitem:a34f6b8a4fb86a7bfe7a7da75d63a2132" id="r_a34f6b8a4fb86a7bfe7a7da75d63a2132"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f6b8a4fb86a7bfe7a7da75d63a2132">convert_dots_encoding</a> (const <a class="el" href="structafpvol__t.html">afpvol_t</a> *svol, const <a class="el" href="structafpvol__t.html">afpvol_t</a> *dvol, char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a34f6b8a4fb86a7bfe7a7da75d63a2132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert dot encoding of basename <em>in place</em>  <br /></td></tr>
 <tr class="memitem:aa2e657903c9d26c6d7500d771744bbf8" id="r_aa2e657903c9d26c6d7500d771744bbf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e657903c9d26c6d7500d771744bbf8">cnid_for_paths_parent</a> (const <a class="el" href="structafpvol__t.html">afpvol_t</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *<a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
+<tr class="memdesc:aa2e657903c9d26c6d7500d771744bbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves CNID of a given paths parent directory.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -206,14 +210,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Resolves CNID of a given paths parent directory</p>
+
+<p>Resolves CNID of a given paths parent directory. </p>
 <p>path might be: (a) relative: "dir/subdir" with cwd: "/afp_volume/topdir" (b) absolute: "/afp_volume/dir/subdir"</p>
 <p>path MUST be pointing inside vol, this is usually the case as vol has been build from path using loadvolinfo and friends.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vol</td><td>(r) pointer to <a class="el" href="structafpvol__t.html">afpvol_t</a> </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path, see above </td></tr>
-    <tr><td class="paramname">did</td><td>(rw) parent CNID of returned CNID</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to <a class="el" href="structafpvol__t.html">afpvol_t</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path, see above </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">did</td><td>parent CNID of returned CNID</td></tr>
   </table>
   </dd>
 </dl>
@@ -244,13 +249,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Convert dot encoding of basename <em>in place</em></p>
+
+<p>Convert dot encoding of basename <em>in place</em> </p>
 <p>path arg can be "[/][dir/ | ...]filename". It will be converted in place possible encoding ".file" as ":2efile" which means the result will be longer then the original which means provide a big enough buffer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">svol</td><td>(r) source volume </td></tr>
-    <tr><td class="paramname">dvol</td><td>(r) destination volume </td></tr>
-    <tr><td class="paramname">path</td><td>(rw) path to convert <em>in place</em></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">svol</td><td>source volume </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dvol</td><td>destination volume </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>path to convert <em>in place</em></td></tr>
   </table>
   </dd>
 </dl>
@@ -281,12 +287,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load volinfo and initialize struct vol</p>
+
+<p>Load volinfo and initialize struct vol. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(r) <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> of the current connection </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path to evaluate </td></tr>
-    <tr><td class="paramname">vol</td><td>(rw) structure to initialize</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> of the current connection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to evaluate </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">vol</td><td>structure to initialize</td></tr>
   </table>
   </dd>
 </dl>

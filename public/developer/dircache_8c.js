@@ -7,7 +7,7 @@ var dircache_8c =
     [ "dircache_dump", "dircache_8c.html#a29a3f7f19ae5e4c64e1a66ccee08eb38", null ],
     [ "dircache_evict", "dircache_8c.html#a74d9d9fc41c0cd46eafae3685b073752", null ],
     [ "dircache_init", "dircache_8c.html#a32d08155545949809d026537e38bc33f", null ],
-    [ "dircache_remove", "dircache_8c.html#a976bdce6decd959a633eca5cc0bb97c0", null ],
+    [ "dircache_remove", "dircache_8c.html#a8714ac325e3b3da3ac5d09315034e756", null ],
     [ "dircache_remove_children", "dircache_8c.html#a425ed736a4c8f16731a5648b23719735", null ],
     [ "dircache_report_invalid_entry", "dircache_8c.html#ae62f645bef33967c49ff641fc51869ad", null ],
     [ "dircache_reset_validation_counter", "dircache_8c.html#aa1f0ff6827839912526bd91a7f4ff233", null ],

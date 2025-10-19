@@ -17,13 +17,13 @@ var searchData=
   ['of_5ffstatat_14',['of_fstatat',['../fork_8h.html#ad430ec41fa64e04e57456f771146dc41',1,'of_fstatat(int dirfd, struct path *path):&#160;ofork.c'],['../ofork_8c.html#ad430ec41fa64e04e57456f771146dc41',1,'of_fstatat(int dirfd, struct path *path):&#160;ofork.c']]],
   ['of_5fhash_15',['of_hash',['../ofork_8c.html#a09a13d84533de7ad2dff405600daaabc',1,'ofork.c']]],
   ['of_5fpforkdesc_16',['of_pforkdesc',['../fork_8h.html#a536104230f1626cdc65cca5eeedd76f3',1,'of_pforkdesc(FILE *):&#160;ofork.c'],['../ofork_8c.html#abd41af0d29b18d24e88603110cea9a4f',1,'of_pforkdesc(FILE *f):&#160;ofork.c']]],
-  ['of_5frename_17',['of_rename',['../fork_8h.html#a80df72ac3a6ed21ad45e8a32b828b51c',1,'of_rename(const struct vol *, struct ofork *, struct dir *, const char *, struct dir *, const char *):&#160;fork.h'],['../ofork_8c.html#a11b0fa2a81ee0b4425d5f4be2add4fb4',1,'of_rename(const struct vol *vol, struct ofork *s_of, struct dir *olddir, const char *oldpath _U_, struct dir *newdir, const char *newpath):&#160;ofork.c']]],
+  ['of_5frename_17',['of_rename',['../fork_8h.html#a80df72ac3a6ed21ad45e8a32b828b51c',1,'of_rename(const struct vol *, struct ofork *, struct dir *, const char *, struct dir *, const char *):&#160;ofork.c'],['../ofork_8c.html#a1288a620f86b025197526c38afcb70f7',1,'of_rename(const struct vol *vol, struct ofork *s_of, struct dir *olddir, const char *oldpath, struct dir *newdir, const char *newpath):&#160;ofork.c']]],
   ['of_5fstat_18',['of_stat',['../fork_8h.html#a07f6be2a7d9c2035a16bec1d73d9313f',1,'of_stat(const struct vol *vol, struct path *):&#160;ofork.c'],['../ofork_8c.html#a737db37faaee3e48a42c5303d245bbcf',1,'of_stat(const struct vol *vol, struct path *path):&#160;ofork.c']]],
   ['of_5fstatdir_19',['of_statdir',['../fork_8h.html#a18d4eae05ab07ffef2912bd38581b516',1,'of_statdir(struct vol *vol, struct path *):&#160;ofork.c'],['../ofork_8c.html#adacc70ca2a9366695f1a2ea5d0337279',1,'of_statdir(struct vol *vol, struct path *path):&#160;ofork.c']]],
   ['of_5funhash_20',['of_unhash',['../ofork_8c.html#a8c3b17c001e8021cfe163c90c51ad674',1,'ofork.c']]],
-  ['on_5fbus_5facquired_21',['on_bus_acquired',['../afpstats_8c.html#a3061a998cb79a079389b76fcb0772187',1,'afpstats.c']]],
-  ['on_5fname_5facquired_22',['on_name_acquired',['../afpstats_8c.html#a1b24bcef412a7ce43943f07d5e10c557',1,'afpstats.c']]],
-  ['on_5fname_5flost_23',['on_name_lost',['../afpstats_8c.html#af98fc820fdd36b8485c33fecfe8a3b20',1,'afpstats.c']]],
+  ['on_5fbus_5facquired_21',['on_bus_acquired',['../afpstats_8c.html#ad29236fd64e59404ca23564ff3bdac08',1,'afpstats.c']]],
+  ['on_5fname_5facquired_22',['on_name_acquired',['../afpstats_8c.html#ad81d720d2cd7ffdc9c5ff710bc62b37d',1,'afpstats.c']]],
+  ['on_5fname_5flost_23',['on_name_lost',['../afpstats_8c.html#a43c32ba97d12c2acfc3bfd4bab970d31',1,'afpstats.c']]],
   ['open_5fdb_24',['open_db',['../etc_2cnid__dbd_2main_8c.html#a7b6ca4cc6694990450b2262425ea72e2',1,'main.c']]],
   ['open_5fdir_5fstream_25',['open_dir_stream',['../ftw_8c.html#a27d364b902b9c12d540ab8f0409298e6',1,'ftw.c']]],
   ['openclientsocket_26',['OpenClientSocket',['../afpclient_8c.html#a3e7a7015d6fce77a40636781c50f6953',1,'OpenClientSocket(char *host, int port):&#160;afpclient.c'],['../afpclient_8h.html#a3e7a7015d6fce77a40636781c50f6953',1,'OpenClientSocket(char *host, int port):&#160;afpclient.c']]],
@@ -31,7 +31,6 @@ var searchData=
   ['openflags2logstr_28',['openflags2logstr',['../ad__open_8c.html#a4825eeb40e3e76c86485455b804e0c31',1,'ad_open.c']]],
   ['openvol_29',['openvol',['../nad_8h.html#a2b4e80dd9c31d6e015220c30754db321',1,'openvol(AFPObj *obj, const char *path, afpvol_t *vol):&#160;nad_util.c'],['../nad__util_8c.html#a2b4e80dd9c31d6e015220c30754db321',1,'openvol(AFPObj *obj, const char *path, afpvol_t *vol):&#160;nad_util.c'],['../afpfunc__helpers_8c.html#a1cdadf7ba0b31c677cba2e965167133d',1,'openvol(AFPObj *obj, const char *name):&#160;afpfunc_helpers.c'],['../afpfunc__helpers_8h.html#a1cdadf7ba0b31c677cba2e965167133d',1,'openvol(AFPObj *obj, const char *name):&#160;afpfunc_helpers.c']]],
   ['ostat_30',['ostat',['../include_2atalk_2util_8h.html#a5c2b2b5ff8cd8921f74350b382a23d0c',1,'ostat(const char *path, struct stat *buf, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a5c2b2b5ff8cd8921f74350b382a23d0c',1,'ostat(const char *path, struct stat *buf, int options):&#160;unix.c']]],
-  ['ostatat_31',['ostatat',['../include_2atalk_2util_8h.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a1f73e3719511b5c1ba80c5129d08f283',1,'ostatat(int dirfd _U_, const char *path, struct stat *st, int options):&#160;unix.c']]],
-  ['overlap_32',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]],
-  ['overquota_33',['overquota',['../quota_8c.html#ad26afec8c2e2a7804f8cd03707a0a79f',1,'quota.c']]]
+  ['ostatat_31',['ostatat',['../include_2atalk_2util_8h.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c']]],
+  ['overlap_32',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]]
 ];

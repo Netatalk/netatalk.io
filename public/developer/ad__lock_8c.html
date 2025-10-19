@@ -123,22 +123,25 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a092849b93257bbd8c9bfa26175538ea9" id="r_a092849b93257bbd8c9bfa26175538ea9"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a092849b93257bbd8c9bfa26175538ea9">shmdstrfromoff</a> (off_t off)</td></tr>
-<tr class="memitem:a77fb430ad7243e44e2287922f4b88e5e" id="r_a77fb430ad7243e44e2287922f4b88e5e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77fb430ad7243e44e2287922f4b88e5e">set_lock</a> (int fd, int cmd, struct flock *lock)</td></tr>
+<tr class="memitem:a77fb430ad7243e44e2287922f4b88e5e" id="r_a77fb430ad7243e44e2287922f4b88e5e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77fb430ad7243e44e2287922f4b88e5e">set_lock</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int cmd, struct flock *lock)</td></tr>
 <tr class="memitem:a29749f66808c939e4d7a984e6ec28be3" id="r_a29749f66808c939e4d7a984e6ec28be3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29749f66808c939e4d7a984e6ec28be3">XLATE_FCNTL_LOCK</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:a9bf4641dda871e7abfca912e57c7c889" id="r_a9bf4641dda871e7abfca912e57c7c889"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf4641dda871e7abfca912e57c7c889">OVERLAP</a> (off_t a, off_t alen, off_t b, off_t blen)</td></tr>
 <tr class="memitem:a56b9ac0b30334b8936ff4e6758ff3486" id="r_a56b9ac0b30334b8936ff4e6758ff3486"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b9ac0b30334b8936ff4e6758ff3486">adf_freelock</a> (struct <a class="el" href="structad__fd.html">ad_fd</a> *ad, const int i)</td></tr>
-<tr class="memitem:a9d654d0be75c268d1989b9074577f0da" id="r_a9d654d0be75c268d1989b9074577f0da"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d654d0be75c268d1989b9074577f0da">adf_unlock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct <a class="el" href="structad__fd.html">ad_fd</a> *adf, const int fork, int unlckbrl)</td></tr>
-<tr class="memitem:ae48eaaea571593b53ac6cef379f9f664" id="r_ae48eaaea571593b53ac6cef379f9f664"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48eaaea571593b53ac6cef379f9f664">adf_relockrange</a> (struct <a class="el" href="structad__fd.html">ad_fd</a> *ad, int fd, off_t off, off_t len)</td></tr>
+<tr class="memitem:a8432748990ec305a141a6163a46d7652" id="r_a8432748990ec305a141a6163a46d7652"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8432748990ec305a141a6163a46d7652">adf_unlock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, struct <a class="el" href="structad__fd.html">ad_fd</a> *adf, const int fork, int unlckbrl)</td></tr>
+<tr class="memitem:ae48eaaea571593b53ac6cef379f9f664" id="r_ae48eaaea571593b53ac6cef379f9f664"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48eaaea571593b53ac6cef379f9f664">adf_relockrange</a> (struct <a class="el" href="structad__fd.html">ad_fd</a> *ad, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, off_t off, off_t len)</td></tr>
 <tr class="memitem:afd5670ce512589cdc4751d4e7ee931bb" id="r_afd5670ce512589cdc4751d4e7ee931bb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd5670ce512589cdc4751d4e7ee931bb">adf_findlock</a> (struct <a class="el" href="structad__fd.html">ad_fd</a> *ad, const int fork, const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const off_t off, const off_t len)</td></tr>
 <tr class="memitem:a373f25d9238f88b8d19b32694a6212d2" id="r_a373f25d9238f88b8d19b32694a6212d2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a373f25d9238f88b8d19b32694a6212d2">adf_findxlock</a> (struct <a class="el" href="structad__fd.html">ad_fd</a> *ad, const int fork, const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const off_t off, const off_t len)</td></tr>
 <tr class="memitem:aba830911c858bb28d6d65e0f448d7093" id="r_aba830911c858bb28d6d65e0f448d7093"><td class="memItemLeft" align="right" valign="top">static off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba830911c858bb28d6d65e0f448d7093">rf2off</a> (off_t off)</td></tr>
 <tr class="memitem:a7e25b8391b09c310b7f0fc2fdc9f6db6" id="r_a7e25b8391b09c310b7f0fc2fdc9f6db6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e25b8391b09c310b7f0fc2fdc9f6db6">testlock</a> (const struct <a class="el" href="structad__fd.html">ad_fd</a> *adf, off_t off, off_t len)</td></tr>
+<tr class="memdesc:a7e25b8391b09c310b7f0fc2fdc9f6db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test a lock.  <br /></td></tr>
 <tr class="memitem:a4ce2c10a871de6b61922c78b12f3c9ae" id="r_a4ce2c10a871de6b61922c78b12f3c9ae"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ce2c10a871de6b61922c78b12f3c9ae">locktypetostr</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:ad4ba740bb8d1b3ed1022e7191eec21cb" id="r_ad4ba740bb8d1b3ed1022e7191eec21cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4ba740bb8d1b3ed1022e7191eec21cb">ad_lock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, uint32_t eid, int locktype, off_t off, off_t len, int fork)</td></tr>
 <tr class="memitem:a6bf7890cd2d7f429cc6d04d3aba2478e" id="r_a6bf7890cd2d7f429cc6d04d3aba2478e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf7890cd2d7f429cc6d04d3aba2478e">ad_tmplock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, uint32_t eid, int locktype, off_t off, off_t len, int fork)</td></tr>
 <tr class="memitem:ada6c582a1704026ba6842139be156d6f" id="r_ada6c582a1704026ba6842139be156d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6c582a1704026ba6842139be156d6f">ad_unlock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const int fork, int unlckbrl)</td></tr>
 <tr class="memitem:a4e44c661060ed41f6f7fbed1772b0c95" id="r_a4e44c661060ed41f6f7fbed1772b0c95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e44c661060ed41f6f7fbed1772b0c95">ad_testlock</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, int eid, const off_t off)</td></tr>
+<tr class="memdesc:a4e44c661060ed41f6f7fbed1772b0c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for a share mode lock.  <br /></td></tr>
 <tr class="memitem:acc15ad6fbd814f4e366726263247da30" id="r_acc15ad6fbd814f4e366726263247da30"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc15ad6fbd814f4e366726263247da30">ad_openforks</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, uint16_t attrbits)</td></tr>
+<tr class="memdesc:acc15ad6fbd814f4e366726263247da30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if a file is open by another process.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ad682144c9d2ebb9891b531f9aac789e1" name="ad682144c9d2ebb9891b531f9aac789e1"></a>
@@ -243,15 +246,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return if a file is open by another process.</p>
+
+<p>Return if a file is open by another process. </p>
 <p>Optimized for the common case:</p><ul>
 <li>there's no locks held by another process (clients)</li>
 <li>or we already know the answer and don't need to test (attrbits)</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ad</td><td>(rw) handle </td></tr>
-    <tr><td class="paramname">attrbits</td><td>(r) forks opened by us </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ad</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attrbits</td><td>forks opened by us </td></tr>
   </table>
   </dd>
 </dl>
@@ -282,12 +286,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Test for a share mode lock</p>
+
+<p>Test for a share mode lock. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ad</td><td>(rw) handle </td></tr>
-    <tr><td class="paramname">eid</td><td>(r) datafork or resource fork </td></tr>
-    <tr><td class="paramname">off</td><td>(r) sharemode lock to test</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ad</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eid</td><td>datafork or resource fork </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">off</td><td>sharemode lock to test</td></tr>
   </table>
   </dd>
 </dl>
@@ -518,8 +523,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d654d0be75c268d1989b9074577f0da" name="a9d654d0be75c268d1989b9074577f0da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d654d0be75c268d1989b9074577f0da">&#9670;&#160;</a></span>adf_unlock()</h2>
+<a id="a8432748990ec305a141a6163a46d7652" name="a8432748990ec305a141a6163a46d7652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8432748990ec305a141a6163a46d7652">&#9670;&#160;</a></span>adf_unlock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -530,7 +535,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void adf_unlock </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *ad</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *</td>          <td class="paramname"><span class="paramname"><em>ad</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -736,13 +741,17 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Test a lock</p>
-<p>(1) Test against our own locks array (2) Test fcntl lock, locks from other processes</p>
+
+<p>Test a lock. </p>
+<ol type="1">
+<li>Test against our own locks array</li>
+<li>Test fcntl lock, locks from other processes</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">adf</td><td>(r) handle </td></tr>
-    <tr><td class="paramname">off</td><td>(r) offset </td></tr>
-    <tr><td class="paramname">len</td><td>(r) length</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adf</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">off</td><td>offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>length</td></tr>
   </table>
   </dd>
 </dl>

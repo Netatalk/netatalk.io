@@ -12,6 +12,5 @@ var dir_f7a34ca911643fbe46878d1e60e6cd22 =
     [ "netddp", "dir_36dea707e0f238aa03b2e771cd57ed80.html", "dir_36dea707e0f238aa03b2e771cd57ed80" ],
     [ "unicode", "dir_dd41e4e2e20d60b93086f30981d678a6.html", "dir_dd41e4e2e20d60b93086f30981d678a6" ],
     [ "util", "dir_fd3c2cd3d35bacf63a34461a663aaec2.html", "dir_fd3c2cd3d35bacf63a34461a663aaec2" ],
-    [ "vfs", "dir_53c2c8d41cc27f34344f7f854a3b94ee.html", "dir_53c2c8d41cc27f34344f7f854a3b94ee" ],
-    [ "dummy.c", "dummy_8c.html", "dummy_8c" ]
+    [ "vfs", "dir_53c2c8d41cc27f34344f7f854a3b94ee.html", "dir_53c2c8d41cc27f34344f7f854a3b94ee" ]
 ];

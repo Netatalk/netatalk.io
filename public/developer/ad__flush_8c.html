@@ -124,12 +124,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a20d6d097cc4dbd2c610d7593b24dfd09" id="r_a20d6d097cc4dbd2c610d7593b24dfd09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20d6d097cc4dbd2c610d7593b24dfd09">ad_rebuild_adouble_header_v2</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a70f00f6df24975784aff478cbccb6c3e" id="r_a70f00f6df24975784aff478cbccb6c3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70f00f6df24975784aff478cbccb6c3e">ad_rebuild_adouble_header_ea</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a1212be9b714eca8713e35a14047e159e" id="r_a1212be9b714eca8713e35a14047e159e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1212be9b714eca8713e35a14047e159e">ad_rebuild_adouble_header_osx</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, char *adbuf)</td></tr>
+<tr class="memdesc:a1212be9b714eca8713e35a14047e159e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare adbuf buffer from struct adouble for writing on disk.  <br /></td></tr>
 <tr class="memitem:a3bb5c1f03b6a58541b28443eaddbf329" id="r_a3bb5c1f03b6a58541b28443eaddbf329"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bb5c1f03b6a58541b28443eaddbf329">ad_copy_header</a> (struct <a class="el" href="structadouble.html">adouble</a> *add, struct <a class="el" href="structadouble.html">adouble</a> *ads)</td></tr>
 <tr class="memitem:a16af8860fad4d85d30bc91188e5b6590" id="r_a16af8860fad4d85d30bc91188e5b6590"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16af8860fad4d85d30bc91188e5b6590">ad_flush_hf</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a3ba314390960544f1cd97daa7892a135" id="r_a3ba314390960544f1cd97daa7892a135"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ba314390960544f1cd97daa7892a135">ad_flush_rf</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:ace798e221b7cabe9e06bbe7464f3dde7" id="r_ace798e221b7cabe9e06bbe7464f3dde7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace798e221b7cabe9e06bbe7464f3dde7">ad_flush</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:aedd7c47db17d24400d7cb383fff57758" id="r_aedd7c47db17d24400d7cb383fff57758"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedd7c47db17d24400d7cb383fff57758">ad_data_closefd</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a282ecd53c7282d2c16a791006a5890eb" id="r_a282ecd53c7282d2c16a791006a5890eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282ecd53c7282d2c16a791006a5890eb">ad_close</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, int adflags)</td></tr>
+<tr class="memdesc:a282ecd53c7282d2c16a791006a5890eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a struct adouble freeing all resources.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -174,7 +176,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Close a struct adouble freeing all resources </p>
+
+<p>Close a struct adouble freeing all resources. </p>
 
 </div>
 </div>
@@ -326,7 +329,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prepare adbuf buffer from struct adouble for writing on disk </p>
+
+<p>Prepare adbuf buffer from struct adouble for writing on disk. </p>
 
 </div>
 </div>

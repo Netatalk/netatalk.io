@@ -112,6 +112,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab57499dde4c01cf797157b96799441d0" id="r_ab57499dde4c01cf797157b96799441d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab57499dde4c01cf797157b96799441d0">search_cachebyname</a> (const char *name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>)</td></tr>
+<tr class="memdesc:ab57499dde4c01cf797157b96799441d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search cache by name and uuid type.  <br /></td></tr>
 <tr class="memitem:afafe1a50b8bd76951af821793a2c0e20" id="r_afafe1a50b8bd76951af821793a2c0e20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afafe1a50b8bd76951af821793a2c0e20">add_cachebyname</a> (const char *inname, const <a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> inuuid, const <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const unsigned long uid)</td></tr>
 <tr class="memitem:a36e33dbf1d4beafe2408e733a576e1d4" id="r_a36e33dbf1d4beafe2408e733a576e1d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36e33dbf1d4beafe2408e733a576e1d4">search_cachebyuuid</a> (<a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> uuidp, char **name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:aad47c9650c59dd1a48d1e2413e985365" id="r_aad47c9650c59dd1a48d1e2413e985365"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad47c9650c59dd1a48d1e2413e985365">add_cachebyuuid</a> (<a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> inuuid, const char *inname, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const unsigned long uid)</td></tr>
@@ -241,16 +242,17 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Search cache by name and uuid type</p>
+
+<p>Search cache by name and uuid type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>(r) name to search </td></tr>
-    <tr><td class="paramname">type</td><td>(rw) type (user or group) of name, returns found type here which might mark it as a negative entry </td></tr>
-    <tr><td class="paramname">uuid</td><td>(w) found uuid is returned here </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>name to search </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">type</td><td>type (user or group) of name, returns found type here which might mark it as a negative entry </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uuid</td><td>found uuid is returned here </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, entry found -1 no entry found </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, entry found; -1 no entry found </dd></dl>
 
 </div>
 </div>

@@ -119,6 +119,7 @@ $(function(){initNavTree('dsi__tcp_8c.html','',''); });
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;tcpd.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2dsi_8h_source.html">atalk/dsi.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="compat_8h_source.html">atalk/compat.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
@@ -137,16 +138,21 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7521a2ae3c668b8897f07741c9c1a464" id="r_a7521a2ae3c668b8897f07741c9c1a464"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7521a2ae3c668b8897f07741c9c1a464">dsi_tcp_close</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
-<tr class="memitem:a2da596f601020747eb437fb74aec9961" id="r_a2da596f601020747eb437fb74aec9961"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2da596f601020747eb437fb74aec9961">timeout_handler</a> (int sig <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:afc5156781fff24538dac575faf76ea95" id="r_afc5156781fff24538dac575faf76ea95"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5156781fff24538dac575faf76ea95">timeout_handler</a> (int sig)</td></tr>
 <tr class="memitem:acd7e6bd15ce33982709573382d814ea8" id="r_acd7e6bd15ce33982709573382d814ea8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7e6bd15ce33982709573382d814ea8">dsi_init_buffer</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
+<tr class="memdesc:acd7e6bd15ce33982709573382d814ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer.  <br /></td></tr>
 <tr class="memitem:aac0e5cdd680eb680317a7b71c8c0ba2f" id="r_aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac0e5cdd680eb680317a7b71c8c0ba2f">dsi_free</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
+<tr class="memdesc:aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket.  <br /></td></tr>
 <tr class="memitem:ab7bb33168d22ffff7cbff785269bb2d1" id="r_ab7bb33168d22ffff7cbff785269bb2d1"><td class="memItemLeft" align="right" valign="top">static pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7bb33168d22ffff7cbff785269bb2d1">dsi_tcp_open</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:a05a8e3f73fedd40451d51f61d56d2846" id="r_a05a8e3f73fedd40451d51f61d56d2846"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05a8e3f73fedd40451d51f61d56d2846">guess_interface</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, const char *<a class="el" href="lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe">hostname</a>, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
 <tr class="memitem:a0bb59d6dac33f6a264536c14eb30ec9e" id="r_a0bb59d6dac33f6a264536c14eb30ec9e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bb59d6dac33f6a264536c14eb30ec9e">dsi_tcp_listen</a> (const char *address, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>, struct addrinfo *hints, <a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, bool *psocket_err_afnotsup)</td></tr>
 <tr class="memitem:adfacdcc4101d9d58f19cbf2d69a08c99" id="r_adfacdcc4101d9d58f19cbf2d69a08c99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfacdcc4101d9d58f19cbf2d69a08c99">dsi_tcp_init</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, const char *<a class="el" href="lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe">hostname</a>, const char *inaddress, const char *inport)</td></tr>
+<tr class="memdesc:adfacdcc4101d9d58f19cbf2d69a08c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a11fa9be1c66808772452b30ba180dc67" id="r_a11fa9be1c66808772452b30ba180dc67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11fa9be1c66808772452b30ba180dc67">allow_severity</a> = <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea8597fbc71d80f4997540c7e0e0dfdb77">log_info</a></td></tr>
+<tr class="memitem:a70da7854174737ba4ca40206b7d14a47" id="r_a70da7854174737ba4ca40206b7d14a47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70da7854174737ba4ca40206b7d14a47">deny_severity</a> = <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea43ea88dd15127c0bcf709391c00e3d22">log_warning</a></td></tr>
 <tr class="memitem:a76b070d23b9d12e7d4999d7b0bc29514" id="r_a76b070d23b9d12e7d4999d7b0bc29514"><td class="memItemLeft" align="right" valign="top">static struct itimerval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b070d23b9d12e7d4999d7b0bc29514">itimer</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -271,7 +277,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket </p>
+
+<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket. </p>
 
 </div>
 </div>
@@ -297,7 +304,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer </p>
+
+<p>Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer. </p>
 
 </div>
 </div>
@@ -354,13 +362,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP</p>
+
+<p>Initialize <a class="el" href="struct_d_s_i.html">DSI</a> over TCP. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dsi</td><td>(rw) <a class="el" href="struct_d_s_i.html">DSI</a> handle </td></tr>
-    <tr><td class="paramname">hostname</td><td>(r) pointer to hostname string </td></tr>
-    <tr><td class="paramname">inaddress</td><td>(r) Optional IPv4 or IPv6 address with an optional port, may be NULL </td></tr>
-    <tr><td class="paramname">inport</td><td>(r) pointer to port string</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dsi</td><td><a class="el" href="struct_d_s_i.html">DSI</a> handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hostname</td><td>pointer to hostname string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inaddress</td><td>Optional IPv4 or IPv6 address with an optional port, may be NULL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inport</td><td>pointer to port string</td></tr>
   </table>
   </dd>
 </dl>
@@ -475,8 +484,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2da596f601020747eb437fb74aec9961" name="a2da596f601020747eb437fb74aec9961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2da596f601020747eb437fb74aec9961">&#9670;&#160;</a></span>timeout_handler()</h2>
+<a id="afc5156781fff24538dac575faf76ea95" name="afc5156781fff24538dac575faf76ea95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5156781fff24538dac575faf76ea95">&#9670;&#160;</a></span>timeout_handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +496,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void timeout_handler </td>
           <td>(</td>
-          <td class="paramtype">int sig</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sig</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -501,6 +510,34 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a11fa9be1c66808772452b30ba180dc67" name="a11fa9be1c66808772452b30ba180dc67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fa9be1c66808772452b30ba180dc67">&#9670;&#160;</a></span>allow_severity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int allow_severity = <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea8597fbc71d80f4997540c7e0e0dfdb77">log_info</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70da7854174737ba4ca40206b7d14a47" name="a70da7854174737ba4ca40206b7d14a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70da7854174737ba4ca40206b7d14a47">&#9670;&#160;</a></span>deny_severity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int deny_severity = <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea43ea88dd15127c0bcf709391c00e3d22">log_warning</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a76b070d23b9d12e7d4999d7b0bc29514" name="a76b070d23b9d12e7d4999d7b0bc29514"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76b070d23b9d12e7d4999d7b0bc29514">&#9670;&#160;</a></span>itimer</h2>
 

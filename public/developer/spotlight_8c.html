@@ -141,7 +141,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ada6a12188dbb3f2d78ed1adadc5a4cef" id="r_ada6a12188dbb3f2d78ed1adadc5a4cef"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6a12188dbb3f2d78ed1adadc5a4cef">tracker_to_unix_path</a> (TALLOC_CTX *mem_ctx, const char *uri)</td></tr>
 <tr class="memitem:a1ad8a40531711158b2ce75d818737d86" id="r_a1ad8a40531711158b2ce75d818737d86"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ad8a40531711158b2ce75d818737d86">cnid_comp_fn</a> (const void *p1, const void *p2)</td></tr>
 <tr class="memitem:aa6067edc098eb1c8522b5bfffe0c5f82" id="r_aa6067edc098eb1c8522b5bfffe0c5f82"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6067edc098eb1c8522b5bfffe0c5f82">create_result_handle</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:aa6067edc098eb1c8522b5bfffe0c5f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate result handle used in the async Tracker cursor result handler for storing results.  <br /></td></tr>
 <tr class="memitem:a03cd2b4c4dc7ccff12688d42e32b180d" id="r_a03cd2b4c4dc7ccff12688d42e32b180d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03cd2b4c4dc7ccff12688d42e32b180d">add_filemeta</a> (<a class="el" href="spotlight_8h.html#a503b1b536808ed5b4fca1501d078f7f6">sl_array_t</a> *reqinfo, <a class="el" href="spotlight_8h.html#a503b1b536808ed5b4fca1501d078f7f6">sl_array_t</a> *fm_array, const char *<a class="el" href="structpath.html">path</a>, const struct stat *sp)</td></tr>
+<tr class="memdesc:a03cd2b4c4dc7ccff12688d42e32b180d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add requested metadata for a query result element.  <br /></td></tr>
 <tr class="memitem:a377899483410d600d14a30615a3434df" id="r_a377899483410d600d14a30615a3434df"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a377899483410d600d14a30615a3434df">tab_level</a> (TALLOC_CTX *mem_ctx, int level)</td></tr>
 <tr class="memitem:aaaf9d5c967d93a27c2708ad95c001a50" id="r_aaaf9d5c967d93a27c2708ad95c001a50"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaf9d5c967d93a27c2708ad95c001a50">dd_dump</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *dd, int nestinglevel)</td></tr>
 <tr class="memitem:a227a9f1f9ff9359b3c205472d8ed926c" id="r_a227a9f1f9ff9359b3c205472d8ed926c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a227a9f1f9ff9359b3c205472d8ed926c">sl_createCNIDArray</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq, const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *<a class="el" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a>)</td></tr>
@@ -149,13 +151,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a71553460e2fa55fec2efbf78fc0111d7" id="r_a71553460e2fa55fec2efbf78fc0111d7"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71553460e2fa55fec2efbf78fc0111d7">ATALK_LIST_HEAD</a> (sl_queries)</td></tr>
 <tr class="memitem:a9c120e0c51f809e959aa12dfb7e74894" id="r_a9c120e0c51f809e959aa12dfb7e74894"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c120e0c51f809e959aa12dfb7e74894">ATALK_LIST_HEAD</a> (sl_cancelled_queries)</td></tr>
 <tr class="memitem:a68995c5e73c56a0b58dd92b60974a035" id="r_a68995c5e73c56a0b58dd92b60974a035"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68995c5e73c56a0b58dd92b60974a035">slq_add</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:a68995c5e73c56a0b58dd92b60974a035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a query to the list of active queries.  <br /></td></tr>
 <tr class="memitem:a2ca500429e687f2afe86c3bfc6bfe952" id="r_a2ca500429e687f2afe86c3bfc6bfe952"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ca500429e687f2afe86c3bfc6bfe952">slq_cancelled_add</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:a2ca500429e687f2afe86c3bfc6bfe952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a query to the list of active queries.  <br /></td></tr>
 <tr class="memitem:a8fd697259b88ca5d0560e513aa524e00" id="r_a8fd697259b88ca5d0560e513aa524e00"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fd697259b88ca5d0560e513aa524e00">slq_remove</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:a8fd697259b88ca5d0560e513aa524e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a query from the active list.  <br /></td></tr>
 <tr class="memitem:a341cdf5bdd512d5cbbfdee5c75073979" id="r_a341cdf5bdd512d5cbbfdee5c75073979"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a341cdf5bdd512d5cbbfdee5c75073979">slq_for_ctx</a> (uint64_t ctx1, uint64_t ctx2)</td></tr>
 <tr class="memitem:a7bb5b1b3062c6f5d19adaa3b2ca4ebf6" id="r_a7bb5b1b3062c6f5d19adaa3b2ca4ebf6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bb5b1b3062c6f5d19adaa3b2ca4ebf6">slq_destroy</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:a7bb5b1b3062c6f5d19adaa3b2ca4ebf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a query from the active queue and free it.  <br /></td></tr>
 <tr class="memitem:a4892dcc71c4c17062874e25ed76f7247" id="r_a4892dcc71c4c17062874e25ed76f7247"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4892dcc71c4c17062874e25ed76f7247">slq_cancel</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:a4892dcc71c4c17062874e25ed76f7247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a query.  <br /></td></tr>
 <tr class="memitem:aabb25d10bc05003afb2fe35f1f09cd8f" id="r_aabb25d10bc05003afb2fe35f1f09cd8f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb25d10bc05003afb2fe35f1f09cd8f">slq_free_cb</a> (<a class="el" href="spotlight_8h.html#a6e651268592b91f24f11d0811a4ef1f5">slq_t</a> *slq)</td></tr>
+<tr class="memdesc:aabb25d10bc05003afb2fe35f1f09cd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">talloc destructor cb  <br /></td></tr>
 <tr class="memitem:ac648b6604955f247bbfb4ea089ed5295" id="r_ac648b6604955f247bbfb4ea089ed5295"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac648b6604955f247bbfb4ea089ed5295">slq_cancelled_cleanup</a> (void)</td></tr>
+<tr class="memdesc:ac648b6604955f247bbfb4ea089ed5295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free all cancelled queries.  <br /></td></tr>
 <tr class="memitem:ac31990c18c534739d9e41e2e657282a2" id="r_ac31990c18c534739d9e41e2e657282a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31990c18c534739d9e41e2e657282a2">slq_dump</a> (void)</td></tr>
 <tr class="memitem:a55dc5e3cd079831116ab37f0376a2cd7" id="r_a55dc5e3cd079831116ab37f0376a2cd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55dc5e3cd079831116ab37f0376a2cd7">tracker_cursor_cb</a> (GObject *object, GAsyncResult *res, gpointer user_data)</td></tr>
 <tr class="memitem:afa40c57a6a5773ae830170f13b349ede" id="r_afa40c57a6a5773ae830170f13b349ede"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa40c57a6a5773ae830170f13b349ede">tracker_query_cb</a> (GObject *object, GAsyncResult *res, gpointer user_data)</td></tr>
@@ -167,7 +176,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a209e0fb2152530e2e0b313b27b80e6db" id="r_a209e0fb2152530e2e0b313b27b80e6db"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a209e0fb2152530e2e0b313b27b80e6db">sl_rpc_fetchAttributesForOIDArray</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *reply, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:ad45c2a97d38e3e05eb7dc5fc184263d6" id="r_ad45c2a97d38e3e05eb7dc5fc184263d6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad45c2a97d38e3e05eb7dc5fc184263d6">sl_rpc_closeQueryForContext</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *reply, const struct <a class="el" href="structvol.html">vol</a> *v)</td></tr>
 <tr class="memitem:a30d4ba9553ad2102d7343e717fd60896" id="r_a30d4ba9553ad2102d7343e717fd60896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d4ba9553ad2102d7343e717fd60896">spotlight_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
-<tr class="memitem:ad58f4c8d53dab7fa7430d5b707ca6a0d" id="r_ad58f4c8d53dab7fa7430d5b707ca6a0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:ad58f4c8d53dab7fa7430d5b707ca6a0d" id="r_ad58f4c8d53dab7fa7430d5b707ca6a0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -239,7 +248,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add requested metadata for a query result element</p>
+
+<p>Add requested metadata for a query result element. </p>
 <p>This could be rewritten to something more sophisticated like querying metadata from Tracker.</p>
 <p>If path or sp is NULL, simply add nil values for all attributes. </p>
 
@@ -293,7 +303,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -411,7 +421,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Allocate result handle used in the async Tracker cursor result handler for storing results </p>
+
+<p>Allocate result handle used in the async Tracker cursor result handler for storing results. </p>
 
 </div>
 </div>
@@ -768,7 +779,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a query to the list of active queries </p>
+
+<p>Add a query to the list of active queries. </p>
 
 </div>
 </div>
@@ -794,7 +806,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Cancel a query </p>
+
+<p>Cancel a query. </p>
 
 </div>
 </div>
@@ -820,7 +833,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add a query to the list of active queries </p>
+
+<p>Add a query to the list of active queries. </p>
 
 </div>
 </div>
@@ -846,7 +860,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Free all cancelled queries </p>
+
+<p>Free all cancelled queries. </p>
 
 </div>
 </div>
@@ -872,7 +887,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Remove a query from the active queue and free it </p>
+
+<p>Remove a query from the active queue and free it. </p>
 
 </div>
 </div>
@@ -952,6 +968,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>talloc destructor cb </p>
 
 </div>
@@ -978,7 +995,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Remove a query from the active list </p>
+
+<p>Remove a query from the active list. </p>
 
 </div>
 </div>

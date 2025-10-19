@@ -159,7 +159,7 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a30d4ba9553ad2102d7343e717fd60896" id="r_a30d4ba9553ad2102d7343e717fd60896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d4ba9553ad2102d7343e717fd60896">spotlight_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
-<tr class="memitem:abdef5befd3dbeb22f9b822e388145a89" id="r_abdef5befd3dbeb22f9b822e388145a89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdef5befd3dbeb22f9b822e388145a89">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:ad58f4c8d53dab7fa7430d5b707ca6a0d" id="r_ad58f4c8d53dab7fa7430d5b707ca6a0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:a34f2023c533ff31bb1ce854182e7407f" id="r_a34f2023c533ff31bb1ce854182e7407f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f2023c533ff31bb1ce854182e7407f">sl_pack</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
 <tr class="memitem:a838d95f10dfcad456af2111d396cdc00" id="r_a838d95f10dfcad456af2111d396cdc00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a838d95f10dfcad456af2111d396cdc00">sl_unpack</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, const char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
 <tr class="memitem:a09859b9b9b17c89969f3e6fdb8739312" id="r_a09859b9b9b17c89969f3e6fdb8739312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09859b9b9b17c89969f3e6fdb8739312">configure_spotlight_attributes</a> (const char *attributes)</td></tr>
@@ -402,8 +402,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="abdef5befd3dbeb22f9b822e388145a89" name="abdef5befd3dbeb22f9b822e388145a89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdef5befd3dbeb22f9b822e388145a89">&#9670;&#160;</a></span>afp_spotlight_rpc()</h2>
+<a id="ad58f4c8d53dab7fa7430d5b707ca6a0d" name="ad58f4c8d53dab7fa7430d5b707ca6a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">&#9670;&#160;</a></span>afp_spotlight_rpc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +424,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

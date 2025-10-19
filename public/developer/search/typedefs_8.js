@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nftw_5ffunc_5ft_0',['nftw_func_t',['../ftw_8h.html#a5cb0571aeedda482dca21fd42ec8aa87',1,'ftw.h']]],
-  ['node_1',['node',['../ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673',1,'ftw.c']]]
+  ['outputfunc_5ft_0',['outputfunc_t',['../common_8h.html#a69dbbba09a6de7e489aae29310488247',1,'common.h']]]
 ];

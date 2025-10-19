@@ -19,11 +19,10 @@ var searchData=
   ['test_2ftestsuite_2fafp_2eh_16',['afp.h',['../test_2testsuite_2afp_8h.html',1,'']]],
   ['test_2ftestsuite_2fdsi_2eh_17',['dsi.h',['../test_2testsuite_2dsi_8h.html',1,'']]],
   ['test_2ftestsuite_2futf8_2ec_18',['Utf8.c',['../test_2testsuite_2_utf8_8c.html',1,'']]],
-  ['testaux_2ec_19',['testaux.c',['../testaux_8c.html',1,'']]],
-  ['testhelper_2ec_20',['testhelper.c',['../testhelper_8c.html',1,'']]],
-  ['testhelper_2eh_21',['testhelper.h',['../testhelper_8h.html',1,'']]],
-  ['timelord_2ec_22',['timelord.c',['../timelord_8c.html',1,'']]],
-  ['tunnel_2eh_23',['tunnel.h',['../tunnel_8h.html',1,'']]],
-  ['tunnel_5fbsd_2ec_24',['tunnel_bsd.c',['../tunnel__bsd_8c.html',1,'']]],
-  ['tunnel_5flinux_2ec_25',['tunnel_linux.c',['../tunnel__linux_8c.html',1,'']]]
+  ['testhelper_2ec_19',['testhelper.c',['../testhelper_8c.html',1,'']]],
+  ['testhelper_2eh_20',['testhelper.h',['../testhelper_8h.html',1,'']]],
+  ['timelord_2ec_21',['timelord.c',['../timelord_8c.html',1,'']]],
+  ['tunnel_2eh_22',['tunnel.h',['../tunnel_8h.html',1,'']]],
+  ['tunnel_5fbsd_2ec_23',['tunnel_bsd.c',['../tunnel__bsd_8c.html',1,'']]],
+  ['tunnel_5flinux_2ec_24',['tunnel_linux.c',['../tunnel__linux_8c.html',1,'']]]
 ];

@@ -110,7 +110,7 @@ $(function(){initNavTree('nad__find_8c.html','',''); });
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid__bdb__private_8h_source.html">atalk/cnid_bdb_private.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
@@ -121,14 +121,14 @@ $(function(){initNavTree('nad__find_8c.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae5e5c5971fc3b5e9b1acf9e1397bcbc8" id="r_ae5e5c5971fc3b5e9b1acf9e1397bcbc8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5e5c5971fc3b5e9b1acf9e1397bcbc8">sig_handler</a> (int signo <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a366471b5822de7615f33cbe5eab9726a" id="r_a366471b5822de7615f33cbe5eab9726a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a366471b5822de7615f33cbe5eab9726a">sig_handler</a> (int signo)</td></tr>
 <tr class="memitem:a5636ad417e8a37f1104264394c47a0e4" id="r_a5636ad417e8a37f1104264394c47a0e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5636ad417e8a37f1104264394c47a0e4">set_signal</a> (void)</td></tr>
 <tr class="memitem:ab4675e6b7993fd105e4879067114977c" id="r_ab4675e6b7993fd105e4879067114977c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4675e6b7993fd105e4879067114977c">usage_find</a> (void)</td></tr>
-<tr class="memitem:a63ab6671c32fba91e05172e7c932f1ae" id="r_a63ab6671c32fba91e05172e7c932f1ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63ab6671c32fba91e05172e7c932f1ae">bstr_list_push</a> (struct <a class="el" href="structbstr_list.html">bstrList</a> *sl, <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> bs)</td></tr>
+<tr class="memitem:a63ab6671c32fba91e05172e7c932f1ae" id="r_a63ab6671c32fba91e05172e7c932f1ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63ab6671c32fba91e05172e7c932f1ae">bstr_list_push</a> (struct bstrList *sl, bstring bs)</td></tr>
 <tr class="memdesc:a63ab6671c32fba91e05172e7c932f1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a bstring to the end of a list.  <br /></td></tr>
-<tr class="memitem:af554ed5b22a522d7e7e231d7e4e5dbeb" id="r_af554ed5b22a522d7e7e231d7e4e5dbeb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbstr_list.html">bstrList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af554ed5b22a522d7e7e231d7e4e5dbeb">bstr_list_create_min</a> (int <a class="el" href="desktop_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>)</td></tr>
+<tr class="memitem:af554ed5b22a522d7e7e231d7e4e5dbeb" id="r_af554ed5b22a522d7e7e231d7e4e5dbeb"><td class="memItemLeft" align="right" valign="top">struct bstrList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af554ed5b22a522d7e7e231d7e4e5dbeb">bstr_list_create_min</a> (int <a class="el" href="desktop_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>)</td></tr>
 <tr class="memdesc:af554ed5b22a522d7e7e231d7e4e5dbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty list with preallocated storage for at least 'min' members.  <br /></td></tr>
-<tr class="memitem:a8323a04293220407e3daf92f7c811ac0" id="r_a8323a04293220407e3daf92f7c811ac0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8323a04293220407e3daf92f7c811ac0">bjoin_inv</a> (const struct <a class="el" href="structbstr_list.html">bstrList</a> *bl, const <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> sep)</td></tr>
+<tr class="memitem:a8323a04293220407e3daf92f7c811ac0" id="r_a8323a04293220407e3daf92f7c811ac0"><td class="memItemLeft" align="right" valign="top">bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8323a04293220407e3daf92f7c811ac0">bjoin_inv</a> (const struct bstrList *bl, const bstring sep)</td></tr>
 <tr class="memdesc:a8323a04293220407e3daf92f7c811ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse bjoin.  <br /></td></tr>
 <tr class="memitem:af419c73de605a49fe958638dfd57d2fd" id="r_af419c73de605a49fe958638dfd57d2fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af419c73de605a49fe958638dfd57d2fd">ad_find</a> (int argc, char **argv, <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 </table><table class="memberdecls">
@@ -170,14 +170,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> bjoin_inv </td>
+          <td class="memname">bstring bjoin_inv </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structbstr_list.html">bstrList</a> *</td>          <td class="paramname"><span class="paramname"><em>bl</em></span>, </td>
+          <td class="paramtype">const struct bstrList *</td>          <td class="paramname"><span class="paramname"><em>bl</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>sep</em></span>&#160;)</td>
+          <td class="paramtype">const bstring</td>          <td class="paramname"><span class="paramname"><em>sep</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -193,7 +193,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structbstr_list.html">bstrList</a> * bstr_list_create_min </td>
+          <td class="memname">struct bstrList * bstr_list_create_min </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span></td><td>)</td>
           <td></td>
@@ -214,12 +214,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int bstr_list_push </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structbstr_list.html">bstrList</a> *</td>          <td class="paramname"><span class="paramname"><em>sl</em></span>, </td>
+          <td class="paramtype">struct bstrList *</td>          <td class="paramname"><span class="paramname"><em>sl</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a></td>          <td class="paramname"><span class="paramname"><em>bs</em></span>&#160;)</td>
+          <td class="paramtype">bstring</td>          <td class="paramname"><span class="paramname"><em>bs</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,8 +253,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5e5c5971fc3b5e9b1acf9e1397bcbc8" name="ae5e5c5971fc3b5e9b1acf9e1397bcbc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e5c5971fc3b5e9b1acf9e1397bcbc8">&#9670;&#160;</a></span>sig_handler()</h2>
+<a id="a366471b5822de7615f33cbe5eab9726a" name="a366471b5822de7615f33cbe5eab9726a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366471b5822de7615f33cbe5eab9726a">&#9670;&#160;</a></span>sig_handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +265,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sig_handler </td>
           <td>(</td>
-          <td class="paramtype">int signo</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>signo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

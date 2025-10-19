@@ -102,6 +102,355 @@ $(function(){initNavTree('afp__mdns_8c.html','',''); });
   <div class="headertitle"><div class="title">afp_mdns.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;poll.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="netatalk__conf_8h_source.html">atalk/netatalk_conf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="unicode_8h_source.html">atalk/unicode.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="afp__mdns_8h_source.html">afp_mdns.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="afp__zeroconf_8h_source.html">afp_zeroconf.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af71f2997ec6100d9e13f00c89117d7ca" id="r_af71f2997ec6100d9e13f00c89117d7ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af71f2997ec6100d9e13f00c89117d7ca">TXTRecordPrintf</a> (TXTRecordRef *rec, const char *<a class="el" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a>, const char *fmt,...)</td></tr>
+<tr class="memitem:ab1666ee7e6b399f9af5759749065aa7b" id="r_ab1666ee7e6b399f9af5759749065aa7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1666ee7e6b399f9af5759749065aa7b">TXTRecordKeyPrintf</a> (TXTRecordRef *rec, const char *key_fmt, int key_var, const char *fmt,...)</td></tr>
+<tr class="memitem:ad2e506a9efbc08d2bce3463332da8985" id="r_ad2e506a9efbc08d2bce3463332da8985"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2e506a9efbc08d2bce3463332da8985">polling_thread</a> (void *arg)</td></tr>
+<tr class="memitem:aab2bd11b4f5acf580412bbfb4944864e" id="r_aab2bd11b4f5acf580412bbfb4944864e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab2bd11b4f5acf580412bbfb4944864e">RegisterReply</a> (DNSServiceRef sdRef, DNSServiceFlags <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, DNSServiceErrorType errorCode, const char *name, const char *regtype, const char *domain, void *<a class="el" href="structcontext.html">context</a>)</td></tr>
+<tr class="memitem:acaee5c2ae3a684eb83af07a558408ef5" id="r_acaee5c2ae3a684eb83af07a558408ef5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaee5c2ae3a684eb83af07a558408ef5">unregister_stuff</a> (void)</td></tr>
+<tr class="memitem:a01a45d4c484d98961489604e2cb31c29" id="r_a01a45d4c484d98961489604e2cb31c29"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a45d4c484d98961489604e2cb31c29">register_stuff</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
+<tr class="memitem:ad513c45174ae407dec66e687ff1d9fb8" id="r_ad513c45174ae407dec66e687ff1d9fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad513c45174ae407dec66e687ff1d9fb8">md_zeroconf_register</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
+<tr class="memitem:a01f1a55c8807aa5d6a187305c7b8ac96" id="r_a01f1a55c8807aa5d6a187305c7b8ac96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a> (void)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7858e713be998cfbd9bf03a6eb347844" id="r_a7858e713be998cfbd9bf03a6eb347844"><td class="memItemLeft" align="right" valign="top">static DNSServiceRef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7858e713be998cfbd9bf03a6eb347844">svc_refs</a> = NULL</td></tr>
+<tr class="memitem:ad7855be227b6a354a4607f8dcd1d77f5" id="r_ad7855be227b6a354a4607f8dcd1d77f5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7855be227b6a354a4607f8dcd1d77f5">svc_ref_count</a> = 0</td></tr>
+<tr class="memitem:a0430237f53ea067d4824133500a76b3f" id="r_a0430237f53ea067d4824133500a76b3f"><td class="memItemLeft" align="right" valign="top">static pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0430237f53ea067d4824133500a76b3f">poller</a></td></tr>
+<tr class="memitem:aae3b99743ae8cb3b46fceadd3509f1b1" id="r_aae3b99743ae8cb3b46fceadd3509f1b1"><td class="memItemLeft" align="right" valign="top">static struct pollfd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae3b99743ae8cb3b46fceadd3509f1b1">fds</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ad513c45174ae407dec66e687ff1d9fb8" name="ad513c45174ae407dec66e687ff1d9fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad513c45174ae407dec66e687ff1d9fb8">&#9670;&#160;</a></span>md_zeroconf_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void md_zeroconf_register </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01f1a55c8807aa5d6a187305c7b8ac96" name="a01f1a55c8807aa5d6a187305c7b8ac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f1a55c8807aa5d6a187305c7b8ac96">&#9670;&#160;</a></span>md_zeroconf_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int md_zeroconf_unregister </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2e506a9efbc08d2bce3463332da8985" name="ad2e506a9efbc08d2bce3463332da8985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e506a9efbc08d2bce3463332da8985">&#9670;&#160;</a></span>polling_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * polling_thread </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01a45d4c484d98961489604e2cb31c29" name="a01a45d4c484d98961489604e2cb31c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a45d4c484d98961489604e2cb31c29">&#9670;&#160;</a></span>register_stuff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void register_stuff </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab2bd11b4f5acf580412bbfb4944864e" name="aab2bd11b4f5acf580412bbfb4944864e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2bd11b4f5acf580412bbfb4944864e">&#9670;&#160;</a></span>RegisterReply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegisterReply </td>
+          <td>(</td>
+          <td class="paramtype">DNSServiceRef</td>          <td class="paramname"><span class="paramname"><em>sdRef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DNSServiceFlags</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DNSServiceErrorType</td>          <td class="paramname"><span class="paramname"><em>errorCode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>regtype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>domain</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1666ee7e6b399f9af5759749065aa7b" name="ab1666ee7e6b399f9af5759749065aa7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1666ee7e6b399f9af5759749065aa7b">&#9670;&#160;</a></span>TXTRecordKeyPrintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TXTRecordKeyPrintf </td>
+          <td>(</td>
+          <td class="paramtype">TXTRecordRef *</td>          <td class="paramname"><span class="paramname"><em>rec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key_fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key_var</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af71f2997ec6100d9e13f00c89117d7ca" name="af71f2997ec6100d9e13f00c89117d7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af71f2997ec6100d9e13f00c89117d7ca">&#9670;&#160;</a></span>TXTRecordPrintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TXTRecordPrintf </td>
+          <td>(</td>
+          <td class="paramtype">TXTRecordRef *</td>          <td class="paramname"><span class="paramname"><em>rec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaee5c2ae3a684eb83af07a558408ef5" name="acaee5c2ae3a684eb83af07a558408ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaee5c2ae3a684eb83af07a558408ef5">&#9670;&#160;</a></span>unregister_stuff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unregister_stuff </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="aae3b99743ae8cb3b46fceadd3509f1b1" name="aae3b99743ae8cb3b46fceadd3509f1b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae3b99743ae8cb3b46fceadd3509f1b1">&#9670;&#160;</a></span>fds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct pollfd* fds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0430237f53ea067d4824133500a76b3f" name="a0430237f53ea067d4824133500a76b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0430237f53ea067d4824133500a76b3f">&#9670;&#160;</a></span>poller</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t poller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7855be227b6a354a4607f8dcd1d77f5" name="ad7855be227b6a354a4607f8dcd1d77f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7855be227b6a354a4607f8dcd1d77f5">&#9670;&#160;</a></span>svc_ref_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int svc_ref_count = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7858e713be998cfbd9bf03a6eb347844" name="a7858e713be998cfbd9bf03a6eb347844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7858e713be998cfbd9bf03a6eb347844">&#9670;&#160;</a></span>svc_refs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DNSServiceRef* svc_refs = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

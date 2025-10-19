@@ -102,6 +102,9 @@ $(function(){initNavTree('ad__open_8c.html','',''); });
   <div class="headertitle"><div class="title">ad_open.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Part of Netatalk's AppleDouble implementatation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
@@ -159,42 +162,45 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5ddfa7f0dab22a0c5efb16f0cca00050" id="r_a5ddfa7f0dab22a0c5efb16f0cca00050"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ddfa7f0dab22a0c5efb16f0cca00050">ad_mkrf</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a5ddfa7f0dab22a0c5efb16f0cca00050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes a path to an AppleDouble file and creates the parent .AppleDouble directory.  <br /></td></tr>
 <tr class="memitem:af79cf3d5305d5f3607a01684405a5b20" id="r_af79cf3d5305d5f3607a01684405a5b20"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af79cf3d5305d5f3607a01684405a5b20">ad_header_read</a> (const char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad, const struct stat *hst)</td></tr>
 <tr class="memitem:a3817b87a4827607529a72d6846a86ce9" id="r_a3817b87a4827607529a72d6846a86ce9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3817b87a4827607529a72d6846a86ce9">ad_header_upgrade</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const char *name)</td></tr>
 <tr class="memitem:a0344ead375f3c0d2572b5248c5b7d9a2" id="r_a0344ead375f3c0d2572b5248c5b7d9a2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0344ead375f3c0d2572b5248c5b7d9a2">ad_header_read_ea</a> (const char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad, const struct stat *hst)</td></tr>
 <tr class="memitem:a8c42ae626f646115cc632c62702c8794" id="r_a8c42ae626f646115cc632c62702c8794"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c42ae626f646115cc632c62702c8794">ad_header_upgrade_ea</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const char *name)</td></tr>
 <tr class="memitem:a2aef5a32f0ff296c7ce763cd114bb8ce" id="r_a2aef5a32f0ff296c7ce763cd114bb8ce"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aef5a32f0ff296c7ce763cd114bb8ce">ad_reso_size</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memdesc:a2aef5a32f0ff296c7ce763cd114bb8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get resofork length for adouble:ea, parameter 'ad' may be NULL.  <br /></td></tr>
 <tr class="memitem:ad034655423063ed2e6c5c9c5eef4b9c7" id="r_ad034655423063ed2e6c5c9c5eef4b9c7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad034655423063ed2e6c5c9c5eef4b9c7">ad_mkrf_osx</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:ad0e6c3bbd13971fbee22123ef5f58fe1" id="r_ad0e6c3bbd13971fbee22123ef5f58fe1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0e6c3bbd13971fbee22123ef5f58fe1">adflags2logstr</a> (int adflags)</td></tr>
 <tr class="memitem:a4825eeb40e3e76c86485455b804e0c31" id="r_a4825eeb40e3e76c86485455b804e0c31"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4825eeb40e3e76c86485455b804e0c31">openflags2logstr</a> (int oflags)</td></tr>
 <tr class="memitem:a3166ecbbc98a67f5cbb2a67fd67d64cc" id="r_a3166ecbbc98a67f5cbb2a67fd67d64cc"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3166ecbbc98a67f5cbb2a67fd67d64cc">get_eid</a> (uint32_t eid)</td></tr>
 <tr class="memitem:af92df00e750cb9f76dccb0eaa0dfa490" id="r_af92df00e750cb9f76dccb0eaa0dfa490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af92df00e750cb9f76dccb0eaa0dfa490">ad_init_offsets</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memdesc:af92df00e750cb9f76dccb0eaa0dfa490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize offset pointers.  <br /></td></tr>
 <tr class="memitem:a940678859405eb91ece5242d893c552d" id="r_a940678859405eb91ece5242d893c552d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a940678859405eb91ece5242d893c552d">new_ad_header</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const char *<a class="el" href="structpath.html">path</a>, struct stat *stp, int adflags)</td></tr>
 <tr class="memitem:ad11d4c4bcdb3139b1c48bab0fd77a70d" id="r_ad11d4c4bcdb3139b1c48bab0fd77a70d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad11d4c4bcdb3139b1c48bab0fd77a70d">parse_entries</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, uint16_t nentries, size_t valid_data_len)</td></tr>
+<tr class="memdesc:ad11d4c4bcdb3139b1c48bab0fd77a70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an AppleDouble buffer.  <br /></td></tr>
 <tr class="memitem:a5fefa7da9ed58575fde2a870f8d3cb59" id="r_a5fefa7da9ed58575fde2a870f8d3cb59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fefa7da9ed58575fde2a870f8d3cb59">ad_valid_header_osx</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:a157f25264ecec64be846984d184d1f3e" id="r_a157f25264ecec64be846984d184d1f3e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a157f25264ecec64be846984d184d1f3e">ad_convert_osx</a> (const char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memdesc:a157f25264ecec64be846984d184d1f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from Apple's ._ file to Netatalk.  <br /></td></tr>
 <tr class="memitem:a072a6aa27fbf5a6dcb70472b13784124" id="r_a072a6aa27fbf5a6dcb70472b13784124"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a072a6aa27fbf5a6dcb70472b13784124">ad_header_read_osx</a> (const char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad, struct stat *hst)</td></tr>
-<tr class="memitem:ae00eced46562115849f34b91ed73d830" id="r_ae00eced46562115849f34b91ed73d830"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae00eced46562115849f34b91ed73d830">ad_header_read_ea</a> (const char *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad, const struct stat *hst <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a8c420d9caa0701b77b6787cdcd6679ac" id="r_a8c420d9caa0701b77b6787cdcd6679ac"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c420d9caa0701b77b6787cdcd6679ac">ad_mkrf_osx</a> (const char *<a class="el" href="structpath.html">path</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
 <tr class="memitem:adb60b307bcfc195c7f4c06573eab8554" id="r_adb60b307bcfc195c7f4c06573eab8554"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb60b307bcfc195c7f4c06573eab8554">ad_chown</a> (const char *<a class="el" href="structpath.html">path</a>, struct stat *stbuf)</td></tr>
 <tr class="memitem:a7226723f2e4ba054c961e93d2643cd57" id="r_a7226723f2e4ba054c961e93d2643cd57"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7226723f2e4ba054c961e93d2643cd57">ad_mode_st</a> (const char *<a class="el" href="structpath.html">path</a>, mode_t *mode, struct stat *stbuf)</td></tr>
-<tr class="memitem:added4b4f20d6b433fd9e9b53407c3faa" id="r_added4b4f20d6b433fd9e9b53407c3faa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#added4b4f20d6b433fd9e9b53407c3faa">ad_header_upgrade</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, const char *name <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:af1ac3721a0714cfc0621630ab84d0102" id="r_af1ac3721a0714cfc0621630ab84d0102"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1ac3721a0714cfc0621630ab84d0102">ad_header_upgrade_ea</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, const char *name <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
 <tr class="memitem:aec00d4422ac8fa35f7ada21fa84ee529" id="r_aec00d4422ac8fa35f7ada21fa84ee529"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec00d4422ac8fa35f7ada21fa84ee529">ad_error</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, int adflags)</td></tr>
+<tr class="memdesc:aec00d4422ac8fa35f7ada21fa84ee529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error handling for adouble header(=metadata) file open error.  <br /></td></tr>
 <tr class="memitem:a7865c1a74e9c0c63161e60e8a88d4506" id="r_a7865c1a74e9c0c63161e60e8a88d4506"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7865c1a74e9c0c63161e60e8a88d4506">ad2openflags</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, int adfile, int adflags)</td></tr>
+<tr class="memdesc:a7865c1a74e9c0c63161e60e8a88d4506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map ADFLAGS to open() flags.  <br /></td></tr>
 <tr class="memitem:ac75f48597fa39f44033f1cf3efc96d54" id="r_ac75f48597fa39f44033f1cf3efc96d54"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac75f48597fa39f44033f1cf3efc96d54">ad_open_df</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, mode_t mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a72519744bf09fe5e022041da545c8ddf" id="r_a72519744bf09fe5e022041da545c8ddf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72519744bf09fe5e022041da545c8ddf">ad_open_hf_v2</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, mode_t mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
-<tr class="memitem:a0f542da1f5b8bdc46c10fdc450e9b6b6" id="r_a0f542da1f5b8bdc46c10fdc450e9b6b6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f542da1f5b8bdc46c10fdc450e9b6b6">ad_open_hf_ea</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memitem:aadf46053a3e5a92d63ebee4d790fa54b" id="r_aadf46053a3e5a92d63ebee4d790fa54b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadf46053a3e5a92d63ebee4d790fa54b">ad_open_hf_ea</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a505c99aecafbfad701e696d4cfc1b230" id="r_a505c99aecafbfad701e696d4cfc1b230"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505c99aecafbfad701e696d4cfc1b230">ad_open_hf</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
-<tr class="memitem:aff545578ed78ff6ff58a49ce7f01a473" id="r_aff545578ed78ff6ff58a49ce7f01a473"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff545578ed78ff6ff58a49ce7f01a473">ad_reso_size</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, struct <a class="el" href="structadouble.html">adouble</a> *ad <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a5390050720583b72cd59cadd12bc13a7" id="r_a5390050720583b72cd59cadd12bc13a7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5390050720583b72cd59cadd12bc13a7">ad_open_rf_v2</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memitem:aad4a12dc33ba91bb8d715c32cc06b19e" id="r_aad4a12dc33ba91bb8d715c32cc06b19e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4a12dc33ba91bb8d715c32cc06b19e">ad_open_rf_v2</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a9e32c491d4de0c0bf018dd9b394619ad" id="r_a9e32c491d4de0c0bf018dd9b394619ad"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e32c491d4de0c0bf018dd9b394619ad">ad_open_rf_ea</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:ad72b087c463f78a8afcf026e6f0d9d61" id="r_ad72b087c463f78a8afcf026e6f0d9d61"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72b087c463f78a8afcf026e6f0d9d61">ad_open_rf</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags, int mode, struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
+<tr class="memdesc:ad72b087c463f78a8afcf026e6f0d9d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open resource fork.  <br /></td></tr>
 <tr class="memitem:ab1ca925bb313e7273cf8c9b0c9cbb4fa" id="r_ab1ca925bb313e7273cf8c9b0c9cbb4fa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ca925bb313e7273cf8c9b0c9cbb4fa">ad_entry_check_size</a> (uint32_t eid, size_t bufsize, uint32_t off, uint32_t got_len)</td></tr>
 <tr class="memitem:ab615264e9b756da25185c5d5f000e5ba" id="r_ab615264e9b756da25185c5d5f000e5ba"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab615264e9b756da25185c5d5f000e5ba">ad_entry</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, int eid)</td></tr>
 <tr class="memitem:acf260c240873934266fa46f8cb32a951" id="r_acf260c240873934266fa46f8cb32a951"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf260c240873934266fa46f8cb32a951">ad_getentryoff</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, int eid)</td></tr>
-<tr class="memitem:a01227288b6320ed1f3a5e1cac9cf31cf" id="r_a01227288b6320ed1f3a5e1cac9cf31cf"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01227288b6320ed1f3a5e1cac9cf31cf">ad_path_ea</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a43d7ff1d89461892fb01476834c6d1ef" id="r_a43d7ff1d89461892fb01476834c6d1ef"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d7ff1d89461892fb01476834c6d1ef">ad_path_osx</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:af48bf42a5d12d9c97da17c81e5269d90" id="r_af48bf42a5d12d9c97da17c81e5269d90"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48bf42a5d12d9c97da17c81e5269d90">ad_path_ea</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags)</td></tr>
+<tr class="memitem:a8d05785bc656ec0ab867f0beb63fff2d" id="r_a8d05785bc656ec0ab867f0beb63fff2d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d05785bc656ec0ab867f0beb63fff2d">ad_path_osx</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags)</td></tr>
 <tr class="memitem:a250c0aacb6a64c69ba0d1bebcb9c05d7" id="r_a250c0aacb6a64c69ba0d1bebcb9c05d7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a250c0aacb6a64c69ba0d1bebcb9c05d7">ad_path</a> (const char *<a class="el" href="structpath.html">path</a>, int adflags)</td></tr>
 <tr class="memitem:a8e0dbc1d910119a0d0c11793673d7870" id="r_a8e0dbc1d910119a0d0c11793673d7870"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e0dbc1d910119a0d0c11793673d7870">ad_dir</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:aeba81bf6a2dcb91055e92bb78bb31f75" id="r_aeba81bf6a2dcb91055e92bb78bb31f75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeba81bf6a2dcb91055e92bb78bb31f75">ad_setfuid</a> (const uid_t id)</td></tr>
@@ -204,8 +210,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac3cd3458d16aef30117deb466b4d94d3" id="r_ac3cd3458d16aef30117deb466b4d94d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3cd3458d16aef30117deb466b4d94d3">ad_mkdir</a> (const char *<a class="el" href="structpath.html">path</a>, mode_t mode)</td></tr>
 <tr class="memitem:a6ec84fe6df8fac4f80e685c98f7c7e33" id="r_a6ec84fe6df8fac4f80e685c98f7c7e33"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ec84fe6df8fac4f80e685c98f7c7e33">ad_init_func</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad)</td></tr>
 <tr class="memitem:a647f237d560708f2a5d4c583e35a8d34" id="r_a647f237d560708f2a5d4c583e35a8d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a647f237d560708f2a5d4c583e35a8d34">ad_init_old</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, int options)</td></tr>
-<tr class="memitem:ad37bf668f4a77d163ab63ba8daf54faf" id="r_ad37bf668f4a77d163ab63ba8daf54faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37bf668f4a77d163ab63ba8daf54faf">ad_init</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memitem:a14544db17cd0854666db3c1ebde19062" id="r_a14544db17cd0854666db3c1ebde19062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14544db17cd0854666db3c1ebde19062">ad_init</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a79142df106145a9b4666421725a62a54" id="r_a79142df106145a9b4666421725a62a54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79142df106145a9b4666421725a62a54">ad_open</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const char *<a class="el" href="structpath.html">path</a>, int adflags,...)</td></tr>
+<tr class="memdesc:a79142df106145a9b4666421725a62a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open data-, metadata(header)- or resource fork.  <br /></td></tr>
 <tr class="memitem:a8bc93b99b1899a830135580ae612ed7b" id="r_a8bc93b99b1899a830135580ae612ed7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bc93b99b1899a830135580ae612ed7b">ad_metadata</a> (const char *name, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, struct <a class="el" href="structadouble.html">adouble</a> *adp)</td></tr>
 <tr class="memdesc:a8bc93b99b1899a830135580ae612ed7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">open metadata, possibly as root  <br /></td></tr>
 <tr class="memitem:a77a2bbf3eb55f0ae4d5ba4a548b38705" id="r_a77a2bbf3eb55f0ae4d5ba4a548b38705"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a2bbf3eb55f0ae4d5ba4a548b38705">ad_metadataat</a> (int dirfd, const char *name, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, struct <a class="el" href="structadouble.html">adouble</a> *adp)</td></tr>
@@ -222,7 +229,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a723fd6614777637fd90650e6de8c7bda" id="r_a723fd6614777637fd90650e6de8c7bda"><td class="memItemLeft" align="right" valign="top">static const struct <a class="el" href="structentry.html">entry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a723fd6614777637fd90650e6de8c7bda">entry_order_ea</a> [<a class="el" href="adouble_8h.html#ad5f076fc2a90fe2083189d9c423b5d3c">ADEID_NUM_EA</a>+1]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Part of Netatalk's AppleDouble implementatation </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="adouble_8h.html" title="Part of Netatalk&#39;s AppleDouble implementatation.">include/atalk/adouble.h</a> </dd></dl>
+<div class="textblock"><p>Part of Netatalk's AppleDouble implementatation. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="adouble_8h.html" title="Part of Netatalk&#39;s AppleDouble implementatation.">include/atalk/adouble.h</a> </dd></dl>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a90072bb698dc25b11dad332575b53efb" name="a90072bb698dc25b11dad332575b53efb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90072bb698dc25b11dad332575b53efb">&#9670;&#160;</a></span>ADEDLEN_INIT</h2>
@@ -690,12 +698,13 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Map ADFLAGS to open() flags</p>
+
+<p>Map ADFLAGS to open() flags. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ad</td><td>(r) the adouble structure </td></tr>
-    <tr><td class="paramname">adfile</td><td>(r) the file you really want to open: ADFLAGS_DF or ADFLAGS_HF </td></tr>
-    <tr><td class="paramname">adflags</td><td>(r) flags from ad_open(..., adflags, ...) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ad</td><td>the adouble structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adfile</td><td>the file you really want to open: ADFLAGS_DF or ADFLAGS_HF </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adflags</td><td>flags from ad_open(..., adflags, ...) </td></tr>
   </table>
   </dd>
 </dl>
@@ -758,10 +767,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Convert from Apple's ._ file to Netatalk</p>
+
+<p>Convert from Apple's ._ file to Netatalk. </p>
 <p>Apple's AppleDouble may contain a FinderInfo entry longer then 32 bytes containing packed xattrs. Netatalk can't deal with that, so we simply discard the packed xattrs.</p>
-<p>As we call <a class="el" href="#a79142df106145a9b4666421725a62a54">ad_open()</a> which might result in a recursion, just to be sure use static variable in_conversion to check for that.</p>
-<p>Returns -1 in case an error occured, 0 if no conversion was done, 1 otherwise </p>
+<p>As we call <a class="el" href="#a79142df106145a9b4666421725a62a54" title="Open data-, metadata(header)- or resource fork.">ad_open()</a> which might result in a recursion, just to be sure use static variable in_conversion to check for that.</p>
+<dl class="section return"><dt>Returns</dt><dd>-1 in case an error occured, 0 if no conversion was done, 1 otherwise </dd></dl>
 
 </div>
 </div>
@@ -868,7 +878,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Error handling for adouble header(=metadata) file open error</p>
+
+<p>Error handling for adouble header(=metadata) file open error. </p>
 <p>We're called because opening ADFLAGS_HF caused an error.</p><ol type="1">
 <li>In case ad_open is called with ADFLAGS_NOHF the error is suppressed.</li>
 <li>Open non-existent resource fork, this will just result in first read return EOF</li>
@@ -949,42 +960,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae00eced46562115849f34b91ed73d830" name="ae00eced46562115849f34b91ed73d830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae00eced46562115849f34b91ed73d830">&#9670;&#160;</a></span>ad_header_read_ea() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ad_header_read_ea </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *</td>          <td class="paramname"><span class="paramname"><em>ad</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const struct stat *hst</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0344ead375f3c0d2572b5248c5b7d9a2" name="a0344ead375f3c0d2572b5248c5b7d9a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0344ead375f3c0d2572b5248c5b7d9a2">&#9670;&#160;</a></span>ad_header_read_ea() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0344ead375f3c0d2572b5248c5b7d9a2">&#9670;&#160;</a></span>ad_header_read_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1051,37 +1028,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="added4b4f20d6b433fd9e9b53407c3faa" name="added4b4f20d6b433fd9e9b53407c3faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#added4b4f20d6b433fd9e9b53407c3faa">&#9670;&#160;</a></span>ad_header_upgrade() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ad_header_upgrade </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *ad</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *name</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3817b87a4827607529a72d6846a86ce9" name="a3817b87a4827607529a72d6846a86ce9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3817b87a4827607529a72d6846a86ce9">&#9670;&#160;</a></span>ad_header_upgrade() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3817b87a4827607529a72d6846a86ce9">&#9670;&#160;</a></span>ad_header_upgrade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1109,37 +1057,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af1ac3721a0714cfc0621630ab84d0102" name="af1ac3721a0714cfc0621630ab84d0102"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1ac3721a0714cfc0621630ab84d0102">&#9670;&#160;</a></span>ad_header_upgrade_ea() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ad_header_upgrade_ea </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *ad</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *name</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8c42ae626f646115cc632c62702c8794" name="a8c42ae626f646115cc632c62702c8794"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c42ae626f646115cc632c62702c8794">&#9670;&#160;</a></span>ad_header_upgrade_ea() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c42ae626f646115cc632c62702c8794">&#9670;&#160;</a></span>ad_header_upgrade_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1184,8 +1103,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad37bf668f4a77d163ab63ba8daf54faf" name="ad37bf668f4a77d163ab63ba8daf54faf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad37bf668f4a77d163ab63ba8daf54faf">&#9670;&#160;</a></span>ad_init()</h2>
+<a id="a14544db17cd0854666db3c1ebde19062" name="a14544db17cd0854666db3c1ebde19062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14544db17cd0854666db3c1ebde19062">&#9670;&#160;</a></span>ad_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1198,7 +1117,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>&#160;)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1244,7 +1163,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize offset pointers </p>
+
+<p>Initialize offset pointers. </p>
 
 </div>
 </div>
@@ -1386,38 +1306,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Takes a path to an AppleDouble file and creates the parent .AppleDouble directory</p>
+
+<p>Takes a path to an AppleDouble file and creates the parent .AppleDouble directory. </p>
 <p>Example: path: "/path/.AppleDouble/file" =&gt; mkdir("/path/.AppleDouble/") (in <a class="el" href="#ac3cd3458d16aef30117deb466b4d94d3">ad_mkdir()</a>) </p>
 
 </div>
 </div>
-<a id="a8c420d9caa0701b77b6787cdcd6679ac" name="a8c420d9caa0701b77b6787cdcd6679ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c420d9caa0701b77b6787cdcd6679ac">&#9670;&#160;</a></span>ad_mkrf_osx() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ad_mkrf_osx </td>
-          <td>(</td>
-          <td class="paramtype">const char *<a class="el" href="structpath.html">path</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad034655423063ed2e6c5c9c5eef4b9c7" name="ad034655423063ed2e6c5c9c5eef4b9c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad034655423063ed2e6c5c9c5eef4b9c7">&#9670;&#160;</a></span>ad_mkrf_osx() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad034655423063ed2e6c5c9c5eef4b9c7">&#9670;&#160;</a></span>ad_mkrf_osx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1524,38 +1420,55 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Open data-, metadata(header)- or resource fork</p>
-<p>ad_open(struct adouble *ad, const char *path, int adflags, int flags) ad_open(struct adouble *ad, const char *path, int adflags, int flags, mode_t mode)</p>
-<p>You must call <a class="el" href="#ad37bf668f4a77d163ab63ba8daf54faf">ad_init()</a> before ad_open, usually you'll just call it like this: <br  />
-</p><div class="fragment"><div class="line"><span class="keyword">struct </span>adoube ad;</div>
-<div class="line"><a class="code hl_function" href="adouble_8h.html#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a>(&amp;ad, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">v_adouble</a>, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">v_ad_options</a>);</div>
-<div class="ttc" id="aadouble_8h_html_a52a3e26c7d9d28053881d7c52af08cb7"><div class="ttname"><a href="adouble_8h.html#a52a3e26c7d9d28053881d7c52af08cb7">ad_init</a></div><div class="ttdeci">void ad_init(struct adouble *, const struct vol *restrict)</div></div>
+
+<p>Open data-, metadata(header)- or resource fork. </p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="adouble_8h.html#a79142df106145a9b4666421725a62a54">ad_open</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structadouble.html">adouble</a> *ad, <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_struct" href="structpath.html">path</a>, <span class="keywordtype">int</span> adflags, <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</div>
+<div class="line"><a class="code hl_function" href="adouble_8h.html#a79142df106145a9b4666421725a62a54">ad_open</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structadouble.html">adouble</a> *ad, <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_struct" href="structpath.html">path</a>, <span class="keywordtype">int</span> adflags, <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, mode_t mode)</div>
+<div class="ttc" id="aadouble_8h_html_a79142df106145a9b4666421725a62a54"><div class="ttname"><a href="adouble_8h.html#a79142df106145a9b4666421725a62a54">ad_open</a></div><div class="ttdeci">int ad_open(struct adouble *ad, const char *path, int adflags,...)</div><div class="ttdoc">Open data-, metadata(header)- or resource fork.</div><div class="ttdef"><b>Definition</b> ad_open.c:2304</div></div>
+<div class="ttc" id="acmd__dbd_8c_html_a5b5dc5446eb7e7a502a06d67b7ea302c"><div class="ttname"><a href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a></div><div class="ttdeci">static dbd_flags_t flags</div><div class="ttdef"><b>Definition</b> cmd_dbd.c:45</div></div>
+<div class="ttc" id="astructadouble_html"><div class="ttname"><a href="structadouble.html">adouble</a></div><div class="ttdef"><b>Definition</b> adouble.h:191</div></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:97</div></div>
+</div><!-- fragment --><p>You must call <a class="el" href="#a14544db17cd0854666db3c1ebde19062">ad_init()</a> before ad_open, usually you'll just call it like this: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>adoube ad;</div>
+<div class="line"><a class="code hl_function" href="adouble_8h.html#a60688c34d5ded02e31787b7e0a191a3e">ad_init</a>(&amp;ad, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">v_adouble</a>, <a class="code hl_struct" href="structvol.html">vol</a>-&gt;<a class="code hl_variable" href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">v_ad_options</a>);</div>
+<div class="ttc" id="aadouble_8h_html_a60688c34d5ded02e31787b7e0a191a3e"><div class="ttname"><a href="adouble_8h.html#a60688c34d5ded02e31787b7e0a191a3e">ad_init</a></div><div class="ttdeci">void ad_init(struct adouble *, const struct vol *)</div><div class="ttdef"><b>Definition</b> ad_open.c:2243</div></div>
 <div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
 <div class="ttc" id="astructvol_html_a5e1dcdf6a2c973aec02be40d64960ba1"><div class="ttname"><a href="structvol.html#a5e1dcdf6a2c973aec02be40d64960ba1">vol::v_ad_options</a></div><div class="ttdeci">int v_ad_options</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:53</div></div>
 <div class="ttc" id="astructvol_html_a5fa30b6fbd6c924bec1bf8622c68a877"><div class="ttname"><a href="structvol.html#a5fa30b6fbd6c924bec1bf8622c68a877">vol::v_adouble</a></div><div class="ttdeci">int v_adouble</div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:51</div></div>
 </div><!-- fragment --><p>Open a files data fork, metadata fork or resource fork.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ad</td><td>(rw) pointer to struct adouble </td></tr>
-    <tr><td class="paramname">path</td><td>(r) Path to file or directory </td></tr>
-    <tr><td class="paramname">adflags</td><td>(r) Flags specifying which fork to open, can be or'd: ADFLAGS_DF: open data fork ADFLAGS_RF: open resource fork ADFLAGS_HF: open header (metadata) file ADFLAGS_NOHF: it's not an error if header file couldn't be opened ADFLAGS_NORF: it's not an error if reso fork couldn't be opened ADFLAGS_DIR: if path is a directory you MUST or ADFLAGS_DIR to adflags</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ad</td><td>pointer to struct adouble </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to file or directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adflags</td><td>Flags specifying which fork to open, can be or'd (see below) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>mode used with O_CREATE</td></tr>
   </table>
   </dd>
 </dl>
-<p>Access mode for the forks: ADFLAGS_RDONLY: open read only ADFLAGS_RDWR: open read write</p>
-<p>Creation flags: ADFLAGS_CREATE: create if not existing ADFLAGS_TRUNC: truncate</p>
-<p>Special flags: ADFLAGS_CHECK_OF: check for open forks from us and other afpd's ADFLAGS_SETSHRMD: this adouble struct will be used to set sharemode locks. This basically results in the files being opened RW instead of RDONLY. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">...</td><td>(r) mode used with O_CREATE</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The open mode flags (rw vs ro) have to take into account all the following requirements:</p><ul>
-<li>we remember open fds for files because me must avoid a single close releasing fcntl locks for other fds of the same file</li>
+<p>Regular adflags:</p><ul>
+<li>ADFLAGS_DF: open data fork</li>
+<li>ADFLAGS_RF: open resource fork</li>
+<li>ADFLAGS_HF: open header (metadata) file</li>
+<li>ADFLAGS_NOHF: it's not an error if header file couldn't be opened</li>
+<li>ADFLAGS_NORF: it's not an error if reso fork couldn't be opened</li>
+<li>ADFLAGS_DIR: if path is a directory you MUST or ADFLAGS_DIR to adflags</li>
 </ul>
-<p>BUGS:</p>
+<p>Access mode for the forks:</p><ul>
+<li>ADFLAGS_RDONLY: open read only</li>
+<li>ADFLAGS_RDWR: open read write</li>
+</ul>
+<p>Creation flags:</p><ul>
+<li>ADFLAGS_CREATE: create if not existing</li>
+<li>ADFLAGS_TRUNC: truncate</li>
+</ul>
+<p>Special flags:</p><ul>
+<li>ADFLAGS_CHECK_OF: check for open forks from us and other afpd's</li>
+<li>ADFLAGS_SETSHRMD: this adouble struct will be used to set sharemode locks. This basically results in the files being opened RW instead of RDONLY.</li>
+</ul>
+<p>The open mode flags (rw vs ro) have to take into account all the following requirements:</p>
 <ul>
-<li>on Solaris (HAVE_EAFD) ADFLAGS_RF doesn't work without ADFLAGS_HF, because it checks whether <a class="el" href="adouble_8h.html#a5b670b19520da9a5395c98b6b40cb64d">ad_meta_fileno()</a> is already openend. As a workaround pass ADFLAGS_SETSHRMD.</li>
+<li><p class="startli">we remember open fds for files because me must avoid a single close releasing fcntl locks for other fds of the same file</p>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug</a></b></dt><dd>on Solaris (HAVE_EAFD) ADFLAGS_RF doesn't work without ADFLAGS_HF, because it checks whether <a class="el" href="adouble_8h.html#a5b670b19520da9a5395c98b6b40cb64d">ad_meta_fileno()</a> is already openend. As a workaround pass ADFLAGS_SETSHRMD.</dd></dl>
+</li>
 </ul>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, any other value indicates an error </dd></dl>
 
@@ -1639,8 +1552,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0f542da1f5b8bdc46c10fdc450e9b6b6" name="a0f542da1f5b8bdc46c10fdc450e9b6b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f542da1f5b8bdc46c10fdc450e9b6b6">&#9670;&#160;</a></span>ad_open_hf_ea()</h2>
+<a id="aadf46053a3e5a92d63ebee4d790fa54b" name="aadf46053a3e5a92d63ebee4d790fa54b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf46053a3e5a92d63ebee4d790fa54b">&#9670;&#160;</a></span>ad_open_hf_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1661,7 +1574,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int mode</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1753,7 +1666,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Open resource fork </p>
+
+<p>Open resource fork. </p>
 
 </div>
 </div>
@@ -1796,8 +1710,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5390050720583b72cd59cadd12bc13a7" name="a5390050720583b72cd59cadd12bc13a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5390050720583b72cd59cadd12bc13a7">&#9670;&#160;</a></span>ad_open_rf_v2()</h2>
+<a id="aad4a12dc33ba91bb8d715c32cc06b19e" name="aad4a12dc33ba91bb8d715c32cc06b19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4a12dc33ba91bb8d715c32cc06b19e">&#9670;&#160;</a></span>ad_open_rf_v2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1818,7 +1732,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int mode</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1892,8 +1806,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a01227288b6320ed1f3a5e1cac9cf31cf" name="a01227288b6320ed1f3a5e1cac9cf31cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01227288b6320ed1f3a5e1cac9cf31cf">&#9670;&#160;</a></span>ad_path_ea()</h2>
+<a id="af48bf42a5d12d9c97da17c81e5269d90" name="af48bf42a5d12d9c97da17c81e5269d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48bf42a5d12d9c97da17c81e5269d90">&#9670;&#160;</a></span>ad_path_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1906,15 +1820,15 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int adflags</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>adflags</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a43d7ff1d89461892fb01476834c6d1ef" name="a43d7ff1d89461892fb01476834c6d1ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43d7ff1d89461892fb01476834c6d1ef">&#9670;&#160;</a></span>ad_path_osx()</h2>
+<a id="a8d05785bc656ec0ab867f0beb63fff2d" name="a8d05785bc656ec0ab867f0beb63fff2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d05785bc656ec0ab867f0beb63fff2d">&#9670;&#160;</a></span>ad_path_osx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1927,7 +1841,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int adflags</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>adflags</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1955,35 +1869,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aff545578ed78ff6ff58a49ce7f01a473" name="aff545578ed78ff6ff58a49ce7f01a473"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff545578ed78ff6ff58a49ce7f01a473">&#9670;&#160;</a></span>ad_reso_size() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">off_t ad_reso_size </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>adflags</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structadouble.html">adouble</a> *ad</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Get resofork length for adouble:ea, parameter 'ad' may be NULL </p>
-
-</div>
-</div>
 <a id="a2aef5a32f0ff296c7ce763cd114bb8ce" name="a2aef5a32f0ff296c7ce763cd114bb8ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aef5a32f0ff296c7ce763cd114bb8ce">&#9670;&#160;</a></span>ad_reso_size() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aef5a32f0ff296c7ce763cd114bb8ce">&#9670;&#160;</a></span>ad_reso_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2005,6 +1892,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get resofork length for adouble:ea, parameter 'ad' may be NULL. </p>
 
 </div>
 </div>
@@ -2192,7 +2081,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read an AppleDouble buffer, returns 0 on success, -1 if an entry was malformatted </p>
+
+<p>Read an AppleDouble buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if an entry was malformatted </dd></dl>
 
 </div>
 </div>
@@ -2223,11 +2114,11 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="#af79cf3d5305d5f3607a01684405a5b20">ad_header_read</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="#a3817b87a4827607529a72d6846a86ce9">ad_header_upgrade</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aad__open_8c_html_a3817b87a4827607529a72d6846a86ce9"><div class="ttname"><a href="#a3817b87a4827607529a72d6846a86ce9">ad_header_upgrade</a></div><div class="ttdeci">static int ad_header_upgrade(struct adouble *ad, const char *name)</div></div>
-<div class="ttc" id="aad__open_8c_html_a5ddfa7f0dab22a0c5efb16f0cca00050"><div class="ttname"><a href="#a5ddfa7f0dab22a0c5efb16f0cca00050">ad_mkrf</a></div><div class="ttdeci">static int ad_mkrf(const char *path)</div><div class="ttdef"><b>Definition</b> ad_open.c:954</div></div>
-<div class="ttc" id="aad__open_8c_html_af79cf3d5305d5f3607a01684405a5b20"><div class="ttname"><a href="#af79cf3d5305d5f3607a01684405a5b20">ad_header_read</a></div><div class="ttdeci">static int ad_header_read(const char *path, struct adouble *ad, const struct stat *hst)</div><div class="ttdef"><b>Definition</b> ad_open.c:518</div></div>
+<div class="ttc" id="aad__open_8c_html_a3817b87a4827607529a72d6846a86ce9"><div class="ttname"><a href="#a3817b87a4827607529a72d6846a86ce9">ad_header_upgrade</a></div><div class="ttdeci">static int ad_header_upgrade(struct adouble *ad, const char *name)</div><div class="ttdef"><b>Definition</b> ad_open.c:1038</div></div>
+<div class="ttc" id="aad__open_8c_html_a5ddfa7f0dab22a0c5efb16f0cca00050"><div class="ttname"><a href="#a5ddfa7f0dab22a0c5efb16f0cca00050">ad_mkrf</a></div><div class="ttdeci">static int ad_mkrf(const char *path)</div><div class="ttdoc">Takes a path to an AppleDouble file and creates the parent .AppleDouble directory.</div><div class="ttdef"><b>Definition</b> ad_open.c:956</div></div>
+<div class="ttc" id="aad__open_8c_html_af79cf3d5305d5f3607a01684405a5b20"><div class="ttname"><a href="#af79cf3d5305d5f3607a01684405a5b20">ad_header_read</a></div><div class="ttdeci">static int ad_header_read(const char *path, struct adouble *ad, const struct stat *hst)</div><div class="ttdef"><b>Definition</b> ad_open.c:519</div></div>
 <div class="ttc" id="aadouble_8h_html_a4ccff4a67c02800e6c2da84f252e2e3e"><div class="ttname"><a href="adouble_8h.html#a4ccff4a67c02800e6c2da84f252e2e3e">ad_rebuild_adouble_header_v2</a></div><div class="ttdeci">int ad_rebuild_adouble_header_v2(struct adouble *)</div><div class="ttdef"><b>Definition</b> ad_flush.c:55</div></div>
-<div class="ttc" id="aadouble_8h_html_a5905dbd0a0c277d79b72fb2817b0839d"><div class="ttname"><a href="adouble_8h.html#a5905dbd0a0c277d79b72fb2817b0839d">ad_path</a></div><div class="ttdeci">const char * ad_path(const char *, int)</div><div class="ttdef"><b>Definition</b> ad_open.c:2033</div></div>
+<div class="ttc" id="aadouble_8h_html_a5905dbd0a0c277d79b72fb2817b0839d"><div class="ttname"><a href="adouble_8h.html#a5905dbd0a0c277d79b72fb2817b0839d">ad_path</a></div><div class="ttdeci">const char * ad_path(const char *, int)</div><div class="ttdef"><b>Definition</b> ad_open.c:2035</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2262,11 +2153,11 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_function" href="#a0344ead375f3c0d2572b5248c5b7d9a2">ad_header_read_ea</a>,</div>
 <div class="line">    &amp;<a class="code hl_function" href="#a8c42ae626f646115cc632c62702c8794">ad_header_upgrade_ea</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aad__open_8c_html_a0344ead375f3c0d2572b5248c5b7d9a2"><div class="ttname"><a href="#a0344ead375f3c0d2572b5248c5b7d9a2">ad_header_read_ea</a></div><div class="ttdeci">static int ad_header_read_ea(const char *path, struct adouble *ad, const struct stat *hst)</div></div>
-<div class="ttc" id="aad__open_8c_html_a8c42ae626f646115cc632c62702c8794"><div class="ttname"><a href="#a8c42ae626f646115cc632c62702c8794">ad_header_upgrade_ea</a></div><div class="ttdeci">static int ad_header_upgrade_ea(struct adouble *ad, const char *name)</div></div>
-<div class="ttc" id="aad__open_8c_html_ad034655423063ed2e6c5c9c5eef4b9c7"><div class="ttname"><a href="#ad034655423063ed2e6c5c9c5eef4b9c7">ad_mkrf_osx</a></div><div class="ttdeci">static int ad_mkrf_osx(const char *path)</div></div>
+<div class="ttc" id="aad__open_8c_html_a0344ead375f3c0d2572b5248c5b7d9a2"><div class="ttname"><a href="#a0344ead375f3c0d2572b5248c5b7d9a2">ad_header_read_ea</a></div><div class="ttdeci">static int ad_header_read_ea(const char *path, struct adouble *ad, const struct stat *hst)</div><div class="ttdef"><b>Definition</b> ad_open.c:853</div></div>
+<div class="ttc" id="aad__open_8c_html_a8c42ae626f646115cc632c62702c8794"><div class="ttname"><a href="#a8c42ae626f646115cc632c62702c8794">ad_header_upgrade_ea</a></div><div class="ttdeci">static int ad_header_upgrade_ea(struct adouble *ad, const char *name)</div><div class="ttdef"><b>Definition</b> ad_open.c:1043</div></div>
+<div class="ttc" id="aad__open_8c_html_ad034655423063ed2e6c5c9c5eef4b9c7"><div class="ttname"><a href="#ad034655423063ed2e6c5c9c5eef4b9c7">ad_mkrf_osx</a></div><div class="ttdeci">static int ad_mkrf_osx(const char *path)</div><div class="ttdef"><b>Definition</b> ad_open.c:986</div></div>
 <div class="ttc" id="aadouble_8h_html_a67568dec8dfbcb51f129be1caff62eb1"><div class="ttname"><a href="adouble_8h.html#a67568dec8dfbcb51f129be1caff62eb1">ad_rebuild_adouble_header_ea</a></div><div class="ttdeci">int ad_rebuild_adouble_header_ea(struct adouble *)</div><div class="ttdef"><b>Definition</b> ad_flush.c:95</div></div>
-<div class="ttc" id="aadouble_8h_html_a8d05785bc656ec0ab867f0beb63fff2d"><div class="ttname"><a href="adouble_8h.html#a8d05785bc656ec0ab867f0beb63fff2d">ad_path_osx</a></div><div class="ttdeci">const char * ad_path_osx(const char *path, int adflags)</div><div class="ttdef"><b>Definition</b> ad_open.c:1982</div></div>
+<div class="ttc" id="aadouble_8h_html_a8d05785bc656ec0ab867f0beb63fff2d"><div class="ttname"><a href="adouble_8h.html#a8d05785bc656ec0ab867f0beb63fff2d">ad_path_osx</a></div><div class="ttdeci">const char * ad_path_osx(const char *path, int adflags)</div><div class="ttdef"><b>Definition</b> ad_open.c:1984</div></div>
 </div><!-- fragment -->
 </div>
 </div>

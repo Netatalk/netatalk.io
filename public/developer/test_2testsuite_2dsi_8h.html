@@ -164,6 +164,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab118d3c06cebd03856d692b2ffe1c241" id="r_ab118d3c06cebd03856d692b2ffe1c241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab118d3c06cebd03856d692b2ffe1c241">dsi_kill</a> (int)</td></tr>
 <tr class="memitem:adb29cb90c520dcd3b37ab3e33d09aec2" id="r_adb29cb90c520dcd3b37ab3e33d09aec2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb29cb90c520dcd3b37ab3e33d09aec2">dsi_stream_write</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
 <tr class="memitem:a0e3adabf3642168ba72df020c12739c3" id="r_a0e3adabf3642168ba72df020c12739c3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e3adabf3642168ba72df020c12739c3">dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
+<tr class="memdesc:a0e3adabf3642168ba72df020c12739c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from <a class="el" href="struct_d_s_i.html">DSI</a> buffer.  <br /></td></tr>
 <tr class="memitem:a354933e43ceb9e503bcb6b176cd2e91c" id="r_a354933e43ceb9e503bcb6b176cd2e91c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a354933e43ceb9e503bcb6b176cd2e91c">dsi_stream_send</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, size_t)</td></tr>
 <tr class="memitem:a95c8d05c344d3227392828179401821e" id="r_a95c8d05c344d3227392828179401821e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95c8d05c344d3227392828179401821e">dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t, size_t *)</td></tr>
 <tr class="memitem:a1e4c29a16d9bd754e7df19454c6c673e" id="r_a1e4c29a16d9bd754e7df19454c6c673e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e4c29a16d9bd754e7df19454c6c673e">dsi_writeinit</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *, void *, const size_t)</td></tr>
@@ -260,7 +261,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                          (<a class="code hl_function" href="include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a>((x), (x)-&gt;commands, \</div>
 <div class="line">                          <a class="code hl_define" href="#a746f96fd2d3892d863b5c955b25503fe">DSI_CMDSIZ</a>, &amp;(x)-&gt;cmdlen))</div>
-<div class="ttc" id="ainclude_2atalk_2dsi_8h_html_aa8ed662cafd0572718c46609e9ab3ebb"><div class="ttname"><a href="include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a></div><div class="ttdeci">int dsi_stream_receive(DSI *)</div><div class="ttdef"><b>Definition</b> dsi_stream.c:649</div></div>
+<div class="ttc" id="ainclude_2atalk_2dsi_8h_html_aa8ed662cafd0572718c46609e9ab3ebb"><div class="ttname"><a href="include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a></div><div class="ttdeci">int dsi_stream_receive(DSI *)</div><div class="ttdoc">Read DSI command and data.</div><div class="ttdef"><b>Definition</b> dsi_stream.c:660</div></div>
 <div class="ttc" id="atest_2testsuite_2dsi_8h_html_a746f96fd2d3892d863b5c955b25503fe"><div class="ttname"><a href="#a746f96fd2d3892d863b5c955b25503fe">DSI_CMDSIZ</a></div><div class="ttdeci">#define DSI_CMDSIZ</div><div class="ttdef"><b>Definition</b> test/testsuite/dsi.h:42</div></div>
 </div><!-- fragment -->
 </div>
@@ -964,6 +965,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Read data from <a class="el" href="struct_d_s_i.html">DSI</a> buffer. </p>
+<p>Essentially a loop around <a class="el" href="dsi__stream_8c.html#a8ded949de30884027fa9785521848b0c" title="Get bytes from buffer dsi-&gt;buffer or read from socket.">buf_read()</a> to ensure "length" bytes are read from dsi-&gt;buffer and/or the socket.</p>
+<dl class="section return"><dt>Returns</dt><dd>length on success, some value smaller than length indicates an error </dd></dl>
 
 </div>
 </div>

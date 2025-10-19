@@ -161,8 +161,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a6117a74a5eaef1997b83aba0dbaf4dec" id="r_a6117a74a5eaef1997b83aba0dbaf4dec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6117a74a5eaef1997b83aba0dbaf4dec">hash_scan_delete</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:a43d22f3010d8c95497805fe23f9e020b" id="r_a43d22f3010d8c95497805fe23f9e020b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d22f3010d8c95497805fe23f9e020b">hash_scan_delfree</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:ab3266c386c02810ff5bfecd57b995cbc" id="r_ab3266c386c02810ff5bfecd57b995cbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3266c386c02810ff5bfecd57b995cbc">hash_verify</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
-<tr class="memitem:a84908d6b757a2a154f63d8b72117a676" id="r_a84908d6b757a2a154f63d8b72117a676"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84908d6b757a2a154f63d8b72117a676">hnode_alloc</a> (void *<a class="el" href="structcontext.html">context</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:aa3f3053ebd9fc93280f82e121aae9885" id="r_aa3f3053ebd9fc93280f82e121aae9885"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f3053ebd9fc93280f82e121aae9885">hnode_free</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>, void *<a class="el" href="structcontext.html">context</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
 <tr class="memitem:a434d7348205df7af3e87d7ed8262fa45" id="r_a434d7348205df7af3e87d7ed8262fa45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434d7348205df7af3e87d7ed8262fa45">hnode_init</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *hnode, void *<a class="el" href="#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a6b19d89ebdc13b19029e64076423f8fc" id="r_a6b19d89ebdc13b19029e64076423f8fc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b19d89ebdc13b19029e64076423f8fc">hnode_get</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:aac2fa8881dd829ef9351ec9b4a3d5abc" id="r_aac2fa8881dd829ef9351ec9b4a3d5abc"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac2fa8881dd829ef9351ec9b4a3d5abc">hnode_getkey</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
@@ -996,33 +994,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a84908d6b757a2a154f63d8b72117a676" name="a84908d6b757a2a154f63d8b72117a676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84908d6b757a2a154f63d8b72117a676">&#9670;&#160;</a></span>hnode_alloc() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structhnode__t.html">hnode_t</a> * hnode_alloc </td>
-          <td>(</td>
-          <td class="paramtype">void *<a class="el" href="structcontext.html">context</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa8fd4af21c298ddf85a0f4a2efe824ef" name="aa8fd4af21c298ddf85a0f4a2efe824ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8fd4af21c298ddf85a0f4a2efe824ef">&#9670;&#160;</a></span>hnode_alloc() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8fd4af21c298ddf85a0f4a2efe824ef">&#9670;&#160;</a></span>hnode_alloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,37 +1019,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3f3053ebd9fc93280f82e121aae9885" name="aa3f3053ebd9fc93280f82e121aae9885"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f3053ebd9fc93280f82e121aae9885">&#9670;&#160;</a></span>hnode_free() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void hnode_free </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structhnode__t.html">hnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *<a class="el" href="structcontext.html">context</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af5e2f8c33026a06e85ceee4b0e39c245" name="af5e2f8c33026a06e85ceee4b0e39c245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5e2f8c33026a06e85ceee4b0e39c245">&#9670;&#160;</a></span>hnode_free() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e2f8c33026a06e85ceee4b0e39c245">&#9670;&#160;</a></span>hnode_free()</h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -125,12 +125,14 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:adcccb2765fe0b686d9d1ca08f80f1977" id="r_adcccb2765fe0b686d9d1ca08f80f1977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structserver__child__t.html">server_child_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcccb2765fe0b686d9d1ca08f80f1977">server_child_alloc</a> (int)</td></tr>
 <tr class="memitem:ad2959aec62751d5d7ed3ef684eefac7f" id="r_ad2959aec62751d5d7ed3ef684eefac7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae26588dd753c21bdee6d807ec70a5269">afp_child_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2959aec62751d5d7ed3ef684eefac7f">server_child_add</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *, pid_t, int ipc_fd)</td></tr>
+<tr class="memdesc:ad2959aec62751d5d7ed3ef684eefac7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a child  <br /></td></tr>
 <tr class="memitem:a7b0ed0dac8b98ac0578eae5fb6a7aa33" id="r_a7b0ed0dac8b98ac0578eae5fb6a7aa33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b0ed0dac8b98ac0578eae5fb6a7aa33">server_child_remove</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *, pid_t)</td></tr>
 <tr class="memitem:a8b60a363cc5a8dde7872811d24ff286c" id="r_a8b60a363cc5a8dde7872811d24ff286c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b60a363cc5a8dde7872811d24ff286c">server_child_free</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *)</td></tr>
 <tr class="memitem:addcd107081280ed9955720acfc7048b1" id="r_addcd107081280ed9955720acfc7048b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae26588dd753c21bdee6d807ec70a5269">afp_child_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addcd107081280ed9955720acfc7048b1">server_child_resolve</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="afpstats_8c.html#a1321a35c0c67430b25d74ae256d16c37">childs</a>, id_t pid)</td></tr>
 <tr class="memitem:ad52b33ce30459931046a0c2a6b6f2e71" id="r_ad52b33ce30459931046a0c2a6b6f2e71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52b33ce30459931046a0c2a6b6f2e71">server_child_kill</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *, int)</td></tr>
 <tr class="memitem:a0142ef6ed1726d3db309f2c6fe24541f" id="r_a0142ef6ed1726d3db309f2c6fe24541f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0142ef6ed1726d3db309f2c6fe24541f">server_child_kill_one_by_id</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid, uid_t, uint32_t len, char *id, uint32_t boottime)</td></tr>
 <tr class="memitem:a7026135c007268832035634fc8bfa1d8" id="r_a7026135c007268832035634fc8bfa1d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7026135c007268832035634fc8bfa1d8">server_child_transfer_session</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t, uid_t, int, uint16_t)</td></tr>
+<tr class="memdesc:a7026135c007268832035634fc8bfa1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to find an old session and pass socket.  <br /></td></tr>
 <tr class="memitem:ac89e27e32c0258280b7bdc93f3058371" id="r_ac89e27e32c0258280b7bdc93f3058371"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac89e27e32c0258280b7bdc93f3058371">server_child_handler</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *)</td></tr>
 <tr class="memitem:ab2353d3592e93c652b82fad2d13f1521" id="r_ab2353d3592e93c652b82fad2d13f1521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2353d3592e93c652b82fad2d13f1521">server_child_login_done</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid, uid_t)</td></tr>
 <tr class="memitem:a64e4878541325fa9690a338c72b9846f" id="r_a64e4878541325fa9690a338c72b9846f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e4878541325fa9690a338c72b9846f">server_reset_signal</a> (void)</td></tr>
@@ -197,7 +199,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>add a child </p><dl class="section return"><dt>Returns</dt><dd>pointer to struct server_child_data on success, NULL on error </dd></dl>
+
+<p>add a child </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to struct server_child_data on success, NULL on error </dd></dl>
 
 </div>
 </div>
@@ -487,7 +491,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Try to find an old session and pass socket </p><dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 if no matching session was found, 1 if session was found and socket passed </dd></dl>
+
+<p>Try to find an old session and pass socket. </p>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 if no matching session was found, 1 if session was found and socket passed </dd></dl>
 
 </div>
 </div>

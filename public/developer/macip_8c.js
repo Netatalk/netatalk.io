@@ -24,7 +24,6 @@ var macip_8c =
     [ "MACIP_PORT", "macip_8c.html#affbc80e127478bcdccce3522354813c0", null ],
     [ "MACIP_SERVER", "macip_8c.html#a478a7353f9d20fc65d927d3dca43bcc7", null ],
     [ "MAXZONES", "macip_8c.html#a6524b3ac8edfc87e5c092f1574bd8c75", null ],
-    [ "__attribute__", "macip_8c.html#a21c4c681d8e6e4ff8f8702b6ae6c8de9", null ],
     [ "add_zones", "macip_8c.html#a807f66bcd3dfa118a8f4f971546b0930", null ],
     [ "arp_input", "macip_8c.html#ab7433622f61666ebfbc6e84bcb182b2c", null ],
     [ "arp_lookup", "macip_8c.html#a032037cd9bd519948a7a89c0b3351656", null ],
@@ -43,18 +42,7 @@ var macip_8c =
     [ "macip_open", "macip_8c.html#a8ab8ce96700a51663dbf8e5f22f3f606", null ],
     [ "macip_output", "macip_8c.html#a33f121f3a51fa208c9cf0c00f71f8e8e", null ],
     [ "now", "macip_8c.html#af76d6f62602539015aecb8675c8e15c0", null ],
-    [ "__attribute__", "macip_8c.html#a02bba981e1b0a98d384a897c8221ab54", null ],
-    [ "_mipr_pad1", "macip_8c.html#aa817677148dbf8401c32a503893754cd", null ],
-    [ "_mipr_pad2", "macip_8c.html#abca996e53f225abd95b075e7183e4bed", null ],
     [ "gMacip", "macip_8c.html#a598096097c7d69257a42a3bc8c9f6799", null ],
     [ "gOutput", "macip_8c.html#ac659fa9c440b9d7c78a0d0d2e084c34a", null ],
-    [ "gZones", "macip_8c.html#a8b420886c4abd0f9bc4c2c7238df167e", null ],
-    [ "mipr_broadcast", "macip_8c.html#ac8ed24c7e3bd82e308b0831e83a28428", null ],
-    [ "mipr_function", "macip_8c.html#a439bd30e60133eecb8ad077426014a47", null ],
-    [ "mipr_ipaddr", "macip_8c.html#a6b2490cfbbf010ff8f8bd1d37121cc43", null ],
-    [ "mipr_nameserver", "macip_8c.html#ad756be4282a2c83a2ce06de64734e53f", null ],
-    [ "mipr_subnet", "macip_8c.html#a87afa27e60ecc98f0aa704c75ea6d673", null ],
-    [ "mipr_version", "macip_8c.html#a3234c442d663130e81a53f727213b447", null ],
-    [ "miprc", "macip_8c.html#adf568a2ab4c0a9e5d75d39c954783541", null ],
-    [ "miprd", "macip_8c.html#a4db4180f29db756bfa6ec2f8bda25ab2", null ]
+    [ "gZones", "macip_8c.html#a8b420886c4abd0f9bc4c2c7238df167e", null ]
 ];

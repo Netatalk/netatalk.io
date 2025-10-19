@@ -115,7 +115,7 @@ $(function(){initNavTree('etc_2cnid__dbd_2main_8c.html','',''); });
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid__bdb__private_8h_source.html">atalk/cnid_bdb_private.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="errchk_8h_source.html">atalk/errchk.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
@@ -136,9 +136,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ae9797de75864bd28b06ab8b10ef2a406" id="r_ae9797de75864bd28b06ab8b10ef2a406"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9797de75864bd28b06ab8b10ef2a406">sig_exit</a> (int signo)</td></tr>
 <tr class="memitem:af9842f1c68919748dff6b4d2e009f7d0" id="r_af9842f1c68919748dff6b4d2e009f7d0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9842f1c68919748dff6b4d2e009f7d0">block_sigs_onoff</a> (int block)</td></tr>
 <tr class="memitem:afd552e29e72f90f35e59e3768c6c7513" id="r_afd552e29e72f90f35e59e3768c6c7513"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd552e29e72f90f35e59e3768c6c7513">get_lock</a> (int cmd, const char *<a class="el" href="#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a>)</td></tr>
+<tr class="memdesc:afd552e29e72f90f35e59e3768c6c7513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get lock on db lock file.  <br /></td></tr>
 <tr class="memitem:a7b6ca4cc6694990450b2262425ea72e2" id="r_a7b6ca4cc6694990450b2262425ea72e2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b6ca4cc6694990450b2262425ea72e2">open_db</a> (void)</td></tr>
 <tr class="memitem:ad3fc4a0e7717c714813f7b1991d7dcc2" id="r_ad3fc4a0e7717c714813f7b1991d7dcc2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3fc4a0e7717c714813f7b1991d7dcc2">delete_db</a> (void)</td></tr>
 <tr class="memitem:a2f8ce461bc37ffa2df4aa7ca2aee91b4" id="r_a2f8ce461bc37ffa2df4aa7ca2aee91b4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8ce461bc37ffa2df4aa7ca2aee91b4">reinit_db</a> (void)</td></tr>
+<tr class="memdesc:a2f8ce461bc37ffa2df4aa7ca2aee91b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close dbd if open, delete it, reopen.  <br /></td></tr>
 <tr class="memitem:a58377f94d04685a9539a1b896ea278fb" id="r_a58377f94d04685a9539a1b896ea278fb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58377f94d04685a9539a1b896ea278fb">loop</a> (struct <a class="el" href="structdb__param.html">db_param</a> *<a class="el" href="#adad0b853d0341ebe36b84382a60fac47">dbp</a>)</td></tr>
 <tr class="memitem:ab0047aeb0c2682b194ef60ab7639f904" id="r_ab0047aeb0c2682b194ef60ab7639f904"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0047aeb0c2682b194ef60ab7639f904">switch_to_user</a> (char *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memitem:a5636ad417e8a37f1104264394c47a0e4" id="r_a5636ad417e8a37f1104264394c47a0e4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5636ad417e8a37f1104264394c47a0e4">set_signal</a> (void)</td></tr>
@@ -150,7 +152,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a4fb19e123d86c30825553b6983720f42" id="r_a4fb19e123d86c30825553b6983720f42"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_d_b_d.html">DBD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fb19e123d86c30825553b6983720f42">dbd</a></td></tr>
 <tr class="memitem:a62198ea3dedabeecb5afb6bee7d7e30f" id="r_a62198ea3dedabeecb5afb6bee7d7e30f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62198ea3dedabeecb5afb6bee7d7e30f">exit_sig</a> = 0</td></tr>
 <tr class="memitem:a8d123fc8decf963c436fddfd7531389a" id="r_a8d123fc8decf963c436fddfd7531389a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d123fc8decf963c436fddfd7531389a">db_locked</a></td></tr>
-<tr class="memitem:a2e1879860bff0fb8da8105a1cb9c23a5" id="r_a2e1879860bff0fb8da8105a1cb9c23a5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a></td></tr>
+<tr class="memitem:a2e1879860bff0fb8da8105a1cb9c23a5" id="r_a2e1879860bff0fb8da8105a1cb9c23a5"><td class="memItemLeft" align="right" valign="top">static bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a></td></tr>
 <tr class="memitem:adad0b853d0341ebe36b84382a60fac47" id="r_adad0b853d0341ebe36b84382a60fac47"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structdb__param.html">db_param</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad0b853d0341ebe36b84382a60fac47">dbp</a></td></tr>
 <tr class="memitem:a5979f6731f9ed377c95eab32232edfa1" id="r_a5979f6731f9ed377c95eab32232edfa1"><td class="memItemLeft" align="right" valign="top">static struct vol *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5979f6731f9ed377c95eab32232edfa1">vol</a></td></tr>
 </table>
@@ -246,15 +248,26 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get lock on db lock file</p>
+
+<p>Get lock on db lock file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cmd</td><td>(r) lock command: LOCK_FREE: close lockfd LOCK_UNLOCK: unlock lockm keep lockfd open LOCK_EXCL: F_WRLCK on lockfd LOCK_SHRD: F_RDLCK on lockfd </td></tr>
-    <tr><td class="paramname">dbpath</td><td>(r) path to lockfile, only used on first call, later the stored fd is used </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>lock command:<ul>
+<li>LOCK_FREE: close lockfd</li>
+<li>LOCK_UNLOCK: unlock lockm keep lockfd open</li>
+<li>LOCK_EXCL: F_WRLCK on lockfd</li>
+<li>LOCK_SHRD: F_RDLCK on lockfd </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dbpath</td><td>path to lockfile, only used on first call, later the stored fd is used </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>LOCK_FREE/LOCK_UNLOCK return 0 on success, -1 on error LOCK_EXCL/LOCK_SHRD return LOCK_EXCL or LOCK_SHRD respectively on success, 0 if the lock couldn't be acquired, -1 on other errors </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>depending on lock command:<ul>
+<li>LOCK_FREE/LOCK_UNLOCK return 0 on success, -1 on error</li>
+<li>LOCK_EXCL/LOCK_SHRD return LOCK_EXCL or LOCK_SHRD respectively on success, 0 if the lock couldn't be acquired, -1 on other errors </li>
+</ul>
+</dd></dl>
 
 </div>
 </div>
@@ -292,7 +305,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">int argc</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -351,7 +364,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Close dbd if open, delete it, reopen</p>
+
+<p>Close dbd if open, delete it, reopen. </p>
 <p>Also tries to copy the rootinfo key, that would allow for keeping the db stamp and last used CNID </p>
 
 </div>
@@ -533,7 +547,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> dbpath</td>
+          <td class="memname">bstring dbpath</td>
         </tr>
       </table>
   </td>

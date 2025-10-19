@@ -111,16 +111,22 @@ $(function(){initNavTree('netatalk__conf_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adb4aefcaa370e4e8ced949f9bd893f14" id="r_adb4aefcaa370e4e8ced949f9bd893f14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb4aefcaa370e4e8ced949f9bd893f14">afp_config_parse</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *processname)</td></tr>
+<tr class="memdesc:adb4aefcaa370e4e8ced949f9bd893f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file.  <br /></td></tr>
 <tr class="memitem:ac001e643f465d9fe85fe41e3cbc3428f" id="r_ac001e643f465d9fe85fe41e3cbc3428f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac001e643f465d9fe85fe41e3cbc3428f">afp_config_free</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a2d92d4ec9f9f0a8e165d39c10d9574cf" id="r_a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d92d4ec9f9f0a8e165d39c10d9574cf">load_charset</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load charsets for a volume.  <br /></td></tr>
 <tr class="memitem:aa051b28df16f69cdbffebc533455f4e7" id="r_aa051b28df16f69cdbffebc533455f4e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="include_2atalk_2volume_8h.html#a93895477a246ceefb8f62520711e425e">lv_flags_t</a> <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
+<tr class="memdesc:aa051b28df16f69cdbffebc533455f4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize volumes and load ini configfile.  <br /></td></tr>
 <tr class="memitem:a95d5c38b0997be2581319b937878f63e" id="r_a95d5c38b0997be2581319b937878f63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d5c38b0997be2581319b937878f63e">unload_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:ac469454bc0d153324821952c87816bb4" id="r_ac469454bc0d153324821952c87816bb4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac469454bc0d153324821952c87816bb4">getvolumes</a> (void)</td></tr>
 <tr class="memitem:ab18d17fd2ea484be1f561981fd1ba720" id="r_ab18d17fd2ea484be1f561981fd1ba720"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab18d17fd2ea484be1f561981fd1ba720">getvolbyvid</a> (const uint16_t)</td></tr>
 <tr class="memitem:a078796270be4438a00a963d87e8d332b" id="r_a078796270be4438a00a963d87e8d332b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a078796270be4438a00a963d87e8d332b">getvolbypath</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a078796270be4438a00a963d87e8d332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search volume by path, creating user home vols as necessary.  <br /></td></tr>
 <tr class="memitem:ab955be2ccb9cf905ece60435a9fc7036" id="r_ab955be2ccb9cf905ece60435a9fc7036"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab955be2ccb9cf905ece60435a9fc7036">getvolbyname</a> (const char *name)</td></tr>
 <tr class="memitem:a4327f5a87fce86a37525485b8d26caa3" id="r_a4327f5a87fce86a37525485b8d26caa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4327f5a87fce86a37525485b8d26caa3">volume_free</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:a4327f5a87fce86a37525485b8d26caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free all resources allocated in a struct vol in <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>  <br /></td></tr>
 <tr class="memitem:a34da44df52290f1745015140589ad212" id="r_a34da44df52290f1745015140589ad212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34da44df52290f1745015140589ad212">volume_unlink</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a>)</td></tr>
+<tr class="memdesc:a34da44df52290f1745015140589ad212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a volume from the linked list of volumes.  <br /></td></tr>
 <tr class="memitem:a1dd9d970666884e1c2d21d59cf204adf" id="r_a1dd9d970666884e1c2d21d59cf204adf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd9d970666884e1c2d21d59cf204adf">getdefextmap</a> (void)</td></tr>
 <tr class="memitem:a8243b97f092cadced0dfc7331a7ff689" id="r_a8243b97f092cadced0dfc7331a7ff689"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8243b97f092cadced0dfc7331a7ff689">getextmap</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 </table>
@@ -162,7 +168,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int afp_config_parse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>AFPObj</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -176,7 +182,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file </p>
+
+<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file. </p>
 
 </div>
 </div>
@@ -265,13 +272,25 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Search volume by path, creating user home vols as necessary</p>
-<p>Path may be absolute or relative. Ordinary volume structs are created when the ini config is initially parsed (<a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a>), but user volumes are as <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a> only can create the user volume of the logged in user in an AFP session in afpd, but not when called from e.g. cnid_metad or dbd. Both cnid_metad and dbd thus need a way to lookup and create struct vols for user home by path. This is what this func does as well.</p>
-<p>(1) Search "normal" volume list (2) Check if theres a [Homes] section, <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a> remembers this for us (3) If there is, match "path" with "basedir regex" to get the user home parent dir (4) Built user home path by appending the basedir matched in (3) and appending the username (5) The next path element then is the username (5b) <a class="el" href="netatalk__conf_8c.html#a078796270be4438a00a963d87e8d332b">getvolbypath()</a> assumes that the user home directory has the same name as the username. If that is not true, <a class="el" href="netatalk__conf_8c.html#a6d35900509d808ec3b422a0e5f8bbc6c">getuserbypath()</a> is called and tries to retrieve the username from the directory owner, checking its validity (6) Append [Homes]-&gt;path subdirectory if defined (7) Create volume</p>
+
+<p>Search volume by path, creating user home vols as necessary. </p>
+<p>Path may be absolute or relative. Ordinary volume structs are created when the ini config is initially parsed (<a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>), but user volumes are as <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> only can create the user volume of the logged in user in an AFP session in afpd, but not when called from e.g. cnid_metad or dbd. Both cnid_metad and dbd thus need a way to lookup and create struct vols for user home by path. This is what this func does as well.</p>
+<ol type="1">
+<li>Search "normal" volume list</li>
+<li>Check if theres a [Homes] section, <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> remembers this for us</li>
+<li>If there is, match "path" with "basedir regex" to get the user home parent dir</li>
+<li>Built user home path by appending the basedir matched in (3) and appending the username</li>
+<li>The next path element then is the username<ul>
+<li><a class="el" href="netatalk__conf_8c.html#a078796270be4438a00a963d87e8d332b" title="Search volume by path, creating user home vols as necessary.">getvolbypath()</a> assumes that the user home directory has the same name as the username. If that is not true, <a class="el" href="netatalk__conf_8c.html#a6d35900509d808ec3b422a0e5f8bbc6c" title="get username by path">getuserbypath()</a> is called and tries to retrieve the username from the directory owner, checking its validity</li>
+</ul>
+</li>
+<li>Append [Homes]-&gt;path subdirectory if defined</li>
+<li>Create volume</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(rw) handle </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path, may be relative or absolute </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path, may be relative or absolute </td></tr>
   </table>
   </dd>
 </dl>
@@ -350,7 +369,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Load charsets for a volume </p>
+
+<p>Load charsets for a volume. </p>
 
 </div>
 </div>
@@ -380,11 +400,17 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize volumes and load ini configfile</p>
+
+<p>Initialize volumes and load ini configfile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">obj</td><td>(r) handle </td></tr>
-    <tr><td class="paramname">flags</td><td>(r) flags controlling volume load behaviour: LV_DEFAULT: load shares in a user/session context, this honors authorisation LV_ALL: load shares that are available in the config file LV_FORCE: reload file even though the timestamp wasn't changed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>flags controlling volume load behaviour:<ul>
+<li>LV_DEFAULT: load shares in a user/session context, this honors authorization</li>
+<li>LV_ALL: load shares that are available in the config file</li>
+<li>LV_FORCE: reload file even though the timestamp wasn't changed </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -438,8 +464,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Free all resources allocated in a struct vol in <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7">load_volumes()</a></p>
-<p>Actually opening a volume (<a class="el" href="volume_8c.html#a40cbf720c669c4788c33a937f843f788">afp_openvol()</a>) will allocate additional resources which are freed in <a class="el" href="nad_8h.html#a6c7050350fe59fbcfb81553ff4693589">closevol()</a> </p>
+
+<p>Free all resources allocated in a struct vol in <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a> </p>
+<p>Actually opening a volume (<a class="el" href="volume_8c.html#a1837c0cf5e1d8bd06791cf2afabcabd2">afp_openvol()</a>) will allocate additional resources which are freed in <a class="el" href="nad_8h.html#a6c7050350fe59fbcfb81553ff4693589">closevol()</a> </p>
 
 </div>
 </div>
@@ -465,7 +492,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Remove a volume from the linked list of volumes </p>
+
+<p>Remove a volume from the linked list of volumes. </p>
 
 </div>
 </div>

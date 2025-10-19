@@ -115,7 +115,7 @@ $(function(){initNavTree('util_2cnid_8c.html','',''); });
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="errchk_8h_source.html">atalk/errchk.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
@@ -124,8 +124,10 @@ $(function(){initNavTree('util_2cnid_8c.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
+<tr class="memitem:a2ed50bf96a3179dba7ce4fea0229f161" id="r_a2ed50bf96a3179dba7ce4fea0229f161"><td class="memItemLeft" align="right" valign="top">bstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed50bf96a3179dba7ce4fea0229f161">rel_path_in_vol</a> (const char *<a class="el" href="structpath.html">path</a>, const char *volpath)</td></tr>
+<tr class="memdesc:a2ed50bf96a3179dba7ce4fea0229f161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build path relativ to volume root.  <br /></td></tr>
 <tr class="memitem:acc5e34d9d4ff3cbad83b2b5bc5d9bbb7" id="r_acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5e34d9d4ff3cbad83b2b5bc5d9bbb7">cnid_for_path</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *volpath, const char *<a class="el" href="structpath.html">path</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *<a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
+<tr class="memdesc:acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves CNID of a given path.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="acc5e34d9d4ff3cbad83b2b5bc5d9bbb7" name="acc5e34d9d4ff3cbad83b2b5bc5d9bbb7"></a>
@@ -156,15 +158,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Resolves CNID of a given path</p>
-<p>path might be: (a) relative: "dir/subdir" with cwd: "/afp_volume/topdir" (b) absolute: "/afp_volume/dir/subdir"</p>
+
+<p>Resolves CNID of a given path. </p>
+<p>path might be:</p><ol type="1">
+<li>relative: "dir/subdir" with cwd: "/afp_volume/topdir"</li>
+<li>absolute: "/afp_volume/dir/subdir"</li>
+</ol>
 <p>path MUST be pointing inside vol, this is usually the case as vol has been build from path using loadvolinfo and friends.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cdb</td><td>(r) CNID db handle </td></tr>
-    <tr><td class="paramname">volpath</td><td>(r) UNIX path of volume </td></tr>
-    <tr><td class="paramname">path</td><td>(r) path, see above </td></tr>
-    <tr><td class="paramname">did</td><td>(w) parent CNID of returned CNID</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cdb</td><td>CNID db handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volpath</td><td>UNIX path of volume </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path, see above </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">did</td><td>parent CNID of returned CNID</td></tr>
   </table>
   </dd>
 </dl>
@@ -179,7 +185,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="bstrlib_8h.html#a7ee510452ae810b71268dfa7b39a3712">bstring</a> rel_path_in_vol </td>
+          <td class="memname">bstring rel_path_in_vol </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
         </tr>
@@ -190,12 +196,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Build path relativ to volume root</p>
-<p>path might be: (a) relative: "dir/subdir" with cwd: "/afp_volume/topdir" (b) absolute: "/afp_volume/dir/subdir"</p>
+
+<p>Build path relativ to volume root. </p>
+<p>path might be:</p><ol type="1">
+<li>relative: "dir/subdir" with cwd: "/afp_volume/topdir"</li>
+<li>absolute: "/afp_volume/dir/subdir"</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>(r) path relative to cwd() or absolute </td></tr>
-    <tr><td class="paramname">volpath</td><td>(r) volume path that path is a subdir of (has been computed in volinfo funcs)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path relative to cwd() or absolute </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volpath</td><td>volume path that path is a subdir of (has been computed in volinfo funcs)</td></tr>
   </table>
   </dd>
 </dl>

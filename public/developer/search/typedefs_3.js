@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['cacheduser_5ft_0',['cacheduser_t',['../cache_8c.html#ae4be6acf6f0dc405df38d9ec6cbe7297',1,'cache.c']]],
-  ['cnid_5fbdb_5fprivate_1',['CNID_bdb_private',['../cnid__bdb__private_8h.html#ad8811bde12570c7f7d50bb87b409a486',1,'cnid_bdb_private.h']]],
-  ['cnid_5fdb_2',['cnid_db',['../cnid_8h.html#a0e3bc72ee867dc6146ddf706dd04c2eb',1,'cnid.h']]],
-  ['cnid_5fmodule_3',['cnid_module',['../cnid_8h.html#a9b67032ac16f7b1e1f225664d480ea88',1,'cnid.h']]],
-  ['cnid_5fmysql_5fprivate_4',['CNID_mysql_private',['../cnid__mysql__private_8h.html#aa9a650881ae2122abd6198a7ee308c40',1,'cnid_mysql_private.h']]],
-  ['cnid_5fsqlite_5fprivate_5',['CNID_sqlite_private',['../cnid__sqlite__private_8h.html#af6b3f90f1103fcef85db1ced4389c81e',1,'cnid_sqlite_private.h']]],
-  ['cnid_5ft_6',['cnid_t',['../adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422',1,'adouble.h']]],
-  ['conn_7',['CONN',['../afpclient_8h.html#a2ac162291539cccdf7b1cb8f52199d28',1,'afpclient.h']]],
-  ['creatortype_8',['CreatorType',['../desktop_8h.html#a6d1e97e45fc2161840ab641650738835',1,'desktop.h']]]
+  ['dbd_5fflags_5ft_0',['dbd_flags_t',['../cmd__dbd_8h.html#a0058940080756b084877283516d31f7a',1,'cmd_dbd.h']]],
+  ['dir_5floop_1',['dir_loop',['../etc_2afpd_2directory_8h.html#ace2331f23b2ccc56799277d31174dc7d',1,'directory.h']]],
+  ['dir_5fnotification_5ffunc_5ft_2',['dir_notification_func_t',['../ftw_8h.html#a333db57c82a8b302d711de0a6a2dd278',1,'ftw.h']]],
+  ['dsi_3',['DSI',['../include_2atalk_2dsi_8h.html#a30ae88574a2ea29ecbb5807d0c59c944',1,'DSI:&#160;dsi.h'],['../test_2testsuite_2dsi_8h.html#a30ae88574a2ea29ecbb5807d0c59c944',1,'DSI:&#160;dsi.h']]]
 ];

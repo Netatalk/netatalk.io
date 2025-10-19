@@ -108,7 +108,7 @@ $(function(){initNavTree('enumerate_8c.html','',''); });
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/file.h&gt;</code><br />
 <code>#include &lt;sys/param.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cnid_8h_source.html">atalk/cnid.h</a>&gt;</code><br />
@@ -137,13 +137,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a917a74496269f9ba8c6048a6c003b155" id="r_a917a74496269f9ba8c6048a6c003b155"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a917a74496269f9ba8c6048a6c003b155">enumerate_loop</a> (struct dirent *de, char *mname <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
+<tr class="memitem:ac6dcc4659445412305086252a65cca9e" id="r_ac6dcc4659445412305086252a65cca9e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6dcc4659445412305086252a65cca9e">enumerate_loop</a> (struct dirent *de, char *mname, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a24ca839730602f38db65c6551f6dc453" id="r_a24ca839730602f38db65c6551f6dc453"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24ca839730602f38db65c6551f6dc453">check_dirent</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *name)</td></tr>
 <tr class="memitem:aacb13518cea8c0e3195a346103e521fc" id="r_aacb13518cea8c0e3195a346103e521fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacb13518cea8c0e3195a346103e521fc">for_each_dirent</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *name, <a class="el" href="etc_2afpd_2directory_8h.html#ace2331f23b2ccc56799277d31174dc7d">dir_loop</a> fn, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
-<tr class="memitem:aa957427b0f3ee003a4cd68df820d7b98" id="r_aa957427b0f3ee003a4cd68df820d7b98"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa957427b0f3ee003a4cd68df820d7b98">enumerate</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, int ext)</td></tr>
-<tr class="memitem:acb94111baca739b181d9d2a0123db63d" id="r_acb94111baca739b181d9d2a0123db63d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb94111baca739b181d9d2a0123db63d">afp_enumerate</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a05a3cc844fbaf1a030a2ac5f0b722b88" id="r_a05a3cc844fbaf1a030a2ac5f0b722b88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05a3cc844fbaf1a030a2ac5f0b722b88">afp_enumerate_ext</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:acaa576e7fc8e86bc98d5389d325deb1d" id="r_acaa576e7fc8e86bc98d5389d325deb1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa576e7fc8e86bc98d5389d325deb1d">afp_enumerate_ext2</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:ad01c1f933340a12a9345b1052a0e3806" id="r_ad01c1f933340a12a9345b1052a0e3806"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad01c1f933340a12a9345b1052a0e3806">enumerate</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, int ext)</td></tr>
+<tr class="memitem:acb94111baca739b181d9d2a0123db63d" id="r_acb94111baca739b181d9d2a0123db63d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb94111baca739b181d9d2a0123db63d">afp_enumerate</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a05a3cc844fbaf1a030a2ac5f0b722b88" id="r_a05a3cc844fbaf1a030a2ac5f0b722b88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05a3cc844fbaf1a030a2ac5f0b722b88">afp_enumerate_ext</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:acaa576e7fc8e86bc98d5389d325deb1d" id="r_acaa576e7fc8e86bc98d5389d325deb1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa576e7fc8e86bc98d5389d325deb1d">afp_enumerate_ext2</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ac6afabdc09a49a433ee19d8a9486056d" name="ac6afabdc09a49a433ee19d8a9486056d"></a>
@@ -326,8 +326,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa957427b0f3ee003a4cd68df820d7b98" name="aa957427b0f3ee003a4cd68df820d7b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa957427b0f3ee003a4cd68df820d7b98">&#9670;&#160;</a></span>enumerate()</h2>
+<a id="ad01c1f933340a12a9345b1052a0e3806" name="ad01c1f933340a12a9345b1052a0e3806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01c1f933340a12a9345b1052a0e3806">&#9670;&#160;</a></span>enumerate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +338,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int enumerate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -348,7 +348,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -375,8 +375,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a917a74496269f9ba8c6048a6c003b155" name="a917a74496269f9ba8c6048a6c003b155"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a917a74496269f9ba8c6048a6c003b155">&#9670;&#160;</a></span>enumerate_loop()</h2>
+<a id="ac6dcc4659445412305086252a65cca9e" name="ac6dcc4659445412305086252a65cca9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6dcc4659445412305086252a65cca9e">&#9670;&#160;</a></span>enumerate_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -392,7 +392,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *mname</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>mname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -102,13 +102,16 @@ $(function(){initNavTree('ad__conv_8c.html','',''); });
   <div class="headertitle"><div class="title">ad_conv.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Part of Netatalk's AppleDouble implementatation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/param.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="compat_8h_source.html">atalk/compat.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2dsi_8h_source.html">atalk/dsi.h</a>&gt;</code><br />
@@ -126,7 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acb9c860726da2efe1deee82d476217f9" id="r_acb9c860726da2efe1deee82d476217f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb9c860726da2efe1deee82d476217f9">ad_conv_v22ea_rf</a> (const char *<a class="el" href="structpath.html">path</a>, const struct stat *sp, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a83314462424e7c8873f3a146ed1a828a" id="r_a83314462424e7c8873f3a146ed1a828a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83314462424e7c8873f3a146ed1a828a">ad_conv_v22ea</a> (const char *<a class="el" href="structpath.html">path</a>, const struct stat *sp, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a9ef6f1870a9c6c313318aa3771796c7e" id="r_a9ef6f1870a9c6c313318aa3771796c7e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef6f1870a9c6c313318aa3771796c7e">ad_conv_dehex</a> (const char *<a class="el" href="structpath.html">path</a>, const struct stat *sp, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char **newpathp)</td></tr>
+<tr class="memdesc:a9ef6f1870a9c6c313318aa3771796c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove hexencoded dots and slashes (":2e" and ":2f")  <br /></td></tr>
 <tr class="memitem:a240eb475b989f272620698eb4ba7ce5d" id="r_a240eb475b989f272620698eb4ba7ce5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a240eb475b989f272620698eb4ba7ce5d">ad_convert</a> (const char *<a class="el" href="structpath.html">path</a>, const struct stat *sp, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char **newpath)</td></tr>
+<tr class="memdesc:a240eb475b989f272620698eb4ba7ce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">AppleDouble and encoding conversion on the fly.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -134,7 +139,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a2d0d96a1906aa3149fb33d185669244a" id="r_a2d0d96a1906aa3149fb33d185669244a"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d0d96a1906aa3149fb33d185669244a">emptydirad</a> [32]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Part of Netatalk's AppleDouble implementatation </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="adouble_8h.html" title="Part of Netatalk&#39;s AppleDouble implementatation.">include/atalk/adouble.h</a> </dd></dl>
+<div class="textblock"><p>Part of Netatalk's AppleDouble implementatation. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="adouble_8h.html" title="Part of Netatalk&#39;s AppleDouble implementatation.">include/atalk/adouble.h</a> </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a9ef6f1870a9c6c313318aa3771796c7e" name="a9ef6f1870a9c6c313318aa3771796c7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ef6f1870a9c6c313318aa3771796c7e">&#9670;&#160;</a></span>ad_conv_dehex()</h2>
@@ -172,6 +178,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Remove hexencoded dots and slashes (":2e" and ":2f") </p>
 
 </div>
@@ -306,13 +313,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AppleDouble and encoding conversion on the fly</p>
+
+<p>AppleDouble and encoding conversion on the fly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>(r) path to file or directory </td></tr>
-    <tr><td class="paramname">sp</td><td>(r) stat(path) </td></tr>
-    <tr><td class="paramname">vol</td><td>(r) volume handle </td></tr>
-    <tr><td class="paramname">newpath</td><td>(w) if encoding changed, new name. Can be NULL.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to file or directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sp</td><td>stat(path) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume handle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">newpath</td><td>if encoding changed, new name. Can be NULL.</td></tr>
   </table>
   </dd>
 </dl>

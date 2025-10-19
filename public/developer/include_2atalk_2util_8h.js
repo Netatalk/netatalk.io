@@ -75,6 +75,7 @@ var include_2atalk_2util_8h =
     [ "stripped_slashes_basename", "include_2atalk_2util_8h.html#a34763dcda0093297fce36aad07ac64e6", null ],
     [ "strndiacasecmp", "include_2atalk_2util_8h.html#af7ffc14b49fe31b5155adca59a523eb2", null ],
     [ "strtok_quote", "include_2atalk_2util_8h.html#a7b98011d737b8b3bc282951555f3f287", null ],
+    [ "sys_sendfile", "include_2atalk_2util_8h.html#a96bbb0ddf55b6fe926b2c9236ea7eebc", null ],
     [ "tmpdir", "include_2atalk_2util_8h.html#a0a2fa46e0cef80809cd77873559868ff", null ],
     [ "tokenize_ip_port", "include_2atalk_2util_8h.html#a6639de1eb1eaad095e3612d03eb17c1b", null ],
     [ "writet", "include_2atalk_2util_8h.html#ae2d02957f53e178b7cd1f83cef6c8379", null ],

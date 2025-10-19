@@ -3,6 +3,7 @@ var structprinter =
     [ "p_addr", "structprinter.html#a41dc898108ca385c365618383b1f13f8", null ],
     [ "p_atp", "structprinter.html#ac300915058fad5ef7fcd32c2071f580f", null ],
     [ "p_authprintdir", "structprinter.html#a7719eb7e9fee72ba312ad5ef801cefdb", null ],
+    [ "p_cupsoptions", "structprinter.html#a33c8a97e107452a1f4c7b3141fd344c1", null ],
     [ "p_flags", "structprinter.html#afe6264f43eec786e42400a7226d2b787", null ],
     [ "p_name", "structprinter.html#a17edadace738812934e54b63e625f3ad", null ],
     [ "p_next", "structprinter.html#a434461eeeddb2b6469423c9aa3e64b9b", null ],

@@ -30,7 +30,7 @@ var spotlight_8h =
       [ "SLQ_STATE_CANCELLED", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3", null ],
       [ "SLQ_STATE_ERROR", "spotlight_8h.html#ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3", null ]
     ] ],
-    [ "afp_spotlight_rpc", "spotlight_8h.html#abdef5befd3dbeb22f9b822e388145a89", null ],
+    [ "afp_spotlight_rpc", "spotlight_8h.html#ad58f4c8d53dab7fa7430d5b707ca6a0d", null ],
     [ "configure_spotlight_attributes", "spotlight_8h.html#a09859b9b9b17c89969f3e6fdb8739312", null ],
     [ "sl_pack", "spotlight_8h.html#a34f2023c533ff31bb1ce854182e7407f", null ],
     [ "sl_unpack", "spotlight_8h.html#a838d95f10dfcad456af2111d396cdc00", null ],

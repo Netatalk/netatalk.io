@@ -28,7 +28,7 @@ var netatalk__conf_8c =
     [ "getvolbypath", "netatalk__conf_8c.html#a078796270be4438a00a963d87e8d332b", null ],
     [ "getvolbyvid", "netatalk__conf_8c.html#af5f8748dd998b913a238dcd1d6600b0a", null ],
     [ "getvolumes", "netatalk__conf_8c.html#ac469454bc0d153324821952c87816bb4", null ],
-    [ "hostaccessvol", "netatalk__conf_8c.html#a5c2c8b4bb192a237cf55910510dbc592", null ],
+    [ "hostaccessvol", "netatalk__conf_8c.html#a433f8ba07ffecbed6150ed1e7300f205", null ],
     [ "load_charset", "netatalk__conf_8c.html#a2d92d4ec9f9f0a8e165d39c10d9574cf", null ],
     [ "load_volumes", "netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7", null ],
     [ "readextmap", "netatalk__conf_8c.html#a2a39e398df33bd070fca3c4102cd0bbe", null ],

@@ -109,7 +109,7 @@ $(function(){initNavTree('vfs_8c.html','',''); });
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="acl_8h_source.html">atalk/acl.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
@@ -140,42 +140,54 @@ Functions</h2></td></tr>
 <tr class="memitem:a83da372c28aa8ca801839bc4ba19720d" id="r_a83da372c28aa8ca801839bc4ba19720d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83da372c28aa8ca801839bc4ba19720d">for_each_adouble</a> (const char *from, const char *name, <a class="el" href="#a38a43427356a6439e8fae592de4e5843">rf_loop</a> fn, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
 <tr class="memitem:a7e3738902ca0fd06eb6b7ab573bcb9e6" id="r_a7e3738902ca0fd06eb6b7ab573bcb9e6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3738902ca0fd06eb6b7ab573bcb9e6">netatalk_name</a> (const char *name)</td></tr>
 <tr class="memitem:aaae6578b609fb73d8e0dd464dcdc8b3f" id="r_aaae6578b609fb73d8e0dd464dcdc8b3f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaae6578b609fb73d8e0dd464dcdc8b3f">validupath_adouble</a> (<a class="el" href="vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a>)</td></tr>
-<tr class="memitem:ad332706999a4322b631cf8e864dfafe5" id="r_ad332706999a4322b631cf8e864dfafe5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad332706999a4322b631cf8e864dfafe5">RF_chown_adouble</a> (<a class="el" href="vfs_8h.html#a4fc7a2a75c481dc0e07a93dda4943d36">VFS_FUNC_ARGS_CHOWN</a>)</td></tr>
+<tr class="memitem:a2478ac8a3b73110e98e13b41cae4f21b" id="r_a2478ac8a3b73110e98e13b41cae4f21b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2478ac8a3b73110e98e13b41cae4f21b">RF_chown_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid)</td></tr>
 <tr class="memitem:a4edd3b828dbff23df82d8c23e18a6ebc" id="r_a4edd3b828dbff23df82d8c23e18a6ebc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4edd3b828dbff23df82d8c23e18a6ebc">RF_renamedir_adouble</a> (<a class="el" href="vfs_8h.html#ab818ba38c29befadd68865b76a0b12d5">VFS_FUNC_ARGS_RENAMEDIR</a>)</td></tr>
-<tr class="memitem:ada36875b9f7353dff520f61ee58519f7" id="r_ada36875b9f7353dff520f61ee58519f7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada36875b9f7353dff520f61ee58519f7">deletecurdir_adouble_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a8bec521352e0fc2e065d4a6d2082bc55" id="r_a8bec521352e0fc2e065d4a6d2082bc55"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bec521352e0fc2e065d4a6d2082bc55">deletecurdir_adouble_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
 <tr class="memitem:aa29c62fd425a1803e45c1ee18a3e93ba" id="r_aa29c62fd425a1803e45c1ee18a3e93ba"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa29c62fd425a1803e45c1ee18a3e93ba">RF_deletecurdir_adouble</a> (<a class="el" href="vfs_8h.html#a25b2388078902480aba171e37c2add20">VFS_FUNC_ARGS_DELETECURDIR</a>)</td></tr>
 <tr class="memitem:aec6b8a7b8df784a93dcadac03098915d" id="r_aec6b8a7b8df784a93dcadac03098915d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec6b8a7b8df784a93dcadac03098915d">adouble_setfilmode</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
-<tr class="memitem:ad7738ae301c47a13e1eade22700e6a41" id="r_ad7738ae301c47a13e1eade22700e6a41"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7738ae301c47a13e1eade22700e6a41">RF_setfilmode_adouble</a> (<a class="el" href="vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a>)</td></tr>
-<tr class="memitem:a669223dafe0f3c3fffdf364e7b0bf075" id="r_a669223dafe0f3c3fffdf364e7b0bf075"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669223dafe0f3c3fffdf364e7b0bf075">RF_setdirunixmode_adouble</a> (<a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a>)</td></tr>
-<tr class="memitem:ae125803b3aa7fb60ec4d23a2caae4db2" id="r_ae125803b3aa7fb60ec4d23a2caae4db2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae125803b3aa7fb60ec4d23a2caae4db2">setdirmode_adouble_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
+<tr class="memitem:aefbc872b2b7e1dceb4fa77ca955deeaa" id="r_aefbc872b2b7e1dceb4fa77ca955deeaa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefbc872b2b7e1dceb4fa77ca955deeaa">RF_setfilmode_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:a11120a8ae955d2153c5c4b680a325a47" id="r_a11120a8ae955d2153c5c4b680a325a47"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11120a8ae955d2153c5c4b680a325a47">RF_setdirunixmode_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:a74533c891d4d14cadfae5faa9b7dc443" id="r_a74533c891d4d14cadfae5faa9b7dc443"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74533c891d4d14cadfae5faa9b7dc443">setdirmode_adouble_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
 <tr class="memitem:a9c3a0266c5d5a2f779926a5c0e505180" id="r_a9c3a0266c5d5a2f779926a5c0e505180"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3a0266c5d5a2f779926a5c0e505180">RF_setdirmode_adouble</a> (<a class="el" href="vfs_8h.html#a0935387b92e2a7b6815614b3fd2ed9e9">VFS_FUNC_ARGS_SETDIRMODE</a>)</td></tr>
 <tr class="memitem:a4ccfea770dd2e982d0568ceeaf984456" id="r_a4ccfea770dd2e982d0568ceeaf984456"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ccfea770dd2e982d0568ceeaf984456">RF_setdirowner_adouble</a> (<a class="el" href="vfs_8h.html#accd2455bde57bb57ca257b35af84bbc8">VFS_FUNC_ARGS_SETDIROWNER</a>)</td></tr>
-<tr class="memitem:a1723864b2033d25389d53d4dbc991953" id="r_a1723864b2033d25389d53d4dbc991953"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1723864b2033d25389d53d4dbc991953">RF_deletefile_adouble</a> (<a class="el" href="vfs_8h.html#a32dd67fabc16b26184130d357b32d8aa">VFS_FUNC_ARGS_DELETEFILE</a>)</td></tr>
-<tr class="memitem:ae5a01bed852a3aa68baafdf20db11662" id="r_ae5a01bed852a3aa68baafdf20db11662"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a01bed852a3aa68baafdf20db11662">RF_renamefile_adouble</a> (<a class="el" href="vfs_8h.html#aa1fd8052f56cf1d826a3d756d32fb7f6">VFS_FUNC_ARGS_RENAMEFILE</a>)</td></tr>
-<tr class="memitem:aa2d09473344256301fa060d5b7294aa5" id="r_aa2d09473344256301fa060d5b7294aa5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2d09473344256301fa060d5b7294aa5">RF_copyfile_adouble</a> (<a class="el" href="vfs_8h.html#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a>)</td></tr>
+<tr class="memitem:ac1d59f9ee7a5f419f3b6903065d26a88" id="r_ac1d59f9ee7a5f419f3b6903065d26a88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d59f9ee7a5f419f3b6903065d26a88">RF_deletefile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td></tr>
+<tr class="memitem:a1255c143523778db549a4bfb94c4fee8" id="r_a1255c143523778db549a4bfb94c4fee8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1255c143523778db549a4bfb94c4fee8">RF_renamefile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:a58a105df426ca00e3eb69f0068a63cd0" id="r_a58a105df426ca00e3eb69f0068a63cd0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58a105df426ca00e3eb69f0068a63cd0">RF_copyfile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:ac2ee8137ca66a9bf15c827fb03fea055" id="r_ac2ee8137ca66a9bf15c827fb03fea055"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2ee8137ca66a9bf15c827fb03fea055">RF_posix_acl</a> (<a class="el" href="vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>)</td></tr>
+<tr class="memitem:ac5b4569844a047b75a2144df3144e852" id="r_ac5b4569844a047b75a2144df3144e852"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5b4569844a047b75a2144df3144e852">RF_posix_remove_acl</a> (<a class="el" href="vfs_8h.html#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a>)</td></tr>
 <tr class="memitem:a566a6f6c47672c6337d417d2b09b41f7" id="r_a566a6f6c47672c6337d417d2b09b41f7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566a6f6c47672c6337d417d2b09b41f7">validupath_ea</a> (<a class="el" href="vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a>)</td></tr>
-<tr class="memitem:ab2e87087b92443b46bdac0495fdac9b8" id="r_ab2e87087b92443b46bdac0495fdac9b8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e87087b92443b46bdac0495fdac9b8">RF_chown_ea</a> (<a class="el" href="vfs_8h.html#a4fc7a2a75c481dc0e07a93dda4943d36">VFS_FUNC_ARGS_CHOWN</a>)</td></tr>
+<tr class="memitem:a28f367e18c97cf953aa2c72488cf5e92" id="r_a28f367e18c97cf953aa2c72488cf5e92"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28f367e18c97cf953aa2c72488cf5e92">RF_chown_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid)</td></tr>
 <tr class="memitem:afdabe9ec295b9b49e345fd7b8ce4e1da" id="r_afdabe9ec295b9b49e345fd7b8ce4e1da"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdabe9ec295b9b49e345fd7b8ce4e1da">RF_renamedir_ea</a> (<a class="el" href="vfs_8h.html#ab818ba38c29befadd68865b76a0b12d5">VFS_FUNC_ARGS_RENAMEDIR</a>)</td></tr>
-<tr class="memitem:a578edc02a3917cebed25fe01a254d133" id="r_a578edc02a3917cebed25fe01a254d133"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578edc02a3917cebed25fe01a254d133">deletecurdir_ea_osx_chkifempty_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a530a4b70d1ac25f8682aa7019b5efc5c" id="r_a530a4b70d1ac25f8682aa7019b5efc5c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a530a4b70d1ac25f8682aa7019b5efc5c">deletecurdir_ea_osx_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct dirent *de <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a334daf770acb0dcd818b8569c3cf20f1" id="r_a334daf770acb0dcd818b8569c3cf20f1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334daf770acb0dcd818b8569c3cf20f1">deletecurdir_ea_osx_chkifempty_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
+<tr class="memitem:ad31c712d78b85ec3f852ca9664b9aacd" id="r_ad31c712d78b85ec3f852ca9664b9aacd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31c712d78b85ec3f852ca9664b9aacd">deletecurdir_ea_osx_loop</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct dirent *de, char *name, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a>)</td></tr>
 <tr class="memitem:adb71d57265a72e180b5d9b64f5cf52d4" id="r_adb71d57265a72e180b5d9b64f5cf52d4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb71d57265a72e180b5d9b64f5cf52d4">RF_deletecurdir_ea</a> (<a class="el" href="vfs_8h.html#a25b2388078902480aba171e37c2add20">VFS_FUNC_ARGS_DELETECURDIR</a>)</td></tr>
-<tr class="memitem:a71e41db825187a4ac47c98d32ec218a5" id="r_a71e41db825187a4ac47c98d32ec218a5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71e41db825187a4ac47c98d32ec218a5">RF_setdirunixmode_ea</a> (<a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a>)</td></tr>
-<tr class="memitem:a78fb4023531fb07c8c44f0f7f6335240" id="r_a78fb4023531fb07c8c44f0f7f6335240"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78fb4023531fb07c8c44f0f7f6335240">RF_setfilmode_ea</a> (<a class="el" href="vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a>)</td></tr>
+<tr class="memitem:aa81b07083a9152da3429c358e8355095" id="r_aa81b07083a9152da3429c358e8355095"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa81b07083a9152da3429c358e8355095">RF_setdirunixmode_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:aa5114a884b136d8b992d1bd2caa4eeca" id="r_aa5114a884b136d8b992d1bd2caa4eeca"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5114a884b136d8b992d1bd2caa4eeca">RF_setfilmode_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
 <tr class="memitem:a9003e8eb589d1b75568a436f3b3a6317" id="r_a9003e8eb589d1b75568a436f3b3a6317"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9003e8eb589d1b75568a436f3b3a6317">RF_setdirmode_ea</a> (<a class="el" href="vfs_8h.html#a0935387b92e2a7b6815614b3fd2ed9e9">VFS_FUNC_ARGS_SETDIRMODE</a>)</td></tr>
 <tr class="memitem:ae6bece48f3e0dda9675192d343e33333" id="r_ae6bece48f3e0dda9675192d343e33333"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6bece48f3e0dda9675192d343e33333">RF_setdirowner_ea</a> (<a class="el" href="vfs_8h.html#accd2455bde57bb57ca257b35af84bbc8">VFS_FUNC_ARGS_SETDIROWNER</a>)</td></tr>
-<tr class="memitem:a7436976302543eed33763c88b447457b" id="r_a7436976302543eed33763c88b447457b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7436976302543eed33763c88b447457b">RF_deletefile_ea</a> (<a class="el" href="vfs_8h.html#a32dd67fabc16b26184130d357b32d8aa">VFS_FUNC_ARGS_DELETEFILE</a>)</td></tr>
-<tr class="memitem:a6a878fcc474f9e81dcd8438fa7636977" id="r_a6a878fcc474f9e81dcd8438fa7636977"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a878fcc474f9e81dcd8438fa7636977">RF_copyfile_ea</a> (<a class="el" href="vfs_8h.html#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a>)</td></tr>
-<tr class="memitem:a16e47d1568ecf21a65d8f2acc1d62b9c" id="r_a16e47d1568ecf21a65d8f2acc1d62b9c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16e47d1568ecf21a65d8f2acc1d62b9c">RF_renamefile_ea</a> (<a class="el" href="vfs_8h.html#aa1fd8052f56cf1d826a3d756d32fb7f6">VFS_FUNC_ARGS_RENAMEFILE</a>)</td></tr>
-<tr class="memitem:ac928b37e23303e73b7ee903d0a420219" id="r_ac928b37e23303e73b7ee903d0a420219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac928b37e23303e73b7ee903d0a420219">VFS_MFUNC</a> (<a class="el" href="etc_2afpd_2unix_8c.html#a907addb2530cd783f48c9e6b65e31c10">setdirunixmode</a>, <a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a>, <a class="el" href="vfs_8h.html#a89ce685fd4c034a6bfe0567882eca476">VFS_FUNC_VARS_SETDIRUNIXMODE</a>)</td></tr>
+<tr class="memitem:a2b0746899fb50732238c4143e565986a" id="r_a2b0746899fb50732238c4143e565986a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b0746899fb50732238c4143e565986a">RF_deletefile_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td></tr>
+<tr class="memitem:a95bc33a8e6364618262a2e12fa8baa7f" id="r_a95bc33a8e6364618262a2e12fa8baa7f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95bc33a8e6364618262a2e12fa8baa7f">RF_copyfile_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:a3758ece53abd89212f443692039d8dcf" id="r_a3758ece53abd89212f443692039d8dcf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3758ece53abd89212f443692039d8dcf">RF_renamefile_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:acbdbbc1352234ea6f2bb058f654c6df0" id="r_acbdbbc1352234ea6f2bb058f654c6df0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbdbbc1352234ea6f2bb058f654c6df0">VFS_MFUNC</a> (<a class="el" href="etc_2afpd_2unix_8c.html#a907addb2530cd783f48c9e6b65e31c10">setdirunixmode</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st, <a class="el" href="vfs_8h.html#a89ce685fd4c034a6bfe0567882eca476">VFS_FUNC_VARS_SETDIRUNIXMODE</a>) VFS_MFUNC(ea_getcontent</td></tr>
+<tr class="memitem:a024416ea664409561cfc0c5c7c836ede" id="r_a024416ea664409561cfc0c5c7c836ede"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int static <a class="el" href="vfs_8h.html#af89b87599627b6c71839c8d06a8ca59a">VFS_FUNC_VARS_EA_GETCONTENT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a024416ea664409561cfc0c5c7c836ede">vfs_validupath</a> (<a class="el" href="vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a>)</td></tr>
 <tr class="memitem:a01d6a434f8a9405b2ce4b4a0ed5151a5" id="r_a01d6a434f8a9405b2ce4b4a0ed5151a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d6a434f8a9405b2ce4b4a0ed5151a5">initvol_vfs</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a85501b943c384df82b16806cbf638e1a" id="r_a85501b943c384df82b16806cbf638e1a"><td class="memItemLeft" align="right" valign="top">const struct vol *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85501b943c384df82b16806cbf638e1a">vol</a></td></tr>
+<tr class="memitem:ae28a59e1a9b3eb360f65bae673ee47cd" id="r_ae28a59e1a9b3eb360f65bae673ee47cd"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a></td></tr>
+<tr class="memitem:a8ebdde5d3c4a41b0f96f4fe6b7581131" id="r_a8ebdde5d3c4a41b0f96f4fe6b7581131"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a></td></tr>
+<tr class="memitem:a383f97fe3a901afb4efd55e9c44d146d" id="r_a383f97fe3a901afb4efd55e9c44d146d"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383f97fe3a901afb4efd55e9c44d146d">uname</a></td></tr>
+<tr class="memitem:a59efa05f47f157b861268665dab51649" id="r_a59efa05f47f157b861268665dab51649"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59efa05f47f157b861268665dab51649">oflag</a></td></tr>
+<tr class="memitem:a71b851f5438567dc19f25af3d576261e" id="r_a71b851f5438567dc19f25af3d576261e"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int const char *restrict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71b851f5438567dc19f25af3d576261e">attruname</a></td></tr>
+<tr class="memitem:afc52f1fa673ed4b8c2a1b381207c15c8" id="r_afc52f1fa673ed4b8c2a1b381207c15c8"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a></td></tr>
+<tr class="memitem:a642ae48927769266f4a87cf5efb4b344" id="r_a642ae48927769266f4a87cf5efb4b344"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
 <tr class="memitem:a5b605fa92de7beff1b73d2d52b5bf989" id="r_a5b605fa92de7beff1b73d2d52b5bf989"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b605fa92de7beff1b73d2d52b5bf989">vfs_master_funcs</a></td></tr>
 <tr class="memitem:a9c887f2dc3370c7c4fed7330680d3c7b" id="r_a9c887f2dc3370c7c4fed7330680d3c7b"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c887f2dc3370c7c4fed7330680d3c7b">netatalk_adouble_v2</a></td></tr>
 <tr class="memitem:a7e23988a66befee849dc5af8ca7adee7" id="r_a7e23988a66befee849dc5af8ca7adee7"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e23988a66befee849dc5af8ca7adee7">netatalk_adouble_ea</a></td></tr>
 <tr class="memitem:a28ea578e800fd027e5f909565d430b1e" id="r_a28ea578e800fd027e5f909565d430b1e"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28ea578e800fd027e5f909565d430b1e">netatalk_ea_adouble</a></td></tr>
 <tr class="memitem:a2cfa71637109ababff39ac2754a7ed7d" id="r_a2cfa71637109ababff39ac2754a7ed7d"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cfa71637109ababff39ac2754a7ed7d">netatalk_ea_sys</a></td></tr>
+<tr class="memitem:a8d7d1aecf9d075f196516add4715ecdc" id="r_a8d7d1aecf9d075f196516add4715ecdc"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7d1aecf9d075f196516add4715ecdc">netatalk_posix_acl_adouble</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a95ce94673c2211e0698669389f2c5804" name="a95ce94673c2211e0698669389f2c5804"></a>
@@ -276,8 +288,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ada36875b9f7353dff520f61ee58519f7" name="ada36875b9f7353dff520f61ee58519f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada36875b9f7353dff520f61ee58519f7">&#9670;&#160;</a></span>deletecurdir_adouble_loop()</h2>
+<a id="a8bec521352e0fc2e065d4a6d2082bc55" name="a8bec521352e0fc2e065d4a6d2082bc55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bec521352e0fc2e065d4a6d2082bc55">&#9670;&#160;</a></span>deletecurdir_adouble_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +300,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int deletecurdir_adouble_loop </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -303,12 +315,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -320,8 +332,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a578edc02a3917cebed25fe01a254d133" name="a578edc02a3917cebed25fe01a254d133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a578edc02a3917cebed25fe01a254d133">&#9670;&#160;</a></span>deletecurdir_ea_osx_chkifempty_loop()</h2>
+<a id="a334daf770acb0dcd818b8569c3cf20f1" name="a334daf770acb0dcd818b8569c3cf20f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334daf770acb0dcd818b8569c3cf20f1">&#9670;&#160;</a></span>deletecurdir_ea_osx_chkifempty_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,12 +359,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -364,8 +376,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a530a4b70d1ac25f8682aa7019b5efc5c" name="a530a4b70d1ac25f8682aa7019b5efc5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a530a4b70d1ac25f8682aa7019b5efc5c">&#9670;&#160;</a></span>deletecurdir_ea_osx_loop()</h2>
+<a id="ad31c712d78b85ec3f852ca9664b9aacd" name="ad31c712d78b85ec3f852ca9664b9aacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31c712d78b85ec3f852ca9664b9aacd">&#9670;&#160;</a></span>deletecurdir_ea_osx_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,12 +388,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int deletecurdir_ea_osx_loop </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct dirent *de</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">struct dirent *</td>          <td class="paramname"><span class="paramname"><em>de</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -391,12 +403,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int <a class="el" href="netacnv_8c.html#a451d8e49e10e6d5ebb6bb73f794e3c44">flag</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -499,8 +511,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad332706999a4322b631cf8e864dfafe5" name="ad332706999a4322b631cf8e864dfafe5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad332706999a4322b631cf8e864dfafe5">&#9670;&#160;</a></span>RF_chown_adouble()</h2>
+<a id="a2478ac8a3b73110e98e13b41cae4f21b" name="a2478ac8a3b73110e98e13b41cae4f21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2478ac8a3b73110e98e13b41cae4f21b">&#9670;&#160;</a></span>RF_chown_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -511,8 +523,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_chown_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a4fc7a2a75c481dc0e07a93dda4943d36">VFS_FUNC_ARGS_CHOWN</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uid_t</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gid_t</td>          <td class="paramname"><span class="paramname"><em>gid</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -524,8 +550,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab2e87087b92443b46bdac0495fdac9b8" name="ab2e87087b92443b46bdac0495fdac9b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2e87087b92443b46bdac0495fdac9b8">&#9670;&#160;</a></span>RF_chown_ea()</h2>
+<a id="a28f367e18c97cf953aa2c72488cf5e92" name="a28f367e18c97cf953aa2c72488cf5e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f367e18c97cf953aa2c72488cf5e92">&#9670;&#160;</a></span>RF_chown_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,8 +562,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_chown_ea </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a4fc7a2a75c481dc0e07a93dda4943d36">VFS_FUNC_ARGS_CHOWN</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uid_t</td>          <td class="paramname"><span class="paramname"><em>uid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gid_t</td>          <td class="paramname"><span class="paramname"><em>gid</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -549,8 +589,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa2d09473344256301fa060d5b7294aa5" name="aa2d09473344256301fa060d5b7294aa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2d09473344256301fa060d5b7294aa5">&#9670;&#160;</a></span>RF_copyfile_adouble()</h2>
+<a id="a58a105df426ca00e3eb69f0068a63cd0" name="a58a105df426ca00e3eb69f0068a63cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a105df426ca00e3eb69f0068a63cd0">&#9670;&#160;</a></span>RF_copyfile_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,8 +601,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_copyfile_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -574,8 +628,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a878fcc474f9e81dcd8438fa7636977" name="a6a878fcc474f9e81dcd8438fa7636977"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a878fcc474f9e81dcd8438fa7636977">&#9670;&#160;</a></span>RF_copyfile_ea()</h2>
+<a id="a95bc33a8e6364618262a2e12fa8baa7f" name="a95bc33a8e6364618262a2e12fa8baa7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95bc33a8e6364618262a2e12fa8baa7f">&#9670;&#160;</a></span>RF_copyfile_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,8 +640,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_copyfile_ea </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -649,8 +717,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1723864b2033d25389d53d4dbc991953" name="a1723864b2033d25389d53d4dbc991953"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1723864b2033d25389d53d4dbc991953">&#9670;&#160;</a></span>RF_deletefile_adouble()</h2>
+<a id="ac1d59f9ee7a5f419f3b6903065d26a88" name="ac1d59f9ee7a5f419f3b6903065d26a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d59f9ee7a5f419f3b6903065d26a88">&#9670;&#160;</a></span>RF_deletefile_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,7 +729,75 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_deletefile_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a32dd67fabc16b26184130d357b32d8aa">VFS_FUNC_ARGS_DELETEFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dirfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b0746899fb50732238c4143e565986a" name="a2b0746899fb50732238c4143e565986a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b0746899fb50732238c4143e565986a">&#9670;&#160;</a></span>RF_deletefile_ea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RF_deletefile_ea </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dirfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2ee8137ca66a9bf15c827fb03fea055" name="ac2ee8137ca66a9bf15c827fb03fea055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ee8137ca66a9bf15c827fb03fea055">&#9670;&#160;</a></span>RF_posix_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RF_posix_acl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -674,8 +810,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7436976302543eed33763c88b447457b" name="a7436976302543eed33763c88b447457b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7436976302543eed33763c88b447457b">&#9670;&#160;</a></span>RF_deletefile_ea()</h2>
+<a id="ac5b4569844a047b75a2144df3144e852" name="ac5b4569844a047b75a2144df3144e852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b4569844a047b75a2144df3144e852">&#9670;&#160;</a></span>RF_posix_remove_acl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -684,9 +820,9 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int RF_deletefile_ea </td>
+          <td class="memname">int RF_posix_remove_acl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a32dd67fabc16b26184130d357b32d8aa">VFS_FUNC_ARGS_DELETEFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="vfs_8h.html#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -749,8 +885,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5a01bed852a3aa68baafdf20db11662" name="ae5a01bed852a3aa68baafdf20db11662"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5a01bed852a3aa68baafdf20db11662">&#9670;&#160;</a></span>RF_renamefile_adouble()</h2>
+<a id="a1255c143523778db549a4bfb94c4fee8" name="a1255c143523778db549a4bfb94c4fee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1255c143523778db549a4bfb94c4fee8">&#9670;&#160;</a></span>RF_renamefile_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -761,8 +897,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_renamefile_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#aa1fd8052f56cf1d826a3d756d32fb7f6">VFS_FUNC_ARGS_RENAMEFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dirfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -774,8 +924,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a16e47d1568ecf21a65d8f2acc1d62b9c" name="a16e47d1568ecf21a65d8f2acc1d62b9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16e47d1568ecf21a65d8f2acc1d62b9c">&#9670;&#160;</a></span>RF_renamefile_ea()</h2>
+<a id="a3758ece53abd89212f443692039d8dcf" name="a3758ece53abd89212f443692039d8dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3758ece53abd89212f443692039d8dcf">&#9670;&#160;</a></span>RF_renamefile_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -786,8 +936,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_renamefile_ea </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#aa1fd8052f56cf1d826a3d756d32fb7f6">VFS_FUNC_ARGS_RENAMEFILE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dirfd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -899,8 +1063,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a669223dafe0f3c3fffdf364e7b0bf075" name="a669223dafe0f3c3fffdf364e7b0bf075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a669223dafe0f3c3fffdf364e7b0bf075">&#9670;&#160;</a></span>RF_setdirunixmode_adouble()</h2>
+<a id="a11120a8ae955d2153c5c4b680a325a47" name="a11120a8ae955d2153c5c4b680a325a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11120a8ae955d2153c5c4b680a325a47">&#9670;&#160;</a></span>RF_setdirunixmode_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -911,8 +1075,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_setdirunixmode_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -924,8 +1102,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a71e41db825187a4ac47c98d32ec218a5" name="a71e41db825187a4ac47c98d32ec218a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71e41db825187a4ac47c98d32ec218a5">&#9670;&#160;</a></span>RF_setdirunixmode_ea()</h2>
+<a id="aa81b07083a9152da3429c358e8355095" name="aa81b07083a9152da3429c358e8355095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81b07083a9152da3429c358e8355095">&#9670;&#160;</a></span>RF_setdirunixmode_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -936,8 +1114,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_setdirunixmode_ea </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -949,8 +1141,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7738ae301c47a13e1eade22700e6a41" name="ad7738ae301c47a13e1eade22700e6a41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7738ae301c47a13e1eade22700e6a41">&#9670;&#160;</a></span>RF_setfilmode_adouble()</h2>
+<a id="aefbc872b2b7e1dceb4fa77ca955deeaa" name="aefbc872b2b7e1dceb4fa77ca955deeaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefbc872b2b7e1dceb4fa77ca955deeaa">&#9670;&#160;</a></span>RF_setfilmode_adouble()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -961,8 +1153,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_setfilmode_adouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -974,8 +1180,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a78fb4023531fb07c8c44f0f7f6335240" name="a78fb4023531fb07c8c44f0f7f6335240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78fb4023531fb07c8c44f0f7f6335240">&#9670;&#160;</a></span>RF_setfilmode_ea()</h2>
+<a id="aa5114a884b136d8b992d1bd2caa4eeca" name="aa5114a884b136d8b992d1bd2caa4eeca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5114a884b136d8b992d1bd2caa4eeca">&#9670;&#160;</a></span>RF_setfilmode_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -986,8 +1192,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int RF_setfilmode_ea </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -999,8 +1219,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae125803b3aa7fb60ec4d23a2caae4db2" name="ae125803b3aa7fb60ec4d23a2caae4db2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae125803b3aa7fb60ec4d23a2caae4db2">&#9670;&#160;</a></span>setdirmode_adouble_loop()</h2>
+<a id="a74533c891d4d14cadfae5faa9b7dc443" name="a74533c891d4d14cadfae5faa9b7dc443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74533c891d4d14cadfae5faa9b7dc443">&#9670;&#160;</a></span>setdirmode_adouble_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1016,7 +1236,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct dirent *de</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">struct dirent *</td>          <td class="paramname"><span class="paramname"><em>de</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1093,8 +1313,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac928b37e23303e73b7ee903d0a420219" name="ac928b37e23303e73b7ee903d0a420219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac928b37e23303e73b7ee903d0a420219">&#9670;&#160;</a></span>VFS_MFUNC()</h2>
+<a id="acbdbbc1352234ea6f2bb058f654c6df0" name="acbdbbc1352234ea6f2bb058f654c6df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdbbc1352234ea6f2bb058f654c6df0">&#9670;&#160;</a></span>VFS_MFUNC()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1107,7 +1327,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1119,7 +1354,74 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a024416ea664409561cfc0c5c7c836ede" name="a024416ea664409561cfc0c5c7c836ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024416ea664409561cfc0c5c7c836ede">&#9670;&#160;</a></span>vfs_validupath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a> *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int static <a class="el" href="vfs_8h.html#af89b87599627b6c71839c8d06a8ca59a">VFS_FUNC_VARS_EA_GETCONTENT</a> int vfs_validupath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a71b851f5438567dc19f25af3d576261e" name="a71b851f5438567dc19f25af3d576261e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b851f5438567dc19f25af3d576261e">&#9670;&#160;</a></span>attruname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict const char* restrict int const char* restrict attruname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a642ae48927769266f4a87cf5efb4b344" name="a642ae48927769266f4a87cf5efb4b344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642ae48927769266f4a87cf5efb4b344">&#9670;&#160;</a></span>fd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict const char* restrict int const char* restrict int int fd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc52f1fa673ed4b8c2a1b381207c15c8" name="afc52f1fa673ed4b8c2a1b381207c15c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc52f1fa673ed4b8c2a1b381207c15c8">&#9670;&#160;</a></span>maxreply</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict const char* restrict int const char* restrict int maxreply</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7e23988a66befee849dc5af8ca7adee7" name="a7e23988a66befee849dc5af8ca7adee7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e23988a66befee849dc5af8ca7adee7">&#9670;&#160;</a></span>netatalk_adouble_ea</h2>
 
@@ -1141,30 +1443,30 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     <a class="code hl_function" href="#a566a6f6c47672c6337d417d2b09b41f7">validupath_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#ab2e87087b92443b46bdac0495fdac9b8">RF_chown_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a28f367e18c97cf953aa2c72488cf5e92">RF_chown_ea</a>,</div>
 <div class="line">     <a class="code hl_function" href="#afdabe9ec295b9b49e345fd7b8ce4e1da">RF_renamedir_ea</a>,</div>
 <div class="line">     <a class="code hl_function" href="#adb71d57265a72e180b5d9b64f5cf52d4">RF_deletecurdir_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a78fb4023531fb07c8c44f0f7f6335240">RF_setfilmode_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#aa5114a884b136d8b992d1bd2caa4eeca">RF_setfilmode_ea</a>,</div>
 <div class="line">     <a class="code hl_function" href="#a9003e8eb589d1b75568a436f3b3a6317">RF_setdirmode_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a71e41db825187a4ac47c98d32ec218a5">RF_setdirunixmode_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#aa81b07083a9152da3429c358e8355095">RF_setdirunixmode_ea</a>,</div>
 <div class="line">     <a class="code hl_function" href="#ae6bece48f3e0dda9675192d343e33333">RF_setdirowner_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a7436976302543eed33763c88b447457b">RF_deletefile_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a16e47d1568ecf21a65d8f2acc1d62b9c">RF_renamefile_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a6a878fcc474f9e81dcd8438fa7636977">RF_copyfile_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a2b0746899fb50732238c4143e565986a">RF_deletefile_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a3758ece53abd89212f443692039d8dcf">RF_renamefile_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a95bc33a8e6364618262a2e12fa8baa7f">RF_copyfile_ea</a>,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL</div>
 <div class="line">}</div>
-<div class="ttc" id="avfs_8c_html_a16e47d1568ecf21a65d8f2acc1d62b9c"><div class="ttname"><a href="#a16e47d1568ecf21a65d8f2acc1d62b9c">RF_renamefile_ea</a></div><div class="ttdeci">static int RF_renamefile_ea(VFS_FUNC_ARGS_RENAMEFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:675</div></div>
+<div class="ttc" id="avfs_8c_html_a28f367e18c97cf953aa2c72488cf5e92"><div class="ttname"><a href="#a28f367e18c97cf953aa2c72488cf5e92">RF_chown_ea</a></div><div class="ttdeci">static int RF_chown_ea(const struct vol *vol, const char *path, uid_t uid, gid_t gid)</div><div class="ttdef"><b>Definition</b> vfs.c:510</div></div>
+<div class="ttc" id="avfs_8c_html_a2b0746899fb50732238c4143e565986a"><div class="ttname"><a href="#a2b0746899fb50732238c4143e565986a">RF_deletefile_ea</a></div><div class="ttdeci">static int RF_deletefile_ea(const struct vol *vol, int dirfd, const char *file)</div><div class="ttdef"><b>Definition</b> vfs.c:604</div></div>
+<div class="ttc" id="avfs_8c_html_a3758ece53abd89212f443692039d8dcf"><div class="ttname"><a href="#a3758ece53abd89212f443692039d8dcf">RF_renamefile_ea</a></div><div class="ttdeci">static int RF_renamefile_ea(const struct vol *vol, int dirfd, const char *src, const char *dst)</div><div class="ttdef"><b>Definition</b> vfs.c:675</div></div>
 <div class="ttc" id="avfs_8c_html_a566a6f6c47672c6337d417d2b09b41f7"><div class="ttname"><a href="#a566a6f6c47672c6337d417d2b09b41f7">validupath_ea</a></div><div class="ttdeci">static int validupath_ea(VFS_FUNC_ARGS_VALIDUPATH)</div><div class="ttdef"><b>Definition</b> vfs.c:493</div></div>
-<div class="ttc" id="avfs_8c_html_a6a878fcc474f9e81dcd8438fa7636977"><div class="ttname"><a href="#a6a878fcc474f9e81dcd8438fa7636977">RF_copyfile_ea</a></div><div class="ttdeci">static int RF_copyfile_ea(VFS_FUNC_ARGS_COPYFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:611</div></div>
-<div class="ttc" id="avfs_8c_html_a71e41db825187a4ac47c98d32ec218a5"><div class="ttname"><a href="#a71e41db825187a4ac47c98d32ec218a5">RF_setdirunixmode_ea</a></div><div class="ttdeci">static int RF_setdirunixmode_ea(VFS_FUNC_ARGS_SETDIRUNIXMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:573</div></div>
-<div class="ttc" id="avfs_8c_html_a7436976302543eed33763c88b447457b"><div class="ttname"><a href="#a7436976302543eed33763c88b447457b">RF_deletefile_ea</a></div><div class="ttdeci">static int RF_deletefile_ea(VFS_FUNC_ARGS_DELETEFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:604</div></div>
-<div class="ttc" id="avfs_8c_html_a78fb4023531fb07c8c44f0f7f6335240"><div class="ttname"><a href="#a78fb4023531fb07c8c44f0f7f6335240">RF_setfilmode_ea</a></div><div class="ttdeci">static int RF_setfilmode_ea(VFS_FUNC_ARGS_SETFILEMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:580</div></div>
 <div class="ttc" id="avfs_8c_html_a9003e8eb589d1b75568a436f3b3a6317"><div class="ttname"><a href="#a9003e8eb589d1b75568a436f3b3a6317">RF_setdirmode_ea</a></div><div class="ttdeci">static int RF_setdirmode_ea(VFS_FUNC_ARGS_SETDIRMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:589</div></div>
-<div class="ttc" id="avfs_8c_html_ab2e87087b92443b46bdac0495fdac9b8"><div class="ttname"><a href="#ab2e87087b92443b46bdac0495fdac9b8">RF_chown_ea</a></div><div class="ttdeci">static int RF_chown_ea(VFS_FUNC_ARGS_CHOWN)</div><div class="ttdef"><b>Definition</b> vfs.c:510</div></div>
+<div class="ttc" id="avfs_8c_html_a95bc33a8e6364618262a2e12fa8baa7f"><div class="ttname"><a href="#a95bc33a8e6364618262a2e12fa8baa7f">RF_copyfile_ea</a></div><div class="ttdeci">static int RF_copyfile_ea(const struct vol *vol, int sfd, const char *src, const char *dst)</div><div class="ttdef"><b>Definition</b> vfs.c:611</div></div>
+<div class="ttc" id="avfs_8c_html_aa5114a884b136d8b992d1bd2caa4eeca"><div class="ttname"><a href="#aa5114a884b136d8b992d1bd2caa4eeca">RF_setfilmode_ea</a></div><div class="ttdeci">static int RF_setfilmode_ea(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> vfs.c:580</div></div>
+<div class="ttc" id="avfs_8c_html_aa81b07083a9152da3429c358e8355095"><div class="ttname"><a href="#aa81b07083a9152da3429c358e8355095">RF_setdirunixmode_ea</a></div><div class="ttdeci">static int RF_setdirunixmode_ea(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> vfs.c:573</div></div>
 <div class="ttc" id="avfs_8c_html_adb71d57265a72e180b5d9b64f5cf52d4"><div class="ttname"><a href="#adb71d57265a72e180b5d9b64f5cf52d4">RF_deletecurdir_ea</a></div><div class="ttdeci">static int RF_deletecurdir_ea(VFS_FUNC_ARGS_DELETECURDIR)</div><div class="ttdef"><b>Definition</b> vfs.c:556</div></div>
 <div class="ttc" id="avfs_8c_html_ae6bece48f3e0dda9675192d343e33333"><div class="ttname"><a href="#ae6bece48f3e0dda9675192d343e33333">RF_setdirowner_ea</a></div><div class="ttdeci">static int RF_setdirowner_ea(VFS_FUNC_ARGS_SETDIROWNER)</div><div class="ttdef"><b>Definition</b> vfs.c:597</div></div>
 <div class="ttc" id="avfs_8c_html_afdabe9ec295b9b49e345fd7b8ce4e1da"><div class="ttname"><a href="#afdabe9ec295b9b49e345fd7b8ce4e1da">RF_renamedir_ea</a></div><div class="ttdeci">static int RF_renamedir_ea(VFS_FUNC_ARGS_RENAMEDIR)</div><div class="ttdef"><b>Definition</b> vfs.c:519</div></div>
@@ -1192,33 +1494,33 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     <a class="code hl_function" href="#aaae6578b609fb73d8e0dd464dcdc8b3f">validupath_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#ad332706999a4322b631cf8e864dfafe5">RF_chown_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a2478ac8a3b73110e98e13b41cae4f21b">RF_chown_adouble</a>,</div>
 <div class="line">     <a class="code hl_function" href="#a4edd3b828dbff23df82d8c23e18a6ebc">RF_renamedir_adouble</a>,</div>
 <div class="line">     <a class="code hl_function" href="#aa29c62fd425a1803e45c1ee18a3e93ba">RF_deletecurdir_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#ad7738ae301c47a13e1eade22700e6a41">RF_setfilmode_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#aefbc872b2b7e1dceb4fa77ca955deeaa">RF_setfilmode_adouble</a>,</div>
 <div class="line">     <a class="code hl_function" href="#a9c3a0266c5d5a2f779926a5c0e505180">RF_setdirmode_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a669223dafe0f3c3fffdf364e7b0bf075">RF_setdirunixmode_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a11120a8ae955d2153c5c4b680a325a47">RF_setdirunixmode_adouble</a>,</div>
 <div class="line">     <a class="code hl_function" href="#a4ccfea770dd2e982d0568ceeaf984456">RF_setdirowner_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#a1723864b2033d25389d53d4dbc991953">RF_deletefile_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#ae5a01bed852a3aa68baafdf20db11662">RF_renamefile_adouble</a>,</div>
-<div class="line">     <a class="code hl_function" href="#aa2d09473344256301fa060d5b7294aa5">RF_copyfile_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#ac1d59f9ee7a5f419f3b6903065d26a88">RF_deletefile_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a1255c143523778db549a4bfb94c4fee8">RF_renamefile_adouble</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a58a105df426ca00e3eb69f0068a63cd0">RF_copyfile_adouble</a>,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL</div>
 <div class="line">}</div>
-<div class="ttc" id="avfs_8c_html_a1723864b2033d25389d53d4dbc991953"><div class="ttname"><a href="#a1723864b2033d25389d53d4dbc991953">RF_deletefile_adouble</a></div><div class="ttdeci">static int RF_deletefile_adouble(VFS_FUNC_ARGS_DELETEFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:288</div></div>
+<div class="ttc" id="avfs_8c_html_a11120a8ae955d2153c5c4b680a325a47"><div class="ttname"><a href="#a11120a8ae955d2153c5c4b680a325a47">RF_setdirunixmode_adouble</a></div><div class="ttdeci">static int RF_setdirunixmode_adouble(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> vfs.c:190</div></div>
+<div class="ttc" id="avfs_8c_html_a1255c143523778db549a4bfb94c4fee8"><div class="ttname"><a href="#a1255c143523778db549a4bfb94c4fee8">RF_renamefile_adouble</a></div><div class="ttdeci">static int RF_renamefile_adouble(const struct vol *vol, int dirfd, const char *src, const char *dst)</div><div class="ttdef"><b>Definition</b> vfs.c:294</div></div>
+<div class="ttc" id="avfs_8c_html_a2478ac8a3b73110e98e13b41cae4f21b"><div class="ttname"><a href="#a2478ac8a3b73110e98e13b41cae4f21b">RF_chown_adouble</a></div><div class="ttdeci">static int RF_chown_adouble(const struct vol *vol, const char *path, uid_t uid, gid_t gid)</div><div class="ttdef"><b>Definition</b> vfs.c:120</div></div>
 <div class="ttc" id="avfs_8c_html_a4ccfea770dd2e982d0568ceeaf984456"><div class="ttname"><a href="#a4ccfea770dd2e982d0568ceeaf984456">RF_setdirowner_adouble</a></div><div class="ttdeci">static int RF_setdirowner_adouble(VFS_FUNC_ARGS_SETDIROWNER)</div><div class="ttdef"><b>Definition</b> vfs.c:277</div></div>
 <div class="ttc" id="avfs_8c_html_a4edd3b828dbff23df82d8c23e18a6ebc"><div class="ttname"><a href="#a4edd3b828dbff23df82d8c23e18a6ebc">RF_renamedir_adouble</a></div><div class="ttdeci">static int RF_renamedir_adouble(VFS_FUNC_ARGS_RENAMEDIR)</div><div class="ttdef"><b>Definition</b> vfs.c:137</div></div>
-<div class="ttc" id="avfs_8c_html_a669223dafe0f3c3fffdf364e7b0bf075"><div class="ttname"><a href="#a669223dafe0f3c3fffdf364e7b0bf075">RF_setdirunixmode_adouble</a></div><div class="ttdeci">static int RF_setdirunixmode_adouble(VFS_FUNC_ARGS_SETDIRUNIXMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:190</div></div>
+<div class="ttc" id="avfs_8c_html_a58a105df426ca00e3eb69f0068a63cd0"><div class="ttname"><a href="#a58a105df426ca00e3eb69f0068a63cd0">RF_copyfile_adouble</a></div><div class="ttdeci">static int RF_copyfile_adouble(const struct vol *vol, int sfd, const char *src, const char *dst)</div><div class="ttdef"><b>Definition</b> vfs.c:344</div></div>
 <div class="ttc" id="avfs_8c_html_a9c3a0266c5d5a2f779926a5c0e505180"><div class="ttname"><a href="#a9c3a0266c5d5a2f779926a5c0e505180">RF_setdirmode_adouble</a></div><div class="ttdeci">static int RF_setdirmode_adouble(VFS_FUNC_ARGS_SETDIRMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:243</div></div>
 <div class="ttc" id="avfs_8c_html_aa29c62fd425a1803e45c1ee18a3e93ba"><div class="ttname"><a href="#aa29c62fd425a1803e45c1ee18a3e93ba">RF_deletecurdir_adouble</a></div><div class="ttdeci">static int RF_deletecurdir_adouble(VFS_FUNC_ARGS_DELETECURDIR)</div><div class="ttdef"><b>Definition</b> vfs.c:163</div></div>
-<div class="ttc" id="avfs_8c_html_aa2d09473344256301fa060d5b7294aa5"><div class="ttname"><a href="#aa2d09473344256301fa060d5b7294aa5">RF_copyfile_adouble</a></div><div class="ttdeci">static int RF_copyfile_adouble(VFS_FUNC_ARGS_COPYFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:344</div></div>
 <div class="ttc" id="avfs_8c_html_aaae6578b609fb73d8e0dd464dcdc8b3f"><div class="ttname"><a href="#aaae6578b609fb73d8e0dd464dcdc8b3f">validupath_adouble</a></div><div class="ttdeci">static int validupath_adouble(VFS_FUNC_ARGS_VALIDUPATH)</div><div class="ttdef"><b>Definition</b> vfs.c:109</div></div>
-<div class="ttc" id="avfs_8c_html_ad332706999a4322b631cf8e864dfafe5"><div class="ttname"><a href="#ad332706999a4322b631cf8e864dfafe5">RF_chown_adouble</a></div><div class="ttdeci">static int RF_chown_adouble(VFS_FUNC_ARGS_CHOWN)</div><div class="ttdef"><b>Definition</b> vfs.c:120</div></div>
-<div class="ttc" id="avfs_8c_html_ad7738ae301c47a13e1eade22700e6a41"><div class="ttname"><a href="#ad7738ae301c47a13e1eade22700e6a41">RF_setfilmode_adouble</a></div><div class="ttdeci">static int RF_setfilmode_adouble(VFS_FUNC_ARGS_SETFILEMODE)</div><div class="ttdef"><b>Definition</b> vfs.c:184</div></div>
-<div class="ttc" id="avfs_8c_html_ae5a01bed852a3aa68baafdf20db11662"><div class="ttname"><a href="#ae5a01bed852a3aa68baafdf20db11662">RF_renamefile_adouble</a></div><div class="ttdeci">static int RF_renamefile_adouble(VFS_FUNC_ARGS_RENAMEFILE)</div><div class="ttdef"><b>Definition</b> vfs.c:294</div></div>
+<div class="ttc" id="avfs_8c_html_ac1d59f9ee7a5f419f3b6903065d26a88"><div class="ttname"><a href="#ac1d59f9ee7a5f419f3b6903065d26a88">RF_deletefile_adouble</a></div><div class="ttdeci">static int RF_deletefile_adouble(const struct vol *vol, int dirfd, const char *file)</div><div class="ttdef"><b>Definition</b> vfs.c:288</div></div>
+<div class="ttc" id="avfs_8c_html_aefbc872b2b7e1dceb4fa77ca955deeaa"><div class="ttname"><a href="#aefbc872b2b7e1dceb4fa77ca955deeaa">RF_setfilmode_adouble</a></div><div class="ttdeci">static int RF_setfilmode_adouble(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> vfs.c:184</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1243,37 +1545,37 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     NULL,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#afac0b92e7a111eb0f0e56bc2435f8f42">ea_chown</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a32a66bd7a702d0afca2aa5e75624211c">ea_chown</a>,</div>
 <div class="line">     NULL, </div>
 <div class="line">     NULL, </div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a5323f63ccc365d0d66222b58d517d9e4">ea_chmod_file</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a7795ad74d00472bfc7319b6758014e70">ea_chmod_file</a>,</div>
 <div class="line">     NULL, </div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a791f082109f5acf2e13c998ea794c6ad">ea_chmod_dir</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#af83eb9737ddb83ee095c269a96d1cbec">ea_chmod_dir</a>,</div>
 <div class="line">     NULL, </div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a62c42a257c964ab4072bdfb4369f8bec">ea_deletefile</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#af964985cac401c576e64d536bd96f618">ea_renamefile</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#ab80472353fc8b27df742a7c207c9642f">ea_copyfile</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#ab94d9c4146678814e9ced438a17f617a">ea_deletefile</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#adef5ee2525953d7aed1b60e7d3d60e82">ea_renamefile</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#af70f4c191ec7b92beb387b1152bb6779">ea_copyfile</a>,</div>
 <div class="line"> </div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a9f37f4ab6de1998a390fb1377d3db8ec">get_easize</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#abdcba3f219ba7ea689233a89171e4393">get_eacontent</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a3574633f00604a1fa13bc278d52bcf88">list_eas</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a540222e598dd837fcafc4c196b206d0d">set_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a7c32958f515e1fb7feb5f2ea58b65376">remove_ea</a></div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a4299d5bc81fd68aad423d4403e062bb1">get_easize</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a45e85cd01b4587261f673845925dd032">get_eacontent</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a7510ff430f60589704d409f9d9c750e4">list_eas</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a3bc5c70a3a74ae37e879878d64986adf">set_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a6e8fac37d1592dcc56272d50faf5d79a">remove_ea</a></div>
 <div class="line">}</div>
-<div class="ttc" id="aea_8h_html_a3574633f00604a1fa13bc278d52bcf88"><div class="ttname"><a href="ea_8h.html#a3574633f00604a1fa13bc278d52bcf88">list_eas</a></div><div class="ttdeci">int list_eas(VFS_FUNC_ARGS_EA_LIST)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1198</div></div>
-<div class="ttc" id="aea_8h_html_a5323f63ccc365d0d66222b58d517d9e4"><div class="ttname"><a href="ea_8h.html#a5323f63ccc365d0d66222b58d517d9e4">ea_chmod_file</a></div><div class="ttdeci">int ea_chmod_file(VFS_FUNC_ARGS_SETFILEMODE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1720</div></div>
-<div class="ttc" id="aea_8h_html_a540222e598dd837fcafc4c196b206d0d"><div class="ttname"><a href="ea_8h.html#a540222e598dd837fcafc4c196b206d0d">set_ea</a></div><div class="ttdeci">int set_ea(VFS_FUNC_ARGS_EA_SET)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1285</div></div>
-<div class="ttc" id="aea_8h_html_a62c42a257c964ab4072bdfb4369f8bec"><div class="ttname"><a href="ea_8h.html#a62c42a257c964ab4072bdfb4369f8bec">ea_deletefile</a></div><div class="ttdeci">int ea_deletefile(VFS_FUNC_ARGS_DELETEFILE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1375</div></div>
-<div class="ttc" id="aea_8h_html_a791f082109f5acf2e13c998ea794c6ad"><div class="ttname"><a href="ea_8h.html#a791f082109f5acf2e13c998ea794c6ad">ea_chmod_dir</a></div><div class="ttdeci">int ea_chmod_dir(VFS_FUNC_ARGS_SETDIRUNIXMODE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1795</div></div>
-<div class="ttc" id="aea_8h_html_a7c32958f515e1fb7feb5f2ea58b65376"><div class="ttname"><a href="ea_8h.html#a7c32958f515e1fb7feb5f2ea58b65376">remove_ea</a></div><div class="ttdeci">int remove_ea(VFS_FUNC_ARGS_EA_REMOVE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1337</div></div>
-<div class="ttc" id="aea_8h_html_a9f37f4ab6de1998a390fb1377d3db8ec"><div class="ttname"><a href="ea_8h.html#a9f37f4ab6de1998a390fb1377d3db8ec">get_easize</a></div><div class="ttdeci">int get_easize(VFS_FUNC_ARGS_EA_GETSIZE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1038</div></div>
-<div class="ttc" id="aea_8h_html_ab80472353fc8b27df742a7c207c9642f"><div class="ttname"><a href="ea_8h.html#ab80472353fc8b27df742a7c207c9642f">ea_copyfile</a></div><div class="ttdeci">int ea_copyfile(VFS_FUNC_ARGS_COPYFILE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1558</div></div>
-<div class="ttc" id="aea_8h_html_abdcba3f219ba7ea689233a89171e4393"><div class="ttname"><a href="ea_8h.html#abdcba3f219ba7ea689233a89171e4393">get_eacontent</a></div><div class="ttdeci">int get_eacontent(VFS_FUNC_ARGS_EA_GETCONTENT)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1101</div></div>
-<div class="ttc" id="aea_8h_html_af964985cac401c576e64d536bd96f618"><div class="ttname"><a href="ea_8h.html#af964985cac401c576e64d536bd96f618">ea_renamefile</a></div><div class="ttdeci">int ea_renamefile(VFS_FUNC_ARGS_RENAMEFILE)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1435</div></div>
-<div class="ttc" id="aea_8h_html_afac0b92e7a111eb0f0e56bc2435f8f42"><div class="ttname"><a href="ea_8h.html#afac0b92e7a111eb0f0e56bc2435f8f42">ea_chown</a></div><div class="ttdeci">int ea_chown(VFS_FUNC_ARGS_CHOWN)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1653</div></div>
+<div class="ttc" id="aea_8h_html_a32a66bd7a702d0afca2aa5e75624211c"><div class="ttname"><a href="ea_8h.html#a32a66bd7a702d0afca2aa5e75624211c">ea_chown</a></div><div class="ttdeci">int ea_chown(const struct vol *vol, const char *path, uid_t uid, gid_t gid)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1560</div></div>
+<div class="ttc" id="aea_8h_html_a3bc5c70a3a74ae37e879878d64986adf"><div class="ttname"><a href="ea_8h.html#a3bc5c70a3a74ae37e879878d64986adf">set_ea</a></div><div class="ttdeci">int set_ea(const struct vol *restrict vol, const char *restrict uname, const char *restrict attruname, const char *restrict ibuf, size_t attrsize, int oflag, int fd)</div><div class="ttdoc">set a Solaris native EA</div><div class="ttdef"><b>Definition</b> ea_ad.c:1203</div></div>
+<div class="ttc" id="aea_8h_html_a4299d5bc81fd68aad423d4403e062bb1"><div class="ttname"><a href="ea_8h.html#a4299d5bc81fd68aad423d4403e062bb1">get_easize</a></div><div class="ttdeci">int get_easize(const struct vol *restrict vol, char *restrict rbuf, size_t *restrict rbuflen, const char *restrict uname, int oflag, const char *restrict attruname, int fd)</div><div class="ttdoc">get size of an EA</div><div class="ttdef"><b>Definition</b> ea_ad.c:971</div></div>
+<div class="ttc" id="aea_8h_html_a45e85cd01b4587261f673845925dd032"><div class="ttname"><a href="ea_8h.html#a45e85cd01b4587261f673845925dd032">get_eacontent</a></div><div class="ttdeci">int get_eacontent(const struct vol *restrict vol, char *restrict rbuf, size_t *restrict rbuflen, const char *restrict uname, int oflag, const char *restrict attruname, int maxreply, int fd)</div><div class="ttdoc">copy EA into rbuf</div><div class="ttdef"><b>Definition</b> ea_ad.c:1029</div></div>
+<div class="ttc" id="aea_8h_html_a6e8fac37d1592dcc56272d50faf5d79a"><div class="ttname"><a href="ea_8h.html#a6e8fac37d1592dcc56272d50faf5d79a">remove_ea</a></div><div class="ttdeci">int remove_ea(const struct vol *restrict vol, const char *restrict uname, const char *restrict attruname, int oflag, int fd)</div><div class="ttdoc">remove a EA from a file</div><div class="ttdef"><b>Definition</b> ea_ad.c:1250</div></div>
+<div class="ttc" id="aea_8h_html_a7510ff430f60589704d409f9d9c750e4"><div class="ttname"><a href="ea_8h.html#a7510ff430f60589704d409f9d9c750e4">list_eas</a></div><div class="ttdeci">int list_eas(const struct vol *restrict vol, char *restrict attrnamebuf, size_t *restrict buflen, const char *restrict uname, int oflag, int fd)</div><div class="ttdoc">copy names of EAs into attrnamebuf</div><div class="ttdef"><b>Definition</b> ea_ad.c:1121</div></div>
+<div class="ttc" id="aea_8h_html_a7795ad74d00472bfc7319b6758014e70"><div class="ttname"><a href="ea_8h.html#a7795ad74d00472bfc7319b6758014e70">ea_chmod_file</a></div><div class="ttdeci">int ea_chmod_file(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1627</div></div>
+<div class="ttc" id="aea_8h_html_ab94d9c4146678814e9ced438a17f617a"><div class="ttname"><a href="ea_8h.html#ab94d9c4146678814e9ced438a17f617a">ea_deletefile</a></div><div class="ttdeci">int ea_deletefile(const struct vol *vol, int dirfd, const char *file)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1288</div></div>
+<div class="ttc" id="aea_8h_html_adef5ee2525953d7aed1b60e7d3d60e82"><div class="ttname"><a href="ea_8h.html#adef5ee2525953d7aed1b60e7d3d60e82">ea_renamefile</a></div><div class="ttdeci">int ea_renamefile(const struct vol *vol, int dirfd, const char *src, const char *dst)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1348</div></div>
+<div class="ttc" id="aea_8h_html_af70f4c191ec7b92beb387b1152bb6779"><div class="ttname"><a href="ea_8h.html#af70f4c191ec7b92beb387b1152bb6779">ea_copyfile</a></div><div class="ttdeci">int ea_copyfile(const struct vol *vol, int sfd, const char *src, const char *dst)</div><div class="ttdoc">copy EAs</div><div class="ttdef"><b>Definition</b> ea_ad.c:1465</div></div>
+<div class="ttc" id="aea_8h_html_af83eb9737ddb83ee095c269a96d1cbec"><div class="ttname"><a href="ea_8h.html#af83eb9737ddb83ee095c269a96d1cbec">ea_chmod_dir</a></div><div class="ttdeci">int ea_chmod_dir(const struct vol *vol, const char *name, mode_t mode, struct stat *st)</div><div class="ttdef"><b>Definition</b> ea_ad.c:1702</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1307,24 +1609,120 @@ Variables</h2></td></tr>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
 <div class="line">     NULL,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#ad5cff487ef43128d7517702eb530d76a">sys_ea_copyfile</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#aa3a167f18eff44cff6a589b16fa80a69">sys_ea_copyfile</a>,</div>
 <div class="line"> </div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a305b5ce7eaa08fd4802fc2391edbd078">sys_get_easize</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a933e2a3798e8ca5621d2b36fbf6fcb98">sys_get_eacontent</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a3e6da94fc07d4a079ae1f47ad4ef790f">sys_list_eas</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#ad6a464caedbac4f605b4c6167d7aaa8c">sys_set_ea</a>,</div>
-<div class="line">     <a class="code hl_function" href="ea_8h.html#a3d5512d82ad014d70906c0db7f943ac7">sys_remove_ea</a></div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a93ef8ca22fabcfad95a7d8f806bcfc89">sys_get_easize</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a2350a748c0f60a1c790e0c6593425fd3">sys_get_eacontent</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a2a5a429d5af008341cfe70ae8dd5f164">sys_list_eas</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#a22be087a49b0dae6dd17c10043fc129d">sys_set_ea</a>,</div>
+<div class="line">     <a class="code hl_function" href="ea_8h.html#ad3f52080848f50aa540f0d71d2360f84">sys_remove_ea</a></div>
 <div class="line">}</div>
-<div class="ttc" id="aea_8h_html_a305b5ce7eaa08fd4802fc2391edbd078"><div class="ttname"><a href="ea_8h.html#a305b5ce7eaa08fd4802fc2391edbd078">sys_get_easize</a></div><div class="ttdeci">int sys_get_easize(VFS_FUNC_ARGS_EA_GETSIZE)</div><div class="ttdef"><b>Definition</b> ea_sys.c:64</div></div>
-<div class="ttc" id="aea_8h_html_a3d5512d82ad014d70906c0db7f943ac7"><div class="ttname"><a href="ea_8h.html#a3d5512d82ad014d70906c0db7f943ac7">sys_remove_ea</a></div><div class="ttdeci">int sys_remove_ea(VFS_FUNC_ARGS_EA_REMOVE)</div><div class="ttdef"><b>Definition</b> ea_sys.c:522</div></div>
-<div class="ttc" id="aea_8h_html_a3e6da94fc07d4a079ae1f47ad4ef790f"><div class="ttname"><a href="ea_8h.html#a3e6da94fc07d4a079ae1f47ad4ef790f">sys_list_eas</a></div><div class="ttdeci">int sys_list_eas(VFS_FUNC_ARGS_EA_LIST)</div><div class="ttdef"><b>Definition</b> ea_sys.c:301</div></div>
-<div class="ttc" id="aea_8h_html_a933e2a3798e8ca5621d2b36fbf6fcb98"><div class="ttname"><a href="ea_8h.html#a933e2a3798e8ca5621d2b36fbf6fcb98">sys_get_eacontent</a></div><div class="ttdeci">int sys_get_eacontent(VFS_FUNC_ARGS_EA_GETCONTENT)</div><div class="ttdef"><b>Definition</b> ea_sys.c:163</div></div>
-<div class="ttc" id="aea_8h_html_ad5cff487ef43128d7517702eb530d76a"><div class="ttname"><a href="ea_8h.html#ad5cff487ef43128d7517702eb530d76a">sys_ea_copyfile</a></div><div class="ttdeci">int sys_ea_copyfile(VFS_FUNC_ARGS_COPYFILE)</div><div class="ttdef"><b>Definition</b> ea_sys.c:595</div></div>
-<div class="ttc" id="aea_8h_html_ad6a464caedbac4f605b4c6167d7aaa8c"><div class="ttname"><a href="ea_8h.html#ad6a464caedbac4f605b4c6167d7aaa8c">sys_set_ea</a></div><div class="ttdeci">int sys_set_ea(VFS_FUNC_ARGS_EA_SET)</div><div class="ttdef"><b>Definition</b> ea_sys.c:402</div></div>
+<div class="ttc" id="aea_8h_html_a22be087a49b0dae6dd17c10043fc129d"><div class="ttname"><a href="ea_8h.html#a22be087a49b0dae6dd17c10043fc129d">sys_set_ea</a></div><div class="ttdeci">int sys_set_ea(const struct vol *restrict vol, const char *restrict uname, const char *restrict attruname, const char *restrict ibuf, size_t attrsize, int oflag, int fd)</div><div class="ttdoc">set a native EA</div><div class="ttdef"><b>Definition</b> ea_sys.c:380</div></div>
+<div class="ttc" id="aea_8h_html_a2350a748c0f60a1c790e0c6593425fd3"><div class="ttname"><a href="ea_8h.html#a2350a748c0f60a1c790e0c6593425fd3">sys_get_eacontent</a></div><div class="ttdeci">int sys_get_eacontent(const struct vol *restrict vol, char *restrict rbuf, size_t *restrict rbuflen, const char *restrict uname, int oflag, const char *restrict attruname, int maxreply, int fd)</div><div class="ttdoc">copy native EA into rbuf</div><div class="ttdef"><b>Definition</b> ea_sys.c:152</div></div>
+<div class="ttc" id="aea_8h_html_a2a5a429d5af008341cfe70ae8dd5f164"><div class="ttname"><a href="ea_8h.html#a2a5a429d5af008341cfe70ae8dd5f164">sys_list_eas</a></div><div class="ttdeci">int sys_list_eas(const struct vol *restrict vol, char *restrict attrnamebuf, size_t *restrict buflen, const char *restrict uname, int oflag, int fd)</div><div class="ttdoc">copy names of native EAs into attrnamebuf</div><div class="ttdef"><b>Definition</b> ea_sys.c:285</div></div>
+<div class="ttc" id="aea_8h_html_a93ef8ca22fabcfad95a7d8f806bcfc89"><div class="ttname"><a href="ea_8h.html#a93ef8ca22fabcfad95a7d8f806bcfc89">sys_get_easize</a></div><div class="ttdeci">int sys_get_easize(const struct vol *restrict vol, char *restrict rbuf, size_t *restrict rbuflen, const char *restrict uname, int oflag, const char *restrict attruname, int fd)</div><div class="ttdoc">get size of a native EA</div><div class="ttdef"><b>Definition</b> ea_sys.c:59</div></div>
+<div class="ttc" id="aea_8h_html_aa3a167f18eff44cff6a589b16fa80a69"><div class="ttname"><a href="ea_8h.html#aa3a167f18eff44cff6a589b16fa80a69">sys_ea_copyfile</a></div><div class="ttdeci">int sys_ea_copyfile(const struct vol *vol, int sfd, const char *src, const char *dst)</div><div class="ttdoc">copy EAs</div><div class="ttdef"><b>Definition</b> ea_sys.c:561</div></div>
+<div class="ttc" id="aea_8h_html_ad3f52080848f50aa540f0d71d2360f84"><div class="ttname"><a href="ea_8h.html#ad3f52080848f50aa540f0d71d2360f84">sys_remove_ea</a></div><div class="ttdeci">int sys_remove_ea(const struct vol *restrict vol, const char *restrict uname, const char *restrict attruname, int oflag, int fd)</div><div class="ttdoc">remove a native EA</div><div class="ttdef"><b>Definition</b> ea_sys.c:494</div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a8d7d1aecf9d075f196516add4715ecdc" name="a8d7d1aecf9d075f196516add4715ecdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7d1aecf9d075f196516add4715ecdc">&#9670;&#160;</a></span>netatalk_posix_acl_adouble</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structvfs__ops.html">vfs_ops</a> netatalk_posix_acl_adouble</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     <a class="code hl_function" href="#ac2ee8137ca66a9bf15c827fb03fea055">RF_posix_acl</a>,</div>
+<div class="line">     <a class="code hl_function" href="#ac5b4569844a047b75a2144df3144e852">RF_posix_remove_acl</a>,</div>
+<div class="line">    NULL</div>
+<div class="line">}</div>
+<div class="ttc" id="avfs_8c_html_ac2ee8137ca66a9bf15c827fb03fea055"><div class="ttname"><a href="#ac2ee8137ca66a9bf15c827fb03fea055">RF_posix_acl</a></div><div class="ttdeci">static int RF_posix_acl(VFS_FUNC_ARGS_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:446</div></div>
+<div class="ttc" id="avfs_8c_html_ac5b4569844a047b75a2144df3144e852"><div class="ttname"><a href="#ac5b4569844a047b75a2144df3144e852">RF_posix_remove_acl</a></div><div class="ttdeci">static int RF_posix_remove_acl(VFS_FUNC_ARGS_REMOVE_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:470</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a59efa05f47f157b861268665dab51649" name="a59efa05f47f157b861268665dab51649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59efa05f47f157b861268665dab51649">&#9670;&#160;</a></span>oflag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict const char* restrict int oflag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae28a59e1a9b3eb360f65bae673ee47cd" name="ae28a59e1a9b3eb360f65bae673ee47cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28a59e1a9b3eb360f65bae673ee47cd">&#9670;&#160;</a></span>rbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict rbuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ebdde5d3c4a41b0f96f4fe6b7581131" name="a8ebdde5d3c4a41b0f96f4fe6b7581131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebdde5d3c4a41b0f96f4fe6b7581131">&#9670;&#160;</a></span>rbuflen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict rbuflen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a383f97fe3a901afb4efd55e9c44d146d" name="a383f97fe3a901afb4efd55e9c44d146d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383f97fe3a901afb4efd55e9c44d146d">&#9670;&#160;</a></span>uname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structvol.html">vol</a>* restrict char* restrict size_t* restrict const char* restrict uname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="a5b605fa92de7beff1b73d2d52b5bf989" name="a5b605fa92de7beff1b73d2d52b5bf989"></a>
@@ -1347,7 +1745,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    vfs_validupath,</div>
+<div class="line">    <a class="code hl_function" href="#a024416ea664409561cfc0c5c7c836ede">vfs_validupath</a>,</div>
 <div class="line">    vfs_chown,</div>
 <div class="line">    vfs_renamedir,</div>
 <div class="line">    vfs_deletecurdir,</div>
@@ -1359,8 +1757,8 @@ Variables</h2></td></tr>
 <div class="line">    vfs_renamefile,</div>
 <div class="line">    vfs_copyfile,</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
+<div class="line">    vfs_acl,</div>
+<div class="line">    vfs_remove_acl,</div>
 <div class="line"> </div>
 <div class="line">    vfs_ea_getsize,</div>
 <div class="line">    vfs_ea_getcontent,</div>
@@ -1368,7 +1766,22 @@ Variables</h2></td></tr>
 <div class="line">    vfs_ea_set,</div>
 <div class="line">    vfs_ea_remove</div>
 <div class="line">}</div>
+<div class="ttc" id="avfs_8c_html_a024416ea664409561cfc0c5c7c836ede"><div class="ttname"><a href="#a024416ea664409561cfc0c5c7c836ede">vfs_validupath</a></div><div class="ttdeci">const struct vol *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int static VFS_FUNC_VARS_EA_GETCONTENT int vfs_validupath(VFS_FUNC_ARGS_VALIDUPATH)</div><div class="ttdef"><b>Definition</b> vfs.c:756</div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a85501b943c384df82b16806cbf638e1a" name="a85501b943c384df82b16806cbf638e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85501b943c384df82b16806cbf638e1a">&#9670;&#160;</a></span>vol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct vol* restrict vol</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

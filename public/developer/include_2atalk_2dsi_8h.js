@@ -65,6 +65,7 @@ var include_2atalk_2dsi_8h =
     [ "dsi_readinit", "include_2atalk_2dsi_8h.html#a48c9509fc4d43c70abd31f83216e3029", null ],
     [ "dsi_setstatus", "include_2atalk_2dsi_8h.html#a32eab4361ae5442dd820de14f3ce261d", null ],
     [ "dsi_stream_read", "include_2atalk_2dsi_8h.html#a0e3adabf3642168ba72df020c12739c3", null ],
+    [ "dsi_stream_read_file", "include_2atalk_2dsi_8h.html#a3c83765737c393d974e16c0b5823c015", null ],
     [ "dsi_stream_receive", "include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb", null ],
     [ "dsi_stream_send", "include_2atalk_2dsi_8h.html#a354933e43ceb9e503bcb6b176cd2e91c", null ],
     [ "dsi_stream_write", "include_2atalk_2dsi_8h.html#a11e338d3cc639fc8a2b36687b2357e2c", null ],

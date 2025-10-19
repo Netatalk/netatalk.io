@@ -2,17 +2,17 @@ var volume_8c =
 [
     [ "TM_USED_CACHETIME", "volume_8c.html#ac4d3e032a02129ff5c3fb6cc53b366b6", null ],
     [ "VOLPASSLEN", "volume_8c.html#ab91cc2a6c06bfb6df64a4b4707e1ba62", null ],
-    [ "afp_closevol", "volume_8c.html#a1b0b2e1c644e5fe1bde6b34f5c5e0bf5", null ],
-    [ "afp_getsrvrparms", "volume_8c.html#a1f444c6c2dbd3a3d0f747e9608976ced", null ],
-    [ "afp_getvolparams", "volume_8c.html#af86c6582a776540cd8a633f2467b09a2", null ],
-    [ "afp_openvol", "volume_8c.html#a40cbf720c669c4788c33a937f843f788", null ],
-    [ "afp_setvolparams", "volume_8c.html#a9d0e091077ecf395d4dba40811169b0b", null ],
+    [ "afp_closevol", "volume_8c.html#a04ff1e17c1ebb74b93d2daa0512ddae1", null ],
+    [ "afp_getsrvrparms", "volume_8c.html#a00a08e6d68c4316971ee1091c0996ec2", null ],
+    [ "afp_getvolparams", "volume_8c.html#a57fb629530477545a4a431ba88b6ebfe", null ],
+    [ "afp_openvol", "volume_8c.html#a1837c0cf5e1d8bd06791cf2afabcabd2", null ],
+    [ "afp_setvolparams", "volume_8c.html#af50235e434594e2f5e8040734222fef7", null ],
     [ "afprun", "volume_8c.html#afe9ea35bbc011d1fa1e8899fba11e3b2", null ],
     [ "close_all_vol", "volume_8c.html#a8d3850e9ce09f2e7d3f050a075061f06", null ],
     [ "closevol", "volume_8c.html#a2a520b0859fa29329f47ad253fc05a88", null ],
     [ "get_tm_bands", "volume_8c.html#a155c1fc5f0d3fab95650b132c140b374", null ],
     [ "get_tm_bandsize", "volume_8c.html#a34ebace5e5ab70f9fc98faaa3aa0a10e", null ],
-    [ "get_tm_used", "volume_8c.html#ab30abe0f2f1128bc6f26fc15bd460567", null ],
+    [ "get_tm_used", "volume_8c.html#adfe5099b568ec54b0848aa194b88d989", null ],
     [ "getvolparams", "volume_8c.html#ad85327bfe21ba1b6b1d70023bbfc5154", null ],
     [ "getvolspace", "volume_8c.html#a34676be4f98d6d949ca3f6d6c34104f9", null ],
     [ "pollvoltime", "volume_8c.html#afbd1fece47d14540e34b5bf09f21146c", null ],
@@ -21,5 +21,5 @@ var volume_8c =
     [ "stat_vol", "volume_8c.html#a1f3f043aff23d37db89adf6c632eb383", null ],
     [ "vol_setdate", "volume_8c.html#a91c7f7413328d1011cb35816080584d3", null ],
     [ "volume_codepage", "volume_8c.html#abbe28a5d57960666f93a6a3c985cbc67", null ],
-    [ "volume_openDB", "volume_8c.html#a7461ed2981a1df5d056717caea6356ce", null ]
+    [ "volume_openDB", "volume_8c.html#a4cd55a92e34bf34e97d5bf7ff547f5c1", null ]
 ];

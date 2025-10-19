@@ -40,6 +40,5 @@ var searchData=
   ['dsi_5fstream_2ec_37',['dsi_stream.c',['../dsi__stream_8c.html',1,'']]],
   ['dsi_5ftcp_2ec_38',['dsi_tcp.c',['../dsi__tcp_8c.html',1,'']]],
   ['dsi_5ftickle_2ec_39',['dsi_tickle.c',['../dsi__tickle_8c.html',1,'']]],
-  ['dsi_5fwrite_2ec_40',['dsi_write.c',['../dsi__write_8c.html',1,'']]],
-  ['dummy_2ec_41',['dummy.c',['../dummy_8c.html',1,'']]]
+  ['dsi_5fwrite_2ec_40',['dsi_write.c',['../dsi__write_8c.html',1,'']]]
 ];

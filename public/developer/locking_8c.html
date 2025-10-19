@@ -102,17 +102,20 @@ $(function(){initNavTree('locking_8c.html','',''); });
   <div class="headertitle"><div class="title">locking.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Netatalk utility functions: locking.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a672c6a501d5d654e6189258d7c03f3d6" id="r_a672c6a501d5d654e6189258d7c03f3d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672c6a501d5d654e6189258d7c03f3d6">lock_reg</a> (int fd, int cmd, int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, off_t offset, int whence, off_t len)</td></tr>
+<tr class="memitem:a672c6a501d5d654e6189258d7c03f3d6" id="r_a672c6a501d5d654e6189258d7c03f3d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672c6a501d5d654e6189258d7c03f3d6">lock_reg</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int cmd, int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, off_t offset, int whence, off_t len)</td></tr>
 <tr class="memdesc:a672c6a501d5d654e6189258d7c03f3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock a file with fctnl  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Netatalk utility functions </p>
+<div class="textblock"><p>Netatalk utility functions: locking. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a672c6a501d5d654e6189258d7c03f3d6" name="a672c6a501d5d654e6189258d7c03f3d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a672c6a501d5d654e6189258d7c03f3d6">&#9670;&#160;</a></span>lock_reg()</h2>
@@ -157,12 +160,12 @@ Functions</h2></td></tr>
 <p>This function is called via the macros: read_lock, write_lock, un_lock</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>(r) File descriptor </td></tr>
-    <tr><td class="paramname">cmd</td><td>(r) cmd to fcntl, only F_SETLK is usable here </td></tr>
-    <tr><td class="paramname">type</td><td>(r) F_RDLCK, F_WRLCK, F_UNLCK </td></tr>
-    <tr><td class="paramname">offset</td><td>(r) byte offset relative to l_whence </td></tr>
-    <tr><td class="paramname">whence</td><td>(r) SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
-    <tr><td class="paramname">len</td><td>(r) no. of bytes (0 means to EOF)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>cmd to fcntl, only F_SETLK is usable here </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>F_RDLCK, F_WRLCK, F_UNLCK </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>byte offset relative to l_whence </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>SEEK_SET, SEEK_CUR, SEEK_END </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>no. of bytes (0 means to EOF)</td></tr>
   </table>
   </dd>
 </dl>

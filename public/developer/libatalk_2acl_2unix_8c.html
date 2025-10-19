@@ -102,6 +102,103 @@ $(function(){initNavTree('libatalk_2acl_2unix_8c.html','',''); });
   <div class="headertitle"><div class="title">unix.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/acl.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="acl_8h_source.html">atalk/acl.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2unix_8h_source.html">atalk/unix.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a162900942ae01783f9163e7958ce247c" id="r_a162900942ae01783f9163e7958ce247c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162900942ae01783f9163e7958ce247c">SEARCH_GROUP_OBJ</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memitem:aae5fe4fcfdf48a6e1a57dc1b066250ff" id="r_aae5fe4fcfdf48a6e1a57dc1b066250ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5fe4fcfdf48a6e1a57dc1b066250ff">SEARCH_MASK</a>&#160;&#160;&#160;0x02</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a178c05777cbc6f5a962b07ad7ccd6d9c" id="r_a178c05777cbc6f5a962b07ad7ccd6d9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a> (const char *name, mode_t mode)</td></tr>
+<tr class="memitem:aa92126210d99787163679b5280f287e5" id="r_aa92126210d99787163679b5280f287e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92126210d99787163679b5280f287e5">posix_fchmod</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, mode_t mode)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a162900942ae01783f9163e7958ce247c" name="a162900942ae01783f9163e7958ce247c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162900942ae01783f9163e7958ce247c">&#9670;&#160;</a></span>SEARCH_GROUP_OBJ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEARCH_GROUP_OBJ&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae5fe4fcfdf48a6e1a57dc1b066250ff" name="aae5fe4fcfdf48a6e1a57dc1b066250ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5fe4fcfdf48a6e1a57dc1b066250ff">&#9670;&#160;</a></span>SEARCH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEARCH_MASK&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a178c05777cbc6f5a962b07ad7ccd6d9c" name="a178c05777cbc6f5a962b07ad7ccd6d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178c05777cbc6f5a962b07ad7ccd6d9c">&#9670;&#160;</a></span>posix_chmod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posix_chmod </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa92126210d99787163679b5280f287e5" name="aa92126210d99787163679b5280f287e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92126210d99787163679b5280f287e5">&#9670;&#160;</a></span>posix_fchmod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posix_fchmod </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

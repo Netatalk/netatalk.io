@@ -14,6 +14,8 @@ var dsi__tcp_8c =
     [ "dsi_tcp_listen", "dsi__tcp_8c.html#a0bb59d6dac33f6a264536c14eb30ec9e", null ],
     [ "dsi_tcp_open", "dsi__tcp_8c.html#ab7bb33168d22ffff7cbff785269bb2d1", null ],
     [ "guess_interface", "dsi__tcp_8c.html#a05a8e3f73fedd40451d51f61d56d2846", null ],
-    [ "timeout_handler", "dsi__tcp_8c.html#a2da596f601020747eb437fb74aec9961", null ],
+    [ "timeout_handler", "dsi__tcp_8c.html#afc5156781fff24538dac575faf76ea95", null ],
+    [ "allow_severity", "dsi__tcp_8c.html#a11fa9be1c66808772452b30ba180dc67", null ],
+    [ "deny_severity", "dsi__tcp_8c.html#a70da7854174737ba4ca40206b7d14a47", null ],
     [ "itimer", "dsi__tcp_8c.html#a76b070d23b9d12e7d4999d7b0bc29514", null ]
 ];

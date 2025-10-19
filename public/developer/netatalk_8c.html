@@ -114,7 +114,7 @@ $(function(){initNavTree('netatalk_8c.html','',''); });
 <code>#include &lt;sys/time.h&gt;</code><br />
 <code>#include &lt;sys/uio.h&gt;</code><br />
 <code>#include &lt;sys/wait.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;event2/event.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
@@ -143,12 +143,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a30efb71cd1aa59d5fe2795634f71db9f" id="r_a30efb71cd1aa59d5fe2795634f71db9f"><td class="memItemLeft" align="right" valign="top">static pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30efb71cd1aa59d5fe2795634f71db9f">run_process</a> (const char *<a class="el" href="structpath.html">path</a>,...)</td></tr>
 <tr class="memitem:ae19b278e512fbf3c0e01f4b54e0b12b4" id="r_ae19b278e512fbf3c0e01f4b54e0b12b4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae19b278e512fbf3c0e01f4b54e0b12b4">kill_childs</a> (int sig,...)</td></tr>
 <tr class="memitem:aa0ac66ed3992216889d1e3553964d491" id="r_aa0ac66ed3992216889d1e3553964d491"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ac66ed3992216889d1e3553964d491">service_running</a> (pid_t pid)</td></tr>
+<tr class="memitem:a0187b1e276e7f7fadc672c04ad089417" id="r_a0187b1e276e7f7fadc672c04ad089417"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0187b1e276e7f7fadc672c04ad089417">set_sl_volumes</a> (void)</td></tr>
 <tr class="memitem:a8b02f8133491383a379f2772379705a7" id="r_a8b02f8133491383a379f2772379705a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b02f8133491383a379f2772379705a7">libevent_logmsg_cb</a> (int severity, const char *msg)</td></tr>
-<tr class="memitem:aae358b3639e853edc343d05415303f05" id="r_aae358b3639e853edc343d05415303f05"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae358b3639e853edc343d05415303f05">sigterm_cb</a> (evutil_socket_t fd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, short what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *arg <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:abaf303d66984dee4d8ad0ecb8ba19aac" id="r_abaf303d66984dee4d8ad0ecb8ba19aac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf303d66984dee4d8ad0ecb8ba19aac">sigquit_cb</a> (evutil_socket_t fd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, short what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *arg <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:acb89da4a92e4820e5c52088ed0c2d51f" id="r_acb89da4a92e4820e5c52088ed0c2d51f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb89da4a92e4820e5c52088ed0c2d51f">sighup_cb</a> (evutil_socket_t fd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, short what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *arg <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:ad0dfdb120e50b36ae7fe4b872f035fd2" id="r_ad0dfdb120e50b36ae7fe4b872f035fd2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0dfdb120e50b36ae7fe4b872f035fd2">sigchld_cb</a> (evutil_socket_t fd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, short what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *arg <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:a26b62019157a3dc9cc28350e1f03da7d" id="r_a26b62019157a3dc9cc28350e1f03da7d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26b62019157a3dc9cc28350e1f03da7d">timer_cb</a> (evutil_socket_t fd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, short what <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, void *arg <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
+<tr class="memitem:a20f9ac422686f293eb07a1f46abfaed4" id="r_a20f9ac422686f293eb07a1f46abfaed4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f9ac422686f293eb07a1f46abfaed4">sigterm_cb</a> (evutil_socket_t <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, short what, void *arg)</td></tr>
+<tr class="memitem:ac4aa196f88c1f16f473874958f9a5649" id="r_ac4aa196f88c1f16f473874958f9a5649"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4aa196f88c1f16f473874958f9a5649">sigquit_cb</a> (evutil_socket_t <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, short what, void *arg)</td></tr>
+<tr class="memitem:a7f4b4073c836d3a0b21a2468463ee69e" id="r_a7f4b4073c836d3a0b21a2468463ee69e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f4b4073c836d3a0b21a2468463ee69e">sighup_cb</a> (evutil_socket_t <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, short what, void *arg)</td></tr>
+<tr class="memitem:aa22d73dddc8f808b0e383886e81a49f3" id="r_aa22d73dddc8f808b0e383886e81a49f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22d73dddc8f808b0e383886e81a49f3">sigchld_cb</a> (evutil_socket_t <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, short what, void *arg)</td></tr>
+<tr class="memitem:a11adcf80c7e2c8ec4cfc8d2e54c049cf" id="r_a11adcf80c7e2c8ec4cfc8d2e54c049cf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11adcf80c7e2c8ec4cfc8d2e54c049cf">timer_cb</a> (evutil_socket_t <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, short what, void *arg)</td></tr>
 <tr class="memitem:a1a5ae5ed268128f7331c4a08a0bb3e60" id="r_a1a5ae5ed268128f7331c4a08a0bb3e60"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5ae5ed268128f7331c4a08a0bb3e60">netatalk_exit</a> (int ret)</td></tr>
 <tr class="memitem:a0417b14ba802a7789bc0f12ca416ca87" id="r_a0417b14ba802a7789bc0f12ca416ca87"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0417b14ba802a7789bc0f12ca416ca87">show_netatalk_version</a> (void)</td></tr>
 <tr class="memitem:a1203951ae3e76309811415385367833d" id="r_a1203951ae3e76309811415385367833d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1203951ae3e76309811415385367833d">show_netatalk_paths</a> (void)</td></tr>
@@ -163,7 +164,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a791e645c6bf89f2f376f7c501ac1ca51" id="r_a791e645c6bf89f2f376f7c501ac1ca51"><td class="memItemLeft" align="right" valign="top">static pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a791e645c6bf89f2f376f7c501ac1ca51">dbus_pid</a> = <a class="el" href="#ac720527c624dc5e12d825d2526a69e76">NETATALK_SRV_OPTIONAL</a></td></tr>
 <tr class="memitem:aa740003668ce1bb6b49b0669a1235d90" id="r_aa740003668ce1bb6b49b0669a1235d90"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa740003668ce1bb6b49b0669a1235d90">afpd_restarts</a></td></tr>
 <tr class="memitem:a3f998227e63c675df57118c92518ead6" id="r_a3f998227e63c675df57118c92518ead6"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f998227e63c675df57118c92518ead6">cnid_metad_restarts</a></td></tr>
-<tr class="memitem:ac6340f30f969d0ebe0de3564f7dd58b7" id="r_ac6340f30f969d0ebe0de3564f7dd58b7"><td class="memItemLeft" align="right" valign="top">static uint dbus_restarts&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6340f30f969d0ebe0de3564f7dd58b7">_U_</a></td></tr>
+<tr class="memitem:a6d685cb48a941ecdb9814e15fe28fc78" id="r_a6d685cb48a941ecdb9814e15fe28fc78"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d685cb48a941ecdb9814e15fe28fc78">dbus_restarts</a></td></tr>
 <tr class="memitem:ab1a154f7530a81e9dd1d63fc6b98a5c7" id="r_ab1a154f7530a81e9dd1d63fc6b98a5c7"><td class="memItemLeft" align="right" valign="top">static struct event_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1a154f7530a81e9dd1d63fc6b98a5c7">base</a></td></tr>
 <tr class="memitem:aa1a90abe327afafdefacfeb399f199b8" id="r_aa1a90abe327afafdefacfeb399f199b8"><td class="memItemLeft" align="right" valign="top">struct event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1a90abe327afafdefacfeb399f199b8">sigterm_ev</a></td></tr>
 <tr class="memitem:a2a5e60b97dcbc1acfef5fc6c681ead6f" id="r_a2a5e60b97dcbc1acfef5fc6c681ead6f"><td class="memItemLeft" align="right" valign="top">struct event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a5e60b97dcbc1acfef5fc6c681ead6f">sigquit_ev</a></td></tr>
@@ -171,6 +172,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a148d8919e1b1e9753ee45f84ef6146a8" id="r_a148d8919e1b1e9753ee45f84ef6146a8"><td class="memItemLeft" align="right" valign="top">struct event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a148d8919e1b1e9753ee45f84ef6146a8">sighup_ev</a></td></tr>
 <tr class="memitem:a3557d91eaaab6faa46bf2b94371473e6" id="r_a3557d91eaaab6faa46bf2b94371473e6"><td class="memItemLeft" align="right" valign="top">struct event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3557d91eaaab6faa46bf2b94371473e6">timer_ev</a></td></tr>
 <tr class="memitem:a68056dfb1fbbea5c1742fc58417ce5d6" id="r_a68056dfb1fbbea5c1742fc58417ce5d6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68056dfb1fbbea5c1742fc58417ce5d6">in_shutdown</a></td></tr>
+<tr class="memitem:afdb5934a80e04d6d8b27de8cc6aa9495" id="r_afdb5934a80e04d6d8b27de8cc6aa9495"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdb5934a80e04d6d8b27de8cc6aa9495">dbus_path</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aee95e5a07714234f550ed1948ea02f07" name="aee95e5a07714234f550ed1948ea02f07"></a>
@@ -311,7 +313,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">int argc</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -402,6 +404,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a0187b1e276e7f7fadc672c04ad089417" name="a0187b1e276e7f7fadc672c04ad089417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0187b1e276e7f7fadc672c04ad089417">&#9670;&#160;</a></span>set_sl_volumes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_sl_volumes </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1203951ae3e76309811415385367833d" name="a1203951ae3e76309811415385367833d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1203951ae3e76309811415385367833d">&#9670;&#160;</a></span>show_netatalk_paths()</h2>
 
@@ -452,8 +479,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad0dfdb120e50b36ae7fe4b872f035fd2" name="ad0dfdb120e50b36ae7fe4b872f035fd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0dfdb120e50b36ae7fe4b872f035fd2">&#9670;&#160;</a></span>sigchld_cb()</h2>
+<a id="aa22d73dddc8f808b0e383886e81a49f3" name="aa22d73dddc8f808b0e383886e81a49f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22d73dddc8f808b0e383886e81a49f3">&#9670;&#160;</a></span>sigchld_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,17 +491,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sigchld_cb </td>
           <td>(</td>
-          <td class="paramtype">evutil_socket_t fd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">evutil_socket_t</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">short what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *arg</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -486,8 +513,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acb89da4a92e4820e5c52088ed0c2d51f" name="acb89da4a92e4820e5c52088ed0c2d51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb89da4a92e4820e5c52088ed0c2d51f">&#9670;&#160;</a></span>sighup_cb()</h2>
+<a id="a7f4b4073c836d3a0b21a2468463ee69e" name="a7f4b4073c836d3a0b21a2468463ee69e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f4b4073c836d3a0b21a2468463ee69e">&#9670;&#160;</a></span>sighup_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,17 +525,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sighup_cb </td>
           <td>(</td>
-          <td class="paramtype">evutil_socket_t fd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">evutil_socket_t</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">short what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *arg</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -520,8 +547,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abaf303d66984dee4d8ad0ecb8ba19aac" name="abaf303d66984dee4d8ad0ecb8ba19aac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaf303d66984dee4d8ad0ecb8ba19aac">&#9670;&#160;</a></span>sigquit_cb()</h2>
+<a id="ac4aa196f88c1f16f473874958f9a5649" name="ac4aa196f88c1f16f473874958f9a5649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4aa196f88c1f16f473874958f9a5649">&#9670;&#160;</a></span>sigquit_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,17 +559,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sigquit_cb </td>
           <td>(</td>
-          <td class="paramtype">evutil_socket_t fd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">evutil_socket_t</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">short what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *arg</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -554,8 +581,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aae358b3639e853edc343d05415303f05" name="aae358b3639e853edc343d05415303f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae358b3639e853edc343d05415303f05">&#9670;&#160;</a></span>sigterm_cb()</h2>
+<a id="a20f9ac422686f293eb07a1f46abfaed4" name="a20f9ac422686f293eb07a1f46abfaed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f9ac422686f293eb07a1f46abfaed4">&#9670;&#160;</a></span>sigterm_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -566,17 +593,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void sigterm_cb </td>
           <td>(</td>
-          <td class="paramtype">evutil_socket_t fd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">evutil_socket_t</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">short what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *arg</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -588,8 +615,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a26b62019157a3dc9cc28350e1f03da7d" name="a26b62019157a3dc9cc28350e1f03da7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26b62019157a3dc9cc28350e1f03da7d">&#9670;&#160;</a></span>timer_cb()</h2>
+<a id="a11adcf80c7e2c8ec4cfc8d2e54c049cf" name="a11adcf80c7e2c8ec4cfc8d2e54c049cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11adcf80c7e2c8ec4cfc8d2e54c049cf">&#9670;&#160;</a></span>timer_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,17 +627,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void timer_cb </td>
           <td>(</td>
-          <td class="paramtype">evutil_socket_t fd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">evutil_socket_t</td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">short what</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>what</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *arg</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -648,28 +675,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="ac6340f30f969d0ebe0de3564f7dd58b7" name="ac6340f30f969d0ebe0de3564f7dd58b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6340f30f969d0ebe0de3564f7dd58b7">&#9670;&#160;</a></span>_U_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char *dbus_path _U_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a634ae667bf27715c478c76031bc299e5" name="a634ae667bf27715c478c76031bc299e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a634ae667bf27715c478c76031bc299e5">&#9670;&#160;</a></span>afpd_pid</h2>
 
@@ -780,6 +785,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afdb5934a80e04d6d8b27de8cc6aa9495" name="afdb5934a80e04d6d8b27de8cc6aa9495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb5934a80e04d6d8b27de8cc6aa9495">&#9670;&#160;</a></span>dbus_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* dbus_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a791e645c6bf89f2f376f7c501ac1ca51" name="a791e645c6bf89f2f376f7c501ac1ca51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a791e645c6bf89f2f376f7c501ac1ca51">&#9670;&#160;</a></span>dbus_pid</h2>
 
@@ -791,6 +818,28 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">pid_t dbus_pid = <a class="el" href="#ac720527c624dc5e12d825d2526a69e76">NETATALK_SRV_OPTIONAL</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d685cb48a941ecdb9814e15fe28fc78" name="a6d685cb48a941ecdb9814e15fe28fc78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d685cb48a941ecdb9814e15fe28fc78">&#9670;&#160;</a></span>dbus_restarts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint dbus_restarts</td>
         </tr>
       </table>
   </td>

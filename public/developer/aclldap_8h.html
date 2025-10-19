@@ -109,7 +109,9 @@ $(function(){initNavTree('aclldap_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5d769831adeb5c48c3364ffc4eb53b0d" id="r_a5d769831adeb5c48c3364ffc4eb53b0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d769831adeb5c48c3364ffc4eb53b0d">ldap_getuuidfromname</a> (const char *name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, char **uuid_string)</td></tr>
+<tr class="memdesc:a5d769831adeb5c48c3364ffc4eb53b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search UUID for name in LDAP.  <br /></td></tr>
 <tr class="memitem:a30002eb32b1325e488e96508bda6099f" id="r_a30002eb32b1325e488e96508bda6099f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30002eb32b1325e488e96508bda6099f">ldap_getnamefromuuid</a> (const char *uuidstr, char **name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
+<tr class="memdesc:a30002eb32b1325e488e96508bda6099f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LDAP search wrapper.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a30002eb32b1325e488e96508bda6099f" name="a30002eb32b1325e488e96508bda6099f"></a>
@@ -144,6 +146,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>LDAP search wrapper. </p>
+<p>returns allocated storage in name, caller must free it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuidstr</td><td>uuid to search as ascii string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>return pointer to name as allocated string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">type</td><td>return type: USER or GROUP</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on errror or not found </dd></dl>
+
 </div>
 </div>
 <a id="a5d769831adeb5c48c3364ffc4eb53b0d" name="a5d769831adeb5c48c3364ffc4eb53b0d"></a>
@@ -177,6 +191,18 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Search UUID for name in LDAP. </p>
+<p>Caller must free uuid_string when done with it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>name to search </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of USER or GROUP </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uuid_string</td><td>result as pointer to allocated UUID-string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error or not found </dd></dl>
 
 </div>
 </div>

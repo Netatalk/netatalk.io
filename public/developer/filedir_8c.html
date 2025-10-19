@@ -107,7 +107,7 @@ $(function(){initNavTree('filedir_8c.html','',''); });
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/param.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="acl_8h_source.html">atalk/acl.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
@@ -131,16 +131,17 @@ $(function(){initNavTree('filedir_8c.html','',''); });
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:add5c97562117c8166bcb16d03a5ac8a7" id="r_add5c97562117c8166bcb16d03a5ac8a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add5c97562117c8166bcb16d03a5ac8a7">afp_getfildirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a283dc3426ea736f0c4880ef83991d137" id="r_a283dc3426ea736f0c4880ef83991d137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a283dc3426ea736f0c4880ef83991d137">afp_setfildirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:aaf3d7c501a179729c041fc87f8c3d0eb" id="r_aaf3d7c501a179729c041fc87f8c3d0eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf3d7c501a179729c041fc87f8c3d0eb">afp_getfildirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a4e6e49e9f086c31ffe117958540348ee" id="r_a4e6e49e9f086c31ffe117958540348ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e6e49e9f086c31ffe117958540348ee">afp_setfildirparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:a96e844e49a131e37a0f62523cfbaae2e" id="r_a96e844e49a131e37a0f62523cfbaae2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e844e49a131e37a0f62523cfbaae2e">check_name</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *name)</td></tr>
 <tr class="memitem:a267b1ab637d518ddb3dc28e3f50c58bd" id="r_a267b1ab637d518ddb3dc28e3f50c58bd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a267b1ab637d518ddb3dc28e3f50c58bd">moveandrename</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *sdir, int sdir_fd, char *oldname, char *newname, int isdir)</td></tr>
-<tr class="memitem:ae2e2fb0a1bbcfd2cf03895f643517e2c" id="r_ae2e2fb0a1bbcfd2cf03895f643517e2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2e2fb0a1bbcfd2cf03895f643517e2c">afp_rename</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a311917713100c4f9999c32e9c03cdfd1" id="r_a311917713100c4f9999c32e9c03cdfd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311917713100c4f9999c32e9c03cdfd1">afp_rename</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:aef9d8dceb37c2536134ac6e2db41a92a" id="r_aef9d8dceb37c2536134ac6e2db41a92a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef9d8dceb37c2536134ac6e2db41a92a">delete_vetoed_files</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *upath, bool in_vetodir)</td></tr>
-<tr class="memitem:a620961d910ddbb90b8c2115bdf30de93" id="r_a620961d910ddbb90b8c2115bdf30de93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620961d910ddbb90b8c2115bdf30de93">afp_delete</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memdesc:aef9d8dceb37c2536134ac6e2db41a92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursivley delete vetoed files and directories if the volume option is set.  <br /></td></tr>
+<tr class="memitem:a706fb5ab0f65ecc1da47f2f2ab2d0385" id="r_a706fb5ab0f65ecc1da47f2f2ab2d0385"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a706fb5ab0f65ecc1da47f2f2ab2d0385">afp_delete</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:acf74618b44d8bb4de1d7186484315832" id="r_acf74618b44d8bb4de1d7186484315832"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf74618b44d8bb4de1d7186484315832">absupath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *u)</td></tr>
 <tr class="memitem:a096456e6d69c5b34d7009b4abb3628e3" id="r_a096456e6d69c5b34d7009b4abb3628e3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a096456e6d69c5b34d7009b4abb3628e3">ctoupath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *name)</td></tr>
-<tr class="memitem:aa53a6fade65cd996e6beb21fc8e4333c" id="r_aa53a6fade65cd996e6beb21fc8e4333c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa53a6fade65cd996e6beb21fc8e4333c">afp_moveandrename</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a25bb053eebcb2cdb0be331fbdc27a708" id="r_a25bb053eebcb2cdb0be331fbdc27a708"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25bb053eebcb2cdb0be331fbdc27a708">afp_moveandrename</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:ab33eb0e03551b21af789b374fe433755" id="r_ab33eb0e03551b21af789b374fe433755"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab33eb0e03551b21af789b374fe433755">veto_file</a> (const char *veto_str, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -170,8 +171,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a620961d910ddbb90b8c2115bdf30de93" name="a620961d910ddbb90b8c2115bdf30de93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a620961d910ddbb90b8c2115bdf30de93">&#9670;&#160;</a></span>afp_delete()</h2>
+<a id="a706fb5ab0f65ecc1da47f2f2ab2d0385" name="a706fb5ab0f65ecc1da47f2f2ab2d0385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706fb5ab0f65ecc1da47f2f2ab2d0385">&#9670;&#160;</a></span>afp_delete()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,43 +190,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="add5c97562117c8166bcb16d03a5ac8a7" name="add5c97562117c8166bcb16d03a5ac8a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add5c97562117c8166bcb16d03a5ac8a7">&#9670;&#160;</a></span>afp_getfildirparams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int afp_getfildirparams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,8 +207,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa53a6fade65cd996e6beb21fc8e4333c" name="aa53a6fade65cd996e6beb21fc8e4333c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa53a6fade65cd996e6beb21fc8e4333c">&#9670;&#160;</a></span>afp_moveandrename()</h2>
+<a id="aaf3d7c501a179729c041fc87f8c3d0eb" name="aaf3d7c501a179729c041fc87f8c3d0eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf3d7c501a179729c041fc87f8c3d0eb">&#9670;&#160;</a></span>afp_getfildirparams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int afp_getfildirparams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25bb053eebcb2cdb0be331fbdc27a708" name="a25bb053eebcb2cdb0be331fbdc27a708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bb053eebcb2cdb0be331fbdc27a708">&#9670;&#160;</a></span>afp_moveandrename()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,12 +262,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -278,8 +279,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2e2fb0a1bbcfd2cf03895f643517e2c" name="ae2e2fb0a1bbcfd2cf03895f643517e2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2e2fb0a1bbcfd2cf03895f643517e2c">&#9670;&#160;</a></span>afp_rename()</h2>
+<a id="a311917713100c4f9999c32e9c03cdfd1" name="a311917713100c4f9999c32e9c03cdfd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311917713100c4f9999c32e9c03cdfd1">&#9670;&#160;</a></span>afp_rename()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,12 +298,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -314,8 +315,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a283dc3426ea736f0c4880ef83991d137" name="a283dc3426ea736f0c4880ef83991d137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a283dc3426ea736f0c4880ef83991d137">&#9670;&#160;</a></span>afp_setfildirparams()</h2>
+<a id="a4e6e49e9f086c31ffe117958540348ee" name="a4e6e49e9f086c31ffe117958540348ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6e49e9f086c31ffe117958540348ee">&#9670;&#160;</a></span>afp_setfildirparams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,12 +334,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -420,6 +421,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Recursivley delete vetoed files and directories if the volume option is set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">upath</td><td>path of directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_vetodir</td><td>true if we are already in a vetoed directory</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the volume option delete veto files is set, this function recursively scans the directory "upath" for vetoed files and tries deletes these, the it will try to delete the directory. That may fail if the directory contains normal files that aren't vetoed.</p>
+<dl class="section return"><dt>Returns</dt><dd>0 if the directory upath and all of its contents were deleted, otherwise -1. If the volume option is not set it returns -1. </dd></dl>
 
 </div>
 </div>

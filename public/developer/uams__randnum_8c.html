@@ -113,6 +113,7 @@ $(function(){initNavTree('uams__randnum_8c.html','',''); });
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;crack.h&gt;</code><br />
 <code>#include &lt;gcrypt.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
@@ -128,15 +129,15 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a97b52c492448ed573cff5d198468c6c4" id="r_a97b52c492448ed573cff5d198468c6c4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97b52c492448ed573cff5d198468c6c4">home_passwd</a> (const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const int pathlen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, unsigned char *passwd, const int len, const int set)</td></tr>
+<tr class="memitem:a43be22e7d0b437c48c2b8798f3f9cbf5" id="r_a43be22e7d0b437c48c2b8798f3f9cbf5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43be22e7d0b437c48c2b8798f3f9cbf5">home_passwd</a> (const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const int pathlen, unsigned char *passwd, const int len, const int set)</td></tr>
 <tr class="memitem:a47ef2b0abcebef195393bf836e59f733" id="r_a47ef2b0abcebef195393bf836e59f733"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47ef2b0abcebef195393bf836e59f733">afppasswd</a> (const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const int pathlen, unsigned char *passwd, int len, const int set)</td></tr>
 <tr class="memitem:ae1209d2435147120ca2ae1db5b3b5887" id="r_ae1209d2435147120ca2ae1db5b3b5887"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1209d2435147120ca2ae1db5b3b5887">randpass</a> (const struct passwd *pwd, const char *file, unsigned char *passwd, const int len, const int set)</td></tr>
-<tr class="memitem:a6ec9f09a6327a654e44c644e54f5033f" id="r_a6ec9f09a6327a654e44c644e54f5033f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ec9f09a6327a654e44c644e54f5033f">rand_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *username, int ulen, struct passwd **uam_pwd <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *ibuf <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:afb4fb384e6802fcb1a0cc210d9bc05d3" id="r_afb4fb384e6802fcb1a0cc210d9bc05d3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb4fb384e6802fcb1a0cc210d9bc05d3">randnum_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:af42205c5d0f2635211fff672d245fc7f" id="r_af42205c5d0f2635211fff672d245fc7f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af42205c5d0f2635211fff672d245fc7f">rand2num_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:ae5d18744686fc424d750189aa79d2617" id="r_ae5d18744686fc424d750189aa79d2617"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d18744686fc424d750189aa79d2617">randnum_changepw</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *username <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct passwd *pwd, char *ibuf, size_t ibuflen <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a> <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>)</td></tr>
-<tr class="memitem:aabb6c3312c8eadf8a453abc8112c8fb6" id="r_aabb6c3312c8eadf8a453abc8112c8fb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb6c3312c8eadf8a453abc8112c8fb6">randnum_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
-<tr class="memitem:a7cd96b94653cab6473ffd986d006a4b5" id="r_a7cd96b94653cab6473ffd986d006a4b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd96b94653cab6473ffd986d006a4b5">randnum_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *uname, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a6308630d23ffdc6113fd31a1d849fad7" id="r_a6308630d23ffdc6113fd31a1d849fad7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6308630d23ffdc6113fd31a1d849fad7">rand_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *username, int ulen, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a1868ea581a57c42b96aed5ba8c47480e" id="r_a1868ea581a57c42b96aed5ba8c47480e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1868ea581a57c42b96aed5ba8c47480e">randnum_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:ac76760868de217908eb649c17754f5a8" id="r_ac76760868de217908eb649c17754f5a8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac76760868de217908eb649c17754f5a8">rand2num_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a9be88cd0362a5fae034b2a86bd8fd73f" id="r_a9be88cd0362a5fae034b2a86bd8fd73f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9be88cd0362a5fae034b2a86bd8fd73f">randnum_changepw</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *username, struct passwd *pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:aabb6c3312c8eadf8a453abc8112c8fb6" id="r_aabb6c3312c8eadf8a453abc8112c8fb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb6c3312c8eadf8a453abc8112c8fb6">randnum_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a7cd96b94653cab6473ffd986d006a4b5" id="r_a7cd96b94653cab6473ffd986d006a4b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd96b94653cab6473ffd986d006a4b5">randnum_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:ac67f27e6feea66d84cfb4d6e0893f477" id="r_ac67f27e6feea66d84cfb4d6e0893f477"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:ae2cc5cad0aad9a4e928900687f0cef7b" id="r_ae2cc5cad0aad9a4e928900687f0cef7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a> (void)</td></tr>
 </table><table class="memberdecls">
@@ -277,8 +278,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a97b52c492448ed573cff5d198468c6c4" name="a97b52c492448ed573cff5d198468c6c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97b52c492448ed573cff5d198468c6c4">&#9670;&#160;</a></span>home_passwd()</h2>
+<a id="a43be22e7d0b437c48c2b8798f3f9cbf5" name="a43be22e7d0b437c48c2b8798f3f9cbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43be22e7d0b437c48c2b8798f3f9cbf5">&#9670;&#160;</a></span>home_passwd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +300,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int pathlen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>pathlen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -326,8 +327,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af42205c5d0f2635211fff672d245fc7f" name="af42205c5d0f2635211fff672d245fc7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af42205c5d0f2635211fff672d245fc7f">&#9670;&#160;</a></span>rand2num_logincont()</h2>
+<a id="ac76760868de217908eb649c17754f5a8" name="ac76760868de217908eb649c17754f5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76760868de217908eb649c17754f5a8">&#9670;&#160;</a></span>rand2num_logincont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +354,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -375,8 +376,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6ec9f09a6327a654e44c644e54f5033f" name="a6ec9f09a6327a654e44c644e54f5033f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ec9f09a6327a654e44c644e54f5033f">&#9670;&#160;</a></span>rand_login()</h2>
+<a id="a6308630d23ffdc6113fd31a1d849fad7" name="a6308630d23ffdc6113fd31a1d849fad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6308630d23ffdc6113fd31a1d849fad7">&#9670;&#160;</a></span>rand_login()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,17 +403,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct passwd **uam_pwd</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">struct passwd **</td>          <td class="paramname"><span class="paramname"><em>uam_pwd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *ibuf</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -434,8 +435,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5d18744686fc424d750189aa79d2617" name="ae5d18744686fc424d750189aa79d2617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d18744686fc424d750189aa79d2617">&#9670;&#160;</a></span>randnum_changepw()</h2>
+<a id="a9be88cd0362a5fae034b2a86bd8fd73f" name="a9be88cd0362a5fae034b2a86bd8fd73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be88cd0362a5fae034b2a86bd8fd73f">&#9670;&#160;</a></span>randnum_changepw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +452,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *username</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -466,17 +467,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>&#160;)</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -591,8 +592,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afb4fb384e6802fcb1a0cc210d9bc05d3" name="afb4fb384e6802fcb1a0cc210d9bc05d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb4fb384e6802fcb1a0cc210d9bc05d3">&#9670;&#160;</a></span>randnum_logincont()</h2>
+<a id="a1868ea581a57c42b96aed5ba8c47480e" name="a1868ea581a57c42b96aed5ba8c47480e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1868ea581a57c42b96aed5ba8c47480e">&#9670;&#160;</a></span>randnum_logincont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,12 +619,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t ibuflen</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>ibuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a></td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -819,12 +820,12 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <a class="code hl_define" href="uam_8h.html#ae495d3c127113c143a025a25560ff35e">UAM_MODULE_SERVER</a>,</div>
 <div class="line">    <a class="code hl_define" href="uam_8h.html#aa2aadc58d0b3550933f269c66d065a8e">UAM_MODULE_VERSION</a>,</div>
-<div class="line">    <a class="code hl_function" href="uams__dhx2__pam_8c.html#a8baf9537bde3bdb2cd27634fdb33d31e">uam_setup</a>, <a class="code hl_function" href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div>
+<div class="line">    <a class="code hl_function" href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a>, <a class="code hl_function" href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div>
 <div class="line">}</div>
 <div class="ttc" id="auam_8h_html_aa2aadc58d0b3550933f269c66d065a8e"><div class="ttname"><a href="uam_8h.html#aa2aadc58d0b3550933f269c66d065a8e">UAM_MODULE_VERSION</a></div><div class="ttdeci">#define UAM_MODULE_VERSION</div><div class="ttdef"><b>Definition</b> uam.h:21</div></div>
 <div class="ttc" id="auam_8h_html_ae495d3c127113c143a025a25560ff35e"><div class="ttname"><a href="uam_8h.html#ae495d3c127113c143a025a25560ff35e">UAM_MODULE_SERVER</a></div><div class="ttdeci">#define UAM_MODULE_SERVER</div><div class="ttdef"><b>Definition</b> uam.h:17</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_a8baf9537bde3bdb2cd27634fdb33d31e"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a8baf9537bde3bdb2cd27634fdb33d31e">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj _U_, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1028</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1050</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ac67f27e6feea66d84cfb4d6e0893f477"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1029</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1051</div></div>
 </div><!-- fragment -->
 </div>
 </div>

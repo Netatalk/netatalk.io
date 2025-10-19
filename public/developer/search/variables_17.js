@@ -6,7 +6,6 @@ var searchData=
   ['window_5fx2_3',['window_x2',['../structllc.html#aec2cd4e4da2033c745352d97d9ed2394',1,'llc']]],
   ['write_4',['write',['../structvfs.html#af22be36bbc42caf40734067fb9bed3f3',1,'vfs']]],
   ['write_5fcount_5',['write_count',['../struct_a_s_p.html#aded73b6b39efdabee6e67adecd886098',1,'ASP::write_count'],['../struct_d_s_i.html#a7c9b7c3510397154452d9bf6a9d947a4',1,'DSI::write_count'],['../struct_d_s_i.html#a6ddf6778f8897ae7035cb6fd60832163',1,'DSI::write_count']]],
-  ['writefn_6',['writeFn',['../structbwrite_stream.html#aebefd7836a45d2ab56bd7f2e850263c3',1,'bwriteStream']]],
-  ['writefooter_7',['writefooter',['../structvfs.html#a1fb8e3703027c0d2fb7a02d674ef4259',1,'vfs']]],
-  ['writeheader_8',['writeheader',['../structvfs.html#a8b0e7dba443285efa880d8830b62b74f',1,'vfs']]]
+  ['writefooter_6',['writefooter',['../structvfs.html#a1fb8e3703027c0d2fb7a02d674ef4259',1,'vfs']]],
+  ['writeheader_7',['writeheader',['../structvfs.html#a8b0e7dba443285efa880d8830b62b74f',1,'vfs']]]
 ];

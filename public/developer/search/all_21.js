@@ -4,7 +4,7 @@ var searchData=
   ['zero_5fstruct_1',['ZERO_STRUCT',['../include_2atalk_2util_8h.html#a016c809db7cdc36a041471e9dd445a88',1,'util.h']]],
   ['zero_5fstructp_2',['ZERO_STRUCTP',['../include_2atalk_2util_8h.html#a22e027e14439b1fe3ffbab1cd33bd63a',1,'util.h']]],
   ['zeroconf_5fderegister_3',['zeroconf_deregister',['../afp__zeroconf_8c.html#a883d20fc9f09bf630b05c58ff3c90fbb',1,'zeroconf_deregister(void):&#160;afp_zeroconf.c'],['../afp__zeroconf_8h.html#a883d20fc9f09bf630b05c58ff3c90fbb',1,'zeroconf_deregister(void):&#160;afp_zeroconf.c']]],
-  ['zeroconf_5fregister_4',['zeroconf_register',['../afp__zeroconf_8c.html#adf3880debbfd4103e3ef89f2e838c832',1,'zeroconf_register(const AFPObj *configs _U_):&#160;afp_zeroconf.c'],['../afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e',1,'zeroconf_register(const AFPObj *obj):&#160;afp_zeroconf.h']]],
+  ['zeroconf_5fregister_4',['zeroconf_register',['../afp__zeroconf_8c.html#a9cb721eb37618f8c211170922f5c024f',1,'zeroconf_register(const AFPObj *configs):&#160;afp_zeroconf.c'],['../afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e',1,'zeroconf_register(const AFPObj *obj):&#160;afp_zeroconf.c']]],
   ['zh_5fcnt_5',['zh_cnt',['../structziphdr.html#a8281cbc00a137c62694bee1486d3962d',1,'ziphdr']]],
   ['zh_5fcount_6',['zh_count',['../include_2atalk_2zip_8h.html#a0d6fb5877278123ca1837350262179ce',1,'zip.h']]],
   ['zh_5fflags_7',['zh_flags',['../include_2atalk_2zip_8h.html#a02929a8eb5e08efd32bcbd4c636a3779',1,'zip.h']]],

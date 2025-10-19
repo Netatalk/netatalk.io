@@ -1,8 +1,8 @@
 var aecho_8c =
 [
     [ "SOCKLEN_T", "aecho_8c.html#a7687159c87b8758364782b0b3f00215a", null ],
-    [ "aep_send", "aecho_8c.html#a4e9eddada2838eaf255da6359802f702", null ],
-    [ "done", "aecho_8c.html#acb88cfb1f468666f950664b224a85587", null ],
+    [ "aep_send", "aecho_8c.html#abf9edf0461a5a64f4f3a21638d8bcd4e", null ],
+    [ "done", "aecho_8c.html#a21866a234f16f0924fb86c1f5446f198", null ],
     [ "main", "aecho_8c.html#a0c99d968a34e803d378692bde2e3f18f", null ],
     [ "usage", "aecho_8c.html#a98a6ceaef713804050704ed437f9e96d", null ],
     [ "maxms", "aecho_8c.html#a013fd12f461494d34cf04d6fa943587d", null ],

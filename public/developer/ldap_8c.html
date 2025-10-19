@@ -102,6 +102,626 @@ $(function(){initNavTree('ldap_8c.html','',''); });
   <div class="headertitle"><div class="title">ldap.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;ldap.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="uuid_8h_source.html">atalk/uuid.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ldapconfig_8h_source.html">atalk/ldapconfig.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="errchk_8h_source.html">atalk/errchk.h</a>&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a773186efdfc921b5370ec02876fd69f5" id="r_a773186efdfc921b5370ec02876fd69f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a773186efdfc921b5370ec02876fd69f5">LDAP_DEPRECATED</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ac274d6539b94c8c445cb8f04704588bd" id="r_ac274d6539b94c8c445cb8f04704588bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac274d6539b94c8c445cb8f04704588bd">MAX_FILTER_SIZE</a>&#160;&#160;&#160;512</td></tr>
+<tr class="memitem:a74dccffd42801ce99988e76e7d1c0366" id="r_a74dccffd42801ce99988e76e7d1c0366"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74dccffd42801ce99988e76e7d1c0366">LDAP_BIN_UUID_LEN</a>&#160;&#160;&#160;49</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a80d43ad811c9bd2ed92484c7a254fe6f" id="r_a80d43ad811c9bd2ed92484c7a254fe6f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80d43ad811c9bd2ed92484c7a254fe6f">ldapcon_t</a> { <a class="el" href="#a80d43ad811c9bd2ed92484c7a254fe6fa7727383e54b397e0798266f142343bb8">KEEPALIVE</a> = 1
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af0b82e6b9fa70484316840f0188e0111" id="r_af0b82e6b9fa70484316840f0188e0111"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0b82e6b9fa70484316840f0188e0111">ldap_getattr_fromfilter_withbase_scope</a> (const char *searchbase, const char *filter, char *attributes[], int scope, <a class="el" href="#a80d43ad811c9bd2ed92484c7a254fe6f">ldapcon_t</a> conflags, char **result)</td></tr>
+<tr class="memdesc:af0b82e6b9fa70484316840f0188e0111"><td class="mdescLeft">&#160;</td><td class="mdescRight">LDAP get attribute from filter with base and scope.  <br /></td></tr>
+<tr class="memitem:a2eeaddf92ed269a403630b2a6bb95d86" id="r_a2eeaddf92ed269a403630b2a6bb95d86"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2eeaddf92ed269a403630b2a6bb95d86">gen_uuid_filter</a> (const char *uuidstr_in, const char *attr_filter)</td></tr>
+<tr class="memdesc:a2eeaddf92ed269a403630b2a6bb95d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate LDAP filter string for UUID query.  <br /></td></tr>
+<tr class="memitem:a5d769831adeb5c48c3364ffc4eb53b0d" id="r_a5d769831adeb5c48c3364ffc4eb53b0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d769831adeb5c48c3364ffc4eb53b0d">ldap_getuuidfromname</a> (const char *name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, char **uuid_string)</td></tr>
+<tr class="memdesc:a5d769831adeb5c48c3364ffc4eb53b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search UUID for name in LDAP.  <br /></td></tr>
+<tr class="memitem:a30002eb32b1325e488e96508bda6099f" id="r_a30002eb32b1325e488e96508bda6099f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30002eb32b1325e488e96508bda6099f">ldap_getnamefromuuid</a> (const char *uuidstr, char **name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
+<tr class="memdesc:a30002eb32b1325e488e96508bda6099f"><td class="mdescLeft">&#160;</td><td class="mdescRight">LDAP search wrapper.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afa52b77b42786e97a038f3d99a56ce1f" id="r_afa52b77b42786e97a038f3d99a56ce1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa52b77b42786e97a038f3d99a56ce1f">ldap_config_valid</a></td></tr>
+<tr class="memitem:ae9787d76dd44d4577e794094601339a2" id="r_ae9787d76dd44d4577e794094601339a2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9787d76dd44d4577e794094601339a2">ldap_uri</a></td></tr>
+<tr class="memitem:a66bc92e36b097496e20a66b37231ad58" id="r_a66bc92e36b097496e20a66b37231ad58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66bc92e36b097496e20a66b37231ad58">ldap_auth_method</a></td></tr>
+<tr class="memitem:a77806b881c8c9427d19d2f59952fa5d7" id="r_a77806b881c8c9427d19d2f59952fa5d7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77806b881c8c9427d19d2f59952fa5d7">ldap_auth_dn</a></td></tr>
+<tr class="memitem:a88933619fa5259c734fce6f54adc574c" id="r_a88933619fa5259c734fce6f54adc574c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88933619fa5259c734fce6f54adc574c">ldap_auth_pw</a></td></tr>
+<tr class="memitem:a02424c499beb85707040eba832f515c1" id="r_a02424c499beb85707040eba832f515c1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02424c499beb85707040eba832f515c1">ldap_userbase</a></td></tr>
+<tr class="memitem:af23a6b33582e066c5c5a50d90a8680b9" id="r_af23a6b33582e066c5c5a50d90a8680b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af23a6b33582e066c5c5a50d90a8680b9">ldap_userscope</a></td></tr>
+<tr class="memitem:a1996d3a7f03bbfeeebb7e79b5c9bd4dd" id="r_a1996d3a7f03bbfeeebb7e79b5c9bd4dd"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">ldap_groupbase</a></td></tr>
+<tr class="memitem:a709e0fce507e5d5ab2ce2be00e556601" id="r_a709e0fce507e5d5ab2ce2be00e556601"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a709e0fce507e5d5ab2ce2be00e556601">ldap_groupscope</a></td></tr>
+<tr class="memitem:a8b5597eb2a926d2dfe31e149bd485f7a" id="r_a8b5597eb2a926d2dfe31e149bd485f7a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b5597eb2a926d2dfe31e149bd485f7a">ldap_uuid_attr</a></td></tr>
+<tr class="memitem:a52f7dd07d602f0365bec47a478a5278e" id="r_a52f7dd07d602f0365bec47a478a5278e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52f7dd07d602f0365bec47a478a5278e">ldap_uuid_string</a></td></tr>
+<tr class="memitem:af48a991b3c515bb8644d63162881df61" id="r_af48a991b3c515bb8644d63162881df61"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48a991b3c515bb8644d63162881df61">ldap_name_attr</a></td></tr>
+<tr class="memitem:a5ebef82d479c727d0b8f32787da16784" id="r_a5ebef82d479c727d0b8f32787da16784"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebef82d479c727d0b8f32787da16784">ldap_group_attr</a></td></tr>
+<tr class="memitem:ab57d8984ae3faadd519f5485e0ded091" id="r_ab57d8984ae3faadd519f5485e0ded091"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab57d8984ae3faadd519f5485e0ded091">ldap_uid_attr</a></td></tr>
+<tr class="memitem:adf5140a19d07a13b1a05aa5dc18fe93a" id="r_adf5140a19d07a13b1a05aa5dc18fe93a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf5140a19d07a13b1a05aa5dc18fe93a">ldap_userfilter</a></td></tr>
+<tr class="memitem:ac88f093fda7ff2db2179b62a2d7682e4" id="r_ac88f093fda7ff2db2179b62a2d7682e4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac88f093fda7ff2db2179b62a2d7682e4">ldap_groupfilter</a></td></tr>
+<tr class="memitem:a3f427bc43402e8d672c14b4b22964a3d" id="r_a3f427bc43402e8d672c14b4b22964a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f427bc43402e8d672c14b4b22964a3d">ldap_uuid_encoding</a></td></tr>
+<tr class="memitem:a9ef1e6c89203c40a8ff59c42d4a61d5a" id="r_a9ef1e6c89203c40a8ff59c42d4a61d5a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structldap__pref.html">ldap_pref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef1e6c89203c40a8ff59c42d4a61d5a">ldap_prefs</a> []</td></tr>
+<tr class="memitem:a91b80f9667358bd711c3e38ad5d8a293" id="r_a91b80f9667358bd711c3e38ad5d8a293"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpref__array.html">pref_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b80f9667358bd711c3e38ad5d8a293">prefs_array</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a74dccffd42801ce99988e76e7d1c0366" name="a74dccffd42801ce99988e76e7d1c0366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dccffd42801ce99988e76e7d1c0366">&#9670;&#160;</a></span>LDAP_BIN_UUID_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDAP_BIN_UUID_LEN&#160;&#160;&#160;49</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a773186efdfc921b5370ec02876fd69f5" name="a773186efdfc921b5370ec02876fd69f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a773186efdfc921b5370ec02876fd69f5">&#9670;&#160;</a></span>LDAP_DEPRECATED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDAP_DEPRECATED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac274d6539b94c8c445cb8f04704588bd" name="ac274d6539b94c8c445cb8f04704588bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac274d6539b94c8c445cb8f04704588bd">&#9670;&#160;</a></span>MAX_FILTER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_FILTER_SIZE&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a80d43ad811c9bd2ed92484c7a254fe6f" name="a80d43ad811c9bd2ed92484c7a254fe6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d43ad811c9bd2ed92484c7a254fe6f">&#9670;&#160;</a></span>ldapcon_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a80d43ad811c9bd2ed92484c7a254fe6f">ldapcon_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a80d43ad811c9bd2ed92484c7a254fe6fa7727383e54b397e0798266f142343bb8" name="a80d43ad811c9bd2ed92484c7a254fe6fa7727383e54b397e0798266f142343bb8"></a>KEEPALIVE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a2eeaddf92ed269a403630b2a6bb95d86" name="a2eeaddf92ed269a403630b2a6bb95d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eeaddf92ed269a403630b2a6bb95d86">&#9670;&#160;</a></span>gen_uuid_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * gen_uuid_filter </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uuidstr_in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attr_filter</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate LDAP filter string for UUID query. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuidstr_in</td><td>the UUID as string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr_filter</td><td>optional attribute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to static filter string </dd></dl>
+
+</div>
+</div>
+<a id="af0b82e6b9fa70484316840f0188e0111" name="af0b82e6b9fa70484316840f0188e0111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b82e6b9fa70484316840f0188e0111">&#9670;&#160;</a></span>ldap_getattr_fromfilter_withbase_scope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_getattr_fromfilter_withbase_scope </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>searchbase</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>attributes</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>scope</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a80d43ad811c9bd2ed92484c7a254fe6f">ldapcon_t</a></td>          <td class="paramname"><span class="paramname"><em>conflags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LDAP get attribute from filter with base and scope. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">searchbase</td><td>Base DN for LDAP search </td></tr>
+    <tr><td class="paramname">filter</td><td>LDAP search filter </td></tr>
+    <tr><td class="paramname">attributes</td><td>Array of attribute names to retrieve </td></tr>
+    <tr><td class="paramname">scope</td><td>Search scope (LDAP_SCOPE_BASE, LDAP_SCOPE_ONELEVEL, LDAP_SCOPE_SUBTREE) </td></tr>
+    <tr><td class="paramname">conflags</td><td>Connection flags (KEEPALIVE) </td></tr>
+    <tr><td class="paramname">result</td><td>unique search result, allocated here, caller must free</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: -1 on error, 0 nothing found, 1 successful search, result int 'result'</dd></dl>
+<p>All connection managment to the LDAP server is done here. Just set KEEPALIVE if you know you will be dispatching more than one search in a row, then don't set it with the last search. You MUST dispatch the queries timely, otherwise the LDAP handle might timeout. </p>
+
+</div>
+</div>
+<a id="a30002eb32b1325e488e96508bda6099f" name="a30002eb32b1325e488e96508bda6099f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30002eb32b1325e488e96508bda6099f">&#9670;&#160;</a></span>ldap_getnamefromuuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_getnamefromuuid </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uuidstr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LDAP search wrapper. </p>
+<p>returns allocated storage in name, caller must free it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uuidstr</td><td>uuid to search as ascii string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>return pointer to name as allocated string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">type</td><td>return type: USER or GROUP</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on errror or not found </dd></dl>
+
+</div>
+</div>
+<a id="a5d769831adeb5c48c3364ffc4eb53b0d" name="a5d769831adeb5c48c3364ffc4eb53b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d769831adeb5c48c3364ffc4eb53b0d">&#9670;&#160;</a></span>ldap_getuuidfromname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_getuuidfromname </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>uuid_string</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Search UUID for name in LDAP. </p>
+<p>Caller must free uuid_string when done with it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>name to search </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of USER or GROUP </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uuid_string</td><td>result as pointer to allocated UUID-string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error or not found </dd></dl>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a77806b881c8c9427d19d2f59952fa5d7" name="a77806b881c8c9427d19d2f59952fa5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77806b881c8c9427d19d2f59952fa5d7">&#9670;&#160;</a></span>ldap_auth_dn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_auth_dn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bc92e36b097496e20a66b37231ad58" name="a66bc92e36b097496e20a66b37231ad58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bc92e36b097496e20a66b37231ad58">&#9670;&#160;</a></span>ldap_auth_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_auth_method</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88933619fa5259c734fce6f54adc574c" name="a88933619fa5259c734fce6f54adc574c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88933619fa5259c734fce6f54adc574c">&#9670;&#160;</a></span>ldap_auth_pw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_auth_pw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa52b77b42786e97a038f3d99a56ce1f" name="afa52b77b42786e97a038f3d99a56ce1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa52b77b42786e97a038f3d99a56ce1f">&#9670;&#160;</a></span>ldap_config_valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_config_valid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ebef82d479c727d0b8f32787da16784" name="a5ebef82d479c727d0b8f32787da16784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebef82d479c727d0b8f32787da16784">&#9670;&#160;</a></span>ldap_group_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_group_attr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1996d3a7f03bbfeeebb7e79b5c9bd4dd" name="a1996d3a7f03bbfeeebb7e79b5c9bd4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">&#9670;&#160;</a></span>ldap_groupbase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_groupbase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac88f093fda7ff2db2179b62a2d7682e4" name="ac88f093fda7ff2db2179b62a2d7682e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88f093fda7ff2db2179b62a2d7682e4">&#9670;&#160;</a></span>ldap_groupfilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_groupfilter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a709e0fce507e5d5ab2ce2be00e556601" name="a709e0fce507e5d5ab2ce2be00e556601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709e0fce507e5d5ab2ce2be00e556601">&#9670;&#160;</a></span>ldap_groupscope</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_groupscope</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af48a991b3c515bb8644d63162881df61" name="af48a991b3c515bb8644d63162881df61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48a991b3c515bb8644d63162881df61">&#9670;&#160;</a></span>ldap_name_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_name_attr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ef1e6c89203c40a8ff59c42d4a61d5a" name="a9ef1e6c89203c40a8ff59c42d4a61d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef1e6c89203c40a8ff59c42d4a61d5a">&#9670;&#160;</a></span>ldap_prefs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structldap__pref.html">ldap_pref</a> ldap_prefs[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    </div>
+<div class="line">    {&amp;<a class="code hl_variable" href="#ae9787d76dd44d4577e794094601339a2">ldap_uri</a>,            <span class="stringliteral">&quot;ldap uri&quot;</span>,            0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a66bc92e36b097496e20a66b37231ad58">ldap_auth_method</a>,    <span class="stringliteral">&quot;ldap auth method&quot;</span>,    1, 1, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a77806b881c8c9427d19d2f59952fa5d7">ldap_auth_dn</a>,        <span class="stringliteral">&quot;ldap auth dn&quot;</span>,        0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a88933619fa5259c734fce6f54adc574c">ldap_auth_pw</a>,        <span class="stringliteral">&quot;ldap auth pw&quot;</span>,        0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a02424c499beb85707040eba832f515c1">ldap_userbase</a>,       <span class="stringliteral">&quot;ldap userbase&quot;</span>,       0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="#af23a6b33582e066c5c5a50d90a8680b9">ldap_userscope</a>,      <span class="stringliteral">&quot;ldap userscope&quot;</span>,      1, 1, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">ldap_groupbase</a>,      <span class="stringliteral">&quot;ldap groupbase&quot;</span>,      0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="#a709e0fce507e5d5ab2ce2be00e556601">ldap_groupscope</a>,     <span class="stringliteral">&quot;ldap groupscope&quot;</span>,     1, 1, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a8b5597eb2a926d2dfe31e149bd485f7a">ldap_uuid_attr</a>,      <span class="stringliteral">&quot;ldap uuid attr&quot;</span>,      0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a52f7dd07d602f0365bec47a478a5278e">ldap_uuid_string</a>,    <span class="stringliteral">&quot;ldap uuid string&quot;</span>,    0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#af48a991b3c515bb8644d63162881df61">ldap_name_attr</a>,      <span class="stringliteral">&quot;ldap name attr&quot;</span>,      0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a5ebef82d479c727d0b8f32787da16784">ldap_group_attr</a>,     <span class="stringliteral">&quot;ldap group attr&quot;</span>,     0, 0, -1, -1},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#ab57d8984ae3faadd519f5485e0ded091">ldap_uid_attr</a>,       <span class="stringliteral">&quot;ldap uid attr&quot;</span>,       0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a3f427bc43402e8d672c14b4b22964a3d">ldap_uuid_encoding</a>,  <span class="stringliteral">&quot;ldap uuid encoding&quot;</span>,  1, 1,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#adf5140a19d07a13b1a05aa5dc18fe93a">ldap_userfilter</a>,     <span class="stringliteral">&quot;ldap user filter&quot;</span>,    0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#ac88f093fda7ff2db2179b62a2d7682e4">ldap_groupfilter</a>,    <span class="stringliteral">&quot;ldap group filter&quot;</span>,   0, 0,  0,  0},</div>
+<div class="line">    {&amp;<a class="code hl_variable" href="ldapconfig_8h.html#a88933619fa5259c734fce6f54adc574c">ldap_auth_pw</a>,        <span class="stringliteral">&quot;ldap auth pw&quot;</span>,        0, 0,  0,  0},</div>
+<div class="line">    {NULL,                 NULL,                  0, 0,  0,  0}</div>
+<div class="line">}</div>
+<div class="ttc" id="aldap_8c_html_a709e0fce507e5d5ab2ce2be00e556601"><div class="ttname"><a href="#a709e0fce507e5d5ab2ce2be00e556601">ldap_groupscope</a></div><div class="ttdeci">int ldap_groupscope</div><div class="ttdef"><b>Definition</b> ldap.c:53</div></div>
+<div class="ttc" id="aldap_8c_html_ae9787d76dd44d4577e794094601339a2"><div class="ttname"><a href="#ae9787d76dd44d4577e794094601339a2">ldap_uri</a></div><div class="ttdeci">char * ldap_uri</div><div class="ttdef"><b>Definition</b> ldap.c:46</div></div>
+<div class="ttc" id="aldap_8c_html_af23a6b33582e066c5c5a50d90a8680b9"><div class="ttname"><a href="#af23a6b33582e066c5c5a50d90a8680b9">ldap_userscope</a></div><div class="ttdeci">int ldap_userscope</div><div class="ttdef"><b>Definition</b> ldap.c:51</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a02424c499beb85707040eba832f515c1"><div class="ttname"><a href="ldapconfig_8h.html#a02424c499beb85707040eba832f515c1">ldap_userbase</a></div><div class="ttdeci">char * ldap_userbase</div><div class="ttdef"><b>Definition</b> ldap.c:50</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a1996d3a7f03bbfeeebb7e79b5c9bd4dd"><div class="ttname"><a href="ldapconfig_8h.html#a1996d3a7f03bbfeeebb7e79b5c9bd4dd">ldap_groupbase</a></div><div class="ttdeci">char * ldap_groupbase</div><div class="ttdef"><b>Definition</b> ldap.c:52</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a3f427bc43402e8d672c14b4b22964a3d"><div class="ttname"><a href="ldapconfig_8h.html#a3f427bc43402e8d672c14b4b22964a3d">ldap_uuid_encoding</a></div><div class="ttdeci">int ldap_uuid_encoding</div><div class="ttdef"><b>Definition</b> ldap.c:61</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a52f7dd07d602f0365bec47a478a5278e"><div class="ttname"><a href="ldapconfig_8h.html#a52f7dd07d602f0365bec47a478a5278e">ldap_uuid_string</a></div><div class="ttdeci">char * ldap_uuid_string</div><div class="ttdef"><b>Definition</b> ldap.c:55</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a5ebef82d479c727d0b8f32787da16784"><div class="ttname"><a href="ldapconfig_8h.html#a5ebef82d479c727d0b8f32787da16784">ldap_group_attr</a></div><div class="ttdeci">char * ldap_group_attr</div><div class="ttdef"><b>Definition</b> ldap.c:57</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a66bc92e36b097496e20a66b37231ad58"><div class="ttname"><a href="ldapconfig_8h.html#a66bc92e36b097496e20a66b37231ad58">ldap_auth_method</a></div><div class="ttdeci">int ldap_auth_method</div><div class="ttdef"><b>Definition</b> ldap.c:47</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a77806b881c8c9427d19d2f59952fa5d7"><div class="ttname"><a href="ldapconfig_8h.html#a77806b881c8c9427d19d2f59952fa5d7">ldap_auth_dn</a></div><div class="ttdeci">char * ldap_auth_dn</div><div class="ttdef"><b>Definition</b> ldap.c:48</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a88933619fa5259c734fce6f54adc574c"><div class="ttname"><a href="ldapconfig_8h.html#a88933619fa5259c734fce6f54adc574c">ldap_auth_pw</a></div><div class="ttdeci">char * ldap_auth_pw</div><div class="ttdef"><b>Definition</b> ldap.c:49</div></div>
+<div class="ttc" id="aldapconfig_8h_html_a8b5597eb2a926d2dfe31e149bd485f7a"><div class="ttname"><a href="ldapconfig_8h.html#a8b5597eb2a926d2dfe31e149bd485f7a">ldap_uuid_attr</a></div><div class="ttdeci">char * ldap_uuid_attr</div><div class="ttdef"><b>Definition</b> ldap.c:54</div></div>
+<div class="ttc" id="aldapconfig_8h_html_ab57d8984ae3faadd519f5485e0ded091"><div class="ttname"><a href="ldapconfig_8h.html#ab57d8984ae3faadd519f5485e0ded091">ldap_uid_attr</a></div><div class="ttdeci">char * ldap_uid_attr</div><div class="ttdef"><b>Definition</b> ldap.c:58</div></div>
+<div class="ttc" id="aldapconfig_8h_html_ac88f093fda7ff2db2179b62a2d7682e4"><div class="ttname"><a href="ldapconfig_8h.html#ac88f093fda7ff2db2179b62a2d7682e4">ldap_groupfilter</a></div><div class="ttdeci">char * ldap_groupfilter</div><div class="ttdef"><b>Definition</b> ldap.c:60</div></div>
+<div class="ttc" id="aldapconfig_8h_html_adf5140a19d07a13b1a05aa5dc18fe93a"><div class="ttname"><a href="ldapconfig_8h.html#adf5140a19d07a13b1a05aa5dc18fe93a">ldap_userfilter</a></div><div class="ttdeci">char * ldap_userfilter</div><div class="ttdef"><b>Definition</b> ldap.c:59</div></div>
+<div class="ttc" id="aldapconfig_8h_html_af48a991b3c515bb8644d63162881df61"><div class="ttname"><a href="ldapconfig_8h.html#af48a991b3c515bb8644d63162881df61">ldap_name_attr</a></div><div class="ttdeci">char * ldap_name_attr</div><div class="ttdef"><b>Definition</b> ldap.c:56</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab57d8984ae3faadd519f5485e0ded091" name="ab57d8984ae3faadd519f5485e0ded091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57d8984ae3faadd519f5485e0ded091">&#9670;&#160;</a></span>ldap_uid_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uid_attr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9787d76dd44d4577e794094601339a2" name="ae9787d76dd44d4577e794094601339a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9787d76dd44d4577e794094601339a2">&#9670;&#160;</a></span>ldap_uri</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uri</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02424c499beb85707040eba832f515c1" name="a02424c499beb85707040eba832f515c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02424c499beb85707040eba832f515c1">&#9670;&#160;</a></span>ldap_userbase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_userbase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf5140a19d07a13b1a05aa5dc18fe93a" name="adf5140a19d07a13b1a05aa5dc18fe93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5140a19d07a13b1a05aa5dc18fe93a">&#9670;&#160;</a></span>ldap_userfilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_userfilter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af23a6b33582e066c5c5a50d90a8680b9" name="af23a6b33582e066c5c5a50d90a8680b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23a6b33582e066c5c5a50d90a8680b9">&#9670;&#160;</a></span>ldap_userscope</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_userscope</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b5597eb2a926d2dfe31e149bd485f7a" name="a8b5597eb2a926d2dfe31e149bd485f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b5597eb2a926d2dfe31e149bd485f7a">&#9670;&#160;</a></span>ldap_uuid_attr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uuid_attr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f427bc43402e8d672c14b4b22964a3d" name="a3f427bc43402e8d672c14b4b22964a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f427bc43402e8d672c14b4b22964a3d">&#9670;&#160;</a></span>ldap_uuid_encoding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ldap_uuid_encoding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52f7dd07d602f0365bec47a478a5278e" name="a52f7dd07d602f0365bec47a478a5278e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f7dd07d602f0365bec47a478a5278e">&#9670;&#160;</a></span>ldap_uuid_string</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ldap_uuid_string</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91b80f9667358bd711c3e38ad5d8a293" name="a91b80f9667358bd711c3e38ad5d8a293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b80f9667358bd711c3e38ad5d8a293">&#9670;&#160;</a></span>prefs_array</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structpref__array.html">pref_array</a> prefs_array[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap auth method&quot;</span>, <span class="stringliteral">&quot;none&quot;</span>,   LDAP_AUTH_NONE},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap auth method&quot;</span>, <span class="stringliteral">&quot;simple&quot;</span>, LDAP_AUTH_SIMPLE},</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    {<span class="stringliteral">&quot;ldap userscope&quot;</span>,   <span class="stringliteral">&quot;base&quot;</span>,   LDAP_SCOPE_BASE},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap userscope&quot;</span>,   <span class="stringliteral">&quot;one&quot;</span>,    LDAP_SCOPE_ONELEVEL},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap userscope&quot;</span>,   <span class="stringliteral">&quot;sub&quot;</span>,    LDAP_SCOPE_SUBTREE},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap groupscope&quot;</span>,  <span class="stringliteral">&quot;base&quot;</span>,   LDAP_SCOPE_BASE},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap groupscope&quot;</span>,  <span class="stringliteral">&quot;one&quot;</span>,    LDAP_SCOPE_ONELEVEL},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap groupscope&quot;</span>,  <span class="stringliteral">&quot;sub&quot;</span>,    LDAP_SCOPE_SUBTREE},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap uuid encoding&quot;</span>, <span class="stringliteral">&quot;ms-guid&quot;</span>,    <a class="code hl_enumvalue" href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f">LDAP_UUID_ENCODING_MSGUID</a>},</div>
+<div class="line">    {<span class="stringliteral">&quot;ldap uuid encoding&quot;</span>, <span class="stringliteral">&quot;string&quot;</span>, <a class="code hl_enumvalue" href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a>},</div>
+<div class="line">    {NULL,               NULL,     0}</div>
+<div class="line">}</div>
+<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f">LDAP_UUID_ENCODING_MSGUID</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_MSGUID</div><div class="ttdef"><b>Definition</b> ldapconfig.h:36</div></div>
+<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_STRING</div><div class="ttdef"><b>Definition</b> ldapconfig.h:34</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

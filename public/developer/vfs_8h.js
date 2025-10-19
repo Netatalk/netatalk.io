@@ -1,6 +1,7 @@
 var vfs_8h =
 [
     [ "vfs_ops", "structvfs__ops.html", "structvfs__ops" ],
+    [ "VFS_FUNC_ARGS_ACL", "vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc", null ],
     [ "VFS_FUNC_ARGS_CHOWN", "vfs_8h.html#a4fc7a2a75c481dc0e07a93dda4943d36", null ],
     [ "VFS_FUNC_ARGS_COPYFILE", "vfs_8h.html#a41f46b74c3bcd73bf4b5353d21238260", null ],
     [ "VFS_FUNC_ARGS_DELETECURDIR", "vfs_8h.html#a25b2388078902480aba171e37c2add20", null ],
@@ -18,6 +19,7 @@ var vfs_8h =
     [ "VFS_FUNC_ARGS_SETDIRUNIXMODE", "vfs_8h.html#a30cbeb73710eda08012f65bbefe4c2d4", null ],
     [ "VFS_FUNC_ARGS_SETFILEMODE", "vfs_8h.html#a294a7e2eb0d859e81a39516c4ce77236", null ],
     [ "VFS_FUNC_ARGS_VALIDUPATH", "vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce", null ],
+    [ "VFS_FUNC_VARS_ACL", "vfs_8h.html#a567a3f8771bafec703d8a2d8bde772e6", null ],
     [ "VFS_FUNC_VARS_CHOWN", "vfs_8h.html#a455432977909e2102c9a68159c90cf4f", null ],
     [ "VFS_FUNC_VARS_COPYFILE", "vfs_8h.html#a001de27db9d94833b99eca3d89117301", null ],
     [ "VFS_FUNC_VARS_DELETECURDIR", "vfs_8h.html#a98f769a30e49de20d4310310877a1ebf", null ],
@@ -35,5 +37,5 @@ var vfs_8h =
     [ "VFS_FUNC_VARS_SETDIRUNIXMODE", "vfs_8h.html#a89ce685fd4c034a6bfe0567882eca476", null ],
     [ "VFS_FUNC_VARS_SETFILEMODE", "vfs_8h.html#aefe98d3f2d46e8975d412ef84a372fd7", null ],
     [ "VFS_FUNC_VARS_VALIDUPATH", "vfs_8h.html#a9db958694d2c605a10700117d7533204", null ],
-    [ "initvol_vfs", "vfs_8h.html#a21eba64a566a1f39aec4b16d6e646a2e", null ]
+    [ "initvol_vfs", "vfs_8h.html#a01d6a434f8a9405b2ce4b4a0ed5151a5", null ]
 ];

@@ -109,7 +109,7 @@ $(function(){initNavTree('ofork_8c.html','',''); });
 <code>#include &lt;sys/param.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="bstrlib_8h_source.html">bstrlib.h</a>&gt;</code><br />
+<code>#include &lt;bstrlib.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="ea_8h_source.html">atalk/ea.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="fce__api_8h_source.html">atalk/fce_api.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="globals_8h_source.html">atalk/globals.h</a>&gt;</code><br />
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a8c3b17c001e8021cfe163c90c51ad674" id="r_a8c3b17c001e8021cfe163c90c51ad674"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c3b17c001e8021cfe163c90c51ad674">of_unhash</a> (struct <a class="el" href="structofork.html">ofork</a> *of)</td></tr>
 <tr class="memitem:abd41af0d29b18d24e88603110cea9a4f" id="r_abd41af0d29b18d24e88603110cea9a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd41af0d29b18d24e88603110cea9a4f">of_pforkdesc</a> (FILE *f)</td></tr>
 <tr class="memitem:a0c8fc8bf1a70aec40dceff61598f27ba" id="r_a0c8fc8bf1a70aec40dceff61598f27ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c8fc8bf1a70aec40dceff61598f27ba">of_flush</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
-<tr class="memitem:a11b0fa2a81ee0b4425d5f4be2add4fb4" id="r_a11b0fa2a81ee0b4425d5f4be2add4fb4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b0fa2a81ee0b4425d5f4be2add4fb4">of_rename</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structofork.html">ofork</a> *s_of, struct <a class="el" href="structdir.html">dir</a> *olddir, const char *oldpath <a class="el" href="cmd__dbd__scanvol_8c.html#a8fa487913fdb31da1be2f0b18ece0755">_U_</a>, struct <a class="el" href="structdir.html">dir</a> *newdir, const char *newpath)</td></tr>
+<tr class="memitem:a1288a620f86b025197526c38afcb70f7" id="r_a1288a620f86b025197526c38afcb70f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1288a620f86b025197526c38afcb70f7">of_rename</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structofork.html">ofork</a> *s_of, struct <a class="el" href="structdir.html">dir</a> *olddir, const char *oldpath, struct <a class="el" href="structdir.html">dir</a> *newdir, const char *newpath)</td></tr>
 <tr class="memitem:a0f062a3ebda2cc5553ac23aa331b916b" id="r_a0f062a3ebda2cc5553ac23aa331b916b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structofork.html">ofork</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f062a3ebda2cc5553ac23aa331b916b">of_alloc</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *<a class="el" href="structpath.html">path</a>, uint16_t *ofrefnum, const int eid, struct <a class="el" href="structadouble.html">adouble</a> *ad, struct stat *st)</td></tr>
 <tr class="memitem:aeb0d8f315d2ca52097b456330b7d8ddc" id="r_aeb0d8f315d2ca52097b456330b7d8ddc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structofork.html">ofork</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb0d8f315d2ca52097b456330b7d8ddc">of_find</a> (const uint16_t ofrefnum)</td></tr>
 <tr class="memitem:a737db37faaee3e48a42c5303d245bbcf" id="r_a737db37faaee3e48a42c5303d245bbcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737db37faaee3e48a42c5303d245bbcf">of_stat</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
@@ -426,8 +426,8 @@ Variables</h2></td></tr>
 <p>Function call of_fstatat with dirfd and path and uses dev and ino to search the open fork table.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dirfd</td><td>(r) directory fd </td></tr>
-    <tr><td class="paramname">path</td><td>(rw) pointer to struct path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirfd</td><td>directory fd </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>pointer to struct path </td></tr>
   </table>
   </dd>
 </dl>
@@ -514,8 +514,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a11b0fa2a81ee0b4425d5f4be2add4fb4" name="a11b0fa2a81ee0b4425d5f4be2add4fb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11b0fa2a81ee0b4425d5f4be2add4fb4">&#9670;&#160;</a></span>of_rename()</h2>
+<a id="a1288a620f86b025197526c38afcb70f7" name="a1288a620f86b025197526c38afcb70f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1288a620f86b025197526c38afcb70f7">&#9670;&#160;</a></span>of_rename()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -538,7 +538,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *oldpath</td>          <td class="paramname"><span class="paramname"><em>_U_</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>oldpath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -12,7 +12,7 @@ var libatalk_2util_2unix_8c =
     [ "ochmod", "libatalk_2util_2unix_8c.html#a3537baf3b2b1e9eb9013690c3a7f8488", null ],
     [ "ochown", "libatalk_2util_2unix_8c.html#a4689e229e35ba860cd4acd3f19e0b1b1", null ],
     [ "ostat", "libatalk_2util_2unix_8c.html#a5c2b2b5ff8cd8921f74350b382a23d0c", null ],
-    [ "ostatat", "libatalk_2util_2unix_8c.html#a1f73e3719511b5c1ba80c5129d08f283", null ],
+    [ "ostatat", "libatalk_2util_2unix_8c.html#aba71ee1225cc8faf2997c1cdf542d7f6", null ],
     [ "print_groups", "libatalk_2util_2unix_8c.html#a7b08fa6eb8f98ce8c88a646b901dc06d", null ],
     [ "randombytes", "libatalk_2util_2unix_8c.html#aefde7f9f477f2f182845eee2663363f7", null ],
     [ "realpath_safe", "libatalk_2util_2unix_8c.html#a5a34db058713ee9086a16f7f5f981082", null ],
