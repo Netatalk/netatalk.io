@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>netatalk: spotlight_rawquery_lexer.l File Reference</title>
+<title>netatalk: tunnel Struct Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -73,7 +73,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('spotlight__rawquery__lexer_8l.html','',''); });
+$(function(){initNavTree('structtunnel.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -99,56 +99,78 @@ $(function(){initNavTree('spotlight__rawquery__lexer_8l.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">spotlight_rawquery_lexer.l File Reference</div></div>
+  <div class="headertitle"><div class="title">tunnel Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;gio/gio.h&gt;</code><br />
-<code>#include &lt;talloc.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="spotlight_8h_source.html">atalk/spotlight.h</a>&gt;</code><br />
-<code>#include &quot;sparql_parser.h&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a724e6efc3af6cb93fb4107a29e32624b" id="r_a724e6efc3af6cb93fb4107a29e32624b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a724e6efc3af6cb93fb4107a29e32624b">SLQ_VAR</a>&#160;&#160;&#160;ssp_slq</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a9a7bd1b3d14701eb97c03f3ef34deff1" id="r_a9a7bd1b3d14701eb97c03f3ef34deff1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a7bd1b3d14701eb97c03f3ef34deff1">yylex</a> (void)</td></tr>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a777ff89a8f12475f49e18b27820064e1" id="r_a777ff89a8f12475f49e18b27820064e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a777ff89a8f12475f49e18b27820064e1">dev</a></td></tr>
+<tr class="memitem:acdd05513e12062781b1c8f1aecdacf2f" id="r_acdd05513e12062781b1c8f1aecdacf2f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdd05513e12062781b1c8f1aecdacf2f">name</a> [32]</td></tr>
+<tr class="memitem:ad8e2aa950ed7057e683176c4e5a33e0a" id="r_ad8e2aa950ed7057e683176c4e5a33e0a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8e2aa950ed7057e683176c4e5a33e0a">net</a></td></tr>
+<tr class="memitem:ae44362b0fc28af63bcb5256df6195154" id="r_ae44362b0fc28af63bcb5256df6195154"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae44362b0fc28af63bcb5256df6195154">mask</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a724e6efc3af6cb93fb4107a29e32624b" name="a724e6efc3af6cb93fb4107a29e32624b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a724e6efc3af6cb93fb4107a29e32624b">&#9670;&#160;</a></span>SLQ_VAR</h2>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a777ff89a8f12475f49e18b27820064e1" name="a777ff89a8f12475f49e18b27820064e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777ff89a8f12475f49e18b27820064e1">&#9670;&#160;</a></span>dev</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SLQ_VAR&#160;&#160;&#160;ssp_slq</td>
+          <td class="memname">int tunnel::dev</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a9a7bd1b3d14701eb97c03f3ef34deff1" name="a9a7bd1b3d14701eb97c03f3ef34deff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a7bd1b3d14701eb97c03f3ef34deff1">&#9670;&#160;</a></span>yylex()</h2>
+<a id="ae44362b0fc28af63bcb5256df6195154" name="ae44362b0fc28af63bcb5256df6195154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44362b0fc28af63bcb5256df6195154">&#9670;&#160;</a></span>mask</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int yylex </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">uint32_t tunnel::mask</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
+<a id="acdd05513e12062781b1c8f1aecdacf2f" name="acdd05513e12062781b1c8f1aecdacf2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd05513e12062781b1c8f1aecdacf2f">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char tunnel::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8e2aa950ed7057e683176c4e5a33e0a" name="ad8e2aa950ed7057e683176c4e5a33e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e2aa950ed7057e683176c4e5a33e0a">&#9670;&#160;</a></span>net</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t tunnel::net</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li><a class="el" href="tunnel__bsd_8c.html">tunnel_bsd.c</a></li>
+<li><a class="el" href="tunnel__linux_8c.html">tunnel_linux.c</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -164,7 +186,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_34c6163d67acbbcfc56107279c411fb1.html">etc</a></li><li class="navelem"><a href="dir_8fe2782aa4aa8aebf8b7854fdf875309.html">spotlight</a></li><li class="navelem"><a href="spotlight__rawquery__lexer_8l.html">spotlight_rawquery_lexer.l</a></li>
+    <li class="navelem"><a href="structtunnel.html">tunnel</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

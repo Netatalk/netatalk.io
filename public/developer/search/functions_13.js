@@ -399,10 +399,13 @@ var searchData=
   ['tskip_396',['tskip',['../printcap_8c.html#aad3a91b03eedaf55b85745c1c16b8148',1,'printcap.c']]],
   ['tsock_5fgetfd_397',['tsock_getfd',['../cnid__dbd_8c.html#a32eb9a8fb75b6b5df03bddbd3b3a647b',1,'cnid_dbd.c']]],
   ['tsockfd_5fcreate_398',['tsockfd_create',['../usockfd_8c.html#a6bf62d99e5ff6fa8c0c1853f47e1a029',1,'tsockfd_create(char *host, char *port, int backlog):&#160;usockfd.c'],['../usockfd_8h.html#a91de689942f52961768f2e2a8ee8482e',1,'tsockfd_create(char *, char *, int):&#160;usockfd.c']]],
-  ['tunnel_5fclose_399',['tunnel_close',['../tunnel_8h.html#aff040e603726193cb5bee16459761ed8',1,'tunnel.h']]],
-  ['tunnel_5finput_400',['tunnel_input',['../tunnel_8h.html#a14e05419cca2c97a70cb3208e4a99b73',1,'tunnel.h']]],
-  ['tunnel_5fopen_401',['tunnel_open',['../tunnel_8h.html#af72c77063dd2a69a6da9b4a5fabcccb5',1,'tunnel.h']]],
-  ['tunnel_5foutput_402',['tunnel_output',['../tunnel_8h.html#aa3ec9ebf2218cb211a7f9a0c957f3c4d',1,'tunnel.h']]],
-  ['txtrecordkeyprintf_403',['TXTRecordKeyPrintf',['../afp__mdns_8c.html#ab1666ee7e6b399f9af5759749065aa7b',1,'afp_mdns.c']]],
-  ['txtrecordprintf_404',['TXTRecordPrintf',['../afp__mdns_8c.html#af71f2997ec6100d9e13f00c89117d7ca',1,'afp_mdns.c']]]
+  ['tunnel_5fclose_399',['tunnel_close',['../tunnel_8h.html#aff040e603726193cb5bee16459761ed8',1,'tunnel_close(void):&#160;tunnel_bsd.c'],['../tunnel__bsd_8c.html#aff040e603726193cb5bee16459761ed8',1,'tunnel_close(void):&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#aff040e603726193cb5bee16459761ed8',1,'tunnel_close(void):&#160;tunnel_linux.c']]],
+  ['tunnel_5fcreate_400',['tunnel_create',['../tunnel__linux_8c.html#a5ea034613f432a016c8f2adc1abd9b5d',1,'tunnel_linux.c']]],
+  ['tunnel_5fifconfig_401',['tunnel_ifconfig',['../tunnel__bsd_8c.html#a30ffba0d1d2af73e30f6808dcfd478b6',1,'tunnel_ifconfig(void):&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#a30ffba0d1d2af73e30f6808dcfd478b6',1,'tunnel_ifconfig(void):&#160;tunnel_linux.c']]],
+  ['tunnel_5finput_402',['tunnel_input',['../tunnel_8h.html#a14e05419cca2c97a70cb3208e4a99b73',1,'tunnel_input(void):&#160;tunnel_bsd.c'],['../tunnel__bsd_8c.html#a14e05419cca2c97a70cb3208e4a99b73',1,'tunnel_input(void):&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#a14e05419cca2c97a70cb3208e4a99b73',1,'tunnel_input(void):&#160;tunnel_linux.c']]],
+  ['tunnel_5fopen_403',['tunnel_open',['../tunnel_8h.html#af72c77063dd2a69a6da9b4a5fabcccb5',1,'tunnel_open(uint32_t net, uint32_t mask, outputfunc_t o):&#160;tunnel_bsd.c'],['../tunnel__bsd_8c.html#af72c77063dd2a69a6da9b4a5fabcccb5',1,'tunnel_open(uint32_t net, uint32_t mask, outputfunc_t o):&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#af72c77063dd2a69a6da9b4a5fabcccb5',1,'tunnel_open(uint32_t net, uint32_t mask, outputfunc_t o):&#160;tunnel_linux.c']]],
+  ['tunnel_5foutput_404',['tunnel_output',['../tunnel_8h.html#aa3ec9ebf2218cb211a7f9a0c957f3c4d',1,'tunnel_output(char *buffer, int len):&#160;tunnel_bsd.c'],['../tunnel__bsd_8c.html#aa3ec9ebf2218cb211a7f9a0c957f3c4d',1,'tunnel_output(char *buffer, int len):&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#aa3ec9ebf2218cb211a7f9a0c957f3c4d',1,'tunnel_output(char *buffer, int len):&#160;tunnel_linux.c']]],
+  ['tunnel_5froute_405',['tunnel_route',['../tunnel__bsd_8c.html#a954c591409fd842ce387e44a2747deae',1,'tunnel_bsd.c']]],
+  ['txtrecordkeyprintf_406',['TXTRecordKeyPrintf',['../afp__mdns_8c.html#ab1666ee7e6b399f9af5759749065aa7b',1,'afp_mdns.c']]],
+  ['txtrecordprintf_407',['TXTRecordPrintf',['../afp__mdns_8c.html#af71f2997ec6100d9e13f00c89117d7ca',1,'afp_mdns.c']]]
 ];

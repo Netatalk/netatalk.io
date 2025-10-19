@@ -16,11 +16,12 @@ var searchData=
   ['globe_5ficon_13',['globe_icon',['../icon_8h.html#ae349250e1b3cafd08158751d2102a97d',1,'icon.h']]],
   ['gmacip_14',['gMacip',['../macip_8c.html#a598096097c7d69257a42a3bc8c9f6799',1,'macip.c']]],
   ['gotsigchld_15',['gotsigchld',['../etc_2afpd_2main_8c.html#a0530f85b2048d96f83b6644c4101afba',1,'main.c']]],
-  ['goutput_16',['gOutput',['../macip_8c.html#ac659fa9c440b9d7c78a0d0d2e084c34a',1,'macip.c']]],
+  ['goutput_16',['gOutput',['../macip_8c.html#ac659fa9c440b9d7c78a0d0d2e084c34a',1,'gOutput:&#160;macip.c'],['../tunnel__bsd_8c.html#ac659fa9c440b9d7c78a0d0d2e084c34a',1,'gOutput:&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#ac659fa9c440b9d7c78a0d0d2e084c34a',1,'gOutput:&#160;tunnel_linux.c']]],
   ['gq_5fhandler_17',['gq_handler',['../structgenquery.html#af9f31f4b9a679ea0f170746cf1a1a7ba',1,'genquery']]],
   ['gq_5fname_18',['gq_name',['../structgenquery.html#af7a31260a39eddc0d01813f91f4976f4',1,'genquery']]],
   ['group_19',['group',['../structcontext.html#af5de3f33d0639c2892f33f863493c47b',1,'context']]],
   ['groups_20',['groups',['../struct_a_f_p_obj.html#ae56fd259a532f96d983d9cbd0fe32881',1,'AFPObj::groups'],['../auth_8h.html#a14768705fb5be088474b996f84e2a00e',1,'groups:&#160;auth.h'],['../_f_p_set_dir_parms_8c.html#a14768705fb5be088474b996f84e2a00e',1,'groups:&#160;FPSetDirParms.c']]],
-  ['guest_21',['guest',['../structafp__options.html#a29d479b027ab4aadf333ef0ba582b782',1,'afp_options']]],
-  ['gzones_22',['gZones',['../macip_8c.html#a8b420886c4abd0f9bc4c2c7238df167e',1,'macip.c']]]
+  ['gtunnel_21',['gTunnel',['../tunnel__bsd_8c.html#ac933948c92a093fb5b3eadcae2f1c492',1,'gTunnel:&#160;tunnel_bsd.c'],['../tunnel__linux_8c.html#ac933948c92a093fb5b3eadcae2f1c492',1,'gTunnel:&#160;tunnel_linux.c']]],
+  ['guest_22',['guest',['../structafp__options.html#a29d479b027ab4aadf333ef0ba582b782',1,'afp_options']]],
+  ['gzones_23',['gZones',['../macip_8c.html#a8b420886c4abd0f9bc4c2c7238df167e',1,'macip.c']]]
 ];

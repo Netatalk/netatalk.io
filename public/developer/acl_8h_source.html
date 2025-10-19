@@ -141,28 +141,28 @@ $(function(){initNavTree('acl_8h_source.html','',''); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define chmod_acl nfsv4_chmod</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">extern</span> <span class="keywordtype">int</span> get_nfsv4_acl(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, ace_t **retAces);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">extern</span> <span class="keywordtype">int</span> strip_trivial_aces(ace_t **saces, <span class="keywordtype">int</span> sacecount);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">extern</span> <span class="keywordtype">int</span> strip_nontrivial_aces(ace_t **saces, <span class="keywordtype">int</span> sacecount);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">extern</span> ace_t *concat_aces(ace_t *aces1, <span class="keywordtype">int</span> ace1count, ace_t *aces2,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                          <span class="keywordtype">int</span> ace2count);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> <span class="keywordtype">int</span> nfsv4_chmod(<span class="keywordtype">char</span> *name, mode_t mode);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif  </span><span class="comment">/* HAVE_NFSV4_ACLS */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#ifdef HAVE_POSIX_ACLS</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;sys/acl.h&gt;</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="acl_8h.html#a7185fda25b1479981f200898f3a3e4cd">   53</a></span><span class="preprocessor">#define chmod_acl posix_chmod</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="acl_8h.html#a5d65f220e3a45895e0dc8dfc94353ee9">   54</a></span><span class="preprocessor">#define fchmod_acl posix_fchmod</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, mode_t mode);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#aa92126210d99787163679b5280f287e5">posix_fchmod</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, mode_t mode);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">/* HAVE_POSIX_ACLS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">extern</span> <span class="keywordtype">int</span> remove_nfsv4_acl_vfs(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">extern</span> <span class="keywordtype">int</span> strip_trivial_aces(ace_t **saces, <span class="keywordtype">int</span> sacecount);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">extern</span> <span class="keywordtype">int</span> strip_nontrivial_aces(ace_t **saces, <span class="keywordtype">int</span> sacecount);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">extern</span> ace_t *concat_aces(ace_t *aces1, <span class="keywordtype">int</span> ace1count, ace_t *aces2,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                          <span class="keywordtype">int</span> ace2count);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">extern</span> <span class="keywordtype">int</span> nfsv4_chmod(<span class="keywordtype">char</span> *name, mode_t mode);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif  </span><span class="comment">/* HAVE_NFSV4_ACLS */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#ifdef HAVE_POSIX_ACLS</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;sys/acl.h&gt;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="acl_8h.html#a7185fda25b1479981f200898f3a3e4cd">   54</a></span><span class="preprocessor">#define chmod_acl posix_chmod</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="acl_8h.html#a5d65f220e3a45895e0dc8dfc94353ee9">   55</a></span><span class="preprocessor">#define fchmod_acl posix_fchmod</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#acef215c49572f268a097c03c008a46d0">remove_posix_acl_vfs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, mode_t mode);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#aa92126210d99787163679b5280f287e5">posix_fchmod</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, mode_t mode);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="acl_8h.html#a9c7c6653218df001fa343891d82e6489">remove_acl_vfs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">/* HAVE_POSIX_ACLS */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#else </span><span class="comment">/* HAVE_ACLS=no */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -174,8 +174,8 @@ $(function(){initNavTree('acl_8h_source.html','',''); });
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">/* ATALK_ACL_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aacl_8h_html_a178c05777cbc6f5a962b07ad7ccd6d9c"><div class="ttname"><a href="acl_8h.html#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a></div><div class="ttdeci">int posix_chmod(const char *name, mode_t mode)</div><div class="ttdef"><b>Definition</b> libatalk/acl/unix.c:333</div></div>
-<div class="ttc" id="aacl_8h_html_a9c7c6653218df001fa343891d82e6489"><div class="ttname"><a href="acl_8h.html#a9c7c6653218df001fa343891d82e6489">remove_acl_vfs</a></div><div class="ttdeci">int remove_acl_vfs(const char *name)</div><div class="ttdoc">Remove any ACL_USER, ACL_GROUP, ACL_MASK or ACL_TYPE_DEFAULT ACEs from an object.</div><div class="ttdef"><b>Definition</b> acl.c:108</div></div>
 <div class="ttc" id="aacl_8h_html_aa92126210d99787163679b5280f287e5"><div class="ttname"><a href="acl_8h.html#aa92126210d99787163679b5280f287e5">posix_fchmod</a></div><div class="ttdeci">int posix_fchmod(int fd, mode_t mode)</div><div class="ttdef"><b>Definition</b> libatalk/acl/unix.c:459</div></div>
+<div class="ttc" id="aacl_8h_html_acef215c49572f268a097c03c008a46d0"><div class="ttname"><a href="acl_8h.html#acef215c49572f268a097c03c008a46d0">remove_posix_acl_vfs</a></div><div class="ttdeci">int remove_posix_acl_vfs(const char *name)</div><div class="ttdoc">Remove any ACL_USER, ACL_GROUP, ACL_MASK or ACL_TYPE_DEFAULT ACEs from an object.</div><div class="ttdef"><b>Definition</b> acl.c:108</div></div>
 <div class="ttc" id="avfs_8c_html_a642ae48927769266f4a87cf5efb4b344"><div class="ttname"><a href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></div><div class="ttdeci">const struct vol *restrict char *restrict size_t *restrict const char *restrict int const char *restrict int int fd</div><div class="ttdef"><b>Definition</b> vfs.c:750</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -102,6 +102,314 @@ $(function(){initNavTree('cnid__last_8c.html','',''); });
   <div class="headertitle"><div class="title">cnid_last.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="cnid__last_8h_source.html">cnid_last.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">atalk/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab084c5bd2b69d25857b98108ae7a82d3" id="r_ab084c5bd2b69d25857b98108ae7a82d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab084c5bd2b69d25857b98108ae7a82d3">cnid_last_add</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> hint)</td></tr>
+<tr class="memitem:a4dbbc6727cf692c849ea2005b5ef80fd" id="r_a4dbbc6727cf692c849ea2005b5ef80fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dbbc6727cf692c849ea2005b5ef80fd">cnid_last_close</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb)</td></tr>
+<tr class="memitem:adde0bcaa4fd71c0e1b73c0bace27577f" id="r_adde0bcaa4fd71c0e1b73c0bace27577f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde0bcaa4fd71c0e1b73c0bace27577f">cnid_last_delete</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> id)</td></tr>
+<tr class="memitem:a3da98fbea3e0e85f134c9778a180c6fb" id="r_a3da98fbea3e0e85f134c9778a180c6fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3da98fbea3e0e85f134c9778a180c6fb">cnid_last_get</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
+<tr class="memitem:a491debb3e0b611472feb9e4539fa5c50" id="r_a491debb3e0b611472feb9e4539fa5c50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a491debb3e0b611472feb9e4539fa5c50">cnid_last_lookup</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
+<tr class="memitem:ac89b08b7da8078d8054aa5562b5c8eff" id="r_ac89b08b7da8078d8054aa5562b5c8eff"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac89b08b7da8078d8054aa5562b5c8eff">cnid_last_new</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memitem:a8375b0c65de8c4043e543a16e803e8d0" id="r_a8375b0c65de8c4043e543a16e803e8d0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8375b0c65de8c4043e543a16e803e8d0">cnid_last_open</a> (struct <a class="el" href="structcnid__open__args.html">cnid_open_args</a> *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>)</td></tr>
+<tr class="memitem:a662f1c39c7b68eed84893c451a16fad8" id="r_a662f1c39c7b68eed84893c451a16fad8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a662f1c39c7b68eed84893c451a16fad8">cnid_last_resolve</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *id, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t len)</td></tr>
+<tr class="memitem:a9142229b5db7f0d35d5efc96930f8eed" id="r_a9142229b5db7f0d35d5efc96930f8eed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9142229b5db7f0d35d5efc96930f8eed">cnid_last_update</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> id, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad758dd854a3b9a614804d2b42e0ee9eb" id="r_ad758dd854a3b9a614804d2b42e0ee9eb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__cnid__module.html">_cnid_module</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad758dd854a3b9a614804d2b42e0ee9eb">cnid_last_module</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ab084c5bd2b69d25857b98108ae7a82d3" name="ab084c5bd2b69d25857b98108ae7a82d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab084c5bd2b69d25857b98108ae7a82d3">&#9670;&#160;</a></span>cnid_last_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> cnid_last_add </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>hint</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dbbc6727cf692c849ea2005b5ef80fd" name="a4dbbc6727cf692c849ea2005b5ef80fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbbc6727cf692c849ea2005b5ef80fd">&#9670;&#160;</a></span>cnid_last_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cnid_last_close </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adde0bcaa4fd71c0e1b73c0bace27577f" name="adde0bcaa4fd71c0e1b73c0bace27577f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde0bcaa4fd71c0e1b73c0bace27577f">&#9670;&#160;</a></span>cnid_last_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cnid_last_delete </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3da98fbea3e0e85f134c9778a180c6fb" name="a3da98fbea3e0e85f134c9778a180c6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da98fbea3e0e85f134c9778a180c6fb">&#9670;&#160;</a></span>cnid_last_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> cnid_last_get </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a491debb3e0b611472feb9e4539fa5c50" name="a491debb3e0b611472feb9e4539fa5c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491debb3e0b611472feb9e4539fa5c50">&#9670;&#160;</a></span>cnid_last_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> cnid_last_lookup </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac89b08b7da8078d8054aa5562b5c8eff" name="ac89b08b7da8078d8054aa5562b5c8eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89b08b7da8078d8054aa5562b5c8eff">&#9670;&#160;</a></span>cnid_last_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> * cnid_last_new </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8375b0c65de8c4043e543a16e803e8d0" name="a8375b0c65de8c4043e543a16e803e8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8375b0c65de8c4043e543a16e803e8d0">&#9670;&#160;</a></span>cnid_last_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> * cnid_last_open </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structcnid__open__args.html">cnid_open_args</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a662f1c39c7b68eed84893c451a16fad8" name="a662f1c39c7b68eed84893c451a16fad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662f1c39c7b68eed84893c451a16fad8">&#9670;&#160;</a></span>cnid_last_resolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * cnid_last_resolve </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9142229b5db7f0d35d5efc96930f8eed" name="a9142229b5db7f0d35d5efc96930f8eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9142229b5db7f0d35d5efc96930f8eed">&#9670;&#160;</a></span>cnid_last_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cnid_last_update </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *</td>          <td class="paramname"><span class="paramname"><em>cdb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct stat *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="ad758dd854a3b9a614804d2b42e0ee9eb" name="ad758dd854a3b9a614804d2b42e0ee9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad758dd854a3b9a614804d2b42e0ee9eb">&#9670;&#160;</a></span>cnid_last_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct__cnid__module.html">_cnid_module</a> cnid_last_module</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;last&quot;</span>,</div>
+<div class="line">    {NULL, NULL},</div>
+<div class="line">    <a class="code hl_function" href="#a8375b0c65de8c4043e543a16e803e8d0">cnid_last_open</a>,</div>
+<div class="line">    0</div>
+<div class="line">}</div>
+<div class="ttc" id="acnid__last_8c_html_a8375b0c65de8c4043e543a16e803e8d0"><div class="ttname"><a href="#a8375b0c65de8c4043e543a16e803e8d0">cnid_last_open</a></div><div class="ttdeci">struct _cnid_db * cnid_last_open(struct cnid_open_args *args)</div><div class="ttdef"><b>Definition</b> cnid_last.c:133</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

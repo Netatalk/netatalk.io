@@ -150,6 +150,7 @@ var annotated_dup =
     [ "sres_st", "structsres__st.html", "structsres__st" ],
     [ "test_entry", "structtest__entry.html", "structtest__entry" ],
     [ "test_fn", "structtest__fn.html", "structtest__fn" ],
+    [ "tunnel", "structtunnel.html", "structtunnel" ],
     [ "uam_export", "structuam__export.html", "structuam__export" ],
     [ "uam_mod", "structuam__mod.html", "structuam__mod" ],
     [ "uam_obj", "structuam__obj.html", "structuam__obj" ],

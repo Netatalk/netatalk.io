@@ -6,5 +6,5 @@ var acl_8h =
     [ "O_NETATALK_ACL", "acl_8h.html#a938c963cba750709e05a7534fd8eec6f", null ],
     [ "posix_chmod", "acl_8h.html#a178c05777cbc6f5a962b07ad7ccd6d9c", null ],
     [ "posix_fchmod", "acl_8h.html#aa92126210d99787163679b5280f287e5", null ],
-    [ "remove_acl_vfs", "acl_8h.html#a9c7c6653218df001fa343891d82e6489", null ]
+    [ "remove_posix_acl_vfs", "acl_8h.html#acef215c49572f268a097c03c008a46d0", null ]
 ];

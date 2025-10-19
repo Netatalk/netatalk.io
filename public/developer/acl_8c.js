@@ -1,4 +1,4 @@
 var acl_8c =
 [
-    [ "remove_acl_vfs", "acl_8c.html#a9c7c6653218df001fa343891d82e6489", null ]
+    [ "remove_posix_acl_vfs", "acl_8c.html#acef215c49572f268a097c03c008a46d0", null ]
 ];

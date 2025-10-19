@@ -119,7 +119,7 @@ var searchData=
   ['maccodepage_116',['maccodepage',['../structafp__options.html#ac2b78813975ec2d395a15b70cb121060',1,'afp_options']]],
   ['magics_117',['magics',['../comment_8h.html#a3abb0987158e32fdaa5f02b11bde7158',1,'magics:&#160;magics.c'],['../magics_8c.html#a3abb0987158e32fdaa5f02b11bde7158',1,'magics:&#160;magics.c']]],
   ['mainloop_118',['mainloop',['../structsl__ctx.html#aa907ce9eb64d256b6f179061efcb71ee',1,'sl_ctx']]],
-  ['mask_119',['mask',['../structmacip__data.html#ac661c893f8834936e67a055fce2a914c',1,'macip_data::mask'],['../nad__cp_8c.html#a3986af22a1285cb1db69c4ee902a2d5c',1,'mask:&#160;nad_cp.c']]],
+  ['mask_119',['mask',['../structmacip__data.html#ac661c893f8834936e67a055fce2a914c',1,'macip_data::mask'],['../structtunnel.html#ae44362b0fc28af63bcb5256df6195154',1,'tunnel::mask'],['../nad__cp_8c.html#a3986af22a1285cb1db69c4ee902a2d5c',1,'mask:&#160;nad_cp.c']]],
   ['max_120',['max',['../structasev.html#a5594fec240cbe0f18406a31a80e2945a',1,'asev']]],
   ['max_5ffilename_121',['max_filename',['../structvol.html#aad4ea061444753279d90ca99a954a98d',1,'vol']]],
   ['max_5fvols_122',['max_vols',['../structdb__param.html#a7e8577dec4bd85099b37b7a42ab53dfa',1,'db_param']]],

@@ -94,7 +94,7 @@ var searchData=
   ['delete_91',['Delete',['../speedtest_8c.html#acf421dd52fa28728046b5a5ac36d8ee7',1,'speedtest.c']]],
   ['delete_92',['delete',['../structvfs.html#a92e345933642330541b7eb48647eac70',1,'vfs']]],
   ['deny_5fseverity_93',['deny_severity',['../dsi__tcp_8c.html#a70da7854174737ba4ca40206b7d14a47',1,'dsi_tcp.c']]],
-  ['dev_94',['dev',['../structknown__object.html#a71beebfb638a8e15b531749d5ac2c6ec',1,'known_object::dev'],['../structftw__data.html#aab368e091453cfae8ca4f35c9b2446c2',1,'ftw_data::dev'],['../structfile__key.html#a25dfcbdd32cea3803792ad9191e34347',1,'file_key::dev'],['../structcnid__dbd__rqst.html#aee0ba427969f7a20248c4cf7286d230b',1,'cnid_dbd_rqst::dev']]],
+  ['dev_94',['dev',['../structknown__object.html#a71beebfb638a8e15b531749d5ac2c6ec',1,'known_object::dev'],['../structftw__data.html#aab368e091453cfae8ca4f35c9b2446c2',1,'ftw_data::dev'],['../structtunnel.html#a777ff89a8f12475f49e18b27820064e1',1,'tunnel::dev'],['../structfile__key.html#a25dfcbdd32cea3803792ad9191e34347',1,'file_key::dev'],['../structcnid__dbd__rqst.html#aee0ba427969f7a20248c4cf7286d230b',1,'cnid_dbd_rqst::dev']]],
   ['dflen_95',['dflen',['../structafp__filedir__parms.html#ac67c9c0b356a7e3b1773bf6f4dcfd6c2',1,'afp_filedir_parms']]],
   ['dhx_5fc2siv_96',['dhx_c2siv',['../uams__dhx2__pam_8c.html#aec215b6d4d8d85dc7e72f803f5f731e4',1,'dhx_c2siv:&#160;uams_dhx2_pam.c'],['../uams__dhx2__passwd_8c.html#aec215b6d4d8d85dc7e72f803f5f731e4',1,'dhx_c2siv:&#160;uams_dhx2_passwd.c']]],
   ['dhx_5fs2civ_97',['dhx_s2civ',['../uams__dhx2__pam_8c.html#adfb6d4526f572d405018b1c90c2c79c0',1,'dhx_s2civ:&#160;uams_dhx2_pam.c'],['../uams__dhx2__passwd_8c.html#adfb6d4526f572d405018b1c90c2c79c0',1,'dhx_s2civ:&#160;uams_dhx2_passwd.c']]],

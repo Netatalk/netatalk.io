@@ -307,7 +307,7 @@ var searchData=
   ['des_5fkey_5fsz_304',['DES_KEY_SZ',['../afppasswd_8c.html#aaa5a2a97dcb6f597ea17f34872d7d2eb',1,'DES_KEY_SZ:&#160;afppasswd.c'],['../uams__randnum_8c.html#aaa5a2a97dcb6f597ea17f34872d7d2eb',1,'DES_KEY_SZ:&#160;uams_randnum.c']]],
   ['desktop_2ec_305',['desktop.c',['../desktop_8c.html',1,'']]],
   ['desktop_2eh_306',['desktop.h',['../desktop_8h.html',1,'']]],
-  ['dev_307',['dev',['../structknown__object.html#a71beebfb638a8e15b531749d5ac2c6ec',1,'known_object::dev'],['../structftw__data.html#aab368e091453cfae8ca4f35c9b2446c2',1,'ftw_data::dev'],['../structfile__key.html#a25dfcbdd32cea3803792ad9191e34347',1,'file_key::dev'],['../structcnid__dbd__rqst.html#aee0ba427969f7a20248c4cf7286d230b',1,'cnid_dbd_rqst::dev']]],
+  ['dev_307',['dev',['../structknown__object.html#a71beebfb638a8e15b531749d5ac2c6ec',1,'known_object::dev'],['../structftw__data.html#aab368e091453cfae8ca4f35c9b2446c2',1,'ftw_data::dev'],['../structtunnel.html#a777ff89a8f12475f49e18b27820064e1',1,'tunnel::dev'],['../structfile__key.html#a25dfcbdd32cea3803792ad9191e34347',1,'file_key::dev'],['../structcnid__dbd__rqst.html#aee0ba427969f7a20248c4cf7286d230b',1,'cnid_dbd_rqst::dev']]],
   ['dev_5finfo_5fservice_5ftype_308',['DEV_INFO_SERVICE_TYPE',['../afp__zeroconf_8h.html#a8b3cb6b92653f64381dac12060e54695',1,'afp_zeroconf.h']]],
   ['developer_2emd_309',['developer.md',['../developer_8md.html',1,'']]],
   ['developers_310',['Documentation for Netatalk Developers',['../index.html',1,'']]],
