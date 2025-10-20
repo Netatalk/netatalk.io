@@ -19,6 +19,8 @@ var acls_8c =
     [ "check_acl_access", "acls_8c.html#a6d67884d0596464697dbea60ac79cabb", null ],
     [ "get_and_map_acl", "acls_8c.html#a5febce7f304b053500157b101ed6d15b", null ],
     [ "map_aces_darwin_to_posix", "acls_8c.html#a50af431a7c630d5c55ff91f71535d66c", null ],
+    [ "map_aces_darwin_to_solaris", "acls_8c.html#aa17a138947dabaab8ce23adfdbf158cb", null ],
+    [ "map_aces_solaris_to_darwin", "acls_8c.html#a133eaf1553202f53d5ad43703fabb8d7", null ],
     [ "map_acl", "acls_8c.html#a61669376af43d2e225aa6e15515312ef", null ],
     [ "map_acl_posix_to_darwin", "acls_8c.html#ad868b77af881c5df41054e8cfcf1c5c8", null ],
     [ "map_darwin_right_to_posix_permset", "acls_8c.html#a76cc44703b14dfd07ce783805ef546cb", null ],
@@ -27,5 +29,7 @@ var acls_8c =
     [ "posix_acls_to_uaperms", "acls_8c.html#a70631a81ef4027e23a44823e5b68b410", null ],
     [ "posix_permset_to_darwin_rights", "acls_8c.html#aba5338687e46ed472598da091519a0a4", null ],
     [ "remove_acl", "acls_8c.html#aab30b2409594c4fdabf56fac01e34b6e", null ],
-    [ "set_acl", "acls_8c.html#a5c89f423215f5ed9d354f62a486bb09c", null ]
+    [ "set_acl", "acls_8c.html#a68c7cd6dd016e4ee454d62657d30496f", null ],
+    [ "set_acl", "acls_8c.html#a5c89f423215f5ed9d354f62a486bb09c", null ],
+    [ "solaris_acl_rights", "acls_8c.html#a13edbf9741df9c0ef40137005824c56c", null ]
 ];

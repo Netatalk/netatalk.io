@@ -1,5 +1,16 @@
 var NAVTREEINDEX26 =
 {
+"spectest_8c.html#a77cf720aeed9c15783935c28737a4a8f":[6,0,7,1,79,31],
+"spectest_8c.html#a7cb54cbef9192977c4de7e4690b011d4":[6,0,7,1,79,37],
+"spectest_8c.html#a8003b331cd31a2bcf774c7d21d865cf2":[6,0,7,1,79,45],
+"spectest_8c.html#a8131e9afbe3f4fdd4c66fd1c60436a4c":[6,0,7,1,79,36],
+"spectest_8c.html#a83792aab629a56c39e4c75b75411db72":[6,0,7,1,79,73],
+"spectest_8c.html#a84c90229909e5f114835d185f6fa7d62":[6,0,7,1,79,1],
+"spectest_8c.html#a863cf46c244928cc278de22d43596b9a":[6,0,7,1,79,62],
+"spectest_8c.html#a86f5c9e78e72faeea166f625e71dc8c7":[6,0,7,1,79,22],
+"spectest_8c.html#a8b0b96423affee03fdcb41de029dacb6":[6,0,7,1,79,110],
+"spectest_8c.html#a8d4e11e9c21049c7f9b1f11b7aa073ed":[6,0,7,1,79,20],
+"spectest_8c.html#a8db116c5dc795437b21e78fc0d90611c":[6,0,7,1,79,47],
 "spectest_8c.html#a903f6bf44c6b2fbf2ccc5957d2cb2231":[6,0,7,1,79,109],
 "spectest_8c.html#a9078d461c0a5e6b44341df69a8fb5c9e":[6,0,7,1,79,112],
 "spectest_8c.html#a91650515e17255567493c27df6592290":[6,0,7,1,79,92],
@@ -238,16 +249,5 @@ var NAVTREEINDEX26 =
 "spotlight__marshalling_8c.html#a838d95f10dfcad456af2111d396cdc00":[6,0,3,0,47,36],
 "spotlight__marshalling_8c.html#a8547f34297931f850dab16875ac04367":[6,0,3,0,47,27],
 "spotlight__marshalling_8c.html#a8b3f145be1f22685fb2cfc826c8a2180":[6,0,3,0,47,15],
-"spotlight__marshalling_8c.html#a8bd79b2e68417388646b0eaf0645c9e9":[6,0,3,0,47,48],
-"spotlight__marshalling_8c.html#a8f7e9dfc9ce53df2d66d00e771f1fed7":[6,0,3,0,47,18],
-"spotlight__marshalling_8c.html#a91a9704c5b06d5683f07fa12a2cb824f":[6,0,3,0,47,45],
-"spotlight__marshalling_8c.html#a98afb5da01151f7b788acebb311fcf02":[6,0,3,0,47,25],
-"spotlight__marshalling_8c.html#a9db117f68d5eb71727384c583bdf3982":[6,0,3,0,47,23],
-"spotlight__marshalling_8c.html#a9dbf9625a232dcbd1921adb6b20f7c30":[6,0,3,0,47,16],
-"spotlight__marshalling_8c.html#aa054907c8548295e02bf313800dc1180":[6,0,3,0,47,37],
-"spotlight__marshalling_8c.html#aa5e27b65329e3db34eb3e50bd5ff82fa":[6,0,3,0,47,41],
-"spotlight__marshalling_8c.html#aa9a479f8b0f3a5b2b962860a773e8cf2":[6,0,3,0,47,1],
-"spotlight__marshalling_8c.html#aa9ac8760ad0e8e48badca94fa0e2f035":[6,0,3,0,47,5],
-"spotlight__marshalling_8c.html#aaac633cc9be1e9f82be030c1e6d46a94":[6,0,3,0,47,7],
-"spotlight__marshalling_8c.html#aac90fba23f3a941e81665322b1a0de01":[6,0,3,0,47,46]
+"spotlight__marshalling_8c.html#a8bd79b2e68417388646b0eaf0645c9e9":[6,0,3,0,47,48]
 };

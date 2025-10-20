@@ -30,13 +30,14 @@ var searchData=
   ['newiface_27',['newiface',['../config_8c.html#a8c0b0f8a716581726ca6df52ec794ea0',1,'newiface(const char *name):&#160;config.c'],['../interface_8h.html#affff89718adeecbd34d637b8b18776b1',1,'newiface(const char *):&#160;config.c']]],
   ['newrt_28',['newrt',['../rtmp_8c.html#a03a4bf7abfdced38437c15b0fc76557a',1,'newrt(const struct interface *iface):&#160;rtmp.c'],['../etc_2atalkd_2rtmp_8h.html#a688fb6442f955c63107cfb0dba83c17d',1,'newrt(const struct interface *):&#160;rtmp.c']]],
   ['newzt_29',['newzt',['../zip_8c.html#abd6a51156b39b2a3a2f50b775d471376',1,'newzt(const int len, const char *name):&#160;zip.c'],['../etc_2atalkd_2zip_8h.html#a7c935138270341f893734f9e582eccef',1,'newzt(const int, const char *):&#160;zip.c']]],
-  ['nftw_30',['nftw',['../ftw_8h.html#ac872b2ecb805bdd15a95e3d25f625e56',1,'ftw.h']]],
-  ['nftw_5fname_31',['NFTW_NAME',['../ftw_8c.html#a2b84383d5270317c34c9338bec65b04a',1,'ftw.c']]],
-  ['no_5faccess_5ffolder_32',['no_access_folder',['../afphelper_8c.html#a8a850ff87829e30d32667cde984bb618',1,'no_access_folder(uint16_t vol, int did, char *name):&#160;afphelper.c'],['../afphelper_8h.html#a8a850ff87829e30d32667cde984bb618',1,'no_access_folder(uint16_t vol, int did, char *name):&#160;afphelper.c']]],
-  ['noauth_5flogin_33',['noauth_login',['../uams__guest_8c.html#a13eddd61e0be248596211868745916f9',1,'uams_guest.c']]],
-  ['noauth_5flogin_5fext_34',['noauth_login_ext',['../uams__guest_8c.html#abfc872bb6a6d9751235d9fe8f8e1f9fa',1,'uams_guest.c']]],
-  ['noauth_5fprinter_35',['noauth_printer',['../uams__guest_8c.html#a93b6c5693c9c3f13d6e11384ee9b9cd6',1,'uams_guest.c']]],
-  ['not_5fvalid_36',['not_valid',['../afphelper_8c.html#aba01dd3135ca6eb0af7eb0ff3e2ea502',1,'not_valid(unsigned int ret, int mac_error, int netatalk_error):&#160;afphelper.c'],['../afphelper_8h.html#a584e510a8bfa2538b559c0f8f5464d3e',1,'not_valid(unsigned int ret, int mac_error, int afpd_error):&#160;afphelper.c']]],
-  ['not_5fvalid_5fbitmap_37',['not_valid_bitmap',['../afphelper_8c.html#a82d57a82580c2e86f2360c4465b3da58',1,'not_valid_bitmap(unsigned int ret, unsigned int bitmap, int netatalk_error):&#160;afphelper.c'],['../afphelper_8h.html#ae9da837a55d149a8bc2518ee4174e025',1,'not_valid_bitmap(unsigned int ret, unsigned int bitmap, int afpd_error):&#160;afphelper.c']]],
-  ['now_38',['now',['../macip_8c.html#af76d6f62602539015aecb8675c8e15c0',1,'macip.c']]]
+  ['nfsv4_5fchmod_30',['nfsv4_chmod',['../acl_8h.html#a2cdcb92d600a129d9685386ce6f281d4',1,'nfsv4_chmod(char *name, mode_t mode):&#160;unix.c'],['../libatalk_2acl_2unix_8c.html#a2cdcb92d600a129d9685386ce6f281d4',1,'nfsv4_chmod(char *name, mode_t mode):&#160;unix.c']]],
+  ['nftw_31',['nftw',['../ftw_8h.html#ac872b2ecb805bdd15a95e3d25f625e56',1,'ftw.h']]],
+  ['nftw_5fname_32',['NFTW_NAME',['../ftw_8c.html#a2b84383d5270317c34c9338bec65b04a',1,'ftw.c']]],
+  ['no_5faccess_5ffolder_33',['no_access_folder',['../afphelper_8c.html#a8a850ff87829e30d32667cde984bb618',1,'no_access_folder(uint16_t vol, int did, char *name):&#160;afphelper.c'],['../afphelper_8h.html#a8a850ff87829e30d32667cde984bb618',1,'no_access_folder(uint16_t vol, int did, char *name):&#160;afphelper.c']]],
+  ['noauth_5flogin_34',['noauth_login',['../uams__guest_8c.html#a13eddd61e0be248596211868745916f9',1,'uams_guest.c']]],
+  ['noauth_5flogin_5fext_35',['noauth_login_ext',['../uams__guest_8c.html#abfc872bb6a6d9751235d9fe8f8e1f9fa',1,'uams_guest.c']]],
+  ['noauth_5fprinter_36',['noauth_printer',['../uams__guest_8c.html#a93b6c5693c9c3f13d6e11384ee9b9cd6',1,'uams_guest.c']]],
+  ['not_5fvalid_37',['not_valid',['../afphelper_8c.html#aba01dd3135ca6eb0af7eb0ff3e2ea502',1,'not_valid(unsigned int ret, int mac_error, int netatalk_error):&#160;afphelper.c'],['../afphelper_8h.html#a584e510a8bfa2538b559c0f8f5464d3e',1,'not_valid(unsigned int ret, int mac_error, int afpd_error):&#160;afphelper.c']]],
+  ['not_5fvalid_5fbitmap_38',['not_valid_bitmap',['../afphelper_8c.html#a82d57a82580c2e86f2360c4465b3da58',1,'not_valid_bitmap(unsigned int ret, unsigned int bitmap, int netatalk_error):&#160;afphelper.c'],['../afphelper_8h.html#ae9da837a55d149a8bc2518ee4174e025',1,'not_valid_bitmap(unsigned int ret, unsigned int bitmap, int afpd_error):&#160;afphelper.c']]],
+  ['now_39',['now',['../macip_8c.html#af76d6f62602539015aecb8675c8e15c0',1,'macip.c']]]
 ];

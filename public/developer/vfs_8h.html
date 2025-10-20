@@ -136,6 +136,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a56c8e516aea4a978cfa921f5d7c371ce" id="r_a56c8e516aea4a978cfa921f5d7c371ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56c8e516aea4a978cfa921f5d7c371ce">VFS_FUNC_VARS_RENAMEFILE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, src, dst</td></tr>
 <tr class="memitem:a41f46b74c3bcd73bf4b5353d21238260" id="r_a41f46b74c3bcd73bf4b5353d21238260"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst</td></tr>
 <tr class="memitem:a001de27db9d94833b99eca3d89117301" id="r_a001de27db9d94833b99eca3d89117301"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001de27db9d94833b99eca3d89117301">VFS_FUNC_VARS_COPYFILE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, sfd, src, dst</td></tr>
+<tr class="memitem:adec25e622eec01905a26ae85f0c2eccc" id="r_adec25e622eec01905a26ae85f0c2eccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces</td></tr>
+<tr class="memitem:a567a3f8771bafec703d8a2d8bde772e6" id="r_a567a3f8771bafec703d8a2d8bde772e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567a3f8771bafec703d8a2d8bde772e6">VFS_FUNC_VARS_ACL</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, cmd, count, aces</td></tr>
 <tr class="memitem:adec25e622eec01905a26ae85f0c2eccc" id="r_adec25e622eec01905a26ae85f0c2eccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, acl_type_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int count, acl_t acl</td></tr>
 <tr class="memitem:a567a3f8771bafec703d8a2d8bde772e6" id="r_a567a3f8771bafec703d8a2d8bde772e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567a3f8771bafec703d8a2d8bde772e6">VFS_FUNC_VARS_ACL</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, count, acl</td></tr>
 <tr class="memitem:a49de02b5d5c5a0fdb00dda5f39f8fc3a" id="r_a49de02b5d5c5a0fdb00dda5f39f8fc3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a></td></tr>
@@ -157,7 +159,21 @@ Functions</h2></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="adec25e622eec01905a26ae85f0c2eccc" name="adec25e622eec01905a26ae85f0c2eccc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adec25e622eec01905a26ae85f0c2eccc">&#9670;&#160;</a></span>VFS_FUNC_ARGS_ACL</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adec25e622eec01905a26ae85f0c2eccc">&#9670;&#160;</a></span>VFS_FUNC_ARGS_ACL <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VFS_FUNC_ARGS_ACL&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adec25e622eec01905a26ae85f0c2eccc" name="adec25e622eec01905a26ae85f0c2eccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec25e622eec01905a26ae85f0c2eccc">&#9670;&#160;</a></span>VFS_FUNC_ARGS_ACL <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +425,21 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a567a3f8771bafec703d8a2d8bde772e6" name="a567a3f8771bafec703d8a2d8bde772e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567a3f8771bafec703d8a2d8bde772e6">&#9670;&#160;</a></span>VFS_FUNC_VARS_ACL</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a567a3f8771bafec703d8a2d8bde772e6">&#9670;&#160;</a></span>VFS_FUNC_VARS_ACL <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VFS_FUNC_VARS_ACL&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, cmd, count, aces</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a567a3f8771bafec703d8a2d8bde772e6" name="a567a3f8771bafec703d8a2d8bde772e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567a3f8771bafec703d8a2d8bde772e6">&#9670;&#160;</a></span>VFS_FUNC_VARS_ACL <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -153,6 +153,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ac1d59f9ee7a5f419f3b6903065d26a88" id="r_ac1d59f9ee7a5f419f3b6903065d26a88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d59f9ee7a5f419f3b6903065d26a88">RF_deletefile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td></tr>
 <tr class="memitem:a1255c143523778db549a4bfb94c4fee8" id="r_a1255c143523778db549a4bfb94c4fee8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1255c143523778db549a4bfb94c4fee8">RF_renamefile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td></tr>
 <tr class="memitem:a58a105df426ca00e3eb69f0068a63cd0" id="r_a58a105df426ca00e3eb69f0068a63cd0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58a105df426ca00e3eb69f0068a63cd0">RF_copyfile_adouble</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:ab8b32d8d0a6d2f382da00f74259a48e8" id="r_ab8b32d8d0a6d2f382da00f74259a48e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b32d8d0a6d2f382da00f74259a48e8">RF_solaris_acl</a> (<a class="el" href="vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>)</td></tr>
+<tr class="memitem:a8208288ea4fe6b115f70d228431b197a" id="r_a8208288ea4fe6b115f70d228431b197a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8208288ea4fe6b115f70d228431b197a">RF_solaris_remove_acl</a> (<a class="el" href="vfs_8h.html#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a>)</td></tr>
 <tr class="memitem:ac2ee8137ca66a9bf15c827fb03fea055" id="r_ac2ee8137ca66a9bf15c827fb03fea055"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2ee8137ca66a9bf15c827fb03fea055">RF_posix_acl</a> (<a class="el" href="vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>)</td></tr>
 <tr class="memitem:ac5b4569844a047b75a2144df3144e852" id="r_ac5b4569844a047b75a2144df3144e852"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5b4569844a047b75a2144df3144e852">RF_posix_remove_acl</a> (<a class="el" href="vfs_8h.html#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a>)</td></tr>
 <tr class="memitem:a566a6f6c47672c6337d417d2b09b41f7" id="r_a566a6f6c47672c6337d417d2b09b41f7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566a6f6c47672c6337d417d2b09b41f7">validupath_ea</a> (<a class="el" href="vfs_8h.html#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a>)</td></tr>
@@ -187,6 +189,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a7e23988a66befee849dc5af8ca7adee7" id="r_a7e23988a66befee849dc5af8ca7adee7"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e23988a66befee849dc5af8ca7adee7">netatalk_adouble_ea</a></td></tr>
 <tr class="memitem:a28ea578e800fd027e5f909565d430b1e" id="r_a28ea578e800fd027e5f909565d430b1e"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28ea578e800fd027e5f909565d430b1e">netatalk_ea_adouble</a></td></tr>
 <tr class="memitem:a2cfa71637109ababff39ac2754a7ed7d" id="r_a2cfa71637109ababff39ac2754a7ed7d"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cfa71637109ababff39ac2754a7ed7d">netatalk_ea_sys</a></td></tr>
+<tr class="memitem:a201e0e58a784ad104cc71925f652af65" id="r_a201e0e58a784ad104cc71925f652af65"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a201e0e58a784ad104cc71925f652af65">netatalk_solaris_acl_adouble</a></td></tr>
 <tr class="memitem:a8d7d1aecf9d075f196516add4715ecdc" id="r_a8d7d1aecf9d075f196516add4715ecdc"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structvfs__ops.html">vfs_ops</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d7d1aecf9d075f196516add4715ecdc">netatalk_posix_acl_adouble</a></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -1219,6 +1222,56 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab8b32d8d0a6d2f382da00f74259a48e8" name="ab8b32d8d0a6d2f382da00f74259a48e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b32d8d0a6d2f382da00f74259a48e8">&#9670;&#160;</a></span>RF_solaris_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RF_solaris_acl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vfs_8h.html#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8208288ea4fe6b115f70d228431b197a" name="a8208288ea4fe6b115f70d228431b197a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8208288ea4fe6b115f70d228431b197a">&#9670;&#160;</a></span>RF_solaris_remove_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RF_solaris_remove_acl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="vfs_8h.html#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a74533c891d4d14cadfae5faa9b7dc443" name="a74533c891d4d14cadfae5faa9b7dc443"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a74533c891d4d14cadfae5faa9b7dc443">&#9670;&#160;</a></span>setdirmode_adouble_loop()</h2>
 
@@ -1666,6 +1719,46 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="avfs_8c_html_ac2ee8137ca66a9bf15c827fb03fea055"><div class="ttname"><a href="#ac2ee8137ca66a9bf15c827fb03fea055">RF_posix_acl</a></div><div class="ttdeci">static int RF_posix_acl(VFS_FUNC_ARGS_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:446</div></div>
 <div class="ttc" id="avfs_8c_html_ac5b4569844a047b75a2144df3144e852"><div class="ttname"><a href="#ac5b4569844a047b75a2144df3144e852">RF_posix_remove_acl</a></div><div class="ttdeci">static int RF_posix_remove_acl(VFS_FUNC_ARGS_REMOVE_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:470</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a201e0e58a784ad104cc71925f652af65" name="a201e0e58a784ad104cc71925f652af65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201e0e58a784ad104cc71925f652af65">&#9670;&#160;</a></span>netatalk_solaris_acl_adouble</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structvfs__ops.html">vfs_ops</a> netatalk_solaris_acl_adouble</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     NULL,</div>
+<div class="line">     <a class="code hl_function" href="#ab8b32d8d0a6d2f382da00f74259a48e8">RF_solaris_acl</a>,</div>
+<div class="line">     <a class="code hl_function" href="#a8208288ea4fe6b115f70d228431b197a">RF_solaris_remove_acl</a>,</div>
+<div class="line">    NULL</div>
+<div class="line">}</div>
+<div class="ttc" id="avfs_8c_html_a8208288ea4fe6b115f70d228431b197a"><div class="ttname"><a href="#a8208288ea4fe6b115f70d228431b197a">RF_solaris_remove_acl</a></div><div class="ttdeci">static int RF_solaris_remove_acl(VFS_FUNC_ARGS_REMOVE_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:422</div></div>
+<div class="ttc" id="avfs_8c_html_ab8b32d8d0a6d2f382da00f74259a48e8"><div class="ttname"><a href="#ab8b32d8d0a6d2f382da00f74259a48e8">RF_solaris_acl</a></div><div class="ttdeci">static int RF_solaris_acl(VFS_FUNC_ARGS_ACL)</div><div class="ttdef"><b>Definition</b> vfs.c:398</div></div>
 </div><!-- fragment -->
 </div>
 </div>

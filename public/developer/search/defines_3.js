@@ -20,7 +20,7 @@ var searchData=
   ['charset_5fwidechar_17',['CHARSET_WIDECHAR',['../unicode_8h.html#a8825b0bf79d31084a07f743757df28bd',1,'CHARSET_WIDECHAR:&#160;unicode.h'],['../iconv_8c.html#a8825b0bf79d31084a07f743757df28bd',1,'CHARSET_WIDECHAR:&#160;iconv.c']]],
   ['check_5fflags_18',['CHECK_FLAGS',['../charcnv_8c.html#a257a948a2863994004e6383c7a0c8641',1,'charcnv.c']]],
   ['child_5fhashsize_19',['CHILD_HASHSIZE',['../server__child_8h.html#aaa061f75e6f3ed38819fb43091a8dcd0',1,'server_child.h']]],
-  ['chmod_5facl_20',['chmod_acl',['../acl_8h.html#a7185fda25b1479981f200898f3a3e4cd',1,'acl.h']]],
+  ['chmod_5facl_20',['chmod_acl',['../acl_8h.html#a7185fda25b1479981f200898f3a3e4cd',1,'chmod_acl:&#160;acl.h'],['../acl_8h.html#a7185fda25b1479981f200898f3a3e4cd',1,'chmod_acl:&#160;acl.h']]],
   ['cjk_5fpull_5fbuffer_21',['CJK_PULL_BUFFER',['../generic__cjk_8h.html#a266fd2bb0c0ed73f639a4dec58f1a796',1,'generic_cjk.h']]],
   ['cjk_5fpush_5fbuffer_22',['CJK_PUSH_BUFFER',['../generic__cjk_8h.html#aef2f0a8d405f37d67dc065c2dbb74147',1,'generic_cjk.h']]],
   ['cm_5fnoprint_23',['CM_NOPRINT',['../comment_8h.html#aa936d77d1cce4c36a0c1f0941f63641c',1,'comment.h']]],

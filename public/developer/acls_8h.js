@@ -2,6 +2,7 @@ var acls_8h =
 [
     [ "darwin_ace_t", "structdarwin__ace__t.html", "structdarwin__ace__t" ],
     [ "darwin_acl_header_t", "structdarwin__acl__header__t.html", "structdarwin__acl__header__t" ],
+    [ "ACE_TRIVIAL", "acls_8h.html#a4ab814151f4e443b16d06e10cae6f790", null ],
     [ "DARWIN_ACE_ADD_FILE", "acls_8h.html#a9c52d574e46c95d841c7fd1820cda2b2", null ],
     [ "DARWIN_ACE_ADD_SUBDIRECTORY", "acls_8h.html#ae2905f99c04dac2708f0dba0a7fc705b", null ],
     [ "DARWIN_ACE_APPEND_DATA", "acls_8h.html#aca904635cf8ff163156b09cb94d04330", null ],

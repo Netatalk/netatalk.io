@@ -319,7 +319,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>: -1 on error, 0 nothing found, 1 successful search, result int 'result'</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 nothing found, 1 successful search, result int 'result'</dd></dl>
 <p>All connection managment to the LDAP server is done here. Just set KEEPALIVE if you know you will be dispatching more than one search in a row, then don't set it with the last search. You MUST dispatch the queries timely, otherwise the LDAP handle might timeout. </p>
 
 </div>

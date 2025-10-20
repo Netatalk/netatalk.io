@@ -16,7 +16,7 @@ var searchData=
   ['mangle_5flength_13',['MANGLE_LENGTH',['../mangle_8h.html#af778013adb34a6b8a8f88ada5376bf8b',1,'mangle.h']]],
   ['map_5fmask_14',['MAP_MASK',['../acls_8c.html#ae58284531c9467c4f6d7bff45f8d58b4',1,'acls.c']]],
   ['mask_15',['mask',['../hash_8c.html#adb5a31dfda5e9760c1d7a9a25cd7b9ac',1,'hash.c']]],
-  ['max_16',['MAX',['../include_2atalk_2util_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'MAX:&#160;util.h'],['../netddp__sendto_8c.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'MAX:&#160;netddp_sendto.c']]],
+  ['max_16',['MAX',['../include_2atalk_2util_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'util.h']]],
   ['max_5fcharsets_17',['MAX_CHARSETS',['../charcnv_8c.html#a66dce635eb7337b3a26261dbee225edb',1,'charcnv.c']]],
   ['max_5fcoalesce_5ftime_5fms_18',['MAX_COALESCE_TIME_MS',['../fce__api__internal_8h.html#ae5c9515eb848962249b6d7eef7ad2bff',1,'fce_api_internal.h']]],
   ['max_5fdelay_19',['MAX_DELAY',['../cnid__dbd_8c.html#a16027d8acc5301e440cefa086eb9db2a',1,'cnid_dbd.c']]],

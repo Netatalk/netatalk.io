@@ -26,7 +26,5 @@ var searchData=
   ['netatalk_5fconf_2eh_23',['netatalk_conf.h',['../netatalk__conf_8h.html',1,'']]],
   ['netddp_2eh_24',['netddp.h',['../netddp_8h.html',1,'']]],
   ['netddp_5fopen_2ec_25',['netddp_open.c',['../netddp__open_8c.html',1,'']]],
-  ['netddp_5frecvfrom_2ec_26',['netddp_recvfrom.c',['../netddp__recvfrom_8c.html',1,'']]],
-  ['netddp_5fsendto_2ec_27',['netddp_sendto.c',['../netddp__sendto_8c.html',1,'']]],
-  ['nfsquota_2ec_28',['nfsquota.c',['../nfsquota_8c.html',1,'']]]
+  ['nfsquota_2ec_26',['nfsquota.c',['../nfsquota_8c.html',1,'']]]
 ];

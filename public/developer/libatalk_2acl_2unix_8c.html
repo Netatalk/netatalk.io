@@ -124,6 +124,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a01d9cb402df9f886e96589852c718a7b" id="r_a01d9cb402df9f886e96589852c718a7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d9cb402df9f886e96589852c718a7b">get_nfsv4_acl</a> (const char *name, ace_t **retAces)</td></tr>
+<tr class="memitem:a55f0dcc7b79c7829784891f83655286e" id="r_a55f0dcc7b79c7829784891f83655286e"><td class="memItemLeft" align="right" valign="top">ace_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f0dcc7b79c7829784891f83655286e">concat_aces</a> (ace_t *aces1, int ace1count, ace_t *aces2, int ace2count)</td></tr>
+<tr class="memitem:a3ae4180686d9f93f63a064438e690c82" id="r_a3ae4180686d9f93f63a064438e690c82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae4180686d9f93f63a064438e690c82">strip_trivial_aces</a> (ace_t **saces, int sacecount)</td></tr>
+<tr class="memitem:afe4fdaefae0f0c820df417391c4929a7" id="r_afe4fdaefae0f0c820df417391c4929a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4fdaefae0f0c820df417391c4929a7">strip_nontrivial_aces</a> (ace_t **saces, int sacecount)</td></tr>
+<tr class="memitem:a2cdcb92d600a129d9685386ce6f281d4" id="r_a2cdcb92d600a129d9685386ce6f281d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cdcb92d600a129d9685386ce6f281d4">nfsv4_chmod</a> (char *name, mode_t mode)</td></tr>
+<tr class="memdesc:a2cdcb92d600a129d9685386ce6f281d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change mode of file preserving existing explicit ACEs.  <br /></td></tr>
 <tr class="memitem:a178c05777cbc6f5a962b07ad7ccd6d9c" id="r_a178c05777cbc6f5a962b07ad7ccd6d9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a> (const char *name, mode_t mode)</td></tr>
 <tr class="memitem:aa92126210d99787163679b5280f287e5" id="r_aa92126210d99787163679b5280f287e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92126210d99787163679b5280f287e5">posix_fchmod</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, mode_t mode)</td></tr>
 </table>
@@ -157,6 +163,90 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a55f0dcc7b79c7829784891f83655286e" name="a55f0dcc7b79c7829784891f83655286e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f0dcc7b79c7829784891f83655286e">&#9670;&#160;</a></span>concat_aces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ace_t * concat_aces </td>
+          <td>(</td>
+          <td class="paramtype">ace_t *</td>          <td class="paramname"><span class="paramname"><em>aces1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ace1count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ace_t *</td>          <td class="paramname"><span class="paramname"><em>aces2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ace2count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01d9cb402df9f886e96589852c718a7b" name="a01d9cb402df9f886e96589852c718a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d9cb402df9f886e96589852c718a7b">&#9670;&#160;</a></span>get_nfsv4_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_nfsv4_acl </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ace_t **</td>          <td class="paramname"><span class="paramname"><em>retAces</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cdcb92d600a129d9685386ce6f281d4" name="a2cdcb92d600a129d9685386ce6f281d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cdcb92d600a129d9685386ce6f281d4">&#9670;&#160;</a></span>nfsv4_chmod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nfsv4_chmod </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change mode of file preserving existing explicit ACEs. </p>
+<p>nfsv4_chmod</p><ol type="1">
+<li>reads objects ACL (acl1), may return 0 or -1 NFSv4 ACEs on e.g. UFS fs</li>
+<li>removes all trivial ACEs from the ACL by calling <a class="el" href="#a3ae4180686d9f93f63a064438e690c82">strip_trivial_aces()</a>, possibly leaving 0 ACEs in the ACL if there were only trivial ACEs as mapped from the mode</li>
+<li>calls chmod() with mode, we're done if step (1) returned 0 for noaces</li>
+<li>reads the changed ACL (acl2) which a. might still contain explicit ACEs (up to onnv132) b. will have any explicit ACE removed (starting with onnv145/Openindiana)</li>
+<li>strip any explicit ACE from acl2 using <a class="el" href="#afe4fdaefae0f0c820df417391c4929a7">strip_nontrivial_aces()</a></li>
+<li>merge acl2 and acl2</li>
+<li>set the ACL merged ACL on the object </li>
+</ol>
+
+</div>
+</div>
 <a id="a178c05777cbc6f5a962b07ad7ccd6d9c" name="a178c05777cbc6f5a962b07ad7ccd6d9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a178c05777cbc6f5a962b07ad7ccd6d9c">&#9670;&#160;</a></span>posix_chmod()</h2>
 
@@ -193,6 +283,48 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">mode_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe4fdaefae0f0c820df417391c4929a7" name="afe4fdaefae0f0c820df417391c4929a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4fdaefae0f0c820df417391c4929a7">&#9670;&#160;</a></span>strip_nontrivial_aces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int strip_nontrivial_aces </td>
+          <td>(</td>
+          <td class="paramtype">ace_t **</td>          <td class="paramname"><span class="paramname"><em>saces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sacecount</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ae4180686d9f93f63a064438e690c82" name="a3ae4180686d9f93f63a064438e690c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae4180686d9f93f63a064438e690c82">&#9670;&#160;</a></span>strip_trivial_aces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int strip_trivial_aces </td>
+          <td>(</td>
+          <td class="paramtype">ace_t **</td>          <td class="paramname"><span class="paramname"><em>saces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sacecount</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

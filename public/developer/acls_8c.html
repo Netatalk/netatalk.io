@@ -146,6 +146,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a13edbf9741df9c0ef40137005824c56c" id="r_a13edbf9741df9c0ef40137005824c56c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13edbf9741df9c0ef40137005824c56c">solaris_acl_rights</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, struct stat *sb, struct <a class="el" href="structmaccess.html">maccess</a> *ma, uint32_t *rights_out)</td></tr>
+<tr class="memdesc:a13edbf9741df9c0ef40137005824c56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile access rights for a user to one file-system object.  <br /></td></tr>
+<tr class="memitem:a133eaf1553202f53d5ad43703fabb8d7" id="r_a133eaf1553202f53d5ad43703fabb8d7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133eaf1553202f53d5ad43703fabb8d7">map_aces_solaris_to_darwin</a> (const ace_t *aces, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, int ace_count)</td></tr>
+<tr class="memitem:aa17a138947dabaab8ce23adfdbf158cb" id="r_aa17a138947dabaab8ce23adfdbf158cb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17a138947dabaab8ce23adfdbf158cb">map_aces_darwin_to_solaris</a> (<a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, ace_t *nfsv4_aces, int ace_count)</td></tr>
 <tr class="memitem:aba5338687e46ed472598da091519a0a4" id="r_aba5338687e46ed472598da091519a0a4"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba5338687e46ed472598da091519a0a4">posix_permset_to_darwin_rights</a> (acl_entry_t e, int is_dir)</td></tr>
 <tr class="memitem:a6527676865aa81da9eb32f9cddf10907" id="r_a6527676865aa81da9eb32f9cddf10907"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6527676865aa81da9eb32f9cddf10907">posix_acl_rights</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, const struct stat *sb, uint32_t *result)</td></tr>
 <tr class="memdesc:a6527676865aa81da9eb32f9cddf10907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile access rights for a user to one file-system object.  <br /></td></tr>
@@ -163,6 +167,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a61669376af43d2e225aa6e15515312ef" id="r_a61669376af43d2e225aa6e15515312ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61669376af43d2e225aa6e15515312ef">map_acl</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, void *acl, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int ace_count)</td></tr>
 <tr class="memitem:a5febce7f304b053500157b101ed6d15b" id="r_a5febce7f304b053500157b101ed6d15b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febce7f304b053500157b101ed6d15b">get_and_map_acl</a> (char *name, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
 <tr class="memitem:aab30b2409594c4fdabf56fac01e34b6e" id="r_aab30b2409594c4fdabf56fac01e34b6e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab30b2409594c4fdabf56fac01e34b6e">remove_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memitem:a68c7cd6dd016e4ee454d62657d30496f" id="r_a68c7cd6dd016e4ee454d62657d30496f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c7cd6dd016e4ee454d62657d30496f">set_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *name, int inherit, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *daces, uint32_t ace_count)</td></tr>
 <tr class="memitem:a859dd30b415908f5984d372491436df0" id="r_a859dd30b415908f5984d372491436df0"><td class="memItemLeft" align="right" valign="top">static acl_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859dd30b415908f5984d372491436df0">acl_from_mode</a> (mode_t mode)</td></tr>
 <tr class="memitem:a5c89f423215f5ed9d354f62a486bb09c" id="r_a5c89f423215f5ed9d354f62a486bb09c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c89f423215f5ed9d354f62a486bb09c">set_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, int inherit, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *daces, uint32_t ace_count)</td></tr>
 <tr class="memitem:a6d67884d0596464697dbea60ac79cabb" id="r_a6d67884d0596464697dbea60ac79cabb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d67884d0596464697dbea60ac79cabb">check_acl_access</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, const char *<a class="el" href="structpath.html">path</a>, const <a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> <a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>, uint32_t requested_rights)</td></tr>
@@ -681,6 +686,74 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa17a138947dabaab8ce23adfdbf158cb" name="aa17a138947dabaab8ce23adfdbf158cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17a138947dabaab8ce23adfdbf158cb">&#9670;&#160;</a></span>map_aces_darwin_to_solaris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_aces_darwin_to_solaris </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>darwin_aces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ace_t *</td>          <td class="paramname"><span class="paramname"><em>nfsv4_aces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a133eaf1553202f53d5ad43703fabb8d7" name="a133eaf1553202f53d5ad43703fabb8d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133eaf1553202f53d5ad43703fabb8d7">&#9670;&#160;</a></span>map_aces_solaris_to_darwin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_aces_solaris_to_darwin </td>
+          <td>(</td>
+          <td class="paramtype">const ace_t *</td>          <td class="paramname"><span class="paramname"><em>aces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>darwin_aces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a61669376af43d2e225aa6e15515312ef" name="a61669376af43d2e225aa6e15515312ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61669376af43d2e225aa6e15515312ef">&#9670;&#160;</a></span>map_acl()</h2>
 
@@ -1018,8 +1091,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a68c7cd6dd016e4ee454d62657d30496f" name="a68c7cd6dd016e4ee454d62657d30496f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c7cd6dd016e4ee454d62657d30496f">&#9670;&#160;</a></span>set_acl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_acl </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>inherit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>daces</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5c89f423215f5ed9d354f62a486bb09c" name="a5c89f423215f5ed9d354f62a486bb09c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c89f423215f5ed9d354f62a486bb09c">&#9670;&#160;</a></span>set_acl()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c89f423215f5ed9d354f62a486bb09c">&#9670;&#160;</a></span>set_acl() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1059,6 +1176,64 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13edbf9741df9c0ef40137005824c56c" name="a13edbf9741df9c0ef40137005824c56c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13edbf9741df9c0ef40137005824c56c">&#9670;&#160;</a></span>solaris_acl_rights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int solaris_acl_rights </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structmaccess.html">maccess</a> *</td>          <td class="paramname"><span class="paramname"><em>ma</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>rights_out</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile access rights for a user to one file-system object. </p>
+<p>This combines all access rights for a user to one fs-object and returns the result as a Darwin allowed rights ACE. This must honor trivial ACEs which are a mode_t mapping.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path to filesystem object </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">sb</td><td>struct stat of path </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ma</td><td>UARights struct </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rights_out</td><td>mapped Darwin ACL rights</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 or -1 on error </dd></dl>
 
 </div>
 </div>
