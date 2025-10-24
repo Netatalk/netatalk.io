@@ -131,7 +131,35 @@ Macros</h2></td></tr>
 <tr class="memitem:ae37d60ae9bd89f9d721dc6d8a78622a7" id="r_ae37d60ae9bd89f9d721dc6d8a78622a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae37d60ae9bd89f9d721dc6d8a78622a7">dsh_bytes</a>&#160;&#160;&#160;dsh_u.du_bytes</td></tr>
 <tr class="memitem:a5a2d693df04dd2fb173f7905be2c5dce" id="r_a5a2d693df04dd2fb173f7905be2c5dce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a2d693df04dd2fb173f7905be2c5dce">SZ_DDPSHDR</a>&#160;&#160;&#160;4</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="fragment"><div class="line">&lt;-1byte(8bits) -&gt;</div>
+<div class="line">+---------------+</div>
+<div class="line">| 0 | hopc  |len|</div>
+<div class="line">+---------------+</div>
+<div class="line">| len (cont)    |</div>
+<div class="line">+---------------+</div>
+<div class="line">|               |</div>
+<div class="line">+- DDP csum    -+</div>
+<div class="line">|               |</div>
+<div class="line">+---------------+</div>
+<div class="line">|               |</div>
+<div class="line">+- Dest NET    -+</div>
+<div class="line">|               |</div>
+<div class="line">+---------------+</div>
+<div class="line">|               |</div>
+<div class="line">+- Src NET     -+</div>
+<div class="line">|               |</div>
+<div class="line">+---------------+</div>
+<div class="line">| Dest NODE     |</div>
+<div class="line">+---------------+</div>
+<div class="line">| Src NODE      |</div>
+<div class="line">+---------------+</div>
+<div class="line">| Dest PORT     |</div>
+<div class="line">+---------------+</div>
+<div class="line">| Src PORT      |</div>
+<div class="line">+---------------+</div>
+</div><!-- fragment --><p>On Apples, there is also a ddp_type field, after src_port. However, under this unix implementation, user level processes need to be able to set the ddp_type. In later revisions, the ddp_type may only be available in a raw_appletalk interface. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a76c16f93f6fc1a844abdc33e9c3ad68c" name="a76c16f93f6fc1a844abdc33e9c3ad68c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76c16f93f6fc1a844abdc33e9c3ad68c">&#9670;&#160;</a></span>DDP_MAXHOPS</h2>
 

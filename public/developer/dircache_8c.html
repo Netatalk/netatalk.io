@@ -102,6 +102,9 @@ $(function(){initNavTree('dircache_8c.html','',''); });
   <div class="headertitle"><div class="title">dircache.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Directory Cache.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -176,7 +179,45 @@ Variables</h2></td></tr>
 <tr class="memitem:a8596d2ae2953cadafee12774d76f75d6" id="r_a8596d2ae2953cadafee12774d76f75d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="queue_8h.html#a0150f5145b7cc9ec8c12f7c526057ffe">q_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8596d2ae2953cadafee12774d76f75d6">index_queue</a></td></tr>
 <tr class="memitem:a9e2601d85172b6a6e7afe5c2fb3c5c2e" id="r_a9e2601d85172b6a6e7afe5c2fb3c5c2e"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e2601d85172b6a6e7afe5c2fb3c5c2e">queue_count</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Directory Cache. </p>
+<p>Cache files and directories in a LRU cache.</p>
+<p>The directory cache caches directories and files(!). The main reason for having the cache is avoiding recursive walks up the path, querying the CNID database each time, when we have to calculate the location of e.g. directory with CNID 30, which is located in a dir with CNID 25, next CNID 20 and then CNID 2 (the volume root as per AFP spec). If all these dirs where in the cache, each database look up can be avoided. Additionally there's the element "fullpath" in struct dir, which is used to avoid the recursion in any case. Wheneveer a struct dir is initialized, the fullpath to the directory is stored there.</p>
+<p>In order to speed up the CNID query for files too, which e.g. happens when a directory is enumerated, files are stored too in the dircache. In order to differentiate between files and dirs, we set the flag DIRF_ISFILE in struct <a class="el" href="structdir.html#ac10cd635149e9d98620839156ff33ec0">dir.d_flags</a> for files.</p>
+<p>The most frequent codepatch that leads to caching is directory enumeration (cf <a class="el" href="enumerate_8c.html">enumerate.c</a>):</p><ul>
+<li>if a element is a directory:<ol type="1">
+<li>the cache is searched by <a class="el" href="#a6b96994f92f9267df4f0824e3bd745e5" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
+<li>if it wasn't found a new struct dir is created and cached both from within <a class="el" href="directory_8c.html#ad4203a175074d5440643ce9ac1fd3092" title="Create struct dir from struct path.">dir_add()</a></li>
+</ol>
+</li>
+<li>for files the caching happens a little bit down the call chain:<ol type="1">
+<li>first <a class="el" href="afpd_2file_8c.html#a4f40897ee367f9ee8bb97e951e20d6a4">getfilparams()</a> is called, which calls</li>
+<li><a class="el" href="afpd_2file_8c.html#a72826107bf8e6a1e16577856e55f3ef1">getmetadata()</a> where the cache is searched with <a class="el" href="#a6b96994f92f9267df4f0824e3bd745e5" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
+<li>if the element is not found</li>
+<li><a class="el" href="afpd_2file_8c.html#adddb0ed6a3a4e04df9ea5a07315455ad" title="Get CNID for did/upath args both from database and adouble file.">get_id()</a> queries the CNID from the database</li>
+<li>then a struct dir is initialized via <a class="el" href="directory_8c.html#a644916c3887056adc8a5d28505f488f4" title="Construct struct dir.">dir_new()</a> (note the fullpath arg is NULL)</li>
+<li>finally added to the cache with <a class="el" href="#a6d640618cb44b9c65e98d4e8e68620c4" title="create struct dir from struct path">dircache_add()</a> (2) of course does contain the steps 6,7 and 8.</li>
+</ol>
+</li>
+</ul>
+<p>The dircache is a LRU cache, whenever it fills up we call dircache_evict internally which removes DIRCACHE_FREE_QUANTUM elements from the cache.</p>
+<p>There is only one cache for all volumes, so of course we use the volume id in hashing calculations.</p>
+<p>In order to avoid cache poisoning, we store the cached entries st_ctime from stat in struct dir.ctime_dircache. Later when we search the cache we compare the stored value with the result of a fresh stat. If the times differ, we remove the cached entry and return "no entry found in cache". A elements ctime changes when</p><ol type="1">
+<li>the element is renamed (we lose the cached entry here, but it will expire when the cache fills)</li>
+<li>its a directory and an object has been created therein</li>
+<li>the element is deleted and recreated under the same name Using ctime leads to cache eviction in case 2) where it wouldn't be necessary, because the dir itself (name, CNID, ...) hasn't changed, but there's no other way.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
+Indexes</h1>
+<p>The maximum dircache size is: max(DEFAULT_MAX_DIRCACHE_SIZE, min(size, MAX_POSSIBLE_DIRCACHE_SIZE)). It is a hashtable which we use to store "struct dir"s in. If the cache get full, oldest entries are evicted in chunks of DIRCACHE_FREE.</p>
+<p>We have/need two indexes:</p><ul>
+<li>a DID/name index on the main dircache, another hashtable</li>
+<li>a queue index on the dircache, for evicting the oldest entries</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
+Debugging</h1>
+<p>Sending SIGINT to a afpd child causes it to dump the dircache to a file "/tmp/dircache.PID". </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="abc7d71657be8975a51684e41029b7964" name="abc7d71657be8975a51684e41029b7964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc7d71657be8975a51684e41029b7964">&#9670;&#160;</a></span>get16bits</h2>
 
@@ -376,7 +417,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove an entry from the dircache. </p>
-<p>Callers outside of <a class="el" href="dircache_8c.html">dircache.c</a> should call this with flags = QUEUE_INDEX | DIDNAME_INDEX | DIRCACHE. </p>
+<p>Callers outside of <a class="el" href="dircache_8c.html" title="Directory Cache.">dircache.c</a> should call this with flags = QUEUE_INDEX | DIDNAME_INDEX | DIRCACHE. </p>
 
 </div>
 </div>

@@ -102,6 +102,9 @@ $(function(){initNavTree('afppasswd_8c.html','',''); });
   <div class="headertitle"><div class="title">afppasswd.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>AFP user password utility.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
@@ -146,7 +149,21 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a72dff57571064f4e3546a2bf18e1147d" id="r_a72dff57571064f4e3546a2bf18e1147d"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72dff57571064f4e3546a2bf18e1147d">buf</a> [MAXPATHLEN+1]</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>AFP user password utility. </p>
+<p>format of the password file: </p><div class="fragment"><div class="line">name:****************:****************:********</div>
+<div class="line">     password         last <a class="code hl_function" href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a> date  failed <a class="code hl_function" href="aecho_8c.html#a98a6ceaef713804050704ed437f9e96d">usage</a> count</div>
+<div class="ttc" id="aaecho_8c_html_a98a6ceaef713804050704ed437f9e96d"><div class="ttname"><a href="aecho_8c.html#a98a6ceaef713804050704ed437f9e96d">usage</a></div><div class="ttdeci">static void usage(char *)</div><div class="ttdef"><b>Definition</b> aecho.c:282</div></div>
+<div class="ttc" id="aafpd_2auth_8c_html_a4ee7d1ffe87fe862af209f89f4eb8846"><div class="ttname"><a href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a></div><div class="ttdeci">static int login(AFPObj *obj, struct passwd *pwd, void(*logout)(void), int expired)</div><div class="ttdef"><b>Definition</b> afpd/auth.c:263</div></div>
+</div><!-- fragment --><p>***'s are illegal. they're just place holders for hex values. hex values that represent actual numbers are in network byte order.</p>
+<p>last login date is currently a 4-byte number representing seconds since 1970 (UTC). there's enough space to extend it to 8 bytes.</p>
+<p>the last two fields aren't currently used by the randnum uams.</p>
+<div class="fragment"><div class="line">root syntax: <a class="code hl_function" href="uams__randnum_8c.html#a47ef2b0abcebef195393bf836e59f733">afppasswd</a> [-c] [-a] [-<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> <a class="code hl_struct" href="structpath.html">path</a>] [-f] [username]</div>
+<div class="line">user syntax: <a class="code hl_function" href="uams__randnum_8c.html#a47ef2b0abcebef195393bf836e59f733">afppasswd</a></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:81</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a49c6a1596dbb420280d9aa047ecc4c31"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></div><div class="ttdeci">static gcry_mpi_t p</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
+<div class="ttc" id="auams__randnum_8c_html_a47ef2b0abcebef195393bf836e59f733"><div class="ttname"><a href="uams__randnum_8c.html#a47ef2b0abcebef195393bf836e59f733">afppasswd</a></div><div class="ttdeci">static int afppasswd(const struct passwd *pwd, const char *path, const int pathlen, unsigned char *passwd, int len, const int set)</div><div class="ttdoc">handle /path/afppasswd with an optional key file. we&#39;re a lot more trusting of this file.</div><div class="ttdef"><b>Definition</b> uams_randnum.c:134</div></div>
+</div><!-- fragment --> </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aaa5a2a97dcb6f597ea17f34872d7d2eb" name="aaa5a2a97dcb6f597ea17f34872d7d2eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa5a2a97dcb6f597ea17f34872d7d2eb">&#9670;&#160;</a></span>DES_KEY_SZ</h2>
 

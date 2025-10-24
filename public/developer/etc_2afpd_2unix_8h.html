@@ -121,6 +121,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ac07521905fea5ff9f0e85adc893a4d47" id="r_ac07521905fea5ff9f0e85adc893a4d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac07521905fea5ff9f0e85adc893a4d47">setfilunixmode</a> (const struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structpath.html">path</a> *, const mode_t)</td></tr>
 <tr class="memitem:a4987a05afefda58bac2989d75a50f825" id="r_a4987a05afefda58bac2989d75a50f825"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4987a05afefda58bac2989d75a50f825">setfilowner</a> (const struct <a class="el" href="structvol.html">vol</a> *, const uid_t, const gid_t, struct <a class="el" href="structpath.html">path</a> *)</td></tr>
 <tr class="memitem:a380d0232cc6dc1f4fd5ba3d5ce5aa19a" id="r_a380d0232cc6dc1f4fd5ba3d5ce5aa19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a380d0232cc6dc1f4fd5ba3d5ce5aa19a">accessmode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *, char *, struct <a class="el" href="structmaccess.html">maccess</a> *, struct <a class="el" href="structdir.html">dir</a> *, struct stat *)</td></tr>
+<tr class="memdesc:a380d0232cc6dc1f4fd5ba3d5ce5aa19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the mode for a directory using a stat() call to estimate permission.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -188,6 +189,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculate the mode for a directory using a stat() call to estimate permission. </p>
+<dl class="section note"><dt>Note</dt><dd>the previous method, using access(), does not work correctly over NFS. </dd></dl>
 
 </div>
 </div>

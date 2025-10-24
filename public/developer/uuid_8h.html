@@ -130,6 +130,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e72a455c23f1ff9de956d54af236c39" id="r_a5e72a455c23f1ff9de956d54af236c39"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e72a455c23f1ff9de956d54af236c39">uuid_bin2string</a> (const unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>)</td></tr>
 <tr class="memdesc:a5e72a455c23f1ff9de956d54af236c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert 16 byte binary uuid to neat ascii represantation including dashes.  <br /></td></tr>
 <tr class="memitem:aaecfa09256b1da388592eb82388dfece" id="r_aaecfa09256b1da388592eb82388dfece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecfa09256b1da388592eb82388dfece">uuid_string2bin</a> (const char *uuidstring, unsigned char *<a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>)</td></tr>
+<tr class="memdesc:aaecfa09256b1da388592eb82388dfece"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ascii string that can include dashes to binary uuid.  <br /></td></tr>
 <tr class="memitem:abe17f3e60a4f85bb54b21f4ded8e3ac2" id="r_abe17f3e60a4f85bb54b21f4ded8e3ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe17f3e60a4f85bb54b21f4ded8e3ac2">uuidcache_dump</a> (void)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -206,6 +207,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>used as bit flag </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae0147c35cd7b691de20163176596f925a30cfeb7aede6d292ce6d9facc15f14ca" name="ae0147c35cd7b691de20163176596f925a30cfeb7aede6d292ce6d9facc15f14ca"></a>UUID_USER&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ae0147c35cd7b691de20163176596f925ab03658bc497a2c190d3b25eb18d940ed" name="ae0147c35cd7b691de20163176596f925ab03658bc497a2c190d3b25eb18d940ed"></a>UUID_GROUP&#160;</td><td class="fielddoc"></td></tr>
@@ -227,7 +229,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">int getnamefromuuid </td>
           <td>(</td>
-          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a></td>          <td class="paramname"><span class="paramname"><em>uuidp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -246,6 +248,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uuidp</td><td>pointer to a uuid </td></tr>
+    <tr><td class="paramname">name</td><td>returns allocated buffer from ldap_getnamefromuuid </td></tr>
+    <tr><td class="paramname">type</td><td>returns USER, GROUP or LOCAL </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success !=0 on errror</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Caller must free name appropriately. </dd></dl>
 
 </div>
 </div>
@@ -280,6 +292,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>give me his name </td></tr>
+    <tr><td class="paramname">type</td><td>and type (UUID_USER or UUID_GROUP) </td></tr>
+    <tr><td class="paramname">uuid</td><td>pointer to uuid_t storage that the caller must provide </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success !=0 on errror </dd></dl>
 
 </div>
 </div>
@@ -371,6 +392,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>convert ascii string that can include dashes to binary uuid. </p>
+<dl class="section note"><dt>Note</dt><dd>caller must provide a buffer. </dd></dl>
 
 </div>
 </div>

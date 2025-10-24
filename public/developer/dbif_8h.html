@@ -102,6 +102,9 @@ $(function(){initNavTree('dbif_8h.html','',''); });
   <div class="headertitle"><div class="title">dbif.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>CNID <a class="el" href="struct_d_b_d.html">DBD</a> (Database Daemon) Backend interface definitions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;db.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="adouble_8h_source.html">atalk/adouble.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="db__param_8h_source.html">db_param.h</a>&quot;</code><br />
@@ -145,11 +148,40 @@ Functions</h2></td></tr>
 <tr class="memitem:a1990245b21f57b59ad5c4e6e18185e93" id="r_a1990245b21f57b59ad5c4e6e18185e93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1990245b21f57b59ad5c4e6e18185e93">dbif_txn_commit</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *)</td></tr>
 <tr class="memitem:a8bec707b039831123c9d30ed4e240396" id="r_a8bec707b039831123c9d30ed4e240396"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bec707b039831123c9d30ed4e240396">dbif_txn_abort</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *)</td></tr>
 <tr class="memitem:a330d30d7a486564246b8c50f293e487f" id="r_a330d30d7a486564246b8c50f293e487f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a330d30d7a486564246b8c50f293e487f">dbif_txn_close</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, int ret)</td></tr>
+<tr class="memdesc:a330d30d7a486564246b8c50f293e487f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a transaction based on ret code.  <br /></td></tr>
 <tr class="memitem:af545acfd56a186a1679fbe95f71df1df" id="r_af545acfd56a186a1679fbe95f71df1df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af545acfd56a186a1679fbe95f71df1df">dbif_txn_checkpoint</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *, uint32_t, uint32_t, uint32_t)</td></tr>
 <tr class="memitem:a005496f691e4fc3b9dc386539cd197a6" id="r_a005496f691e4fc3b9dc386539cd197a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a005496f691e4fc3b9dc386539cd197a6">dbif_dump</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, int dumpindexes)</td></tr>
 <tr class="memitem:a45a1936e17beec50bf0638754c372704" id="r_a45a1936e17beec50bf0638754c372704"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45a1936e17beec50bf0638754c372704">dbif_idwalk</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *cnid, int close)</td></tr>
+<tr class="memdesc:a45a1936e17beec50bf0638754c372704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over dbd, returning cnids.  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CNID <a class="el" href="struct_d_b_d.html">DBD</a> (Database Daemon) Backend interface definitions. </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
+API usage</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
+Initialization</h2>
+<ol type="1">
+<li>Provide storage for a <a class="el" href="struct_d_b_d.html">DBD</a> * handle: <span class="tt"><a class="el" href="struct_d_b_d.html">DBD</a> *dbd;</span></li>
+<li>Call dbif_init with a filename to receive a <a class="el" href="struct_d_b_d.html">DBD</a> handle: <span class="tt">dbd = dbif_init("cnid2.db");</span> Pass NULL to create an in-memory db. Note: the <a class="el" href="struct_d_b_d.html">DBD</a> type is NOT from BerkeleyDB ! We've defined it.</li>
+<li>Call dbif_env_open to open an dbd environment if you called dbif_init with a filename. Pass a <a class="el" href="structdb__param.html">db_param</a> here for on-disk databases.</li>
+<li>Call dbif_open to finally open the CNID database itself. Pass <a class="el" href="structdb__param.html">db_param</a> here for in-memory database.</li>
+</ol>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+Querying the CNID database</h2>
+<p>Call dbif_[get|pget|put|del]. They map to the corresponding BerkeleyDB calls with the same names.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+Transactions</h2>
+<p>We use AUTO_COMMIT for the BDB database accesses. This avoids explicit transactions for every bdb access which speeds up reads. But in order to be able to rollback in case of errors we start a transaction once we encounter the first write from dbif_put or dbif_del. Thus you shouldn't call dbif_txn_[begin|abort|commit], they're used internally.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
+Checkpoiting</h2>
+<p>Call dbif_txn_checkpoint.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
+Closing</h2>
+<p>Call dbif_close.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
+Silent Upgrade Support</h2>
+<p>On cnid_dbd shutdown we reopen the environment with recovery, close and then remove it. This enables an upgraded netatalk installation possibly linked against a newer bdb lib to succesfully open/create an environment and then silently upgrade the database itself. How nice! </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a0051e4f33ea2038e6ce94c93b864aa7d" name="a0051e4f33ea2038e6ce94c93b864aa7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0051e4f33ea2038e6ce94c93b864aa7d">&#9670;&#160;</a></span>DBIF_CNID</h2>
 
@@ -430,6 +462,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>We must open the db_env with an absolute pathname, as 'dbd' keeps chdir'ing, which breaks e.g. bdb logfile-rotation with relative pathnames. But still we use relative paths with DB_ERRLOGFILE in order to avoid creating absolute paths by copying. Both have no problem with a relative path. </p>
 
 </div>
 </div>
@@ -509,6 +542,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Iterates over dbd, returning cnids. </p>
+<p>Uses in-value of cnid to seek to that cnid, then gets next and return that in cnid. If close=1, close cursor. </p><dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 on EOD (end-of-database), 1 if returning cnid. </dd></dl>
 
 </div>
 </div>
@@ -756,6 +792,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Close a transaction based on ret code. </p>
+<p>Switch between commit+abort</p>
+<dl class="section note"><dt>Note</dt><dd>ret = 1 -&gt; commit txn if db_param.txn_frequency </dd>
+<dd>
+ret = 0 -&gt; abort txn db_param.txn_frequency -&gt; exit! </dd>
+<dd>
+anything else -&gt; exit!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success (abort or commit), -1 on error </dd></dl>
 
 </div>
 </div>

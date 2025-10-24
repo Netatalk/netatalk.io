@@ -118,8 +118,8 @@ $(function(){initNavTree('mangle_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:a4c8359fe9fcae2c2abd76f4dce52a4f7" id="r_a4c8359fe9fcae2c2abd76f4dce52a4f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c8359fe9fcae2c2abd76f4dce52a4f7">MANGLE_CHAR</a>&#160;&#160;&#160;'#'</td></tr>
 <tr class="memitem:ab167a9f76f1049c70c438029e4905cf4" id="r_ab167a9f76f1049c70c438029e4905cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab167a9f76f1049c70c438029e4905cf4">MAX_MANGLE_SUFFIX_LENGTH</a>&#160;&#160;&#160;999</td></tr>
-<tr class="memitem:a78749ceaa7668554f01e9722db82b600" id="r_a78749ceaa7668554f01e9722db82b600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78749ceaa7668554f01e9722db82b600">MAX_EXT_LENGTH</a>&#160;&#160;&#160;5 /* XXX This cannot be greater than 27 */</td></tr>
-<tr class="memitem:af778013adb34a6b8a8f88ada5376bf8b" id="r_af778013adb34a6b8a8f88ada5376bf8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af778013adb34a6b8a8f88ada5376bf8b">MANGLE_LENGTH</a>&#160;&#160;&#160;9 /* #ffffffff This really can't be changed. */</td></tr>
+<tr class="memitem:a78749ceaa7668554f01e9722db82b600" id="r_a78749ceaa7668554f01e9722db82b600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78749ceaa7668554f01e9722db82b600">MAX_EXT_LENGTH</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:af778013adb34a6b8a8f88ada5376bf8b" id="r_af778013adb34a6b8a8f88ada5376bf8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af778013adb34a6b8a8f88ada5376bf8b">MANGLE_LENGTH</a>&#160;&#160;&#160;9</td></tr>
 <tr class="memitem:a7a9a231e30b47bc0345749c8bd1e5077" id="r_a7a9a231e30b47bc0345749c8bd1e5077"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9a231e30b47bc0345749c8bd1e5077">MAX_LENGTH</a>&#160;&#160;&#160;<a class="el" href="globals_8h.html#a56940c80dd3ee0216586b20730c8a199">MACFILELEN</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -150,10 +150,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MANGLE_LENGTH&#160;&#160;&#160;9 /* #ffffffff This really can't be changed. */</td>
+          <td class="memname">#define MANGLE_LENGTH&#160;&#160;&#160;9</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>#ffffffff This really can't be changed. </p>
 
 </div>
 </div>
@@ -164,10 +165,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_EXT_LENGTH&#160;&#160;&#160;5 /* XXX This cannot be greater than 27 */</td>
+          <td class="memname">#define MAX_EXT_LENGTH&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>XXX This cannot be greater than 27 </p>
 
 </div>
 </div>
@@ -319,6 +321,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000004">Bug</a></b></dt><dd><p class="startdd">Early Mac OS X (10.0-10.4.?) had the limitation up to 255 Byte. Current implementation is: volcharset -&gt; UTF16-MAC -&gt; truncated 255 UTF8-MAC </p>
+<p class="enddd">Recent Mac OS X (10.4.?-) don't have this limitation. Desirable implementation is: volcharset -&gt; truncated 510 UTF16-MAC -&gt; UTF8-MAC</p>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>with utf8 filename not always round trip <div class="fragment"><div class="line">filename   mac filename too <span class="keywordtype">long</span> or <a class="code hl_variable" href="nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840">first</a> chars <span class="keywordflow">if</span> unmatchable chars.</div>
+<div class="line">uname      unix filename</div>
+<div class="line"><span class="keywordtype">id</span>         file/folder <a class="code hl_variable" href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a> or 0</div>
+<div class="ttc" id="anad__ls_8c_html_a6c8ec3c3e77241328358d43697f6f840"><div class="ttname"><a href="nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840">first</a></div><div class="ttdeci">static int first</div><div class="ttdef"><b>Definition</b> nad_ls.c:54</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a9bb81603329def43dbb55e1ae69996d9"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a></div><div class="ttdeci">static uint16_t ID</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:43</div></div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>

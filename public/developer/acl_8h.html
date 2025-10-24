@@ -119,17 +119,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a01d9cb402df9f886e96589852c718a7b" id="r_a01d9cb402df9f886e96589852c718a7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d9cb402df9f886e96589852c718a7b">get_nfsv4_acl</a> (const char *name, ace_t **retAces)</td></tr>
+<tr class="memdesc:a01d9cb402df9f886e96589852c718a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ACL.  <br /></td></tr>
 <tr class="memitem:af857156bb666ad4b2725ce08dc230a0a" id="r_af857156bb666ad4b2725ce08dc230a0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af857156bb666ad4b2725ce08dc230a0a">remove_nfsv4_acl_vfs</a> (const char *name)</td></tr>
 <tr class="memdesc:af857156bb666ad4b2725ce08dc230a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all non-trivial ACLs from object.  <br /></td></tr>
 <tr class="memitem:a3ae4180686d9f93f63a064438e690c82" id="r_a3ae4180686d9f93f63a064438e690c82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ae4180686d9f93f63a064438e690c82">strip_trivial_aces</a> (ace_t **saces, int sacecount)</td></tr>
+<tr class="memdesc:a3ae4180686d9f93f63a064438e690c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove any trivial ACE "in-place".  <br /></td></tr>
 <tr class="memitem:afe4fdaefae0f0c820df417391c4929a7" id="r_afe4fdaefae0f0c820df417391c4929a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4fdaefae0f0c820df417391c4929a7">strip_nontrivial_aces</a> (ace_t **saces, int sacecount)</td></tr>
+<tr class="memdesc:afe4fdaefae0f0c820df417391c4929a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove non-trivial ACEs "in-place".  <br /></td></tr>
 <tr class="memitem:a55f0dcc7b79c7829784891f83655286e" id="r_a55f0dcc7b79c7829784891f83655286e"><td class="memItemLeft" align="right" valign="top">ace_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f0dcc7b79c7829784891f83655286e">concat_aces</a> (ace_t *aces1, int ace1count, ace_t *aces2, int ace2count)</td></tr>
 <tr class="memitem:a2cdcb92d600a129d9685386ce6f281d4" id="r_a2cdcb92d600a129d9685386ce6f281d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cdcb92d600a129d9685386ce6f281d4">nfsv4_chmod</a> (char *name, mode_t mode)</td></tr>
 <tr class="memdesc:a2cdcb92d600a129d9685386ce6f281d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change mode of file preserving existing explicit ACEs.  <br /></td></tr>
 <tr class="memitem:acef215c49572f268a097c03c008a46d0" id="r_acef215c49572f268a097c03c008a46d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acef215c49572f268a097c03c008a46d0">remove_posix_acl_vfs</a> (const char *name)</td></tr>
 <tr class="memdesc:acef215c49572f268a097c03c008a46d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove any ACL_USER, ACL_GROUP, ACL_MASK or ACL_TYPE_DEFAULT ACEs from an object.  <br /></td></tr>
 <tr class="memitem:a178c05777cbc6f5a962b07ad7ccd6d9c" id="r_a178c05777cbc6f5a962b07ad7ccd6d9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178c05777cbc6f5a962b07ad7ccd6d9c">posix_chmod</a> (const char *name, mode_t mode)</td></tr>
-<tr class="memitem:aa92126210d99787163679b5280f287e5" id="r_aa92126210d99787163679b5280f287e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92126210d99787163679b5280f287e5">posix_fchmod</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, mode_t mode)</td></tr>
+<tr class="memdesc:a178c05777cbc6f5a962b07ad7ccd6d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX ACL chmod.  <br /></td></tr>
+<tr class="memitem:aa92126210d99787163679b5280f287e5" id="r_aa92126210d99787163679b5280f287e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92126210d99787163679b5280f287e5">posix_fchmod</a> (int fd, mode_t mode)</td></tr>
+<tr class="memdesc:aa92126210d99787163679b5280f287e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX ACL fchmod.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a7185fda25b1479981f200898f3a3e4cd" name="a7185fda25b1479981f200898f3a3e4cd"></a>
@@ -239,6 +244,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Concatenate ACEs </p>
 
 </div>
 </div>
@@ -268,6 +274,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get ACL. </p>
+<dl class="section note"><dt>Note</dt><dd>Allocates storage as needed. Caller must free. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>no of ACEs or -1 on error. </dd></dl>
 
 </div>
 </div>
@@ -301,10 +311,10 @@ Functions</h2></td></tr>
 <p>Change mode of file preserving existing explicit ACEs. </p>
 <p>nfsv4_chmod</p><ol type="1">
 <li>reads objects ACL (acl1), may return 0 or -1 NFSv4 ACEs on e.g. UFS fs</li>
-<li>removes all trivial ACEs from the ACL by calling <a class="el" href="libatalk_2acl_2unix_8c.html#a3ae4180686d9f93f63a064438e690c82">strip_trivial_aces()</a>, possibly leaving 0 ACEs in the ACL if there were only trivial ACEs as mapped from the mode</li>
+<li>removes all trivial ACEs from the ACL by calling <a class="el" href="libatalk_2acl_2unix_8c.html#a3ae4180686d9f93f63a064438e690c82" title="Remove any trivial ACE &quot;in-place&quot;.">strip_trivial_aces()</a>, possibly leaving 0 ACEs in the ACL if there were only trivial ACEs as mapped from the mode</li>
 <li>calls chmod() with mode, we're done if step (1) returned 0 for noaces</li>
 <li>reads the changed ACL (acl2) which a. might still contain explicit ACEs (up to onnv132) b. will have any explicit ACE removed (starting with onnv145/Openindiana)</li>
-<li>strip any explicit ACE from acl2 using <a class="el" href="libatalk_2acl_2unix_8c.html#afe4fdaefae0f0c820df417391c4929a7">strip_nontrivial_aces()</a></li>
+<li>strip any explicit ACE from acl2 using <a class="el" href="libatalk_2acl_2unix_8c.html#afe4fdaefae0f0c820df417391c4929a7" title="Remove non-trivial ACEs &quot;in-place&quot;.">strip_nontrivial_aces()</a></li>
 <li>merge acl2 and acl2</li>
 <li>set the ACL merged ACL on the object </li>
 </ol>
@@ -338,6 +348,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>POSIX ACL chmod. </p>
+<p>This is a workaround for chmod() on filestystems supporting Posix 1003.1e draft 17 compliant ACLs. For objects with extended ACLs, e.g. objects with an ACL_MASK entry, chmod() manipulates ACL_MASK instead of ACL_GROUP_OBJ. As OS X isn't aware of this behavior calling FPSetFileDirParms may lead to unpredictable results. For more information see section 23.1.2 of Posix 1003.1e draft 17.</p>
+<dl class="section note"><dt>Note</dt><dd>accepts the same arguments as chmod()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success or -1 in case something went wrong. </dd></dl>
+
 </div>
 </div>
 <a id="aa92126210d99787163679b5280f287e5" name="aa92126210d99787163679b5280f287e5"></a>
@@ -366,6 +381,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>POSIX ACL fchmod. </p>
+<dl class="section note"><dt>Note</dt><dd>accepts the same arguments as fchmod() </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success or -1 in case something went wrong. </dd></dl>
 
 </div>
 </div>
@@ -458,6 +477,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Remove non-trivial ACEs "in-place". </p>
+<dl class="section return"><dt>Returns</dt><dd>no of trivial ACEs. </dd></dl>
+
 </div>
 </div>
 <a id="a3ae4180686d9f93f63a064438e690c82" name="a3ae4180686d9f93f63a064438e690c82"></a>
@@ -486,6 +508,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Remove any trivial ACE "in-place". </p>
+<dl class="section return"><dt>Returns</dt><dd>no of non-trivial ACEs </dd></dl>
 
 </div>
 </div>

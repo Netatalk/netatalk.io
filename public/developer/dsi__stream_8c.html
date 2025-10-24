@@ -125,7 +125,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a0aa521be4781a7758a104267ae14f36b" id="r_a0aa521be4781a7758a104267ae14f36b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0aa521be4781a7758a104267ae14f36b">dsi_peek</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memdesc:a0aa521be4781a7758a104267ae14f36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if we can write to the <a class="el" href="struct_d_s_i.html">DSI</a> socket.  <br /></td></tr>
 <tr class="memitem:a5769388f867f7f03fc9600d7836a8ded" id="r_a5769388f867f7f03fc9600d7836a8ded"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5769388f867f7f03fc9600d7836a8ded">from_buf</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint8_t *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t count)</td></tr>
-<tr class="memdesc:a5769388f867f7f03fc9600d7836a8ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all bytes up to count from dsi-&gt;buffer if there are any buffered there.  <br /></td></tr>
 <tr class="memitem:a8ded949de30884027fa9785521848b0c" id="r_a8ded949de30884027fa9785521848b0c"><td class="memItemLeft" align="right" valign="top">static ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ded949de30884027fa9785521848b0c">buf_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint8_t *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t count)</td></tr>
 <tr class="memdesc:a8ded949de30884027fa9785521848b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get bytes from buffer dsi-&gt;buffer or read from socket.  <br /></td></tr>
 <tr class="memitem:a6cfb2429545b304c2840ba614420f089" id="r_a6cfb2429545b304c2840ba614420f089"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cfb2429545b304c2840ba614420f089">dsi_buffered_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, uint8_t *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
@@ -140,6 +139,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a91514f1127598ab63de788766e64c32f" id="r_a91514f1127598ab63de788766e64c32f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91514f1127598ab63de788766e64c32f">dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
 <tr class="memdesc:a91514f1127598ab63de788766e64c32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from <a class="el" href="struct_d_s_i.html">DSI</a> buffer.  <br /></td></tr>
 <tr class="memitem:ac39b4c877c87a570a425d15dbf5e0c39" id="r_ac39b4c877c87a570a425d15dbf5e0c39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac39b4c877c87a570a425d15dbf5e0c39">dsi_stream_send</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t length)</td></tr>
+<tr class="memdesc:ac39b4c877c87a570a425d15dbf5e0c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">write data.  <br /></td></tr>
 <tr class="memitem:a3b03a8898f3d8c9e2781cee5c92a5c07" id="r_a3b03a8898f3d8c9e2781cee5c92a5c07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b03a8898f3d8c9e2781cee5c92a5c07">dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memdesc:a3b03a8898f3d8c9e2781cee5c92a5c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <a class="el" href="struct_d_s_i.html">DSI</a> command and data.  <br /></td></tr>
 </table>
@@ -296,7 +296,9 @@ Functions</h2></td></tr>
 <li>close the socket</li>
 <li>set the DSI_DISCONNECTED flag, remove possible sleep flags</li>
 </ol>
-<dl class="section return"><dt>Returns</dt><dd>0 if successfully entered disconnected state, -1 if ppid is 1 which means afpd master died, or euid == 0 i.e. where still running as root (unauthenticated session) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successfully entered disconnected state </dd>
+<dd>
+-1 if ppid is 1 which means afpd master died, or euid == 0 i.e. where still running as root (unauthenticated session) </dd></dl>
 
 </div>
 </div>
@@ -326,6 +328,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Pack a <a class="el" href="struct_d_s_i.html">DSI</a> header in wire format </p>
 
 </div>
 </div>
@@ -474,6 +477,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>write data. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on failure. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>this assumes that dsi_len will never cause an overflow in the data buffer. </dd></dl>
+
 </div>
 </div>
 <a id="a94bd186e5b2b5777dc8a884659b96f9d" name="a94bd186e5b2b5777dc8a884659b96f9d"></a>
@@ -542,8 +549,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Return all bytes up to count from dsi-&gt;buffer if there are any buffered there. </p>
+<p>Return all bytes up to count from dsi-&gt;buffer if there are any buffered there </p>
 
 </div>
 </div>

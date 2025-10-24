@@ -102,6 +102,9 @@ $(function(){initNavTree('lantest__io__monitor_8c.html','',''); });
   <div class="headertitle"><div class="title">lantest_io_monitor.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Linux I/O monitoring for Netatalk performance testing.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="lantest__io__monitor_8h_source.html">lantest_io_monitor.h</a>&quot;</code><br />
@@ -128,7 +131,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a67e2df5976cd54b45a8df720969b0221" id="r_a67e2df5976cd54b45a8df720969b0221"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e2df5976cd54b45a8df720969b0221">cnid_end_reads</a> = 0</td></tr>
 <tr class="memitem:ad796ac7f1fd05887008eac1511a672d2" id="r_ad796ac7f1fd05887008eac1511a672d2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad796ac7f1fd05887008eac1511a672d2">cnid_end_writes</a> = 0</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Linux I/O monitoring for Netatalk performance testing. </p>
+<p>Monitors system call I/O statistics for afpd and cnid_dbd processes during tests. Uses /proc_io filesystem (a secondary mount of proc) to track read/write syscalls. Automatically discovers target processes by name and user, handling both privilege-dropped processes (afpd) and root processes with user arguments (cnid_dbd). Provides before/after test IO metrics to measure actual filesystem activity during AFP operations. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a35271d437161c3fe7297ebcaa122c94c" name="a35271d437161c3fe7297ebcaa122c94c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35271d437161c3fe7297ebcaa122c94c">&#9670;&#160;</a></span>capture_io_values()</h2>
 

@@ -135,11 +135,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad734280df166612103e5fff2a759638c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a child  <br /></td></tr>
 <tr class="memitem:a88ac0316261852901467c03beee1adf7" id="r_a88ac0316261852901467c03beee1adf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88ac0316261852901467c03beee1adf7">server_child_remove</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid)</td></tr>
 <tr class="memitem:a76b97e3644bb4e1ed806d98a9fa74399" id="r_a76b97e3644bb4e1ed806d98a9fa74399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76b97e3644bb4e1ed806d98a9fa74399">server_child_free</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
+<tr class="memdesc:a76b97e3644bb4e1ed806d98a9fa74399"><td class="mdescLeft">&#160;</td><td class="mdescRight">free everything  <br /></td></tr>
 <tr class="memitem:abc8067a935a4ae94c5ccd4fcabc075ef" id="r_abc8067a935a4ae94c5ccd4fcabc075ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc8067a935a4ae94c5ccd4fcabc075ef">server_child_kill</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, int sig)</td></tr>
 <tr class="memitem:af28990b672c546dfdc862d5b67d78329" id="r_af28990b672c546dfdc862d5b67d78329"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af28990b672c546dfdc862d5b67d78329">kill_child</a> (<a class="el" href="server__child_8h.html#ae26588dd753c21bdee6d807ec70a5269">afp_child_t</a> *<a class="el" href="afp__asp_8c.html#ac6222b10c5544d95dc0eeb66214dd8e5">child</a>)</td></tr>
 <tr class="memitem:a4227823c4e4b04c4ed67a2f7c513ac4a" id="r_a4227823c4e4b04c4ed67a2f7c513ac4a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4227823c4e4b04c4ed67a2f7c513ac4a">server_child_transfer_session</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid, uid_t uid, int afp_socket, uint16_t DSI_requestID)</td></tr>
 <tr class="memdesc:a4227823c4e4b04c4ed67a2f7c513ac4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to find an old session and pass socket.  <br /></td></tr>
 <tr class="memitem:a9230bb89536a7df157fcdab397d2f019" id="r_a9230bb89536a7df157fcdab397d2f019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9230bb89536a7df157fcdab397d2f019">server_child_kill_one_by_id</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid, uid_t uid, uint32_t idlen, char *id, uint32_t boottime)</td></tr>
+<tr class="memdesc:a9230bb89536a7df157fcdab397d2f019"><td class="mdescLeft">&#160;</td><td class="mdescRight">see if there is a process for the same mac  <br /></td></tr>
 <tr class="memitem:ad3522cf0ca7691b5747540a09fbdcc1a" id="r_ad3522cf0ca7691b5747540a09fbdcc1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3522cf0ca7691b5747540a09fbdcc1a">server_child_login_done</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, pid_t pid, uid_t uid)</td></tr>
 <tr class="memitem:a64e4878541325fa9690a338c72b9846f" id="r_a64e4878541325fa9690a338c72b9846f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e4878541325fa9690a338c72b9846f">server_reset_signal</a> (void)</td></tr>
 </table>
@@ -159,7 +161,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((((i) &gt;&gt; 8) ^ (i)) &amp; (<a class="code hl_define" href="server__child_8h.html#aaa061f75e6f3ed38819fb43091a8dcd0">CHILD_HASHSIZE</a> - 1))</div>
-<div class="ttc" id="aserver__child_8h_html_aaa061f75e6f3ed38819fb43091a8dcd0"><div class="ttname"><a href="server__child_8h.html#aaa061f75e6f3ed38819fb43091a8dcd0">CHILD_HASHSIZE</a></div><div class="ttdeci">#define CHILD_HASHSIZE</div><div class="ttdef"><b>Definition</b> server_child.h:16</div></div>
+<div class="ttc" id="aserver__child_8h_html_aaa061f75e6f3ed38819fb43091a8dcd0"><div class="ttname"><a href="server__child_8h.html#aaa061f75e6f3ed38819fb43091a8dcd0">CHILD_HASHSIZE</a></div><div class="ttdeci">#define CHILD_HASHSIZE</div><div class="ttdef"><b>Definition</b> server_child.h:19</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -214,8 +216,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(!<a class="code hl_define" href="cnid__metad_8c.html#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a>(<a class="code hl_variable" href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a>) &amp;&amp; !<a class="code hl_define" href="cnid__metad_8c.html#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a>(<a class="code hl_variable" href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a>))</div>
-<div class="ttc" id="acnid__metad_8c_html_a2052fe8e0f1198edea1a2f36dda706e6"><div class="ttname"><a href="cnid__metad_8c.html#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a></div><div class="ttdeci">#define WIFEXITED(stat_val)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:57</div></div>
-<div class="ttc" id="acnid__metad_8c_html_aa2687811d048892a4fa1f14f74843767"><div class="ttname"><a href="cnid__metad_8c.html#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a></div><div class="ttdeci">#define WIFSTOPPED(status)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:60</div></div>
+<div class="ttc" id="acnid__metad_8c_html_a2052fe8e0f1198edea1a2f36dda706e6"><div class="ttname"><a href="cnid__metad_8c.html#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a></div><div class="ttdeci">#define WIFEXITED(stat_val)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:60</div></div>
+<div class="ttc" id="acnid__metad_8c_html_aa2687811d048892a4fa1f14f74843767"><div class="ttname"><a href="cnid__metad_8c.html#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a></div><div class="ttdeci">#define WIFSTOPPED(status)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:63</div></div>
 <div class="ttc" id="apap_8c_html_a3cbe9fdcd03667b9bc176454129f4d52"><div class="ttname"><a href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a></div><div class="ttdeci">static char * status</div><div class="ttdef"><b>Definition</b> pap.c:93</div></div>
 </div><!-- fragment -->
 </div>
@@ -308,6 +310,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>send kill to a child processes </p>
 
 </div>
 </div>
@@ -354,6 +357,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>initialize server_child structure </p>
 
 </div>
 </div>
@@ -371,6 +375,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>free everything </p>
+<p>by using a hash table, this increases the cost of this part over a linked list by the size of the hash table </p>
 
 </div>
 </div>
@@ -392,6 +399,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>send signal to all child processes </p>
 
 </div>
 </div>
@@ -433,6 +441,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>see if there is a process for the same mac </p>
+<p>if the times don't match mac has been rebooted </p>
 
 </div>
 </div>
@@ -480,6 +491,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>remove a child and free it </p>
 
 </div>
 </div>
@@ -557,6 +569,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>reset children signals </p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['redundant_20stat_20ops_0',['DirCache redundant stat ops',['../md_developer_2dircache.html',1,'']]]
+  ['querying_20the_20cnid_20database_0',['Querying the CNID database',['../dbif_8h.html#autotoc_md51',1,'']]]
 ];

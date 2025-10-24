@@ -319,7 +319,11 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 nothing found, 1 successful search, result int 'result'</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error </dd>
+<dd>
+0 nothing found </dd>
+<dd>
+1 successful search, result int 'result'</dd></dl>
 <p>All connection managment to the LDAP server is done here. Just set KEEPALIVE if you know you will be dispatching more than one search in a row, then don't set it with the last search. You MUST dispatch the queries timely, otherwise the LDAP handle might timeout. </p>
 
 </div>
@@ -717,8 +721,8 @@ Variables</h2></td></tr>
 <div class="line">    {<span class="stringliteral">&quot;ldap uuid encoding&quot;</span>, <span class="stringliteral">&quot;string&quot;</span>, <a class="code hl_enumvalue" href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a>},</div>
 <div class="line">    {NULL,               NULL,     0}</div>
 <div class="line">}</div>
-<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f">LDAP_UUID_ENCODING_MSGUID</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_MSGUID</div><div class="ttdef"><b>Definition</b> ldapconfig.h:36</div></div>
-<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_STRING</div><div class="ttdef"><b>Definition</b> ldapconfig.h:34</div></div>
+<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a67f74286ff621acb8656bb337598048f">LDAP_UUID_ENCODING_MSGUID</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_MSGUID</div><div class="ttdef"><b>Definition</b> ldapconfig.h:34</div></div>
+<div class="ttc" id="aldapconfig_8h_html_afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2"><div class="ttname"><a href="ldapconfig_8h.html#afb5211e31175766a4647662b0aa12031a9d2a9983175b84baf7bcdb3fd9c5dcc2">LDAP_UUID_ENCODING_STRING</a></div><div class="ttdeci">@ LDAP_UUID_ENCODING_STRING</div><div class="ttdef"><b>Definition</b> ldapconfig.h:33</div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -148,11 +148,14 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a9c53b28525efdec497e5e572bfa4006e" id="r_a9c53b28525efdec497e5e572bfa4006e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c53b28525efdec497e5e572bfa4006e">rewrite_vol_uuid_conf</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="#ab6195f0fce873407cdc250f5b73bbfd0">Volumes</a>)</td></tr>
 <tr class="memitem:a98e4d035419dcc6d93f543faf66b6ef8" id="r_a98e4d035419dcc6d93f543faf66b6ef8"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98e4d035419dcc6d93f543faf66b6ef8">get_vol_uuid</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *volname)</td></tr>
+<tr class="memdesc:a98e4d035419dcc6d93f543faf66b6ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a volume's UUID from the config file.  <br /></td></tr>
 <tr class="memitem:aa64a0aaa380f74b8e2b36a797d70ab2c" id="r_aa64a0aaa380f74b8e2b36a797d70ab2c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa64a0aaa380f74b8e2b36a797d70ab2c">do_check_ea_support</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memdesc:aa64a0aaa380f74b8e2b36a797d70ab2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the underlying filesystem supports EAs.  <br /></td></tr>
 <tr class="memitem:ac7680e27acaaac72fabd78f8e7e8d168" id="r_ac7680e27acaaac72fabd78f8e7e8d168"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7680e27acaaac72fabd78f8e7e8d168">check_ea_support</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a81c406ca6cb39227f31954c008ca1178" id="r_a81c406ca6cb39227f31954c008ca1178"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c406ca6cb39227f31954c008ca1178">check_vol_acl_support</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memdesc:a81c406ca6cb39227f31954c008ca1178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a volume supports ACLs.  <br /></td></tr>
 <tr class="memitem:a1d8199207489c45ee6dd43826eafd007" id="r_a1d8199207489c45ee6dd43826eafd007"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d8199207489c45ee6dd43826eafd007">volxlate</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *dest, size_t destlen, const char *src, const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const char *volname)</td></tr>
+<tr class="memdesc:a1d8199207489c45ee6dd43826eafd007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle variable substitutions.  <br /></td></tr>
 <tr class="memitem:a0c4f8e039667d0900ff17e8ce162a17f" id="r_a0c4f8e039667d0900ff17e8ce162a17f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f8e039667d0900ff17e8ce162a17f">accessvol</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>, const char *name)</td></tr>
 <tr class="memdesc:a0c4f8e039667d0900ff17e8ce162a17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">check access list  <br /></td></tr>
 <tr class="memitem:a433f8ba07ffecbed6150ed1e7300f205" id="r_a433f8ba07ffecbed6150ed1e7300f205"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a433f8ba07ffecbed6150ed1e7300f205">hostaccessvol</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *volname, const char *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>)</td></tr>
@@ -181,11 +184,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1dd9d970666884e1c2d21d59cf204adf" id="r_a1dd9d970666884e1c2d21d59cf204adf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd9d970666884e1c2d21d59cf204adf">getdefextmap</a> (void)</td></tr>
 <tr class="memitem:a2a39e398df33bd070fca3c4102cd0bbe" id="r_a2a39e398df33bd070fca3c4102cd0bbe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a39e398df33bd070fca3c4102cd0bbe">readextmap</a> (const char *file)</td></tr>
 <tr class="memitem:a34da44df52290f1745015140589ad212" id="r_a34da44df52290f1745015140589ad212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34da44df52290f1745015140589ad212">volume_unlink</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a>)</td></tr>
-<tr class="memdesc:a34da44df52290f1745015140589ad212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a volume from the linked list of volumes.  <br /></td></tr>
 <tr class="memitem:a4327f5a87fce86a37525485b8d26caa3" id="r_a4327f5a87fce86a37525485b8d26caa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4327f5a87fce86a37525485b8d26caa3">volume_free</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memdesc:a4327f5a87fce86a37525485b8d26caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free all resources allocated in a struct vol in <a class="el" href="#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>  <br /></td></tr>
 <tr class="memitem:a2d92d4ec9f9f0a8e165d39c10d9574cf" id="r_a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d92d4ec9f9f0a8e165d39c10d9574cf">load_charset</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
-<tr class="memdesc:a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load charsets for a volume.  <br /></td></tr>
 <tr class="memitem:aa051b28df16f69cdbffebc533455f4e7" id="r_aa051b28df16f69cdbffebc533455f4e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="include_2atalk_2volume_8h.html#a93895477a246ceefb8f62520711e425e">lv_flags_t</a> <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memdesc:aa051b28df16f69cdbffebc533455f4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize volumes and load ini configfile.  <br /></td></tr>
 <tr class="memitem:a95d5c38b0997be2581319b937878f63e" id="r_a95d5c38b0997be2581319b937878f63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d5c38b0997be2581319b937878f63e">unload_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
@@ -197,7 +198,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a078796270be4438a00a963d87e8d332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search volume by path, creating user home vols as necessary.  <br /></td></tr>
 <tr class="memitem:ab955be2ccb9cf905ece60435a9fc7036" id="r_ab955be2ccb9cf905ece60435a9fc7036"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvol.html">vol</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab955be2ccb9cf905ece60435a9fc7036">getvolbyname</a> (const char *name)</td></tr>
 <tr class="memitem:acbcfd852eb42810ca616b221bd359905" id="r_acbcfd852eb42810ca616b221bd359905"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbcfd852eb42810ca616b221bd359905">afp_config_parse</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="struct_a_f_p_obj.html">AFPObj</a>, char *processname)</td></tr>
-<tr class="memdesc:acbcfd852eb42810ca616b221bd359905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file.  <br /></td></tr>
 <tr class="memitem:ac001e643f465d9fe85fe41e3cbc3428f" id="r_ac001e643f465d9fe85fe41e3cbc3428f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac001e643f465d9fe85fe41e3cbc3428f">afp_config_free</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -339,7 +339,11 @@ Variables</h2></td></tr>
 <p>this function wants a string consisting of names seperated by comma or space. Names may be quoted within a pair of quotes. Groups are denoted by a leading @ symbol.</p>
 <p>Example: </p><div class="fragment"><div class="line">user1 user2, user3, @group1, @group2, @group3, <span class="stringliteral">&quot;user name1&quot;</span>, <span class="stringliteral">&quot;@group name1&quot;</span></div>
 </div><!-- fragment --><p>A NULL argument allows everybody to have access.</p>
-<dl class="section return"><dt>Returns</dt><dd>three things: -1: no list 0: list exists, but name isn't in it 1: in list </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1: no list </dd>
+<dd>
+0: list exists, but name isn't in it </dd>
+<dd>
+1: in list </dd></dl>
 
 </div>
 </div>
@@ -357,6 +361,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>get rid of any allocated afp_option buffers. </p>
 
 </div>
 </div>
@@ -378,8 +383,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file. </p>
+<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file </p>
 
 </div>
 </div>
@@ -528,6 +532,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if the underlying filesystem supports EAs. </p>
+<p>If not, switch to ea=ad. As we can't check (requires write access) on ro-volumes, we assume ea=sys. </p>
+
 </div>
 </div>
 <a id="a60a1dd21a087503ca1b8138719fcd7ac" name="a60a1dd21a087503ca1b8138719fcd7ac"></a>
@@ -639,6 +646,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get a volume's UUID from the config file. </p>
+<p>If there is none, it is generated and stored there.</p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to allocated storage on success, NULL on error. </dd></dl>
 
 </div>
 </div>
@@ -1082,8 +1093,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Load charsets for a volume. </p>
+<p>Load charsets for a volume </p>
 
 </div>
 </div>
@@ -1427,8 +1437,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Remove a volume from the linked list of volumes. </p>
+<p>Remove a volume from the linked list of volumes </p>
 
 </div>
 </div>
@@ -1483,6 +1492,28 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handle variable substitutions. </p>
+<p>here's what we understand: </p><div class="fragment"><div class="line">$b   -&gt; basename of <a class="code hl_struct" href="structpath.html">path</a></div>
+<div class="line">$c   -&gt; client ip/appletalk address</div>
+<div class="line">$d   -&gt; <a class="code hl_variable" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a> pathname on <a class="code hl_struct" href="structserver.html">server</a></div>
+<div class="line">$f   -&gt; full name (whatever<span class="stringliteral">&#39;s in the gecos field)</span></div>
+<div class="line"><span class="stringliteral">$g   -&gt; group</span></div>
+<div class="line"><span class="stringliteral">$h   -&gt; hostname</span></div>
+<div class="line"><span class="stringliteral">$i   -&gt; client ip/appletalk address without port</span></div>
+<div class="line"><span class="stringliteral">$s   -&gt; server name (hostname if it doesn&#39;</span>t exist)</div>
+<div class="line">$u   -&gt; username (guest is usually nobody)</div>
+<div class="line">$v   -&gt; <a class="code hl_variable" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a> name or basename <span class="keywordflow">if</span> null</div>
+<div class="line">$$   -&gt; $</div>
+<div class="ttc" id="anad__rm_8c_html_a09f110e3fa5f7d885903f37852afe842"><div class="ttname"><a href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a></div><div class="ttdeci">static afpvol_t volume</div><div class="ttdef"><b>Definition</b> nad_rm.c:46</div></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:81</div></div>
+<div class="ttc" id="astructserver_html"><div class="ttname"><a href="structserver.html">server</a></div><div class="ttdef"><b>Definition</b> cnid_metad.c:111</div></div>
+</div><!-- fragment --><p>This get's called from readvolfile with </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structpath.html">path</a> = NULL, volname = NULL <span class="keywordflow">for</span> xlating the volumes <a class="code hl_struct" href="structpath.html">path</a></div>
+<div class="line"><a class="code hl_struct" href="structpath.html">path</a> = <a class="code hl_struct" href="structpath.html">path</a>, volname = NULL <span class="keywordflow">for</span> xlating the volumes name</div>
+<div class="line">... and from volumes options parsing code when xlating e.g. <a class="code hl_variable" href="etc_2cnid__dbd_2main_8c.html#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a> with</div>
+<div class="line"><a class="code hl_struct" href="structpath.html">path</a> = <a class="code hl_struct" href="structpath.html">path</a>, volname = volname</div>
+<div class="ttc" id="aetc_2cnid__dbd_2main_8c_html_a2e1879860bff0fb8da8105a1cb9c23a5"><div class="ttname"><a href="etc_2cnid__dbd_2main_8c.html#a2e1879860bff0fb8da8105a1cb9c23a5">dbpath</a></div><div class="ttdeci">static bstring dbpath</div><div class="ttdef"><b>Definition</b> etc/cnid_dbd/main.c:48</div></div>
+</div><!-- fragment --><p>Using this information we can reject xlation of any variable depeninding on a login context which is not given in the afp master, where we must evaluate this whole stuff too for the Zeroconf announcements. </p>
 
 </div>
 </div>
@@ -1572,6 +1603,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>whether there's generic user home share in config ("~" or "~/path", but not "~user") </p>
 
 </div>
 </div>

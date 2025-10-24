@@ -122,6 +122,7 @@ $(function(){initNavTree('dalloc_8c.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:abb6184e5323caab45ac611798b12b59a" id="r_abb6184e5323caab45ac611798b12b59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb6184e5323caab45ac611798b12b59a">dalloc_add_talloc_chunk</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *dd, void *talloc_chunk, void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, size_t size)</td></tr>
 <tr class="memitem:a44ab837d36956a2311193d97f93fb6f5" id="r_a44ab837d36956a2311193d97f93fb6f5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
+<tr class="memdesc:a44ab837d36956a2311193d97f93fb6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to value from a DALLOC object.  <br /></td></tr>
 <tr class="memitem:ad5bb4465c8e47189370859fb3e2ed35e" id="r_ad5bb4465c8e47189370859fb3e2ed35e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key</a> (const <a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *d,...)</td></tr>
 <tr class="memitem:a8d1a0348d7484dbe1ff1854f96f25cf5" id="r_a8d1a0348d7484dbe1ff1854f96f25cf5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1a0348d7484dbe1ff1854f96f25cf5">dalloc_strdup</a> (const void *<a class="el" href="afp__avahi_8c.html#a358710cfcf73fed67a687def258a60e7">ctx</a>, const char *string)</td></tr>
 <tr class="memitem:a505194aa9c66120deeb73de2ae432a4b" id="r_a505194aa9c66120deeb73de2ae432a4b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a505194aa9c66120deeb73de2ae432a4b">dalloc_strndup</a> (const void *<a class="el" href="afp__avahi_8c.html#a358710cfcf73fed67a687def258a60e7">ctx</a>, const char *string, size_t n)</td></tr>
@@ -158,9 +159,9 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p>Add a value for the key </p><div class="fragment"><div class="line">i = 4;</div>
 <div class="line"><a class="code hl_define" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy</a>(dict, &amp;i, uint64_t);</div>
 </div><!-- fragment --><p>Fetching value references</p>
-<p>You can fetch anything that is not a DALLOC_CTXs, because passing "DALLOC_CTXs" as type to the functions <a class="el" href="#a44ab837d36956a2311193d97f93fb6f5">dalloc_get()</a> and <a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key()</a> tells the function to step into that object and expect more arguments that specify which element to fetch.</p>
+<p>You can fetch anything that is not a DALLOC_CTXs, because passing "DALLOC_CTXs" as type to the functions <a class="el" href="#a44ab837d36956a2311193d97f93fb6f5" title="Get pointer to value from a DALLOC object.">dalloc_get()</a> and <a class="el" href="#ad5bb4465c8e47189370859fb3e2ed35e">dalloc_value_for_key()</a> tells the function to step into that object and expect more arguments that specify which element to fetch.</p>
 <p>Get reference to an objects element by position </p><div class="fragment"><div class="line">uint64_t *<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;uint64_t&quot;</span>, 0);</div>
-<div class="ttc" id="adalloc_8h_html_a44ab837d36956a2311193d97f93fb6f5"><div class="ttname"><a href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a></div><div class="ttdeci">void * dalloc_get(const DALLOC_CTX *d,...)</div><div class="ttdef"><b>Definition</b> dalloc.c:199</div></div>
+<div class="ttc" id="adalloc_8h_html_a44ab837d36956a2311193d97f93fb6f5"><div class="ttname"><a href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a></div><div class="ttdeci">void * dalloc_get(const DALLOC_CTX *d,...)</div><div class="ttdoc">Get pointer to value from a DALLOC object.</div><div class="ttdef"><b>Definition</b> dalloc.c:199</div></div>
 <div class="ttc" id="auams__dhx2__pam_8c_html_a49c6a1596dbb420280d9aa047ecc4c31"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></div><div class="ttdeci">static gcry_mpi_t p</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
 </div><!-- fragment --><p> p now points to the first int with a value of 1</p>
 <p>Get reference to the "hello world" string </p><div class="fragment"><div class="line">str = <a class="code hl_function" href="dalloc_8h.html#a44ab837d36956a2311193d97f93fb6f5">dalloc_get</a>(d, <span class="stringliteral">&quot;char *&quot;</span>, 1);</div>
@@ -202,6 +203,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Use <a class="el" href="dalloc_8h.html#ad64e08b4686af9ccd27123b015f338c9">dalloc_add_copy()</a> macro, not this function </p>
 
 </div>
 </div>
@@ -223,6 +225,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get pointer to value from a DALLOC object. </p>
+<p>Returns pointer to object from a DALLOC object. Nested object interation is supported by using the type string "DALLOC_CTX". Any other type string designates the requested objects type. </p>
 
 </div>
 </div>

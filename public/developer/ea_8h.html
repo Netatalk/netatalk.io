@@ -117,14 +117,14 @@ Macros</h2></td></tr>
 <tr class="memitem:adb3567d560a032109ee5fa1ec0a473da" id="r_adb3567d560a032109ee5fa1ec0a473da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb3567d560a032109ee5fa1ec0a473da">MAX_EA_SIZE</a>&#160;&#160;&#160;3802</td></tr>
 <tr class="memitem:a83df001f14641814bf83ef80a1834b54" id="r_a83df001f14641814bf83ef80a1834b54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83df001f14641814bf83ef80a1834b54">MAX_REPLY_EXTRA_BYTES</a>&#160;&#160;&#160;6</td></tr>
 <tr class="memitem:a75e6b60d602b817107b0abf2c9d58b64" id="r_a75e6b60d602b817107b0abf2c9d58b64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e6b60d602b817107b0abf2c9d58b64">ATTRNAMEBUFSIZ</a>&#160;&#160;&#160;4096</td></tr>
-<tr class="memitem:a9a553a1ea33e2cb76ec66d4a1cde0a70" id="r_a9a553a1ea33e2cb76ec66d4a1cde0a70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a553a1ea33e2cb76ec66d4a1cde0a70">XATTR_CREATE</a>&#160;&#160;&#160;0x1       /* set value, fail if attr already exists */</td></tr>
-<tr class="memitem:aa854bbf51c255cacb4f4bd6ad767d885" id="r_aa854bbf51c255cacb4f4bd6ad767d885"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa854bbf51c255cacb4f4bd6ad767d885">XATTR_REPLACE</a>&#160;&#160;&#160;0x2       /* set value, fail if attr does not exist */</td></tr>
+<tr class="memitem:a9a553a1ea33e2cb76ec66d4a1cde0a70" id="r_a9a553a1ea33e2cb76ec66d4a1cde0a70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a553a1ea33e2cb76ec66d4a1cde0a70">XATTR_CREATE</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memitem:aa854bbf51c255cacb4f4bd6ad767d885" id="r_aa854bbf51c255cacb4f4bd6ad767d885"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa854bbf51c255cacb4f4bd6ad767d885">XATTR_REPLACE</a>&#160;&#160;&#160;0x2</td></tr>
 <tr class="memitem:a869570e5ca13a3daa0fb2a5393300605" id="r_a869570e5ca13a3daa0fb2a5393300605"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a869570e5ca13a3daa0fb2a5393300605">AD_EA_META</a>&#160;&#160;&#160;&quot;org.netatalk.Metadata&quot;</td></tr>
 <tr class="memitem:acf445467ca0376e2f4c75c6c12b3a924" id="r_acf445467ca0376e2f4c75c6c12b3a924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf445467ca0376e2f4c75c6c12b3a924">AD_EA_META_LEN</a>&#160;&#160;&#160;(sizeof(<a class="el" href="#a869570e5ca13a3daa0fb2a5393300605">AD_EA_META</a>) - 1)</td></tr>
 <tr class="memitem:add5ede15916f254d823777177982cfb9" id="r_add5ede15916f254d823777177982cfb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add5ede15916f254d823777177982cfb9">AD_EA_RESO</a>&#160;&#160;&#160;&quot;org.netatalk.ResourceFork&quot;</td></tr>
 <tr class="memitem:a91f9f75b84f560bb41d9813f9dd68cb6" id="r_a91f9f75b84f560bb41d9813f9dd68cb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91f9f75b84f560bb41d9813f9dd68cb6">NOT_NETATALK_EA</a>(a)</td></tr>
-<tr class="memitem:ad7be5ae802bc50f2501258ee7c41e974" id="r_ad7be5ae802bc50f2501258ee7c41e974"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7be5ae802bc50f2501258ee7c41e974">EA_INITED</a>&#160;&#160;&#160;0xea494e54  /* ea&quot;INT&quot;, for interfacing <a class="el" href="#a46b8ed7a8ebf7e12ee81649945a0bad8">ea_open</a> w. <a class="el" href="#a50f4c63188607f60cc2d4ffd1c5d4978">ea_close</a> */</td></tr>
-<tr class="memitem:afbcec4f1a1d4992ed2895abc2e7b7897" id="r_afbcec4f1a1d4992ed2895abc2e7b7897"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbcec4f1a1d4992ed2895abc2e7b7897">EA_MAGIC</a>&#160;&#160;&#160;0x61644541 /* &quot;adEA&quot; */</td></tr>
+<tr class="memitem:ad7be5ae802bc50f2501258ee7c41e974" id="r_ad7be5ae802bc50f2501258ee7c41e974"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7be5ae802bc50f2501258ee7c41e974">EA_INITED</a>&#160;&#160;&#160;0xea494e54</td></tr>
+<tr class="memitem:afbcec4f1a1d4992ed2895abc2e7b7897" id="r_afbcec4f1a1d4992ed2895abc2e7b7897"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbcec4f1a1d4992ed2895abc2e7b7897">EA_MAGIC</a>&#160;&#160;&#160;0x61644541</td></tr>
 <tr class="memitem:a4b7fc8d281528cc45358ec4a6f0f5676" id="r_a4b7fc8d281528cc45358ec4a6f0f5676"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b7fc8d281528cc45358ec4a6f0f5676">EA_VERSION1</a>&#160;&#160;&#160;0x01</td></tr>
 <tr class="memitem:a36d8fea9cd81a3f7c01eb0841a7dd562" id="r_a36d8fea9cd81a3f7c01eb0841a7dd562"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36d8fea9cd81a3f7c01eb0841a7dd562">EA_VERSION</a>&#160;&#160;&#160;<a class="el" href="#a4b7fc8d281528cc45358ec4a6f0f5676">EA_VERSION1</a></td></tr>
 <tr class="memitem:a9623aa3f9f7edc90ba30e59bb4b8d788" id="r_a9623aa3f9f7edc90ba30e59bb4b8d788"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9623aa3f9f7edc90ba30e59bb4b8d788">EA_MAGIC_OFF</a>&#160;&#160;&#160;0</td></tr>
@@ -162,17 +162,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a0c25b99e3a8f9221c4b1860febfa324a" id="r_a0c25b99e3a8f9221c4b1860febfa324a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c25b99e3a8f9221c4b1860febfa324a">sys_lsetxattr</a> (const char *<a class="el" href="structpath.html">path</a>, const char *name, const void *value, size_t size, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:a1bdc0fc301c146823417963f04750212" id="r_a1bdc0fc301c146823417963f04750212"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bdc0fc301c146823417963f04750212">sys_fsetxattr</a> (int filedes, const char *name, const void *value, size_t size, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:a81f180e280f925d4aba61f4d4c65aee7" id="r_a81f180e280f925d4aba61f4d4c65aee7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f180e280f925d4aba61f4d4c65aee7">sys_copyxattr</a> (const char *src, const char *dst)</td></tr>
-<tr class="memitem:a50f05db1f5e543d6adcb423a2acd4750" id="r_a50f05db1f5e543d6adcb423a2acd4750"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f05db1f5e543d6adcb423a2acd4750">sys_getxattrfd</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, const char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>,...)</td></tr>
-<tr class="memitem:a4299d5bc81fd68aad423d4403e062bb1" id="r_a4299d5bc81fd68aad423d4403e062bb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4299d5bc81fd68aad423d4403e062bb1">get_easize</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a4299d5bc81fd68aad423d4403e062bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get size of an EA  <br /></td></tr>
-<tr class="memitem:a45e85cd01b4587261f673845925dd032" id="r_a45e85cd01b4587261f673845925dd032"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45e85cd01b4587261f673845925dd032">get_eacontent</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a45e85cd01b4587261f673845925dd032"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy EA into rbuf  <br /></td></tr>
-<tr class="memitem:a7510ff430f60589704d409f9d9c750e4" id="r_a7510ff430f60589704d409f9d9c750e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7510ff430f60589704d409f9d9c750e4">list_eas</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict attrnamebuf, size_t *restrict buflen, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a7510ff430f60589704d409f9d9c750e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy names of EAs into attrnamebuf  <br /></td></tr>
-<tr class="memitem:a3bc5c70a3a74ae37e879878d64986adf" id="r_a3bc5c70a3a74ae37e879878d64986adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bc5c70a3a74ae37e879878d64986adf">set_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, const char *restrict ibuf, size_t attrsize, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a3bc5c70a3a74ae37e879878d64986adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">set a Solaris native EA  <br /></td></tr>
-<tr class="memitem:a6e8fac37d1592dcc56272d50faf5d79a" id="r_a6e8fac37d1592dcc56272d50faf5d79a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e8fac37d1592dcc56272d50faf5d79a">remove_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a6e8fac37d1592dcc56272d50faf5d79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a EA from a file  <br /></td></tr>
+<tr class="memitem:a50f05db1f5e543d6adcb423a2acd4750" id="r_a50f05db1f5e543d6adcb423a2acd4750"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f05db1f5e543d6adcb423a2acd4750">sys_getxattrfd</a> (int fd, const char *uname, int oflag,...)</td></tr>
+<tr class="memitem:af87f7838de21c822b79656de54f819b0" id="r_af87f7838de21c822b79656de54f819b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af87f7838de21c822b79656de54f819b0">get_easize</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int fd)</td></tr>
+<tr class="memdesc:af87f7838de21c822b79656de54f819b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get size of an EA  <br /></td></tr>
+<tr class="memitem:ac56ad99aa4fc19be36ba2585d96bfe00" id="r_ac56ad99aa4fc19be36ba2585d96bfe00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac56ad99aa4fc19be36ba2585d96bfe00">get_eacontent</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int maxreply, int fd)</td></tr>
+<tr class="memdesc:ac56ad99aa4fc19be36ba2585d96bfe00"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy EA into rbuf  <br /></td></tr>
+<tr class="memitem:a3ebfcbc5e0bc5a5f1f96faed53d6a2d3" id="r_a3ebfcbc5e0bc5a5f1f96faed53d6a2d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ebfcbc5e0bc5a5f1f96faed53d6a2d3">list_eas</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *attrnamebuf, size_t *buflen, const char *uname, int oflag, int fd)</td></tr>
+<tr class="memdesc:a3ebfcbc5e0bc5a5f1f96faed53d6a2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy names of EAs into attrnamebuf  <br /></td></tr>
+<tr class="memitem:a70b7a176d2104eb20705a300a89e9086" id="r_a70b7a176d2104eb20705a300a89e9086"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70b7a176d2104eb20705a300a89e9086">set_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, const char *ibuf, size_t attrsize, int oflag, int fd)</td></tr>
+<tr class="memdesc:a70b7a176d2104eb20705a300a89e9086"><td class="mdescLeft">&#160;</td><td class="mdescRight">set a Solaris native EA  <br /></td></tr>
+<tr class="memitem:a51f64f6fb31e76c7363f1633420ead0b" id="r_a51f64f6fb31e76c7363f1633420ead0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f64f6fb31e76c7363f1633420ead0b">remove_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, int oflag, int fd)</td></tr>
+<tr class="memdesc:a51f64f6fb31e76c7363f1633420ead0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a EA from a file  <br /></td></tr>
 <tr class="memitem:ab94d9c4146678814e9ced438a17f617a" id="r_ab94d9c4146678814e9ced438a17f617a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94d9c4146678814e9ced438a17f617a">ea_deletefile</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td></tr>
 <tr class="memitem:adef5ee2525953d7aed1b60e7d3d60e82" id="r_adef5ee2525953d7aed1b60e7d3d60e82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef5ee2525953d7aed1b60e7d3d60e82">ea_renamefile</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td></tr>
 <tr class="memitem:af70f4c191ec7b92beb387b1152bb6779" id="r_af70f4c191ec7b92beb387b1152bb6779"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af70f4c191ec7b92beb387b1152bb6779">ea_copyfile</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
@@ -180,21 +180,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a32a66bd7a702d0afca2aa5e75624211c" id="r_a32a66bd7a702d0afca2aa5e75624211c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32a66bd7a702d0afca2aa5e75624211c">ea_chown</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid)</td></tr>
 <tr class="memitem:a7795ad74d00472bfc7319b6758014e70" id="r_a7795ad74d00472bfc7319b6758014e70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7795ad74d00472bfc7319b6758014e70">ea_chmod_file</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
 <tr class="memitem:af83eb9737ddb83ee095c269a96d1cbec" id="r_af83eb9737ddb83ee095c269a96d1cbec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83eb9737ddb83ee095c269a96d1cbec">ea_chmod_dir</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
-<tr class="memitem:a93ef8ca22fabcfad95a7d8f806bcfc89" id="r_a93ef8ca22fabcfad95a7d8f806bcfc89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93ef8ca22fabcfad95a7d8f806bcfc89">sys_get_easize</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a93ef8ca22fabcfad95a7d8f806bcfc89"><td class="mdescLeft">&#160;</td><td class="mdescRight">get size of a native EA  <br /></td></tr>
-<tr class="memitem:a2350a748c0f60a1c790e0c6593425fd3" id="r_a2350a748c0f60a1c790e0c6593425fd3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2350a748c0f60a1c790e0c6593425fd3">sys_get_eacontent</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a2350a748c0f60a1c790e0c6593425fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy native EA into rbuf  <br /></td></tr>
-<tr class="memitem:a2a5a429d5af008341cfe70ae8dd5f164" id="r_a2a5a429d5af008341cfe70ae8dd5f164"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a5a429d5af008341cfe70ae8dd5f164">sys_list_eas</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, char *restrict attrnamebuf, size_t *restrict buflen, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a2a5a429d5af008341cfe70ae8dd5f164"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy names of native EAs into attrnamebuf  <br /></td></tr>
-<tr class="memitem:a22be087a49b0dae6dd17c10043fc129d" id="r_a22be087a49b0dae6dd17c10043fc129d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22be087a49b0dae6dd17c10043fc129d">sys_set_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, const char *restrict ibuf, size_t attrsize, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:a22be087a49b0dae6dd17c10043fc129d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set a native EA  <br /></td></tr>
-<tr class="memitem:ad3f52080848f50aa540f0d71d2360f84" id="r_ad3f52080848f50aa540f0d71d2360f84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3f52080848f50aa540f0d71d2360f84">sys_remove_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *restrict <a class="el" href="structvol.html">vol</a>, const char *restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char *restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
-<tr class="memdesc:ad3f52080848f50aa540f0d71d2360f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a native EA  <br /></td></tr>
+<tr class="memitem:a81672f3ddd05fc37ec9fbc90d5f1c68c" id="r_a81672f3ddd05fc37ec9fbc90d5f1c68c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81672f3ddd05fc37ec9fbc90d5f1c68c">sys_get_easize</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int fd)</td></tr>
+<tr class="memdesc:a81672f3ddd05fc37ec9fbc90d5f1c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get size of a native EA  <br /></td></tr>
+<tr class="memitem:a76db387346546449f5b856321a732d3f" id="r_a76db387346546449f5b856321a732d3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76db387346546449f5b856321a732d3f">sys_get_eacontent</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int maxreply, int fd)</td></tr>
+<tr class="memdesc:a76db387346546449f5b856321a732d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy native EA into rbuf  <br /></td></tr>
+<tr class="memitem:a43d8b5c511a416ac8e4d0ea8609bc7c3" id="r_a43d8b5c511a416ac8e4d0ea8609bc7c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d8b5c511a416ac8e4d0ea8609bc7c3">sys_list_eas</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *attrnamebuf, size_t *buflen, const char *uname, int oflag, int fd)</td></tr>
+<tr class="memdesc:a43d8b5c511a416ac8e4d0ea8609bc7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy names of native EAs into attrnamebuf  <br /></td></tr>
+<tr class="memitem:a191493c01370498249f7d391a8c71761" id="r_a191493c01370498249f7d391a8c71761"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a191493c01370498249f7d391a8c71761">sys_set_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, const char *ibuf, size_t attrsize, int oflag, int fd)</td></tr>
+<tr class="memdesc:a191493c01370498249f7d391a8c71761"><td class="mdescLeft">&#160;</td><td class="mdescRight">set a native EA  <br /></td></tr>
+<tr class="memitem:a83c2c6199088465b4a6df7b6801af5a8" id="r_a83c2c6199088465b4a6df7b6801af5a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83c2c6199088465b4a6df7b6801af5a8">sys_remove_ea</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, int oflag, int fd)</td></tr>
+<tr class="memdesc:a83c2c6199088465b4a6df7b6801af5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a native EA  <br /></td></tr>
 <tr class="memitem:aa3a167f18eff44cff6a589b16fa80a69" id="r_aa3a167f18eff44cff6a589b16fa80a69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3a167f18eff44cff6a589b16fa80a69">sys_ea_copyfile</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
 <tr class="memdesc:aa3a167f18eff44cff6a589b16fa80a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy EAs  <br /></td></tr>
-<tr class="memitem:a46b8ed7a8ebf7e12ee81649945a0bad8" id="r_a46b8ed7a8ebf7e12ee81649945a0bad8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b8ed7a8ebf7e12ee81649945a0bad8">ea_open</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="#ae4c2c9de19b1667ec3dd044e87fd1f7e">eaflags_t</a> eaflags, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
+<tr class="memitem:a46b8ed7a8ebf7e12ee81649945a0bad8" id="r_a46b8ed7a8ebf7e12ee81649945a0bad8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b8ed7a8ebf7e12ee81649945a0bad8">ea_open</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, <a class="el" href="#ae4c2c9de19b1667ec3dd044e87fd1f7e">eaflags_t</a> eaflags, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
 <tr class="memdesc:a46b8ed7a8ebf7e12ee81649945a0bad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">open EA header file, create if it doesnt exits and called with O_CREATE  <br /></td></tr>
-<tr class="memitem:aca8737e07ee8bdd73b2f19359839dbea" id="r_aca8737e07ee8bdd73b2f19359839dbea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8737e07ee8bdd73b2f19359839dbea">ea_openat</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="#ae4c2c9de19b1667ec3dd044e87fd1f7e">eaflags_t</a> eaflags, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
+<tr class="memitem:aca8737e07ee8bdd73b2f19359839dbea" id="r_aca8737e07ee8bdd73b2f19359839dbea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca8737e07ee8bdd73b2f19359839dbea">ea_openat</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *uname, <a class="el" href="#ae4c2c9de19b1667ec3dd044e87fd1f7e">eaflags_t</a> eaflags, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
 <tr class="memdesc:aca8737e07ee8bdd73b2f19359839dbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">openat like wrapper for ea_open, takes a additional file descriptor  <br /></td></tr>
 <tr class="memitem:a50f4c63188607f60cc2d4ffd1c5d4978" id="r_a50f4c63188607f60cc2d4ffd1c5d4978"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f4c63188607f60cc2d4ffd1c5d4978">ea_close</a> (struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
 <tr class="memdesc:a50f4c63188607f60cc2d4ffd1c5d4978"><td class="mdescLeft">&#160;</td><td class="mdescRight">flushes and closes an ea handle  <br /></td></tr>
@@ -255,6 +255,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Library user must provide a static buffer of size ATTRNAMEBUFSIZ. It's used when listing EAs as intermediate buffer. For afpd it's defined in <a class="el" href="extattrs_8c.html">extattrs.c</a>. </p>
 
 </div>
 </div>
@@ -307,10 +308,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EA_INITED&#160;&#160;&#160;0xea494e54  /* ea&quot;INT&quot;, for interfacing <a class="el" href="#a46b8ed7a8ebf7e12ee81649945a0bad8">ea_open</a> w. <a class="el" href="#a50f4c63188607f60cc2d4ffd1c5d4978">ea_close</a> */</td>
+          <td class="memname">#define EA_INITED&#160;&#160;&#160;0xea494e54</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ea"INT", for interfacing ea_open w. ea_close </p>
 
 </div>
 </div>
@@ -321,10 +323,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EA_MAGIC&#160;&#160;&#160;0x61644541 /* &quot;adEA&quot; */</td>
+          <td class="memname">#define EA_MAGIC&#160;&#160;&#160;0x61644541</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>"adEA" </p>
 
 </div>
 </div>
@@ -437,6 +440,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This seems to be the current limit fo HFS+, we arbitrarily force that which also safes us from buffer overflows </p>
 
 </div>
 </div>
@@ -451,6 +455,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>req_count has space for AFP response bitmap and length as well, so 6 bytes </p>
 
 </div>
 </div>
@@ -481,10 +486,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define XATTR_CREATE&#160;&#160;&#160;0x1       /* set value, fail if attr already exists */</td>
+          <td class="memname">#define XATTR_CREATE&#160;&#160;&#160;0x1</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set value, fail if attr already exists </p>
 
 </div>
 </div>
@@ -495,10 +501,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define XATTR_REPLACE&#160;&#160;&#160;0x2       /* set value, fail if attr does not exist */</td>
+          <td class="memname">#define XATTR_REPLACE&#160;&#160;&#160;0x2</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set value, fail if attr does not exist </p>
 
 </div>
 </div>
@@ -534,10 +541,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea4c0c58bcc60978bf83c7c82e50390924" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea4c0c58bcc60978bf83c7c82e50390924"></a>EA_CREATE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea07b0501843f1f4dd7a73b523b6977592" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea07b0501843f1f4dd7a73b523b6977592"></a>EA_RDONLY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea512e7517dc93e2751b7d7fb35fdf5836" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea512e7517dc93e2751b7d7fb35fdf5836"></a>EA_RDWR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7eaec227332948936d3cf89df77bb7de14f" name="ae4c2c9de19b1667ec3dd044e87fd1f7eaec227332948936d3cf89df77bb7de14f"></a>EA_DIR&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea4c0c58bcc60978bf83c7c82e50390924" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea4c0c58bcc60978bf83c7c82e50390924"></a>EA_CREATE&#160;</td><td class="fielddoc"><p>create if not existing on ea_open </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea07b0501843f1f4dd7a73b523b6977592" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea07b0501843f1f4dd7a73b523b6977592"></a>EA_RDONLY&#160;</td><td class="fielddoc"><p>open read only </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7ea512e7517dc93e2751b7d7fb35fdf5836" name="ae4c2c9de19b1667ec3dd044e87fd1f7ea512e7517dc93e2751b7d7fb35fdf5836"></a>EA_RDWR&#160;</td><td class="fielddoc"><p>open read/write </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae4c2c9de19b1667ec3dd044e87fd1f7eaec227332948936d3cf89df77bb7de14f" name="ae4c2c9de19b1667ec3dd044e87fd1f7eaec227332948936d3cf89df77bb7de14f"></a>EA_DIR&#160;</td><td class="fielddoc"><p>ea header file is for a dir, ea_open adds it as appropriate </p>
+</td></tr>
 </table>
 
 </div>
@@ -993,8 +1004,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a45e85cd01b4587261f673845925dd032" name="a45e85cd01b4587261f673845925dd032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45e85cd01b4587261f673845925dd032">&#9670;&#160;</a></span>get_eacontent()</h2>
+<a id="ac56ad99aa4fc19be36ba2585d96bfe00" name="ac56ad99aa4fc19be36ba2585d96bfe00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56ad99aa4fc19be36ba2585d96bfe00">&#9670;&#160;</a></span>get_eacontent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,22 +1016,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int get_eacontent </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1030,7 +1041,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1069,8 +1080,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4299d5bc81fd68aad423d4403e062bb1" name="a4299d5bc81fd68aad423d4403e062bb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4299d5bc81fd68aad423d4403e062bb1">&#9670;&#160;</a></span>get_easize()</h2>
+<a id="af87f7838de21c822b79656de54f819b0" name="af87f7838de21c822b79656de54f819b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87f7838de21c822b79656de54f819b0">&#9670;&#160;</a></span>get_easize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1081,22 +1092,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int get_easize </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1106,7 +1117,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1139,8 +1150,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7510ff430f60589704d409f9d9c750e4" name="a7510ff430f60589704d409f9d9c750e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7510ff430f60589704d409f9d9c750e4">&#9670;&#160;</a></span>list_eas()</h2>
+<a id="a3ebfcbc5e0bc5a5f1f96faed53d6a2d3" name="a3ebfcbc5e0bc5a5f1f96faed53d6a2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ebfcbc5e0bc5a5f1f96faed53d6a2d3">&#9670;&#160;</a></span>list_eas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1151,22 +1162,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int list_eas </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>attrnamebuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>attrnamebuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1203,8 +1214,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e8fac37d1592dcc56272d50faf5d79a" name="a6e8fac37d1592dcc56272d50faf5d79a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e8fac37d1592dcc56272d50faf5d79a">&#9670;&#160;</a></span>remove_ea()</h2>
+<a id="a51f64f6fb31e76c7363f1633420ead0b" name="a51f64f6fb31e76c7363f1633420ead0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f64f6fb31e76c7363f1633420ead0b">&#9670;&#160;</a></span>remove_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1215,17 +1226,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int remove_ea </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1261,8 +1272,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3bc5c70a3a74ae37e879878d64986adf" name="a3bc5c70a3a74ae37e879878d64986adf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc5c70a3a74ae37e879878d64986adf">&#9670;&#160;</a></span>set_ea()</h2>
+<a id="a70b7a176d2104eb20705a300a89e9086" name="a70b7a176d2104eb20705a300a89e9086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b7a176d2104eb20705a300a89e9086">&#9670;&#160;</a></span>set_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1273,22 +1284,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int set_ea </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1528,8 +1539,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2350a748c0f60a1c790e0c6593425fd3" name="a2350a748c0f60a1c790e0c6593425fd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2350a748c0f60a1c790e0c6593425fd3">&#9670;&#160;</a></span>sys_get_eacontent()</h2>
+<a id="a76db387346546449f5b856321a732d3f" name="a76db387346546449f5b856321a732d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76db387346546449f5b856321a732d3f">&#9670;&#160;</a></span>sys_get_eacontent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1540,22 +1551,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int sys_get_eacontent </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1565,7 +1576,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1604,8 +1615,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a93ef8ca22fabcfad95a7d8f806bcfc89" name="a93ef8ca22fabcfad95a7d8f806bcfc89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93ef8ca22fabcfad95a7d8f806bcfc89">&#9670;&#160;</a></span>sys_get_easize()</h2>
+<a id="a81672f3ddd05fc37ec9fbc90d5f1c68c" name="a81672f3ddd05fc37ec9fbc90d5f1c68c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81672f3ddd05fc37ec9fbc90d5f1c68c">&#9670;&#160;</a></span>sys_get_easize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1616,22 +1627,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int sys_get_easize </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>rbuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>rbuflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1641,7 +1652,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1767,8 +1778,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a5a429d5af008341cfe70ae8dd5f164" name="a2a5a429d5af008341cfe70ae8dd5f164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a5a429d5af008341cfe70ae8dd5f164">&#9670;&#160;</a></span>sys_list_eas()</h2>
+<a id="a43d8b5c511a416ac8e4d0ea8609bc7c3" name="a43d8b5c511a416ac8e4d0ea8609bc7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d8b5c511a416ac8e4d0ea8609bc7c3">&#9670;&#160;</a></span>sys_list_eas()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1779,22 +1790,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int sys_list_eas </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *restrict</td>          <td class="paramname"><span class="paramname"><em>attrnamebuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>attrnamebuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *restrict</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>, </td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1940,8 +1951,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad3f52080848f50aa540f0d71d2360f84" name="ad3f52080848f50aa540f0d71d2360f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3f52080848f50aa540f0d71d2360f84">&#9670;&#160;</a></span>sys_remove_ea()</h2>
+<a id="a83c2c6199088465b4a6df7b6801af5a8" name="a83c2c6199088465b4a6df7b6801af5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c2c6199088465b4a6df7b6801af5a8">&#9670;&#160;</a></span>sys_remove_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1952,17 +1963,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int sys_remove_ea </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2019,8 +2030,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a22be087a49b0dae6dd17c10043fc129d" name="a22be087a49b0dae6dd17c10043fc129d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22be087a49b0dae6dd17c10043fc129d">&#9670;&#160;</a></span>sys_set_ea()</h2>
+<a id="a191493c01370498249f7d391a8c71761" name="a191493c01370498249f7d391a8c71761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191493c01370498249f7d391a8c71761">&#9670;&#160;</a></span>sys_set_ea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2031,22 +2042,22 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int sys_set_ea </td>
           <td>(</td>
-          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *restrict</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>uname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>attruname</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *restrict</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>ibuf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

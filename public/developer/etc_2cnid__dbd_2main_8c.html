@@ -102,6 +102,9 @@ $(function(){initNavTree('etc_2cnid__dbd_2main_8c.html','',''); });
   <div class="headertitle"><div class="title">main.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>CNID <a class="el" href="struct_d_b_d.html">DBD</a> (Database Daemon) Backend startup routines.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;fcntl.h&gt;</code><br />
@@ -156,7 +159,16 @@ Variables</h2></td></tr>
 <tr class="memitem:adad0b853d0341ebe36b84382a60fac47" id="r_adad0b853d0341ebe36b84382a60fac47"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structdb__param.html">db_param</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adad0b853d0341ebe36b84382a60fac47">dbp</a></td></tr>
 <tr class="memitem:a5979f6731f9ed377c95eab32232edfa1" id="r_a5979f6731f9ed377c95eab32232edfa1"><td class="memItemLeft" align="right" valign="top">static struct vol *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5979f6731f9ed377c95eab32232edfa1">vol</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CNID <a class="el" href="struct_d_b_d.html">DBD</a> (Database Daemon) Backend startup routines. </p>
+<p>The dbd_XXX and comm_XXX functions all obey the same protocol for return values:</p>
+<ul>
+<li>1: Success, if transactions are used commit.</li>
+<li>0: Failure, but we continue to serve requests. If transactions are used abort/rollback.</li>
+<li>-1: Fatal error, either from the database or from the socket. Abort the transaction if applicable (which might fail as well) and then exit.</li>
+</ul>
+<p>We always try to notify the client process about the outcome, the result field of the <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> structure contains further details. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a32b00885384df0b4bff49b272218b6ab" name="a32b00885384df0b4bff49b272218b6ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32b00885384df0b4bff49b272218b6ab">&#9670;&#160;</a></span>DBOPTIONS</h2>
 

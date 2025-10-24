@@ -135,24 +135,23 @@ Functions</h2></td></tr>
 <tr class="memitem:a7575ec4962744765cc012bb9f600435f" id="r_a7575ec4962744765cc012bb9f600435f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7575ec4962744765cc012bb9f600435f">RQST_RESET</a> (struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *r)</td></tr>
 <tr class="memitem:a43dc1c6a2ba8247a2e673fc150a25682" id="r_a43dc1c6a2ba8247a2e673fc150a25682"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43dc1c6a2ba8247a2e673fc150a25682">delay</a> (int sec)</td></tr>
 <tr class="memitem:a32eb9a8fb75b6b5df03bddbd3b3a647b" id="r_a32eb9a8fb75b6b5df03bddbd3b3a647b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32eb9a8fb75b6b5df03bddbd3b3a647b">tsock_getfd</a> (const char *host, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
-<tr class="memitem:ab7f11a27ce892a06fb42b5548f1d355f" id="r_ab7f11a27ce892a06fb42b5548f1d355f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7f11a27ce892a06fb42b5548f1d355f">write_vec</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, struct iovec *iov, ssize_t towrite, int vecs)</td></tr>
+<tr class="memitem:ab7f11a27ce892a06fb42b5548f1d355f" id="r_ab7f11a27ce892a06fb42b5548f1d355f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7f11a27ce892a06fb42b5548f1d355f">write_vec</a> (int fd, struct iovec *iov, ssize_t towrite, int vecs)</td></tr>
 <tr class="memdesc:ab7f11a27ce892a06fb42b5548f1d355f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write "towrite" bytes using writev on non-blocking fd.  <br /></td></tr>
 <tr class="memitem:ada41eb2bf6c7ab4b782c909ebe35a9ec" id="r_ada41eb2bf6c7ab4b782c909ebe35a9ec"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada41eb2bf6c7ab4b782c909ebe35a9ec">init_tsock</a> (<a class="el" href="struct_c_n_i_d__bdb__private.html">CNID_bdb_private</a> *db)</td></tr>
 <tr class="memitem:a8fa235488f21c8c880fd324bcb379df4" id="r_a8fa235488f21c8c880fd324bcb379df4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fa235488f21c8c880fd324bcb379df4">send_packet</a> (<a class="el" href="struct_c_n_i_d__bdb__private.html">CNID_bdb_private</a> *db, struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>)</td></tr>
 <tr class="memitem:aec84f589188b31851601f486d48490c2" id="r_aec84f589188b31851601f486d48490c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec84f589188b31851601f486d48490c2">dbd_initstamp</a> (struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>)</td></tr>
 <tr class="memitem:ab578d1b76c9979b3145596774283ed88" id="r_ab578d1b76c9979b3145596774283ed88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab578d1b76c9979b3145596774283ed88">dbd_reply_stamp</a> (struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a6dc856a83db9a256210ebd13e86b1009">rply</a>)</td></tr>
 <tr class="memitem:aa4e43b43b2ec9899b593ddd89d6cca41" id="r_aa4e43b43b2ec9899b593ddd89d6cca41"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4e43b43b2ec9899b593ddd89d6cca41">dbd_rpc</a> (<a class="el" href="struct_c_n_i_d__bdb__private.html">CNID_bdb_private</a> *db, struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>, struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a6dc856a83db9a256210ebd13e86b1009">rply</a>)</td></tr>
+<tr class="memdesc:aa4e43b43b2ec9899b593ddd89d6cca41"><td class="mdescLeft">&#160;</td><td class="mdescRight">send a request and get reply  <br /></td></tr>
 <tr class="memitem:a44004c2a2587ff344d950bef2b1ffbf2" id="r_a44004c2a2587ff344d950bef2b1ffbf2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44004c2a2587ff344d950bef2b1ffbf2">transmit</a> (<a class="el" href="struct_c_n_i_d__bdb__private.html">CNID_bdb_private</a> *db, struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>, struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a6dc856a83db9a256210ebd13e86b1009">rply</a>)</td></tr>
 <tr class="memitem:a6438544b18b3c8bf5f5c6eb32807382a" id="r_a6438544b18b3c8bf5f5c6eb32807382a"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6438544b18b3c8bf5f5c6eb32807382a">cnid_dbd_new</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memitem:a2d12fd130fdb183a9c41351d5daabd71" id="r_a2d12fd130fdb183a9c41351d5daabd71"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d12fd130fdb183a9c41351d5daabd71">cnid_dbd_open</a> (struct <a class="el" href="structcnid__open__args.html">cnid_open_args</a> *<a class="el" href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a>)</td></tr>
 <tr class="memitem:a0a31c41d165f7af891da67112df98847" id="r_a0a31c41d165f7af891da67112df98847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a31c41d165f7af891da67112df98847">cnid_dbd_close</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb)</td></tr>
 <tr class="memitem:ac77046933942af0479067f0fe149ec76" id="r_ac77046933942af0479067f0fe149ec76"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77046933942af0479067f0fe149ec76">cnid_dbd_stamp</a> (<a class="el" href="struct_c_n_i_d__bdb__private.html">CNID_bdb_private</a> *db)</td></tr>
-<tr class="memdesc:ac77046933942af0479067f0fe149ec76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the db stamp.  <br /></td></tr>
 <tr class="memitem:a3dcb08f445187516aac27927c3861ce8" id="r_a3dcb08f445187516aac27927c3861ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dcb08f445187516aac27927c3861ce8">cnid_dbd_add</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> hint)</td></tr>
 <tr class="memitem:a0ce1f6eee652d4c7691bcc70bf763de7" id="r_a0ce1f6eee652d4c7691bcc70bf763de7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce1f6eee652d4c7691bcc70bf763de7">cnid_dbd_get</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
 <tr class="memitem:aedd9aa5731f8225abac828b2ddd7d7da" id="r_aedd9aa5731f8225abac828b2ddd7d7da"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedd9aa5731f8225abac828b2ddd7d7da">cnid_dbd_resolve</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *id, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t len)</td></tr>
 <tr class="memitem:a5fda9a1436a866acf9a451d191aa1468" id="r_a5fda9a1436a866acf9a451d191aa1468"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fda9a1436a866acf9a451d191aa1468">cnid_dbd_getstamp</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, const size_t len)</td></tr>
-<tr class="memdesc:a5fda9a1436a866acf9a451d191aa1468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caller passes buffer where we will store the db stamp.  <br /></td></tr>
 <tr class="memitem:a43b6ea5bb4c341058f2cc37ffb45e3d8" id="r_a43b6ea5bb4c341058f2cc37ffb45e3d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b6ea5bb4c341058f2cc37ffb45e3d8">cnid_dbd_lookup</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
 <tr class="memitem:a26c68500be710c6b743ba7809a47031f" id="r_a26c68500be710c6b743ba7809a47031f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c68500be710c6b743ba7809a47031f">cnid_dbd_find</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *name, size_t namelen, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t buflen)</td></tr>
 <tr class="memitem:a1cedbecdb2f8dfacb778d5a769534677" id="r_a1cedbecdb2f8dfacb778d5a769534677"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cedbecdb2f8dfacb778d5a769534677">cnid_dbd_update</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> id, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
@@ -176,6 +175,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Wait MAX_DELAY seconds before a request to the CNID server times out </p>
 
 </div>
 </div>
@@ -377,8 +377,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Caller passes buffer where we will store the db stamp. </p>
+<p>Caller passes buffer where we will store the db stamp </p>
 
 </div>
 </div>
@@ -554,8 +553,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Get the db stamp. </p>
+<p>Get the db stamp </p>
 
 </div>
 </div>
@@ -698,6 +696,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>send a request and get reply </p>
+<dl class="section note"><dt>Note</dt><dd>assume send is non blocking </dd>
+<dd>
+if no answer after sometime (at least MAX_DELAY secondes) return an error </dd></dl>
 
 </div>
 </div>

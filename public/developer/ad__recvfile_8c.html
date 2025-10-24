@@ -178,6 +178,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>read from a socket and write to an adouble file </p>
 
 </div>
 </div>
@@ -251,6 +252,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>If tofd is -1, drain the incoming socket of count bytes without writing to the outgoing fd, if a write fails we do the same.</p>
+<p>Returns -1 on short reads from fromfd (read error) and sets errno.</p>
+<p>Returns number of bytes written to 'tofd' or thrown away if 'tofd == -1'. return != count then sets errno. Returns count if complete success. </p>
 
 </div>
 </div>

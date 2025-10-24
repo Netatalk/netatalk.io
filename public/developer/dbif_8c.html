@@ -153,11 +153,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a820d8b0d767dfd9baf1679565d48a439" id="r_a820d8b0d767dfd9baf1679565d48a439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a820d8b0d767dfd9baf1679565d48a439">dbif_txn_commit</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:aff5921ca0d73f4f0112d5860616e0b65" id="r_aff5921ca0d73f4f0112d5860616e0b65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff5921ca0d73f4f0112d5860616e0b65">dbif_txn_abort</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>)</td></tr>
 <tr class="memitem:a330d30d7a486564246b8c50f293e487f" id="r_a330d30d7a486564246b8c50f293e487f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a330d30d7a486564246b8c50f293e487f">dbif_txn_close</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, int ret)</td></tr>
+<tr class="memdesc:a330d30d7a486564246b8c50f293e487f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a transaction based on ret code.  <br /></td></tr>
 <tr class="memitem:a9cd6793c60fe112cdf437f46f33ed01b" id="r_a9cd6793c60fe112cdf437f46f33ed01b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cd6793c60fe112cdf437f46f33ed01b">dbif_txn_checkpoint</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, uint32_t kbyte, uint32_t <a class="el" href="desktop_8c.html#ac6afabdc09a49a433ee19d8a9486056d">min</a>, uint32_t <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memitem:aaffce5f37808e2475fce0582f46c76c1" id="r_aaffce5f37808e2475fce0582f46c76c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffce5f37808e2475fce0582f46c76c1">dbif_count</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, const int dbi, uint32_t *count)</td></tr>
 <tr class="memitem:a771ec86c13f4e061fd4f43a5d8b6394e" id="r_a771ec86c13f4e061fd4f43a5d8b6394e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a771ec86c13f4e061fd4f43a5d8b6394e">dbif_copy_rootinfokey</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *srcdbd, <a class="el" href="struct_d_b_d.html">DBD</a> *destdbd)</td></tr>
 <tr class="memitem:a005496f691e4fc3b9dc386539cd197a6" id="r_a005496f691e4fc3b9dc386539cd197a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a005496f691e4fc3b9dc386539cd197a6">dbif_dump</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, int dumpindexes)</td></tr>
 <tr class="memitem:a45a1936e17beec50bf0638754c372704" id="r_a45a1936e17beec50bf0638754c372704"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45a1936e17beec50bf0638754c372704">dbif_idwalk</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *cnid, int close)</td></tr>
+<tr class="memdesc:a45a1936e17beec50bf0638754c372704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates over dbd, returning cnids.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a4be916ee3cca6a0fd92efa9153e3b1c9" name="a4be916ee3cca6a0fd92efa9153e3b1c9"></a>
@@ -356,6 +358,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>We must open the db_env with an absolute pathname, as 'dbd' keeps chdir'ing, which breaks e.g. bdb logfile-rotation with relative pathnames. But still we use relative paths with DB_ERRLOGFILE in order to avoid creating absolute paths by copying. Both have no problem with a relative path. </p>
 
 </div>
 </div>
@@ -469,6 +472,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Iterates over dbd, returning cnids. </p>
+<p>Uses in-value of cnid to seek to that cnid, then gets next and return that in cnid. If close=1, close cursor. </p><dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 on EOD (end-of-database), 1 if returning cnid. </dd></dl>
+
 </div>
 </div>
 <a id="a453f7c57b95988e4e5e31ae43b8f5dc1" name="a453f7c57b95988e4e5e31ae43b8f5dc1"></a>
@@ -520,7 +526,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inititialize rootinfo key (which has CNID 0 as key) </p>
-<p>This also "stamps" the database, which means storing st.st_ctime of the "cnid2.db" file in the rootinfo data at the DEV offset</p>
+<dl class="section note"><dt>Note</dt><dd>This also "stamps" the database, which means storing st.st_ctime of the "cnid2.db" file in the rootinfo data at the DEV offset</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">dbd</td><td>database handle </td></tr>
@@ -832,6 +838,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Close a transaction based on ret code. </p>
+<dl class="section note"><dt>Note</dt><dd>ret = 1 -&gt; commit txn if db_param.txn_frequency </dd>
+<dd>
+ret = 0 -&gt; abort txn db_param.txn_frequency -&gt; exit! </dd>
+<dd>
+anything else -&gt; exit!</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success (abort or commit), -1 on error </dd></dl>
 
 </div>
 </div>

@@ -102,6 +102,9 @@ $(function(){initNavTree('_t2___dircache__attack_8c.html','',''); });
   <div class="headertitle"><div class="title">T2_Dircache_attack.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Test the following:  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="afpcmd_8h_source.html">afpcmd.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="afphelper_8h_source.html">afphelper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="testhelper_8h_source.html">testhelper.h</a>&quot;</code><br />
@@ -117,7 +120,132 @@ Functions</h2></td></tr>
 <tr class="memitem:affa518c33604cb8cfbe9ce1d4b045ac2" id="r_affa518c33604cb8cfbe9ce1d4b045ac2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="testhelper_8h.html#a10b2d890d871e1489bb02b7e70d9bdfb">STATIC</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affa518c33604cb8cfbe9ce1d4b045ac2">test506</a> ()</td></tr>
 <tr class="memitem:a1898989a102ed88807125507bfce830c" id="r_a1898989a102ed88807125507bfce830c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1898989a102ed88807125507bfce830c">Dircache_attack_test</a> ()</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Test the following: </p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="#a7998848e7805c284284812bdc6dbdc52">test500</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir dir1</div>
+<div class="line">   mkdir dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 dir2/renamed</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   ls dir2</div>
+<div class="line">   stat dir2/renamed</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: <a class="code hl_function" href="enumerate_8c.html#ad01c1f933340a12a9345b1052a0e3806">enumerate</a>()</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#ad29d5d24bb45a0d5b27e31fe420ab447">test501</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir dir1</div>
+<div class="line">   mkdir dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 dir2/renamed</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   stat renamed</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: getfildirparms()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#a44f42c420d279fe6ead0c0aef0a8f476">test502</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir dir1</div>
+<div class="line">   mkdir dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 dir2/renamed</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   ls renamed</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: <a class="code hl_function" href="enumerate_8c.html#ad01c1f933340a12a9345b1052a0e3806">enumerate</a>()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#a34459c687b6f9fc3971fa44bb7cdf45a">test503</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir dir1</div>
+<div class="line">   mkdir dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 dir2/renamed</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   stat renamed</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: getfildirparms()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#a8542fcb0ff1f0a3256e5533a87713bc1">test504</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir -<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> dir1/dir2</div>
+<div class="line">   touch dir1/dir2/file</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 renamed1</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   stat file</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: getfildirparms()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#a91e634e1478f58fb272cad1c27c90d25">test505</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir -<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> dir1/dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 renamed1</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   stat dir2</div>
+<div class="line"> </div>
+<div class="line">Check: <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> must not change</div>
+<div class="line">Targets: getfildirparms()</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="#affa518c33604cb8cfbe9ce1d4b045ac2">test506</a>()</div>
+<div class="line">=========</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   mkdir -<a class="code hl_variable" href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a> dir1/dir2</div>
+<div class="line"> </div>
+<div class="line">client 2:</div>
+<div class="line">   mv dir1 renamed1</div>
+<div class="line">   mkdir dir1</div>
+<div class="line"> </div>
+<div class="line">client 1:</div>
+<div class="line">   stat dir2</div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_a34459c687b6f9fc3971fa44bb7cdf45a"><div class="ttname"><a href="#a34459c687b6f9fc3971fa44bb7cdf45a">test503</a></div><div class="ttdeci">STATIC void test503()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:348</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_a44f42c420d279fe6ead0c0aef0a8f476"><div class="ttname"><a href="#a44f42c420d279fe6ead0c0aef0a8f476">test502</a></div><div class="ttdeci">STATIC void test502()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:271</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_a7998848e7805c284284812bdc6dbdc52"><div class="ttname"><a href="#a7998848e7805c284284812bdc6dbdc52">test500</a></div><div class="ttdeci">STATIC void test500()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:126</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_a8542fcb0ff1f0a3256e5533a87713bc1"><div class="ttname"><a href="#a8542fcb0ff1f0a3256e5533a87713bc1">test504</a></div><div class="ttdeci">STATIC void test504()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:419</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_a91e634e1478f58fb272cad1c27c90d25"><div class="ttname"><a href="#a91e634e1478f58fb272cad1c27c90d25">test505</a></div><div class="ttdeci">STATIC void test505()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:489</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_ad29d5d24bb45a0d5b27e31fe420ab447"><div class="ttname"><a href="#ad29d5d24bb45a0d5b27e31fe420ab447">test501</a></div><div class="ttdeci">STATIC void test501()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:200</div></div>
+<div class="ttc" id="a_t2___dircache__attack_8c_html_affa518c33604cb8cfbe9ce1d4b045ac2"><div class="ttname"><a href="#affa518c33604cb8cfbe9ce1d4b045ac2">test506</a></div><div class="ttdeci">STATIC void test506()</div><div class="ttdef"><b>Definition</b> T2_Dircache_attack.c:561</div></div>
+<div class="ttc" id="aenumerate_8c_html_ad01c1f933340a12a9345b1052a0e3806"><div class="ttname"><a href="enumerate_8c.html#ad01c1f933340a12a9345b1052a0e3806">enumerate</a></div><div class="ttdeci">static int enumerate(AFPObj *obj, char *ibuf, size_t ibuflen, char *rbuf, size_t *rbuflen, int ext)</div><div class="ttdef"><b>Definition</b> enumerate.c:172</div></div>
+<div class="ttc" id="aetc_2afpd_2directory_8h_html_a6e9ac498670273b784319287e6bcd45e"><div class="ttname"><a href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a></div><div class="ttdeci">#define CNID(a, b)</div><div class="ttdef"><b>Definition</b> etc/afpd/directory.h:66</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a49c6a1596dbb420280d9aa047ecc4c31"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a49c6a1596dbb420280d9aa047ecc4c31">p</a></div><div class="ttdeci">static gcry_mpi_t p</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
+</div><!-- fragment --> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a1898989a102ed88807125507bfce830c" name="a1898989a102ed88807125507bfce830c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1898989a102ed88807125507bfce830c">&#9670;&#160;</a></span>Dircache_attack_test()</h2>
 
@@ -149,6 +277,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>move and rename dir, enumerate new parent, stat renamed dir </p>
 
 </div>
 </div>
@@ -166,6 +295,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>move and rename dir, then stat it </p>
 
 </div>
 </div>
@@ -183,6 +313,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>move and rename dir, enumerate renamed dir </p>
 
 </div>
 </div>
@@ -200,6 +331,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>move and rename dir, stat renamed dir </p>
 
 </div>
 </div>
@@ -217,6 +349,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>rename topdir, stat file in subdir of renamed topdir </p>
 
 </div>
 </div>
@@ -234,6 +367,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>rename dir, stat subdir in renamed dir </p>
 
 </div>
 </div>
@@ -251,6 +385,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>stat subdir in poisened path </p>
 
 </div>
 </div>

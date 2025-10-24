@@ -102,6 +102,9 @@ $(function(){initNavTree('atp_8h.html','',''); });
   <div class="headertitle"><div class="title">atp.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packet format.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sys/time.h&gt;</code><br />
@@ -123,17 +126,17 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a422f30df819ca58254107494c666ab26" id="r_a422f30df819ca58254107494c666ab26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a422f30df819ca58254107494c666ab26">ATP_MAXDATA</a>&#160;&#160;&#160;(578+4)		/* maximum <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> <a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> size */</td></tr>
-<tr class="memitem:a5eb56b12a49869e3325d2220e9dbb972" id="r_a5eb56b12a49869e3325d2220e9dbb972"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb56b12a49869e3325d2220e9dbb972">ATP_BUFSIZ</a>&#160;&#160;&#160;587		/* maximum packet size */</td></tr>
-<tr class="memitem:a72f3b68d58ef5e814e11b6de246211ed" id="r_a72f3b68d58ef5e814e11b6de246211ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f3b68d58ef5e814e11b6de246211ed">ATP_HDRSIZE</a>&#160;&#160;&#160;5		/* includes DDP <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> field */</td></tr>
-<tr class="memitem:a0891b3d5181ffcc029cd779a51c82c4f" id="r_a0891b3d5181ffcc029cd779a51c82c4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0891b3d5181ffcc029cd779a51c82c4f">ATP_TRELMASK</a>&#160;&#160;&#160;0x07		/* <a class="el" href="hash_8c.html#adb5a31dfda5e9760c1d7a9a25cd7b9ac">mask</a> all but TREL */</td></tr>
-<tr class="memitem:a0439e47f6696cc7d08f79b0c96a5b035" id="r_a0439e47f6696cc7d08f79b0c96a5b035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0439e47f6696cc7d08f79b0c96a5b035">ATP_RELTIME</a>&#160;&#160;&#160;30		/* <a class="el" href="netatalk_8c.html#ab1a154f7530a81e9dd1d63fc6b98a5c7">base</a> release timer (in secs) */</td></tr>
-<tr class="memitem:a79e78a9f2dfc166c6127154494964494" id="r_a79e78a9f2dfc166c6127154494964494"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e78a9f2dfc166c6127154494964494">ATP_TREL30</a>&#160;&#160;&#160;0x0		/* release <a class="el" href="at__control_8c.html#a48b0549e79bd9c322fd060c093d88ced">time</a> codes */</td></tr>
-<tr class="memitem:a5e159d35176af5d983a87d732946a625" id="r_a5e159d35176af5d983a87d732946a625"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e159d35176af5d983a87d732946a625">ATP_TREL1M</a>&#160;&#160;&#160;0x1		/* these are passed in <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a> of */</td></tr>
-<tr class="memitem:a5863b66a29e4fc815bf9b34780938051" id="r_a5863b66a29e4fc815bf9b34780938051"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5863b66a29e4fc815bf9b34780938051">ATP_TREL2M</a>&#160;&#160;&#160;0x2		/* <a class="el" href="#a83da9bd377431cdbab09934b2b2b0cda">atp_sreq</a> call, and set in the */</td></tr>
-<tr class="memitem:a0c05aeca593a728964a775f4b3cee4d5" id="r_a0c05aeca593a728964a775f4b3cee4d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c05aeca593a728964a775f4b3cee4d5">ATP_TREL4M</a>&#160;&#160;&#160;0x3		/* packet control info. */</td></tr>
+<tr class="memitem:a422f30df819ca58254107494c666ab26" id="r_a422f30df819ca58254107494c666ab26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a422f30df819ca58254107494c666ab26">ATP_MAXDATA</a>&#160;&#160;&#160;(578+4)</td></tr>
+<tr class="memitem:a5eb56b12a49869e3325d2220e9dbb972" id="r_a5eb56b12a49869e3325d2220e9dbb972"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb56b12a49869e3325d2220e9dbb972">ATP_BUFSIZ</a>&#160;&#160;&#160;587</td></tr>
+<tr class="memitem:a72f3b68d58ef5e814e11b6de246211ed" id="r_a72f3b68d58ef5e814e11b6de246211ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f3b68d58ef5e814e11b6de246211ed">ATP_HDRSIZE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a0891b3d5181ffcc029cd779a51c82c4f" id="r_a0891b3d5181ffcc029cd779a51c82c4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0891b3d5181ffcc029cd779a51c82c4f">ATP_TRELMASK</a>&#160;&#160;&#160;0x07</td></tr>
+<tr class="memitem:a0439e47f6696cc7d08f79b0c96a5b035" id="r_a0439e47f6696cc7d08f79b0c96a5b035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0439e47f6696cc7d08f79b0c96a5b035">ATP_RELTIME</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memitem:a79e78a9f2dfc166c6127154494964494" id="r_a79e78a9f2dfc166c6127154494964494"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e78a9f2dfc166c6127154494964494">ATP_TREL30</a>&#160;&#160;&#160;0x0</td></tr>
+<tr class="memitem:a5e159d35176af5d983a87d732946a625" id="r_a5e159d35176af5d983a87d732946a625"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e159d35176af5d983a87d732946a625">ATP_TREL1M</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="memitem:a5863b66a29e4fc815bf9b34780938051" id="r_a5863b66a29e4fc815bf9b34780938051"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5863b66a29e4fc815bf9b34780938051">ATP_TREL2M</a>&#160;&#160;&#160;0x2</td></tr>
+<tr class="memitem:a0c05aeca593a728964a775f4b3cee4d5" id="r_a0c05aeca593a728964a775f4b3cee4d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c05aeca593a728964a775f4b3cee4d5">ATP_TREL4M</a>&#160;&#160;&#160;0x3</td></tr>
 <tr class="memitem:a8a4a0067d344c2dbbd7efc4cbffd2340" id="r_a8a4a0067d344c2dbbd7efc4cbffd2340"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4a0067d344c2dbbd7efc4cbffd2340">ATP_TREL8M</a>&#160;&#160;&#160;0x4</td></tr>
-<tr class="memitem:a78e2ab0fe7636ebff2a15aa340768497" id="r_a78e2ab0fe7636ebff2a15aa340768497"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78e2ab0fe7636ebff2a15aa340768497">ATP_TRIES_INFINITE</a>&#160;&#160;&#160;-1	/* for <a class="el" href="#a83da9bd377431cdbab09934b2b2b0cda">atp_sreq</a>, etc */</td></tr>
+<tr class="memitem:a78e2ab0fe7636ebff2a15aa340768497" id="r_a78e2ab0fe7636ebff2a15aa340768497"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78e2ab0fe7636ebff2a15aa340768497">ATP_TRIES_INFINITE</a>&#160;&#160;&#160;-1</td></tr>
 <tr class="memitem:a1df14f9d1c9eca33af637e30232ca507" id="r_a1df14f9d1c9eca33af637e30232ca507"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1df14f9d1c9eca33af637e30232ca507">atp_sockaddr</a>(h)</td></tr>
 <tr class="memitem:a2dc2bad12816752b0c983a8998d680f5" id="r_a2dc2bad12816752b0c983a8998d680f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc2bad12816752b0c983a8998d680f5">atp_fileno</a>(x)</td></tr>
 <tr class="memitem:ae2df2b06e1e4bc4dbbdcc951b092edfd" id="r_ae2df2b06e1e4bc4dbbdcc951b092edfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2df2b06e1e4bc4dbbdcc951b092edfd">atp_sreqdata</a>&#160;&#160;&#160;atp_data.sreqdata.atpd_data</td></tr>
@@ -146,13 +149,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a41a5777675025b04922753ac0ab95428" id="r_a41a5777675025b04922753ac0ab95428"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41a5777675025b04922753ac0ab95428">atp_rreqdlen</a>&#160;&#160;&#160;atp_data.rreqdata.atpd_dlen</td></tr>
 <tr class="memitem:a5534d4fcf3ad2402f7927f6c6a1c6879" id="r_a5534d4fcf3ad2402f7927f6c6a1c6879"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5534d4fcf3ad2402f7927f6c6a1c6879">atp_sresiov</a>&#160;&#160;&#160;atp_data.sresdata.atpd_iov</td></tr>
 <tr class="memitem:ab6ddb1af03a1c7a9c785b435ad78af58" id="r_ab6ddb1af03a1c7a9c785b435ad78af58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ddb1af03a1c7a9c785b435ad78af58">atp_sresiovcnt</a>&#160;&#160;&#160;atp_data.sresdata.atpd_iovcnt</td></tr>
-<tr class="memitem:acf3ecf43b2586dc2cc0ac24687554c70" id="r_acf3ecf43b2586dc2cc0ac24687554c70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf3ecf43b2586dc2cc0ac24687554c70">ATP_STS</a>&#160;&#160;&#160;(1&lt;&lt;3)		/* Send Transaction Status */</td></tr>
-<tr class="memitem:a2693123aacf2c249181dbc3f5cf8fce6" id="r_a2693123aacf2c249181dbc3f5cf8fce6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2693123aacf2c249181dbc3f5cf8fce6">ATP_EOM</a>&#160;&#160;&#160;(1&lt;&lt;4)		/* End Of Message */</td></tr>
-<tr class="memitem:a20b81d6f97d7a9eefcbaa4b87868bb4b" id="r_a20b81d6f97d7a9eefcbaa4b87868bb4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b81d6f97d7a9eefcbaa4b87868bb4b">ATP_XO</a>&#160;&#160;&#160;(1&lt;&lt;5)		/* eXactly Once mode */</td></tr>
-<tr class="memitem:a8d6b6de6e005943d790055efe08930ce" id="r_a8d6b6de6e005943d790055efe08930ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d6b6de6e005943d790055efe08930ce">ATP_FUNCMASK</a>&#160;&#160;&#160;(3&lt;&lt;6)		/* <a class="el" href="hash_8c.html#adb5a31dfda5e9760c1d7a9a25cd7b9ac">mask</a> all but <a class="el" href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function</a> */</td></tr>
-<tr class="memitem:a3154561e86158a327fa53d5026fb0d67" id="r_a3154561e86158a327fa53d5026fb0d67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3154561e86158a327fa53d5026fb0d67">ATP_TREQ</a>&#160;&#160;&#160;(1&lt;&lt;6)		/* Trans. REQuest */</td></tr>
-<tr class="memitem:aa3cfe83c7a52e4d0574a8693d05ce2c8" id="r_aa3cfe83c7a52e4d0574a8693d05ce2c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3cfe83c7a52e4d0574a8693d05ce2c8">ATP_TRESP</a>&#160;&#160;&#160;(2&lt;&lt;6)		/* Trans. RESPonse */</td></tr>
-<tr class="memitem:a36ed4e1d8b231b682b9d063ba6a90161" id="r_a36ed4e1d8b231b682b9d063ba6a90161"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ed4e1d8b231b682b9d063ba6a90161">ATP_TREL</a>&#160;&#160;&#160;(3&lt;&lt;6)		/* Trans. RELease */</td></tr>
+<tr class="memitem:acf3ecf43b2586dc2cc0ac24687554c70" id="r_acf3ecf43b2586dc2cc0ac24687554c70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf3ecf43b2586dc2cc0ac24687554c70">ATP_STS</a>&#160;&#160;&#160;(1&lt;&lt;3)</td></tr>
+<tr class="memitem:a2693123aacf2c249181dbc3f5cf8fce6" id="r_a2693123aacf2c249181dbc3f5cf8fce6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2693123aacf2c249181dbc3f5cf8fce6">ATP_EOM</a>&#160;&#160;&#160;(1&lt;&lt;4)</td></tr>
+<tr class="memitem:a20b81d6f97d7a9eefcbaa4b87868bb4b" id="r_a20b81d6f97d7a9eefcbaa4b87868bb4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b81d6f97d7a9eefcbaa4b87868bb4b">ATP_XO</a>&#160;&#160;&#160;(1&lt;&lt;5)</td></tr>
+<tr class="memitem:a8d6b6de6e005943d790055efe08930ce" id="r_a8d6b6de6e005943d790055efe08930ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d6b6de6e005943d790055efe08930ce">ATP_FUNCMASK</a>&#160;&#160;&#160;(3&lt;&lt;6)</td></tr>
+<tr class="memitem:a3154561e86158a327fa53d5026fb0d67" id="r_a3154561e86158a327fa53d5026fb0d67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3154561e86158a327fa53d5026fb0d67">ATP_TREQ</a>&#160;&#160;&#160;(1&lt;&lt;6)</td></tr>
+<tr class="memitem:aa3cfe83c7a52e4d0574a8693d05ce2c8" id="r_aa3cfe83c7a52e4d0574a8693d05ce2c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3cfe83c7a52e4d0574a8693d05ce2c8">ATP_TRESP</a>&#160;&#160;&#160;(2&lt;&lt;6)</td></tr>
+<tr class="memitem:a36ed4e1d8b231b682b9d063ba6a90161" id="r_a36ed4e1d8b231b682b9d063ba6a90161"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ed4e1d8b231b682b9d063ba6a90161">ATP_TREL</a>&#160;&#160;&#160;(3&lt;&lt;6)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -163,12 +166,46 @@ Functions</h2></td></tr>
 <tr class="memitem:a0af6df1da3482b36c093f9d9381d8289" id="r_a0af6df1da3482b36c093f9d9381d8289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0af6df1da3482b36c093f9d9381d8289">atp_open</a> (uint8_t, const struct <a class="el" href="structat__addr.html">at_addr</a> *)</td></tr>
 <tr class="memitem:a2e55d87c94a070eb02ba4e792b5c279e" id="r_a2e55d87c94a070eb02ba4e792b5c279e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e55d87c94a070eb02ba4e792b5c279e">atp_close</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>)</td></tr>
 <tr class="memitem:a83da9bd377431cdbab09934b2b2b0cda" id="r_a83da9bd377431cdbab09934b2b2b0cda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83da9bd377431cdbab09934b2b2b0cda">atp_sreq</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, struct <a class="el" href="structatp__block.html">atp_block</a> *, int, uint8_t)</td></tr>
+<tr class="memdesc:a83da9bd377431cdbab09934b2b2b0cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> transaction service request.  <br /></td></tr>
 <tr class="memitem:ab590e8694f9560ee3897a4321f4a9ac5" id="r_ab590e8694f9560ee3897a4321f4a9ac5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab590e8694f9560ee3897a4321f4a9ac5">atp_rresp</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, struct <a class="el" href="structatp__block.html">atp_block</a> *)</td></tr>
+<tr class="memdesc:ab590e8694f9560ee3897a4321f4a9ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> response packets.  <br /></td></tr>
 <tr class="memitem:ac9752f91c81db61efc0be08ef5bd60c8" id="r_ac9752f91c81db61efc0be08ef5bd60c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9752f91c81db61efc0be08ef5bd60c8">atp_rsel</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *, int)</td></tr>
+<tr class="memdesc:ac9752f91c81db61efc0be08ef5bd60c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packets.  <br /></td></tr>
 <tr class="memitem:a80194c37659cb75ea8348dd7a5d5d966" id="r_a80194c37659cb75ea8348dd7a5d5d966"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80194c37659cb75ea8348dd7a5d5d966">atp_rreq</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, struct <a class="el" href="structatp__block.html">atp_block</a> *)</td></tr>
+<tr class="memdesc:a80194c37659cb75ea8348dd7a5d5d966"><td class="mdescLeft">&#160;</td><td class="mdescRight">wait for a transaction service request  <br /></td></tr>
 <tr class="memitem:aab4f85225dd413dc0344a35ba616684b" id="r_aab4f85225dd413dc0344a35ba616684b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab4f85225dd413dc0344a35ba616684b">atp_sresp</a> (<a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>, struct <a class="el" href="structatp__block.html">atp_block</a> *)</td></tr>
+<tr class="memdesc:aab4f85225dd413dc0344a35ba616684b"><td class="mdescLeft">&#160;</td><td class="mdescRight">send a transaction response  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packet format. </p>
+<div class="fragment"><div class="line">|----------------|</div>
+<div class="line">| link <a class="code hl_function" href="speedtest_8c.html#aaab5e1dab0b78bc1a11254befed7da11">header</a>    |</div>
+<div class="line">|      ...       |</div>
+<div class="line">|----------------|</div>
+<div class="line">| DDP <a class="code hl_function" href="speedtest_8c.html#aaab5e1dab0b78bc1a11254befed7da11">header</a>     |</div>
+<div class="line">|      ...       |</div>
+<div class="line">|   <a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> = 3     |</div>
+<div class="line">|----------------|</div>
+<div class="line">| control info   | --&gt; bits 7,6: <a class="code hl_define" href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function</a> code</div>
+<div class="line">|----------------|            5: XO bit</div>
+<div class="line">| bitmap/<a class="code hl_variable" href="pap_8c.html#a0a97914b75ed3ab7d0e13d8b200d758a">seq</a> no. |            4: EOM bit</div>
+<div class="line">|----------------|            3: STS bit</div>
+<div class="line">| TID (MSB)      |        2,1,0: release timer code (ignored under <a class="code hl_function" href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a> I)</div>
+<div class="line">|----------------|</div>
+<div class="line">| TID (LSB)      |</div>
+<div class="line">|----------------|</div>
+<div class="line">| user bytes (4) |</div>
+<div class="line">|----------------|</div>
+<div class="line">| <a class="code hl_define" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> (0-578)   |</div>
+<div class="line">|      ...       |</div>
+<div class="line">|----------------|</div>
+<div class="ttc" id="aconfig_8c_html_a0c58dd6f59ab44efff4c38179d8923e9"><div class="ttname"><a href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a></div><div class="ttdeci">int phase(struct interface *iface, char **av)</div><div class="ttdef"><b>Definition</b> config.c:538</div></div>
+<div class="ttc" id="ahash_8c_html_a263c2b8aef941d3a3c5cf9a9c2764594"><div class="ttname"><a href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function</a></div><div class="ttdeci">#define function</div><div class="ttdef"><b>Definition</b> hash.c:47</div></div>
+<div class="ttc" id="ahash_8c_html_a43a278d13284fb3412e9eee1db1d967e"><div class="ttname"><a href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a></div><div class="ttdeci">#define data</div><div class="ttdef"><b>Definition</b> hash.c:37</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:96</div></div>
+<div class="ttc" id="apap_8c_html_a0a97914b75ed3ab7d0e13d8b200d758a"><div class="ttname"><a href="pap_8c.html#a0a97914b75ed3ab7d0e13d8b200d758a">seq</a></div><div class="ttdeci">static uint16_t seq</div><div class="ttdef"><b>Definition</b> pap.c:505</div></div>
+<div class="ttc" id="aspeedtest_8c_html_aaab5e1dab0b78bc1a11254befed7da11"><div class="ttname"><a href="speedtest_8c.html#aaab5e1dab0b78bc1a11254befed7da11">header</a></div><div class="ttdeci">static void header(void)</div><div class="ttdef"><b>Definition</b> speedtest.c:570</div></div>
+</div><!-- fragment --> </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a5eb56b12a49869e3325d2220e9dbb972" name="a5eb56b12a49869e3325d2220e9dbb972"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eb56b12a49869e3325d2220e9dbb972">&#9670;&#160;</a></span>ATP_BUFSIZ</h2>
 
@@ -176,10 +213,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_BUFSIZ&#160;&#160;&#160;587		/* maximum packet size */</td>
+          <td class="memname">#define ATP_BUFSIZ&#160;&#160;&#160;587</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>maximum packet size </p>
 
 </div>
 </div>
@@ -190,10 +228,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_EOM&#160;&#160;&#160;(1&lt;&lt;4)		/* End Of Message */</td>
+          <td class="memname">#define ATP_EOM&#160;&#160;&#160;(1&lt;&lt;4)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>End Of Message </p>
 
 </div>
 </div>
@@ -222,10 +261,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_FUNCMASK&#160;&#160;&#160;(3&lt;&lt;6)		/* <a class="el" href="hash_8c.html#adb5a31dfda5e9760c1d7a9a25cd7b9ac">mask</a> all but <a class="el" href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function</a> */</td>
+          <td class="memname">#define ATP_FUNCMASK&#160;&#160;&#160;(3&lt;&lt;6)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mask all but function </p>
 
 </div>
 </div>
@@ -236,10 +276,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_HDRSIZE&#160;&#160;&#160;5		/* includes DDP <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> field */</td>
+          <td class="memname">#define ATP_HDRSIZE&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>includes DDP type field </p>
 
 </div>
 </div>
@@ -250,10 +291,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_MAXDATA&#160;&#160;&#160;(578+4)		/* maximum <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> <a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a> size */</td>
+          <td class="memname">#define ATP_MAXDATA&#160;&#160;&#160;(578+4)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>maximum <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> data size </p>
 
 </div>
 </div>
@@ -264,10 +306,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_RELTIME&#160;&#160;&#160;30		/* <a class="el" href="netatalk_8c.html#ab1a154f7530a81e9dd1d63fc6b98a5c7">base</a> release timer (in secs) */</td>
+          <td class="memname">#define ATP_RELTIME&#160;&#160;&#160;30</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>base release timer (in secs) </p>
 
 </div>
 </div>
@@ -436,10 +479,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_STS&#160;&#160;&#160;(1&lt;&lt;3)		/* Send Transaction Status */</td>
+          <td class="memname">#define ATP_STS&#160;&#160;&#160;(1&lt;&lt;3)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Send Transaction Status </p>
 
 </div>
 </div>
@@ -450,10 +494,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREL&#160;&#160;&#160;(3&lt;&lt;6)		/* Trans. RELease */</td>
+          <td class="memname">#define ATP_TREL&#160;&#160;&#160;(3&lt;&lt;6)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Trans. RELease </p>
 
 </div>
 </div>
@@ -464,10 +509,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREL1M&#160;&#160;&#160;0x1		/* these are passed in <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a> of */</td>
+          <td class="memname">#define ATP_TREL1M&#160;&#160;&#160;0x1</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>these are passed in flags of </p>
 
 </div>
 </div>
@@ -478,10 +524,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREL2M&#160;&#160;&#160;0x2		/* <a class="el" href="#a83da9bd377431cdbab09934b2b2b0cda">atp_sreq</a> call, and set in the */</td>
+          <td class="memname">#define ATP_TREL2M&#160;&#160;&#160;0x2</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>atp_sreq call, and set in the </p>
 
 </div>
 </div>
@@ -492,10 +539,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREL30&#160;&#160;&#160;0x0		/* release <a class="el" href="at__control_8c.html#a48b0549e79bd9c322fd060c093d88ced">time</a> codes */</td>
+          <td class="memname">#define ATP_TREL30&#160;&#160;&#160;0x0</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>release time codes </p>
 
 </div>
 </div>
@@ -506,10 +554,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREL4M&#160;&#160;&#160;0x3		/* packet control info. */</td>
+          <td class="memname">#define ATP_TREL4M&#160;&#160;&#160;0x3</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>packet control info. </p>
 
 </div>
 </div>
@@ -534,10 +583,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TRELMASK&#160;&#160;&#160;0x07		/* <a class="el" href="hash_8c.html#adb5a31dfda5e9760c1d7a9a25cd7b9ac">mask</a> all but TREL */</td>
+          <td class="memname">#define ATP_TRELMASK&#160;&#160;&#160;0x07</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mask all but TREL </p>
 
 </div>
 </div>
@@ -548,10 +598,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TREQ&#160;&#160;&#160;(1&lt;&lt;6)		/* Trans. REQuest */</td>
+          <td class="memname">#define ATP_TREQ&#160;&#160;&#160;(1&lt;&lt;6)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Trans. REQuest </p>
 
 </div>
 </div>
@@ -562,10 +613,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TRESP&#160;&#160;&#160;(2&lt;&lt;6)		/* Trans. RESPonse */</td>
+          <td class="memname">#define ATP_TRESP&#160;&#160;&#160;(2&lt;&lt;6)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Trans. RESPonse </p>
 
 </div>
 </div>
@@ -576,10 +628,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_TRIES_INFINITE&#160;&#160;&#160;-1	/* for <a class="el" href="#a83da9bd377431cdbab09934b2b2b0cda">atp_sreq</a>, etc */</td>
+          <td class="memname">#define ATP_TRIES_INFINITE&#160;&#160;&#160;-1</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>for atp_sreq, etc </p>
 
 </div>
 </div>
@@ -590,10 +643,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ATP_XO&#160;&#160;&#160;(1&lt;&lt;5)		/* eXactly Once mode */</td>
+          <td class="memname">#define ATP_XO&#160;&#160;&#160;(1&lt;&lt;5)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>eXactly Once mode </p>
 
 </div>
 </div>
@@ -694,6 +748,15 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wait for a transaction service request </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">atpb</td><td>parameter block </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ab590e8694f9560ee3897a4321f4a9ac5" name="ab590e8694f9560ee3897a4321f4a9ac5"></a>
@@ -722,6 +785,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Receives <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> response packets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">atpb</td><td>parameter block </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -756,6 +828,16 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Receive <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">faddr</td><td>address to receive from </td></tr>
+    <tr><td class="paramname">func</td><td>which <a class="el" href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function(s)</a> to wait for; 0 means request or response </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -796,6 +878,17 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Send <a class="el" href="#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> transaction service request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">atpb</td><td>parameter block </td></tr>
+    <tr><td class="paramname">respcount</td><td>buffers available for response </td></tr>
+    <tr><td class="paramname">flags</td><td>ATP_XO, ATP_TREL </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aab4f85225dd413dc0344a35ba616684b" name="aab4f85225dd413dc0344a35ba616684b"></a>
@@ -824,6 +917,15 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>send a transaction response </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">atpb</td><td>parameter block </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

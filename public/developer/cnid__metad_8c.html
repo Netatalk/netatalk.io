@@ -102,6 +102,9 @@ $(function(){initNavTree('cnid__metad_8c.html','',''); });
   <div class="headertitle"><div class="title">cnid_metad.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>cnid_dbd metadaemon to start up cnid_dbd upon request from afpd.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;signal.h&gt;</code><br />
@@ -173,7 +176,22 @@ Variables</h2></td></tr>
 <tr class="memitem:aa26fee877fbedd44f959a6fccbc59fef" id="r_aa26fee877fbedd44f959a6fccbc59fef"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa26fee877fbedd44f959a6fccbc59fef">maxvol</a></td></tr>
 <tr class="memitem:a9507a8b2012c8c4bf51a5b2027a8e369" id="r_a9507a8b2012c8c4bf51a5b2027a8e369"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structserver.html">server</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9507a8b2012c8c4bf51a5b2027a8e369">srv</a> [<a class="el" href="#a248872c30e8dabb3d4d9762ede08e1c1">MAXVOLS</a>]</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>cnid_dbd metadaemon to start up cnid_dbd upon request from afpd. </p>
+<p>Here is how it works: </p><div class="fragment"><div class="line">                    via TCP socket</div>
+<div class="line">1.       afpd          -------&gt;        cnid_metad</div>
+<div class="line"> </div>
+<div class="line">                via UNIX domain socket</div>
+<div class="line">2.   cnid_metad        -------&gt;         cnid_dbd</div>
+<div class="line"> </div>
+<div class="line">                 passes afpd client fd</div>
+<div class="line">3.   cnid_metad        -------&gt;         cnid_dbd</div>
+<div class="line"> </div>
+<div class="line">Result:</div>
+<div class="line">                    via TCP socket</div>
+<div class="line">4.       afpd          -------&gt;         cnid_dbd</div>
+</div><!-- fragment --><p>cnid_metad and cnid_dbd have been converted to non-blocking IO in 2010. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a54b2c72f7f2df38d8e0d1df91dbf3c3a" name="a54b2c72f7f2df38d8e0d1df91dbf3c3a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54b2c72f7f2df38d8e0d1df91dbf3c3a">&#9670;&#160;</a></span>DBHOME</h2>
 
@@ -241,6 +259,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Max times respawned in.. </p>
 
 </div>
 </div>
@@ -305,6 +324,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this much seconds apfd client tries to to reconnect every 5 secondes, catch it </p>
 
 </div>
 </div>
@@ -359,8 +379,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(!<a class="code hl_define" href="#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a>(<a class="code hl_variable" href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a>) &amp;&amp; !<a class="code hl_define" href="#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a>(<a class="code hl_variable" href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a>))</div>
-<div class="ttc" id="acnid__metad_8c_html_a2052fe8e0f1198edea1a2f36dda706e6"><div class="ttname"><a href="#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a></div><div class="ttdeci">#define WIFEXITED(stat_val)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:57</div></div>
-<div class="ttc" id="acnid__metad_8c_html_aa2687811d048892a4fa1f14f74843767"><div class="ttname"><a href="#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a></div><div class="ttdeci">#define WIFSTOPPED(status)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:60</div></div>
+<div class="ttc" id="acnid__metad_8c_html_a2052fe8e0f1198edea1a2f36dda706e6"><div class="ttname"><a href="#a2052fe8e0f1198edea1a2f36dda706e6">WIFEXITED</a></div><div class="ttdeci">#define WIFEXITED(stat_val)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:60</div></div>
+<div class="ttc" id="acnid__metad_8c_html_aa2687811d048892a4fa1f14f74843767"><div class="ttname"><a href="#aa2687811d048892a4fa1f14f74843767">WIFSTOPPED</a></div><div class="ttdeci">#define WIFSTOPPED(status)</div><div class="ttdef"><b>Definition</b> cnid_metad.c:63</div></div>
 <div class="ttc" id="apap_8c_html_a3cbe9fdcd03667b9bc176454129f4d52"><div class="ttname"><a href="pap_8c.html#a3cbe9fdcd03667b9bc176454129f4d52">status</a></div><div class="ttdeci">static char * status</div><div class="ttdef"><b>Definition</b> pap.c:93</div></div>
 </div><!-- fragment -->
 </div>

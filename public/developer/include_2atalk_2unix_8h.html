@@ -117,6 +117,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aed6a2d468ff66682419b406391ffbc0c" id="r_aed6a2d468ff66682419b406391ffbc0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed6a2d468ff66682419b406391ffbc0c">netatalk_unlink</a> (const char *name)</td></tr>
+<tr class="memdesc:aed6a2d468ff66682419b406391ffbc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">system unlink with afp error code.  <br /></td></tr>
 <tr class="memitem:aa97235d74ba90747d552e7c506e514d1" id="r_aa97235d74ba90747d552e7c506e514d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa97235d74ba90747d552e7c506e514d1">netatalk_unlinkat</a> (int dirfd, const char *name)</td></tr>
 <tr class="memitem:addf31bb01bee7d11aa8db55116376322" id="r_addf31bb01bee7d11aa8db55116376322"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addf31bb01bee7d11aa8db55116376322">statat</a> (int dirfd, const char *<a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
 <tr class="memdesc:addf31bb01bee7d11aa8db55116376322"><td class="mdescLeft">&#160;</td><td class="mdescRight">stat/fsstatat multiplexer  <br /></td></tr>
@@ -192,6 +193,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>seteuid(0) and back, if either fails and panic != 0 we PANIC </p>
 
 </div>
 </div>
@@ -238,7 +240,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy an EA from one file to another. </p>
-<p>Supports *at semantics, pass dirfd=-1 to ignore this </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics, pass dirfd=-1 to ignore this </dd></dl>
 
 </div>
 </div>
@@ -254,7 +256,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int copy_file </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sfd</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dirfd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -278,6 +280,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Supports *at semantics, pass dirfd=-1 to ignore this </p>
 
 </div>
 </div>
@@ -307,6 +310,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Copy all file data from one file fd to another </p>
 
 </div>
 </div>
@@ -397,7 +401,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>System rmdir with afp error code, but ENOENT is not an error. </p>
-<p>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </dd></dl>
 
 </div>
 </div>
@@ -429,7 +433,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>system rmdir with afp error code. </p>
-<p>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </dd></dl>
 
 </div>
 </div>
@@ -455,6 +459,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>system unlink with afp error code. </p>
+<dl class="section note"><dt>Note</dt><dd>ENOENT is not an error. </dd></dl>
 
 </div>
 </div>
@@ -484,6 +491,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>at wrapper for netatalk_unlink </p>
 
 </div>
 </div>

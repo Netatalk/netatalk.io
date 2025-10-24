@@ -157,6 +157,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab1ce67da7d029e0a9c153042e6a92236" id="r_ab1ce67da7d029e0a9c153042e6a92236"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_s_p.html">ASP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ce67da7d029e0a9c153042e6a92236">asp_init</a> (<a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a>)</td></tr>
 <tr class="memitem:aadc83713b1668a480ba21f0c0a9cb2bd" id="r_aadc83713b1668a480ba21f0c0a9cb2bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadc83713b1668a480ba21f0c0a9cb2bd">asp_setstatus</a> (<a class="el" href="struct_a_s_p.html">ASP</a>, char *, const int)</td></tr>
 <tr class="memitem:a8fecc0edc0aa474a97070c156c3ec1df" id="r_a8fecc0edc0aa474a97070c156c3ec1df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_s_p.html">ASP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fecc0edc0aa474a97070c156c3ec1df">asp_getsession</a> (<a class="el" href="struct_a_s_p.html">ASP</a>, <a class="el" href="structserver__child__t.html">server_child_t</a> *, const int)</td></tr>
+<tr class="memdesc:a8fecc0edc0aa474a97070c156c3ec1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">This call handles open, tickle, and getstatus requests.  <br /></td></tr>
 <tr class="memitem:a7025d41c83f04eab6cb5f2c631477b31" id="r_a7025d41c83f04eab6cb5f2c631477b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7025d41c83f04eab6cb5f2c631477b31">asp_close</a> (<a class="el" href="struct_a_s_p.html">ASP</a>)</td></tr>
 <tr class="memitem:a52c875b66810828fcbdbd83ded9405e1" id="r_a52c875b66810828fcbdbd83ded9405e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52c875b66810828fcbdbd83ded9405e1">asp_shutdown</a> (<a class="el" href="struct_a_s_p.html">ASP</a>)</td></tr>
 <tr class="memitem:a3277490d33b3d8c5ebb3d88a9452c9e3" id="r_a3277490d33b3d8c5ebb3d88a9452c9e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3277490d33b3d8c5ebb3d88a9452c9e3">asp_attention</a> (<a class="el" href="struct_a_s_p.html">ASP</a>, <a class="el" href="include_2atalk_2afp_8h.html#af67592f6dbcab79aa9cbac528d29f570">AFPUserBytes</a>)</td></tr>
@@ -767,6 +768,10 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This call handles open, tickle, and getstatus requests. </p>
+<dl class="section note"><dt>Note</dt><dd>On a successful open, it forks a child process. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="struct_a_s_p.html">ASP</a> to the child and parent and NULL if there is an error. </dd></dl>
+
 </div>
 </div>
 <a id="ab1ce67da7d029e0a9c153042e6a92236" name="ab1ce67da7d029e0a9c153042e6a92236"></a>
@@ -816,6 +821,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>kill children </p>
 
 </div>
 </div>
@@ -934,6 +940,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>send off a tickle </p>
 
 </div>
 </div>

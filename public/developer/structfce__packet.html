@@ -120,7 +120,67 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a65ad6478a2c5348672c817318d2a197f" id="r_a65ad6478a2c5348672c817318d2a197f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ad6478a2c5348672c817318d2a197f">fcep_pathlen2</a></td></tr>
 <tr class="memitem:af60f99e0a381d3e87652249bce9c918f" id="r_af60f99e0a381d3e87652249bce9c918f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af60f99e0a381d3e87652249bce9c918f">fcep_path2</a> [MAXPATHLEN]</td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Network payload of an FCE packet, version 1</p>
+<div class="fragment"><div class="line">     1         2         3         4         5         6         7          8</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">|                                   FCE magic                                     |</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">| <a class="code hl_variable" href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a> |</div>
+<div class="line">+---------+</div>
+<div class="line">|  <span class="keyword">event</span>  |</div>
+<div class="line">+---------+-----------------------------+</div>
+<div class="line">|               <span class="keyword">event</span> <a class="code hl_variable" href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a>                |</div>
+<div class="line">+-------------------+-------------------+ . . . .</div>
+<div class="line">|     pathlen       | <a class="code hl_struct" href="structpath.html">path</a></div>
+<div class="line">+-------------------+------ . . . . . . . . . . .</div>
+<div class="ttc" id="aa2boot_8c_html_a56abfaab87c46691c1ef3ad0df23e864"><div class="ttname"><a href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a></div><div class="ttdeci">static char * version</div><div class="ttdef"><b>Definition</b> a2boot.c:60</div></div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Definition</b> include/atalk/directory.h:81</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a9bb81603329def43dbb55e1ae69996d9"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a></div><div class="ttdeci">static uint16_t ID</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:43</div></div>
+</div><!-- fragment --><p>Network payload of an FCE packet, version 2</p>
+<div class="fragment"><div class="line">     1         2         3         4         5         6         7          8</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">|                                   FCE magic                                     |</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">| <a class="code hl_variable" href="a2boot_8c.html#a56abfaab87c46691c1ef3ad0df23e864">version</a> |</div>
+<div class="line">+---------+</div>
+<div class="line">| options |</div>
+<div class="line">+---------+</div>
+<div class="line">|  <span class="keyword">event</span>  |</div>
+<div class="line">+---------+</div>
+<div class="line">| padding |</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">|                                    reserved                                     |</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">|               <span class="keyword">event</span> <a class="code hl_variable" href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a>                |</div>
+<div class="line">+---------+---------+---------+---------+</div>
+<div class="line">... optional:</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">|                                      pid                                        |</div>
+<div class="line">+---------+---------+---------+---------+---------+---------+----------+----------+</div>
+<div class="line">...</div>
+<div class="line">... optional:</div>
+<div class="line">+-------------------+----------  . . . .</div>
+<div class="line">|  username length  | username</div>
+<div class="line">+-------------------+----------  . . . .</div>
+<div class="line">...</div>
+<div class="line">+-------------------+------  . . . . . .</div>
+<div class="line">|     pathlen       | <a class="code hl_struct" href="structpath.html">path</a></div>
+<div class="line">+-------------------+------  . . . . . .</div>
+<div class="line">... optional:</div>
+<div class="line">+-------------------+------------- . . .</div>
+<div class="line">|     pathlen       | source <a class="code hl_struct" href="structpath.html">path</a></div>
+<div class="line">+-------------------+------------- . . .</div>
+<div class="line"> </div>
+<div class="line">version      = 2</div>
+<div class="line">options      = bitfield:</div>
+<div class="line">                   0: pid present</div>
+<div class="line">                   1: username present</div>
+<div class="line">                   2: source <a class="code hl_struct" href="structpath.html">path</a> present</div>
+<div class="line">pid          = optional pid</div>
+<div class="line">username     = optional username</div>
+<div class="line">source <a class="code hl_struct" href="structpath.html">path</a>  = optional source <a class="code hl_struct" href="structpath.html">path</a></div>
+</div><!-- fragment --> </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a2fa2a86c4985409e45a2c01c87e547d6" name="a2fa2a86c4985409e45a2c01c87e547d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fa2a86c4985409e45a2c01c87e547d6">&#9670;&#160;</a></span>fcep_event</h2>
 

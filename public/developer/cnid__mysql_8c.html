@@ -145,7 +145,6 @@ Functions</h2></td></tr>
 <tr class="memitem:adf51339f99583ed7b1946c91220d63f7" id="r_adf51339f99583ed7b1946c91220d63f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf51339f99583ed7b1946c91220d63f7">cnid_mysql_get</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len)</td></tr>
 <tr class="memitem:a05f6f449a5bb6aac9472fbec7b3b36a6" id="r_a05f6f449a5bb6aac9472fbec7b3b36a6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f6f449a5bb6aac9472fbec7b3b36a6">cnid_mysql_resolve</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *id, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t len)</td></tr>
 <tr class="memitem:af738cc6ca5deb9d2a170719ddcdbd857" id="r_af738cc6ca5deb9d2a170719ddcdbd857"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af738cc6ca5deb9d2a170719ddcdbd857">cnid_mysql_getstamp</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, const size_t len)</td></tr>
-<tr class="memdesc:af738cc6ca5deb9d2a170719ddcdbd857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caller passes buffer where we will store the db stamp.  <br /></td></tr>
 <tr class="memitem:a222ea36b5551d37bd36ca258e2aac276" id="r_a222ea36b5551d37bd36ca258e2aac276"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a222ea36b5551d37bd36ca258e2aac276">cnid_mysql_find</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *name, size_t namelen, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t buflen)</td></tr>
 <tr class="memitem:a1688701e93f8285807bd249ef87cdd60" id="r_a1688701e93f8285807bd249ef87cdd60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1688701e93f8285807bd249ef87cdd60">cnid_mysql_rebuild_add</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const struct stat *st, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *name, size_t len, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> hint)</td></tr>
 <tr class="memitem:a8f470df0b61c3841d0f8aa134386c48f" id="r_a8f470df0b61c3841d0f8aa134386c48f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f470df0b61c3841d0f8aa134386c48f">cnid_mysql_wipe</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb)</td></tr>
@@ -397,8 +396,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Caller passes buffer where we will store the db stamp. </p>
+<p>Caller passes buffer where we will store the db stamp </p>
 
 </div>
 </div>
@@ -732,6 +730,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Return allocated UUID string with dashes stripped </p>
 
 </div>
 </div>
@@ -886,6 +885,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>lookup result parameters </p>
 
 </div>
 </div>
@@ -1084,6 +1084,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Prepared statement parameters </p>
 
 </div>
 </div>

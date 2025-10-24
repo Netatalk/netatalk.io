@@ -126,6 +126,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a4762624ba04b6d41123bfe8d7fa873ab" id="r_a4762624ba04b6d41123bfe8d7fa873ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4762624ba04b6d41123bfe8d7fa873ab">addmulti</a> (const char *name, const unsigned char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a850ecf48606a279fac79af4803bcd2ed" id="r_a850ecf48606a279fac79af4803bcd2ed"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a850ecf48606a279fac79af4803bcd2ed">atalk_cksum</a> (unsigned char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int len)</td></tr>
 <tr class="memitem:ae46fa1e23f48bbfd5cf9ccd513589c42" id="r_ae46fa1e23f48bbfd5cf9ccd513589c42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae46fa1e23f48bbfd5cf9ccd513589c42">zone_bcast</a> (struct <a class="el" href="structziptab.html">ziptab</a> *zt)</td></tr>
+<tr class="memdesc:ae46fa1e23f48bbfd5cf9ccd513589c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in multicast for zone.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -170,6 +171,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>configure multicast for a given named interface </p>
 
 </div>
 </div>
@@ -216,6 +218,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Fill in multicast for zone. </p>
+<dl class="section note"><dt>Note</dt><dd>There is a general issue here: how can we tell the type of interface we're configuring for? E.g. Is it ethernet, tokenring, or FDDI? (Of course, FDDI and Ethernet look just alike.) </dd></dl>
 
 </div>
 </div>

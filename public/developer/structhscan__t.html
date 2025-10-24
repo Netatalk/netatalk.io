@@ -111,7 +111,13 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a9cfc98d2a0dcda09cbb3a4143823f315" id="r_a9cfc98d2a0dcda09cbb3a4143823f315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cfc98d2a0dcda09cbb3a4143823f315">hash_chain</a></td></tr>
 <tr class="memitem:a3e1bfe867f459543d4dd19a465657bf3" id="r_a3e1bfe867f459543d4dd19a465657bf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e1bfe867f459543d4dd19a465657bf3">hash_next</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Hash scanner structure, used for traversals of the data structure. Notes:</p><ol type="1">
+<li>Pointer to the hash table that is being traversed.</li>
+<li>Reference to the current chain in the table being traversed (the chain that contains the next node that shall be retrieved).</li>
+<li>Pointer to the node that will be retrieved by the subsequent call to <a class="el" href="hash_8c.html#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a>. </li>
+</ol>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a9cfc98d2a0dcda09cbb3a4143823f315" name="a9cfc98d2a0dcda09cbb3a4143823f315"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cfc98d2a0dcda09cbb3a4143823f315">&#9670;&#160;</a></span>hash_chain</h2>
 

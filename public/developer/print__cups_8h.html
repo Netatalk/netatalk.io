@@ -113,11 +113,13 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8e954f6d3b2146e82c08c536ea3df54f" id="r_a8e954f6d3b2146e82c08c536ea3df54f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e954f6d3b2146e82c08c536ea3df54f">cups_printername_ok</a> (char *)</td></tr>
+<tr class="memdesc:a8e954f6d3b2146e82c08c536ea3df54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify supplied printer name is a valid cups printer.  <br /></td></tr>
 <tr class="memitem:abe4a0f8db53a0675dd1ed56371a7111c" id="r_abe4a0f8db53a0675dd1ed56371a7111c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe4a0f8db53a0675dd1ed56371a7111c">cups_get_printer_ppd</a> (char *)</td></tr>
 <tr class="memitem:a876f252a8d6142b6aa84a7c0e9363271" id="r_a876f252a8d6142b6aa84a7c0e9363271"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876f252a8d6142b6aa84a7c0e9363271">cups_get_printer_status</a> (struct <a class="el" href="structprinter.html">printer</a> *pr)</td></tr>
 <tr class="memitem:a2a2bc1d98a8fc793115529e2113c3256" id="r_a2a2bc1d98a8fc793115529e2113c3256"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a2bc1d98a8fc793115529e2113c3256">cups_print_job</a> (char *, const char *, char *, char *, char *)</td></tr>
 <tr class="memitem:a3f64c9d42291d894bc6c56f4273364f6" id="r_a3f64c9d42291d894bc6c56f4273364f6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprinter.html">printer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f64c9d42291d894bc6c56f4273364f6">cups_autoadd_printers</a> (struct <a class="el" href="structprinter.html">printer</a> *, struct <a class="el" href="structprinter.html">printer</a> *)</td></tr>
 <tr class="memitem:a659b624c7439d909f1faf615692309ce" id="r_a659b624c7439d909f1faf615692309ce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a659b624c7439d909f1faf615692309ce">cups_check_printer</a> (struct <a class="el" href="structprinter.html">printer</a> *, struct <a class="el" href="structprinter.html">printer</a> *, int)</td></tr>
+<tr class="memdesc:a659b624c7439d909f1faf615692309ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a printer with this name already exists.  <br /></td></tr>
 <tr class="memitem:a56945a3d370789398e5b68daf0fb4ae1" id="r_a56945a3d370789398e5b68daf0fb4ae1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56945a3d370789398e5b68daf0fb4ae1">cups_get_language</a> (void)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -165,6 +167,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>check if a printer with this name already exists. </p>
+<dl class="section note"><dt>Note</dt><dd>if yes, and replace = 1 the existing printer is replaced with the new one. This allows to overwrite printer settings </dd>
+<dd>
+created by cupsautoadd. It also used by cups_mangle_printer. </dd></dl>
 
 </div>
 </div>
@@ -252,6 +259,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pass the job to cups </p>
 
 </div>
 </div>
@@ -269,6 +277,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify supplied printer name is a valid cups printer. </p>
+<dl class="section note"><dt>Note</dt><dd>O - 1 if printer name OK </dd>
+<dd>
+I - Name of printer </dd></dl>
 
 </div>
 </div>

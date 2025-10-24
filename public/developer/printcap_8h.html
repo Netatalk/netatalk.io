@@ -109,6 +109,7 @@ $(function(){initNavTree('printcap_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8cf9569849b779b12dec831a09ce9696" id="r_a8cf9569849b779b12dec831a09ce9696"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf9569849b779b12dec831a09ce9696">getprent</a> (char *, char *, int)</td></tr>
+<tr class="memdesc:a8cf9569849b779b12dec831a09ce9696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to tgetent except it returns the next entry instead of doing a lookup.  <br /></td></tr>
 <tr class="memitem:a70bc476b9299bd64b52e7aa88ebf1941" id="r_a70bc476b9299bd64b52e7aa88ebf1941"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70bc476b9299bd64b52e7aa88ebf1941">pnchktc</a> (char *)</td></tr>
 <tr class="memitem:a7b018d51487c2da26ec8d5dce34c64d3" id="r_a7b018d51487c2da26ec8d5dce34c64d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b018d51487c2da26ec8d5dce34c64d3">pgetflag</a> (char *)</td></tr>
 <tr class="memitem:ada6fa26cf081bb4e6f3677813ad7240a" id="r_ada6fa26cf081bb4e6f3677813ad7240a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6fa26cf081bb4e6f3677813ad7240a">endprent</a> (void)</td></tr>
@@ -157,6 +158,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Similar to tgetent except it returns the next entry instead of doing a lookup. </p>
+<dl class="section note"><dt>Note</dt><dd>Added a "cap" parameter, so we can use these calls for printcap and papd.conf. </dd></dl>
 
 </div>
 </div>

@@ -126,9 +126,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a6a6cdcfe07057ad84ee073e59aeee94a" id="r_a6a6cdcfe07057ad84ee073e59aeee94a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a6cdcfe07057ad84ee073e59aeee94a">applopen</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, uint8_t creator[4], int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, int mode)</td></tr>
 <tr class="memitem:a3fb4111871b8c8375491d9d81a162617" id="r_a3fb4111871b8c8375491d9d81a162617"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fb4111871b8c8375491d9d81a162617">copyapplfile</a> (int sfd, int dfd, char *mpath, u_short mplen)</td></tr>
 <tr class="memitem:afc6554c0dcafa6fe3a5e0ca1867bb432" id="r_afc6554c0dcafa6fe3a5e0ca1867bb432"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6554c0dcafa6fe3a5e0ca1867bb432">makemacpath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *mpath, int mpathlen, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *<a class="el" href="structpath.html">path</a>)</td></tr>
-<tr class="memitem:aaaedbd706e1e5ae8e808fe513cb64b31" id="r_aaaedbd706e1e5ae8e808fe513cb64b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaedbd706e1e5ae8e808fe513cb64b31">afp_addappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a4af17e166cf2b53dd2b52b0e4c7868e9" id="r_a4af17e166cf2b53dd2b52b0e4c7868e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4af17e166cf2b53dd2b52b0e4c7868e9">afp_rmvappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a38e8d8d53c0a637d2e3a461b77bc38a1" id="r_a38e8d8d53c0a637d2e3a461b77bc38a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e8d8d53c0a637d2e3a461b77bc38a1">afp_getappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memdesc:afc6554c0dcafa6fe3a5e0ca1867bb432"><td class="mdescLeft">&#160;</td><td class="mdescRight">build mac. path (backwards) by traversing the directory tree  <br /></td></tr>
+<tr class="memitem:aaaedbd706e1e5ae8e808fe513cb64b31" id="r_aaaedbd706e1e5ae8e808fe513cb64b31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaedbd706e1e5ae8e808fe513cb64b31">afp_addappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a4af17e166cf2b53dd2b52b0e4c7868e9" id="r_a4af17e166cf2b53dd2b52b0e4c7868e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4af17e166cf2b53dd2b52b0e4c7868e9">afp_rmvappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a38e8d8d53c0a637d2e3a461b77bc38a1" id="r_a38e8d8d53c0a637d2e3a461b77bc38a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e8d8d53c0a637d2e3a461b77bc38a1">afp_getappl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -318,6 +319,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>copy appls to new file, deleting any matching (old) appl entries </p>
 
 </div>
 </div>
@@ -362,6 +364,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>build mac. path (backwards) by traversing the directory tree </p>
+<p>The old way: dir and path refer to an app, path is a mac format pathname. <a class="el" href="#afc6554c0dcafa6fe3a5e0ca1867bb432" title="build mac. path (backwards) by traversing the directory tree">makemacpath()</a> builds something that looks like a cname, but uses upaths instead of mac format paths.</p>
+<p>The new way: dir and path refer to an app, path is a mac format pathname. <a class="el" href="#afc6554c0dcafa6fe3a5e0ca1867bb432" title="build mac. path (backwards) by traversing the directory tree">makemacpath()</a> builds a cname. (zero is a path separator and it's not \0 terminated).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a38e8d8d53c0a637d2e3a461b77bc38a1">afp_getappl()</a> for the backward compatiblity code. </dd></dl>
 
 </div>
 </div>

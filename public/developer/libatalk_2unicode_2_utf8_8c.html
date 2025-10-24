@@ -116,7 +116,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab24dd7cefb8edc6e76ba44baca1e65b0" id="r_ab24dd7cefb8edc6e76ba44baca1e65b0"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab24dd7cefb8edc6e76ba44baca1e65b0">utf8_pull</a> (void *, char **, size_t *, char **, size_t *)</td></tr>
+<tr class="memitem:a172c472763d1224fcf2c88ffbfb6fca2" id="r_a172c472763d1224fcf2c88ffbfb6fca2"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a172c472763d1224fcf2c88ffbfb6fca2">utf8_pull</a> (void *cd, char **inbuf, size_t *inbytesleft, char **outbuf, size_t *outbytesleft)</td></tr>
+<tr class="memdesc:a172c472763d1224fcf2c88ffbfb6fca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from UTF-8 to UTF-16.  <br /></td></tr>
 <tr class="memitem:aea4d9c43848f14bc32f97634b17caccb" id="r_aea4d9c43848f14bc32f97634b17caccb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea4d9c43848f14bc32f97634b17caccb">utf8_push</a> (void *, char **, size_t *, char **, size_t *)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -124,7 +125,14 @@ Variables</h2></td></tr>
 <tr class="memitem:a775264ebc95a08d79e269f4493f5eb87" id="r_a775264ebc95a08d79e269f4493f5eb87"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcharset__functions.html">charset_functions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775264ebc95a08d79e269f4493f5eb87">charset_utf8</a></td></tr>
 <tr class="memitem:a9395b0e560de79eae5a1fe9ff7cf5a27" id="r_a9395b0e560de79eae5a1fe9ff7cf5a27"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcharset__functions.html">charset_functions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9395b0e560de79eae5a1fe9ff7cf5a27">charset_utf8_mac</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section see"><dt>See also</dt><dd>The Unicode Standard <a class="el" href="afparg_8c.html#aa2443ae43ee2bc6f5074ffb41a3b08dc">Version</a> 6.2 – Core Specification <a href="http://www.unicode.org/versions/Unicode6.2.0/ch03.pdf">http://www.unicode.org/versions/Unicode6.2.0/ch03.pdf</a> <div class="fragment"><div class="line">Scalar Value               First    Second   Third    Fourth</div>
+<div class="line">00000000 0xxxxxxx          0xxxxxxx</div>
+<div class="line">00000yyy yyxxxxxx          110yyyyy 10xxxxxx</div>
+<div class="line">zzzzyyyy yyxxxxxx          1110zzzz 10yyyyyy 10xxxxxx</div>
+<div class="line">000uuuuu zzzzyyyy yyxxxxxx 11110uuu 10uuzzzz 10yyyyyy 10xxxxxx</div>
+</div><!-- fragment --> </dd></dl>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a75a76fa7de533497c7420862431b47e5" name="a75a76fa7de533497c7420862431b47e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75a76fa7de533497c7420862431b47e5">&#9670;&#160;</a></span>GETUCVAL</h2>
 
@@ -144,7 +152,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((<span class="keywordtype">unsigned</span> int) (( utf8_trailbyte &amp; 0x3F) &lt;&lt; shift))</div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>Given a trailing UTF-8 byte, get the contribution from it to the Unicode scalar value for a particular bit shift amount </p>
+
 </div>
 </div>
 <a id="aad633149580fcf99058c8cd4bd41cf93" name="aad633149580fcf99058c8cd4bd41cf93"></a>
@@ -166,12 +175,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((char)( 0x80 | ((uc &gt;&gt; shift) &amp; 0x3F) ) )</div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>Given a unicode scalar, get a trail UTF-8 byte for a particular bit shift amount </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ab24dd7cefb8edc6e76ba44baca1e65b0" name="ab24dd7cefb8edc6e76ba44baca1e65b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab24dd7cefb8edc6e76ba44baca1e65b0">&#9670;&#160;</a></span>utf8_pull()</h2>
+<a id="a172c472763d1224fcf2c88ffbfb6fca2" name="a172c472763d1224fcf2c88ffbfb6fca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172c472763d1224fcf2c88ffbfb6fca2">&#9670;&#160;</a></span>utf8_pull()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,6 +222,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Convert from UTF-8 to UTF-16. </p>
+<div class="fragment"><div class="line">Code Points         First   Second  Third   Fourth</div>
+<div class="line">U+0000..U+007F      00..7F</div>
+<div class="line">U+0080..U+07FF      C2..DF  80..BF</div>
+<div class="line">U+0800..U+0FFF      E0      A0..BF  80..BF</div>
+<div class="line">U+1000..U+CFFF      E1..EC  80..BF  80..BF</div>
+<div class="line">U+D000..U+D7FF      ED      80..9F  80..BF</div>
+<div class="line">U+E000..U+FFFF      EE..EF  80..BF  80..BF</div>
+<div class="line">U+10000..U+3FFFF    F0      90..BF  80..BF  80..BF</div>
+<div class="line">U+40000..U+FFFFF    F1..F3  80..BF  80..BF  80..BF</div>
+<div class="line">U+100000..U+10FFFF  F4      80..8F  80..BF  80..BF</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aea4d9c43848f14bc32f97634b17caccb" name="aea4d9c43848f14bc32f97634b17caccb"></a>
@@ -255,6 +277,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Convert from UTF-16 to UTF-8 </p>
 
 </div>
 </div>
@@ -273,15 +296,15 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <span class="stringliteral">&quot;UTF8&quot;</span>,</div>
 <div class="line">    0x08000103,</div>
-<div class="line">    <a class="code hl_function" href="#ab24dd7cefb8edc6e76ba44baca1e65b0">utf8_pull</a>,</div>
+<div class="line">    <a class="code hl_function" href="#a172c472763d1224fcf2c88ffbfb6fca2">utf8_pull</a>,</div>
 <div class="line">    <a class="code hl_function" href="#aea4d9c43848f14bc32f97634b17caccb">utf8_push</a>,</div>
 <div class="line">    <a class="code hl_define" href="unicode_8h.html#a3af995b83f82ffe9826fe125db316a15">CHARSET_VOLUME</a> | <a class="code hl_define" href="unicode_8h.html#a3d8792ce3bd093d54d7c632e196bd5bf">CHARSET_MULTIBYTE</a> | <a class="code hl_define" href="unicode_8h.html#a11935ae4791ec59bae48599f4b3abc16">CHARSET_PRECOMPOSED</a>,</div>
 <div class="line">    NULL,</div>
 <div class="line">    NULL,</div>
 <div class="line">    NULL</div>
 <div class="line">}</div>
-<div class="ttc" id="alibatalk_2unicode_2_utf8_8c_html_ab24dd7cefb8edc6e76ba44baca1e65b0"><div class="ttname"><a href="#ab24dd7cefb8edc6e76ba44baca1e65b0">utf8_pull</a></div><div class="ttdeci">static size_t utf8_pull(void *, char **, size_t *, char **, size_t *)</div><div class="ttdef"><b>Definition</b> libatalk/unicode/Utf8.c:97</div></div>
-<div class="ttc" id="alibatalk_2unicode_2_utf8_8c_html_aea4d9c43848f14bc32f97634b17caccb"><div class="ttname"><a href="#aea4d9c43848f14bc32f97634b17caccb">utf8_push</a></div><div class="ttdeci">static size_t utf8_push(void *, char **, size_t *, char **, size_t *)</div><div class="ttdef"><b>Definition</b> libatalk/unicode/Utf8.c:221</div></div>
+<div class="ttc" id="alibatalk_2unicode_2_utf8_8c_html_a172c472763d1224fcf2c88ffbfb6fca2"><div class="ttname"><a href="#a172c472763d1224fcf2c88ffbfb6fca2">utf8_pull</a></div><div class="ttdeci">static size_t utf8_pull(void *, char **, size_t *, char **, size_t *)</div><div class="ttdoc">Convert from UTF-8 to UTF-16.</div><div class="ttdef"><b>Definition</b> libatalk/unicode/Utf8.c:103</div></div>
+<div class="ttc" id="alibatalk_2unicode_2_utf8_8c_html_aea4d9c43848f14bc32f97634b17caccb"><div class="ttname"><a href="#aea4d9c43848f14bc32f97634b17caccb">utf8_push</a></div><div class="ttdeci">static size_t utf8_push(void *, char **, size_t *, char **, size_t *)</div><div class="ttdef"><b>Definition</b> libatalk/unicode/Utf8.c:227</div></div>
 <div class="ttc" id="aunicode_8h_html_a11935ae4791ec59bae48599f4b3abc16"><div class="ttname"><a href="unicode_8h.html#a11935ae4791ec59bae48599f4b3abc16">CHARSET_PRECOMPOSED</a></div><div class="ttdeci">#define CHARSET_PRECOMPOSED</div><div class="ttdef"><b>Definition</b> unicode.h:30</div></div>
 <div class="ttc" id="aunicode_8h_html_a3af995b83f82ffe9826fe125db316a15"><div class="ttname"><a href="unicode_8h.html#a3af995b83f82ffe9826fe125db316a15">CHARSET_VOLUME</a></div><div class="ttdeci">#define CHARSET_VOLUME</div><div class="ttdef"><b>Definition</b> unicode.h:29</div></div>
 <div class="ttc" id="aunicode_8h_html_a3d8792ce3bd093d54d7c632e196bd5bf"><div class="ttname"><a href="unicode_8h.html#a3d8792ce3bd093d54d7c632e196bd5bf">CHARSET_MULTIBYTE</a></div><div class="ttdeci">#define CHARSET_MULTIBYTE</div><div class="ttdef"><b>Definition</b> unicode.h:32</div></div>
@@ -302,7 +325,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <span class="stringliteral">&quot;UTF8-MAC&quot;</span>,</div>
 <div class="line">    0x08000103,</div>
-<div class="line">    <a class="code hl_function" href="#ab24dd7cefb8edc6e76ba44baca1e65b0">utf8_pull</a>,</div>
+<div class="line">    <a class="code hl_function" href="#a172c472763d1224fcf2c88ffbfb6fca2">utf8_pull</a>,</div>
 <div class="line">    <a class="code hl_function" href="#aea4d9c43848f14bc32f97634b17caccb">utf8_push</a>,</div>
 <div class="line">    <a class="code hl_define" href="unicode_8h.html#a3af995b83f82ffe9826fe125db316a15">CHARSET_VOLUME</a> | <a class="code hl_define" href="unicode_8h.html#ac17a3da7698285eea98185fe52d8f7a5">CHARSET_CLIENT</a> | <a class="code hl_define" href="unicode_8h.html#a3d8792ce3bd093d54d7c632e196bd5bf">CHARSET_MULTIBYTE</a> | <a class="code hl_define" href="unicode_8h.html#a33af7b74905c3f748705b1ad021f9dc9">CHARSET_DECOMPOSED</a>,</div>
 <div class="line">    NULL,</div>

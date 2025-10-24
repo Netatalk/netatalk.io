@@ -479,6 +479,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>We generally pass this from afp_over_dsi to all afp_* funcs, so it should already be available everywhere. Unfortunately some funcs (eg acltoownermode) need acces to it but are deeply nested in the function chain with the caller already without acces to it. Changing this would require adding a reference to the caller which itself might be called in many places (eg acltoownermode is called from accessmode). The only sane way out is providing a copy of it here: </p>
 
 </div>
 </div>
@@ -559,6 +560,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>AFP replay cache:</p><ul>
+<li>fix sized array</li>
+<li>indexed just by taking DSIreqID mod REPLAYCACHE_SIZE </li>
+</ul>
 
 </div>
 </div>

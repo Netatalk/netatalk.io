@@ -131,6 +131,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab238597a251061121005dad7f2e977c7" id="r_ab238597a251061121005dad7f2e977c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab238597a251061121005dad7f2e977c7">uam_register</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *<a class="el" href="structpath.html">path</a>, const char *name,...)</td></tr>
 <tr class="memitem:aff8135e4110e7170bedfaacf90baad5d" id="r_aff8135e4110e7170bedfaacf90baad5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8135e4110e7170bedfaacf90baad5d">uam_unregister</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *name)</td></tr>
 <tr class="memitem:ab46c13a4dd468f148a499ff68168ca05" id="r_ab46c13a4dd468f148a499ff68168ca05"><td class="memItemLeft" align="right" valign="top">struct passwd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46c13a4dd468f148a499ff68168ca05">uam_getname</a> (void *private, char *name, const int len)</td></tr>
+<tr class="memdesc:ab46c13a4dd468f148a499ff68168ca05"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper functions for plugin uams  <br /></td></tr>
 <tr class="memitem:a4ac7f72a4be9997db081530449fafc43" id="r_a4ac7f72a4be9997db081530449fafc43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac7f72a4be9997db081530449fafc43">uam_checkuser</a> (void *private, const struct passwd *pwd)</td></tr>
 <tr class="memitem:a6602bdc13310c0f6da6a8ba9874063a4" id="r_a6602bdc13310c0f6da6a8ba9874063a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6602bdc13310c0f6da6a8ba9874063a4">uam_random_string</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int len)</td></tr>
 <tr class="memitem:a5feff44740965738c73862875e7fa393" id="r_a5feff44740965738c73862875e7fa393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5feff44740965738c73862875e7fa393">uam_afpserver_option</a> (void *private, const int what, void *option, size_t *len)</td></tr>
@@ -238,6 +239,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>helper functions for plugin uams </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">private</td><td>pointer to <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> </td></tr>
+    <tr><td class="paramname">name</td><td>user name </td></tr>
+    <tr><td class="paramname">len</td><td>size of name buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -103,7 +103,211 @@ $(function(){initNavTree('mac__chinese__simp_8c.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-</div></div><!-- contents -->
+<code>#include &quot;<a class="el" href="generic__cjk_8h_source.html">generic_cjk.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mac__chinese__simp_8h_source.html">mac_chinese_simp.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a640459d4907f3d5dd15d0de8bae13c19" id="r_a640459d4907f3d5dd15d0de8bae13c19"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a640459d4907f3d5dd15d0de8bae13c19">mac_chinese_simp_pull</a> (void *, char **, size_t *, char **, size_t *)</td></tr>
+<tr class="memitem:ab36a2194e1d2df883ec9fce04215bfb4" id="r_ab36a2194e1d2df883ec9fce04215bfb4"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab36a2194e1d2df883ec9fce04215bfb4">mac_chinese_simp_push</a> (void *, char **, size_t *, char **, size_t *)</td></tr>
+<tr class="memitem:a80e420d6f588acfc7fcb35942dcacf6a" id="r_a80e420d6f588acfc7fcb35942dcacf6a"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80e420d6f588acfc7fcb35942dcacf6a">mac_chinese_simp_char_push</a> (uint8_t *out, const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *in, size_t *size)</td></tr>
+<tr class="memitem:a6db2aaf81d2197aa505316c8e6a3e72b" id="r_a6db2aaf81d2197aa505316c8e6a3e72b"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6db2aaf81d2197aa505316c8e6a3e72b">mac_chinese_simp_char_pull</a> (<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *out, const uint8_t *in, size_t *size)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a55a6b9572b5f93f0f0be8241e8436693" id="r_a55a6b9572b5f93f0f0be8241e8436693"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcharset__functions.html">charset_functions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55a6b9572b5f93f0f0be8241e8436693">charset_mac_chinese_simp</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section see"><dt>See also</dt><dd>Reference <a href="http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/">http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/</a> </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a6db2aaf81d2197aa505316c8e6a3e72b" name="a6db2aaf81d2197aa505316c8e6a3e72b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db2aaf81d2197aa505316c8e6a3e72b">&#9670;&#160;</a></span>mac_chinese_simp_char_pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mac_chinese_simp_char_pull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80e420d6f588acfc7fcb35942dcacf6a" name="a80e420d6f588acfc7fcb35942dcacf6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e420d6f588acfc7fcb35942dcacf6a">&#9670;&#160;</a></span>mac_chinese_simp_char_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mac_chinese_simp_char_push </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a640459d4907f3d5dd15d0de8bae13c19" name="a640459d4907f3d5dd15d0de8bae13c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640459d4907f3d5dd15d0de8bae13c19">&#9670;&#160;</a></span>mac_chinese_simp_pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mac_chinese_simp_pull </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>inbytesleft</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab36a2194e1d2df883ec9fce04215bfb4" name="ab36a2194e1d2df883ec9fce04215bfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36a2194e1d2df883ec9fce04215bfb4">&#9670;&#160;</a></span>mac_chinese_simp_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mac_chinese_simp_push </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>inbytesleft</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a55a6b9572b5f93f0f0be8241e8436693" name="a55a6b9572b5f93f0f0be8241e8436693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a6b9572b5f93f0f0be8241e8436693">&#9670;&#160;</a></span>charset_mac_chinese_simp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structcharset__functions.html">charset_functions</a> charset_mac_chinese_simp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;MAC_CHINESE_SIMP&quot;</span>,</div>
+<div class="line">    25,</div>
+<div class="line">    <a class="code hl_function" href="#a640459d4907f3d5dd15d0de8bae13c19">mac_chinese_simp_pull</a>,</div>
+<div class="line">    <a class="code hl_function" href="#ab36a2194e1d2df883ec9fce04215bfb4">mac_chinese_simp_push</a>,</div>
+<div class="line">    <a class="code hl_define" href="unicode_8h.html#abff0f404b05fd54ba2b4ba60e9dc4baf">CHARSET_ICONV</a> | <a class="code hl_define" href="unicode_8h.html#a3d8792ce3bd093d54d7c632e196bd5bf">CHARSET_MULTIBYTE</a> | <a class="code hl_define" href="unicode_8h.html#a11935ae4791ec59bae48599f4b3abc16">CHARSET_PRECOMPOSED</a> | <a class="code hl_define" href="unicode_8h.html#ac17a3da7698285eea98185fe52d8f7a5">CHARSET_CLIENT</a>,</div>
+<div class="line">    <span class="stringliteral">&quot;EUC-CN&quot;</span>,</div>
+<div class="line">    NULL,</div>
+<div class="line">    NULL</div>
+<div class="line">}</div>
+<div class="ttc" id="amac__chinese__simp_8c_html_a640459d4907f3d5dd15d0de8bae13c19"><div class="ttname"><a href="#a640459d4907f3d5dd15d0de8bae13c19">mac_chinese_simp_pull</a></div><div class="ttdeci">static size_t mac_chinese_simp_pull(void *, char **, size_t *, char **, size_t *)</div><div class="ttdef"><b>Definition</b> mac_chinese_simp.c:122</div></div>
+<div class="ttc" id="amac__chinese__simp_8c_html_ab36a2194e1d2df883ec9fce04215bfb4"><div class="ttname"><a href="#ab36a2194e1d2df883ec9fce04215bfb4">mac_chinese_simp_push</a></div><div class="ttdeci">static size_t mac_chinese_simp_push(void *, char **, size_t *, char **, size_t *)</div><div class="ttdef"><b>Definition</b> mac_chinese_simp.c:82</div></div>
+<div class="ttc" id="aunicode_8h_html_a11935ae4791ec59bae48599f4b3abc16"><div class="ttname"><a href="unicode_8h.html#a11935ae4791ec59bae48599f4b3abc16">CHARSET_PRECOMPOSED</a></div><div class="ttdeci">#define CHARSET_PRECOMPOSED</div><div class="ttdef"><b>Definition</b> unicode.h:30</div></div>
+<div class="ttc" id="aunicode_8h_html_a3d8792ce3bd093d54d7c632e196bd5bf"><div class="ttname"><a href="unicode_8h.html#a3d8792ce3bd093d54d7c632e196bd5bf">CHARSET_MULTIBYTE</a></div><div class="ttdeci">#define CHARSET_MULTIBYTE</div><div class="ttdef"><b>Definition</b> unicode.h:32</div></div>
+<div class="ttc" id="aunicode_8h_html_abff0f404b05fd54ba2b4ba60e9dc4baf"><div class="ttname"><a href="unicode_8h.html#abff0f404b05fd54ba2b4ba60e9dc4baf">CHARSET_ICONV</a></div><div class="ttdeci">#define CHARSET_ICONV</div><div class="ttdef"><b>Definition</b> unicode.h:34</div></div>
+<div class="ttc" id="aunicode_8h_html_ac17a3da7698285eea98185fe52d8f7a5"><div class="ttname"><a href="unicode_8h.html#ac17a3da7698285eea98185fe52d8f7a5">CHARSET_CLIENT</a></div><div class="ttdeci">#define CHARSET_CLIENT</div><div class="ttdef"><b>Definition</b> unicode.h:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

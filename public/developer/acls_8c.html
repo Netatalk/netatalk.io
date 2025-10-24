@@ -149,7 +149,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a13edbf9741df9c0ef40137005824c56c" id="r_a13edbf9741df9c0ef40137005824c56c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13edbf9741df9c0ef40137005824c56c">solaris_acl_rights</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, struct stat *sb, struct <a class="el" href="structmaccess.html">maccess</a> *ma, uint32_t *rights_out)</td></tr>
 <tr class="memdesc:a13edbf9741df9c0ef40137005824c56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile access rights for a user to one file-system object.  <br /></td></tr>
 <tr class="memitem:a133eaf1553202f53d5ad43703fabb8d7" id="r_a133eaf1553202f53d5ad43703fabb8d7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133eaf1553202f53d5ad43703fabb8d7">map_aces_solaris_to_darwin</a> (const ace_t *aces, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, int ace_count)</td></tr>
+<tr class="memdesc:a133eaf1553202f53d5ad43703fabb8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps ACE array from Solaris to Darwin.  <br /></td></tr>
 <tr class="memitem:aa17a138947dabaab8ce23adfdbf158cb" id="r_aa17a138947dabaab8ce23adfdbf158cb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17a138947dabaab8ce23adfdbf158cb">map_aces_darwin_to_solaris</a> (<a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, ace_t *nfsv4_aces, int ace_count)</td></tr>
+<tr class="memdesc:aa17a138947dabaab8ce23adfdbf158cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps ACE array from Darwin to Solaris.  <br /></td></tr>
 <tr class="memitem:aba5338687e46ed472598da091519a0a4" id="r_aba5338687e46ed472598da091519a0a4"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba5338687e46ed472598da091519a0a4">posix_permset_to_darwin_rights</a> (acl_entry_t e, int is_dir)</td></tr>
 <tr class="memitem:a6527676865aa81da9eb32f9cddf10907" id="r_a6527676865aa81da9eb32f9cddf10907"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6527676865aa81da9eb32f9cddf10907">posix_acl_rights</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>, const struct stat *sb, uint32_t *result)</td></tr>
 <tr class="memdesc:a6527676865aa81da9eb32f9cddf10907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile access rights for a user to one file-system object.  <br /></td></tr>
@@ -164,17 +166,22 @@ Functions</h2></td></tr>
 <tr class="memitem:a50af431a7c630d5c55ff91f71535d66c" id="r_a50af431a7c630d5c55ff91f71535d66c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50af431a7c630d5c55ff91f71535d66c">map_aces_darwin_to_posix</a> (const <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces, acl_t *def_aclp, acl_t *acc_aclp, int ace_count, uint32_t *default_acl_flags)</td></tr>
 <tr class="memdesc:a50af431a7c630d5c55ff91f71535d66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map Darwin ACL to POSIX ACL.  <br /></td></tr>
 <tr class="memitem:ad868b77af881c5df41054e8cfcf1c5c8" id="r_ad868b77af881c5df41054e8cfcf1c5c8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad868b77af881c5df41054e8cfcf1c5c8">map_acl_posix_to_darwin</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const acl_t acl, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *darwin_aces)</td></tr>
+<tr class="memdesc:ad868b77af881c5df41054e8cfcf1c5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map ACEs from POSIX to Darwin.  <br /></td></tr>
 <tr class="memitem:a61669376af43d2e225aa6e15515312ef" id="r_a61669376af43d2e225aa6e15515312ef"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61669376af43d2e225aa6e15515312ef">map_acl</a> (int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, void *acl, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int ace_count)</td></tr>
-<tr class="memitem:a5febce7f304b053500157b101ed6d15b" id="r_a5febce7f304b053500157b101ed6d15b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febce7f304b053500157b101ed6d15b">get_and_map_acl</a> (char *name, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memdesc:a61669376af43d2e225aa6e15515312ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplex ACL mapping (SOLARIS_2_DARWIN, DARWIN_2_SOLARIS, POSIX_2_DARWIN, DARWIN_2_POSIX).  <br /></td></tr>
+<tr class="memitem:a5febce7f304b053500157b101ed6d15b" id="r_a5febce7f304b053500157b101ed6d15b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febce7f304b053500157b101ed6d15b">get_and_map_acl</a> (char *name, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memdesc:a5febce7f304b053500157b101ed6d15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ACL from object omitting trivial ACEs.  <br /></td></tr>
 <tr class="memitem:aab30b2409594c4fdabf56fac01e34b6e" id="r_aab30b2409594c4fdabf56fac01e34b6e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab30b2409594c4fdabf56fac01e34b6e">remove_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memdesc:aab30b2409594c4fdabf56fac01e34b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all non-trivial ACLs from object.  <br /></td></tr>
 <tr class="memitem:a68c7cd6dd016e4ee454d62657d30496f" id="r_a68c7cd6dd016e4ee454d62657d30496f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c7cd6dd016e4ee454d62657d30496f">set_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *name, int inherit, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *daces, uint32_t ace_count)</td></tr>
+<tr class="memdesc:a68c7cd6dd016e4ee454d62657d30496f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ACL.  <br /></td></tr>
 <tr class="memitem:a859dd30b415908f5984d372491436df0" id="r_a859dd30b415908f5984d372491436df0"><td class="memItemLeft" align="right" valign="top">static acl_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859dd30b415908f5984d372491436df0">acl_from_mode</a> (mode_t mode)</td></tr>
 <tr class="memitem:a5c89f423215f5ed9d354f62a486bb09c" id="r_a5c89f423215f5ed9d354f62a486bb09c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c89f423215f5ed9d354f62a486bb09c">set_acl</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, int inherit, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *daces, uint32_t ace_count)</td></tr>
 <tr class="memitem:a6d67884d0596464697dbea60ac79cabb" id="r_a6d67884d0596464697dbea60ac79cabb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d67884d0596464697dbea60ac79cabb">check_acl_access</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, const char *<a class="el" href="structpath.html">path</a>, const <a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> <a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid</a>, uint32_t requested_rights)</td></tr>
 <tr class="memdesc:a6d67884d0596464697dbea60ac79cabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given UUID has requested_rights (type darwin_ace_rights) for path.  <br /></td></tr>
-<tr class="memitem:aa0ab90bb6fae969c7f5eece718fac6ba" id="r_aa0ab90bb6fae969c7f5eece718fac6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ab90bb6fae969c7f5eece718fac6ba">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a4942a67314f08c075b5487302f646a35" id="r_a4942a67314f08c075b5487302f646a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4942a67314f08c075b5487302f646a35">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a68af66c7445133403863e81e438be2eb" id="r_a68af66c7445133403863e81e438be2eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af66c7445133403863e81e438be2eb">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:aa0ab90bb6fae969c7f5eece718fac6ba" id="r_aa0ab90bb6fae969c7f5eece718fac6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ab90bb6fae969c7f5eece718fac6ba">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a4942a67314f08c075b5487302f646a35" id="r_a4942a67314f08c075b5487302f646a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4942a67314f08c075b5487302f646a35">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a68af66c7445133403863e81e438be2eb" id="r_a68af66c7445133403863e81e438be2eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af66c7445133403863e81e438be2eb">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 <tr class="memitem:a76ea2a5d940e030476c196fd9f6309cf" id="r_a76ea2a5d940e030476c196fd9f6309cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ea2a5d940e030476c196fd9f6309cf">acltoownermode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, struct stat *st, struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
 <tr class="memdesc:a76ea2a5d940e030476c196fd9f6309cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">map ACL to user maccess  <br /></td></tr>
 </table>
@@ -623,6 +630,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get ACL from object omitting trivial ACEs. </p>
+<p>Map to Darwin ACL style and store Darwin ACL at rbuf. Add length of ACL written to rbuf to *rbuflen. </p><dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error. </dd></dl>
+
 </div>
 </div>
 <a id="a50af431a7c630d5c55ff91f71535d66c" name="a50af431a7c630d5c55ff91f71535d66c"></a>
@@ -718,6 +728,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Maps ACE array from Darwin to Solaris. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of mapped ACEs or -1 on error. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Darwin ACEs are expected in network byte order. </dd>
+<dd>
+All errors while mapping (e.g. getting UUIDs from LDAP) are fatal. </dd></dl>
+
 </div>
 </div>
 <a id="a133eaf1553202f53d5ad43703fabb8d7" name="a133eaf1553202f53d5ad43703fabb8d7"></a>
@@ -751,6 +767,12 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Maps ACE array from Solaris to Darwin. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of mapped ACEs or -1 on error. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Darwin ACEs are stored in network byte order. </dd>
+<dd>
+All errors while mapping (e.g. getting UUIDs from LDAP) are fatal. </dd></dl>
 
 </div>
 </div>
@@ -791,6 +813,10 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Multiplex ACL mapping (SOLARIS_2_DARWIN, DARWIN_2_SOLARIS, POSIX_2_DARWIN, DARWIN_2_POSIX). </p>
+<p>Reads from 'aces' buffer, writes to 'rbuf' buffer. Caller must provide buffer. Darwin ACEs are read and written in network byte order. Needs to know how many ACEs are in the ACL (ace_count) for Solaris ACLs. Ignores trivial ACEs.</p>
+<dl class="section return"><dt>Returns</dt><dd>no of mapped ACEs or -1 on error. </dd></dl>
+
 </div>
 </div>
 <a id="ad868b77af881c5df41054e8cfcf1c5c8" name="ad868b77af881c5df41054e8cfcf1c5c8"></a>
@@ -824,6 +850,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Map ACEs from POSIX to Darwin. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of mapped ACES, -1 on error. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>type is either POSIX_DEFAULT_2_DARWIN or POSIX_ACCESS_2_DARWIN, cf. acl_get_file. </dd></dl>
 
 </div>
 </div>
@@ -1089,6 +1119,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Removes all non-trivial ACLs from object. </p>
+<dl class="section return"><dt>Returns</dt><dd>full AFPERR code. </dd></dl>
+
 </div>
 </div>
 <a id="a68c7cd6dd016e4ee454d62657d30496f" name="a68c7cd6dd016e4ee454d62657d30496f"></a>
@@ -1132,6 +1165,14 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set ACL. </p>
+<dl class="section note"><dt>Note</dt><dd>Subtleties:<ul>
+<li>the client sends a complete list of ACEs, not only new ones. So we don't need to do any combination business (one exception being 'kFileSec_Inherit': see next)</li>
+<li>client might request that we add inherited ACEs via 'kFileSec_Inherit'. We will store inherited ACEs first, which is Darwins canonical order.</li>
+</ul>
+</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>AFPerror code </dd></dl>
 
 </div>
 </div>

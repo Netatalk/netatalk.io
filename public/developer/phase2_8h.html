@@ -126,10 +126,13 @@ Macros</h2></td></tr>
 <tr class="memitem:abfdc049da24dc3c41caadb5f4ee6a552" id="r_abfdc049da24dc3c41caadb5f4ee6a552"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfdc049da24dc3c41caadb5f4ee6a552">LLC_TEST_P</a>&#160;&#160;&#160;0xf3</td></tr>
 <tr class="memitem:aca3c37dc4425777f7d2364116b08a31a" id="r_aca3c37dc4425777f7d2364116b08a31a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3c37dc4425777f7d2364116b08a31a">LLC_ISO_LSAP</a>&#160;&#160;&#160;0xfe</td></tr>
 <tr class="memitem:a1d5a255dc7be4933b86f6c1fc1746bc8" id="r_a1d5a255dc7be4933b86f6c1fc1746bc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d5a255dc7be4933b86f6c1fc1746bc8">LLC_SNAP_LSAP</a>&#160;&#160;&#160;0xaa</td></tr>
-<tr class="memitem:a21a343a66e7ad6367340367f06152732" id="r_a21a343a66e7ad6367340367f06152732"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21a343a66e7ad6367340367f06152732">SIOCPHASE1</a>&#160;&#160;&#160;_IOW('i', 100, struct ifreq)	/* AppleTalk <a class="el" href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a> 1 */</td></tr>
-<tr class="memitem:a2381ccd4f0edfee14594fee7787ace85" id="r_a2381ccd4f0edfee14594fee7787ace85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2381ccd4f0edfee14594fee7787ace85">SIOCPHASE2</a>&#160;&#160;&#160;_IOW('i', 101, struct ifreq)	/* AppleTalk <a class="el" href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a> 2 */</td></tr>
+<tr class="memitem:a21a343a66e7ad6367340367f06152732" id="r_a21a343a66e7ad6367340367f06152732"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21a343a66e7ad6367340367f06152732">SIOCPHASE1</a>&#160;&#160;&#160;_IOW('i', 100, struct ifreq)</td></tr>
+<tr class="memitem:a2381ccd4f0edfee14594fee7787ace85" id="r_a2381ccd4f0edfee14594fee7787ace85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2381ccd4f0edfee14594fee7787ace85">SIOCPHASE2</a>&#160;&#160;&#160;_IOW('i', 101, struct ifreq)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IEEE 802.2 Link Level Control headers, for use in conjunction with 802.{3,4,5} media access control methods.</p>
+<p>Headers here do not use bit fields due to shortcomings in many compilers. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a6c909ea79aa2f917aa19d23096dc3103" name="a6c909ea79aa2f917aa19d23096dc3103"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c909ea79aa2f917aa19d23096dc3103">&#9670;&#160;</a></span>llc_class</h2>
 
@@ -333,10 +336,11 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SIOCPHASE1&#160;&#160;&#160;_IOW('i', 100, struct ifreq)	/* AppleTalk <a class="el" href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a> 1 */</td>
+          <td class="memname">#define SIOCPHASE1&#160;&#160;&#160;_IOW('i', 100, struct ifreq)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AppleTalk phase 1 </p>
 
 </div>
 </div>
@@ -347,10 +351,11 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SIOCPHASE2&#160;&#160;&#160;_IOW('i', 101, struct ifreq)	/* AppleTalk <a class="el" href="config_8c.html#a0c58dd6f59ab44efff4c38179d8923e9">phase</a> 2 */</td>
+          <td class="memname">#define SIOCPHASE2&#160;&#160;&#160;_IOW('i', 101, struct ifreq)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AppleTalk phase 2 </p>
 
 </div>
 </div>

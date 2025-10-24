@@ -102,6 +102,9 @@ $(function(){initNavTree('fce__api_8c.html','',''); });
   <div class="headertitle"><div class="title">fce_api.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>File change event API for netatalk.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;netdb.h&gt;</code><br />
@@ -137,10 +140,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7b753f8b00a55c4d751afb6e508525ac" id="r_a7b753f8b00a55c4d751afb6e508525ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b753f8b00a55c4d751afb6e508525ac">afprun_bg</a> (char *cmd)</td></tr>
+<tr class="memdesc:a7b753f8b00a55c4d751afb6e508525ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a command in the background without waiting.  <br /></td></tr>
 <tr class="memitem:a287f22e1548215e720a7a94e6bc66e3e" id="r_a287f22e1548215e720a7a94e6bc66e3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a287f22e1548215e720a7a94e6bc66e3e">fce_init_udp</a> (void)</td></tr>
+<tr class="memdesc:a287f22e1548215e720a7a94e6bc66e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize network structs for any listeners.  <br /></td></tr>
 <tr class="memitem:a3f412b51f1283310db7d766e9d86383b" id="r_a3f412b51f1283310db7d766e9d86383b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f412b51f1283310db7d766e9d86383b">fce_cleanup</a> (void)</td></tr>
 <tr class="memitem:a611a580ee44f640537e4e6ca4ff3c91d" id="r_a611a580ee44f640537e4e6ca4ff3c91d"><td class="memItemLeft" align="right" valign="top">static ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a611a580ee44f640537e4e6ca4ff3c91d">build_fce_packet</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, unsigned char *<a class="el" href="#a562c60b934717d43765ee8c61de7a62d">iobuf</a>, <a class="el" href="fce__api_8h.html#a91ddbcff9047c2f41df288c49f00846c">fce_ev_t</a> event, const char *<a class="el" href="structpath.html">path</a>, const char *oldpath, pid_t pid, const char *user, uint32_t event_id)</td></tr>
 <tr class="memitem:aaf7d055795924c3fe0f314670bd56dbf" id="r_aaf7d055795924c3fe0f314670bd56dbf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf7d055795924c3fe0f314670bd56dbf">send_fce_event</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, int event, const char *<a class="el" href="structpath.html">path</a>, const char *oldpath)</td></tr>
+<tr class="memdesc:aaf7d055795924c3fe0f314670bd56dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the fce information to all (connected) listeners.  <br /></td></tr>
 <tr class="memitem:ae2446c657a7300f5375b34155a7835a4" id="r_ae2446c657a7300f5375b34155a7835a4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2446c657a7300f5375b34155a7835a4">add_udp_socket</a> (const char *target_ip, const char *target_port)</td></tr>
 <tr class="memitem:acc72055559438f173761b2910a573392" id="r_acc72055559438f173761b2910a573392"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc72055559438f173761b2910a573392">save_close_event</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:a701fbcbda7911cd8df3122ca6db4acf2" id="r_a701fbcbda7911cd8df3122ca6db4acf2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a701fbcbda7911cd8df3122ca6db4acf2">fce_init_ign_paths</a> (const char *ignores, const char ***dest_array, bool is_directory)</td></tr>
@@ -148,6 +154,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a39e7e87ca0048f045830fa68193e6579" id="r_a39e7e87ca0048f045830fa68193e6579"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e7e87ca0048f045830fa68193e6579">check_saved_close_events</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:af5258bf0fb18d2486886ac0fd9c1cd17" id="r_af5258bf0fb18d2486886ac0fd9c1cd17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5258bf0fb18d2486886ac0fd9c1cd17">fce_pending_events</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:acf46282171b6d3f75da9466ceb3a6dd4" id="r_acf46282171b6d3f75da9466ceb3a6dd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf46282171b6d3f75da9466ceb3a6dd4">fce_add_udp_socket</a> (const char *<a class="el" href="aecho_8c.html#a5cf8344356bfd77bdb1cfa3712a23bd2">target</a>)</td></tr>
+<tr class="memdesc:acf46282171b6d3f75da9466ceb3a6dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extern connect to afpd parameter.  <br /></td></tr>
 <tr class="memitem:abda9326c1c874309441c8daf2d2460e8" id="r_abda9326c1c874309441c8daf2d2460e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abda9326c1c874309441c8daf2d2460e8">fce_set_events</a> (const char *events)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -163,7 +170,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a518997bc2336a1e94e1dc476d7f0e4ca" id="r_a518997bc2336a1e94e1dc476d7f0e4ca"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structfce__close__event.html">fce_close_event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a518997bc2336a1e94e1dc476d7f0e4ca">last_close_event</a></td></tr>
 <tr class="memitem:ae88e24e0867d68583b8a26ca0afc76ed" id="r_ae88e24e0867d68583b8a26ca0afc76ed"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae88e24e0867d68583b8a26ca0afc76ed">fce_event_names</a> []</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>File change event API for netatalk. </p>
+<p>for every detected filesystem change a UDP packet is sent to an arbitrary list of listeners. Each packet contains unix path of modified filesystem element, event reason, and a consecutive event id (32 bit). Technically we are UDP client and are sending out packets synchronuosly as they are created by the afp functions. This should not affect performance measurably. The only delaying calls occur during initialization, if we have to resolve non-IP hostnames to IP. All numeric data inside the packet is network byte order, so use ntohs / ntohl to resolve length and event id. Ideally a listener receives every packet with no gaps in event ids, starting with event id 1 and mode FCE_CONN_START followed by data events from id 2 up to 0xFFFFFFFF, followed by 0 to 0xFFFFFFFF and so on.</p>
+<p>A gap or not starting with 1 mode FCE_CONN_START or receiving mode FCE_CONN_BROKEN means that the listener has lost at least one filesystem event </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ab7c60bb2e622598e621d73c40547f735" name="ab7c60bb2e622598e621d73c40547f735"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7c60bb2e622598e621d73c40547f735">&#9670;&#160;</a></span>MAXIOBUF</h2>
 
@@ -231,6 +242,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Run a command in the background without waiting. </p>
+<dl class="section note"><dt>Note</dt><dd>being careful about uid/gid handling </dd></dl>
+
 </div>
 </div>
 <a id="a611a580ee44f640537e4e6ca4ff3c91d" name="a611a580ee44f640537e4e6ca4ff3c91d"></a>
@@ -289,6 +303,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Construct a UDP packet for our listeners and return packet size </p>
 
 </div>
 </div>
@@ -331,6 +346,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Extern connect to afpd parameter. </p>
+<dl class="section note"><dt>Note</dt><dd>can be called multiple times for multiple listeners (up to MAX_UDP_SOCKS times) </dd></dl>
 
 </div>
 </div>
@@ -400,6 +418,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialize network structs for any listeners. </p>
+<dl class="section note"><dt>Note</dt><dd>We don't give return code because all errors are handled internally (I hope..) </dd></dl>
+
 </div>
 </div>
 <a id="af5258bf0fb18d2486886ac0fd9c1cd17" name="af5258bf0fb18d2486886ac0fd9c1cd17"></a>
@@ -416,6 +437,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>API-Calls for file change api, called from outside (file.c <a class="el" href="directory_8c.html">directory.c</a> <a class="el" href="ofork_8c.html">ofork.c</a> <a class="el" href="filedir_8c.html">filedir.c</a>) </p>
 
 </div>
 </div>
@@ -447,6 +469,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Dispatcher for all incoming file change events </p>
 
 </div>
 </div>
@@ -464,6 +487,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>fmod,fdel,ddel,fcre,dcre </p>
 
 </div>
 </div>
@@ -532,6 +556,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Send the fce information to all (connected) listeners. </p>
+<dl class="section note"><dt>Note</dt><dd>We don't give return code because all errors are handled internally (I hope..) </dd></dl>
 
 </div>
 </div>

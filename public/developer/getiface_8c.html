@@ -124,6 +124,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a6d427afcbf03a78e3c5a1826dc948240" id="r_a6d427afcbf03a78e3c5a1826dc948240"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d427afcbf03a78e3c5a1826dc948240">addname</a> (char **<a class="el" href="structlist.html">list</a>, int *i, const char *name)</td></tr>
 <tr class="memitem:a2de2495ab7ea632c7e0d136c3e223914" id="r_a2de2495ab7ea632c7e0d136c3e223914"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2de2495ab7ea632c7e0d136c3e223914">getifaces</a> (const int sockfd, char ***<a class="el" href="structlist.html">list</a>)</td></tr>
 <tr class="memitem:ad4d87b30be4a0662bd341c7ac8735d24" id="r_ad4d87b30be4a0662bd341c7ac8735d24"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d87b30be4a0662bd341c7ac8735d24">getifacelist</a> (void)</td></tr>
+<tr class="memdesc:ad4d87b30be4a0662bd341c7ac8735d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get interfaces from the kernel.  <br /></td></tr>
 <tr class="memitem:aead9afa744a528ce6905950ce76073ba" id="r_aead9afa744a528ce6905950ce76073ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aead9afa744a528ce6905950ce76073ba">freeifacelist</a> (char **ifacelist)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -173,6 +174,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>we leave all of the ioctl's to the application </p>
 
 </div>
 </div>
@@ -190,6 +192,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>go through and free the interface list </p>
 
 </div>
 </div>
@@ -207,6 +210,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get interfaces from the kernel. </p>
+<dl class="section note"><dt>Note</dt><dd>we keep an extra null entry to signify the end of the interface list. </dd></dl>
 
 </div>
 </div>

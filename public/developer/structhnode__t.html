@@ -103,6 +103,9 @@ $(function(){initNavTree('structhnode__t.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Hash chain node structure.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="include_2atalk_2hash_8h_source.html">hash.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -112,7 +115,16 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ad85c5c725645555c8721e53a0fbd2adf" id="r_ad85c5c725645555c8721e53a0fbd2adf"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85c5c725645555c8721e53a0fbd2adf">hash_data</a></td></tr>
 <tr class="memitem:aa67bf1b3e15d1d19444185a47575209f" id="r_aa67bf1b3e15d1d19444185a47575209f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa67bf1b3e15d1d19444185a47575209f">hash_hkey</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Hash chain node structure. </p>
+<p>Notes:</p><ol type="1">
+<li>This preprocessing directive is for debugging purposes. The effect is that if the preprocessor symbol KAZLIB_OPAQUE_DEBUG is defined prior to the inclusion of this header, then the structure shall be declared as having the single member int <b>OPAQUE</b>. This way, any attempts by the client code to violate the principles of information hiding (by accessing the structure directly) can be diagnosed at translation time. However, note the resulting compiled unit is not suitable for linking.</li>
+<li>This is a pointer to the next node in the chain. In the last node of a chain, this pointer is null.</li>
+<li>The key is a pointer to some user supplied data that contains a unique identifier for each hash node in a given table. The interpretation of the data is up to the user. When creating or initializing a hash table, the user must supply a pointer to a function for comparing two keys, and a pointer to a function for hashing a key into a numeric value.</li>
+<li>The value is a user-supplied pointer to void which may refer to any data object. It is not interpreted in any way by the hashing module.</li>
+<li>The hashed key is stored in each node so that we don't have to rehash each key when the table must grow or shrink. </li>
+</ol>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ad85c5c725645555c8721e53a0fbd2adf" name="ad85c5c725645555c8721e53a0fbd2adf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad85c5c725645555c8721e53a0fbd2adf">&#9670;&#160;</a></span>hash_data</h2>
 

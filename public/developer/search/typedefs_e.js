@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['volspace_0',['VolSpace',['../include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f',1,'volume.h']]]
+  ['vfs_5fchown_5ffn_0',['vfs_chown_fn',['../vfs_8h.html#a43e6032356646b4d975be174e6deba47',1,'vfs.h']]],
+  ['vfs_5fcopyfile_5ffn_1',['vfs_copyfile_fn',['../vfs_8h.html#a0be0f726caabb2388e49dec625d768a4',1,'vfs.h']]],
+  ['vfs_5fdeletecurdir_5ffn_2',['vfs_deletecurdir_fn',['../vfs_8h.html#a0e862ee247f983123bd6ba8e7157aa08',1,'vfs.h']]],
+  ['vfs_5fdeletefile_5ffn_3',['vfs_deletefile_fn',['../vfs_8h.html#af566597c6d0c9704afe36a628e36e0a6',1,'vfs.h']]],
+  ['vfs_5fea_5fgetcontent_5ffn_4',['vfs_ea_getcontent_fn',['../vfs_8h.html#a3eee479df8d4a098014d98fef59049ea',1,'vfs.h']]],
+  ['vfs_5fea_5fgetsize_5ffn_5',['vfs_ea_getsize_fn',['../vfs_8h.html#a64bfeb6df35c2c32857460fa44308b86',1,'vfs.h']]],
+  ['vfs_5fea_5flist_5ffn_6',['vfs_ea_list_fn',['../vfs_8h.html#a5da5593ac3e3d241b115d90c73331c2b',1,'vfs.h']]],
+  ['vfs_5fea_5fremove_5ffn_7',['vfs_ea_remove_fn',['../vfs_8h.html#ac3454706c9af8f8165b4e6f1fde820ca',1,'vfs.h']]],
+  ['vfs_5fea_5fset_5ffn_8',['vfs_ea_set_fn',['../vfs_8h.html#a48097f6a14798279a14eb5777724604b',1,'vfs.h']]],
+  ['vfs_5fposix_5facl_5ffn_9',['vfs_posix_acl_fn',['../vfs_8h.html#abedbd9ffc26672af192e322fc659190c',1,'vfs.h']]],
+  ['vfs_5fremove_5facl_5ffn_10',['vfs_remove_acl_fn',['../vfs_8h.html#a0f6eb5445e98f10e4b0e0250905eb4df',1,'vfs.h']]],
+  ['vfs_5frenamedir_5ffn_11',['vfs_renamedir_fn',['../vfs_8h.html#a83483f5b0404035ac62d633682beb52e',1,'vfs.h']]],
+  ['vfs_5frenamefile_5ffn_12',['vfs_renamefile_fn',['../vfs_8h.html#aff8de20ec992a99d69a45f3b6e1c0ef3',1,'vfs.h']]],
+  ['vfs_5fsetdirmode_5ffn_13',['vfs_setdirmode_fn',['../vfs_8h.html#a2da927edff0a6712e937eb6ea7e68b6c',1,'vfs.h']]],
+  ['vfs_5fsetdirowner_5ffn_14',['vfs_setdirowner_fn',['../vfs_8h.html#ac4bb075daa7a0a434c154f6812b5806f',1,'vfs.h']]],
+  ['vfs_5fsetdirunixmode_5ffn_15',['vfs_setdirunixmode_fn',['../vfs_8h.html#aca258c1ff7dae13e6a2c3311341fa164',1,'vfs.h']]],
+  ['vfs_5fsetfilmode_5ffn_16',['vfs_setfilmode_fn',['../vfs_8h.html#a1462e1d988669a1adafc8edb337f6219',1,'vfs.h']]],
+  ['vfs_5fsolaris_5facl_5ffn_17',['vfs_solaris_acl_fn',['../vfs_8h.html#aa5c4ddeada273450ff6ec2918dc02f55',1,'vfs.h']]],
+  ['vfs_5fvalidupath_5ffn_18',['vfs_validupath_fn',['../vfs_8h.html#aab8a661e389235d6b2da9acea883497a',1,'vfs.h']]],
+  ['volspace_19',['VolSpace',['../include_2atalk_2volume_8h.html#aaafd36fcf24940e0a7f1ae6a1dac846f',1,'volume.h']]]
 ];

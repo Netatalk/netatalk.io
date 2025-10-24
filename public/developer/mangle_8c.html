@@ -102,6 +102,9 @@ $(function(){initNavTree('mangle_8c.html','',''); });
   <div class="headertitle"><div class="title">mangle.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>mangle, demangle (filename)  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="include_2atalk_2util_8h_source.html">atalk/util.h</a>&gt;</code><br />
@@ -115,14 +118,17 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a657f485dc12fbe073b7e9603fd78a860" id="r_a657f485dc12fbe073b7e9603fd78a860"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a657f485dc12fbe073b7e9603fd78a860">mangle_extension</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, char *extension, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> charset)</td></tr>
-<tr class="memitem:a3aec190c6868fdfee378eec6e134ac36" id="r_a3aec190c6868fdfee378eec6e134ac36"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aec190c6868fdfee378eec6e134ac36">demangle_checks</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, char *mfilename, size_t <a class="el" href="extattr_8c.html#a0d6a15a751de424e52f8a7062133915b">prefix</a>, char *ext)</td></tr>
+<tr class="memitem:a657f485dc12fbe073b7e9603fd78a860" id="r_a657f485dc12fbe073b7e9603fd78a860"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a657f485dc12fbe073b7e9603fd78a860">mangle_extension</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, char *extension, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> charset)</td></tr>
+<tr class="memitem:a3aec190c6868fdfee378eec6e134ac36" id="r_a3aec190c6868fdfee378eec6e134ac36"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aec190c6868fdfee378eec6e134ac36">demangle_checks</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *uname, char *mfilename, size_t <a class="el" href="extattr_8c.html#a0d6a15a751de424e52f8a7062133915b">prefix</a>, char *ext)</td></tr>
 <tr class="memitem:a6ef0d0e50162dd983f64971b66a94422" id="r_a6ef0d0e50162dd983f64971b66a94422"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef0d0e50162dd983f64971b66a94422">private_demangle</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *mfilename, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *osx)</td></tr>
 <tr class="memitem:aa5e42f821a17a16af1ad220660f97668" id="r_aa5e42f821a17a16af1ad220660f97668"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5e42f821a17a16af1ad220660f97668">demangle</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *mfilename, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 <tr class="memitem:a0a89c39dd0394e55e53d0b52d1a5c32e" id="r_a0a89c39dd0394e55e53d0b52d1a5c32e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a89c39dd0394e55e53d0b52d1a5c32e">demangle_osx</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *mfilename, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *fileid)</td></tr>
-<tr class="memitem:a26d7dbf178862bca85955d71128cb47b" id="r_a26d7dbf178862bca85955d71128cb47b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26d7dbf178862bca85955d71128cb47b">mangle</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *filename, size_t filenamelen, char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> id, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
+<tr class="memitem:a26d7dbf178862bca85955d71128cb47b" id="r_a26d7dbf178862bca85955d71128cb47b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26d7dbf178862bca85955d71128cb47b">mangle</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *filename, size_t filenamelen, char *uname, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> id, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>mangle, demangle (filename) </p>
+<p>mangle or demangle filenames if they are greater than the max allowed characters for a given version of AFP. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a183ae24b98b55d1bed8f540e56231f00" name="a183ae24b98b55d1bed8f540e56231f00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a183ae24b98b55d1bed8f540e56231f00">&#9670;&#160;</a></span>hextoint</h2>
 
@@ -299,6 +305,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000004">Bug</a></b></dt><dd><p class="startdd">Early Mac OS X (10.0-10.4.?) had the limitation up to 255 Byte. Current implementation is: volcharset -&gt; UTF16-MAC -&gt; truncated 255 UTF8-MAC </p>
+<p class="enddd">Recent Mac OS X (10.4.?-) don't have this limitation. Desirable implementation is: volcharset -&gt; truncated 510 UTF16-MAC -&gt; UTF8-MAC</p>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>with utf8 filename not always round trip <div class="fragment"><div class="line">filename   mac filename too <span class="keywordtype">long</span> or <a class="code hl_variable" href="nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840">first</a> chars <span class="keywordflow">if</span> unmatchable chars.</div>
+<div class="line">uname      unix filename</div>
+<div class="line"><span class="keywordtype">id</span>         file/folder <a class="code hl_variable" href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a> or 0</div>
+<div class="ttc" id="anad__ls_8c_html_a6c8ec3c3e77241328358d43697f6f840"><div class="ttname"><a href="nad__ls_8c.html#a6c8ec3c3e77241328358d43697f6f840">first</a></div><div class="ttdeci">static int first</div><div class="ttdef"><b>Definition</b> nad_ls.c:54</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a9bb81603329def43dbb55e1ae69996d9"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a9bb81603329def43dbb55e1ae69996d9">ID</a></div><div class="ttdeci">static uint16_t ID</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:43</div></div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>

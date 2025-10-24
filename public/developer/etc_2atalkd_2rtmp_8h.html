@@ -137,6 +137,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a49ae9a7172125084f9a532855ef6f38f" id="r_a49ae9a7172125084f9a532855ef6f38f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ae9a7172125084f9a532855ef6f38f">rtmp_request</a> (struct <a class="el" href="structinterface.html">interface</a> *)</td></tr>
 <tr class="memitem:adda0220b5c4c39688d5d5d094a60c61c" id="r_adda0220b5c4c39688d5d5d094a60c61c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adda0220b5c4c39688d5d5d094a60c61c">rtmp_free</a> (struct <a class="el" href="structrtmptab.html">rtmptab</a> *)</td></tr>
 <tr class="memitem:aa53cfd79c3b2a73abda510e495f675eb" id="r_aa53cfd79c3b2a73abda510e495f675eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa53cfd79c3b2a73abda510e495f675eb">rtmp_replace</a> (struct <a class="el" href="structrtmptab.html">rtmptab</a> **)</td></tr>
+<tr class="memdesc:aa53cfd79c3b2a73abda510e495f675eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a replacement for the structure pointed to by "replace_ptr".  <br /></td></tr>
 <tr class="memitem:a5a4dc501bba8f6a3017a95d5f310b354" id="r_a5a4dc501bba8f6a3017a95d5f310b354"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a4dc501bba8f6a3017a95d5f310b354">looproute</a> (struct <a class="el" href="structinterface.html">interface</a> *, unsigned int)</td></tr>
 <tr class="memitem:a2e74a75d9a967b431451613505daf6f7" id="r_a2e74a75d9a967b431451613505daf6f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e74a75d9a967b431451613505daf6f7">gateroute</a> (unsigned int, struct <a class="el" href="structrtmptab.html">rtmptab</a> *)</td></tr>
 <tr class="memitem:ad56bcb86571f7a5d3190938571f1d134" id="r_ad56bcb86571f7a5d3190938571f1d134"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad56bcb86571f7a5d3190938571f1d134">rtmp_packet</a> (struct <a class="el" href="structatport.html">atport</a> *ap, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *from, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, int len)</td></tr>
@@ -447,6 +448,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Remove rtmp from the in-use table and the per-gate table. Free any associated space. </p>
 
 </div>
 </div>
@@ -495,6 +497,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Find a replacement for the structure pointed to by "replace_ptr". </p>
+<dl class="section return"><dt>Returns</dt><dd>If we can't find a replacement, return 1. </dd>
+<dd>
+If we do find a replacement, return 0. </dd>
+<dd>
+If we encounter an error, return -1. </dd></dl>
 
 </div>
 </div>

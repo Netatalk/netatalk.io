@@ -138,6 +138,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a737db37faaee3e48a42c5303d245bbcf" id="r_a737db37faaee3e48a42c5303d245bbcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737db37faaee3e48a42c5303d245bbcf">of_stat</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:ad430ec41fa64e04e57456f771146dc41" id="r_ad430ec41fa64e04e57456f771146dc41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad430ec41fa64e04e57456f771146dc41">of_fstatat</a> (int dirfd, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:adacc70ca2a9366695f1a2ea5d0337279" id="r_adacc70ca2a9366695f1a2ea5d0337279"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adacc70ca2a9366695f1a2ea5d0337279">of_statdir</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:adacc70ca2a9366695f1a2ea5d0337279"><td class="mdescLeft">&#160;</td><td class="mdescRight">stat the current directory.  <br /></td></tr>
 <tr class="memitem:aa860b28c0e355b32351dc0e1706a1f7c" id="r_aa860b28c0e355b32351dc0e1706a1f7c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structofork.html">ofork</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa860b28c0e355b32351dc0e1706a1f7c">of_findname</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:a2d25be1459a2c6cb7c452722e4768951" id="r_a2d25be1459a2c6cb7c452722e4768951"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structofork.html">ofork</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d25be1459a2c6cb7c452722e4768951">of_findnameat</a> (int dirfd, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memdesc:a2d25be1459a2c6cb7c452722e4768951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for open fork by dirfd/name.  <br /></td></tr>
@@ -303,6 +304,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>close all forks </p>
 
 </div>
 </div>
@@ -345,6 +347,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>close all forks for a volume </p>
 
 </div>
 </div>
@@ -594,6 +597,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stat the current directory. </p>
+<dl class="section note"><dt>Note</dt><dd>stat(".") works even if "." is deleted thus we have to stat ../name because we want to know if it's there </dd></dl>
 
 </div>
 </div>

@@ -117,7 +117,7 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a13d6e532c53eb7adab2155f5401a2b16" id="r_a13d6e532c53eb7adab2155f5401a2b16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>&#160;&#160;&#160;uint16_t</td></tr>
 <tr class="memitem:aed3129b7674034c979192bcca6b0ad8c" id="r_aed3129b7674034c979192bcca6b0ad8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3129b7674034c979192bcca6b0ad8c">SAFE_FREE</a>(x)</td></tr>
-<tr class="memitem:ac6c071293826a4e66a717bb38db7794d" id="r_ac6c071293826a4e66a717bb38db7794d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c071293826a4e66a717bb38db7794d">EILSEQ</a>&#160;&#160;&#160;84      /* Illegal byte sequence.  */</td></tr>
+<tr class="memitem:ac6c071293826a4e66a717bb38db7794d" id="r_ac6c071293826a4e66a717bb38db7794d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c071293826a4e66a717bb38db7794d">EILSEQ</a>&#160;&#160;&#160;84</td></tr>
 <tr class="memitem:ac17a3da7698285eea98185fe52d8f7a5" id="r_ac17a3da7698285eea98185fe52d8f7a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac17a3da7698285eea98185fe52d8f7a5">CHARSET_CLIENT</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:a3af995b83f82ffe9826fe125db316a15" id="r_a3af995b83f82ffe9826fe125db316a15"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3af995b83f82ffe9826fe125db316a15">CHARSET_VOLUME</a>&#160;&#160;&#160;2</td></tr>
 <tr class="memitem:a11935ae4791ec59bae48599f4b3abc16" id="r_a11935ae4791ec59bae48599f4b3abc16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11935ae4791ec59bae48599f4b3abc16">CHARSET_PRECOMPOSED</a>&#160;&#160;&#160;4</td></tr>
@@ -165,25 +165,35 @@ Functions</h2></td></tr>
 <tr class="memitem:ad8dcf44f19116c9969d3ccdfb36d0821" id="r_ad8dcf44f19116c9969d3ccdfb36d0821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8dcf44f19116c9969d3ccdfb36d0821">tolower_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>)</td></tr>
 <tr class="memitem:ab5cc0298f84b88de488fe668f7b4a8ca" id="r_ab5cc0298f84b88de488fe668f7b4a8ca"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5cc0298f84b88de488fe668f7b4a8ca">tolower_sp</a> (uint32_t)</td></tr>
 <tr class="memitem:a291452773619f464fb8ee04c964745cd" id="r_a291452773619f464fb8ee04c964745cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a291452773619f464fb8ee04c964745cd">strupper_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:a291452773619f464fb8ee04c964745cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to upper case.  <br /></td></tr>
 <tr class="memitem:ab94c949896a1907eb25454b61eadbef7" id="r_ab94c949896a1907eb25454b61eadbef7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94c949896a1907eb25454b61eadbef7">strlower_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
-<tr class="memitem:a1fce9d5f6bf7c7733a08704578ef1628" id="r_a1fce9d5f6bf7c7733a08704578ef1628"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fce9d5f6bf7c7733a08704578ef1628">islower_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>)</td></tr>
-<tr class="memitem:ab52044dc543e4b54f3707d0cd8f6015e" id="r_ab52044dc543e4b54f3707d0cd8f6015e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab52044dc543e4b54f3707d0cd8f6015e">isupper_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>)</td></tr>
+<tr class="memdesc:ab94c949896a1907eb25454b61eadbef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to lower case.  <br /></td></tr>
 <tr class="memitem:ac26f8474a43b3243d0983621343072e7" id="r_ac26f8474a43b3243d0983621343072e7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac26f8474a43b3243d0983621343072e7">strlen_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:ac26f8474a43b3243d0983621343072e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strlen()  <br /></td></tr>
 <tr class="memitem:a58cee870cd7f8527e67153f4c2d2836c" id="r_a58cee870cd7f8527e67153f4c2d2836c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58cee870cd7f8527e67153f4c2d2836c">strnlen_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t)</td></tr>
+<tr class="memdesc:a58cee870cd7f8527e67153f4c2d2836c"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide <a class="el" href="compat_8h.html#a7bd978e4981a80586c5b3a0dac22f0f2">strnlen()</a>  <br /></td></tr>
 <tr class="memitem:ae2a4bf6e747d77d1f8ae8296cf2229ac" id="r_ae2a4bf6e747d77d1f8ae8296cf2229ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a4bf6e747d77d1f8ae8296cf2229ac">strchr_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>)</td></tr>
+<tr class="memdesc:ae2a4bf6e747d77d1f8ae8296cf2229ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strchr()  <br /></td></tr>
 <tr class="memitem:a766dcdbae0a83c445622ba506839acc6" id="r_a766dcdbae0a83c445622ba506839acc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a766dcdbae0a83c445622ba506839acc6">strcasechr_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *s, <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> c)</td></tr>
+<tr class="memdesc:a766dcdbae0a83c445622ba506839acc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strcasechr()  <br /></td></tr>
 <tr class="memitem:a3526f063cbe91a1a254f49b8afe14b3b" id="r_a3526f063cbe91a1a254f49b8afe14b3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3526f063cbe91a1a254f49b8afe14b3b">strcmp_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:a3526f063cbe91a1a254f49b8afe14b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strcmp()  <br /></td></tr>
 <tr class="memitem:abdf12ddb33c8a73bec7197cc55e3978a" id="r_abdf12ddb33c8a73bec7197cc55e3978a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdf12ddb33c8a73bec7197cc55e3978a">strncmp_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t)</td></tr>
+<tr class="memdesc:abdf12ddb33c8a73bec7197cc55e3978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strncmp()  <br /></td></tr>
 <tr class="memitem:a8a2a5e2d6a2a9e12c02ab0474796995c" id="r_a8a2a5e2d6a2a9e12c02ab0474796995c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a2a5e2d6a2a9e12c02ab0474796995c">strcasecmp_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:a8a2a5e2d6a2a9e12c02ab0474796995c"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strcasecmp()  <br /></td></tr>
 <tr class="memitem:abfe302234493d4f50db5550fd75a0678" id="r_abfe302234493d4f50db5550fd75a0678"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe302234493d4f50db5550fd75a0678">strncasecmp_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t)</td></tr>
+<tr class="memdesc:abfe302234493d4f50db5550fd75a0678"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strncasecmp()  <br /></td></tr>
 <tr class="memitem:ae38c168893922033c2a777a9e3e58ea8" id="r_ae38c168893922033c2a777a9e3e58ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae38c168893922033c2a777a9e3e58ea8">strstr_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *s, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *ins)</td></tr>
+<tr class="memdesc:ae38c168893922033c2a777a9e3e58ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strstr()  <br /></td></tr>
 <tr class="memitem:a7e0d71ad034e7fd6898a3c50be7fcbe5" id="r_a7e0d71ad034e7fd6898a3c50be7fcbe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e0d71ad034e7fd6898a3c50be7fcbe5">strcasestr_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:a7e0d71ad034e7fd6898a3c50be7fcbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strcasestr()  <br /></td></tr>
 <tr class="memitem:a26bf3338ff6093bd79dd7622763f02d6" id="r_a26bf3338ff6093bd79dd7622763f02d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26bf3338ff6093bd79dd7622763f02d6">strndup_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t)</td></tr>
+<tr class="memdesc:a26bf3338ff6093bd79dd7622763f02d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strndup()  <br /></td></tr>
 <tr class="memitem:a3292f3fe40661f7912c6072883cdc367" id="r_a3292f3fe40661f7912c6072883cdc367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3292f3fe40661f7912c6072883cdc367">strdup_w</a> (const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
-<tr class="memitem:a961308869541ab589c7dbd8a45de06e9" id="r_a961308869541ab589c7dbd8a45de06e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a961308869541ab589c7dbd8a45de06e9">strncpy_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const size_t)</td></tr>
-<tr class="memitem:a3cad45c7d611975966b6a9d6590ac32d" id="r_a3cad45c7d611975966b6a9d6590ac32d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cad45c7d611975966b6a9d6590ac32d">strncat_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const size_t)</td></tr>
-<tr class="memitem:ac288ced39af07028fafe3aa1c2dcea18" id="r_ac288ced39af07028fafe3aa1c2dcea18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac288ced39af07028fafe3aa1c2dcea18">strcat_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *)</td></tr>
+<tr class="memdesc:a3292f3fe40661f7912c6072883cdc367"><td class="mdescLeft">&#160;</td><td class="mdescRight">wide strdup()  <br /></td></tr>
 <tr class="memitem:a0f83b7f8fd70fe94e0620a630a96185f" id="r_a0f83b7f8fd70fe94e0620a630a96185f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f83b7f8fd70fe94e0620a630a96185f">precompose_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t, <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t *)</td></tr>
+<tr class="memdesc:a0f83b7f8fd70fe94e0620a630a96185f"><td class="mdescLeft">&#160;</td><td class="mdescRight">pre|decomposition  <br /></td></tr>
 <tr class="memitem:a802f03960e093a61366745b71e5d3d85" id="r_a802f03960e093a61366745b71e5d3d85"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a802f03960e093a61366745b71e5d3d85">decompose_w</a> (<a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t, <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t *)</td></tr>
 <tr class="memitem:a08ca5df7b76564d3af262da4bdea5e17" id="r_a08ca5df7b76564d3af262da4bdea5e17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08ca5df7b76564d3af262da4bdea5e17">set_charset_name</a> (<a class="el" href="#af153ec19ae548b53b7c1cc9829359210">charset_t</a>, const char *)</td></tr>
 <tr class="memitem:a1f15f8f3d8b83ff54d8dfaa6cdedd84e" id="r_a1f15f8f3d8b83ff54d8dfaa6cdedd84e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f15f8f3d8b83ff54d8dfaa6cdedd84e">free_charset_names</a> (void)</td></tr>
@@ -311,6 +321,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ignore EILSEQ, replace with IGNORE_CHAR (try USC2) </p>
 
 </div>
 </div>
@@ -325,6 +336,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>decompose </p>
 
 </div>
 </div>
@@ -339,6 +351,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>escape leading dots with :2600 </p>
 
 </div>
 </div>
@@ -353,6 +366,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>escape unconvertable chars with :[UCS2HEX], also escape '/'. Escape ':' if also CONV_ALLOW_COLON, else ':' raises EILSEQ </p>
 
 </div>
 </div>
@@ -367,6 +381,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>force convertion </p>
 
 </div>
 </div>
@@ -381,6 +396,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return the first convertable characters. </p>
 
 </div>
 </div>
@@ -395,6 +411,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>precompose </p>
 
 </div>
 </div>
@@ -409,6 +426,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>espace unconvertable chars with :[UCS2HEX] </p>
 
 </div>
 </div>
@@ -423,6 +441,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mangling of returned name is required </p>
 
 </div>
 </div>
@@ -437,6 +456,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>convert to lowercase </p>
 
 </div>
 </div>
@@ -451,6 +471,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>convert to UPPERcase </p>
 
 </div>
 </div>
@@ -475,10 +496,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EILSEQ&#160;&#160;&#160;84      /* Illegal byte sequence.  */</td>
+          <td class="memname">#define EILSEQ&#160;&#160;&#160;84</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Illegal byte sequence. </p>
 
 </div>
 </div>
@@ -554,6 +576,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this defines the charset types used in netatalk </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af153ec19ae548b53b7c1cc9829359210aa6b63db6ae07ecbac0f851b3d0006e14" name="af153ec19ae548b53b7c1cc9829359210aa6b63db6ae07ecbac0f851b3d0006e14"></a>CH_UCS2&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="af153ec19ae548b53b7c1cc9829359210af781f244c467f78d9f48b3a394267802" name="af153ec19ae548b53b7c1cc9829359210af781f244c467f78d9f48b3a394267802"></a>CH_UTF8&#160;</td><td class="fielddoc"></td></tr>
@@ -659,6 +682,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>simple iconv_close() wrapper </p>
 
 </div>
 </div>
@@ -688,6 +712,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>simple iconv_open() wrapper </p>
 
 </div>
 </div>
@@ -948,6 +973,8 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000010">Bug</a></b></dt><dd>the size is a mess we really need a malloc/free logic </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>dest size must be dest_len +2 </dd></dl>
 
 </div>
 </div>
@@ -1161,56 +1188,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1fce9d5f6bf7c7733a08704578ef1628" name="a1fce9d5f6bf7c7733a08704578ef1628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fce9d5f6bf7c7733a08704578ef1628">&#9670;&#160;</a></span>islower_w()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int islower_w </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab52044dc543e4b54f3707d0cd8f6015e" name="ab52044dc543e4b54f3707d0cd8f6015e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab52044dc543e4b54f3707d0cd8f6015e">&#9670;&#160;</a></span>isupper_w()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int isupper_w </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0f83b7f8fd70fe94e0620a630a96185f" name="a0f83b7f8fd70fe94e0620a630a96185f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f83b7f8fd70fe94e0620a630a96185f">&#9670;&#160;</a></span>precompose_w()</h2>
 
@@ -1247,6 +1224,11 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pre|decomposition </p>
+<p>we can't use static, this stuff needs to be reentrant static char comp[MAXPATHLEN +1];</p>
+<p>We don't implement Singleton and Canonical Ordering. We ignore CompositionExclusions.txt because they cause the problem of the roundtrip such as Dancing Icon.</p>
+<p>exclude U2000-U2FFF, UFE30-UFE4F and U2F800-U2FA1F ranges in <a class="el" href="precompose_8h.html">precompose.h</a> from composition according to AFP 3.x spec </p>
 
 </div>
 </div>
@@ -1306,6 +1288,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strcasechr() </p>
+<dl class="section note"><dt>Note</dt><dd>separately process BMP and surrogate pair </dd></dl>
+
 </div>
 </div>
 <a id="a8a2a5e2d6a2a9e12c02ab0474796995c" name="a8a2a5e2d6a2a9e12c02ab0474796995c"></a>
@@ -1334,6 +1319,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>wide strcasecmp() </p>
+<p>case insensitive string comparison </p><dl class="section note"><dt>Note</dt><dd>surrogate pair support </dd></dl>
 
 </div>
 </div>
@@ -1364,34 +1352,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ac288ced39af07028fafe3aa1c2dcea18" name="ac288ced39af07028fafe3aa1c2dcea18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac288ced39af07028fafe3aa1c2dcea18">&#9670;&#160;</a></span>strcat_w()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strcat_w </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>wide strcasestr() </p>
+<dl class="section note"><dt>Note</dt><dd>surrogate pair support </dd></dl>
 
 </div>
 </div>
@@ -1422,6 +1384,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strchr() </p>
+<dl class="section note"><dt>Note</dt><dd>hi and lo of surrogate pair are separately processed. </dd></dl>
+
 </div>
 </div>
 <a id="a3526f063cbe91a1a254f49b8afe14b3b" name="a3526f063cbe91a1a254f49b8afe14b3b"></a>
@@ -1451,6 +1416,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strcmp() </p>
+<dl class="section note"><dt>Note</dt><dd>no problem of surrogate pair </dd></dl>
+
 </div>
 </div>
 <a id="a3292f3fe40661f7912c6072883cdc367" name="a3292f3fe40661f7912c6072883cdc367"></a>
@@ -1475,6 +1443,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>wide strdup() </p>
+<p>duplicate string </p><dl class="section note"><dt>Note</dt><dd>no problem of surrogate pair </dd></dl>
 
 </div>
 </div>
@@ -1501,6 +1472,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strlen() </p>
+<p>Count the number of characters in a UTF-16 string. </p><dl class="section note"><dt>Note</dt><dd>one surrogate pair is two characters. </dd></dl>
+
 </div>
 </div>
 <a id="ab94c949896a1907eb25454b61eadbef7" name="ab94c949896a1907eb25454b61eadbef7"></a>
@@ -1525,6 +1499,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Convert a string to lower case. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if any char is converted </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>surrogate pair support </dd></dl>
 
 </div>
 </div>
@@ -1560,39 +1538,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a3cad45c7d611975966b6a9d6590ac32d" name="a3cad45c7d611975966b6a9d6590ac32d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cad45c7d611975966b6a9d6590ac32d">&#9670;&#160;</a></span>strncat_w()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strncat_w </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>wide strncasecmp() </p>
+<p>case insensitive string comparison, length limited </p><dl class="section note"><dt>Note</dt><dd>compare up to 'len+1' if 'len' isolate surrogate pair </dd></dl>
 
 </div>
 </div>
@@ -1628,39 +1575,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a961308869541ab589c7dbd8a45de06e9" name="a961308869541ab589c7dbd8a45de06e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a961308869541ab589c7dbd8a45de06e9">&#9670;&#160;</a></span>strncpy_w()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> * strncpy_w </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>wide strncmp() </p>
+<dl class="section note"><dt>Note</dt><dd>no problem of surrogate pair </dd></dl>
 
 </div>
 </div>
@@ -1691,6 +1607,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strndup() </p>
+<p>duplicate string </p><dl class="section note"><dt>Note</dt><dd>not check isolation of surrogate pair </dd>
+<dd>
+if len == 0 then duplicate the whole string </dd></dl>
+
 </div>
 </div>
 <a id="a58cee870cd7f8527e67153f4c2d2836c" name="a58cee870cd7f8527e67153f4c2d2836c"></a>
@@ -1719,6 +1640,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>wide <a class="el" href="compat_8h.html#a7bd978e4981a80586c5b3a0dac22f0f2">strnlen()</a> </p>
+<p>Count up to max number of characters in a UTF-16 string. </p><dl class="section note"><dt>Note</dt><dd>one surrogate pair is two characters. </dd></dl>
 
 </div>
 </div>
@@ -1749,6 +1673,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wide strstr() </p>
+<dl class="section note"><dt>Note</dt><dd>no problem of surrogate pair </dd></dl>
+
 </div>
 </div>
 <a id="a291452773619f464fb8ee04c964745cd" name="a291452773619f464fb8ee04c964745cd"></a>
@@ -1773,6 +1700,10 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Convert a string to upper case. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if any char is converted </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>surrogate pair support </dd></dl>
 
 </div>
 </div>

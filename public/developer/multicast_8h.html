@@ -111,6 +111,7 @@ $(function(){initNavTree('multicast_8h.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:aef18c7176fb1e6d5c60ddcd22718c6c9" id="r_aef18c7176fb1e6d5c60ddcd22718c6c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef18c7176fb1e6d5c60ddcd22718c6c9">addmulti</a> (const char *, const unsigned char *)</td></tr>
 <tr class="memitem:a8c2bc3b121c290a0bc38566db70559fe" id="r_a8c2bc3b121c290a0bc38566db70559fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c2bc3b121c290a0bc38566db70559fe">zone_bcast</a> (struct <a class="el" href="structziptab.html">ziptab</a> *)</td></tr>
+<tr class="memdesc:a8c2bc3b121c290a0bc38566db70559fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in multicast for zone.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aef18c7176fb1e6d5c60ddcd22718c6c9" name="aef18c7176fb1e6d5c60ddcd22718c6c9"></a>
@@ -131,6 +132,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>configure multicast for a given named interface </p>
 
 </div>
 </div>
@@ -148,6 +150,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Fill in multicast for zone. </p>
+<dl class="section note"><dt>Note</dt><dd>There is a general issue here: how can we tell the type of interface we're configuring for? E.g. Is it ethernet, tokenring, or FDDI? (Of course, FDDI and Ethernet look just alike.) </dd></dl>
 
 </div>
 </div>

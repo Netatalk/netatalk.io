@@ -120,9 +120,7 @@ $(function(){initNavTree('server__lock_8c.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:a3a7a671dc73a33bde4e50d33d9f0e3b1" id="r_a3a7a671dc73a33bde4e50d33d9f0e3b1"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a7a671dc73a33bde4e50d33d9f0e3b1">server_lock</a> (char *program, char *<a class="el" href="etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a>, int <a class="el" href="pap_8c.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</td></tr>
 <tr class="memitem:ac9938f3ac5793f48a20b40a9d99c761f" id="r_ac9938f3ac5793f48a20b40a9d99c761f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9938f3ac5793f48a20b40a9d99c761f">check_lockfile</a> (const char *program, const char *<a class="el" href="etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a>)</td></tr>
-<tr class="memdesc:ac9938f3ac5793f48a20b40a9d99c761f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check lockfile.  <br /></td></tr>
 <tr class="memitem:a9a4e61d9a074881adcf845bd284ca9d9" id="r_a9a4e61d9a074881adcf845bd284ca9d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a4e61d9a074881adcf845bd284ca9d9">create_lockfile</a> (const char *program, const char *<a class="el" href="etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f">pidfile</a>)</td></tr>
-<tr class="memdesc:a9a4e61d9a074881adcf845bd284ca9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check and create lockfile.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -147,8 +145,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Check lockfile. </p>
+<p>Check lockfile </p>
 
 </div>
 </div>
@@ -170,8 +167,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Check and create lockfile. </p>
+<p>Check and create lockfile </p>
 
 </div>
 </div>
@@ -198,6 +194,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this creates an open lock file which hangs around until the program dies. it returns the pid. due to problems w/ solaris, this has been changed to do the kill() thing. </p>
 
 </div>
 </div>

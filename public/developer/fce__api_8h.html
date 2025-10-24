@@ -102,6 +102,9 @@ $(function(){initNavTree('fce__api_8h.html','',''); });
   <div class="headertitle"><div class="title">fce_api.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>API calls for file change event api.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="globals_8h_source.html">atalk/globals.h</a>&gt;</code><br />
 </div>
 <p><a href="fce__api_8h_source.html">Go to the source code of this file.</a></p>
@@ -142,10 +145,16 @@ Functions</h2></td></tr>
 <tr class="memitem:af5258bf0fb18d2486886ac0fd9c1cd17" id="r_af5258bf0fb18d2486886ac0fd9c1cd17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5258bf0fb18d2486886ac0fd9c1cd17">fce_pending_events</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a5f1126982eb824af925d5ff7f8849638" id="r_a5f1126982eb824af925d5ff7f8849638"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1126982eb824af925d5ff7f8849638">fce_register</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="#a91ddbcff9047c2f41df288c49f00846c">fce_ev_t</a> event, const char *<a class="el" href="structpath.html">path</a>, const char *oldpath)</td></tr>
 <tr class="memitem:acf46282171b6d3f75da9466ceb3a6dd4" id="r_acf46282171b6d3f75da9466ceb3a6dd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf46282171b6d3f75da9466ceb3a6dd4">fce_add_udp_socket</a> (const char *<a class="el" href="aecho_8c.html#a5cf8344356bfd77bdb1cfa3712a23bd2">target</a>)</td></tr>
+<tr class="memdesc:acf46282171b6d3f75da9466ceb3a6dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extern connect to afpd parameter.  <br /></td></tr>
 <tr class="memitem:abca72922d855ae978ac86bdc4ac81147" id="r_abca72922d855ae978ac86bdc4ac81147"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abca72922d855ae978ac86bdc4ac81147">fce_set_coalesce</a> (const char *coalesce_opt)</td></tr>
+<tr class="memdesc:abca72922d855ae978ac86bdc4ac81147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set event coalescation to reduce number of events sent over UDP.  <br /></td></tr>
 <tr class="memitem:abda9326c1c874309441c8daf2d2460e8" id="r_abda9326c1c874309441c8daf2d2460e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abda9326c1c874309441c8daf2d2460e8">fce_set_events</a> (const char *events)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>API calls for file change event api. </p>
+<dl class="section author"><dt>Author</dt><dd>: mw</dd></dl>
+<p>Created on 1. Oktober 2010, 21:35 </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="ac32d6dd63359da6ee6042b0653bb0d86" name="ac32d6dd63359da6ee6042b0653bb0d86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac32d6dd63359da6ee6042b0653bb0d86">&#9670;&#160;</a></span>FCE_CONN_BROKEN</h2>
 
@@ -409,6 +418,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>fce_packet.fce_magic </p>
 
 </div>
 </div>
@@ -457,6 +467,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Extern connect to afpd parameter. </p>
+<p>IP or IP:Port</p>
+<dl class="section note"><dt>Note</dt><dd>can be called multiple times for multiple listeners (up to MAX_UDP_SOCKS times) </dd></dl>
+
 </div>
 </div>
 <a id="af5258bf0fb18d2486886ac0fd9c1cd17" name="af5258bf0fb18d2486886ac0fd9c1cd17"></a>
@@ -473,6 +487,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>API-Calls for file change api, called from outside (file.c <a class="el" href="directory_8c.html">directory.c</a> <a class="el" href="ofork_8c.html">ofork.c</a> <a class="el" href="filedir_8c.html">filedir.c</a>) </p>
 
 </div>
 </div>
@@ -504,6 +519,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Dispatcher for all incoming file change events </p>
 
 </div>
 </div>
@@ -516,11 +532,15 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int fce_set_coalesce </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>coalesce_opt</em></span></td><td>)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set event coalescation to reduce number of events sent over UDP. </p>
+<p>all|delete|create</p>
+<dl class="section note"><dt>Note</dt><dd>supports event types all|delete|create </dd></dl>
 
 </div>
 </div>
@@ -538,6 +558,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>fmod,fdel,ddel,fcre,dcre </p>
 
 </div>
 </div>

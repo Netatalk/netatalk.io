@@ -102,6 +102,282 @@ $(function(){initNavTree('generic__cjk_8c.html','',''); });
   <div class="headertitle"><div class="title">generic_cjk.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="generic__cjk_8h_source.html">generic_cjk.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac378dfa664080e006915b8c6504adbf1" id="r_ac378dfa664080e006915b8c6504adbf1"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac378dfa664080e006915b8c6504adbf1">cjk_iconv</a> (void *cd, char **inbuf, char *end, char **outbuf, size_t *outbytesleft)</td></tr>
+<tr class="memitem:a16859ab85586236f385a8d6bc341a19c" id="r_a16859ab85586236f385a8d6bc341a19c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16859ab85586236f385a8d6bc341a19c">cjk_generic_push</a> (size_t(*char_func)(uint8_t *, const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t *), void *cd, char **inbuf, size_t *inbytesleft, char **outbuf, size_t *outbytesleft)</td></tr>
+<tr class="memitem:a0c2c0abb9dcc1403ec0f006565a8149d" id="r_a0c2c0abb9dcc1403ec0f006565a8149d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c2c0abb9dcc1403ec0f006565a8149d">cjk_generic_pull</a> (size_t(*char_func)(<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const uint8_t *, size_t *), void *cd, char **inbuf, size_t *inbytesleft, char **outbuf, size_t *outbytesleft)</td></tr>
+<tr class="memitem:a4f51ee506e038aadd972b78133fe5a64" id="r_a4f51ee506e038aadd972b78133fe5a64"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f51ee506e038aadd972b78133fe5a64">cjk_char_push</a> (uint16_t c, uint8_t *out)</td></tr>
+<tr class="memitem:a684c0d6405b76b99d4595b12fb68be44" id="r_a684c0d6405b76b99d4595b12fb68be44"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a684c0d6405b76b99d4595b12fb68be44">cjk_char_pull</a> (<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> wc, <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *out, const uint32_t *compose)</td></tr>
+<tr class="memitem:ae94a8877d4abe3d3972c2a67a94bd3b5" id="r_ae94a8877d4abe3d3972c2a67a94bd3b5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae94a8877d4abe3d3972c2a67a94bd3b5">cjk_lookup</a> (uint16_t c, const <a class="el" href="structcjk__index__t.html">cjk_index_t</a> *index, const uint16_t *charset)</td></tr>
+<tr class="memitem:a980bbea0511d958b7f26c829bd60fca5" id="r_a980bbea0511d958b7f26c829bd60fca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a980bbea0511d958b7f26c829bd60fca5">cjk_compose</a> (<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> <a class="el" href="netatalk_8c.html#ab1a154f7530a81e9dd1d63fc6b98a5c7">base</a>, <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> <a class="el" href="precompose_8h.html#acee30aba273265a8b12a929d9b81bbe7">comb</a>, const uint32_t *<a class="el" href="hash_8c.html#a5703a0eddc658df60e6a6b1bebcd301d">table</a>, size_t size)</td></tr>
+<tr class="memitem:a4f5e35c4432e7c0e134ee633ebfd444f" id="r_a4f5e35c4432e7c0e134ee633ebfd444f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f5e35c4432e7c0e134ee633ebfd444f">cjk_compose_seq</a> (const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *in, size_t *len, const uint32_t *<a class="el" href="hash_8c.html#a5703a0eddc658df60e6a6b1bebcd301d">table</a>, size_t size)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a684c0d6405b76b99d4595b12fb68be44" name="a684c0d6405b76b99d4595b12fb68be44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684c0d6405b76b99d4595b12fb68be44">&#9670;&#160;</a></span>cjk_char_pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cjk_char_pull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>wc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *</td>          <td class="paramname"><span class="paramname"><em>compose</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f51ee506e038aadd972b78133fe5a64" name="a4f51ee506e038aadd972b78133fe5a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f51ee506e038aadd972b78133fe5a64">&#9670;&#160;</a></span>cjk_char_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cjk_char_push </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a980bbea0511d958b7f26c829bd60fca5" name="a980bbea0511d958b7f26c829bd60fca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980bbea0511d958b7f26c829bd60fca5">&#9670;&#160;</a></span>cjk_compose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> cjk_compose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>base</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a></td>          <td class="paramname"><span class="paramname"><em>comb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *</td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f5e35c4432e7c0e134ee633ebfd444f" name="a4f5e35c4432e7c0e134ee633ebfd444f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f5e35c4432e7c0e134ee633ebfd444f">&#9670;&#160;</a></span>cjk_compose_seq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> cjk_compose_seq </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *</td>          <td class="paramname"><span class="paramname"><em>table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c2c0abb9dcc1403ec0f006565a8149d" name="a0c2c0abb9dcc1403ec0f006565a8149d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2c0abb9dcc1403ec0f006565a8149d">&#9670;&#160;</a></span>cjk_generic_pull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cjk_generic_pull </td>
+          <td>(</td>
+          <td class="paramtype">size_t(*</td>          <td class="paramname"><span class="paramname"><em>char_func&#160;</em></span>)(<a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, const uint8_t *, size_t *), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>inbytesleft</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16859ab85586236f385a8d6bc341a19c" name="a16859ab85586236f385a8d6bc341a19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16859ab85586236f385a8d6bc341a19c">&#9670;&#160;</a></span>cjk_generic_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cjk_generic_push </td>
+          <td>(</td>
+          <td class="paramtype">size_t(*</td>          <td class="paramname"><span class="paramname"><em>char_func&#160;</em></span>)(uint8_t *, const <a class="el" href="unicode_8h.html#a13d6e532c53eb7adab2155f5401a2b16">ucs2_t</a> *, size_t *), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>inbytesleft</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac378dfa664080e006915b8c6504adbf1" name="ac378dfa664080e006915b8c6504adbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac378dfa664080e006915b8c6504adbf1">&#9670;&#160;</a></span>cjk_iconv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cjk_iconv </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>outbytesleft</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae94a8877d4abe3d3972c2a67a94bd3b5" name="ae94a8877d4abe3d3972c2a67a94bd3b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae94a8877d4abe3d3972c2a67a94bd3b5">&#9670;&#160;</a></span>cjk_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t cjk_lookup </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcjk__index__t.html">cjk_index_t</a> *</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t *</td>          <td class="paramname"><span class="paramname"><em>charset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

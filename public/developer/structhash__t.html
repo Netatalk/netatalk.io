@@ -121,7 +121,20 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a29fafce5c021fb2e96ec8b820cc9d478" id="r_a29fafce5c021fb2e96ec8b820cc9d478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fafce5c021fb2e96ec8b820cc9d478">hash_mask</a></td></tr>
 <tr class="memitem:a9baca324df3b6ef28711f12262d993bd" id="r_a9baca324df3b6ef28711f12262d993bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9baca324df3b6ef28711f12262d993bd">hash_dynamic</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the hash table control structure. It keeps track of information about a hash table, as well as the hash table itself. Notes:</p><ol type="1">
+<li>Pointer to the hash table proper. The table is an array of pointers to hash nodes (of type <a class="el" href="structhnode__t.html" title="Hash chain node structure.">hnode_t</a>). If the table is empty, every element of this table is a null pointer. A non-null entry points to the first element of a chain of nodes.</li>
+<li>This member keeps track of the size of the hash table&mdash;that is, the number of chain pointers.</li>
+<li>The count member maintains the number of elements that are presently in the hash table.</li>
+<li>The maximum count is the greatest number of nodes that can populate this table. If the table contains this many nodes, no more can be inserted, and the <a class="el" href="etc_2afpd_2hash_8h.html#abb2fc3909c1b755c2eebbfca70b75224">hash_isfull()</a> function returns true.</li>
+<li>The high mark is a population threshold, measured as a number of nodes, which, if exceeded, will trigger a table expansion. Only dynamic hash tables are subject to this expansion.</li>
+<li>The low mark is a minimum population threshold, measured as a number of nodes. If the table population drops below this value, a table shrinkage will occur. Only dynamic tables are subject to this reduction. No table will shrink beneath a certain absolute minimum number of nodes.</li>
+<li>This is the a pointer to the hash table's comparison function. The function is set once at initialization or creation time.</li>
+<li>Pointer to the table's hashing function, set once at creation or initialization time.</li>
+<li>The current hash table mask. If the size of the hash table is 2^N, this value has its low N bits set to 1, and the others clear. It is used to select bits from the result of the hashing function to compute an index into the table.</li>
+<li>A flag which indicates whether the table is to be dynamically resized. It is set to 1 in dynamically allocated tables, 0 in tables that are statically allocated. </li>
+</ol>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a508c404b448b373d318e5fb7b865f112" name="a508c404b448b373d318e5fb7b865f112"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a508c404b448b373d318e5fb7b865f112">&#9670;&#160;</a></span>hash_allocnode</h2>
 
@@ -147,6 +160,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>7 </p>
 
 </div>
 </div>
@@ -175,6 +189,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>10 </p>
 
 </div>
 </div>
@@ -203,6 +218,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>8 </p>
 
 </div>
 </div>
@@ -217,6 +233,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>5 </p>
 
 </div>
 </div>
@@ -231,6 +248,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>6 </p>
 
 </div>
 </div>
@@ -245,6 +263,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>9 </p>
 
 </div>
 </div>
@@ -259,6 +278,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>4 </p>
 
 </div>
 </div>
@@ -273,6 +293,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>2 </p>
 
 </div>
 </div>
@@ -287,6 +308,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>3 </p>
 
 </div>
 </div>
@@ -301,6 +323,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>1 </p>
 
 </div>
 </div>

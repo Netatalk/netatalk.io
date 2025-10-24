@@ -121,10 +121,12 @@ $(function(){initNavTree('papd_2uam_8c.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:ae58ff488a1caf2ba0a28f7e699bc5840" id="r_ae58ff488a1caf2ba0a28f7e699bc5840"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structuam__mod.html">uam_mod</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae58ff488a1caf2ba0a28f7e699bc5840">uam_load</a> (const char *<a class="el" href="structpath.html">path</a>, const char *name)</td></tr>
 <tr class="memitem:a630959772254ed339bab36ce0f7818b4" id="r_a630959772254ed339bab36ce0f7818b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630959772254ed339bab36ce0f7818b4">uam_unload</a> (struct <a class="el" href="structuam__mod.html">uam_mod</a> *mod)</td></tr>
+<tr class="memdesc:a630959772254ed339bab36ce0f7818b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">unload the module.  <br /></td></tr>
 <tr class="memitem:ab238597a251061121005dad7f2e977c7" id="r_ab238597a251061121005dad7f2e977c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab238597a251061121005dad7f2e977c7">uam_register</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *<a class="el" href="structpath.html">path</a>, const char *name,...)</td></tr>
 <tr class="memitem:aff8135e4110e7170bedfaacf90baad5d" id="r_aff8135e4110e7170bedfaacf90baad5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8135e4110e7170bedfaacf90baad5d">uam_unregister</a> (const int <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const char *name)</td></tr>
 <tr class="memitem:a5feff44740965738c73862875e7fa393" id="r_a5feff44740965738c73862875e7fa393"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5feff44740965738c73862875e7fa393">uam_afpserver_option</a> (void *private, const int what, void *option, size_t *len)</td></tr>
-<tr class="memitem:a855fc38de5012062abfd4dc3fd9bf5b7" id="r_a855fc38de5012062abfd4dc3fd9bf5b7"><td class="memItemLeft" align="right" valign="top">struct passwd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855fc38de5012062abfd4dc3fd9bf5b7">uam_getname</a> (void *dummy, char *name, const int len)</td></tr>
+<tr class="memitem:ab46c13a4dd468f148a499ff68168ca05" id="r_ab46c13a4dd468f148a499ff68168ca05"><td class="memItemLeft" align="right" valign="top">struct passwd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46c13a4dd468f148a499ff68168ca05">uam_getname</a> (void *private, char *name, const int len)</td></tr>
+<tr class="memdesc:ab46c13a4dd468f148a499ff68168ca05"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper functions for plugin uams  <br /></td></tr>
 <tr class="memitem:a4ac7f72a4be9997db081530449fafc43" id="r_a4ac7f72a4be9997db081530449fafc43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ac7f72a4be9997db081530449fafc43">uam_checkuser</a> (void *private, const struct passwd *pwd)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -156,6 +158,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Crap to support uams which call this afpd function </p>
 
 </div>
 </div>
@@ -180,8 +183,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a855fc38de5012062abfd4dc3fd9bf5b7" name="a855fc38de5012062abfd4dc3fd9bf5b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a855fc38de5012062abfd4dc3fd9bf5b7">&#9670;&#160;</a></span>uam_getname()</h2>
+<a id="ab46c13a4dd468f148a499ff68168ca05" name="ab46c13a4dd468f148a499ff68168ca05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46c13a4dd468f148a499ff68168ca05">&#9670;&#160;</a></span>uam_getname()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +192,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">struct passwd * uam_getname </td>
           <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>dummy</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>private</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -203,6 +206,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>helper functions for plugin uams </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">private</td><td>pointer to <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> </td></tr>
+    <tr><td class="paramname">name</td><td>user name </td></tr>
+    <tr><td class="paramname">len</td><td>size of name buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -255,6 +268,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set up stuff for this uam. </p>
 
 </div>
 </div>
@@ -272,6 +286,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>unload the module. </p>
+<p>we check for a cleanup function, but we don't die if one doesn't exist. however, things are likely to leak without one. </p>
 
 </div>
 </div>

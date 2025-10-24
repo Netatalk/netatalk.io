@@ -117,45 +117,33 @@ $(function(){initNavTree('cnid_8h_source.html','',''); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * https://github.com/Netatalk/netatalk/issues/1193</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * This file contains all generic CNID related stuff</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * declarations. Included:</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * - CNID factory, which retrieves (eventually instantiates)</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *   CNID objects on demand</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * - selection of CNID backends (default, detected by volume)</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * - full set of CNID operations needed by server core.</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifndef _ATALK_CNID__H</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define _ATALK_CNID__H 1</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="adouble_8h.html">atalk/adouble.h</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="include_2atalk_2list_8h.html">atalk/list.h</a>&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="uuid_8h.html">atalk/uuid.h</a>&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">/* CNID object flags */</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="cnid_8h.html#a0b627ea7540a513183d9f39329c9fa6f">   34</a></span><span class="preprocessor">#define CNID_FLAG_PERSISTENT   0x01      </span><span class="comment">/* This backend implements DID persistence */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="cnid_8h.html#abce9e8195f63618332582e509c7e1172">   35</a></span><span class="preprocessor">#define CNID_FLAG_MANGLING     0x02      </span><span class="comment">/* This backend has name mangling feature. */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="cnid_8h.html#a174ac99ba790bffaad1a6acfc5dedc89">   36</a></span><span class="preprocessor">#define CNID_FLAG_SETUID       0x04      </span><span class="comment">/* Set db owner to parent folder owner. */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="cnid_8h.html#ae9d56882006c76e9c983d0fd36d37b72">   37</a></span><span class="preprocessor">#define CNID_FLAG_BLOCK        0x08      </span><span class="comment">/* block signals in update. */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="cnid_8h.html#a8cdb88c7da422253e94447a917f378b2">   38</a></span><span class="preprocessor">#define CNID_FLAG_NODEV        0x10      </span><span class="comment">/* don&#39;t use device number only inode */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="cnid_8h.html#ae416ae253ae12a8270817d53414b3d04">   39</a></span><span class="preprocessor">#define CNID_FLAG_LAZY_INIT    0x20      </span><span class="comment">/* */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="cnid_8h.html#af0a15de73ae88336e1b133425db5acb6">   40</a></span><span class="preprocessor">#define CNID_FLAG_INODE        0x80  </span><span class="comment">/* in cnid_add the inode is authoritative */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="cnid_8h.html#a58c2e4bc05a2a96ce3ad0025edae8f26">   42</a></span><span class="preprocessor">#define CNID_INVALID   0</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">/* first valid ID */</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="cnid_8h.html#a5d81c9ab513f3eab8489f2b23c84cb4f">   44</a></span><span class="preprocessor">#define CNID_START     17</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifndef _ATALK_CNID__H</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define _ATALK_CNID__H 1</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="adouble_8h.html">atalk/adouble.h</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;<a class="code" href="include_2atalk_2list_8h.html">atalk/list.h</a>&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;<a class="code" href="uuid_8h.html">atalk/uuid.h</a>&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/* CNID object flags */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="cnid_8h.html#a0b627ea7540a513183d9f39329c9fa6f">   35</a></span><span class="preprocessor">#define CNID_FLAG_PERSISTENT   0x01      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="cnid_8h.html#abce9e8195f63618332582e509c7e1172">   36</a></span><span class="preprocessor">#define CNID_FLAG_MANGLING     0x02      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="cnid_8h.html#a174ac99ba790bffaad1a6acfc5dedc89">   37</a></span><span class="preprocessor">#define CNID_FLAG_SETUID       0x04      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="cnid_8h.html#ae9d56882006c76e9c983d0fd36d37b72">   38</a></span><span class="preprocessor">#define CNID_FLAG_BLOCK        0x08      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="cnid_8h.html#a8cdb88c7da422253e94447a917f378b2">   39</a></span><span class="preprocessor">#define CNID_FLAG_NODEV        0x10      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="cnid_8h.html#ae416ae253ae12a8270817d53414b3d04">   40</a></span><span class="preprocessor">#define CNID_FLAG_LAZY_INIT    0x20</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="cnid_8h.html#af0a15de73ae88336e1b133425db5acb6">   41</a></span><span class="preprocessor">#define CNID_FLAG_INODE        0x80      </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="cnid_8h.html#a58c2e4bc05a2a96ce3ad0025edae8f26">   43</a></span><span class="preprocessor">#define CNID_INVALID   0</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="cnid_8h.html#a5d81c9ab513f3eab8489f2b23c84cb4f">   44</a></span><span class="preprocessor">#define CNID_START     17    </span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="cnid_8h.html#a32e57a47f2bcce11b0d79a58c9cd074d">   46</a></span><span class="preprocessor">#define CNID_ERR_PARAM 0x80000001</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="cnid_8h.html#ae44555df464925c77ea0c350aa92ad97">   47</a></span><span class="preprocessor">#define CNID_ERR_PATH  0x80000002</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="cnid_8h.html#ab79f6f1b4a43a8785f364e9f4e4206de">   48</a></span><span class="preprocessor">#define CNID_ERR_DB    0x80000003</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="cnid_8h.html#a1a6c373be2d95a870fcfed06991bb22e">   49</a></span><span class="preprocessor">#define CNID_ERR_CLOSE 0x80000004   </span><span class="comment">/* the db was not open */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="cnid_8h.html#a1a6c373be2d95a870fcfed06991bb22e">   49</a></span><span class="preprocessor">#define CNID_ERR_CLOSE 0x80000004   </span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="cnid_8h.html#a1e2e079295d67c3c6c7581bd6d0b9640">   50</a></span><span class="preprocessor">#define CNID_ERR_MAX   0x80000005</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> * This is instance of CNID database object.</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
 <div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct__cnid__db.html">   55</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct__cnid__db.html">_cnid_db</a> {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">/* Flags describing some CNID backend aspects. */</span></div>
@@ -187,7 +175,7 @@ $(function(){initNavTree('cnid_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"> * Consolidation of args passedn from main cnid_open to modules cnid_XXX_open, so</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"> * Consolidation of args passed from main cnid_open to modules cnid_XXX_open, so</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"> * that it&#39;s easier to add aditional args as required.</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"> */</span></div>
 <div class="foldopen" id="foldopen00087" data-start="{" data-end="};">
@@ -251,7 +239,7 @@ $(function(){initNavTree('cnid_8h_source.html','',''); });
 <div class="ttc" id="acnid_8h_html_a3be308c946aa6ccded6df33b6d39650f"><div class="ttname"><a href="cnid_8h.html#a3be308c946aa6ccded6df33b6d39650f">cnid_add</a></div><div class="ttdeci">cnid_t cnid_add(struct _cnid_db *cdb, const struct stat *st, const cnid_t did, const char *name, const size_t len, cnid_t hint)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:251</div></div>
 <div class="ttc" id="acnid_8h_html_a68611d046197211633f3d56943b26adf"><div class="ttname"><a href="cnid_8h.html#a68611d046197211633f3d56943b26adf">cnid_lookup</a></div><div class="ttdeci">cnid_t cnid_lookup(struct _cnid_db *cdb, const struct stat *st, const cnid_t did, char *name, const size_t len)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:314</div></div>
 <div class="ttc" id="acnid_8h_html_a6b1018c70c383f40230cc7cef20cfa59"><div class="ttname"><a href="cnid_8h.html#a6b1018c70c383f40230cc7cef20cfa59">cnid_get</a></div><div class="ttdeci">cnid_t cnid_get(struct _cnid_db *cdb, const cnid_t did, char *name, const size_t len)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:278</div></div>
-<div class="ttc" id="acnid_8h_html_a7935ab075188cb6a339e18142dd60ff8"><div class="ttname"><a href="cnid_8h.html#a7935ab075188cb6a339e18142dd60ff8">cnid_init</a></div><div class="ttdeci">void cnid_init(void)</div><div class="ttdef"><b>Definition</b> cnid_init.c:51</div></div>
+<div class="ttc" id="acnid_8h_html_a7935ab075188cb6a339e18142dd60ff8"><div class="ttname"><a href="cnid_8h.html#a7935ab075188cb6a339e18142dd60ff8">cnid_init</a></div><div class="ttdeci">void cnid_init(void)</div><div class="ttdef"><b>Definition</b> cnid_init.c:53</div></div>
 <div class="ttc" id="acnid_8h_html_a7aa1aa9d94ee37e33967945f2429687b"><div class="ttname"><a href="cnid_8h.html#a7aa1aa9d94ee37e33967945f2429687b">cnid_register</a></div><div class="ttdeci">void cnid_register(struct _cnid_module *module)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:47</div></div>
 <div class="ttc" id="acnid_8h_html_a8b3a825320cbc9b4ffb057f3d9864745"><div class="ttname"><a href="cnid_8h.html#a8b3a825320cbc9b4ffb057f3d9864745">cnid_wipe</a></div><div class="ttdeci">int cnid_wipe(struct _cnid_db *cdb)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:382</div></div>
 <div class="ttc" id="acnid_8h_html_a9b67032ac16f7b1e1f225664d480ea88"><div class="ttname"><a href="cnid_8h.html#a9b67032ac16f7b1e1f225664d480ea88">cnid_module</a></div><div class="ttdeci">struct _cnid_module cnid_module</div><div class="ttdef"><b>Definition</b> cnid.h:104</div></div>
@@ -262,9 +250,9 @@ $(function(){initNavTree('cnid_8h_source.html','',''); });
 <div class="ttc" id="acnid_8h_html_aebc57215592023913e27f44f9e15c34f"><div class="ttname"><a href="cnid_8h.html#aebc57215592023913e27f44f9e15c34f">cnid_find</a></div><div class="ttdeci">int cnid_find(struct _cnid_db *cdb, const char *name, size_t namelen, void *buffer, size_t buflen)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:326</div></div>
 <div class="ttc" id="acnid_8h_html_aefd952cf4f972a5ea7d9b8142e4d0c44"><div class="ttname"><a href="cnid_8h.html#aefd952cf4f972a5ea7d9b8142e4d0c44">cnid_open</a></div><div class="ttdeci">struct _cnid_db * cnid_open(struct vol *vol, char *type, int flags)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:104</div></div>
 <div class="ttc" id="acnid_8h_html_af6fa5fa1305b3760cc992bfc7a162ace"><div class="ttname"><a href="cnid_8h.html#af6fa5fa1305b3760cc992bfc7a162ace">cnid_resolve</a></div><div class="ttdeci">char * cnid_resolve(struct _cnid_db *cdb, cnid_t *id, void *buffer, size_t len)</div><div class="ttdef"><b>Definition</b> cnid/cnid.c:343</div></div>
-<div class="ttc" id="ainclude_2atalk_2list_8h_html"><div class="ttname"><a href="include_2atalk_2list_8h.html">list.h</a></div></div>
-<div class="ttc" id="anad__cp_8c_html_a39466504497f1ab95465d7daf62514c1"><div class="ttname"><a href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a></div><div class="ttdeci">cnid_t did</div><div class="ttdef"><b>Definition</b> nad_cp.c:92</div></div>
-<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
+<div class="ttc" id="ainclude_2atalk_2list_8h_html"><div class="ttname"><a href="include_2atalk_2list_8h.html">list.h</a></div><div class="ttdoc">Simple doubly linked list implementation.</div></div>
+<div class="ttc" id="anad__cp_8c_html_a39466504497f1ab95465d7daf62514c1"><div class="ttname"><a href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a></div><div class="ttdeci">cnid_t did</div><div class="ttdef"><b>Definition</b> nad_cp.c:93</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:96</div></div>
 <div class="ttc" id="anetacnv_8c_html_af2afce9d3c962a7307719b0a31a93438"><div class="ttname"><a href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a></div><div class="ttdeci">char buffer[MAXPATHLEN+2]</div><div class="ttdef"><b>Definition</b> netacnv.c:35</div></div>
 <div class="ttc" id="astruct__cnid__db_html"><div class="ttname"><a href="struct__cnid__db.html">_cnid_db</a></div><div class="ttdef"><b>Definition</b> cnid.h:55</div></div>
 <div class="ttc" id="astruct__cnid__db_html_a0dc47f5d7c673ad03cc1f7b779663e88"><div class="ttname"><a href="struct__cnid__db.html#a0dc47f5d7c673ad03cc1f7b779663e88">_cnid_db::cnid_getstamp</a></div><div class="ttdeci">int(* cnid_getstamp)(struct _cnid_db *cdb, void *buffer, const size_t len)</div><div class="ttdef"><b>Definition</b> cnid.h:75</div></div>
@@ -288,8 +276,8 @@ $(function(){initNavTree('cnid_8h_source.html','',''); });
 <div class="ttc" id="astructcnid__open__args_html"><div class="ttname"><a href="structcnid__open__args.html">cnid_open_args</a></div><div class="ttdef"><b>Definition</b> cnid.h:87</div></div>
 <div class="ttc" id="astructcnid__open__args_html_a513e308d0d2b30df6c5f02f152c43cff"><div class="ttname"><a href="structcnid__open__args.html#a513e308d0d2b30df6c5f02f152c43cff">cnid_open_args::cnid_args_flags</a></div><div class="ttdeci">uint32_t cnid_args_flags</div><div class="ttdef"><b>Definition</b> cnid.h:88</div></div>
 <div class="ttc" id="astructcnid__open__args_html_a95c86a93a6432de915b0bbd617f0acad"><div class="ttname"><a href="structcnid__open__args.html#a95c86a93a6432de915b0bbd617f0acad">cnid_open_args::cnid_args_vol</a></div><div class="ttdeci">struct vol * cnid_args_vol</div><div class="ttdef"><b>Definition</b> cnid.h:89</div></div>
-<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:17</div></div>
-<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:32</div></div>
+<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:18</div></div>
+<div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:30</div></div>
 <div class="ttc" id="atest_8c_html_a46412c89a7731ffc8811e98a65c63fbd"><div class="ttname"><a href="test_8c.html#a46412c89a7731ffc8811e98a65c63fbd">args</a></div><div class="ttdeci">static char * args[]</div><div class="ttdef"><b>Definition</b> test.c:48</div></div>
 <div class="ttc" id="auuid_8h_html"><div class="ttname"><a href="uuid_8h.html">uuid.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

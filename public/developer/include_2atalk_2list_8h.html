@@ -103,6 +103,9 @@ $(function(){initNavTree('include_2atalk_2list_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Simple doubly linked list implementation.  
+<a href="#details">More...</a></p>
+
 <p><a href="include_2atalk_2list_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -121,7 +124,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a19fc06b83f3502a83ce566b8887e6aec" id="r_a19fc06b83f3502a83ce566b8887e6aec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fc06b83f3502a83ce566b8887e6aec">list_for_each_prev</a>(pos,  head)</td></tr>
 <tr class="memdesc:a19fc06b83f3502a83ce566b8887e6aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterate over a list in reverse order  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Simple doubly linked list implementation. </p>
+<p>Some of the internal functions ("__xxx") are useful when manipulating whole lists rather than single entries, as sometimes we already know the next/prev entries and we can generate better code by using them directly rather than using the generic single-entry routines. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aa097666f64c35ddd963f60e3d8ea28eb" name="aa097666f64c35ddd963f60e3d8ea28eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa097666f64c35ddd963f60e3d8ea28eb">&#9670;&#160;</a></span>ATALK_INIT_LIST_HEAD</h2>
 
@@ -158,8 +164,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structlist__head.html">list_head</a> name = <a class="code hl_define" href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a>(name)</div>
-<div class="ttc" id="ainclude_2atalk_2list_8h_html_ac4012f22742a8e9c8d74c232373f5c5c"><div class="ttname"><a href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a></div><div class="ttdeci">#define ATALK_LIST_HEAD_INIT(name)</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:21</div></div>
-<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:17</div></div>
+<div class="ttc" id="ainclude_2atalk_2list_8h_html_ac4012f22742a8e9c8d74c232373f5c5c"><div class="ttname"><a href="#ac4012f22742a8e9c8d74c232373f5c5c">ATALK_LIST_HEAD_INIT</a></div><div class="ttdeci">#define ATALK_LIST_HEAD_INIT(name)</div><div class="ttdef"><b>Definition</b> include/atalk/list.h:22</div></div>
+<div class="ttc" id="astructlist__head_html"><div class="ttname"><a href="structlist__head.html">list_head</a></div><div class="ttdef"><b>Definition</b> include/atalk/list.h:18</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -205,7 +211,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)((<span class="keywordtype">char</span> *)(ptr)-(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(&amp;((<a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> *)0)-&gt;member)))</div>
-<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:95</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:96</div></div>
 </div><!-- fragment -->
 <p>get the struct for this entry </p>
 <dl class="params"><dt>Parameters</dt><dd>

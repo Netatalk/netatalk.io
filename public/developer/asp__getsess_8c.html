@@ -131,10 +131,12 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1da029d8ba464c96d7d6aa3cc516a77d" id="r_a1da029d8ba464c96d7d6aa3cc516a77d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da029d8ba464c96d7d6aa3cc516a77d">tickle_handler</a> (int sig)</td></tr>
+<tr class="memdesc:a1da029d8ba464c96d7d6aa3cc516a77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">send tickles and check tickle status of connections  <br /></td></tr>
 <tr class="memitem:a3406a51089df23ea92eb692aa1566aed" id="r_a3406a51089df23ea92eb692aa1566aed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3406a51089df23ea92eb692aa1566aed">asp_kill</a> (int sig)</td></tr>
 <tr class="memitem:a03440b4ec5b1e68aa60c5f13697a3b2c" id="r_a03440b4ec5b1e68aa60c5f13697a3b2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03440b4ec5b1e68aa60c5f13697a3b2c">asp_stop_tickle</a> (void)</td></tr>
 <tr class="memitem:a2676e6103c14dd7c0865a28baaa79e4b" id="r_a2676e6103c14dd7c0865a28baaa79e4b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2676e6103c14dd7c0865a28baaa79e4b">set_asp_ac</a> (int sid, struct <a class="el" href="structasp__child.html">asp_child</a> *tmp)</td></tr>
 <tr class="memitem:acc7d1131a6f6132ebc5626941a129b74" id="r_acc7d1131a6f6132ebc5626941a129b74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_s_p.html">ASP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc7d1131a6f6132ebc5626941a129b74">asp_getsession</a> (<a class="el" href="struct_a_s_p.html">ASP</a> asp, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="etc_2afpd_2main_8c.html#a97d2cbabc6a577e48df27da8484e91b2">server_children</a>, const int tickleval)</td></tr>
+<tr class="memdesc:acc7d1131a6f6132ebc5626941a129b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">This call handles open, tickle, and getstatus requests.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -204,6 +206,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This call handles open, tickle, and getstatus requests. </p>
+<dl class="section note"><dt>Note</dt><dd>On a successful open, it forks a child process. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="struct_a_s_p.html">ASP</a> to the child and parent and NULL if there is an error. </dd></dl>
+
 </div>
 </div>
 <a id="a3406a51089df23ea92eb692aa1566aed" name="a3406a51089df23ea92eb692aa1566aed"></a>
@@ -220,6 +226,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>kill children </p>
 
 </div>
 </div>
@@ -291,6 +298,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>send tickles and check tickle status of connections </p>
+<p>thoughts on using a hashed list:</p><ul>
+<li>+ child_cleanup, finding slots</li>
+<li>- tickle_handler, freeing, tickles</li>
+</ul>
+<p>if setup for a large number of connections:</p><ul>
+<li>+ space: if actual connections &lt; potential</li>
+<li>- space: actual connections ~ potential </li>
+</ul>
 
 </div>
 </div>

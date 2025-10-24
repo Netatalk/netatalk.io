@@ -102,43 +102,30 @@ $(function(){initNavTree('afp__zeroconf_8h_source.html','',''); });
   <div class="headertitle"><div class="title">afp_zeroconf.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="afp__zeroconf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- Mode: C; tab-width: 2; indent-tabs-mode: t; c-basic-offset: 2 -*- */</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Author:  Daniel S. Haischt &lt;me@daniel.stefan.haischt.name&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Purpose: Zeroconf facade, that abstracts access to a</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *          particular Zeroconf implementation</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Doc:     http://www.dns-sd.org/</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef AFPD_ZEROCONF_H</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define AFPD_ZEROCONF_H</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="globals_8h.html">atalk/globals.h</a>&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#aef4b886c6963bfc9746740f8985d00d6">   15</a></span><span class="preprocessor">#define AFP_DNS_SERVICE_TYPE &quot;_afpovertcp._tcp&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a7b5bc3af103d8e72794f43e8d1312278">   16</a></span><span class="preprocessor">#define ADISK_SERVICE_TYPE &quot;_adisk._tcp&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a8b3cb6b92653f64381dac12060e54695">   17</a></span><span class="preprocessor">#define DEV_INFO_SERVICE_TYPE &quot;_device-info._tcp&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a23391392959a16d5b7763ee6e5aac971">   19</a></span><span class="preprocessor">#define MAXINSTANCENAMELEN 63</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * Prototype Definitions</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * registers service with a particular Zerconf implemenation.</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e">zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> * de-registers the ntpd service with a particular Zerconf implemenation.</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__zeroconf_8h.html#a883d20fc9f09bf630b05c58ff3c90fbb">zeroconf_deregister</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">/* AFPD_ZEROCONF_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aafp__zeroconf_8h_html_a883d20fc9f09bf630b05c58ff3c90fbb"><div class="ttname"><a href="afp__zeroconf_8h.html#a883d20fc9f09bf630b05c58ff3c90fbb">zeroconf_deregister</a></div><div class="ttdeci">void zeroconf_deregister(void)</div><div class="ttdef"><b>Definition</b> afp_zeroconf.c:38</div></div>
-<div class="ttc" id="aafp__zeroconf_8h_html_ade523c8419f613e7ebb213fe3598a89e"><div class="ttname"><a href="afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e">zeroconf_register</a></div><div class="ttdeci">void zeroconf_register(const AFPObj *obj)</div><div class="ttdef"><b>Definition</b> afp_zeroconf.c:26</div></div>
+<a href="afp__zeroconf_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef AFPD_ZEROCONF_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define AFPD_ZEROCONF_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="globals_8h.html">atalk/globals.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#aef4b886c6963bfc9746740f8985d00d6">   14</a></span><span class="preprocessor">#define AFP_DNS_SERVICE_TYPE &quot;_afpovertcp._tcp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a7b5bc3af103d8e72794f43e8d1312278">   15</a></span><span class="preprocessor">#define ADISK_SERVICE_TYPE &quot;_adisk._tcp&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a8b3cb6b92653f64381dac12060e54695">   16</a></span><span class="preprocessor">#define DEV_INFO_SERVICE_TYPE &quot;_device-info._tcp&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="afp__zeroconf_8h.html#a23391392959a16d5b7763ee6e5aac971">   18</a></span><span class="preprocessor">#define MAXINSTANCENAMELEN 63</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * Prototype Definitions</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e">zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__zeroconf_8h.html#a883d20fc9f09bf630b05c58ff3c90fbb">zeroconf_deregister</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">/* AFPD_ZEROCONF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aafp__zeroconf_8h_html_a883d20fc9f09bf630b05c58ff3c90fbb"><div class="ttname"><a href="afp__zeroconf_8h.html#a883d20fc9f09bf630b05c58ff3c90fbb">zeroconf_deregister</a></div><div class="ttdeci">void zeroconf_deregister(void)</div><div class="ttdef"><b>Definition</b> afp_zeroconf.c:37</div></div>
+<div class="ttc" id="aafp__zeroconf_8h_html_ade523c8419f613e7ebb213fe3598a89e"><div class="ttname"><a href="afp__zeroconf_8h.html#ade523c8419f613e7ebb213fe3598a89e">zeroconf_register</a></div><div class="ttdeci">void zeroconf_register(const AFPObj *obj)</div><div class="ttdef"><b>Definition</b> afp_zeroconf.c:25</div></div>
 <div class="ttc" id="aglobals_8h_html"><div class="ttname"><a href="globals_8h.html">globals.h</a></div></div>
 <div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>
 <div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:154</div></div>

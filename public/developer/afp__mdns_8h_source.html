@@ -102,29 +102,25 @@ $(function(){initNavTree('afp__mdns_8h_source.html','',''); });
   <div class="headertitle"><div class="title">afp_mdns.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="afp__mdns_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Author:   Lee Essen &lt;lee.essen@nowonline.co.uk&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Based on: avahi support from Daniel S. Haischt &lt;me@daniel.stefan.haischt.name&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Purpose:  mdns based Zeroconf support</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef AFPD_MDNS_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define AFPD_MDNS_H</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;dns_sd.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">atalk/logger.h</a>&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/* prototype definitions */</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__mdns_8h.html#ad513c45174ae407dec66e687ff1d9fb8">md_zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="afp__mdns_8h.html#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif   </span><span class="comment">/* AFPD_MDNS_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aafp__mdns_8h_html_a01f1a55c8807aa5d6a187305c7b8ac96"><div class="ttname"><a href="afp__mdns_8h.html#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a></div><div class="ttdeci">int md_zeroconf_unregister(void)</div><div class="ttdef"><b>Definition</b> afp_mdns.c:399</div></div>
+<a href="afp__mdns_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef AFPD_MDNS_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define AFPD_MDNS_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;dns_sd.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">atalk/logger.h</a>&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/* prototype definitions */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__mdns_8h.html#ad513c45174ae407dec66e687ff1d9fb8">md_zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">int</span> <a class="code hl_function" href="afp__mdns_8h.html#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif   </span><span class="comment">/* AFPD_MDNS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aafp__mdns_8h_html_a01f1a55c8807aa5d6a187305c7b8ac96"><div class="ttname"><a href="afp__mdns_8h.html#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a></div><div class="ttdeci">int md_zeroconf_unregister(void)</div><div class="ttdoc">Tries to shutdown this loop impl.</div><div class="ttdef"><b>Definition</b> afp_mdns.c:399</div></div>
 <div class="ttc" id="aafp__mdns_8h_html_ad513c45174ae407dec66e687ff1d9fb8"><div class="ttname"><a href="afp__mdns_8h.html#ad513c45174ae407dec66e687ff1d9fb8">md_zeroconf_register</a></div><div class="ttdeci">void md_zeroconf_register(const AFPObj *obj)</div><div class="ttdef"><b>Definition</b> afp_mdns.c:388</div></div>
 <div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
 <div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>

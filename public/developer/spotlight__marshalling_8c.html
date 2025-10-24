@@ -151,6 +151,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a80ff5d5e555eeee059ab54b03ba91ba8" id="r_a80ff5d5e555eeee059ab54b03ba91ba8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80ff5d5e555eeee059ab54b03ba91ba8">sivalc</a> (char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, off_t off, off_t maxoff, uint32_t val)</td></tr>
 <tr class="memitem:a91a9704c5b06d5683f07fa12a2cb824f" id="r_a91a9704c5b06d5683f07fa12a2cb824f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a9704c5b06d5683f07fa12a2cb824f">slvalc</a> (char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, off_t off, off_t maxoff, uint64_t val)</td></tr>
 <tr class="memitem:a8bd79b2e68417388646b0eaf0645c9e9" id="r_a8bd79b2e68417388646b0eaf0645c9e9"><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd79b2e68417388646b0eaf0645c9e9">spotlight_get_utf16_string_encoding</a> (const char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int offset, int query_length, uint encoding)</td></tr>
+<tr class="memdesc:a8bd79b2e68417388646b0eaf0645c9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the UTF-16 string encoding, by checking the 2-byte byte order mark.  <br /></td></tr>
 <tr class="memitem:a117ac154bac217b490b7f08f1fa2541e" id="r_a117ac154bac217b490b7f08f1fa2541e"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a117ac154bac217b490b7f08f1fa2541e">sl_pack_tag</a> (uint16_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, uint16_t size_or_count, uint32_t val)</td></tr>
 <tr class="memitem:a026bc54bbbd9525a78917fc231af0125" id="r_a026bc54bbbd9525a78917fc231af0125"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a026bc54bbbd9525a78917fc231af0125">sl_pack_float</a> (double d, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int offset)</td></tr>
 <tr class="memitem:a29e901098b48a4797750f661ae5f8582" id="r_a29e901098b48a4797750f661ae5f8582"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29e901098b48a4797750f661ae5f8582">sl_pack_uint64</a> (uint64_t u, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int offset)</td></tr>
@@ -229,6 +230,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Spotlight epoch is UNIX epoch minus SPOTLIGHT_TIME_DELTA </p>
 
 </div>
 </div>
@@ -1511,6 +1513,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the UTF-16 string encoding, by checking the 2-byte byte order mark. </p>
+<dl class="section return"><dt>Returns</dt><dd>If there is no byte order mark, -1 is returned. </dd></dl>
 
 </div>
 </div>

@@ -129,6 +129,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a1637152e06875069847f46cc31e2031b" id="r_a1637152e06875069847f46cc31e2031b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1637152e06875069847f46cc31e2031b">netatalk_rmdir</a> (int dirfd, const char *name)</td></tr>
 <tr class="memdesc:a1637152e06875069847f46cc31e2031b"><td class="mdescLeft">&#160;</td><td class="mdescRight">System rmdir with afp error code, but ENOENT is not an error.  <br /></td></tr>
 <tr class="memitem:aed6a2d468ff66682419b406391ffbc0c" id="r_aed6a2d468ff66682419b406391ffbc0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed6a2d468ff66682419b406391ffbc0c">netatalk_unlink</a> (const char *name)</td></tr>
+<tr class="memdesc:aed6a2d468ff66682419b406391ffbc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">system unlink with afp error code.  <br /></td></tr>
 <tr class="memitem:a1ec110309a6d0a7cb4d5d303753a4841" id="r_a1ec110309a6d0a7cb4d5d303753a4841"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ec110309a6d0a7cb4d5d303753a4841">copy_file_fd</a> (int sfd, int dfd)</td></tr>
 <tr class="memitem:a18fdc6d2c2b256e45b255f526dd88f14" id="r_a18fdc6d2c2b256e45b255f526dd88f14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18fdc6d2c2b256e45b255f526dd88f14">copy_file</a> (int dirfd, const char *src, const char *dst, mode_t mode)</td></tr>
 <tr class="memitem:a153d86edd957f7edb8e3b683ba642797" id="r_a153d86edd957f7edb8e3b683ba642797"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a153d86edd957f7edb8e3b683ba642797">copy_ea</a> (const char *<a class="el" href="structea.html">ea</a>, int dirfd, const char *src, const char *dst, mode_t mode)</td></tr>
@@ -177,7 +178,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Copy an EA from one file to another. </p>
-<p>Supports *at semantics, pass dirfd=-1 to ignore this </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics, pass dirfd=-1 to ignore this </dd></dl>
 
 </div>
 </div>
@@ -209,6 +210,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Supports *at semantics, pass dirfd=-1 to ignore this </p>
 
 </div>
 </div>
@@ -230,6 +232,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Copy all file data from one file fd to another </p>
 
 </div>
 </div>
@@ -270,7 +273,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>System rmdir with afp error code, but ENOENT is not an error. </p>
-<p>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </dd></dl>
 
 </div>
 </div>
@@ -294,7 +297,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>system rmdir with afp error code. </p>
-<p>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </p>
+<dl class="section note"><dt>Note</dt><dd>Supports *at semantics (cf openat). Pass dirfd=-1 to ignore this. </dd></dl>
 
 </div>
 </div>
@@ -312,6 +315,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>system unlink with afp error code. </p>
+<dl class="section note"><dt>Note</dt><dd>ENOENT is not an error. </dd></dl>
 
 </div>
 </div>
@@ -333,6 +339,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>at wrapper for netatalk_unlink </p>
 
 </div>
 </div>

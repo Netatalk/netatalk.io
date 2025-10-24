@@ -198,6 +198,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>report a fault </p>
 
 </div>
 </div>
@@ -215,6 +216,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>setup our fault handlers </p>
 
 </div>
 </div>
@@ -232,6 +234,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Something really nasty happened - panic ! </p>
 
 </div>
 </div>
@@ -257,6 +260,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>catch serious errors </p>
 
 </div>
 </div>
@@ -287,6 +291,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Catch a signal. This should implement the following semantics:</p>
+<ol type="1">
+<li>The handler remains installed after being called.</li>
+<li>The signal should be blocked during handler execution. </li>
+</ol>
 
 </div>
 </div>

@@ -105,61 +105,57 @@ $(function(){initNavTree('netddp_8h_source.html','',''); });
 <a href="netddp_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 1999 Adrian Sun (asun@zoology.washington.edu)</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * All Rights Reserved. See COPYRIGHT.</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * this provides a generic interface to the ddp layer. with this, we</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * should be able to interact with any appletalk stack that allows</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * direct access to the ddp layer. right now, only os x server&#39;s ddp</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * layer and the generic socket based interfaces are understood.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef _ATALK_NETDDP_H</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define _ATALK_NETDDP_H 1</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef NO_DDP</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef _ATALK_NETDDP_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define _ATALK_NETDDP_H 1</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;<a class="code" href="at_8h.html">netatalk/at.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef NO_DDP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="netddp_8h.html#a6f934d07ff18b7f8b8f9ec145229a0c9">netddp_open</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structsockaddr__at.html">sockaddr_at</a> *, <span class="keyword">struct</span> <a class="code hl_struct" href="structsockaddr__at.html">sockaddr_at</a> *);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="at_8h.html">netatalk/at.h</a>&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">   24</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">netddp_close</a>(<span class="keywordtype">int</span> filedes)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> close(filedes);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="netddp_8h.html#a6f934d07ff18b7f8b8f9ec145229a0c9">netddp_open</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structsockaddr__at.html">sockaddr_at</a> *, <span class="keyword">struct</span> <a class="code hl_struct" href="structsockaddr__at.html">sockaddr_at</a> *);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">   26</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">netddp_close</a>(<span class="keywordtype">int</span> filedes)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> close(filedes);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">   29</a></span><span class="keyword">static</span> <span class="keyword">inline</span> ssize_t <a class="code hl_function" href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">netddp_sendto</a>(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">void</span> *msg, <span class="keywordtype">size_t</span> len,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                                    <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *<a class="code hl_variable" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a>, socklen_t tolen)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span> sendto(s, msg, len, <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <a class="code hl_variable" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a>, tolen);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">   31</a></span><span class="keyword">static</span> <span class="keyword">inline</span> ssize_t <a class="code hl_function" href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">netddp_sendto</a>(<span class="keywordtype">int</span> s, <span class="keyword">const</span> <span class="keywordtype">void</span> *msg, <span class="keywordtype">size_t</span> len,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                    <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <span class="keyword">const</span> <span class="keyword">struct</span> sockaddr *<a class="code hl_variable" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a>, socklen_t tolen)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> sendto(s, msg, len, <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <a class="code hl_variable" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a>, tolen);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">   35</a></span><span class="keyword">static</span> <span class="keyword">inline</span> ssize_t <a class="code hl_function" href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">netddp_recvfrom</a>(<span class="keywordtype">int</span> s, <span class="keywordtype">void</span> *<a class="code hl_variable" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, <span class="keywordtype">size_t</span> len,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                      <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <span class="keyword">struct</span> sockaddr *from,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                      socklen_t *fromlen)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> recvfrom(s, <a class="code hl_variable" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, len, <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, from, fromlen);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">   37</a></span><span class="keyword">static</span> <span class="keyword">inline</span> ssize_t <a class="code hl_function" href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">netddp_recvfrom</a>(<span class="keywordtype">int</span> s, <span class="keywordtype">void</span> *<a class="code hl_variable" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, <span class="keywordtype">size_t</span> len,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                      <span class="keywordtype">int</span> <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, <span class="keyword">struct</span> sockaddr *from,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                      socklen_t *fromlen)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> recvfrom(s, <a class="code hl_variable" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, len, <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, from, fromlen);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif  </span><span class="comment">/* NO_DDP */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span><span class="comment">/* netddp.h */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="ttc" id="aafppasswd_8c_html_a72dff57571064f4e3546a2bf18e1147d"><div class="ttname"><a href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a></div><div class="ttdeci">static char buf[MAXPATHLEN+1]</div><div class="ttdef"><b>Definition</b> afppasswd.c:66</div></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif  </span><span class="comment">/* NO_DDP */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span><span class="comment">/* netddp.h */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="ttc" id="aafppasswd_8c_html_a72dff57571064f4e3546a2bf18e1147d"><div class="ttname"><a href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a></div><div class="ttdeci">static char buf[MAXPATHLEN+1]</div><div class="ttdef"><b>Definition</b> afppasswd.c:75</div></div>
 <div class="ttc" id="aat_8h_html"><div class="ttname"><a href="at_8h.html">at.h</a></div></div>
 <div class="ttc" id="acmd__dbd_8c_html_a5b5dc5446eb7e7a502a06d67b7ea302c"><div class="ttname"><a href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a></div><div class="ttdeci">static dbd_flags_t flags</div><div class="ttdef"><b>Definition</b> cmd_dbd.c:45</div></div>
-<div class="ttc" id="anad__cp_8c_html_a9526abe94d7ddaf880f23cec5608daeb"><div class="ttname"><a href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a></div><div class="ttdeci">PATH_T to</div><div class="ttdef"><b>Definition</b> nad_cp.c:86</div></div>
-<div class="ttc" id="anetddp_8h_html_a22169d4c3bbbcbf3ba18fe40097e8b5e"><div class="ttname"><a href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">netddp_close</a></div><div class="ttdeci">static int netddp_close(int filedes)</div><div class="ttdef"><b>Definition</b> netddp.h:24</div></div>
-<div class="ttc" id="anetddp_8h_html_a4ba7bea6273e32074d97cd9fd53c3f7c"><div class="ttname"><a href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">netddp_recvfrom</a></div><div class="ttdeci">static ssize_t netddp_recvfrom(int s, void *buf, size_t len, int flags, struct sockaddr *from, socklen_t *fromlen)</div><div class="ttdef"><b>Definition</b> netddp.h:35</div></div>
+<div class="ttc" id="anad__cp_8c_html_a9526abe94d7ddaf880f23cec5608daeb"><div class="ttname"><a href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a></div><div class="ttdeci">PATH_T to</div><div class="ttdef"><b>Definition</b> nad_cp.c:87</div></div>
+<div class="ttc" id="anetddp_8h_html_a22169d4c3bbbcbf3ba18fe40097e8b5e"><div class="ttname"><a href="netddp_8h.html#a22169d4c3bbbcbf3ba18fe40097e8b5e">netddp_close</a></div><div class="ttdeci">static int netddp_close(int filedes)</div><div class="ttdef"><b>Definition</b> netddp.h:26</div></div>
+<div class="ttc" id="anetddp_8h_html_a4ba7bea6273e32074d97cd9fd53c3f7c"><div class="ttname"><a href="netddp_8h.html#a4ba7bea6273e32074d97cd9fd53c3f7c">netddp_recvfrom</a></div><div class="ttdeci">static ssize_t netddp_recvfrom(int s, void *buf, size_t len, int flags, struct sockaddr *from, socklen_t *fromlen)</div><div class="ttdef"><b>Definition</b> netddp.h:37</div></div>
 <div class="ttc" id="anetddp_8h_html_a6f934d07ff18b7f8b8f9ec145229a0c9"><div class="ttname"><a href="netddp_8h.html#a6f934d07ff18b7f8b8f9ec145229a0c9">netddp_open</a></div><div class="ttdeci">int netddp_open(struct sockaddr_at *, struct sockaddr_at *)</div><div class="ttdef"><b>Definition</b> netddp_open.c:22</div></div>
-<div class="ttc" id="anetddp_8h_html_a9f970f0c014e28ba44bc7d30caebec42"><div class="ttname"><a href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">netddp_sendto</a></div><div class="ttdeci">static ssize_t netddp_sendto(int s, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen)</div><div class="ttdef"><b>Definition</b> netddp.h:29</div></div>
+<div class="ttc" id="anetddp_8h_html_a9f970f0c014e28ba44bc7d30caebec42"><div class="ttname"><a href="netddp_8h.html#a9f970f0c014e28ba44bc7d30caebec42">netddp_sendto</a></div><div class="ttdeci">static ssize_t netddp_sendto(int s, const void *msg, size_t len, int flags, const struct sockaddr *to, socklen_t tolen)</div><div class="ttdef"><b>Definition</b> netddp.h:31</div></div>
 <div class="ttc" id="astructsockaddr__at_html"><div class="ttname"><a href="structsockaddr__at.html">sockaddr_at</a></div><div class="ttdef"><b>Definition</b> at.h:88</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

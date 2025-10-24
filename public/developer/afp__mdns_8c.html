@@ -102,6 +102,9 @@ $(function(){initNavTree('afp__mdns_8c.html','',''); });
   <div class="headertitle"><div class="title">afp_mdns.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>mDNS based Zeroconf support  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;poll.h&gt;</code><br />
 <code>#include &lt;pthread.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
@@ -119,10 +122,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ab1666ee7e6b399f9af5759749065aa7b" id="r_ab1666ee7e6b399f9af5759749065aa7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1666ee7e6b399f9af5759749065aa7b">TXTRecordKeyPrintf</a> (TXTRecordRef *rec, const char *key_fmt, int key_var, const char *fmt,...)</td></tr>
 <tr class="memitem:ad2e506a9efbc08d2bce3463332da8985" id="r_ad2e506a9efbc08d2bce3463332da8985"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2e506a9efbc08d2bce3463332da8985">polling_thread</a> (void *arg)</td></tr>
 <tr class="memitem:aab2bd11b4f5acf580412bbfb4944864e" id="r_aab2bd11b4f5acf580412bbfb4944864e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab2bd11b4f5acf580412bbfb4944864e">RegisterReply</a> (DNSServiceRef sdRef, DNSServiceFlags <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>, DNSServiceErrorType errorCode, const char *name, const char *regtype, const char *domain, void *<a class="el" href="structcontext.html">context</a>)</td></tr>
+<tr class="memdesc:aab2bd11b4f5acf580412bbfb4944864e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the callback for the service register function.  <br /></td></tr>
 <tr class="memitem:acaee5c2ae3a684eb83af07a558408ef5" id="r_acaee5c2ae3a684eb83af07a558408ef5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaee5c2ae3a684eb83af07a558408ef5">unregister_stuff</a> (void)</td></tr>
 <tr class="memitem:a01a45d4c484d98961489604e2cb31c29" id="r_a01a45d4c484d98961489604e2cb31c29"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a45d4c484d98961489604e2cb31c29">register_stuff</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:ad513c45174ae407dec66e687ff1d9fb8" id="r_ad513c45174ae407dec66e687ff1d9fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad513c45174ae407dec66e687ff1d9fb8">md_zeroconf_register</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a01f1a55c8807aa5d6a187305c7b8ac96" id="r_a01f1a55c8807aa5d6a187305c7b8ac96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f1a55c8807aa5d6a187305c7b8ac96">md_zeroconf_unregister</a> (void)</td></tr>
+<tr class="memdesc:a01f1a55c8807aa5d6a187305c7b8ac96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to shutdown this loop impl.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -131,7 +136,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a0430237f53ea067d4824133500a76b3f" id="r_a0430237f53ea067d4824133500a76b3f"><td class="memItemLeft" align="right" valign="top">static pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0430237f53ea067d4824133500a76b3f">poller</a></td></tr>
 <tr class="memitem:aae3b99743ae8cb3b46fceadd3509f1b1" id="r_aae3b99743ae8cb3b46fceadd3509f1b1"><td class="memItemLeft" align="right" valign="top">static struct pollfd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae3b99743ae8cb3b46fceadd3509f1b1">fds</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>mDNS based Zeroconf support </p>
+<dl class="section author"><dt>Author</dt><dd>Lee Essen <a href="#" onclick="location.href='mai'+'lto:'+'lee'+'.e'+'sse'+'n@'+'now'+'on'+'lin'+'e.'+'co.'+'uk'; return false;">lee.e<span class="obfuscator">.nosp@m.</span>ssen<span class="obfuscator">.nosp@m.</span>@nowo<span class="obfuscator">.nosp@m.</span>nlin<span class="obfuscator">.nosp@m.</span>e.co.<span class="obfuscator">.nosp@m.</span>uk</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Based on: avahi support from Daniel S. Haischt <a href="#" onclick="location.href='mai'+'lto:'+'me@'+'da'+'nie'+'l.'+'ste'+'fa'+'n.h'+'ai'+'sch'+'t.'+'nam'+'e'; return false;">me@da<span class="obfuscator">.nosp@m.</span>niel<span class="obfuscator">.nosp@m.</span>.stef<span class="obfuscator">.nosp@m.</span>an.h<span class="obfuscator">.nosp@m.</span>aisch<span class="obfuscator">.nosp@m.</span>t.na<span class="obfuscator">.nosp@m.</span>me</a> </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ad513c45174ae407dec66e687ff1d9fb8" name="ad513c45174ae407dec66e687ff1d9fb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad513c45174ae407dec66e687ff1d9fb8">&#9670;&#160;</a></span>md_zeroconf_register()</h2>
 
@@ -146,6 +155,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Tries to setup the Zeroconf thread and any neccessary config setting. </p>
 
 </div>
 </div>
@@ -163,6 +173,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tries to shutdown this loop impl. </p>
+<dl class="section note"><dt>Note</dt><dd>Call this function from inside this thread. </dd></dl>
 
 </div>
 </div>
@@ -188,6 +201,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This is the thread that polls the filehandles </p>
 
 </div>
 </div>
@@ -213,6 +227,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function tries to register the AFP DNS SRV service type. </p>
 
 </div>
 </div>
@@ -267,6 +282,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This is the callback for the service register function. </p>
+<dl class="section note"><dt>Note</dt><dd>actually there isn't a lot we can do if we get problems, so we don't really need to do anything other than report the issue. </dd></dl>
 
 </div>
 </div>
@@ -359,6 +377,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function unregisters anything we have already registered and frees associated memory </p>
 
 </div>
 </div>

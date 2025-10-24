@@ -108,7 +108,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:aae5988c2a5afc9ae8eae111a1e1b949d" id="r_aae5988c2a5afc9ae8eae111a1e1b949d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5988c2a5afc9ae8eae111a1e1b949d">ds_did</a></td></tr>
 <tr class="memitem:a77bda69486da5fbfc7ad2aad10de8ba6" id="r_a77bda69486da5fbfc7ad2aad10de8ba6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77bda69486da5fbfc7ad2aad10de8ba6">ds_checked</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Directory tree search is recursive by its nature. But AFP specification requires FPCatSearch to pause after returning n results and be able to resume the search later. So we have to do recursive search using flat (iterative) algorithm and remember all directories to look into in an stack-like structure. The structure below is one item of directory stack. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a77bda69486da5fbfc7ad2aad10de8ba6" name="a77bda69486da5fbfc7ad2aad10de8ba6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77bda69486da5fbfc7ad2aad10de8ba6">&#9670;&#160;</a></span>ds_checked</h2>
 
@@ -120,6 +122,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Have we checked this directory ? </p>
 
 </div>
 </div>
@@ -134,6 +137,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>CNID of this directory </p>
 
 </div>
 </div>

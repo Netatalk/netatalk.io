@@ -137,20 +137,23 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af52442e5834e0d231dc8dd22411060e4" id="r_af52442e5834e0d231dc8dd22411060e4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af52442e5834e0d231dc8dd22411060e4">ipc_kill_token</a> (struct <a class="el" href="structipc__header.html">ipc_header</a> *ipc, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
+<tr class="memdesc:af52442e5834e0d231dc8dd22411060e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass afp_socket to old disconnected session if one has a matching token (token = pid)  <br /></td></tr>
 <tr class="memitem:a3b72a3fc447babc4b0e692414d6d55c0" id="r_a3b72a3fc447babc4b0e692414d6d55c0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b72a3fc447babc4b0e692414d6d55c0">ipc_get_session</a> (struct <a class="el" href="structipc__header.html">ipc_header</a> *ipc, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
 <tr class="memitem:a0064c954982e564057c2ef3d3ba6fe5e" id="r_a0064c954982e564057c2ef3d3ba6fe5e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0064c954982e564057c2ef3d3ba6fe5e">ipc_login_done</a> (const struct <a class="el" href="structipc__header.html">ipc_header</a> *ipc, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
 <tr class="memitem:aba9b7c451eefa19ed1d5ada59c9fab72" id="r_aba9b7c451eefa19ed1d5ada59c9fab72"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba9b7c451eefa19ed1d5ada59c9fab72">ipc_set_state</a> (struct <a class="el" href="structipc__header.html">ipc_header</a> *ipc, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
 <tr class="memitem:acbd3fcf7d09e507cb60897a6b6628e6a" id="r_acbd3fcf7d09e507cb60897a6b6628e6a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbd3fcf7d09e507cb60897a6b6628e6a">ipc_set_volumes</a> (struct <a class="el" href="structipc__header.html">ipc_header</a> *ipc, <a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>)</td></tr>
-<tr class="memitem:a0be24882c96e89f8dab5db704e3de887" id="r_a0be24882c96e89f8dab5db704e3de887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be24882c96e89f8dab5db704e3de887">ipc_server_read</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:a0be24882c96e89f8dab5db704e3de887" id="r_a0be24882c96e89f8dab5db704e3de887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be24882c96e89f8dab5db704e3de887">ipc_server_read</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, int fd)</td></tr>
 <tr class="memdesc:a0be24882c96e89f8dab5db704e3de887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a IPC message from a child.  <br /></td></tr>
-<tr class="memitem:ad5c8568a46ee091e4d5600da98bd101b" id="r_ad5c8568a46ee091e4d5600da98bd101b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5c8568a46ee091e4d5600da98bd101b">ipc_child_write</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, uint16_t command, int len, void *msg)</td></tr>
+<tr class="memitem:ad5c8568a46ee091e4d5600da98bd101b" id="r_ad5c8568a46ee091e4d5600da98bd101b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5c8568a46ee091e4d5600da98bd101b">ipc_child_write</a> (int fd, uint16_t command, int len, void *msg)</td></tr>
 <tr class="memitem:a8b1b7abd036f44b62ceaf5b9bd50aebd" id="r_a8b1b7abd036f44b62ceaf5b9bd50aebd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1b7abd036f44b62ceaf5b9bd50aebd">ipc_child_state</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, uint16_t <a class="el" href="magics_8c.html#a89f234133d3efe315836311cbf21c64b">state</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a001726a16cf68eb1048cfbb13bb301db" id="r_a001726a16cf68eb1048cfbb13bb301db"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001726a16cf68eb1048cfbb13bb301db">ipc_cmd_str</a> []</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IPC over socketpair between parent and children. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a1b1fbfff6c8b1a1a656b0b2f5956cf4e" name="a1b1fbfff6c8b1a1a656b0b2f5956cf4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b1fbfff6c8b1a1a656b0b2f5956cf4e">&#9670;&#160;</a></span>IPC_HEADERLEN</h2>
 
@@ -302,6 +305,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pass afp_socket to old disconnected session if one has a matching token (token = pid) </p>
+<dl class="section return"><dt>Returns</dt><dd>-1 on error, 0 if no matching session was found, 1 if session was found and socket passed </dd></dl>
 
 </div>
 </div>

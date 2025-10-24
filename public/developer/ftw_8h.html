@@ -393,6 +393,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Symbolic link naming non-existing file. </p>
 
 </div>
 </div>
@@ -436,6 +437,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Convenient types for callback functions. </p>
 
 </div>
 </div>
@@ -451,15 +453,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return values from callback functions. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165" name="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165"></a>FTW_CONTINUE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165" name="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165"></a>FTW_CONTINUE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886" name="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886"></a>FTW_STOP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886" name="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886"></a>FTW_STOP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286" name="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286"></a>FTW_SKIP_SUBTREE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286" name="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286"></a>FTW_SKIP_SUBTREE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234" name="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234"></a>FTW_SKIP_SIBLINGS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234" name="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234"></a>FTW_SKIP_SIBLINGS&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165" name="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165"></a>FTW_CONTINUE&#160;</td><td class="fielddoc"><p>Continue with next sibling or for FTW_D with the first child. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165" name="a680ddd5982782ba692481a717f07dd40af0f202c343b878ea5dcdd780b14dc165"></a>FTW_CONTINUE&#160;</td><td class="fielddoc"><p>Continue with next sibling or for FTW_D with the first child. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886" name="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886"></a>FTW_STOP&#160;</td><td class="fielddoc"><p>Return from 'ftw' or 'nftw' with FTW_STOP as return value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886" name="a680ddd5982782ba692481a717f07dd40aaff289e8923789f7bcac03a99123c886"></a>FTW_STOP&#160;</td><td class="fielddoc"><p>Return from 'ftw' or 'nftw' with FTW_STOP as return value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286" name="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286"></a>FTW_SKIP_SUBTREE&#160;</td><td class="fielddoc"><p>Only meaningful for FTW_D: Don't walk through the subtree, instead just continue with its next sibling. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286" name="a680ddd5982782ba692481a717f07dd40a1c69d70038215a9c32a9922e87031286"></a>FTW_SKIP_SUBTREE&#160;</td><td class="fielddoc"><p>Only meaningful for FTW_D: Don't walk through the subtree, instead just continue with its next sibling. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234" name="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234"></a>FTW_SKIP_SIBLINGS&#160;</td><td class="fielddoc"><p>Continue with FTW_DP callback for current directory (if FTW_DEPTH) and then its siblings. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234" name="a680ddd5982782ba692481a717f07dd40add26e2d5a820878db376986191355234"></a>FTW_SKIP_SIBLINGS&#160;</td><td class="fielddoc"><p>Continue with FTW_DP callback for current directory (if FTW_DEPTH) and then its siblings. </p>
+</td></tr>
 </table>
 
 </div>
@@ -475,19 +486,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Values for the FLAG argument to the user function passed to 'ftw' and 'nftw'. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f" name="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f"></a>FTW_F&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f" name="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f"></a>FTW_F&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00" name="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00"></a>FTW_D&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00" name="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00"></a>FTW_D&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8" name="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8"></a>FTW_DNR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8" name="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8"></a>FTW_DNR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe" name="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe"></a>FTW_NS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe" name="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe"></a>FTW_NS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6" name="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6"></a>FTW_SL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6" name="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6"></a>FTW_SL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc" name="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc"></a>FTW_DP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc" name="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc"></a>FTW_DP&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f" name="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f"></a>FTW_F&#160;</td><td class="fielddoc"><p>Regular file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f" name="a554fa5e0f0a648705ffb213be59cf2b1aae299a7c77e808caefef8daaee96cd6f"></a>FTW_F&#160;</td><td class="fielddoc"><p>Regular file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00" name="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00"></a>FTW_D&#160;</td><td class="fielddoc"><p>Directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00" name="a554fa5e0f0a648705ffb213be59cf2b1aa14b53f87165b9de6ecbf95df2ec7b00"></a>FTW_D&#160;</td><td class="fielddoc"><p>Directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8" name="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8"></a>FTW_DNR&#160;</td><td class="fielddoc"><p>Unreadable directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8" name="a554fa5e0f0a648705ffb213be59cf2b1a6e4d9371ca214c1cf40951bd33fac1d8"></a>FTW_DNR&#160;</td><td class="fielddoc"><p>Unreadable directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe" name="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe"></a>FTW_NS&#160;</td><td class="fielddoc"><p>Unstatable file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe" name="a554fa5e0f0a648705ffb213be59cf2b1ae777db9b7a3f1f847d472193a14723fe"></a>FTW_NS&#160;</td><td class="fielddoc"><p>Unstatable file. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6" name="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6"></a>FTW_SL&#160;</td><td class="fielddoc"><p>Symbolic link. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6" name="a554fa5e0f0a648705ffb213be59cf2b1ae47f127abc8e3e1580a08555dfa955e6"></a>FTW_SL&#160;</td><td class="fielddoc"><p>Symbolic link. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc" name="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc"></a>FTW_DP&#160;</td><td class="fielddoc"><p>Directory, all subdirs have been visited. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc" name="a554fa5e0f0a648705ffb213be59cf2b1adb2564335b6fa8011601a8885fe3bacc"></a>FTW_DP&#160;</td><td class="fielddoc"><p>Directory, all subdirs have been visited. </p>
+</td></tr>
 </table>
 
 </div>
@@ -503,16 +527,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Flags for fourth argument of 'nftw'. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0" name="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0"></a>FTW_PHYS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0" name="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0"></a>FTW_PHYS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e" name="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e"></a>FTW_MOUNT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e" name="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e"></a>FTW_MOUNT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629" name="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629"></a>FTW_CHDIR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629" name="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629"></a>FTW_CHDIR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c" name="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c"></a>FTW_DEPTH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c" name="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c"></a>FTW_DEPTH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa9c3c9bc85f94f3688ed2fd7ab257c20e" name="a2a9cfccf604bcba425edeb90be64647fa9c3c9bc85f94f3688ed2fd7ab257c20e"></a>FTW_ACTIONRETVAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0" name="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0"></a>FTW_PHYS&#160;</td><td class="fielddoc"><p>Perform physical walk, ignore symlinks. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0" name="a2a9cfccf604bcba425edeb90be64647fad86246fdc620e14340a96209e6b723b0"></a>FTW_PHYS&#160;</td><td class="fielddoc"><p>Perform physical walk, ignore symlinks. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e" name="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e"></a>FTW_MOUNT&#160;</td><td class="fielddoc"><p>Report only files on same file system as the argument. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e" name="a2a9cfccf604bcba425edeb90be64647fa3395210f1c3777a0dbd3b36afb730c0e"></a>FTW_MOUNT&#160;</td><td class="fielddoc"><p>Report only files on same file system as the argument. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629" name="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629"></a>FTW_CHDIR&#160;</td><td class="fielddoc"><p>Change to current directory while processing it. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629" name="a2a9cfccf604bcba425edeb90be64647fab6dc31bbfb8fddc1d351113c60499629"></a>FTW_CHDIR&#160;</td><td class="fielddoc"><p>Change to current directory while processing it. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c" name="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c"></a>FTW_DEPTH&#160;</td><td class="fielddoc"><p>Report files in directory before directory itself. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c" name="a2a9cfccf604bcba425edeb90be64647fa65a60a4102c5e9091c8604193fe6622c"></a>FTW_DEPTH&#160;</td><td class="fielddoc"><p>Report files in directory before directory itself. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2a9cfccf604bcba425edeb90be64647fa9c3c9bc85f94f3688ed2fd7ab257c20e" name="a2a9cfccf604bcba425edeb90be64647fa9c3c9bc85f94f3688ed2fd7ab257c20e"></a>FTW_ACTIONRETVAL&#160;</td><td class="fielddoc"><p>Assume callback to return FTW_* values instead of zero to continue and non-zero to terminate. </p>
+</td></tr>
 </table>
 
 </div>

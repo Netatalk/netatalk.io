@@ -132,7 +132,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a34cddc64efd7d119bd7fdcecb0557c28" id="r_a34cddc64efd7d119bd7fdcecb0557c28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34cddc64efd7d119bd7fdcecb0557c28">CNID_VERSION_UNINTIALIZED_DB</a>&#160;&#160;&#160;UINT32_MAX</td></tr>
 <tr class="memitem:aec968fe3956adfd7529a8c7beea92a76" id="r_aec968fe3956adfd7529a8c7beea92a76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec968fe3956adfd7529a8c7beea92a76">CNID_VERSION</a>&#160;&#160;&#160;<a class="el" href="#a72753592647ff1e09f4d53414e398d25">CNID_VERSION_1</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Common defines for cnid </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a1eca48e22565ece0d43d0f9be1946752" name="a1eca48e22565ece0d43d0f9be1946752"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1eca48e22565ece0d43d0f9be1946752">&#9670;&#160;</a></span>CNID_DEV_LEN</h2>
 
@@ -430,7 +432,23 @@ Macros</h2></td></tr>
 <div class="line">                         <span class="stringliteral">&quot;\0\0\0\0&quot;</span> \</div>
 <div class="line">                         <span class="stringliteral">&quot;\0\0\0\0&quot;</span> \</div>
 <div class="line">                         <span class="stringliteral">&quot;RootInfo&quot;</span></div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>Rootinfo data, fields as they are used by normal entries for CNIDs (for reference):</p><ul>
+<li>4 bytes: CNID</li>
+<li>8 bytes: dev</li>
+<li>8 bytes: inode</li>
+<li>4 bytes: is a file/directory (type)</li>
+<li>4 bytes: DID</li>
+<li>x bytes: name</li>
+</ul>
+<p>Contents in Rootinfo entry:</p><ul>
+<li>4 bytes: 0</li>
+<li>8 bytes: db stamp: struct stat.st_ctime of database file</li>
+<li>8 bytes: unused</li>
+<li>4 bytes: last used CNID</li>
+<li>4 bytes: version as htonl(uint32_t)</li>
+<li>9 bytes: name "RootInfo" </li>
+</ul>
+
 </div>
 </div>
 <a id="a24d0ad761e3b2b9efb264f9e6a0fef71" name="a24d0ad761e3b2b9efb264f9e6a0fef71"></a>

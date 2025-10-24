@@ -102,9 +102,6 @@ $(function(){initNavTree('socket_8c.html','',''); });
   <div class="headertitle"><div class="title">socket.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Netatalk utility functions: socket.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;fcntl.h&gt;</code><br />
@@ -128,7 +125,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afc08abc318ec657fed2938d72854b0db" id="r_afc08abc318ec657fed2938d72854b0db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc08abc318ec657fed2938d72854b0db">setnonblock</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int cmd)</td></tr>
+<tr class="memitem:afc08abc318ec657fed2938d72854b0db" id="r_afc08abc318ec657fed2938d72854b0db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc08abc318ec657fed2938d72854b0db">setnonblock</a> (int fd, int cmd)</td></tr>
 <tr class="memdesc:afc08abc318ec657fed2938d72854b0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">set or unset non-blocking IO on a fd  <br /></td></tr>
 <tr class="memitem:a1725a600b8e4bf87748b54f4ea37b1f2" id="r_a1725a600b8e4bf87748b54f4ea37b1f2"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1725a600b8e4bf87748b54f4ea37b1f2">readt</a> (int socket, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length, int setnonblocking, int timeout)</td></tr>
 <tr class="memdesc:a1725a600b8e4bf87748b54f4ea37b1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">non-blocking drop-in replacement for read with timeout using select  <br /></td></tr>
@@ -145,21 +142,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a6639de1eb1eaad095e3612d03eb17c1b" id="r_a6639de1eb1eaad095e3612d03eb17c1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6639de1eb1eaad095e3612d03eb17c1b">tokenize_ip_port</a> (const char *ipurl, char **address, char **<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
 <tr class="memdesc:a6639de1eb1eaad095e3612d03eb17c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tokenize IP(4/6) addresses with an optional port into address and port.  <br /></td></tr>
 <tr class="memitem:a89ecc05c47ace160dbf3d012df3404b0" id="r_a89ecc05c47ace160dbf3d012df3404b0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structasev.html">asev</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ecc05c47ace160dbf3d012df3404b0">asev_init</a> (int max)</td></tr>
-<tr class="memdesc:a89ecc05c47ace160dbf3d012df3404b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and initialize atalk socket event struct.  <br /></td></tr>
-<tr class="memitem:a4cd776512470ba6c8eed46a76215e407" id="r_a4cd776512470ba6c8eed46a76215e407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd776512470ba6c8eed46a76215e407">asev_add_fd</a> (struct <a class="el" href="structasev.html">asev</a> *<a class="el" href="structasev.html">asev</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, enum <a class="el" href="include_2atalk_2util_8h.html#a49cf568515560e546c50ea9cc363d122">asev_fdtype</a> fdtype, void *private, int protocol)</td></tr>
+<tr class="memitem:a4cd776512470ba6c8eed46a76215e407" id="r_a4cd776512470ba6c8eed46a76215e407"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd776512470ba6c8eed46a76215e407">asev_add_fd</a> (struct <a class="el" href="structasev.html">asev</a> *<a class="el" href="structasev.html">asev</a>, int fd, enum <a class="el" href="include_2atalk_2util_8h.html#a49cf568515560e546c50ea9cc363d122">asev_fdtype</a> fdtype, void *private, int protocol)</td></tr>
 <tr class="memdesc:a4cd776512470ba6c8eed46a76215e407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a fd to a dynamic pollfd array and associated data array.  <br /></td></tr>
-<tr class="memitem:a5a780fb1c7dfd01191029c50b018f345" id="r_a5a780fb1c7dfd01191029c50b018f345"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a780fb1c7dfd01191029c50b018f345">asev_del_fd</a> (struct <a class="el" href="structasev.html">asev</a> *<a class="el" href="structasev.html">asev</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:a5a780fb1c7dfd01191029c50b018f345" id="r_a5a780fb1c7dfd01191029c50b018f345"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a780fb1c7dfd01191029c50b018f345">asev_del_fd</a> (struct <a class="el" href="structasev.html">asev</a> *<a class="el" href="structasev.html">asev</a>, int fd)</td></tr>
 <tr class="memdesc:a5a780fb1c7dfd01191029c50b018f345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove fd from asev.  <br /></td></tr>
-<tr class="memitem:af32134bd62d1e48eb57310a8d5fc5404" id="r_af32134bd62d1e48eb57310a8d5fc5404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af32134bd62d1e48eb57310a8d5fc5404">recv_fd</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, int nonblocking)</td></tr>
+<tr class="memitem:af32134bd62d1e48eb57310a8d5fc5404" id="r_af32134bd62d1e48eb57310a8d5fc5404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af32134bd62d1e48eb57310a8d5fc5404">recv_fd</a> (int fd, int nonblocking)</td></tr>
 <tr class="memdesc:af32134bd62d1e48eb57310a8d5fc5404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive a fd on a suitable socket.  <br /></td></tr>
-<tr class="memitem:abaeb6c0ea9882e50e387cc4bb8edd00b" id="r_abaeb6c0ea9882e50e387cc4bb8edd00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaeb6c0ea9882e50e387cc4bb8edd00b">send_fd</a> (int socket, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:abaeb6c0ea9882e50e387cc4bb8edd00b" id="r_abaeb6c0ea9882e50e387cc4bb8edd00b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaeb6c0ea9882e50e387cc4bb8edd00b">send_fd</a> (int socket, int fd)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a1c7ca8ea3f44304d833b839134386f82" id="r_a1c7ca8ea3f44304d833b839134386f82"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c7ca8ea3f44304d833b839134386f82">ipv4mapprefix</a> [] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xff, 0xff}</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Netatalk utility functions: socket. </p>
+<div class="textblock"><p>Netatalk utility functions: socket </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a6a6d1e8e926f5b43e45353c7e8c3c7fa" name="a6a6d1e8e926f5b43e45353c7e8c3c7fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a6d1e8e926f5b43e45353c7e8c3c7fa">&#9670;&#160;</a></span>CMSG_SPACE</h2>
@@ -177,7 +173,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="usockfd_8h.html#a636ee603816965ef7dfc464221975baf">__CMSG_ALIGN</a>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> cmsghdr)) + <a class="code hl_define" href="usockfd_8h.html#a636ee603816965ef7dfc464221975baf">__CMSG_ALIGN</a>(len))</div>
 <div class="ttc" id="ausockfd_8h_html_a636ee603816965ef7dfc464221975baf"><div class="ttname"><a href="usockfd_8h.html#a636ee603816965ef7dfc464221975baf">__CMSG_ALIGN</a></div><div class="ttdeci">#define __CMSG_ALIGN(p)</div><div class="ttdef"><b>Definition</b> usockfd.h:26</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>Length of the space taken up by a padded control message of length len </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -289,8 +286,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Allocate and initialize atalk socket event struct. </p>
+<p>Allocate and initialize atalk socket event struct </p>
 
 </div>
 </div>
@@ -375,8 +371,9 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to a static string cotaining the converted address as string.<br  />
- On error pointers to "0.0.0.0" or "::0" are returned. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to a static string cotaining the converted address as string. </dd>
+<dd>
+On error pointers to "0.0.0.0" or "::0" are returned. </dd></dl>
 
 </div>
 </div>
@@ -478,6 +475,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Send a fd across a suitable socket </p>
 
 </div>
 </div>

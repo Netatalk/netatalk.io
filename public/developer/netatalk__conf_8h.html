@@ -111,10 +111,8 @@ $(function(){initNavTree('netatalk__conf_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adb4aefcaa370e4e8ced949f9bd893f14" id="r_adb4aefcaa370e4e8ced949f9bd893f14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb4aefcaa370e4e8ced949f9bd893f14">afp_config_parse</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *processname)</td></tr>
-<tr class="memdesc:adb4aefcaa370e4e8ced949f9bd893f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file.  <br /></td></tr>
 <tr class="memitem:ac001e643f465d9fe85fe41e3cbc3428f" id="r_ac001e643f465d9fe85fe41e3cbc3428f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac001e643f465d9fe85fe41e3cbc3428f">afp_config_free</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
 <tr class="memitem:a2d92d4ec9f9f0a8e165d39c10d9574cf" id="r_a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d92d4ec9f9f0a8e165d39c10d9574cf">load_charset</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
-<tr class="memdesc:a2d92d4ec9f9f0a8e165d39c10d9574cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load charsets for a volume.  <br /></td></tr>
 <tr class="memitem:aa051b28df16f69cdbffebc533455f4e7" id="r_aa051b28df16f69cdbffebc533455f4e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa051b28df16f69cdbffebc533455f4e7">load_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, <a class="el" href="include_2atalk_2volume_8h.html#a93895477a246ceefb8f62520711e425e">lv_flags_t</a> <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memdesc:aa051b28df16f69cdbffebc533455f4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize volumes and load ini configfile.  <br /></td></tr>
 <tr class="memitem:a95d5c38b0997be2581319b937878f63e" id="r_a95d5c38b0997be2581319b937878f63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d5c38b0997be2581319b937878f63e">unload_volumes</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
@@ -126,7 +124,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a4327f5a87fce86a37525485b8d26caa3" id="r_a4327f5a87fce86a37525485b8d26caa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4327f5a87fce86a37525485b8d26caa3">volume_free</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 <tr class="memdesc:a4327f5a87fce86a37525485b8d26caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free all resources allocated in a struct vol in <a class="el" href="netatalk__conf_8c.html#aa051b28df16f69cdbffebc533455f4e7" title="Initialize volumes and load ini configfile.">load_volumes()</a>  <br /></td></tr>
 <tr class="memitem:a34da44df52290f1745015140589ad212" id="r_a34da44df52290f1745015140589ad212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34da44df52290f1745015140589ad212">volume_unlink</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="nad__rm_8c.html#a09f110e3fa5f7d885903f37852afe842">volume</a>)</td></tr>
-<tr class="memdesc:a34da44df52290f1745015140589ad212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a volume from the linked list of volumes.  <br /></td></tr>
 <tr class="memitem:a1dd9d970666884e1c2d21d59cf204adf" id="r_a1dd9d970666884e1c2d21d59cf204adf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dd9d970666884e1c2d21d59cf204adf">getdefextmap</a> (void)</td></tr>
 <tr class="memitem:a8243b97f092cadced0dfc7331a7ff689" id="r_a8243b97f092cadced0dfc7331a7ff689"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structextmap.html">extmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8243b97f092cadced0dfc7331a7ff689">getextmap</a> (const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 </table>
@@ -153,6 +150,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>get rid of any allocated afp_option buffers. </p>
 
 </div>
 </div>
@@ -168,7 +166,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int afp_config_parse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *</td>          <td class="paramname"><span class="paramname"><em>AFPObj</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -182,8 +180,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file. </p>
+<p>Initialize an <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> and options from ini config file </p>
 
 </div>
 </div>
@@ -369,8 +366,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Load charsets for a volume. </p>
+<p>Load charsets for a volume </p>
 
 </div>
 </div>
@@ -492,8 +488,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Remove a volume from the linked list of volumes. </p>
+<p>Remove a volume from the linked list of volumes </p>
 
 </div>
 </div>

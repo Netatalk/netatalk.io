@@ -242,7 +242,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a398f166b24608a0b470fc57d39ff57ba" id="r_a398f166b24608a0b470fc57d39ff57ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398f166b24608a0b470fc57d39ff57ba">afp_filedir_unpack</a> (struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, unsigned char *b, uint16_t rfbitmap, uint16_t rdbitmap)</td></tr>
 <tr class="memitem:a98d77d68027f7348c55a5c696db1fe5f" id="r_a98d77d68027f7348c55a5c696db1fe5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d77d68027f7348c55a5c696db1fe5f">afp_filedir_pack</a> (unsigned char *b, struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, uint16_t rfbitmap, uint16_t rdbitmap)</td></tr>
 <tr class="memitem:a3e7a7015d6fce77a40636781c50f6953" id="r_a3e7a7015d6fce77a40636781c50f6953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7a7015d6fce77a40636781c50f6953">OpenClientSocket</a> (char *host, int <a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
-<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int fd)</td></tr>
 <tr class="memitem:ab8cd6d203bce911123672b83b2c219e2" id="r_ab8cd6d203bce911123672b83b2c219e2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8cd6d203bce911123672b83b2c219e2">my_dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
 <tr class="memitem:ac49cdb9fdfe705fff0f4ca43b0ca7dd5" id="r_ac49cdb9fdfe705fff0f4ca43b0ca7dd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac49cdb9fdfe705fff0f4ca43b0ca7dd5">my_dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const size_t ilength, size_t *rlength)</td></tr>
 <tr class="memitem:a6d19f9e9d5712e9597725467144b346d" id="r_a6d19f9e9d5712e9597725467144b346d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d19f9e9d5712e9597725467144b346d">my_dsi_stream_write</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
@@ -466,6 +466,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>backup needed (d) </p>
 
 </div>
 </div>
@@ -480,6 +481,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>data fork already open </p>
 
 </div>
 </div>
@@ -494,6 +496,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>shared point </p>
 
 </div>
 </div>
@@ -508,6 +511,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>folder in a shared area </p>
 
 </div>
 </div>
@@ -522,6 +526,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>invisible (d) </p>
 
 </div>
 </div>
@@ -536,6 +541,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mounted share point by non-admin </p>
 
 </div>
 </div>
@@ -550,6 +556,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>multiuser </p>
 
 </div>
 </div>
@@ -564,6 +571,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>copy protect </p>
 
 </div>
 </div>
@@ -578,6 +586,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>delete inhibit (d) </p>
 
 </div>
 </div>
@@ -592,6 +601,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>rename inhibit (d) </p>
 
 </div>
 </div>
@@ -606,6 +616,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>write inhibit(v2)/read-only(v1) bit </p>
 
 </div>
 </div>
@@ -620,6 +631,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>resource fork already open </p>
 
 </div>
 </div>
@@ -634,6 +646,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set/clear bits (d) </p>
 
 </div>
 </div>
@@ -648,6 +661,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>shared area (d) </p>
 
 </div>
 </div>
@@ -662,6 +676,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>system (d) </p>
 
 </div>
 </div>
@@ -701,6 +716,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>root directory </p>
 
 </div>
 </div>
@@ -715,6 +731,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>parent directory of root </p>
 
 </div>
 </div>
@@ -883,6 +900,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ProDOS Info /UTF8 name </p>
 
 </div>
 </div>
@@ -957,6 +975,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>is a directory </p>
 
 </div>
 </div>
@@ -971,6 +990,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>is a file </p>
 
 </div>
 </div>
@@ -1139,6 +1159,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ProDOS Info/ UTF8 name </p>
 
 </div>
 </div>
@@ -1561,6 +1582,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>block size </p>
 
 </div>
 </div>
@@ -2864,6 +2886,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000012">Bug</a></b></dt><dd>spec violation in netatalk FPlogout ==&gt; dsiclose </dd></dl>
 
 </div>
 </div>
@@ -2998,6 +3021,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Assume size &lt; 2GB </dd></dl>
 
 </div>
 </div>
@@ -3582,6 +3606,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Close Session no reply </p>
 
 </div>
 </div>
@@ -3599,6 +3624,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>GetStatus </p>
 
 </div>
 </div>
@@ -3616,6 +3642,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Open a new session </p>
 
 </div>
 </div>
@@ -3740,6 +3767,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>read raw data. return actual bytes read. this will wait until it gets length bytes </p>
 
 </div>
 </div>
@@ -3771,6 +3799,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>read data. function on success. 0 on failure. data length gets stored in length variable. this should really use size_t's, but that would require changes elsewhere. </p>
 
 </div>
 </div>

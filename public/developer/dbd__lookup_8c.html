@@ -102,6 +102,9 @@ $(function(){initNavTree('dbd__lookup_8c.html','',''); });
   <div class="headertitle"><div class="title">dbd_lookup.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>CNID salvation spec.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -117,8 +120,74 @@ $(function(){initNavTree('dbd__lookup_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a652051fe7c2e44084c5762e647c1c296" id="r_a652051fe7c2e44084c5762e647c1c296"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a652051fe7c2e44084c5762e647c1c296">dbd_lookup</a> (<a class="el" href="struct_d_b_d.html">DBD</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#a4fb19e123d86c30825553b6983720f42">dbd</a>, struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>, struct <a class="el" href="structcnid__dbd__rply.html">cnid_dbd_rply</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a6dc856a83db9a256210ebd13e86b1009">rply</a>)</td></tr>
+<tr class="memdesc:a652051fe7c2e44084c5762e647c1c296"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the CNID corresponding to a particular file.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CNID salvation spec. </p>
+<p>general rule: better safe then sorry, so we always delete CNIDs and assign new ones in case of a lookup mismatch. afpd also sends us the CNID found in the adouble file. In certain cases we can use this hint to determince the right CNID.</p>
+<p>The lines... </p><div class="fragment"><div class="line">Id  Did T   Dev Inode   Name</div>
+<div class="line">============================</div>
+<div class="line">a   b   c   d   e       name1</div>
+<div class="line">--&gt;</div>
+<div class="line">f   <a class="code hl_variable" href="uams__dhx2__pam_8c.html#a2bcf13a3a9a328bf22107402dff1855f">g</a>   h   i   h       name2</div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_a2bcf13a3a9a328bf22107402dff1855f"><div class="ttname"><a href="uams__dhx2__pam_8c.html#a2bcf13a3a9a328bf22107402dff1855f">g</a></div><div class="ttdeci">static gcry_mpi_t g</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:39</div></div>
+</div><!-- fragment --><p> ...are the expected results of certain operations. (f) is the speced CNID, in some cases it's only intermediate as described in the text and is overridden by another spec.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+1) UNIX rename (via mv) or inode reusage(!)</h2>
+<p>Name is possibly changed (rename case) but inode is the same. We should try to keep the CNID, but we can't, because inode reusage is probably much to frequent.</p>
+<p>rename: </p><div class="fragment"><div class="line">15  2   f   1   1       file</div>
+<div class="line">--&gt;</div>
+<div class="line">15  x   f   1   1       renamedfile</div>
+</div><!-- fragment --><p> inode reusage: </p><div class="fragment"><div class="line">15  2   f   1   1       file</div>
+<div class="line">--&gt;</div>
+<div class="line">16  y   f   1   1       inodereusagefile</div>
+<div class="line"> </div>
+<div class="line">Result in <a class="code hl_function" href="dbd_8h.html#a6382b370f7e4e7d0a78d3fe04a4f4fcf">dbd_lookup</a> (-: not found, +: found):</div>
+<div class="line">+ <a class="code hl_function" href="pack_8c.html#a51626404b224bc7ede032b7e9f9c61fd">devino</a></div>
+<div class="line">- <a class="code hl_function" href="pack_8c.html#abe74696e41a3c20433140c47cd06de9a">didname</a></div>
+<div class="ttc" id="adbd_8h_html_a6382b370f7e4e7d0a78d3fe04a4f4fcf"><div class="ttname"><a href="dbd_8h.html#a6382b370f7e4e7d0a78d3fe04a4f4fcf">dbd_lookup</a></div><div class="ttdeci">int dbd_lookup(DBD *dbd, struct cnid_dbd_rqst *, struct cnid_dbd_rply *)</div><div class="ttdoc">This returns the CNID corresponding to a particular file.</div><div class="ttdef"><b>Definition</b> dbd_lookup.c:141</div></div>
+<div class="ttc" id="apack_8c_html_a51626404b224bc7ede032b7e9f9c61fd"><div class="ttname"><a href="pack_8c.html#a51626404b224bc7ede032b7e9f9c61fd">devino</a></div><div class="ttdeci">int devino(DB *dbp, const DBT *pkey, const DBT *pdata, DBT *skey)</div><div class="ttdef"><b>Definition</b> pack.c:81</div></div>
+<div class="ttc" id="apack_8c_html_abe74696e41a3c20433140c47cd06de9a"><div class="ttname"><a href="pack_8c.html#abe74696e41a3c20433140c47cd06de9a">didname</a></div><div class="ttdeci">int didname(DB *dbp, const DBT *pkey, const DBT *pdata, DBT *skey)</div><div class="ttdef"><b>Definition</b> pack.c:67</div></div>
+</div><!-- fragment --><p>Possible solution:</p>
+<p>None. Delete old data, file gets new CNID in both cases (rename and inode). If we got a hint and hint matches the CNID from devino we keep it and update the record.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
+2) UNIX mv from one folder to another</h2>
+<p>Name is unchanged and inode stays the same, but DID is different. We should try to keep the CNID. </p><div class="fragment"><div class="line">15  2   f   1   1       file</div>
+<div class="line">--&gt;</div>
+<div class="line">15  x   f   1   1       file</div>
+<div class="line"> </div>
+<div class="line">Result in <a class="code hl_function" href="#a652051fe7c2e44084c5762e647c1c296">dbd_lookup</a>:</div>
+<div class="line">+ <a class="code hl_function" href="pack_8c.html#a51626404b224bc7ede032b7e9f9c61fd">devino</a></div>
+<div class="line">- <a class="code hl_function" href="pack_8c.html#abe74696e41a3c20433140c47cd06de9a">didname</a></div>
+<div class="ttc" id="adbd__lookup_8c_html_a652051fe7c2e44084c5762e647c1c296"><div class="ttname"><a href="#a652051fe7c2e44084c5762e647c1c296">dbd_lookup</a></div><div class="ttdeci">int dbd_lookup(DBD *dbd, struct cnid_dbd_rqst *rqst, struct cnid_dbd_rply *rply)</div><div class="ttdoc">This returns the CNID corresponding to a particular file.</div><div class="ttdef"><b>Definition</b> dbd_lookup.c:141</div></div>
+</div><!-- fragment --><p> Possible solution:</p>
+<p>strcmp names, if they match keep CNID. Unfortunately this also can't be distinguished from a new file with a reused inode. So me must assign a new CNID. If we got a hint and hint matches the CNID from devino we keep it and update the record.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
+3) Restore from backup i.e. change of inode number &ndash; or emacs</h2>
+<div class="fragment"><div class="line">15  2   f   1   1       file</div>
+<div class="line">--&gt;</div>
+<div class="line">15  2   f   1   2       file</div>
+<div class="line"> </div>
+<div class="line">Result in <a class="code hl_function" href="#a652051fe7c2e44084c5762e647c1c296">dbd_lookup</a>:</div>
+<div class="line">- <a class="code hl_function" href="pack_8c.html#a51626404b224bc7ede032b7e9f9c61fd">devino</a></div>
+<div class="line">+ <a class="code hl_function" href="pack_8c.html#abe74696e41a3c20433140c47cd06de9a">didname</a></div>
+</div><!-- fragment --><p> Possible fixup solution: test-suite test235 tests and ensures that the CNID is <em>changed</em>. The reason for this is somewhat lost in time, but nevertheless we believe our test suite.</p>
+<p>Similar things happen with emas: emacs uses a backup file (file~). When saving because of inode reusage of the fs, both files most likely exchange inodes. </p><div class="fragment"><div class="line">15  2   f   1   1       file</div>
+<div class="line">16  2   f   1   2       file~</div>
+<div class="line">--&gt; <span class="keyword">this</span> would be nice:</div>
+<div class="line">15  2   f   1   2       file</div>
+<div class="line">16  2   f   1   1       file~</div>
+<div class="line">--&gt; but <span class="keywordflow">for</span> the reasons described above we must implement</div>
+<div class="line">17  2   f   1   2       file</div>
+<div class="line">18  2   f   1   1       file~</div>
+<div class="line"> </div>
+<div class="line">Result in <a class="code hl_function" href="#a652051fe7c2e44084c5762e647c1c296">dbd_lookup</a> <span class="keywordflow">for</span> the emacs <span class="keywordflow">case</span>:</div>
+<div class="line">+ <a class="code hl_function" href="pack_8c.html#a51626404b224bc7ede032b7e9f9c61fd">devino</a> --&gt; <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a>: 16</div>
+<div class="line">+ <a class="code hl_function" href="pack_8c.html#abe74696e41a3c20433140c47cd06de9a">didname</a> -&gt; <a class="code hl_define" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a>: 15</div>
+<div class="ttc" id="aetc_2afpd_2directory_8h_html_a6e9ac498670273b784319287e6bcd45e"><div class="ttname"><a href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a></div><div class="ttdeci">#define CNID(a, b)</div><div class="ttdef"><b>Definition</b> etc/afpd/directory.h:66</div></div>
+</div><!-- fragment --><p> devino search and didname search result in different CNIDs !!</p>
+<p>Possible fixup solution: to be safe we must assign new CNIDs to both files. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a652051fe7c2e44084c5762e647c1c296" name="a652051fe7c2e44084c5762e647c1c296"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a652051fe7c2e44084c5762e647c1c296">&#9670;&#160;</a></span>dbd_lookup()</h2>
 
@@ -142,6 +211,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This returns the CNID corresponding to a particular file. </p>
+<dl class="section note"><dt>Note</dt><dd>It will also fix up the database if there's a problem. </dd></dl>
 
 </div>
 </div>

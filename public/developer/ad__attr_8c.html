@@ -120,7 +120,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e20adf495d7b042d0428dfc4dda74ca" id="r_a5e20adf495d7b042d0428dfc4dda74ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e20adf495d7b042d0428dfc4dda74ca">ad_getattr</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, uint16_t *attr)</td></tr>
 <tr class="memitem:a68c476bc279d14862c15f9be60299adb" id="r_a68c476bc279d14862c15f9be60299adb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c476bc279d14862c15f9be60299adb">ad_setattr</a> (const struct <a class="el" href="structadouble.html">adouble</a> *ad, const uint16_t attribute)</td></tr>
 <tr class="memitem:ad6e995e22d1d8c7f8e50ff3f1cd272af" id="r_ad6e995e22d1d8c7f8e50ff3f1cd272af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6e995e22d1d8c7f8e50ff3f1cd272af">ad_setid</a> (struct <a class="el" href="structadouble.html">adouble</a> *adp, const dev_t dev, const ino_t ino, const uint32_t id, const <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const void *<a class="el" href="cmd__dbd__scanvol_8c.html#affcc56d24f5c3d6b6824b537b37afa6d">stamp</a>)</td></tr>
+<tr class="memdesc:ad6e995e22d1d8c7f8e50ff3f1cd272af"><td class="mdescLeft">&#160;</td><td class="mdescRight">save file/folder ID in AppleDoubleV2 netatalk private parameters  <br /></td></tr>
 <tr class="memitem:aba447fe3f33846375ff0d6e1f72b7f14" id="r_aba447fe3f33846375ff0d6e1f72b7f14"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba447fe3f33846375ff0d6e1f72b7f14">ad_getid</a> (struct <a class="el" href="structadouble.html">adouble</a> *adp, const dev_t st_dev, const ino_t st_ino, const <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const void *<a class="el" href="cmd__dbd__scanvol_8c.html#affcc56d24f5c3d6b6824b537b37afa6d">stamp</a>)</td></tr>
+<tr class="memdesc:aba447fe3f33846375ff0d6e1f72b7f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve stored file / folder.  <br /></td></tr>
 <tr class="memitem:a1e48f506b8396cbe12eabc4bf9dab286" id="r_a1e48f506b8396cbe12eabc4bf9dab286"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e48f506b8396cbe12eabc4bf9dab286">ad_forcegetid</a> (struct <a class="el" href="structadouble.html">adouble</a> *adp)</td></tr>
 <tr class="memitem:af470908427effdb6f3cad1c4fb1e36ad" id="r_af470908427effdb6f3cad1c4fb1e36ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af470908427effdb6f3cad1c4fb1e36ad">ad_setname</a> (struct <a class="el" href="structadouble.html">adouble</a> *ad, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 </table>
@@ -189,6 +191,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>the "shared" and "invisible" attributes are opaque and stored and retrieved from the FinderFlags. This fixes Bug #2802236:</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://sourceforge.net/p/netatalk/bugs/350/">https://sourceforge.net/p/netatalk/bugs/350/</a> </dd></dl>
 
 </div>
 </div>
@@ -225,6 +229,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieve stored file / folder. </p>
+<dl class="section note"><dt>Note</dt><dd>Callers should treat a return of CNID_INVALID (0) as an invalid value. </dd></dl>
 
 </div>
 </div>
@@ -288,6 +295,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>save file/folder ID in AppleDoubleV2 netatalk private parameters </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if resource fork has been modified </dd>
+<dd>
+-1 on error. </dd></dl>
+
 </div>
 </div>
 <a id="af470908427effdb6f3cad1c4fb1e36ad" name="af470908427effdb6f3cad1c4fb1e36ad"></a>
@@ -308,6 +320,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set resource fork filename attribute. </p>
 
 </div>
 </div>

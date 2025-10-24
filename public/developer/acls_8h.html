@@ -102,6 +102,9 @@ $(function(){initNavTree('acls_8h.html','',''); });
   <div class="headertitle"><div class="title">acls.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Definitions for ACL mapping code.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="uuid_8h_source.html">atalk/uuid.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2directory_8h_source.html">directory.h</a>&quot;</code><br />
 </div>
@@ -159,13 +162,18 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa0ab90bb6fae969c7f5eece718fac6ba" id="r_aa0ab90bb6fae969c7f5eece718fac6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ab90bb6fae969c7f5eece718fac6ba">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a4942a67314f08c075b5487302f646a35" id="r_a4942a67314f08c075b5487302f646a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4942a67314f08c075b5487302f646a35">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a68af66c7445133403863e81e438be2eb" id="r_a68af66c7445133403863e81e438be2eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af66c7445133403863e81e438be2eb">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:aa0ab90bb6fae969c7f5eece718fac6ba" id="r_aa0ab90bb6fae969c7f5eece718fac6ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0ab90bb6fae969c7f5eece718fac6ba">afp_access</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a4942a67314f08c075b5487302f646a35" id="r_a4942a67314f08c075b5487302f646a35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4942a67314f08c075b5487302f646a35">afp_getacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a68af66c7445133403863e81e438be2eb" id="r_a68af66c7445133403863e81e438be2eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68af66c7445133403863e81e438be2eb">afp_setacl</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 <tr class="memitem:a76ea2a5d940e030476c196fd9f6309cf" id="r_a76ea2a5d940e030476c196fd9f6309cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ea2a5d940e030476c196fd9f6309cf">acltoownermode</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="structpath.html">path</a>, struct stat *st, struct <a class="el" href="structmaccess.html">maccess</a> *ma)</td></tr>
 <tr class="memdesc:a76ea2a5d940e030476c196fd9f6309cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">map ACL to user maccess  <br /></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Definitions for ACL mapping code. </p>
+<p>This is what Apple says about ACL flags in sys/kauth.h:</p>
+<p>&lt;Apple&gt; The low 16 bits of the flags field are reserved for filesystem internal use and must be preserved by all APIs. This includes round-tripping flags through user-space interfaces. The high 16 bits of the flags are used to store attributes and to request specific handling of the ACL. &lt;/Apple&gt;</p>
+<p>The constants are included for reference. We DONT expect them on the wire! We will ignore and spoil em. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a4ab814151f4e443b16d06e10cae6f790" name="a4ab814151f4e443b16d06e10cae6f790"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ab814151f4e443b16d06e10cae6f790">&#9670;&#160;</a></span>ACE_TRIVIAL</h2>
 
@@ -177,6 +185,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Some stuff for the handling of NFSv4 ACLs </p>
 
 </div>
 </div>
@@ -275,6 +284,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000002 </p>
 
 </div>
 </div>
@@ -289,6 +299,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000040 </p>
 
 </div>
 </div>
@@ -303,6 +314,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000020 </p>
 
 </div>
 </div>
@@ -317,6 +329,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000010 </p>
 
 </div>
 </div>
@@ -345,6 +358,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000080 </p>
 
 </div>
 </div>
@@ -359,6 +373,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000100 </p>
 
 </div>
 </div>
@@ -373,6 +388,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>0x00000001 </p>
 
 </div>
 </div>
@@ -391,11 +407,12 @@ Functions</h2></td></tr>
 <div class="line">        <a class="code hl_define" href="#aceaf0ad67c30952b0cd5fdce1d44c61f">DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</a> |\</div>
 <div class="line">        <a class="code hl_define" href="#a218cf9c642bf8ce385168d71b322c32c">DARWIN_ACE_FLAGS_LIMIT_INHERIT</a> |\</div>
 <div class="line">        <a class="code hl_define" href="#a237fac9d605d0bb913f75c287f2bf19f">DARWIN_ACE_FLAGS_ONLY_INHERIT</a>)</div>
-<div class="ttc" id="aacls_8h_html_a218cf9c642bf8ce385168d71b322c32c"><div class="ttname"><a href="#a218cf9c642bf8ce385168d71b322c32c">DARWIN_ACE_FLAGS_LIMIT_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_LIMIT_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:78</div></div>
-<div class="ttc" id="aacls_8h_html_a237fac9d605d0bb913f75c287f2bf19f"><div class="ttname"><a href="#a237fac9d605d0bb913f75c287f2bf19f">DARWIN_ACE_FLAGS_ONLY_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_ONLY_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:80</div></div>
-<div class="ttc" id="aacls_8h_html_a4055705c79e84d6611d45fa1ea545b8e"><div class="ttname"><a href="#a4055705c79e84d6611d45fa1ea545b8e">DARWIN_ACE_FLAGS_FILE_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_FILE_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:74</div></div>
-<div class="ttc" id="aacls_8h_html_aceaf0ad67c30952b0cd5fdce1d44c61f"><div class="ttname"><a href="#aceaf0ad67c30952b0cd5fdce1d44c61f">DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:76</div></div>
-</div><!-- fragment -->
+<div class="ttc" id="aacls_8h_html_a218cf9c642bf8ce385168d71b322c32c"><div class="ttname"><a href="#a218cf9c642bf8ce385168d71b322c32c">DARWIN_ACE_FLAGS_LIMIT_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_LIMIT_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:75</div></div>
+<div class="ttc" id="aacls_8h_html_a237fac9d605d0bb913f75c287f2bf19f"><div class="ttname"><a href="#a237fac9d605d0bb913f75c287f2bf19f">DARWIN_ACE_FLAGS_ONLY_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_ONLY_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:76</div></div>
+<div class="ttc" id="aacls_8h_html_a4055705c79e84d6611d45fa1ea545b8e"><div class="ttname"><a href="#a4055705c79e84d6611d45fa1ea545b8e">DARWIN_ACE_FLAGS_FILE_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_FILE_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:73</div></div>
+<div class="ttc" id="aacls_8h_html_aceaf0ad67c30952b0cd5fdce1d44c61f"><div class="ttname"><a href="#aceaf0ad67c30952b0cd5fdce1d44c61f">DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</a></div><div class="ttdeci">#define DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</div><div class="ttdef"><b>Definition</b> acls.h:74</div></div>
+</div><!-- fragment --><p>All flag bits controlling ACE inheritance </p>
+
 </div>
 </div>
 <a id="adaea9a724c6a45c211cb1fca5b656f6a" name="adaea9a724c6a45c211cb1fca5b656f6a"></a>
@@ -563,6 +580,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ACL Flags </p>
 
 </div>
 </div>
@@ -577,6 +595,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>inheritance will be deferred until the first rename operation </p>
 
 </div>
 </div>
@@ -591,6 +610,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this ACL must not be overwritten as part of an inheritance operation </p>
 
 </div>
 </div>
@@ -606,6 +626,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>FPGet|Set Bitmap </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1499aec5b9e708d1be6fa3bb68f729b1a5faeea981554a22d8c692c9579f49218" name="a1499aec5b9e708d1be6fa3bb68f729b1a5faeea981554a22d8c692c9579f49218"></a>kFileSec_UUID&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1499aec5b9e708d1be6fa3bb68f729b1af00fb2f7900eefa69311bb9b6936ee69" name="a1499aec5b9e708d1be6fa3bb68f729b1af00fb2f7900eefa69311bb9b6936ee69"></a>kFileSec_GRPUUID&#160;</td><td class="fielddoc"></td></tr>

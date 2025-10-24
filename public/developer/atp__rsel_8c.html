@@ -120,6 +120,7 @@ $(function(){initNavTree('atp__rsel_8c.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:aa666dd3b18604e93c4c98c453846b13f" id="r_aa666dd3b18604e93c4c98c453846b13f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa666dd3b18604e93c4c98c453846b13f">resend_request</a> (<a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> ah)</td></tr>
 <tr class="memitem:a8bb0b75599836c0dbc4ef2a3b8eb4b0a" id="r_a8bb0b75599836c0dbc4ef2a3b8eb4b0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bb0b75599836c0dbc4ef2a3b8eb4b0a">atp_rsel</a> (<a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> ah, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *faddr, int func)</td></tr>
+<tr class="memdesc:a8bb0b75599836c0dbc4ef2a3b8eb4b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive <a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packets.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a8bb0b75599836c0dbc4ef2a3b8eb4b0a" name="a8bb0b75599836c0dbc4ef2a3b8eb4b0a"></a>
@@ -145,6 +146,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Receive <a class="el" href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a> packets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ah</td><td>open atp handle </td></tr>
+    <tr><td class="paramname">faddr</td><td>address to receive from </td></tr>
+    <tr><td class="paramname">func</td><td>which <a class="el" href="hash_8c.html#a263c2b8aef941d3a3c5cf9a9c2764594">function(s)</a> to wait for; 0 means request or response </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

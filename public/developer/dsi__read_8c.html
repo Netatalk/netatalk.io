@@ -115,6 +115,7 @@ $(function(){initNavTree('dsi__read_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5e451b27eee4a5719b57be711a6b0345" id="r_a5e451b27eee4a5719b57be711a6b0345"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e451b27eee4a5719b57be711a6b0345">dsi_readinit</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const size_t buflen, const size_t size, const int err)</td></tr>
+<tr class="memdesc:a5e451b27eee4a5719b57be711a6b0345"><td class="mdescLeft">&#160;</td><td class="mdescRight">streaming i/o for afp_read.  <br /></td></tr>
 <tr class="memitem:aa1edbb771b97cc9155fb5c9da52d0a78" id="r_aa1edbb771b97cc9155fb5c9da52d0a78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1edbb771b97cc9155fb5c9da52d0a78">dsi_readdone</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:a72fc09d973ea591588c407ff2ec992b0" id="r_a72fc09d973ea591588c407ff2ec992b0"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72fc09d973ea591588c407ff2ec992b0">dsi_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const size_t buflen)</td></tr>
 </table>
@@ -142,6 +143,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>send off the data </p>
 
 </div>
 </div>
@@ -195,6 +197,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>streaming i/o for afp_read. </p>
+<p>this is all from the perspective of the client. it basically does the reverse of dsi_write. on first entry, it will send off the header plus whatever is in its command buffer. it returns the amount of stuff still to be read (constrained by the buffer size). </p>
 
 </div>
 </div>

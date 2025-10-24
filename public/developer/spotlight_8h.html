@@ -159,7 +159,7 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a30d4ba9553ad2102d7343e717fd60896" id="r_a30d4ba9553ad2102d7343e717fd60896"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d4ba9553ad2102d7343e717fd60896">spotlight_init</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>)</td></tr>
-<tr class="memitem:ad58f4c8d53dab7fa7430d5b707ca6a0d" id="r_ad58f4c8d53dab7fa7430d5b707ca6a0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:ad58f4c8d53dab7fa7430d5b707ca6a0d" id="r_ad58f4c8d53dab7fa7430d5b707ca6a0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58f4c8d53dab7fa7430d5b707ca6a0d">afp_spotlight_rpc</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 <tr class="memitem:a34f2023c533ff31bb1ce854182e7407f" id="r_a34f2023c533ff31bb1ce854182e7407f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f2023c533ff31bb1ce854182e7407f">sl_pack</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
 <tr class="memitem:a838d95f10dfcad456af2111d396cdc00" id="r_a838d95f10dfcad456af2111d396cdc00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a838d95f10dfcad456af2111d396cdc00">sl_unpack</a> (<a class="el" href="struct_d_a_l_l_o_c___c_t_x.html">DALLOC_CTX</a> *query, const char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>)</td></tr>
 <tr class="memitem:a09859b9b9b17c89969f3e6fdb8739312" id="r_a09859b9b9b17c89969f3e6fdb8739312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09859b9b9b17c89969f3e6fdb8739312">configure_spotlight_attributes</a> (const char *attributes)</td></tr>
@@ -289,6 +289,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>an array of elements </p>
 
 </div>
 </div>
@@ -303,6 +304,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>a boolean, we avoid bool_t </p>
 
 </div>
 </div>
@@ -317,6 +319,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>an array of key/value elements </p>
 
 </div>
 </div>
@@ -331,6 +334,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>contains one <a class="el" href="#a503b1b536808ed5b4fca1501d078f7f6">sl_array_t</a> </p>
 
 </div>
 </div>
@@ -345,6 +349,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>a nil element </p>
 
 </div>
 </div>
@@ -373,6 +378,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Internal query data structure </p>
 
 </div>
 </div>
@@ -388,15 +394,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>query state </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da03678475552748696585434d701543da" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da03678475552748696585434d701543da"></a>SLQ_STATE_NEW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da1235af82f9dc967f124d2a495ae8ec6f" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da1235af82f9dc967f124d2a495ae8ec6f"></a>SLQ_STATE_RUNNING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da87f5488a4996db5a1998a16b09e4049a" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da87f5488a4996db5a1998a16b09e4049a"></a>SLQ_STATE_RESULTS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da8aa1680f5bc57c1035c3caefc07a5fe9" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da8aa1680f5bc57c1035c3caefc07a5fe9"></a>SLQ_STATE_FULL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da663f3406445ae43937ec8aadb089ecc8" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da663f3406445ae43937ec8aadb089ecc8"></a>SLQ_STATE_DONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da7181900f0e5149c358e1af2a5dc226bc" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da7181900f0e5149c358e1af2a5dc226bc"></a>SLQ_STATE_CANCEL_PENDING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3"></a>SLQ_STATE_CANCELLED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3" name="ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3"></a>SLQ_STATE_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da03678475552748696585434d701543da" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da03678475552748696585434d701543da"></a>SLQ_STATE_NEW&#160;</td><td class="fielddoc"><p>Query received from client </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da1235af82f9dc967f124d2a495ae8ec6f" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da1235af82f9dc967f124d2a495ae8ec6f"></a>SLQ_STATE_RUNNING&#160;</td><td class="fielddoc"><p>Query dispatched to Tracker </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da87f5488a4996db5a1998a16b09e4049a" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da87f5488a4996db5a1998a16b09e4049a"></a>SLQ_STATE_RESULTS&#160;</td><td class="fielddoc"><p>Async Tracker query read </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da8aa1680f5bc57c1035c3caefc07a5fe9" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da8aa1680f5bc57c1035c3caefc07a5fe9"></a>SLQ_STATE_FULL&#160;</td><td class="fielddoc"><p>result queue is full </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da663f3406445ae43937ec8aadb089ecc8" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da663f3406445ae43937ec8aadb089ecc8"></a>SLQ_STATE_DONE&#160;</td><td class="fielddoc"><p>Got all results from Tracker </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da7181900f0e5149c358e1af2a5dc226bc" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da7181900f0e5149c358e1af2a5dc226bc"></a>SLQ_STATE_CANCEL_PENDING&#160;</td><td class="fielddoc"><p>a cancel op for the query is pending </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3" name="ad6b2fc5b2bcf7437dbc35e3dc491a33da183600faf74edb5e50e363c609d8dae3"></a>SLQ_STATE_CANCELLED&#160;</td><td class="fielddoc"><p>the query has been cancelled </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3" name="ad6b2fc5b2bcf7437dbc35e3dc491a33dab36a0cfc281754cae458eaaaf2793ae3"></a>SLQ_STATE_ERROR&#160;</td><td class="fielddoc"><p>an error happended somewhere </p>
+</td></tr>
 </table>
 
 </div>

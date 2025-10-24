@@ -102,58 +102,52 @@ $(function(){initNavTree('afp__avahi_8h_source.html','',''); });
   <div class="headertitle"><div class="title">afp_avahi.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="afp__avahi_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* -*- Mode: C; tab-width: 2; indent-tabs-mode: t; c-basic-offset: 2 -*- */</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Author:  Daniel S. Haischt &lt;me@daniel.stefan.haischt.name&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Purpose: Avahi based Zeroconf support</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Docs:    http://avahi.org/download/doxygen/</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef AFPD_AVAHI_H</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define AFPD_AVAHI_H</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;avahi-client/client.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;avahi-client/publish.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;avahi-common/alternative.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;avahi-common/error.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;avahi-common/malloc.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;avahi-common/thread-watch.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">atalk/logger.h</a>&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structcontext.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structcontext.html">context</a> {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* Avahi stuff */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structcontext.html#a25cf93dfe381d7ac44346581df558916">   27</a></span>    <span class="keywordtype">int</span>               <a class="code hl_variable" href="structcontext.html#a25cf93dfe381d7ac44346581df558916">thread_running</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">   28</a></span>    AvahiThreadedPoll *<a class="code hl_variable" href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">threaded_poll</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">   29</a></span>    AvahiClient       *<a class="code hl_variable" href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">client</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">   30</a></span>    AvahiEntryGroup   *<a class="code hl_variable" href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">group</a>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">/* Netatalk stuff */</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">   32</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a>      *<a class="code hl_variable" href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">obj</a>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<a href="afp__avahi_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef AFPD_AVAHI_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define AFPD_AVAHI_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;avahi-client/client.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;avahi-client/publish.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;avahi-common/alternative.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;avahi-common/error.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;avahi-common/malloc.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;avahi-common/thread-watch.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="logger_8h.html">atalk/logger.h</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structcontext.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structcontext.html">context</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* Avahi stuff */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structcontext.html#a25cf93dfe381d7ac44346581df558916">   26</a></span>    <span class="keywordtype">int</span>               <a class="code hl_variable" href="structcontext.html#a25cf93dfe381d7ac44346581df558916">thread_running</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">   27</a></span>    AvahiThreadedPoll *<a class="code hl_variable" href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">threaded_poll</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">   28</a></span>    AvahiClient       *<a class="code hl_variable" href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">client</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">   29</a></span>    AvahiEntryGroup   *<a class="code hl_variable" href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">group</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* Netatalk stuff */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">   31</a></span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a>      *<a class="code hl_variable" href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">obj</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/* prototype definitions */</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__avahi_8h.html#a35c66dc2bb5693e12773db7d7618713c">av_zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">int</span> <a class="code hl_function" href="afp__avahi_8h.html#a507328c2a7fb3d21b12fa441406a6d3a">av_zeroconf_unregister</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif   </span><span class="comment">/* AFPD_AVAHI_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/* prototype definitions */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="afp__avahi_8h.html#a35c66dc2bb5693e12773db7d7618713c">av_zeroconf_register</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="code hl_variable" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="afp__avahi_8h.html#a507328c2a7fb3d21b12fa441406a6d3a">av_zeroconf_unregister</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif   </span><span class="comment">/* AFPD_AVAHI_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aafp__avahi_8h_html_a35c66dc2bb5693e12773db7d7618713c"><div class="ttname"><a href="afp__avahi_8h.html#a35c66dc2bb5693e12773db7d7618713c">av_zeroconf_register</a></div><div class="ttdeci">void av_zeroconf_register(const AFPObj *obj)</div><div class="ttdef"><b>Definition</b> afp_avahi.c:290</div></div>
-<div class="ttc" id="aafp__avahi_8h_html_a507328c2a7fb3d21b12fa441406a6d3a"><div class="ttname"><a href="afp__avahi_8h.html#a507328c2a7fb3d21b12fa441406a6d3a">av_zeroconf_unregister</a></div><div class="ttdeci">int av_zeroconf_unregister(void)</div><div class="ttdef"><b>Definition</b> afp_avahi.c:340</div></div>
+<div class="ttc" id="aafp__avahi_8h_html_a507328c2a7fb3d21b12fa441406a6d3a"><div class="ttname"><a href="afp__avahi_8h.html#a507328c2a7fb3d21b12fa441406a6d3a">av_zeroconf_unregister</a></div><div class="ttdeci">int av_zeroconf_unregister(void)</div><div class="ttdoc">Tries to shutdown this loop impl.</div><div class="ttdef"><b>Definition</b> afp_avahi.c:340</div></div>
 <div class="ttc" id="alogger_8h_html"><div class="ttname"><a href="logger_8h.html">logger.h</a></div></div>
 <div class="ttc" id="anetatalk_8c_html_ab2a2323b2013b68132e8db8dc5087da6"><div class="ttname"><a href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a></div><div class="ttdeci">static AFPObj obj</div><div class="ttdef"><b>Definition</b> netatalk.c:62</div></div>
 <div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:154</div></div>
-<div class="ttc" id="astructcontext_html"><div class="ttname"><a href="structcontext.html">context</a></div><div class="ttdef"><b>Definition</b> afp_avahi.h:25</div></div>
-<div class="ttc" id="astructcontext_html_a25cf93dfe381d7ac44346581df558916"><div class="ttname"><a href="structcontext.html#a25cf93dfe381d7ac44346581df558916">context::thread_running</a></div><div class="ttdeci">int thread_running</div><div class="ttdef"><b>Definition</b> afp_avahi.h:27</div></div>
-<div class="ttc" id="astructcontext_html_a3dd98209e999b1d1d8cb2ece2fdb4375"><div class="ttname"><a href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">context::obj</a></div><div class="ttdeci">const AFPObj * obj</div><div class="ttdef"><b>Definition</b> afp_avahi.h:32</div></div>
-<div class="ttc" id="astructcontext_html_ab398f342e1d55a4ed4e994a1172ed3db"><div class="ttname"><a href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">context::threaded_poll</a></div><div class="ttdeci">AvahiThreadedPoll * threaded_poll</div><div class="ttdef"><b>Definition</b> afp_avahi.h:28</div></div>
-<div class="ttc" id="astructcontext_html_ab8a7d13960fceed8d2f479e597d8952a"><div class="ttname"><a href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">context::client</a></div><div class="ttdeci">AvahiClient * client</div><div class="ttdef"><b>Definition</b> afp_avahi.h:29</div></div>
-<div class="ttc" id="astructcontext_html_af5de3f33d0639c2892f33f863493c47b"><div class="ttname"><a href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">context::group</a></div><div class="ttdeci">AvahiEntryGroup * group</div><div class="ttdef"><b>Definition</b> afp_avahi.h:30</div></div>
+<div class="ttc" id="astructcontext_html"><div class="ttname"><a href="structcontext.html">context</a></div><div class="ttdef"><b>Definition</b> afp_avahi.h:24</div></div>
+<div class="ttc" id="astructcontext_html_a25cf93dfe381d7ac44346581df558916"><div class="ttname"><a href="structcontext.html#a25cf93dfe381d7ac44346581df558916">context::thread_running</a></div><div class="ttdeci">int thread_running</div><div class="ttdef"><b>Definition</b> afp_avahi.h:26</div></div>
+<div class="ttc" id="astructcontext_html_a3dd98209e999b1d1d8cb2ece2fdb4375"><div class="ttname"><a href="structcontext.html#a3dd98209e999b1d1d8cb2ece2fdb4375">context::obj</a></div><div class="ttdeci">const AFPObj * obj</div><div class="ttdef"><b>Definition</b> afp_avahi.h:31</div></div>
+<div class="ttc" id="astructcontext_html_ab398f342e1d55a4ed4e994a1172ed3db"><div class="ttname"><a href="structcontext.html#ab398f342e1d55a4ed4e994a1172ed3db">context::threaded_poll</a></div><div class="ttdeci">AvahiThreadedPoll * threaded_poll</div><div class="ttdef"><b>Definition</b> afp_avahi.h:27</div></div>
+<div class="ttc" id="astructcontext_html_ab8a7d13960fceed8d2f479e597d8952a"><div class="ttname"><a href="structcontext.html#ab8a7d13960fceed8d2f479e597d8952a">context::client</a></div><div class="ttdeci">AvahiClient * client</div><div class="ttdef"><b>Definition</b> afp_avahi.h:28</div></div>
+<div class="ttc" id="astructcontext_html_af5de3f33d0639c2892f33f863493c47b"><div class="ttname"><a href="structcontext.html#af5de3f33d0639c2892f33f863493c47b">context::group</a></div><div class="ttdeci">AvahiEntryGroup * group</div><div class="ttdef"><b>Definition</b> afp_avahi.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

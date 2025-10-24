@@ -103,6 +103,9 @@ $(function(){initNavTree('cache_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>LDAP cache interface.  
+<a href="#details">More...</a></p>
+
 <p><a href="cache_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
@@ -117,7 +120,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a36e33dbf1d4beafe2408e733a576e1d4" id="r_a36e33dbf1d4beafe2408e733a576e1d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36e33dbf1d4beafe2408e733a576e1d4">search_cachebyuuid</a> (<a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> uuidp, char **name, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> *<a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>)</td></tr>
 <tr class="memitem:aad47c9650c59dd1a48d1e2413e985365" id="r_aad47c9650c59dd1a48d1e2413e985365"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad47c9650c59dd1a48d1e2413e985365">add_cachebyuuid</a> (<a class="el" href="uuid_8h.html#aa9026f4d4b59405d5021b332d256182d">uuidp_t</a> inuuid, const char *inname, <a class="el" href="uuid_8h.html#ae0147c35cd7b691de20163176596f925">uuidtype_t</a> <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, const unsigned long uid)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>LDAP cache interface. </p>
+<p>We need to cache all LDAP query results, they just take too long. We do hashing with chaining. Two caches are needed:</p><ol type="1">
+<li>name -&gt; uuid, indexed by a hash(f(): hashstring) of the name</li>
+<li>uuid -&gt; name, indexed by a hash of the <a class="el" href="auth_8h.html#a12bb1553b43d97fabf4f76c18c48d6af">uuid(f(): hashuuid)</a> Both hash funcs result in a value 0-255 with which we index in an array. We malloc and free all elements as needed. The cache caches for CACHESECONDS. </li>
+</ol>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a7eee79f03d43d8ff5bcf19122c3d3af2" name="a7eee79f03d43d8ff5bcf19122c3d3af2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7eee79f03d43d8ff5bcf19122c3d3af2">&#9670;&#160;</a></span>CACHESECONDS</h2>
 
@@ -287,6 +296,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Caller must free allocated name </p>
 
 </div>
 </div>

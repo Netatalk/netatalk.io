@@ -118,7 +118,7 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a9e178e66940bdd2ea90fecc8ba697d06" id="r_a9e178e66940bdd2ea90fecc8ba697d06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e178e66940bdd2ea90fecc8ba697d06">v_maccharset</a></td></tr>
 <tr class="memitem:aa575b19367feb056492251eb59d3f96b" id="r_aa575b19367feb056492251eb59d3f96b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa575b19367feb056492251eb59d3f96b">v_mtou_flags</a></td></tr>
 <tr class="memitem:a34b2fff8b3698d3805cd7ceb351278e0" id="r_a34b2fff8b3698d3805cd7ceb351278e0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34b2fff8b3698d3805cd7ceb351278e0">v_utom_flags</a></td></tr>
-<tr class="memitem:a23faa9552dd3068b6ad89417b28b1ffd" id="r_a23faa9552dd3068b6ad89417b28b1ffd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23faa9552dd3068b6ad89417b28b1ffd">v_kTextEncoding</a></td></tr>
+<tr class="memitem:ab0e6d1a00edeb4d4485c1340ae3a0324" id="r_ab0e6d1a00edeb4d4485c1340ae3a0324"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0e6d1a00edeb4d4485c1340ae3a0324">v_kTextEncoding</a></td></tr>
 <tr class="memitem:aad4ea061444753279d90ca99a954a98d" id="r_aad4ea061444753279d90ca99a954a98d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4ea061444753279d90ca99a954a98d">max_filename</a></td></tr>
 <tr class="memitem:a6628d3a06a74c9fdd5ebacfad260ac63" id="r_a6628d3a06a74c9fdd5ebacfad260ac63"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6628d3a06a74c9fdd5ebacfad260ac63">v_veto</a></td></tr>
 <tr class="memitem:a5fa30b6fbd6c924bec1bf8622c68a877" id="r_a5fa30b6fbd6c924bec1bf8622c68a877"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa30b6fbd6c924bec1bf8622c68a877">v_adouble</a></td></tr>
@@ -202,6 +202,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>adouble option NODEV, NOCACHE, etc.. </p>
 
 </div>
 </div>
@@ -216,6 +217,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>adouble format: v1, v2 </p>
 
 </div>
 </div>
@@ -230,6 +232,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>amount of data appended to files </p>
 
 </div>
 </div>
@@ -314,6 +317,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>as defined in afp.conf </p>
 
 </div>
 </div>
@@ -328,6 +332,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>volume creation date, not unix ctime </p>
 
 </div>
 </div>
@@ -356,6 +361,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>volume open but deleted in new config file </p>
 
 </div>
 </div>
@@ -370,6 +376,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Unix volume device, Set but not used </p>
 
 </div>
 </div>
@@ -384,6 +391,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>default directories permission value OR with requested perm </p>
 
 </div>
 </div>
@@ -412,6 +420,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>default files permission value OR with requested perm </p>
 
 </div>
 </div>
@@ -440,20 +449,22 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AFP attributes that shall be ignored </p>
 
 </div>
 </div>
-<a id="a23faa9552dd3068b6ad89417b28b1ffd" name="a23faa9552dd3068b6ad89417b28b1ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23faa9552dd3068b6ad89417b28b1ffd">&#9670;&#160;</a></span>v_kTextEncoding</h2>
+<a id="ab0e6d1a00edeb4d4485c1340ae3a0324" name="ab0e6d1a00edeb4d4485c1340ae3a0324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e6d1a00edeb4d4485c1340ae3a0324">&#9670;&#160;</a></span>v_kTextEncoding</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t vol::v_kTextEncoding</td>
+          <td class="memname">long vol::v_kTextEncoding</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mac charset encoding in network order </p>
 
 </div>
 </div>
@@ -468,6 +479,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Size limit, if any, in MiB </p>
 
 </div>
 </div>
@@ -482,6 +494,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>as defined in afp.conf but with vars expanded </p>
 
 </div>
 </div>
@@ -524,6 +537,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>mangled to legacy longname in ucs2 </p>
 
 </div>
 </div>
@@ -552,6 +566,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>flags for convert_charset in mtoupath </p>
 
 </div>
 </div>
@@ -566,6 +581,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>either v_u8mname or v_macname </p>
 
 </div>
 </div>
@@ -748,6 +764,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>time at which v_tm_used was calculated last </p>
 
 </div>
 </div>
@@ -762,6 +779,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>used bytes on a TM volume </p>
 
 </div>
 </div>
@@ -776,6 +794,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>converted to utf8-mac in ucs2 </p>
 
 </div>
 </div>
@@ -818,6 +837,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>For TimeMachine zeroconf record </p>
 
 </div>
 </div>
@@ -846,6 +866,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The AFPVOL_EA_xx flag </p>
 
 </div>
 </div>
@@ -902,6 +923,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pointer to vfs_master_funcs for chaining </p>
 
 </div>
 </div>

@@ -122,10 +122,15 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a181dd0f7d9fca7ca858baab7ca4e9e6e" id="r_a181dd0f7d9fca7ca858baab7ca4e9e6e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a181dd0f7d9fca7ca858baab7ca4e9e6e">setup_out_fd</a> (void)</td></tr>
 <tr class="memitem:abb607417e93f3367ec4d202af0cb0152" id="r_abb607417e93f3367ec4d202af0cb0152"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb607417e93f3367ec4d202af0cb0152">gain_root_privilege</a> (void)</td></tr>
+<tr class="memdesc:abb607417e93f3367ec4d202af0cb0152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain root privilege before doing something.  <br /></td></tr>
 <tr class="memitem:a28f6ce01c10647ea087dfc9d70346afb" id="r_a28f6ce01c10647ea087dfc9d70346afb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28f6ce01c10647ea087dfc9d70346afb">gain_root_group_privilege</a> (void)</td></tr>
+<tr class="memdesc:a28f6ce01c10647ea087dfc9d70346afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure our real and effective groups are zero.  <br /></td></tr>
 <tr class="memitem:aa61997483e1835468890eefdabe21f1b" id="r_aa61997483e1835468890eefdabe21f1b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61997483e1835468890eefdabe21f1b">become_user_permanently</a> (uid_t uid, gid_t gid)</td></tr>
+<tr class="memdesc:aa61997483e1835468890eefdabe21f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Become the specified uid and gid - permanently !  <br /></td></tr>
 <tr class="memitem:afe9ea35bbc011d1fa1e8899fba11e3b2" id="r_afe9ea35bbc011d1fa1e8899fba11e3b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe9ea35bbc011d1fa1e8899fba11e3b2">afprun</a> (char *cmd, int *outfd)</td></tr>
+<tr class="memdesc:afe9ea35bbc011d1fa1e8899fba11e3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">run a command  <br /></td></tr>
 <tr class="memitem:a7b753f8b00a55c4d751afb6e508525ac" id="r_a7b753f8b00a55c4d751afb6e508525ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b753f8b00a55c4d751afb6e508525ac">afprun_bg</a> (char *cmd)</td></tr>
+<tr class="memdesc:a7b753f8b00a55c4d751afb6e508525ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a command in the background without waiting.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a6c4803b372951ac385ef1d7008f1678d" name="a6c4803b372951ac385ef1d7008f1678d"></a>
@@ -162,6 +167,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>run a command </p>
+<dl class="section note"><dt>Note</dt><dd>being careful about uid/gid handling and putting the output in outfd (or discard it if outfd is NULL). </dd></dl>
+
 </div>
 </div>
 <a id="a7b753f8b00a55c4d751afb6e508525ac" name="a7b753f8b00a55c4d751afb6e508525ac"></a>
@@ -178,6 +186,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Run a command in the background without waiting. </p>
+<dl class="section note"><dt>Note</dt><dd>being careful about uid/gid handling </dd></dl>
 
 </div>
 </div>
@@ -208,6 +219,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Become the specified uid and gid - permanently ! </p>
+<dl class="section note"><dt>Note</dt><dd>there should be no way back if possible </dd></dl>
+
 </div>
 </div>
 <a id="a28f6ce01c10647ea087dfc9d70346afb" name="a28f6ce01c10647ea087dfc9d70346afb"></a>
@@ -232,6 +246,9 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ensure our real and effective groups are zero. </p>
+<dl class="section note"><dt>Note</dt><dd>we want to end up with rgid==egid==0 </dd></dl>
 
 </div>
 </div>
@@ -258,6 +275,9 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gain root privilege before doing something. </p>
+<dl class="section note"><dt>Note</dt><dd>We want to end up with ruid==euid==0 </dd></dl>
+
 </div>
 </div>
 <a id="a181dd0f7d9fca7ca858baab7ca4e9e6e" name="a181dd0f7d9fca7ca858baab7ca4e9e6e"></a>
@@ -282,6 +302,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This is a utility function of <a class="el" href="#afe9ea35bbc011d1fa1e8899fba11e3b2" title="run a command">afprun()</a>. </p>
 
 </div>
 </div>

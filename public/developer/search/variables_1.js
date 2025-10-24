@@ -190,7 +190,6 @@ var searchData=
   ['attr_187',['attr',['../structscrit.html#aa0d776ca540bfadcc81e793cf18fd967',1,'scrit::attr'],['../structafp__filedir__parms.html#a212ae320c094f571bf0448469e056f08',1,'afp_filedir_parms::attr'],['../structafp__volume__parms.html#a9061ad3491e70887862a74fb1885174b',1,'afp_volume_parms::attr']]],
   ['attr_5fname_188',['attr_name',['../extattr_8c.html#a2aa9966af2b75a778030f6c675224491',1,'extattr.c']]],
   ['attrs_189',['attrs',['../structfinderinfo.html#a0139ffe1bc6f31f4b52f7302e9837eff',1,'finderinfo']]],
-  ['attruname_190',['attruname',['../vfs_8c.html#a71b851f5438567dc19f25af3d576261e',1,'vfs.c']]],
-  ['av_5fname_191',['av_name',['../structafp__versions.html#a6fffe63e5f763a4c3b016fa79981d773',1,'afp_versions']]],
-  ['av_5fnumber_192',['av_number',['../structafp__versions.html#a98e4d3dd113219cff9a295feadef1269',1,'afp_versions']]]
+  ['av_5fname_190',['av_name',['../structafp__versions.html#a6fffe63e5f763a4c3b016fa79981d773',1,'afp_versions']]],
+  ['av_5fnumber_191',['av_number',['../structafp__versions.html#a98e4d3dd113219cff9a295feadef1269',1,'afp_versions']]]
 ];

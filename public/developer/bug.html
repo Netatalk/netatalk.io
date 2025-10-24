@@ -104,9 +104,36 @@ $(function(){initNavTree('bug.html','',''); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Global <a class="el" href="ad__open_8c.html#a79142df106145a9b4666421725a62a54">ad_open</a>  (struct adouble *ad, const char *path, int adflags,...)</dt>
-<dd><a class="anchor" id="_bug000001"></a>on Solaris (HAVE_EAFD) ADFLAGS_RF doesn't work without ADFLAGS_HF, because it checks whether <a class="el" href="adouble_8h.html#a5b670b19520da9a5395c98b6b40cb64d">ad_meta_fileno()</a> is already openend. As a workaround pass ADFLAGS_SETSHRMD. </dd>
+<dd><a class="anchor" id="_bug000007"></a>on Solaris (HAVE_EAFD) ADFLAGS_RF doesn't work without ADFLAGS_HF, because it checks whether <a class="el" href="adouble_8h.html#a5b670b19520da9a5395c98b6b40cb64d">ad_meta_fileno()</a> is already opened. As a workaround pass ADFLAGS_SETSHRMD. </dd>
+<dt>Global <a class="el" href="ad__open_8c.html#a250c0aacb6a64c69ba0d1bebcb9c05d7">ad_path</a>  (const char *path, int adflags)</dt>
+<dd><a class="anchor" id="_bug000006"></a>should do something for pathname &gt; MAXPATHLEN  </dd>
+<dt>Global <a class="el" href="fork_8h.html#ad6f8ed7547f70a907b0826932583cebf">afp_syncfork</a>  (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *obj, char *ibuf, size_t ibuflen, char *rbuf, size_t *rbuflen)</dt>
+<dd><a class="anchor" id="_bug000003"></a> There is a lot to tell about fsync, fdatasync, F_FULLFSYNC. fsync(2) on OSX is implemented differently than on other platforms.  </dd>
+<dt>Global <a class="el" href="afpclient_8h.html#afddb135fb91ee89d617a797cb826e37b">AFPopenLogin</a>  (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, char *vers, char *uam, char *usr, char *pwd)</dt>
+<dd><a class="anchor" id="_bug000012"></a>spec violation in netatalk FPlogout ==&gt; dsiclose  </dd>
+<dt>Global <a class="el" href="etc_2afpd_2directory_8h.html#a679c3d5ca81f60fdaa575b325dff448d">check_dirent</a>  (const struct vol *, char *)</dt>
+<dd><a class="anchor" id="_bug000002"></a> Doesn't work with dangling symlink i.e.:<ul>
+<li>Move a folder with a dangling symlink in the trash</li>
+<li>empty the trash</li>
+</ul>
+</dd>
+<dt>Global <a class="el" href="charcnv_8c.html#ad63604b009913e1d68125fa5dbb56608">convert_charset</a>  (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> from_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_charset, const char *src, size_t src_len, char *dest, size_t dest_len, uint16_t *flags)</dt>
+<dd><a class="anchor" id="_bug000010"></a>the size is a mess we really need a malloc/free logic  </dd>
+<dt>File <a class="el" href="desktop_8c.html">desktop.c</a>  </dt>
+<dd><a class="anchor" id="_bug000001"></a> afp_XXXcomment are (the only) functions able to open a resource fork when there's no data fork, e.g. after it was removed with samba.  </dd>
+<dt>Global <a class="el" href="logger_8c.html#aaf986e5534b5e0609c7c8a49fc3cb50a">make_log_entry</a>  (enum loglevels loglevel, enum logtypes logtype, const char *file, const bool log_us_timestamp, int line, char *message,...)</dt>
+<dd><a class="anchor" id="_bug000011"></a>make_log_entry has 1 main flaw: The message in its entirety, must fit into the tempbuffer. So it must be shorter than MAXLOGSIZE  </dd>
+<dt>Global <a class="el" href="mangle_8h.html#ae47b7bec36e84a61c4c6b2cd889ce95e">mangle</a>  (const struct vol *, char *, size_t, char *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, int)</dt>
+<dd><p class="startdd"><a class="anchor" id="_bug000004"></a> Early Mac OS X (10.0-10.4.?) had the limitation up to 255 Byte. Current implementation is: volcharset -&gt; UTF16-MAC -&gt; truncated 255 UTF8-MAC </p>
+<p class="interdd"></p>
+<p class="enddd">Recent Mac OS X (10.4.?-) don't have this limitation. Desirable implementation is: volcharset -&gt; truncated 510 UTF16-MAC -&gt; UTF8-MAC </p>
+</dd>
+<dt>File <a class="el" href="printcap_8c.html">printcap.c</a>  </dt>
+<dd><a class="anchor" id="_bug000005"></a>Should use a "last" pointer in tbuf, so that searching for capabilities alphabetically would not be a n**2/2 process when large numbers of capabilities are given.  </dd>
 <dt>Global <a class="el" href="charcnv_8c.html#a078338b2d84aec84b44e1f3cce6feeab">pull_charset_flags</a>  (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> from_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_set, const char *src, size_t srclen, char *dest, size_t destlen, uint16_t *flags)</dt>
-<dd><a class="anchor" id="_bug000002"></a> This will <em>not</em> work if the destination charset is not multibyte, i.e. UCS2-&gt;UCS2 will fail The (un)escape scheme is not compatible to the old cap style escape. This is bad, we need it for e.g. HFS cdroms. </dd>
+<dd><a class="anchor" id="_bug000008"></a> This will <em>not</em> work if the destination charset is not multibyte, i.e. UCS2-&gt;UCS2 will fail The (un)escape scheme is not compatible to the old cap style escape. This is bad, we need it for e.g. HFS cdroms.  </dd>
+<dt>Global <a class="el" href="charcnv_8c.html#a1736e720feb8ec5600fe46279099b2a1">push_charset_flags</a>  (<a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> to_set, <a class="el" href="unicode_8h.html#af153ec19ae548b53b7c1cc9829359210">charset_t</a> cap_set, char *src, size_t srclen, char *dest, size_t destlen, uint16_t *flags)</dt>
+<dd><a class="anchor" id="_bug000009"></a> CONV_IGNORE and CONV_ESCAPEHEX can't work together. Should we check this ? This will <em>not</em> work if the destination charset is not multibyte, i.e. UCS2-&gt;UCS2 will fail The escape scheme is not compatible to the old cap style escape. This is bad, we need it for e.g. HFS cdroms. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

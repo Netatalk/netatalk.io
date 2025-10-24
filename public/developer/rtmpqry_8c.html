@@ -122,12 +122,16 @@ $(function(){initNavTree('rtmpqry_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5f31da15da3c308b2f5947b3e5b6fd64" id="r_a5f31da15da3c308b2f5947b3e5b6fd64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f31da15da3c308b2f5947b3e5b6fd64">setup_ddp_socket</a> (const struct <a class="el" href="structat__addr.html">at_addr</a> *local_addr, struct <a class="el" href="structat__addr.html">at_addr</a> **remote_addr)</td></tr>
+<tr class="memdesc:a5f31da15da3c308b2f5947b3e5b6fd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up a DDP socket ready for sending RTMP packets.  <br /></td></tr>
 <tr class="memitem:ac7e28e7d9ad0c0a2b901f6d9f8065f5a" id="r_ac7e28e7d9ad0c0a2b901f6d9f8065f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e28e7d9ad0c0a2b901f6d9f8065f5a">do_rtmp_rdr</a> (int sockfd, const struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *sa_remote, bool get_all, int secs_timeout)</td></tr>
+<tr class="memdesc:ac7e28e7d9ad0c0a2b901f6d9f8065f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an RTMP Route Data Request (RDR) and wait for a reply.  <br /></td></tr>
 <tr class="memitem:a41dece18b3ce647e005a9fdd9e1a38a0" id="r_a41dece18b3ce647e005a9fdd9e1a38a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41dece18b3ce647e005a9fdd9e1a38a0">print_rtmp_data_packet</a> (const uint8_t *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t len)</td></tr>
 <tr class="memitem:ac9050e0b74e960d307a77aae1601d720" id="r_ac9050e0b74e960d307a77aae1601d720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9050e0b74e960d307a77aae1601d720">do_rtmp_request</a> (int sockfd, struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *sa_remote)</td></tr>
+<tr class="memdesc:ac9050e0b74e960d307a77aae1601d720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an RTMP Request and wait for a reply.  <br /></td></tr>
 <tr class="memitem:af16aa8a79404ef2f2361af72c360e368" id="r_af16aa8a79404ef2f2361af72c360e368"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af16aa8a79404ef2f2361af72c360e368">usage</a> (char *s)</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="memitem:a842f3a9fa41c0ad108ae07e5b98e76fc" id="r_a842f3a9fa41c0ad108ae07e5b98e76fc"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842f3a9fa41c0ad108ae07e5b98e76fc">print_rtmp_tuple</a> (const uint8_t *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const uint8_t *cursor, size_t len, uint16_t router_net, uint8_t router_node)</td></tr>
+<tr class="memdesc:a842f3a9fa41c0ad108ae07e5b98e76fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an RTMP tuple pointed to by 'cursor' within the buffer 'buf' with length 'len'.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ac7e28e7d9ad0c0a2b901f6d9f8065f5a" name="ac7e28e7d9ad0c0a2b901f6d9f8065f5a"></a>
@@ -159,6 +163,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Send an RTMP Route Data Request (RDR) and wait for a reply. </p>
+<p>An RTMP RDR solicits RTMP data packets - generally, these are sent out broadcast on a timer, but one can specifically ask for them to be sent to a non-standard socket by means of an RDR. An RDR can also specify whether or not for the router to do split horizon processing (or whether to return all routes). </p>
+
 </div>
 </div>
 <a id="ac9050e0b74e960d307a77aae1601d720" name="ac9050e0b74e960d307a77aae1601d720"></a>
@@ -179,6 +186,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send an RTMP Request and wait for a reply. </p>
+<p>An RTMP request just requests details of the network this node is connected to; in general, these aren't used on extended networks (instead, a ZIP GetNetInfo is used) but they should be supported anyway. </p>
 
 </div>
 </div>
@@ -258,6 +268,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Print an RTMP tuple pointed to by 'cursor' within the buffer 'buf' with length 'len'. </p>
+<dl class="section return"><dt>Returns</dt><dd>the next value of 'cursor' or NULL if no more tuples exist. </dd></dl>
+
 </div>
 </div>
 <a id="a5f31da15da3c308b2f5947b3e5b6fd64" name="a5f31da15da3c308b2f5947b3e5b6fd64"></a>
@@ -278,6 +291,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set up a DDP socket ready for sending RTMP packets. </p>
+<p>The remote_addr is a pointer to a pointer so that if it's null we can fill it in with the address the kernel provides, as we do in <a class="el" href="nbp__lkup_8c.html">libatalk/nbp/nbp_lkup.c</a> for example. </p>
 
 </div>
 </div>

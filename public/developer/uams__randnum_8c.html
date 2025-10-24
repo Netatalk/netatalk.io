@@ -131,13 +131,17 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a43be22e7d0b437c48c2b8798f3f9cbf5" id="r_a43be22e7d0b437c48c2b8798f3f9cbf5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43be22e7d0b437c48c2b8798f3f9cbf5">home_passwd</a> (const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const int pathlen, unsigned char *passwd, const int len, const int set)</td></tr>
 <tr class="memitem:a47ef2b0abcebef195393bf836e59f733" id="r_a47ef2b0abcebef195393bf836e59f733"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47ef2b0abcebef195393bf836e59f733">afppasswd</a> (const struct passwd *pwd, const char *<a class="el" href="structpath.html">path</a>, const int pathlen, unsigned char *passwd, int len, const int set)</td></tr>
+<tr class="memdesc:a47ef2b0abcebef195393bf836e59f733"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle /path/afppasswd with an optional key file. we're a lot more trusting of this file.  <br /></td></tr>
 <tr class="memitem:ae1209d2435147120ca2ae1db5b3b5887" id="r_ae1209d2435147120ca2ae1db5b3b5887"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1209d2435147120ca2ae1db5b3b5887">randpass</a> (const struct passwd *pwd, const char *file, unsigned char *passwd, const int len, const int set)</td></tr>
-<tr class="memitem:a6308630d23ffdc6113fd31a1d849fad7" id="r_a6308630d23ffdc6113fd31a1d849fad7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6308630d23ffdc6113fd31a1d849fad7">rand_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *username, int ulen, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a1868ea581a57c42b96aed5ba8c47480e" id="r_a1868ea581a57c42b96aed5ba8c47480e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1868ea581a57c42b96aed5ba8c47480e">randnum_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:ac76760868de217908eb649c17754f5a8" id="r_ac76760868de217908eb649c17754f5a8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac76760868de217908eb649c17754f5a8">rand2num_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a9be88cd0362a5fae034b2a86bd8fd73f" id="r_a9be88cd0362a5fae034b2a86bd8fd73f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9be88cd0362a5fae034b2a86bd8fd73f">randnum_changepw</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *username, struct passwd *pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:aabb6c3312c8eadf8a453abc8112c8fb6" id="r_aabb6c3312c8eadf8a453abc8112c8fb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb6c3312c8eadf8a453abc8112c8fb6">randnum_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a7cd96b94653cab6473ffd986d006a4b5" id="r_a7cd96b94653cab6473ffd986d006a4b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd96b94653cab6473ffd986d006a4b5">randnum_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memdesc:ae1209d2435147120ca2ae1db5b3b5887"><td class="mdescLeft">&#160;</td><td class="mdescRight">this sets the uid.  <br /></td></tr>
+<tr class="memitem:a6308630d23ffdc6113fd31a1d849fad7" id="r_a6308630d23ffdc6113fd31a1d849fad7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6308630d23ffdc6113fd31a1d849fad7">rand_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *username, int ulen, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a1868ea581a57c42b96aed5ba8c47480e" id="r_a1868ea581a57c42b96aed5ba8c47480e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1868ea581a57c42b96aed5ba8c47480e">randnum_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memdesc:a1868ea581a57c42b96aed5ba8c47480e"><td class="mdescLeft">&#160;</td><td class="mdescRight">check encrypted reply.  <br /></td></tr>
+<tr class="memitem:ac76760868de217908eb649c17754f5a8" id="r_ac76760868de217908eb649c17754f5a8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac76760868de217908eb649c17754f5a8">rand2num_logincont</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a9be88cd0362a5fae034b2a86bd8fd73f" id="r_a9be88cd0362a5fae034b2a86bd8fd73f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9be88cd0362a5fae034b2a86bd8fd73f">randnum_changepw</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *username, struct passwd *pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memdesc:a9be88cd0362a5fae034b2a86bd8fd73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">change password  <br /></td></tr>
+<tr class="memitem:aabb6c3312c8eadf8a453abc8112c8fb6" id="r_aabb6c3312c8eadf8a453abc8112c8fb6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb6c3312c8eadf8a453abc8112c8fb6">randnum_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a7cd96b94653cab6473ffd986d006a4b5" id="r_a7cd96b94653cab6473ffd986d006a4b5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd96b94653cab6473ffd986d006a4b5">randnum_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *uname, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 <tr class="memitem:ac67f27e6feea66d84cfb4d6e0893f477" id="r_ac67f27e6feea66d84cfb4d6e0893f477"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:ae2cc5cad0aad9a4e928900687f0cef7b" id="r_ae2cc5cad0aad9a4e928900687f0cef7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a> (void)</td></tr>
 </table><table class="memberdecls">
@@ -207,7 +211,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">              (((((<span class="keywordtype">unsigned</span> long) a) &gt;&gt; 8) ^ \</div>
 <div class="line">              ((<span class="keywordtype">unsigned</span> long)a)) &amp; 0xffff)</div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>hash to a 16-bit number. this will generate completely harmless warnings on 64-bit machines. </p>
+
 </div>
 </div>
 <a id="a484586f31dc1ac85f3597f0f0bc7a5fc" name="a484586f31dc1ac85f3597f0f0bc7a5fc"></a>
@@ -276,6 +281,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>handle /path/afppasswd with an optional key file. we're a lot more trusting of this file. </p>
+<dl class="section note"><dt>Note</dt><dd>we use our own password entry writing bits as we want to avoid tromping over global variables. in addition, we look for a key file and use that if it's there.</dd></dl>
+<p>here are the formats:</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
+password file</h2>
+<div class="fragment"><div class="line">username:password:last <a class="code hl_function" href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a> date:failedcount</div>
+<div class="ttc" id="aafpd_2auth_8c_html_a4ee7d1ffe87fe862af209f89f4eb8846"><div class="ttname"><a href="afpd_2auth_8c.html#a4ee7d1ffe87fe862af209f89f4eb8846">login</a></div><div class="ttdeci">static int login(AFPObj *obj, struct passwd *pwd, void(*logout)(void), int expired)</div><div class="ttdef"><b>Definition</b> afpd/auth.c:263</div></div>
+</div><!-- fragment --><p>password is just the hex equivalent of either the ASCII password (if the key file doesn't exist) or the des encrypted password.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
+key file</h2>
+<div class="fragment"><div class="line"><a class="code hl_define" href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a> (in hex)</div>
+<div class="ttc" id="ahash_8c_html_ae57736c8a0ddeb64dc394712624d8209"><div class="ttname"><a href="hash_8c.html#ae57736c8a0ddeb64dc394712624d8209">key</a></div><div class="ttdeci">#define key</div><div class="ttdef"><b>Definition</b> hash.c:36</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a43be22e7d0b437c48c2b8798f3f9cbf5" name="a43be22e7d0b437c48c2b8798f3f9cbf5"></a>
@@ -324,6 +342,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>handle ~/.passwd. courtesy of <a href="#" onclick="location.href='mai'+'lto:'+'shi'+'rs'+'ch@'+'ib'+'m.n'+'et'; return false;">shirs<span class="obfuscator">.nosp@m.</span>ch@i<span class="obfuscator">.nosp@m.</span>bm.ne<span class="obfuscator">.nosp@m.</span>t</a>. </p>
 
 </div>
 </div>
@@ -373,6 +392,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>differences from randnum:</p><ol type="1">
+<li>each byte of the key is shifted left one bit</li>
+<li>client sends the server a 64-bit number. the server encrypts it and sends it back as part of the reply. </li>
+</ol>
 
 </div>
 </div>
@@ -432,6 +455,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>randnum sends an 8-byte number and uses the user's password to check against the encrypted reply. </p>
 
 </div>
 </div>
@@ -487,6 +511,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>change password </p>
+<dl class="section note"><dt>Note</dt><dd>an FPLogin must already have completed successfully for this to work. </dd></dl>
+
 </div>
 </div>
 <a id="aabb6c3312c8eadf8a453abc8112c8fb6" name="aabb6c3312c8eadf8a453abc8112c8fb6"></a>
@@ -535,6 +562,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>randnum login </p>
 
 </div>
 </div>
@@ -589,6 +617,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>randnum login ext </p>
 
 </div>
 </div>
@@ -639,6 +668,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>check encrypted reply. </p>
+<dl class="section note"><dt>Note</dt><dd>we actually setup the encryption stuff here as the first part of randnum and rand2num are identical. </dd></dl>
+
 </div>
 </div>
 <a id="ae1209d2435147120ca2ae1db5b3b5887" name="ae1209d2435147120ca2ae1db5b3b5887"></a>
@@ -682,6 +714,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>this sets the uid. </p>
+<dl class="section note"><dt>Note</dt><dd>it needs to do slightly different things depending upon whether or not the password is in ~/.passwd or in a global location </dd></dl>
 
 </div>
 </div>
@@ -824,8 +859,8 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="auam_8h_html_aa2aadc58d0b3550933f269c66d065a8e"><div class="ttname"><a href="uam_8h.html#aa2aadc58d0b3550933f269c66d065a8e">UAM_MODULE_VERSION</a></div><div class="ttdeci">#define UAM_MODULE_VERSION</div><div class="ttdef"><b>Definition</b> uam.h:21</div></div>
 <div class="ttc" id="auam_8h_html_ae495d3c127113c143a025a25560ff35e"><div class="ttname"><a href="uam_8h.html#ae495d3c127113c143a025a25560ff35e">UAM_MODULE_SERVER</a></div><div class="ttdeci">#define UAM_MODULE_SERVER</div><div class="ttdef"><b>Definition</b> uam.h:17</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_ac67f27e6feea66d84cfb4d6e0893f477"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1029</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1051</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ac67f27e6feea66d84cfb4d6e0893f477"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1033</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1055</div></div>
 </div><!-- fragment -->
 </div>
 </div>

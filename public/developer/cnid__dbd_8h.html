@@ -118,7 +118,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a2c64656e39f77089fbca4bafdcd07403" id="r_a2c64656e39f77089fbca4bafdcd07403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c64656e39f77089fbca4bafdcd07403">cnid_dbd_get</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, const char *, size_t)</td></tr>
 <tr class="memitem:aaedf7d4edfbdae90514bb603dfd7bb20" id="r_aaedf7d4edfbdae90514bb603dfd7bb20"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaedf7d4edfbdae90514bb603dfd7bb20">cnid_dbd_resolve</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> *, void *, size_t)</td></tr>
 <tr class="memitem:a62ed1021fcf20599a748b7cb34c69180" id="r_a62ed1021fcf20599a748b7cb34c69180"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62ed1021fcf20599a748b7cb34c69180">cnid_dbd_getstamp</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *, void *, const size_t)</td></tr>
-<tr class="memdesc:a62ed1021fcf20599a748b7cb34c69180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caller passes buffer where we will store the db stamp.  <br /></td></tr>
 <tr class="memitem:a75efcbe5473ac57e98e36edcb132d2b6" id="r_a75efcbe5473ac57e98e36edcb132d2b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75efcbe5473ac57e98e36edcb132d2b6">cnid_dbd_lookup</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *, const struct stat *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, const char *, size_t)</td></tr>
 <tr class="memitem:a26c68500be710c6b743ba7809a47031f" id="r_a26c68500be710c6b743ba7809a47031f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c68500be710c6b743ba7809a47031f">cnid_dbd_find</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *cdb, const char *name, size_t namelen, void *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>, size_t buflen)</td></tr>
 <tr class="memitem:ab53235cdbe4d01b642e332c6301cadcc" id="r_ab53235cdbe4d01b642e332c6301cadcc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab53235cdbe4d01b642e332c6301cadcc">cnid_dbd_update</a> (struct <a class="el" href="struct__cnid__db.html">_cnid_db</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, const struct stat *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, const char *, size_t)</td></tr>
@@ -348,8 +347,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Caller passes buffer where we will store the db stamp. </p>
+<p>Caller passes buffer where we will store the db stamp </p>
 
 </div>
 </div>

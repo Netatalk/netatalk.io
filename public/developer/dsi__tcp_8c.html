@@ -128,8 +128,8 @@ $(function(){initNavTree('dsi__tcp_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac6afabdc09a49a433ee19d8a9486056d" id="r_ac6afabdc09a49a433ee19d8a9486056d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6afabdc09a49a433ee19d8a9486056d">min</a>(a,  b)</td></tr>
-<tr class="memitem:ad884c5f7fe3dde8091a2473d3879ba29" id="r_ad884c5f7fe3dde8091a2473d3879ba29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad884c5f7fe3dde8091a2473d3879ba29">DSI_TCPMAXPEND</a>&#160;&#160;&#160;20       /* max # of pending connections */</td></tr>
-<tr class="memitem:a5789ee190eaef94f5e221e932744f7b6" id="r_a5789ee190eaef94f5e221e932744f7b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5789ee190eaef94f5e221e932744f7b6">DSI_TCPTIMEOUT</a>&#160;&#160;&#160;120     /* timeout in seconds for connections */</td></tr>
+<tr class="memitem:ad884c5f7fe3dde8091a2473d3879ba29" id="r_ad884c5f7fe3dde8091a2473d3879ba29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad884c5f7fe3dde8091a2473d3879ba29">DSI_TCPMAXPEND</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memitem:a5789ee190eaef94f5e221e932744f7b6" id="r_a5789ee190eaef94f5e221e932744f7b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5789ee190eaef94f5e221e932744f7b6">DSI_TCPTIMEOUT</a>&#160;&#160;&#160;120</td></tr>
 <tr class="memitem:a7687159c87b8758364782b0b3f00215a" id="r_a7687159c87b8758364782b0b3f00215a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7687159c87b8758364782b0b3f00215a">SOCKLEN_T</a>&#160;&#160;&#160;unsigned int</td></tr>
 <tr class="memitem:aad01a373db9ab0dfef3cd8e46d67fdd6" id="r_aad01a373db9ab0dfef3cd8e46d67fdd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad01a373db9ab0dfef3cd8e46d67fdd6">IFF_SLAVE</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:ac65409d904781e5a23529bd6bef2b673" id="r_ac65409d904781e5a23529bd6bef2b673"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac65409d904781e5a23529bd6bef2b673">SOL_TCP</a>&#160;&#160;&#160;IPPROTO_TCP</td></tr>
@@ -140,9 +140,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7521a2ae3c668b8897f07741c9c1a464" id="r_a7521a2ae3c668b8897f07741c9c1a464"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7521a2ae3c668b8897f07741c9c1a464">dsi_tcp_close</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:afc5156781fff24538dac575faf76ea95" id="r_afc5156781fff24538dac575faf76ea95"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5156781fff24538dac575faf76ea95">timeout_handler</a> (int sig)</td></tr>
 <tr class="memitem:acd7e6bd15ce33982709573382d814ea8" id="r_acd7e6bd15ce33982709573382d814ea8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7e6bd15ce33982709573382d814ea8">dsi_init_buffer</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
-<tr class="memdesc:acd7e6bd15ce33982709573382d814ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer.  <br /></td></tr>
 <tr class="memitem:aac0e5cdd680eb680317a7b71c8c0ba2f" id="r_aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac0e5cdd680eb680317a7b71c8c0ba2f">dsi_free</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
-<tr class="memdesc:aac0e5cdd680eb680317a7b71c8c0ba2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket.  <br /></td></tr>
 <tr class="memitem:ab7bb33168d22ffff7cbff785269bb2d1" id="r_ab7bb33168d22ffff7cbff785269bb2d1"><td class="memItemLeft" align="right" valign="top">static pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7bb33168d22ffff7cbff785269bb2d1">dsi_tcp_open</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:a05a8e3f73fedd40451d51f61d56d2846" id="r_a05a8e3f73fedd40451d51f61d56d2846"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05a8e3f73fedd40451d51f61d56d2846">guess_interface</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, const char *<a class="el" href="lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe">hostname</a>, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
 <tr class="memitem:a0bb59d6dac33f6a264536c14eb30ec9e" id="r_a0bb59d6dac33f6a264536c14eb30ec9e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bb59d6dac33f6a264536c14eb30ec9e">dsi_tcp_listen</a> (const char *address, const char *<a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>, struct addrinfo *hints, <a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, bool *psocket_err_afnotsup)</td></tr>
@@ -177,10 +175,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DSI_TCPMAXPEND&#160;&#160;&#160;20       /* max # of pending connections */</td>
+          <td class="memname">#define DSI_TCPMAXPEND&#160;&#160;&#160;20</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>max # of pending connections </p>
 
 </div>
 </div>
@@ -191,10 +190,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DSI_TCPTIMEOUT&#160;&#160;&#160;120     /* timeout in seconds for connections */</td>
+          <td class="memname">#define DSI_TCPTIMEOUT&#160;&#160;&#160;120</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>timeout in seconds for connections </p>
 
 </div>
 </div>
@@ -277,8 +277,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket. </p>
+<p>Free any allocated resources of the master afpd <a class="el" href="struct_d_s_i.html">DSI</a> objects and close server socket </p>
 
 </div>
 </div>
@@ -304,8 +303,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer. </p>
+<p>Allocate <a class="el" href="struct_d_s_i.html">DSI</a> read buffer and read-ahead buffer </p>
 
 </div>
 </div>
@@ -447,6 +445,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>accept the socket and do a little sanity checking </p>
 
 </div>
 </div>
@@ -506,6 +505,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>alarm handler for tcp_open </p>
 
 </div>
 </div>

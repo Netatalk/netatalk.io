@@ -20,7 +20,7 @@ var structvol =
     [ "v_fperm", "structvol.html#a922c5ebfee7b59a55610493539cd5021", null ],
     [ "v_gvs", "structvol.html#ac173f87699f1e9e7e5da97b9b2334dee", null ],
     [ "v_ignattr", "structvol.html#afb621305d21e3716e987d2f8a588e455", null ],
-    [ "v_kTextEncoding", "structvol.html#a23faa9552dd3068b6ad89417b28b1ffd", null ],
+    [ "v_kTextEncoding", "structvol.html#ab0e6d1a00edeb4d4485c1340ae3a0324", null ],
     [ "v_limitsize", "structvol.html#a70970cafb18d209527ddfe964a17a0d0", null ],
     [ "v_localname", "structvol.html#a8acf0927ce19c4d9ff7a850c79488e41", null ],
     [ "v_maccharset", "structvol.html#a9e178e66940bdd2ea90fecc8ba697d06", null ],

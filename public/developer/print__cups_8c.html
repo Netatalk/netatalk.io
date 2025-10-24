@@ -128,17 +128,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad96b61124bf0fa2ecdc763a21121fdce" id="r_ad96b61124bf0fa2ecdc763a21121fdce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96b61124bf0fa2ecdc763a21121fdce">convert_to_mac_name</a> (const char *encoding, char *inptr, char *outptr, size_t outlen)</td></tr>
+<tr class="memdesc:ad96b61124bf0fa2ecdc763a21121fdce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to Mac printer name.  <br /></td></tr>
 <tr class="memitem:a08930ca4ec05fab451f3493b71705a06" id="r_a08930ca4ec05fab451f3493b71705a06"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08930ca4ec05fab451f3493b71705a06">to_ascii</a> (char *inbuf, char **outbuf)</td></tr>
 <tr class="memitem:ae0ecde93667ba8eeec30d0582acbb71b" id="r_ae0ecde93667ba8eeec30d0582acbb71b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0ecde93667ba8eeec30d0582acbb71b">cups_mangle_printer_name</a> (struct <a class="el" href="structprinter.html">printer</a> *pr, struct <a class="el" href="structprinter.html">printer</a> *<a class="el" href="etc_2papd_2main_8c.html#a9a452f19a970380c4f6d1964fceb9e34">printers</a>)</td></tr>
+<tr class="memdesc:ae0ecde93667ba8eeec30d0582acbb71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mangles the printer name if two CUPS printer provide the same Chooser Name.  <br /></td></tr>
 <tr class="memitem:a941a3c99c041901eaa8621091e5eb28a" id="r_a941a3c99c041901eaa8621091e5eb28a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a941a3c99c041901eaa8621091e5eb28a">cups_free_printer</a> (struct <a class="el" href="structprinter.html">printer</a> *pr)</td></tr>
 <tr class="memitem:a56945a3d370789398e5b68daf0fb4ae1" id="r_a56945a3d370789398e5b68daf0fb4ae1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56945a3d370789398e5b68daf0fb4ae1">cups_get_language</a> (void)</td></tr>
 <tr class="memitem:a86392eb4f73984e39c15516a1d91ac97" id="r_a86392eb4f73984e39c15516a1d91ac97"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86392eb4f73984e39c15516a1d91ac97">cups_passwd_cb</a> (const char *prompt, http_t *http, const char *method, const char *resource, void *user_data)</td></tr>
+<tr class="memdesc:a86392eb4f73984e39c15516a1d91ac97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CUPS password callback...  <br /></td></tr>
 <tr class="memitem:ace9ba18e982a9f2433a64ad31eb0b5bb" id="r_ace9ba18e982a9f2433a64ad31eb0b5bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace9ba18e982a9f2433a64ad31eb0b5bb">cups_printername_ok</a> (char *name)</td></tr>
+<tr class="memdesc:ace9ba18e982a9f2433a64ad31eb0b5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify supplied printer name is a valid cups printer.  <br /></td></tr>
 <tr class="memitem:a7cceca60256fef84e5229d9771d13ab2" id="r_a7cceca60256fef84e5229d9771d13ab2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cceca60256fef84e5229d9771d13ab2">cups_get_printer_ppd</a> (char *name)</td></tr>
 <tr class="memitem:a876f252a8d6142b6aa84a7c0e9363271" id="r_a876f252a8d6142b6aa84a7c0e9363271"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a876f252a8d6142b6aa84a7c0e9363271">cups_get_printer_status</a> (struct <a class="el" href="structprinter.html">printer</a> *pr)</td></tr>
 <tr class="memitem:ad1e48597ad404ce16514bd97f48e2a1a" id="r_ad1e48597ad404ce16514bd97f48e2a1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e48597ad404ce16514bd97f48e2a1a">cups_print_job</a> (char *name, const char *filename, char *job, char *username, char *cupsoptions)</td></tr>
 <tr class="memitem:aafac05719dde2a4c05fbc49d3ac77e08" id="r_aafac05719dde2a4c05fbc49d3ac77e08"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprinter.html">printer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafac05719dde2a4c05fbc49d3ac77e08">cups_autoadd_printers</a> (struct <a class="el" href="structprinter.html">printer</a> *<a class="el" href="etc_2papd_2main_8c.html#acff54f7610ef788116a1a280fc9088e2">defprinter</a>, struct <a class="el" href="structprinter.html">printer</a> *<a class="el" href="etc_2papd_2main_8c.html#a9a452f19a970380c4f6d1964fceb9e34">printers</a>)</td></tr>
 <tr class="memitem:adcd1f4f930134ad405567757019caa46" id="r_adcd1f4f930134ad405567757019caa46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd1f4f930134ad405567757019caa46">cups_check_printer</a> (struct <a class="el" href="structprinter.html">printer</a> *pr, struct <a class="el" href="structprinter.html">printer</a> *<a class="el" href="etc_2papd_2main_8c.html#a9a452f19a970380c4f6d1964fceb9e34">printers</a>, int replace)</td></tr>
+<tr class="memdesc:adcd1f4f930134ad405567757019caa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a printer with this name already exists.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -197,6 +202,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Convert to Mac printer name. </p>
+<dl class="section note"><dt>Note</dt><dd>1) Convert from encoding to MacRoman </dd>
+<dd>
+2) Shorten to MAXCHOOSERLEN (31) </dd>
+<dd>
+3) Replace @ and _ as they are illegal </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 on failure, length of name on success; outpr contains name in MacRoman </dd></dl>
+
 </div>
 </div>
 <a id="aafac05719dde2a4c05fbc49d3ac77e08" name="aafac05719dde2a4c05fbc49d3ac77e08"></a>
@@ -243,6 +256,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>check if a printer with this name already exists. </p>
+<dl class="section note"><dt>Note</dt><dd>if yes, and replace = 1 the existing printer is replaced with the new one. This allows to overwrite printer settings </dd>
+<dd>
+created by cupsautoadd. It also used by cups_mangle_printer. </dd></dl>
 
 </div>
 </div>
@@ -349,6 +367,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Mangles the printer name if two CUPS printer provide the same Chooser Name. </p>
+<dl class="section note"><dt>Note</dt><dd>Append '<a class="el" href="pap_8c.html#a48078f8805f4944b3af0098c16a2cb32">nn</a>' to the chooser name, if it is longer than 28 char we overwrite the last three chars </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on Success, 2 on Error </dd></dl>
+
 </div>
 </div>
 <a id="a86392eb4f73984e39c15516a1d91ac97" name="a86392eb4f73984e39c15516a1d91ac97"></a>
@@ -393,6 +415,12 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The CUPS password callback... </p>
+<dl class="section note"><dt>Note</dt><dd>O - Password or NULL </dd>
+<dd>
+I - Prompt </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL (not implemented) </dd></dl>
+
 </div>
 </div>
 <a id="ad1e48597ad404ce16514bd97f48e2a1a" name="ad1e48597ad404ce16514bd97f48e2a1a"></a>
@@ -428,6 +456,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pass the job to cups </p>
 
 </div>
 </div>
@@ -446,6 +475,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Verify supplied printer name is a valid cups printer. </p>
+<dl class="section note"><dt>Note</dt><dd>O - 1 if printer name OK </dd>
+<dd>
+I - Name of printer </dd></dl>
+
 </div>
 </div>
 <a id="a08930ca4ec05fab451f3493b71705a06" name="a08930ca4ec05fab451f3493b71705a06"></a>
@@ -460,12 +494,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">size_t to_ascii </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>inptr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>&#160;)</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outptr</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -474,6 +508,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>fallback ASCII conversion </p>
 
 </div>
 </div>

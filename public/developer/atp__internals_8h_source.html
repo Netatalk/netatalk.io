@@ -131,10 +131,7 @@ $(function(){initNavTree('atp__internals_8h_source.html','',''); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="at_8h.html">netatalk/at.h</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="atp_8h.html">atalk/atp.h</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> * masks for matching incoming packets</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="atp__internals_8h.html#aad34db335e5e2b659a933a7a29c10eca">   34</a></span><span class="preprocessor">#define ATP_FUNCANY ATP_TREQ | ATP_TRESP | ATP_TREL</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="atp__internals_8h.html#a7957be88ff548949ada34c331d6a44e3">   35</a></span><span class="preprocessor">#define ATP_TIDANY  0xffff</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -157,18 +154,18 @@ $(function(){initNavTree('atp__internals_8h_source.html','',''); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">/* ATP_INTERNALS_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aat_8h_html"><div class="ttname"><a href="at_8h.html">at.h</a></div></div>
-<div class="ttc" id="aatp_8h_html"><div class="ttname"><a href="atp_8h.html">atp.h</a></div></div>
-<div class="ttc" id="aatp_8h_html_a5e38c8b2e7bc161a9a0dd3f131026652"><div class="ttname"><a href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a></div><div class="ttdeci">struct atp_handle * ATP</div><div class="ttdef"><b>Definition</b> atp.h:116</div></div>
+<div class="ttc" id="aatp_8h_html"><div class="ttname"><a href="atp_8h.html">atp.h</a></div><div class="ttdoc">ATP packet format.</div></div>
+<div class="ttc" id="aatp_8h_html_a5e38c8b2e7bc161a9a0dd3f131026652"><div class="ttname"><a href="atp_8h.html#a5e38c8b2e7bc161a9a0dd3f131026652">ATP</a></div><div class="ttdeci">struct atp_handle * ATP</div><div class="ttdef"><b>Definition</b> atp.h:121</div></div>
 <div class="ttc" id="aatp__input_8c_html_a1a8c2b5859b9e120925d429bc4fde686"><div class="ttname"><a href="atp__input_8c.html#a1a8c2b5859b9e120925d429bc4fde686">atp_print_addr</a></div><div class="ttdeci">void atp_print_addr(char *s, struct sockaddr_at *saddr)</div><div class="ttdef"><b>Definition</b> atp_input.c:64</div></div>
 <div class="ttc" id="aatp__internals_8h_html_a310bbc7adb99ac54f78c6685d3bb7a6a"><div class="ttname"><a href="atp__internals_8h.html#a310bbc7adb99ac54f78c6685d3bb7a6a">atp_recv_atp</a></div><div class="ttdeci">int atp_recv_atp(ATP, struct sockaddr_at *, uint8_t *, uint16_t, char *, int)</div><div class="ttdef"><b>Definition</b> atp_packet.c:147</div></div>
 <div class="ttc" id="aatp__internals_8h_html_a36d037e3e70237da75f1291c338f7968"><div class="ttname"><a href="atp__internals_8h.html#a36d037e3e70237da75f1291c338f7968">atp_print_bufuse</a></div><div class="ttdeci">void atp_print_bufuse(ATP, char *)</div></div>
 <div class="ttc" id="aatp__internals_8h_html_a4ec59d58129d7049efc0490e26e72366"><div class="ttname"><a href="atp__internals_8h.html#a4ec59d58129d7049efc0490e26e72366">atp_build_req_packet</a></div><div class="ttdeci">void atp_build_req_packet(struct atpbuf *, uint16_t, uint8_t, struct atp_block *)</div><div class="ttdef"><b>Definition</b> atp_packet.c:102</div></div>
-<div class="ttc" id="aatp__internals_8h_html_a848c393fda5d642f0cf873fab36c7869"><div class="ttname"><a href="atp__internals_8h.html#a848c393fda5d642f0cf873fab36c7869">atp_free_buf</a></div><div class="ttdeci">int atp_free_buf(struct atpbuf *)</div><div class="ttdef"><b>Definition</b> atp_bufs.c:147</div></div>
+<div class="ttc" id="aatp__internals_8h_html_a848c393fda5d642f0cf873fab36c7869"><div class="ttname"><a href="atp__internals_8h.html#a848c393fda5d642f0cf873fab36c7869">atp_free_buf</a></div><div class="ttdeci">int atp_free_buf(struct atpbuf *)</div><div class="ttdef"><b>Definition</b> atp_bufs.c:148</div></div>
 <div class="ttc" id="aatp__internals_8h_html_abaea734257fb50348e376fc8ce72e88d"><div class="ttname"><a href="atp__internals_8h.html#abaea734257fb50348e376fc8ce72e88d">at_addr_eq</a></div><div class="ttdeci">int at_addr_eq(struct sockaddr_at *, struct sockaddr_at *)</div><div class="ttdef"><b>Definition</b> atp_packet.c:322</div></div>
 <div class="ttc" id="aatp__internals_8h_html_ac15080835c205f77201856b92b1f5db3"><div class="ttname"><a href="atp__internals_8h.html#ac15080835c205f77201856b92b1f5db3">atp_build_resp_packet</a></div><div class="ttdeci">void atp_build_resp_packet(struct atpbuf *, uint16_t, uint8_t, struct atp_block *, uint8_t)</div><div class="ttdef"><b>Definition</b> atp_packet.c:122</div></div>
-<div class="ttc" id="aatp__internals_8h_html_ad579d5dfdff4e25258d6daa77e96aeab"><div class="ttname"><a href="atp__internals_8h.html#ad579d5dfdff4e25258d6daa77e96aeab">atp_alloc_buf</a></div><div class="ttdeci">struct atpbuf * atp_alloc_buf(void)</div><div class="ttdef"><b>Definition</b> atp_bufs.c:130</div></div>
-<div class="ttc" id="astructatp__block_html"><div class="ttname"><a href="structatp__block.html">atp_block</a></div><div class="ttdef"><b>Definition</b> atp.h:143</div></div>
-<div class="ttc" id="astructatpbuf_html"><div class="ttname"><a href="structatpbuf.html">atpbuf</a></div><div class="ttdef"><b>Definition</b> atp.h:88</div></div>
+<div class="ttc" id="aatp__internals_8h_html_ad579d5dfdff4e25258d6daa77e96aeab"><div class="ttname"><a href="atp__internals_8h.html#ad579d5dfdff4e25258d6daa77e96aeab">atp_alloc_buf</a></div><div class="ttdeci">struct atpbuf * atp_alloc_buf(void)</div><div class="ttdef"><b>Definition</b> atp_bufs.c:131</div></div>
+<div class="ttc" id="astructatp__block_html"><div class="ttname"><a href="structatp__block.html">atp_block</a></div><div class="ttdef"><b>Definition</b> atp.h:148</div></div>
+<div class="ttc" id="astructatpbuf_html"><div class="ttname"><a href="structatpbuf.html">atpbuf</a></div><div class="ttdef"><b>Definition</b> atp.h:93</div></div>
 <div class="ttc" id="astructsockaddr__at_html"><div class="ttname"><a href="structsockaddr__at.html">sockaddr_at</a></div><div class="ttdef"><b>Definition</b> at.h:88</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

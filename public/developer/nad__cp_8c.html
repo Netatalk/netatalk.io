@@ -102,6 +102,9 @@ $(function(){initNavTree('nad__cp_8c.html','',''); });
   <div class="headertitle"><div class="title">nad_cp.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Cp copies source files to target files.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;libgen.h&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
@@ -172,7 +175,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a6b253a03c1379a1e8334caec33a9e502" id="r_a6b253a03c1379a1e8334caec33a9e502"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b253a03c1379a1e8334caec33a9e502">rval</a></td></tr>
 <tr class="memitem:a63387b1556cd0d687c58adb8357ce94d" id="r_a63387b1556cd0d687c58adb8357ce94d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63387b1556cd0d687c58adb8357ce94d">ftw_options</a> = <a class="el" href="ftw_8h.html#a7bbaf43efae1f2d3c8092d99a340729d">FTW_MOUNT</a> | <a class="el" href="ftw_8h.html#a8c98a3c79a82339a189b11094032a09a">FTW_PHYS</a> | <a class="el" href="ftw_8h.html#a69d932c5de542b198d976bc21cba2b42">FTW_ACTIONRETVAL</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Cp copies source files to target files. </p>
+<p>The global <a class="el" href="struct_p_a_t_h___t.html">PATH_T</a> structure "to" always contains the path to the current target file. Since fts(3) does not change directories, this path can be either absolute or dot-relative.</p>
+<p>The basic algorithm is to initialize "to" and use fts(3) to traverse the file hierarchy rooted in the argument list. A trivial case is the case of 'cp file1 file2'. The more interesting case is the case of 'cp file1 file2 ... fileN dir' where the hierarchy is traversed and the path (relative to the root of the traversal) is appended to dir (stored in "to") to form the final target path. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a63d9ed76ed5425feb066a97b37ec19c4" name="a63d9ed76ed5425feb066a97b37ec19c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63d9ed76ed5425feb066a97b37ec19c4">&#9670;&#160;</a></span>BUFSIZE_MAX</h2>
 
@@ -184,6 +191,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Maximum buffer size in bytes - do not allow it to grow larger than this </p>
 
 </div>
 </div>
@@ -212,6 +220,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Small (default) buffer size in bytes. It's inefficient for this to be smaller than MAXPHYS </p>
 
 </div>
 </div>
@@ -226,6 +235,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Memory strategy threshold, in pages: if physmem is larger then this, use a large buffer </p>
 
 </div>
 </div>

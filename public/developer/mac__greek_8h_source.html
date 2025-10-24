@@ -121,93 +121,90 @@ $(function(){initNavTree('mac__greek_8h_source.html','',''); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * If not, write to the Free Software Foundation, Inc., 59 Temple Place -</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * Suite 330, Boston, MA 02111-1307, USA.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * MacGreek</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">   25</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">mac_greek_2uni</a>[128] = {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/* 0x80 */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    0x00c4, 0x00b9, 0x00b2, 0x00c9, 0x00b3, 0x00d6, 0x00dc, 0x0385,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    0x00e0, 0x00e2, 0x00e4, 0x0384, 0x00a8, 0x00e7, 0x00e9, 0x00e8,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">/* 0x90 */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    0x00ea, 0x00eb, 0x00a3, 0x2122, 0x00ee, 0x00ef, 0x2022, 0x00bd,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    0x2030, 0x00f4, 0x00f6, 0x00a6, 0x00ad, 0x00f9, 0x00fb, 0x00fc,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* 0xa0 */</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    0x2020, 0x0393, 0x0394, 0x0398, 0x039b, 0x039e, 0x03a0, 0x00df,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    0x00ae, 0x00a9, 0x03a3, 0x03aa, 0x00a7, 0x2260, 0x00b0, 0x0387,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 0xb0 */</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    0x0391, 0x00b1, 0x2264, 0x2265, 0x00a5, 0x0392, 0x0395, 0x0396,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    0x0397, 0x0399, 0x039a, 0x039c, 0x03a6, 0x03ab, 0x03a8, 0x03a9,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* 0xc0 */</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    0x03ac, 0x039d, 0x00ac, 0x039f, 0x03a1, 0x2248, 0x03a4, 0x00ab,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    0x00bb, 0x2026, 0x00a0, 0x03a5, 0x03a7, 0x0386, 0x0388, 0x0153,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">/* 0xd0 */</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    0x2013, 0x2015, 0x201c, 0x201d, 0x2018, 0x2019, 0x00f7, 0x0389,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    0x038a, 0x038c, 0x038e, 0x03ad, 0x03ae, 0x03af, 0x03cc, 0x038f,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* 0xe0 */</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    0x03cd, 0x03b1, 0x03b2, 0x03c8, 0x03b4, 0x03b5, 0x03c6, 0x03b3,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    0x03b7, 0x03b9, 0x03be, 0x03ba, 0x03bb, 0x03bc, 0x03bd, 0x03bf,</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">/* 0xf0 */</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    0x03c0, 0x03ce, 0x03c1, 0x03c3, 0x03c4, 0x03b8, 0x03c9, 0x03c2,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    0x03c7, 0x03c5, 0x03b6, 0x03ca, 0x03cb, 0x0390, 0x03b0, 0xfffd,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">   26</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">mac_greek_2uni</a>[128] = {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">/* 0x80 */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    0x00c4, 0x00b9, 0x00b2, 0x00c9, 0x00b3, 0x00d6, 0x00dc, 0x0385,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    0x00e0, 0x00e2, 0x00e4, 0x0384, 0x00a8, 0x00e7, 0x00e9, 0x00e8,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/* 0x90 */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    0x00ea, 0x00eb, 0x00a3, 0x2122, 0x00ee, 0x00ef, 0x2022, 0x00bd,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    0x2030, 0x00f4, 0x00f6, 0x00a6, 0x00ad, 0x00f9, 0x00fb, 0x00fc,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">/* 0xa0 */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    0x2020, 0x0393, 0x0394, 0x0398, 0x039b, 0x039e, 0x03a0, 0x00df,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    0x00ae, 0x00a9, 0x03a3, 0x03aa, 0x00a7, 0x2260, 0x00b0, 0x0387,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">/* 0xb0 */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    0x0391, 0x00b1, 0x2264, 0x2265, 0x00a5, 0x0392, 0x0395, 0x0396,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    0x0397, 0x0399, 0x039a, 0x039c, 0x03a6, 0x03ab, 0x03a8, 0x03a9,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">/* 0xc0 */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    0x03ac, 0x039d, 0x00ac, 0x039f, 0x03a1, 0x2248, 0x03a4, 0x00ab,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    0x00bb, 0x2026, 0x00a0, 0x03a5, 0x03a7, 0x0386, 0x0388, 0x0153,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* 0xd0 */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    0x2013, 0x2015, 0x201c, 0x201d, 0x2018, 0x2019, 0x00f7, 0x0389,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    0x038a, 0x038c, 0x038e, 0x03ad, 0x03ae, 0x03af, 0x03cc, 0x038f,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">/* 0xe0 */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    0x03cd, 0x03b1, 0x03b2, 0x03c8, 0x03b4, 0x03b5, 0x03c6, 0x03b3,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    0x03b7, 0x03b9, 0x03be, 0x03ba, 0x03bb, 0x03bc, 0x03bd, 0x03bf,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/* 0xf0 */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    0x03c0, 0x03ce, 0x03c1, 0x03c3, 0x03c4, 0x03b8, 0x03c9, 0x03c2,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    0x03c7, 0x03c5, 0x03b6, 0x03ca, 0x03cb, 0x0390, 0x03b0, 0xfffd,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">   52</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">mac_greek_page00</a>[96] = {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    0xca, 0x00, 0x00, 0x92, 0x00, 0xb4, 0x9b, 0xac, <span class="comment">/* 0xa0-0xa7 */</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    0x8c, 0xa9, 0x00, 0xc7, 0xc2, 0x9c, 0xa8, 0x00, <span class="comment">/* 0xa8-0xaf */</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    0xae, 0xb1, 0x82, 0x84, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0xb0-0xb7 */</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    0x00, 0x81, 0x00, 0xc8, 0x00, 0x97, 0x00, 0x00, <span class="comment">/* 0xb8-0xbf */</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, <span class="comment">/* 0xc0-0xc7 */</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    0x00, 0x83, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0xc8-0xcf */</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x85, 0x00, <span class="comment">/* 0xd0-0xd7 */</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    0x00, 0x00, 0x00, 0x00, 0x86, 0x00, 0x00, 0xa7, <span class="comment">/* 0xd8-0xdf */</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    0x88, 0x00, 0x89, 0x00, 0x8a, 0x00, 0x00, 0x8d, <span class="comment">/* 0xe0-0xe7 */</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    0x8f, 0x8e, 0x90, 0x91, 0x00, 0x00, 0x94, 0x95, <span class="comment">/* 0xe8-0xef */</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    0x00, 0x00, 0x00, 0x00, 0x99, 0x00, 0x9a, 0xd6, <span class="comment">/* 0xf0-0xf7 */</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    0x00, 0x9d, 0x00, 0x9e, 0x9f, 0x00, 0x00, 0x00, <span class="comment">/* 0xf8-0xff */</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">   53</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">mac_greek_page00</a>[96] = {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    0xca, 0x00, 0x00, 0x92, 0x00, 0xb4, 0x9b, 0xac, <span class="comment">/* 0xa0-0xa7 */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    0x8c, 0xa9, 0x00, 0xc7, 0xc2, 0x9c, 0xa8, 0x00, <span class="comment">/* 0xa8-0xaf */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    0xae, 0xb1, 0x82, 0x84, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0xb0-0xb7 */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    0x00, 0x81, 0x00, 0xc8, 0x00, 0x97, 0x00, 0x00, <span class="comment">/* 0xb8-0xbf */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, <span class="comment">/* 0xc0-0xc7 */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    0x00, 0x83, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0xc8-0xcf */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x85, 0x00, <span class="comment">/* 0xd0-0xd7 */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    0x00, 0x00, 0x00, 0x00, 0x86, 0x00, 0x00, 0xa7, <span class="comment">/* 0xd8-0xdf */</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    0x88, 0x00, 0x89, 0x00, 0x8a, 0x00, 0x00, 0x8d, <span class="comment">/* 0xe0-0xe7 */</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    0x8f, 0x8e, 0x90, 0x91, 0x00, 0x00, 0x94, 0x95, <span class="comment">/* 0xe8-0xef */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    0x00, 0x00, 0x00, 0x00, 0x99, 0x00, 0x9a, 0xd6, <span class="comment">/* 0xf0-0xf7 */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    0x00, 0x9d, 0x00, 0x9e, 0x9f, 0x00, 0x00, 0x00, <span class="comment">/* 0xf8-0xff */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="};">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">   66</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">mac_greek_page03</a>[80] = {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    0x00, 0x00, 0x00, 0x00, 0x8b, 0x87, 0xcd, 0xaf, <span class="comment">/* 0x80-0x87 */</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    0xce, 0xd7, 0xd8, 0x00, 0xd9, 0x00, 0xda, 0xdf, <span class="comment">/* 0x88-0x8f */</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    0xfd, 0xb0, 0xb5, 0xa1, 0xa2, 0xb6, 0xb7, 0xb8, <span class="comment">/* 0x90-0x97 */</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    0xa3, 0xb9, 0xba, 0xa4, 0xbb, 0xc1, 0xa5, 0xc3, <span class="comment">/* 0x98-0x9f */</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    0xa6, 0xc4, 0x00, 0xaa, 0xc6, 0xcb, 0xbc, 0xcc, <span class="comment">/* 0xa0-0xa7 */</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    0xbe, 0xbf, 0xab, 0xbd, 0xc0, 0xdb, 0xdc, 0xdd, <span class="comment">/* 0xa8-0xaf */</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    0xfe, 0xe1, 0xe2, 0xe7, 0xe4, 0xe5, 0xfa, 0xe8, <span class="comment">/* 0xb0-0xb7 */</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    0xf5, 0xe9, 0xeb, 0xec, 0xed, 0xee, 0xea, 0xef, <span class="comment">/* 0xb8-0xbf */</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    0xf0, 0xf2, 0xf7, 0xf3, 0xf4, 0xf9, 0xe6, 0xf8, <span class="comment">/* 0xc0-0xc7 */</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    0xe3, 0xf6, 0xfb, 0xfc, 0xde, 0xe0, 0xf1, 0x00, <span class="comment">/* 0xc8-0xcf */</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">   67</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">mac_greek_page03</a>[80] = {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    0x00, 0x00, 0x00, 0x00, 0x8b, 0x87, 0xcd, 0xaf, <span class="comment">/* 0x80-0x87 */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    0xce, 0xd7, 0xd8, 0x00, 0xd9, 0x00, 0xda, 0xdf, <span class="comment">/* 0x88-0x8f */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    0xfd, 0xb0, 0xb5, 0xa1, 0xa2, 0xb6, 0xb7, 0xb8, <span class="comment">/* 0x90-0x97 */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    0xa3, 0xb9, 0xba, 0xa4, 0xbb, 0xc1, 0xa5, 0xc3, <span class="comment">/* 0x98-0x9f */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    0xa6, 0xc4, 0x00, 0xaa, 0xc6, 0xcb, 0xbc, 0xcc, <span class="comment">/* 0xa0-0xa7 */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    0xbe, 0xbf, 0xab, 0xbd, 0xc0, 0xdb, 0xdc, 0xdd, <span class="comment">/* 0xa8-0xaf */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    0xfe, 0xe1, 0xe2, 0xe7, 0xe4, 0xe5, 0xfa, 0xe8, <span class="comment">/* 0xb0-0xb7 */</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    0xf5, 0xe9, 0xeb, 0xec, 0xed, 0xee, 0xea, 0xef, <span class="comment">/* 0xb8-0xbf */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    0xf0, 0xf2, 0xf7, 0xf3, 0xf4, 0xf9, 0xe6, 0xf8, <span class="comment">/* 0xc0-0xc7 */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    0xe3, 0xf6, 0xfb, 0xfc, 0xde, 0xe0, 0xf1, 0x00, <span class="comment">/* 0xc8-0xcf */</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
 </div>
-<div class="foldopen" id="foldopen00078" data-start="{" data-end="};">
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">   78</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">mac_greek_page20</a>[40] = {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    0x00, 0x00, 0x00, 0xd0, 0x00, 0xd1, 0x00, 0x00, <span class="comment">/* 0x10-0x17 */</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    0xd4, 0xd5, 0x00, 0x00, 0xd2, 0xd3, 0x00, 0x00, <span class="comment">/* 0x18-0x1f */</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    0xa0, 0x00, 0x96, 0x00, 0x00, 0x00, 0xc9, 0x00, <span class="comment">/* 0x20-0x27 */</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x28-0x2f */</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    0x98, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x30-0x37 */</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="};">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">   79</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">mac_greek_page20</a>[40] = {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    0x00, 0x00, 0x00, 0xd0, 0x00, 0xd1, 0x00, 0x00, <span class="comment">/* 0x10-0x17 */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    0xd4, 0xd5, 0x00, 0x00, 0xd2, 0xd3, 0x00, 0x00, <span class="comment">/* 0x18-0x1f */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    0xa0, 0x00, 0x96, 0x00, 0x00, 0x00, 0xc9, 0x00, <span class="comment">/* 0x20-0x27 */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x28-0x2f */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    0x98, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x30-0x37 */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
 </div>
-<div class="foldopen" id="foldopen00085" data-start="{" data-end="};">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">   85</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">mac_greek_page22</a>[32] = {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    0xc5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x48-0x4f */</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x50-0x57 */</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x58-0x5f */</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    0xad, 0x00, 0x00, 0x00, 0xb2, 0xb3, 0x00, 0x00, <span class="comment">/* 0x60-0x67 */</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="};">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">   86</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">mac_greek_page22</a>[32] = {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    0xc5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x48-0x4f */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x50-0x57 */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">/* 0x58-0x5f */</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    0xad, 0x00, 0x00, 0x00, 0xb2, 0xb3, 0x00, 0x00, <span class="comment">/* 0x60-0x67 */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
 </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="ttc" id="amac__greek_8h_html_a3c2b3d7141e2350d2f7b24351dd8a7dc"><div class="ttname"><a href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">mac_greek_page22</a></div><div class="ttdeci">static const unsigned char mac_greek_page22[32]</div><div class="ttdef"><b>Definition</b> mac_greek.h:85</div></div>
-<div class="ttc" id="amac__greek_8h_html_a6f80657e9b291c5120f801b12a2db86e"><div class="ttname"><a href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">mac_greek_2uni</a></div><div class="ttdeci">static const unsigned short mac_greek_2uni[128]</div><div class="ttdef"><b>Definition</b> mac_greek.h:25</div></div>
-<div class="ttc" id="amac__greek_8h_html_accde3d7d7ed0bc0cc403c9cac7c98292"><div class="ttname"><a href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">mac_greek_page00</a></div><div class="ttdeci">static const unsigned char mac_greek_page00[96]</div><div class="ttdef"><b>Definition</b> mac_greek.h:52</div></div>
-<div class="ttc" id="amac__greek_8h_html_acf26d3ea25866dc768cf8146e4bda289"><div class="ttname"><a href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">mac_greek_page03</a></div><div class="ttdeci">static const unsigned char mac_greek_page03[80]</div><div class="ttdef"><b>Definition</b> mac_greek.h:66</div></div>
-<div class="ttc" id="amac__greek_8h_html_ae613df09be71763d7ed1054d04bea1ea"><div class="ttname"><a href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">mac_greek_page20</a></div><div class="ttdeci">static const unsigned char mac_greek_page20[40]</div><div class="ttdef"><b>Definition</b> mac_greek.h:78</div></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="ttc" id="amac__greek_8h_html_a3c2b3d7141e2350d2f7b24351dd8a7dc"><div class="ttname"><a href="mac__greek_8h.html#a3c2b3d7141e2350d2f7b24351dd8a7dc">mac_greek_page22</a></div><div class="ttdeci">static const unsigned char mac_greek_page22[32]</div><div class="ttdef"><b>Definition</b> mac_greek.h:86</div></div>
+<div class="ttc" id="amac__greek_8h_html_a6f80657e9b291c5120f801b12a2db86e"><div class="ttname"><a href="mac__greek_8h.html#a6f80657e9b291c5120f801b12a2db86e">mac_greek_2uni</a></div><div class="ttdeci">static const unsigned short mac_greek_2uni[128]</div><div class="ttdef"><b>Definition</b> mac_greek.h:26</div></div>
+<div class="ttc" id="amac__greek_8h_html_accde3d7d7ed0bc0cc403c9cac7c98292"><div class="ttname"><a href="mac__greek_8h.html#accde3d7d7ed0bc0cc403c9cac7c98292">mac_greek_page00</a></div><div class="ttdeci">static const unsigned char mac_greek_page00[96]</div><div class="ttdef"><b>Definition</b> mac_greek.h:53</div></div>
+<div class="ttc" id="amac__greek_8h_html_acf26d3ea25866dc768cf8146e4bda289"><div class="ttname"><a href="mac__greek_8h.html#acf26d3ea25866dc768cf8146e4bda289">mac_greek_page03</a></div><div class="ttdeci">static const unsigned char mac_greek_page03[80]</div><div class="ttdef"><b>Definition</b> mac_greek.h:67</div></div>
+<div class="ttc" id="amac__greek_8h_html_ae613df09be71763d7ed1054d04bea1ea"><div class="ttname"><a href="mac__greek_8h.html#ae613df09be71763d7ed1054d04bea1ea">mac_greek_page20</a></div><div class="ttdeci">static const unsigned char mac_greek_page20[40]</div><div class="ttdef"><b>Definition</b> mac_greek.h:79</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

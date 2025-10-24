@@ -114,576 +114,313 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a94de5879a35f2b54ccf66d63fc72d2ce" id="r_a94de5879a35f2b54ccf66d63fc72d2ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94de5879a35f2b54ccf66d63fc72d2ce">VFS_FUNC_ARGS_VALIDUPATH</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name</td></tr>
-<tr class="memitem:a9db958694d2c605a10700117d7533204" id="r_a9db958694d2c605a10700117d7533204"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9db958694d2c605a10700117d7533204">VFS_FUNC_VARS_VALIDUPATH</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name</td></tr>
-<tr class="memitem:a4fc7a2a75c481dc0e07a93dda4943d36" id="r_a4fc7a2a75c481dc0e07a93dda4943d36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc7a2a75c481dc0e07a93dda4943d36">VFS_FUNC_ARGS_CHOWN</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid</td></tr>
-<tr class="memitem:a455432977909e2102c9a68159c90cf4f" id="r_a455432977909e2102c9a68159c90cf4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a455432977909e2102c9a68159c90cf4f">VFS_FUNC_VARS_CHOWN</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, uid, gid</td></tr>
-<tr class="memitem:ab818ba38c29befadd68865b76a0b12d5" id="r_ab818ba38c29befadd68865b76a0b12d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab818ba38c29befadd68865b76a0b12d5">VFS_FUNC_ARGS_RENAMEDIR</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *oldpath, const char *newpath</td></tr>
-<tr class="memitem:a02a521d21b0a3a9f4b361730f8b0b6d2" id="r_a02a521d21b0a3a9f4b361730f8b0b6d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02a521d21b0a3a9f4b361730f8b0b6d2">VFS_FUNC_VARS_RENAMEDIR</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, oldpath, newpath</td></tr>
-<tr class="memitem:a25b2388078902480aba171e37c2add20" id="r_a25b2388078902480aba171e37c2add20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25b2388078902480aba171e37c2add20">VFS_FUNC_ARGS_DELETECURDIR</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a></td></tr>
-<tr class="memitem:a98f769a30e49de20d4310310877a1ebf" id="r_a98f769a30e49de20d4310310877a1ebf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98f769a30e49de20d4310310877a1ebf">VFS_FUNC_VARS_DELETECURDIR</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a></td></tr>
-<tr class="memitem:a294a7e2eb0d859e81a39516c4ce77236" id="r_a294a7e2eb0d859e81a39516c4ce77236"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294a7e2eb0d859e81a39516c4ce77236">VFS_FUNC_ARGS_SETFILEMODE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st</td></tr>
-<tr class="memitem:aefe98d3f2d46e8975d412ef84a372fd7" id="r_aefe98d3f2d46e8975d412ef84a372fd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefe98d3f2d46e8975d412ef84a372fd7">VFS_FUNC_VARS_SETFILEMODE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td></tr>
-<tr class="memitem:a0935387b92e2a7b6815614b3fd2ed9e9" id="r_a0935387b92e2a7b6815614b3fd2ed9e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0935387b92e2a7b6815614b3fd2ed9e9">VFS_FUNC_ARGS_SETDIRMODE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>,  const char *name, mode_t mode, struct stat *st</td></tr>
-<tr class="memitem:a6eaca4cd7d83eaa3201202ec00bb89b8" id="r_a6eaca4cd7d83eaa3201202ec00bb89b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eaca4cd7d83eaa3201202ec00bb89b8">VFS_FUNC_VARS_SETDIRMODE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td></tr>
-<tr class="memitem:a30cbeb73710eda08012f65bbefe4c2d4" id="r_a30cbeb73710eda08012f65bbefe4c2d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30cbeb73710eda08012f65bbefe4c2d4">VFS_FUNC_ARGS_SETDIRUNIXMODE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st</td></tr>
-<tr class="memitem:a89ce685fd4c034a6bfe0567882eca476" id="r_a89ce685fd4c034a6bfe0567882eca476"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ce685fd4c034a6bfe0567882eca476">VFS_FUNC_VARS_SETDIRUNIXMODE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td></tr>
-<tr class="memitem:accd2455bde57bb57ca257b35af84bbc8" id="r_accd2455bde57bb57ca257b35af84bbc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accd2455bde57bb57ca257b35af84bbc8">VFS_FUNC_ARGS_SETDIROWNER</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, uid_t uid, gid_t gid</td></tr>
-<tr class="memitem:a816f7cf4af3816efd5cc96e7ecf61aff" id="r_a816f7cf4af3816efd5cc96e7ecf61aff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a816f7cf4af3816efd5cc96e7ecf61aff">VFS_FUNC_VARS_SETDIROWNER</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, uid, gid</td></tr>
-<tr class="memitem:a32dd67fabc16b26184130d357b32d8aa" id="r_a32dd67fabc16b26184130d357b32d8aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32dd67fabc16b26184130d357b32d8aa">VFS_FUNC_ARGS_DELETEFILE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file</td></tr>
-<tr class="memitem:a95199d2b0e605590296f428a682bd312" id="r_a95199d2b0e605590296f428a682bd312"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95199d2b0e605590296f428a682bd312">VFS_FUNC_VARS_DELETEFILE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, file</td></tr>
-<tr class="memitem:aa1fd8052f56cf1d826a3d756d32fb7f6" id="r_aa1fd8052f56cf1d826a3d756d32fb7f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1fd8052f56cf1d826a3d756d32fb7f6">VFS_FUNC_ARGS_RENAMEFILE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst</td></tr>
-<tr class="memitem:a56c8e516aea4a978cfa921f5d7c371ce" id="r_a56c8e516aea4a978cfa921f5d7c371ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56c8e516aea4a978cfa921f5d7c371ce">VFS_FUNC_VARS_RENAMEFILE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, src, dst</td></tr>
-<tr class="memitem:a41f46b74c3bcd73bf4b5353d21238260" id="r_a41f46b74c3bcd73bf4b5353d21238260"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41f46b74c3bcd73bf4b5353d21238260">VFS_FUNC_ARGS_COPYFILE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst</td></tr>
-<tr class="memitem:a001de27db9d94833b99eca3d89117301" id="r_a001de27db9d94833b99eca3d89117301"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001de27db9d94833b99eca3d89117301">VFS_FUNC_VARS_COPYFILE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, sfd, src, dst</td></tr>
-<tr class="memitem:adec25e622eec01905a26ae85f0c2eccc" id="r_adec25e622eec01905a26ae85f0c2eccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces</td></tr>
-<tr class="memitem:a567a3f8771bafec703d8a2d8bde772e6" id="r_a567a3f8771bafec703d8a2d8bde772e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567a3f8771bafec703d8a2d8bde772e6">VFS_FUNC_VARS_ACL</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, cmd, count, aces</td></tr>
-<tr class="memitem:adec25e622eec01905a26ae85f0c2eccc" id="r_adec25e622eec01905a26ae85f0c2eccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec25e622eec01905a26ae85f0c2eccc">VFS_FUNC_ARGS_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, acl_type_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int count, acl_t acl</td></tr>
-<tr class="memitem:a567a3f8771bafec703d8a2d8bde772e6" id="r_a567a3f8771bafec703d8a2d8bde772e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567a3f8771bafec703d8a2d8bde772e6">VFS_FUNC_VARS_ACL</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, count, acl</td></tr>
-<tr class="memitem:a49de02b5d5c5a0fdb00dda5f39f8fc3a" id="r_a49de02b5d5c5a0fdb00dda5f39f8fc3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49de02b5d5c5a0fdb00dda5f39f8fc3a">VFS_FUNC_ARGS_REMOVE_ACL</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a></td></tr>
-<tr class="memitem:a7dc21d2a685b70d7c0b64d848405fde0" id="r_a7dc21d2a685b70d7c0b64d848405fde0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dc21d2a685b70d7c0b64d848405fde0">VFS_FUNC_VARS_REMOVE_ACL</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, <a class="el" href="structdir.html">dir</a></td></tr>
-<tr class="memitem:a99f39cd42f5b8bc9d3a209774d81480b" id="r_a99f39cd42f5b8bc9d3a209774d81480b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99f39cd42f5b8bc9d3a209774d81480b">VFS_FUNC_ARGS_EA_GETSIZE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t * restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:a6751d71052f5ef95343928412d8c4f3b" id="r_a6751d71052f5ef95343928412d8c4f3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6751d71052f5ef95343928412d8c4f3b">VFS_FUNC_VARS_EA_GETSIZE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:aa5e8e8e9d9d23c4c309b953492d1cc5f" id="r_aa5e8e8e9d9d23c4c309b953492d1cc5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5e8e8e9d9d23c4c309b953492d1cc5f">VFS_FUNC_ARGS_EA_GETCONTENT</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t * restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>,  const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:af89b87599627b6c71839c8d06a8ca59a" id="r_af89b87599627b6c71839c8d06a8ca59a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89b87599627b6c71839c8d06a8ca59a">VFS_FUNC_VARS_EA_GETCONTENT</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:a5dcbfb6c295910d7eb0e7de98eba475e" id="r_a5dcbfb6c295910d7eb0e7de98eba475e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dcbfb6c295910d7eb0e7de98eba475e">VFS_FUNC_ARGS_EA_LIST</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict attrnamebuf, size_t * restrict buflen, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:adeb75a97142b7ca958f91c5cb7197e24" id="r_adeb75a97142b7ca958f91c5cb7197e24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb75a97142b7ca958f91c5cb7197e24">VFS_FUNC_VARS_EA_LIST</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, attrnamebuf, buflen, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:af9a0cfb2a26bb3768fc082489010b843" id="r_af9a0cfb2a26bb3768fc082489010b843"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9a0cfb2a26bb3768fc082489010b843">VFS_FUNC_ARGS_EA_SET</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, const char * restrict ibuf, size_t attrsize, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:abd256f982e94f1967838f1972638f194" id="r_abd256f982e94f1967838f1972638f194"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd256f982e94f1967838f1972638f194">VFS_FUNC_VARS_EA_SET</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, ibuf, attrsize, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:a4b37175e056c388f8e765cc62489d56e" id="r_a4b37175e056c388f8e765cc62489d56e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b37175e056c388f8e765cc62489d56e">VFS_FUNC_ARGS_EA_REMOVE</a>&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
-<tr class="memitem:a4ff81103141d5a04c8e944821e92b1af" id="r_a4ff81103141d5a04c8e944821e92b1af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ff81103141d5a04c8e944821e92b1af">VFS_FUNC_VARS_EA_REMOVE</a>&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td></tr>
+<tr class="memitem:a2b9c75477f9c3943891559af3ff2e7a5" id="r_a2b9c75477f9c3943891559af3ff2e7a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b9c75477f9c3943891559af3ff2e7a5">VFS_MODULES_MAX</a>&#160;&#160;&#160;3</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aab8a661e389235d6b2da9acea883497a" id="r_aab8a661e389235d6b2da9acea883497a"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab8a661e389235d6b2da9acea883497a">vfs_validupath_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name)</td></tr>
+<tr class="memitem:a43e6032356646b4d975be174e6deba47" id="r_a43e6032356646b4d975be174e6deba47"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43e6032356646b4d975be174e6deba47">vfs_chown_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid)</td></tr>
+<tr class="memitem:a83483f5b0404035ac62d633682beb52e" id="r_a83483f5b0404035ac62d633682beb52e"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83483f5b0404035ac62d633682beb52e">vfs_renamedir_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *oldpath, const char *newpath)</td></tr>
+<tr class="memitem:a0e862ee247f983123bd6ba8e7157aa08" id="r_a0e862ee247f983123bd6ba8e7157aa08"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e862ee247f983123bd6ba8e7157aa08">vfs_deletecurdir_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
+<tr class="memitem:a1462e1d988669a1adafc8edb337f6219" id="r_a1462e1d988669a1adafc8edb337f6219"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1462e1d988669a1adafc8edb337f6219">vfs_setfilmode_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:a2da927edff0a6712e937eb6ea7e68b6c" id="r_a2da927edff0a6712e937eb6ea7e68b6c"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2da927edff0a6712e937eb6ea7e68b6c">vfs_setdirmode_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:aca258c1ff7dae13e6a2c3311341fa164" id="r_aca258c1ff7dae13e6a2c3311341fa164"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca258c1ff7dae13e6a2c3311341fa164">vfs_setdirunixmode_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td></tr>
+<tr class="memitem:ac4bb075daa7a0a434c154f6812b5806f" id="r_ac4bb075daa7a0a434c154f6812b5806f"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4bb075daa7a0a434c154f6812b5806f">vfs_setdirowner_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, uid_t uid, gid_t gid)</td></tr>
+<tr class="memitem:af566597c6d0c9704afe36a628e36e0a6" id="r_af566597c6d0c9704afe36a628e36e0a6"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af566597c6d0c9704afe36a628e36e0a6">vfs_deletefile_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td></tr>
+<tr class="memitem:aff8de20ec992a99d69a45f3b6e1c0ef3" id="r_aff8de20ec992a99d69a45f3b6e1c0ef3"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8de20ec992a99d69a45f3b6e1c0ef3">vfs_renamefile_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:a0be0f726caabb2388e49dec625d768a4" id="r_a0be0f726caabb2388e49dec625d768a4"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be0f726caabb2388e49dec625d768a4">vfs_copyfile_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td></tr>
+<tr class="memitem:aa5c4ddeada273450ff6ec2918dc02f55" id="r_aa5c4ddeada273450ff6ec2918dc02f55"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5c4ddeada273450ff6ec2918dc02f55">vfs_solaris_acl_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces)</td></tr>
+<tr class="memitem:abedbd9ffc26672af192e322fc659190c" id="r_abedbd9ffc26672af192e322fc659190c"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abedbd9ffc26672af192e322fc659190c">vfs_posix_acl_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, acl_type_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int count, acl_t acl)</td></tr>
+<tr class="memitem:a0f6eb5445e98f10e4b0e0250905eb4df" id="r_a0f6eb5445e98f10e4b0e0250905eb4df"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f6eb5445e98f10e4b0e0250905eb4df">vfs_remove_acl_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memitem:a64bfeb6df35c2c32857460fa44308b86" id="r_a64bfeb6df35c2c32857460fa44308b86"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bfeb6df35c2c32857460fa44308b86">vfs_ea_getsize_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int fd)</td></tr>
+<tr class="memitem:a3eee479df8d4a098014d98fef59049ea" id="r_a3eee479df8d4a098014d98fef59049ea"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eee479df8d4a098014d98fef59049ea">vfs_ea_getcontent_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int maxreply, int fd)</td></tr>
+<tr class="memitem:a5da5593ac3e3d241b115d90c73331c2b" id="r_a5da5593ac3e3d241b115d90c73331c2b"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5da5593ac3e3d241b115d90c73331c2b">vfs_ea_list_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *attrnamebuf, size_t *buflen, const char *uname, int oflag, int fd)</td></tr>
+<tr class="memitem:a48097f6a14798279a14eb5777724604b" id="r_a48097f6a14798279a14eb5777724604b"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48097f6a14798279a14eb5777724604b">vfs_ea_set_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, const char *ibuf, size_t attrsize, int oflag, int fd)</td></tr>
+<tr class="memitem:ac3454706c9af8f8165b4e6f1fde820ca" id="r_ac3454706c9af8f8165b4e6f1fde820ca"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3454706c9af8f8165b4e6f1fde820ca">vfs_ea_remove_fn</a>) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, int oflag, int fd)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a01d6a434f8a9405b2ce4b4a0ed5151a5" id="r_a01d6a434f8a9405b2ce4b4a0ed5151a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d6a434f8a9405b2ce4b4a0ed5151a5">initvol_vfs</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="adec25e622eec01905a26ae85f0c2eccc" name="adec25e622eec01905a26ae85f0c2eccc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adec25e622eec01905a26ae85f0c2eccc">&#9670;&#160;</a></span>VFS_FUNC_ARGS_ACL <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>vfs layer for afp </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a2b9c75477f9c3943891559af3ff2e7a5" name="a2b9c75477f9c3943891559af3ff2e7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9c75477f9c3943891559af3ff2e7a5">&#9670;&#160;</a></span>VFS_MODULES_MAX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_ACL&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces</td>
+          <td class="memname">#define VFS_MODULES_MAX&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum number of VFS modules that can be chained </p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="a43e6032356646b4d975be174e6deba47" name="a43e6032356646b4d975be174e6deba47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e6032356646b4d975be174e6deba47">&#9670;&#160;</a></span>vfs_chown_fn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* vfs_chown_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adec25e622eec01905a26ae85f0c2eccc" name="adec25e622eec01905a26ae85f0c2eccc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adec25e622eec01905a26ae85f0c2eccc">&#9670;&#160;</a></span>VFS_FUNC_ARGS_ACL <span class="overload">[2/2]</span></h2>
+<a id="a0be0f726caabb2388e49dec625d768a4" name="a0be0f726caabb2388e49dec625d768a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be0f726caabb2388e49dec625d768a4">&#9670;&#160;</a></span>vfs_copyfile_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_ACL&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, acl_type_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int count, acl_t acl</td>
+          <td class="memname">typedef int(* vfs_copyfile_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4fc7a2a75c481dc0e07a93dda4943d36" name="a4fc7a2a75c481dc0e07a93dda4943d36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc7a2a75c481dc0e07a93dda4943d36">&#9670;&#160;</a></span>VFS_FUNC_ARGS_CHOWN</h2>
+<a id="a0e862ee247f983123bd6ba8e7157aa08" name="a0e862ee247f983123bd6ba8e7157aa08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e862ee247f983123bd6ba8e7157aa08">&#9670;&#160;</a></span>vfs_deletecurdir_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_CHOWN&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, uid_t uid, gid_t gid</td>
+          <td class="memname">typedef int(* vfs_deletecurdir_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a41f46b74c3bcd73bf4b5353d21238260" name="a41f46b74c3bcd73bf4b5353d21238260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f46b74c3bcd73bf4b5353d21238260">&#9670;&#160;</a></span>VFS_FUNC_ARGS_COPYFILE</h2>
+<a id="af566597c6d0c9704afe36a628e36e0a6" name="af566597c6d0c9704afe36a628e36e0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af566597c6d0c9704afe36a628e36e0a6">&#9670;&#160;</a></span>vfs_deletefile_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_COPYFILE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int sfd, const char *src, const char *dst</td>
+          <td class="memname">typedef int(* vfs_deletefile_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a25b2388078902480aba171e37c2add20" name="a25b2388078902480aba171e37c2add20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25b2388078902480aba171e37c2add20">&#9670;&#160;</a></span>VFS_FUNC_ARGS_DELETECURDIR</h2>
+<a id="a3eee479df8d4a098014d98fef59049ea" name="a3eee479df8d4a098014d98fef59049ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eee479df8d4a098014d98fef59049ea">&#9670;&#160;</a></span>vfs_ea_getcontent_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_DELETECURDIR&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a></td>
+          <td class="memname">typedef int(* vfs_ea_getcontent_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int maxreply, int fd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a32dd67fabc16b26184130d357b32d8aa" name="a32dd67fabc16b26184130d357b32d8aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32dd67fabc16b26184130d357b32d8aa">&#9670;&#160;</a></span>VFS_FUNC_ARGS_DELETEFILE</h2>
+<a id="a64bfeb6df35c2c32857460fa44308b86" name="a64bfeb6df35c2c32857460fa44308b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bfeb6df35c2c32857460fa44308b86">&#9670;&#160;</a></span>vfs_ea_getsize_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_DELETEFILE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *file</td>
+          <td class="memname">typedef int(* vfs_ea_getsize_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, const char *uname, int oflag, const char *attruname, int fd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa5e8e8e9d9d23c4c309b953492d1cc5f" name="aa5e8e8e9d9d23c4c309b953492d1cc5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5e8e8e9d9d23c4c309b953492d1cc5f">&#9670;&#160;</a></span>VFS_FUNC_ARGS_EA_GETCONTENT</h2>
+<a id="a5da5593ac3e3d241b115d90c73331c2b" name="a5da5593ac3e3d241b115d90c73331c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da5593ac3e3d241b115d90c73331c2b">&#9670;&#160;</a></span>vfs_ea_list_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_EA_GETCONTENT&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t * restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>,  const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
+          <td class="memname">typedef int(* vfs_ea_list_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, char *attrnamebuf, size_t *buflen, const char *uname, int oflag, int fd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a99f39cd42f5b8bc9d3a209774d81480b" name="a99f39cd42f5b8bc9d3a209774d81480b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f39cd42f5b8bc9d3a209774d81480b">&#9670;&#160;</a></span>VFS_FUNC_ARGS_EA_GETSIZE</h2>
+<a id="ac3454706c9af8f8165b4e6f1fde820ca" name="ac3454706c9af8f8165b4e6f1fde820ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3454706c9af8f8165b4e6f1fde820ca">&#9670;&#160;</a></span>vfs_ea_remove_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_EA_GETSIZE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t * restrict <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
+          <td class="memname">typedef int(* vfs_ea_remove_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, int oflag, int fd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5dcbfb6c295910d7eb0e7de98eba475e" name="a5dcbfb6c295910d7eb0e7de98eba475e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dcbfb6c295910d7eb0e7de98eba475e">&#9670;&#160;</a></span>VFS_FUNC_ARGS_EA_LIST</h2>
+<a id="a48097f6a14798279a14eb5777724604b" name="a48097f6a14798279a14eb5777724604b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48097f6a14798279a14eb5777724604b">&#9670;&#160;</a></span>vfs_ea_set_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_EA_LIST&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, char * restrict attrnamebuf, size_t * restrict buflen, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
+          <td class="memname">typedef int(* vfs_ea_set_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, const char *attruname, const char *ibuf, size_t attrsize, int oflag, int fd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4b37175e056c388f8e765cc62489d56e" name="a4b37175e056c388f8e765cc62489d56e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b37175e056c388f8e765cc62489d56e">&#9670;&#160;</a></span>VFS_FUNC_ARGS_EA_REMOVE</h2>
+<a id="abedbd9ffc26672af192e322fc659190c" name="abedbd9ffc26672af192e322fc659190c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedbd9ffc26672af192e322fc659190c">&#9670;&#160;</a></span>vfs_posix_acl_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_EA_REMOVE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
+          <td class="memname">typedef int(* vfs_posix_acl_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, acl_type_t <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, int count, acl_t acl)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af9a0cfb2a26bb3768fc082489010b843" name="af9a0cfb2a26bb3768fc082489010b843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9a0cfb2a26bb3768fc082489010b843">&#9670;&#160;</a></span>VFS_FUNC_ARGS_EA_SET</h2>
+<a id="a0f6eb5445e98f10e4b0e0250905eb4df" name="a0f6eb5445e98f10e4b0e0250905eb4df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6eb5445e98f10e4b0e0250905eb4df">&#9670;&#160;</a></span>vfs_remove_acl_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_EA_SET&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> * restrict <a class="el" href="structvol.html">vol</a>, const char * restrict <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, const char * restrict <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, const char * restrict ibuf, size_t attrsize, int <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
+          <td class="memname">typedef int(* vfs_remove_acl_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a49de02b5d5c5a0fdb00dda5f39f8fc3a" name="a49de02b5d5c5a0fdb00dda5f39f8fc3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49de02b5d5c5a0fdb00dda5f39f8fc3a">&#9670;&#160;</a></span>VFS_FUNC_ARGS_REMOVE_ACL</h2>
+<a id="a83483f5b0404035ac62d633682beb52e" name="a83483f5b0404035ac62d633682beb52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83483f5b0404035ac62d633682beb52e">&#9670;&#160;</a></span>vfs_renamedir_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_REMOVE_ACL&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int <a class="el" href="structdir.html">dir</a></td>
+          <td class="memname">typedef int(* vfs_renamedir_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *oldpath, const char *newpath)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab818ba38c29befadd68865b76a0b12d5" name="ab818ba38c29befadd68865b76a0b12d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab818ba38c29befadd68865b76a0b12d5">&#9670;&#160;</a></span>VFS_FUNC_ARGS_RENAMEDIR</h2>
+<a id="aff8de20ec992a99d69a45f3b6e1c0ef3" name="aff8de20ec992a99d69a45f3b6e1c0ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8de20ec992a99d69a45f3b6e1c0ef3">&#9670;&#160;</a></span>vfs_renamefile_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_RENAMEDIR&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *oldpath, const char *newpath</td>
+          <td class="memname">typedef int(* vfs_renamefile_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa1fd8052f56cf1d826a3d756d32fb7f6" name="aa1fd8052f56cf1d826a3d756d32fb7f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1fd8052f56cf1d826a3d756d32fb7f6">&#9670;&#160;</a></span>VFS_FUNC_ARGS_RENAMEFILE</h2>
+<a id="a2da927edff0a6712e937eb6ea7e68b6c" name="a2da927edff0a6712e937eb6ea7e68b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da927edff0a6712e937eb6ea7e68b6c">&#9670;&#160;</a></span>vfs_setdirmode_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_RENAMEFILE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, int dirfd, const char *src, const char *dst</td>
+          <td class="memname">typedef int(* vfs_setdirmode_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0935387b92e2a7b6815614b3fd2ed9e9" name="a0935387b92e2a7b6815614b3fd2ed9e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0935387b92e2a7b6815614b3fd2ed9e9">&#9670;&#160;</a></span>VFS_FUNC_ARGS_SETDIRMODE</h2>
+<a id="ac4bb075daa7a0a434c154f6812b5806f" name="ac4bb075daa7a0a434c154f6812b5806f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4bb075daa7a0a434c154f6812b5806f">&#9670;&#160;</a></span>vfs_setdirowner_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_SETDIRMODE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>,  const char *name, mode_t mode, struct stat *st</td>
+          <td class="memname">typedef int(* vfs_setdirowner_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, uid_t uid, gid_t gid)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="accd2455bde57bb57ca257b35af84bbc8" name="accd2455bde57bb57ca257b35af84bbc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accd2455bde57bb57ca257b35af84bbc8">&#9670;&#160;</a></span>VFS_FUNC_ARGS_SETDIROWNER</h2>
+<a id="aca258c1ff7dae13e6a2c3311341fa164" name="aca258c1ff7dae13e6a2c3311341fa164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca258c1ff7dae13e6a2c3311341fa164">&#9670;&#160;</a></span>vfs_setdirunixmode_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_SETDIROWNER&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, uid_t uid, gid_t gid</td>
+          <td class="memname">typedef int(* vfs_setdirunixmode_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a30cbeb73710eda08012f65bbefe4c2d4" name="a30cbeb73710eda08012f65bbefe4c2d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30cbeb73710eda08012f65bbefe4c2d4">&#9670;&#160;</a></span>VFS_FUNC_ARGS_SETDIRUNIXMODE</h2>
+<a id="a1462e1d988669a1adafc8edb337f6219" name="a1462e1d988669a1adafc8edb337f6219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1462e1d988669a1adafc8edb337f6219">&#9670;&#160;</a></span>vfs_setfilmode_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_SETDIRUNIXMODE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st</td>
+          <td class="memname">typedef int(* vfs_setfilmode_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a294a7e2eb0d859e81a39516c4ce77236" name="a294a7e2eb0d859e81a39516c4ce77236"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a294a7e2eb0d859e81a39516c4ce77236">&#9670;&#160;</a></span>VFS_FUNC_ARGS_SETFILEMODE</h2>
+<a id="aa5c4ddeada273450ff6ec2918dc02f55" name="aa5c4ddeada273450ff6ec2918dc02f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c4ddeada273450ff6ec2918dc02f55">&#9670;&#160;</a></span>vfs_solaris_acl_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_SETFILEMODE&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name, mode_t mode, struct stat *st</td>
+          <td class="memname">typedef int(* vfs_solaris_acl_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>, int cmd, int count, void *aces)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a94de5879a35f2b54ccf66d63fc72d2ce" name="a94de5879a35f2b54ccf66d63fc72d2ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94de5879a35f2b54ccf66d63fc72d2ce">&#9670;&#160;</a></span>VFS_FUNC_ARGS_VALIDUPATH</h2>
+<a id="aab8a661e389235d6b2da9acea883497a" name="aab8a661e389235d6b2da9acea883497a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab8a661e389235d6b2da9acea883497a">&#9670;&#160;</a></span>vfs_validupath_fn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VFS_FUNC_ARGS_VALIDUPATH&#160;&#160;&#160;const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a567a3f8771bafec703d8a2d8bde772e6" name="a567a3f8771bafec703d8a2d8bde772e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567a3f8771bafec703d8a2d8bde772e6">&#9670;&#160;</a></span>VFS_FUNC_VARS_ACL <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_ACL&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, cmd, count, aces</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a567a3f8771bafec703d8a2d8bde772e6" name="a567a3f8771bafec703d8a2d8bde772e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567a3f8771bafec703d8a2d8bde772e6">&#9670;&#160;</a></span>VFS_FUNC_VARS_ACL <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_ACL&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, <a class="el" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>, count, acl</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a455432977909e2102c9a68159c90cf4f" name="a455432977909e2102c9a68159c90cf4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a455432977909e2102c9a68159c90cf4f">&#9670;&#160;</a></span>VFS_FUNC_VARS_CHOWN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_CHOWN&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, uid, gid</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a001de27db9d94833b99eca3d89117301" name="a001de27db9d94833b99eca3d89117301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a001de27db9d94833b99eca3d89117301">&#9670;&#160;</a></span>VFS_FUNC_VARS_COPYFILE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_COPYFILE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, sfd, src, dst</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a98f769a30e49de20d4310310877a1ebf" name="a98f769a30e49de20d4310310877a1ebf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f769a30e49de20d4310310877a1ebf">&#9670;&#160;</a></span>VFS_FUNC_VARS_DELETECURDIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_DELETECURDIR&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a95199d2b0e605590296f428a682bd312" name="a95199d2b0e605590296f428a682bd312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95199d2b0e605590296f428a682bd312">&#9670;&#160;</a></span>VFS_FUNC_VARS_DELETEFILE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_DELETEFILE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, file</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af89b87599627b6c71839c8d06a8ca59a" name="af89b87599627b6c71839c8d06a8ca59a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af89b87599627b6c71839c8d06a8ca59a">&#9670;&#160;</a></span>VFS_FUNC_VARS_EA_GETCONTENT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_EA_GETCONTENT&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#afc52f1fa673ed4b8c2a1b381207c15c8">maxreply</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6751d71052f5ef95343928412d8c4f3b" name="a6751d71052f5ef95343928412d8c4f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6751d71052f5ef95343928412d8c4f3b">&#9670;&#160;</a></span>VFS_FUNC_VARS_EA_GETSIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_EA_GETSIZE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, <a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adeb75a97142b7ca958f91c5cb7197e24" name="adeb75a97142b7ca958f91c5cb7197e24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeb75a97142b7ca958f91c5cb7197e24">&#9670;&#160;</a></span>VFS_FUNC_VARS_EA_LIST</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_EA_LIST&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, attrnamebuf, buflen, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4ff81103141d5a04c8e944821e92b1af" name="a4ff81103141d5a04c8e944821e92b1af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ff81103141d5a04c8e944821e92b1af">&#9670;&#160;</a></span>VFS_FUNC_VARS_EA_REMOVE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_EA_REMOVE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abd256f982e94f1967838f1972638f194" name="abd256f982e94f1967838f1972638f194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd256f982e94f1967838f1972638f194">&#9670;&#160;</a></span>VFS_FUNC_VARS_EA_SET</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_EA_SET&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, <a class="el" href="vfs_8c.html#a71b851f5438567dc19f25af3d576261e">attruname</a>, ibuf, attrsize, <a class="el" href="vfs_8c.html#a59efa05f47f157b861268665dab51649">oflag</a>, <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7dc21d2a685b70d7c0b64d848405fde0" name="a7dc21d2a685b70d7c0b64d848405fde0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dc21d2a685b70d7c0b64d848405fde0">&#9670;&#160;</a></span>VFS_FUNC_VARS_REMOVE_ACL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_REMOVE_ACL&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, <a class="el" href="structpath.html">path</a>, <a class="el" href="structdir.html">dir</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a02a521d21b0a3a9f4b361730f8b0b6d2" name="a02a521d21b0a3a9f4b361730f8b0b6d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02a521d21b0a3a9f4b361730f8b0b6d2">&#9670;&#160;</a></span>VFS_FUNC_VARS_RENAMEDIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_RENAMEDIR&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, oldpath, newpath</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a56c8e516aea4a978cfa921f5d7c371ce" name="a56c8e516aea4a978cfa921f5d7c371ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56c8e516aea4a978cfa921f5d7c371ce">&#9670;&#160;</a></span>VFS_FUNC_VARS_RENAMEFILE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_RENAMEFILE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, dirfd, src, dst</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6eaca4cd7d83eaa3201202ec00bb89b8" name="a6eaca4cd7d83eaa3201202ec00bb89b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6eaca4cd7d83eaa3201202ec00bb89b8">&#9670;&#160;</a></span>VFS_FUNC_VARS_SETDIRMODE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_SETDIRMODE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a816f7cf4af3816efd5cc96e7ecf61aff" name="a816f7cf4af3816efd5cc96e7ecf61aff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a816f7cf4af3816efd5cc96e7ecf61aff">&#9670;&#160;</a></span>VFS_FUNC_VARS_SETDIROWNER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_SETDIROWNER&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, uid, gid</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a89ce685fd4c034a6bfe0567882eca476" name="a89ce685fd4c034a6bfe0567882eca476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89ce685fd4c034a6bfe0567882eca476">&#9670;&#160;</a></span>VFS_FUNC_VARS_SETDIRUNIXMODE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_SETDIRUNIXMODE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aefe98d3f2d46e8975d412ef84a372fd7" name="aefe98d3f2d46e8975d412ef84a372fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefe98d3f2d46e8975d412ef84a372fd7">&#9670;&#160;</a></span>VFS_FUNC_VARS_SETFILEMODE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_SETFILEMODE&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name, mode, st</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9db958694d2c605a10700117d7533204" name="a9db958694d2c605a10700117d7533204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9db958694d2c605a10700117d7533204">&#9670;&#160;</a></span>VFS_FUNC_VARS_VALIDUPATH</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VFS_FUNC_VARS_VALIDUPATH&#160;&#160;&#160;<a class="el" href="structvol.html">vol</a>, name</td>
+          <td class="memname">typedef int(* vfs_validupath_fn) (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name)</td>
         </tr>
       </table>
 </div><div class="memdoc">

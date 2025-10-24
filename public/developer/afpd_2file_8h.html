@@ -125,7 +125,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a8184a1e73b340c61fc39cecaeb1c6a62" id="r_a8184a1e73b340c61fc39cecaeb1c6a62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8184a1e73b340c61fc39cecaeb1c6a62">FILPBIT_DFLEN</a>&#160;&#160;&#160;9</td></tr>
 <tr class="memitem:a379fa9d9a8a19c3ab645434ceef6252a" id="r_a379fa9d9a8a19c3ab645434ceef6252a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a379fa9d9a8a19c3ab645434ceef6252a">FILPBIT_RFLEN</a>&#160;&#160;&#160;10</td></tr>
 <tr class="memitem:a4d5dbd6dd35302e3bc9a280713ebc362" id="r_a4d5dbd6dd35302e3bc9a280713ebc362"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d5dbd6dd35302e3bc9a280713ebc362">FILPBIT_EXTDFLEN</a>&#160;&#160;&#160;11</td></tr>
-<tr class="memitem:adbd72b9caba9aefab903f05124a0bd18" id="r_adbd72b9caba9aefab903f05124a0bd18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd72b9caba9aefab903f05124a0bd18">FILPBIT_PDINFO</a>&#160;&#160;&#160;13    /* ProDOS Info/ UTF8 name */</td></tr>
+<tr class="memitem:adbd72b9caba9aefab903f05124a0bd18" id="r_adbd72b9caba9aefab903f05124a0bd18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd72b9caba9aefab903f05124a0bd18">FILPBIT_PDINFO</a>&#160;&#160;&#160;13</td></tr>
 <tr class="memitem:a071357d1ac652fadd1bf974c7883fd04" id="r_a071357d1ac652fadd1bf974c7883fd04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071357d1ac652fadd1bf974c7883fd04">FILPBIT_EXTRFLEN</a>&#160;&#160;&#160;14</td></tr>
 <tr class="memitem:a54102759096d6fa118193bbd97b4f68d" id="r_a54102759096d6fa118193bbd97b4f68d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54102759096d6fa118193bbd97b4f68d">FILPBIT_UNIXPR</a>&#160;&#160;&#160;15</td></tr>
 <tr class="memitem:a4139d82f129208e4fd62ee46a72d475a" id="r_a4139d82f129208e4fd62ee46a72d475a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4139d82f129208e4fd62ee46a72d475a">kTextEncodingUTF8</a>&#160;&#160;&#160;0x08000103</td></tr>
@@ -193,6 +193,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2a28cbed44e6b3b3f619d7e8db74f678" id="r_a2a28cbed44e6b3b3f619d7e8db74f678"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a28cbed44e6b3b3f619d7e8db74f678">getfilparams</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *, uint16_t, struct <a class="el" href="structpath.html">path</a> *, struct <a class="el" href="structdir.html">dir</a> *, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t *, int)</td></tr>
 <tr class="memitem:ab31396c5fff7a2f5856570f17d652ac0" id="r_ab31396c5fff7a2f5856570f17d652ac0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31396c5fff7a2f5856570f17d652ac0">setfilparams</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structpath.html">path</a> *, uint16_t, char *)</td></tr>
 <tr class="memitem:af069a4dab4ce5a66666bdc42bf983ec7" id="r_af069a4dab4ce5a66666bdc42bf983ec7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af069a4dab4ce5a66666bdc42bf983ec7">renamefile</a> (struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structdir.html">dir</a> *, int, char *, char *, char *, struct <a class="el" href="structadouble.html">adouble</a> *)</td></tr>
+<tr class="memdesc:af069a4dab4ce5a66666bdc42bf983ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename a file, including its resource fork and mac name.  <br /></td></tr>
 <tr class="memitem:a02ed3be078a277c362aa54391fa52747" id="r_a02ed3be078a277c362aa54391fa52747"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02ed3be078a277c362aa54391fa52747">copyfile</a> (struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structdir.html">dir</a> *, int, char *, char *, char *, struct <a class="el" href="structadouble.html">adouble</a> *)</td></tr>
 <tr class="memitem:a3c681735bee7519981ef2b0bf4942047" id="r_a3c681735bee7519981ef2b0bf4942047"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c681735bee7519981ef2b0bf4942047">deletefile</a> (const struct <a class="el" href="structvol.html">vol</a> *, int, char *, int)</td></tr>
 <tr class="memitem:a72826107bf8e6a1e16577856e55f3ef1" id="r_a72826107bf8e6a1e16577856e55f3ef1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72826107bf8e6a1e16577856e55f3ef1">getmetadata</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, uint16_t bitmap, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t *buflen, struct <a class="el" href="structadouble.html">adouble</a> *adp)</td></tr>
@@ -201,13 +202,13 @@ Functions</h2></td></tr>
 <tr class="memitem:aaa0155a197c709af04d63622f64cd707" id="r_aaa0155a197c709af04d63622f64cd707"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa0155a197c709af04d63622f64cd707">copy_path_name</a> (const struct <a class="el" href="structvol.html">vol</a> *, char *, char *i)</td></tr>
 <tr class="memitem:a282155f5cf0ac4a4e4566aa739d65b6e" id="r_a282155f5cf0ac4a4e4566aa739d65b6e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282155f5cf0ac4a4e4566aa739d65b6e">get_id</a> (struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structadouble.html">adouble</a> *, const struct stat *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>, const char *, int)</td></tr>
 <tr class="memdesc:a282155f5cf0ac4a4e4566aa739d65b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get CNID for did/upath args both from database and adouble file.  <br /></td></tr>
-<tr class="memitem:ab82cf1ac78a4f6c2d4f8f57b2d69da5d" id="r_ab82cf1ac78a4f6c2d4f8f57b2d69da5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab82cf1ac78a4f6c2d4f8f57b2d69da5d">afp_exchangefiles</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a8fc2b534c0f98e628cab285bab78b76a" id="r_a8fc2b534c0f98e628cab285bab78b76a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc2b534c0f98e628cab285bab78b76a">afp_setfilparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a933bd0961494f5ec400b6900193df904" id="r_a933bd0961494f5ec400b6900193df904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933bd0961494f5ec400b6900193df904">afp_copyfile</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a481e4c28b2405b558a26d0d03cd12af1" id="r_a481e4c28b2405b558a26d0d03cd12af1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481e4c28b2405b558a26d0d03cd12af1">afp_createfile</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a29c90f759971b20096ae38274dfca466" id="r_a29c90f759971b20096ae38274dfca466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c90f759971b20096ae38274dfca466">afp_createid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:a79d373b2031f3b69ab4ec56b14401365" id="r_a79d373b2031f3b69ab4ec56b14401365"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d373b2031f3b69ab4ec56b14401365">afp_resolveid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:aab035c48bdff4c5ccde819c844f78801" id="r_aab035c48bdff4c5ccde819c844f78801"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab035c48bdff4c5ccde819c844f78801">afp_deleteid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:ab82cf1ac78a4f6c2d4f8f57b2d69da5d" id="r_ab82cf1ac78a4f6c2d4f8f57b2d69da5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab82cf1ac78a4f6c2d4f8f57b2d69da5d">afp_exchangefiles</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a8fc2b534c0f98e628cab285bab78b76a" id="r_a8fc2b534c0f98e628cab285bab78b76a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc2b534c0f98e628cab285bab78b76a">afp_setfilparams</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a933bd0961494f5ec400b6900193df904" id="r_a933bd0961494f5ec400b6900193df904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933bd0961494f5ec400b6900193df904">afp_copyfile</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a481e4c28b2405b558a26d0d03cd12af1" id="r_a481e4c28b2405b558a26d0d03cd12af1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481e4c28b2405b558a26d0d03cd12af1">afp_createfile</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a29c90f759971b20096ae38274dfca466" id="r_a29c90f759971b20096ae38274dfca466"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c90f759971b20096ae38274dfca466">afp_createid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:a79d373b2031f3b69ab4ec56b14401365" id="r_a79d373b2031f3b69ab4ec56b14401365"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d373b2031f3b69ab4ec56b14401365">afp_resolveid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:aab035c48bdff4c5ccde819c844f78801" id="r_aab035c48bdff4c5ccde819c844f78801"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab035c48bdff4c5ccde819c844f78801">afp_deleteid</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -375,10 +376,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FILPBIT_PDINFO&#160;&#160;&#160;13    /* ProDOS Info/ UTF8 name */</td>
+          <td class="memname">#define FILPBIT_PDINFO&#160;&#160;&#160;13</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ProDOS Info/ UTF8 name </p>
 
 </div>
 </div>
@@ -450,6 +452,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Mac OS encodings </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a9ba616a9348742f9ead43f1c8dca6a51" name="a2aa350aac0efd0ef2b184cc516ff9cd1a9ba616a9348742f9ead43f1c8dca6a51"></a>kTextEncodingMacRoman&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a768b3a46a871650750b98945d53ed18b" name="a2aa350aac0efd0ef2b184cc516ff9cd1a768b3a46a871650750b98945d53ed18b"></a>kTextEncodingMacJapanese&#160;</td><td class="fielddoc"></td></tr>
@@ -481,7 +484,8 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a35c75b5e8185c3da10bb481538ce54da" name="a2aa350aac0efd0ef2b184cc516ff9cd1a35c75b5e8185c3da10bb481538ce54da"></a>kTextEncodingMacEthiopic&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1adf9b4e150917a05f5a232fc806f0d266" name="a2aa350aac0efd0ef2b184cc516ff9cd1adf9b4e150917a05f5a232fc806f0d266"></a>kTextEncodingMacCentralEurRoman&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a12e326ab73caedc0e0f6aec3653d330f" name="a2aa350aac0efd0ef2b184cc516ff9cd1a12e326ab73caedc0e0f6aec3653d330f"></a>kTextEncodingMacVietnamese&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1aa752e9d4d1326786cca6d09cb8ae19d9" name="a2aa350aac0efd0ef2b184cc516ff9cd1aa752e9d4d1326786cca6d09cb8ae19d9"></a>kTextEncodingMacExtArabic&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1aa752e9d4d1326786cca6d09cb8ae19d9" name="a2aa350aac0efd0ef2b184cc516ff9cd1aa752e9d4d1326786cca6d09cb8ae19d9"></a>kTextEncodingMacExtArabic&#160;</td><td class="fielddoc"><p>The following use script code 0, smRoman </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a7afe749755e680f1fdd27b7cee70e88d" name="a2aa350aac0efd0ef2b184cc516ff9cd1a7afe749755e680f1fdd27b7cee70e88d"></a>kTextEncodingMacSymbol&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1ac9cafeb80340ecde812b9e0368f73a38" name="a2aa350aac0efd0ef2b184cc516ff9cd1ac9cafeb80340ecde812b9e0368f73a38"></a>kTextEncodingMacDingbats&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a2aa350aac0efd0ef2b184cc516ff9cd1a7d3289a362b8224bb215f7d779f8da69" name="a2aa350aac0efd0ef2b184cc516ff9cd1a7d3289a362b8224bb215f7d779f8da69"></a>kTextEncodingMacTurkish&#160;</td><td class="fielddoc"></td></tr>
@@ -601,6 +605,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a file id </dd></dl>
 
 </div>
 </div>
@@ -709,6 +714,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>resolve a file id </p>
 
 </div>
 </div>
@@ -838,6 +844,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>if newname is NULL (from <a class="el" href="directory_8c.html">directory.c</a>) we don't want to copy the resource fork. because we are doing it elsewhere. currently if newname is NULL then adp is NULL. </dd></dl>
 
 </div>
 </div>
@@ -877,6 +884,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>dirfd can be used for unlinkat semantics </dd></dl>
 
 </div>
 </div>
@@ -1200,6 +1208,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>convert a Mac long name to an utf8 name </p>
 
 </div>
 </div>
@@ -1254,6 +1263,21 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Rename a file, including its resource fork and mac name. </p>
+<p>renamefile and copyfile take the old and new unix pathnames and the new mac name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol</td><td>volume structure </td></tr>
+    <tr><td class="paramname">ddir</td><td>dest dir structure </td></tr>
+    <tr><td class="paramname">sdir_fd</td><td>source dir fd to which src path is relative (for openat et al semantics) passing -1 means this is not used, src path is a full path </td></tr>
+    <tr><td class="paramname">src</td><td>the source path </td></tr>
+    <tr><td class="paramname">dst</td><td>the dest filename in current dir </td></tr>
+    <tr><td class="paramname">newname</td><td>the dest mac name </td></tr>
+    <tr><td class="paramname">adp</td><td>adouble struct of src file, if open, or &amp; zeroed one </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1370,7 +1394,27 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line">the format <span class="keywordflow">for</span> the <a class="code hl_struct" href="structfinderinfo.html">finderinfo</a> fields (from IM: Toolbox Essentials):</div>
+<div class="line">field         bytes        subfield    bytes</div>
+<div class="line"> </div>
+<div class="line">files:</div>
+<div class="line">ioFlFndrInfo  16      -&gt;       <a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a>    4  <a class="code hl_variable" href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a> field</div>
+<div class="line">                            creator    4  creator field</div>
+<div class="line">                              <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>    2  finder <a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>:</div>
+<div class="line">                     alias, bundle, etc.</div>
+<div class="line">                           location    4  location in window</div>
+<div class="line">                             folder    2  window that contains file</div>
+<div class="line"> </div>
+<div class="line">ioFlXFndrInfo 16      -&gt;     iconID    2  icon id</div>
+<div class="line">                             unused    6  reserved</div>
+<div class="line">                             script    1  script system</div>
+<div class="line">                             xflags    1  reserved</div>
+<div class="line">                          commentID    2  comment id</div>
+<div class="line">                          putawayID    4  home directory id</div>
+<div class="ttc" id="acmd__dbd_8c_html_a5b5dc5446eb7e7a502a06d67b7ea302c"><div class="ttname"><a href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a></div><div class="ttdeci">static dbd_flags_t flags</div><div class="ttdef"><b>Definition</b> cmd_dbd.c:45</div></div>
+<div class="ttc" id="anad__cp_8c_html_ae8922bfd679bbcca93aea4ac02cf4234"><div class="ttname"><a href="nad__cp_8c.html#ae8922bfd679bbcca93aea4ac02cf4234">type</a></div><div class="ttdeci">static enum op type</div><div class="ttdef"><b>Definition</b> nad_cp.c:96</div></div>
+<div class="ttc" id="astructfinderinfo_html"><div class="ttname"><a href="structfinderinfo.html">finderinfo</a></div><div class="ttdef"><b>Definition</b> catsearch.c:60</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

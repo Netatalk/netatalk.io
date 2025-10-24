@@ -102,6 +102,9 @@ $(function(){initNavTree('catsearch_8c.html','',''); });
   <div class="headertitle"><div class="title">catsearch.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>FPCatSearch implementation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;netinet/in.h&gt;</code><br />
@@ -142,7 +145,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a54b6434b6375d05d12dc79aa65ad8829" id="r_a54b6434b6375d05d12dc79aa65ad8829"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b6434b6375d05d12dc79aa65ad8829">CATPBIT_PARTIAL</a>&#160;&#160;&#160;31</td></tr>
 <tr class="memitem:a9c208f553ecfbb1196bc3120b0e398aa" id="r_a9c208f553ecfbb1196bc3120b0e398aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c208f553ecfbb1196bc3120b0e398aa">VETO_STR</a>&#160;&#160;&#160;        &quot;./../.AppleDouble/.AppleDB/Network Trash Folder/TheVolumeSettingsFolder/TheFindByContentFolder/.AppleDesktop/.Parent/&quot;</td></tr>
 <tr class="memitem:af2026dc96be6266acdb392a2ca2f02cf" id="r_af2026dc96be6266acdb392a2ca2f02cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2026dc96be6266acdb392a2ca2f02cf">NUM_ROUNDS</a>&#160;&#160;&#160;200</td></tr>
-<tr class="memdesc:af2026dc96be6266acdb392a2ca2f02cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs a filesystem search.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -151,19 +153,23 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab586991280cf34ae06586a780a2034d4" id="r_ab586991280cf34ae06586a780a2034d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab586991280cf34ae06586a780a2034d4">clearstack</a> (void)</td></tr>
-<tr class="memitem:acb5f00a7cb505bc3b1b1f2654e537f5f" id="r_acb5f00a7cb505bc3b1b1f2654e537f5f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb5f00a7cb505bc3b1b1f2654e537f5f">addstack</a> (char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, int pidx)</td></tr>
+<tr class="memdesc:ab586991280cf34ae06586a780a2034d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears directory stack.  <br /></td></tr>
+<tr class="memitem:acb5f00a7cb505bc3b1b1f2654e537f5f" id="r_acb5f00a7cb505bc3b1b1f2654e537f5f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb5f00a7cb505bc3b1b1f2654e537f5f">addstack</a> (char *uname, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, int pidx)</td></tr>
 <tr class="memitem:a7821c6be69d2c02717a20c334f3155a7" id="r_a7821c6be69d2c02717a20c334f3155a7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7821c6be69d2c02717a20c334f3155a7">reducestack</a> (void)</td></tr>
+<tr class="memdesc:a7821c6be69d2c02717a20c334f3155a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes checked items from top of directory stack.  <br /></td></tr>
 <tr class="memitem:aaaa27da7d5f41e58a534231e64977a66" id="r_aaaa27da7d5f41e58a534231e64977a66"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structadouble.html">adouble</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa27da7d5f41e58a534231e64977a66">adl_lkup</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> *adp)</td></tr>
 <tr class="memitem:afbacaa4cdc7df5dbb6d55b6b44096137" id="r_afbacaa4cdc7df5dbb6d55b6b44096137"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structfinderinfo.html">finderinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbacaa4cdc7df5dbb6d55b6b44096137">unpack_buffer</a> (struct <a class="el" href="structfinderinfo.html">finderinfo</a> *finfo, char *<a class="el" href="netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438">buffer</a>)</td></tr>
 <tr class="memitem:a3b91f6c33eb3ffff2122bba92a040f07" id="r_a3b91f6c33eb3ffff2122bba92a040f07"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structfinderinfo.html">finderinfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b91f6c33eb3ffff2122bba92a040f07">unpack_finderinfo</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, struct <a class="el" href="structadouble.html">adouble</a> **adp, struct <a class="el" href="structfinderinfo.html">finderinfo</a> *finfo, int islnk)</td></tr>
 <tr class="memitem:a808300d31334e930c2aac1e60f899082" id="r_a808300d31334e930c2aac1e60f899082"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a808300d31334e930c2aac1e60f899082">crit_check</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>)</td></tr>
+<tr class="memdesc:a808300d31334e930c2aac1e60f899082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Criteria checker.  <br /></td></tr>
 <tr class="memitem:a8ff92f5698c58d49149037748fcf79fe" id="r_a8ff92f5698c58d49149037748fcf79fe"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ff92f5698c58d49149037748fcf79fe">rslt_add</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structpath.html">path</a> *<a class="el" href="structpath.html">path</a>, char **<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, int ext)</td></tr>
-<tr class="memitem:a1593cc9dcab6f400c40d57c5e3cdf40f" id="r_a1593cc9dcab6f400c40d57c5e3cdf40f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1593cc9dcab6f400c40d57c5e3cdf40f">catsearch</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, int rmatches, uint32_t *pos, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, uint32_t *nrecs, int *rsize, int ext)</td></tr>
-<tr class="memitem:afe5e6ececec58e47327aa5b248de0419" id="r_afe5e6ececec58e47327aa5b248de0419"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe5e6ececec58e47327aa5b248de0419">catsearch_db</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, int rmatches, uint32_t *pos, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, uint32_t *nrecs, int *rsize, int ext)</td></tr>
+<tr class="memitem:a1593cc9dcab6f400c40d57c5e3cdf40f" id="r_a1593cc9dcab6f400c40d57c5e3cdf40f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1593cc9dcab6f400c40d57c5e3cdf40f">catsearch</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, int rmatches, uint32_t *pos, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, uint32_t *nrecs, int *rsize, int ext)</td></tr>
+<tr class="memdesc:a1593cc9dcab6f400c40d57c5e3cdf40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs a filesystem search.  <br /></td></tr>
+<tr class="memitem:afe5e6ececec58e47327aa5b248de0419" id="r_afe5e6ececec58e47327aa5b248de0419"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe5e6ececec58e47327aa5b248de0419">catsearch_db</a> (const <a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *uname, int rmatches, uint32_t *pos, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, uint32_t *nrecs, int *rsize, int ext)</td></tr>
 <tr class="memdesc:afe5e6ececec58e47327aa5b248de0419"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function performs a CNID db search.  <br /></td></tr>
-<tr class="memitem:a923a9590f5314f996de71e46e36a58cd" id="r_a923a9590f5314f996de71e46e36a58cd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a923a9590f5314f996de71e46e36a58cd">catsearch_afp</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>, int ext)</td></tr>
-<tr class="memitem:ae571815b3a2a517677c84b47e749ed59" id="r_ae571815b3a2a517677c84b47e749ed59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae571815b3a2a517677c84b47e749ed59">afp_catsearch</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:ab58ad704184a04a604059011e4b17672" id="r_ab58ad704184a04a604059011e4b17672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab58ad704184a04a604059011e4b17672">afp_catsearch_ext</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a923a9590f5314f996de71e46e36a58cd" id="r_a923a9590f5314f996de71e46e36a58cd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a923a9590f5314f996de71e46e36a58cd">catsearch_afp</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>, int ext)</td></tr>
+<tr class="memitem:ae571815b3a2a517677c84b47e749ed59" id="r_ae571815b3a2a517677c84b47e749ed59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae571815b3a2a517677c84b47e749ed59">afp_catsearch</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:ab58ad704184a04a604059011e4b17672" id="r_ab58ad704184a04a604059011e4b17672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab58ad704184a04a604059011e4b17672">afp_catsearch_ext</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -173,7 +179,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a122af20db8de5013edbde48f7499d5b9" id="r_a122af20db8de5013edbde48f7499d5b9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a122af20db8de5013edbde48f7499d5b9">dsidx</a> = 0</td></tr>
 <tr class="memitem:ae1cec7c5b16326e2eefa3c36356804ea" id="r_ae1cec7c5b16326e2eefa3c36356804ea"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structscrit.html">scrit</a> c1&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1cec7c5b16326e2eefa3c36356804ea">c2</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>FPCatSearch implementation. </p>
+<p>This file contains FPCatSearch implementation. FPCatSearch performs file/directory search based on specified criteria. It is used by client to perform fast searches on (propably) big volumes. So, it has to be pretty fast.</p>
+<p>This implementation bypasses most of adouble/libatalk stuff as long as possible and does a standard filesystem search. It calls higher-level libatalk/afpd functions only when it is really needed, mainly while returning some non-UNIX information or filtering by non-UNIX criteria. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a54b6434b6375d05d12dc79aa65ad8829" name="a54b6434b6375d05d12dc79aa65ad8829"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54b6434b6375d05d12dc79aa65ad8829">&#9670;&#160;</a></span>CATPBIT_PARTIAL</h2>
 
@@ -213,22 +223,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This function performs a filesystem search. </p>
-<p>Uses globals c1, c2, the search criteria</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume we are searching on ... </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">dir</td><td>directory we are starting from ... </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rmatches</td><td>maximum number of matches we can return </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>position we've stopped recently </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">rbuf</td><td>output buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">nrecs</td><td>number of matches </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">rsize</td><td>length of data written to output buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ext</td><td>extended search flag </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -293,6 +287,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Puts new item onto directory stack. </p>
 
 </div>
 </div>
@@ -327,6 +322,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Looks up for an opened adouble structure, opens resource fork of selected file. </p>
 
 </div>
 </div>
@@ -463,6 +459,23 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This function performs a filesystem search. </p>
+<p>Uses globals c1, c2, the search criteria</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td>AFP connection object </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>volume we are searching on ... </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">dir</td><td>directory we are starting from ... </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rmatches</td><td>maximum number of matches we can return </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>position we've stopped recently </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rbuf</td><td>output buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nrecs</td><td>number of matches </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rsize</td><td>length of data written to output buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ext</td><td>extended search flag </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -619,6 +632,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Clears directory stack. </p>
+
 </div>
 </div>
 <a id="a808300d31334e930c2aac1e60f899082" name="a808300d31334e930c2aac1e60f899082"></a>
@@ -648,6 +663,18 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Criteria checker. </p>
+<dl class="section return"><dt>Returns</dt><dd>a 2-bit value.<ul>
+<li>bit 0 means if checked file meets given criteria.</li>
+<li>bit 1 means if it is a directory and we should descent into it.<ul>
+<li>uname - UNIX name</li>
+<li>fname - our fname (translated to UNIX)</li>
+<li>cidx - index in directory stack </li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
 </div>
 </div>
 <a id="a7821c6be69d2c02717a20c334f3155a7" name="a7821c6be69d2c02717a20c334f3155a7"></a>
@@ -672,6 +699,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Removes checked items from top of directory stack. </p>
+<dl class="section return"><dt>Returns</dt><dd>index of the first unchecked elements or -1. </dd></dl>
 
 </div>
 </div>
@@ -812,6 +842,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>search criteria </p>
 
 </div>
 </div>
@@ -834,6 +865,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>First free item index... </p>
 
 </div>
 </div>
@@ -856,6 +888,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Directory stack (allocated) size... </p>
 
 </div>
 </div>
@@ -878,6 +911,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Directory stack data... </p>
 
 </div>
 </div>
@@ -900,6 +934,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Saved index of currently scanned directory. </p>
 
 </div>
 </div>

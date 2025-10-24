@@ -133,8 +133,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a128e509ab5a36b55e16403d9d89b2a2c" id="r_a128e509ab5a36b55e16403d9d89b2a2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a128e509ab5a36b55e16403d9d89b2a2c">invalidate_fd</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:a128e509ab5a36b55e16403d9d89b2a2c" id="r_a128e509ab5a36b55e16403d9d89b2a2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a128e509ab5a36b55e16403d9d89b2a2c">invalidate_fd</a> (int fd)</td></tr>
 <tr class="memitem:a04ddbde1a27b5b4ca74aa2f1e45a5389" id="r_a04ddbde1a27b5b4ca74aa2f1e45a5389"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04ddbde1a27b5b4ca74aa2f1e45a5389">check_fd</a> (time_t timeout, const sigset_t *sigmask, time_t *<a class="el" href="macip_8c.html#af76d6f62602539015aecb8675c8e15c0">now</a>)</td></tr>
+<tr class="memdesc:a04ddbde1a27b5b4ca74aa2f1e45a5389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for client requests.  <br /></td></tr>
 <tr class="memitem:a6c156288ddaf925476e9c7a3351844fc" id="r_a6c156288ddaf925476e9c7a3351844fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c156288ddaf925476e9c7a3351844fc">comm_init</a> (struct <a class="el" href="structdb__param.html">db_param</a> *<a class="el" href="etc_2cnid__dbd_2main_8c.html#adad0b853d0341ebe36b84382a60fac47">dbp</a>, int ctrlfd, int clntfd)</td></tr>
 <tr class="memitem:af492550c1c33aadffc432ee63b12bb3f" id="r_af492550c1c33aadffc432ee63b12bb3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af492550c1c33aadffc432ee63b12bb3f">comm_nbe</a> (void)</td></tr>
 <tr class="memitem:a9fa649b3aaba6a9f9dea9b5713f692fc" id="r_a9fa649b3aaba6a9f9dea9b5713f692fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fa649b3aaba6a9f9dea9b5713f692fc">comm_rcv</a> (struct <a class="el" href="structcnid__dbd__rqst.html">cnid_dbd_rqst</a> *<a class="el" href="cmd__dbd__scanvol_8c.html#a73fcb26279d6555a66fd8205e04295de">rqst</a>, time_t timeout, const sigset_t *sigmask, time_t *<a class="el" href="macip_8c.html#af76d6f62602539015aecb8675c8e15c0">now</a>)</td></tr>
@@ -195,6 +196,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check for client requests. </p>
+<p>We keep up to fd_table_size open descriptors in fd_table. If the table is full and we get a new descriptor via control_fd, we close a random decriptor in the table to make space. The affected client will automatically reconnect. For an EOF (descriptor is closed by the client, so a read here returns 0) comm_rcv will take care of things and clean up fd_table. The same happens for any read/write errors. </p>
 
 </div>
 </div>

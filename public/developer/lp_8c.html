@@ -162,6 +162,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aff0a71df395cb27602d61fe253e55afd" id="r_aff0a71df395cb27602d61fe253e55afd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff0a71df395cb27602d61fe253e55afd">lp_write</a> (struct <a class="el" href="structpapfile.html">papfile</a> *in, char *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, size_t len)</td></tr>
 <tr class="memitem:a286d7f04a36e727f949549c893aee051" id="r_a286d7f04a36e727f949549c893aee051"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286d7f04a36e727f949549c893aee051">lp_cancel</a> (void)</td></tr>
 <tr class="memitem:a499501ebabac7d35779960f81565aa40" id="r_a499501ebabac7d35779960f81565aa40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a499501ebabac7d35779960f81565aa40">lp_print</a> (void)</td></tr>
+<tr class="memdesc:a499501ebabac7d35779960f81565aa40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create printcap control file, signal printer.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -169,7 +170,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a356a6e5b8011e9adbdb538dd90ada764" id="r_a356a6e5b8011e9adbdb538dd90ada764"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsockaddr__at.html">sockaddr_at</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a356a6e5b8011e9adbdb538dd90ada764">sat</a></td></tr>
 <tr class="memitem:aa1b7b2ae2be506eab82cd2035ba5b710" id="r_aa1b7b2ae2be506eab82cd2035ba5b710"><td class="memItemLeft" align="right" valign="top">static struct lp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b7b2ae2be506eab82cd2035ba5b710">lp</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface to lpr system. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aeca034f67218340ecb2261a22c2f3dcd" name="aeca034f67218340ecb2261a22c2f3dcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeca034f67218340ecb2261a22c2f3dcd">&#9670;&#160;</a></span>BUFSIZE</h2>
 
@@ -334,6 +337,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>cancel current job </p>
 
 </div>
 </div>
@@ -351,6 +355,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>close current spooling file </p>
 
 </div>
 </div>
@@ -520,6 +525,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>open a file for spooling </p>
 
 </div>
 </div>
@@ -572,6 +578,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create printcap control file, signal printer. </p>
+<dl class="section note"><dt>Note</dt><dd>Errors here should remove queue files.</dd></dl>
+<p>XXX piped? </p>
+
 </div>
 </div>
 <a id="abd194dfa07ce7e8b93bdb7b2e6cc9d3e" name="abd194dfa07ce7e8b93bdb7b2e6cc9d3e"></a>
@@ -622,6 +632,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>open a buffer to the current open file </p>
 
 </div>
 </div>

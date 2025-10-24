@@ -111,15 +111,15 @@ $(function(){initNavTree('server__ipc_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:a8fc9c85a6279857a95c1117316156cef" id="r_a8fc9c85a6279857a95c1117316156cef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc9c85a6279857a95c1117316156cef">IPC_DISCOLDSESSION</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:ae3e3c5f4fbe8bc907e9b67fc1e466b73" id="r_ae3e3c5f4fbe8bc907e9b67fc1e466b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3e3c5f4fbe8bc907e9b67fc1e466b73">IPC_GETSESSION</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memitem:a1b6b15a5fb324c822dc86fc3545634a6" id="r_a1b6b15a5fb324c822dc86fc3545634a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6b15a5fb324c822dc86fc3545634a6">IPC_STATE</a>&#160;&#160;&#160;2  /* pass AFP <a class="el" href="session_8c.html#a197f333abd6afc2a22561e1efdf474ea">session</a> <a class="el" href="magics_8c.html#a89f234133d3efe315836311cbf21c64b">state</a> */</td></tr>
-<tr class="memitem:accf4de71add7c617a029b8ffbbc13b24" id="r_accf4de71add7c617a029b8ffbbc13b24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accf4de71add7c617a029b8ffbbc13b24">IPC_VOLUMES</a>&#160;&#160;&#160;3  /* pass <a class="el" href="structlist.html">list</a> of open volumes */</td></tr>
+<tr class="memitem:a1b6b15a5fb324c822dc86fc3545634a6" id="r_a1b6b15a5fb324c822dc86fc3545634a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6b15a5fb324c822dc86fc3545634a6">IPC_STATE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:accf4de71add7c617a029b8ffbbc13b24" id="r_accf4de71add7c617a029b8ffbbc13b24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accf4de71add7c617a029b8ffbbc13b24">IPC_VOLUMES</a>&#160;&#160;&#160;3</td></tr>
 <tr class="memitem:a4f9b5c5128e51877d3242a8565899db5" id="r_a4f9b5c5128e51877d3242a8565899db5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f9b5c5128e51877d3242a8565899db5">IPC_LOGINDONE</a>&#160;&#160;&#160;4</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0be24882c96e89f8dab5db704e3de887" id="r_a0be24882c96e89f8dab5db704e3de887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be24882c96e89f8dab5db704e3de887">ipc_server_read</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:a0be24882c96e89f8dab5db704e3de887" id="r_a0be24882c96e89f8dab5db704e3de887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0be24882c96e89f8dab5db704e3de887">ipc_server_read</a> (<a class="el" href="structserver__child__t.html">server_child_t</a> *<a class="el" href="asp__getsess_8c.html#a5bd8e7e9e94ddbef119742b6a4545b8a">children</a>, int fd)</td></tr>
 <tr class="memdesc:a0be24882c96e89f8dab5db704e3de887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a IPC message from a child.  <br /></td></tr>
-<tr class="memitem:a6afa81478e6bd003edc185b3f822a1d2" id="r_a6afa81478e6bd003edc185b3f822a1d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6afa81478e6bd003edc185b3f822a1d2">ipc_child_write</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>, uint16_t command, int len, void *token)</td></tr>
+<tr class="memitem:a6afa81478e6bd003edc185b3f822a1d2" id="r_a6afa81478e6bd003edc185b3f822a1d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6afa81478e6bd003edc185b3f822a1d2">ipc_child_write</a> (int fd, uint16_t command, int len, void *token)</td></tr>
 <tr class="memitem:a8b1b7abd036f44b62ceaf5b9bd50aebd" id="r_a8b1b7abd036f44b62ceaf5b9bd50aebd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1b7abd036f44b62ceaf5b9bd50aebd">ipc_child_state</a> (<a class="el" href="struct_a_f_p_obj.html">AFPObj</a> *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, uint16_t <a class="el" href="magics_8c.html#a89f234133d3efe315836311cbf21c64b">state</a>)</td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -172,10 +172,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IPC_STATE&#160;&#160;&#160;2  /* pass AFP <a class="el" href="session_8c.html#a197f333abd6afc2a22561e1efdf474ea">session</a> <a class="el" href="magics_8c.html#a89f234133d3efe315836311cbf21c64b">state</a> */</td>
+          <td class="memname">#define IPC_STATE&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pass AFP session state </p>
 
 </div>
 </div>
@@ -186,10 +187,11 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IPC_VOLUMES&#160;&#160;&#160;3  /* pass <a class="el" href="structlist.html">list</a> of open volumes */</td>
+          <td class="memname">#define IPC_VOLUMES&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pass list of open volumes </p>
 
 </div>
 </div>

@@ -102,6 +102,9 @@ $(function(){initNavTree('printcap_8c.html','',''); });
   <div class="headertitle"><div class="title">printcap.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>routines for dealing with the terminal capability data base based on termcap  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
@@ -115,7 +118,7 @@ $(function(){initNavTree('printcap_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a72a591cf0a96cf23c63df5c78712dabe" id="r_a72a591cf0a96cf23c63df5c78712dabe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="memitem:a47b3a5a6de1ab72fd75121c950e1b393" id="r_a47b3a5a6de1ab72fd75121c950e1b393"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b3a5a6de1ab72fd75121c950e1b393">MAXHOP</a>&#160;&#160;&#160;32	/* max number of tc= indirections */</td></tr>
+<tr class="memitem:a47b3a5a6de1ab72fd75121c950e1b393" id="r_a47b3a5a6de1ab72fd75121c950e1b393"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b3a5a6de1ab72fd75121c950e1b393">MAXHOP</a>&#160;&#160;&#160;32</td></tr>
 <tr class="memitem:a908b6b2273b8813baa5e1783703842ff" id="r_a908b6b2273b8813baa5e1783703842ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a908b6b2273b8813baa5e1783703842ff">PRINTCAP</a></td></tr>
 <tr class="memitem:a73acc9aa38d5a512f926d648f22e3092" id="r_a73acc9aa38d5a512f926d648f22e3092"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73acc9aa38d5a512f926d648f22e3092">tgetent</a>&#160;&#160;&#160;<a class="el" href="printcap_8h.html#a7be59bf25bdb3c9507fcfb3c81a5e79a">pgetent</a></td></tr>
 <tr class="memitem:ace251d1150d424496f7f6516876d96c3" id="r_ace251d1150d424496f7f6516876d96c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace251d1150d424496f7f6516876d96c3">tskip</a>&#160;&#160;&#160;pskip</td></tr>
@@ -131,15 +134,23 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a78b85949de8e60c8fee272d505b73534" id="r_a78b85949de8e60c8fee272d505b73534"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78b85949de8e60c8fee272d505b73534">getprent</a> (char *cap, char *bp, int bufsize)</td></tr>
+<tr class="memdesc:a78b85949de8e60c8fee272d505b73534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to tgetent except it returns the next entry instead of doing a lookup.  <br /></td></tr>
 <tr class="memitem:ada6fa26cf081bb4e6f3677813ad7240a" id="r_ada6fa26cf081bb4e6f3677813ad7240a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6fa26cf081bb4e6f3677813ad7240a">endprent</a> (void)</td></tr>
 <tr class="memitem:a1c57921c3600c89dbd67dafe471d6a3a" id="r_a1c57921c3600c89dbd67dafe471d6a3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c57921c3600c89dbd67dafe471d6a3a">tgetent</a> (char *cap, char *bp, const char *name)</td></tr>
+<tr class="memdesc:a1c57921c3600c89dbd67dafe471d6a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an entry for terminal name in buffer bp, from the termcap file.  <br /></td></tr>
 <tr class="memitem:a3188ac78c4f4cd129c8ea944c76fae0a" id="r_a3188ac78c4f4cd129c8ea944c76fae0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3188ac78c4f4cd129c8ea944c76fae0a">tnchktc</a> (char *cap)</td></tr>
+<tr class="memdesc:a3188ac78c4f4cd129c8ea944c76fae0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the last entry, see if it's tc=xxx.  <br /></td></tr>
 <tr class="memitem:a0871d184620a76ef8460ce7a014c2a14" id="r_a0871d184620a76ef8460ce7a014c2a14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0871d184620a76ef8460ce7a014c2a14">tnamatch</a> (const char *np)</td></tr>
+<tr class="memdesc:a0871d184620a76ef8460ce7a014c2a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">deals with name matching.  <br /></td></tr>
 <tr class="memitem:aad3a91b03eedaf55b85745c1c16b8148" id="r_aad3a91b03eedaf55b85745c1c16b8148"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad3a91b03eedaf55b85745c1c16b8148">tskip</a> (char *bp)</td></tr>
+<tr class="memdesc:aad3a91b03eedaf55b85745c1c16b8148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip to the next field. Notice that this is very dumb, not knowing about \: escapes or any such. If necessary, :'s can be put into the termcap file in octal.  <br /></td></tr>
 <tr class="memitem:a3b196c16bcbb023322f57fb7a8d10a95" id="r_a3b196c16bcbb023322f57fb7a8d10a95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b196c16bcbb023322f57fb7a8d10a95">tgetnum</a> (char *id)</td></tr>
+<tr class="memdesc:a3b196c16bcbb023322f57fb7a8d10a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (numeric) option id.  <br /></td></tr>
 <tr class="memitem:a1145224ceab6f063a188ac47157005d6" id="r_a1145224ceab6f063a188ac47157005d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1145224ceab6f063a188ac47157005d6">tgetflag</a> (char *id)</td></tr>
+<tr class="memdesc:a1145224ceab6f063a188ac47157005d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a flag option.  <br /></td></tr>
 <tr class="memitem:a1752e5906fdbc44c6d7b5e612ec7afed" id="r_a1752e5906fdbc44c6d7b5e612ec7afed"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1752e5906fdbc44c6d7b5e612ec7afed">tdecode</a> (char *str, char **area)</td></tr>
 <tr class="memitem:ab09bc2df38545a173479aec26c5c42eb" id="r_ab09bc2df38545a173479aec26c5c42eb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09bc2df38545a173479aec26c5c42eb">tgetstr</a> (char *id, char **area)</td></tr>
+<tr class="memdesc:ab09bc2df38545a173479aec26c5c42eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string valued option.  <br /></td></tr>
 <tr class="memitem:a566f37f70ecaace072507c30855a1e6f" id="r_a566f37f70ecaace072507c30855a1e6f"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a566f37f70ecaace072507c30855a1e6f">decodename</a> (char *str, char **area, int bufsize)</td></tr>
 <tr class="memitem:a7428f8938c9b1047729b8edc9495856b" id="r_a7428f8938c9b1047729b8edc9495856b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7428f8938c9b1047729b8edc9495856b">getpname</a> (char **area, int bufsize)</td></tr>
 </table><table class="memberdecls">
@@ -149,7 +160,12 @@ Variables</h2></td></tr>
 <tr class="memitem:af63fceeed03c162a93177d452be101bd" id="r_af63fceeed03c162a93177d452be101bd"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af63fceeed03c162a93177d452be101bd">tbuf</a></td></tr>
 <tr class="memitem:a02b7926a0f0054b7b6d98d7ca7aa5ab0" id="r_a02b7926a0f0054b7b6d98d7ca7aa5ab0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b7926a0f0054b7b6d98d7ca7aa5ab0">hopcount</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>routines for dealing with the terminal capability data base based on termcap </p>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000005">Bug</a></b></dt><dd>Should use a "last" pointer in tbuf, so that searching for capabilities alphabetically would not be a n**2/2 process when large numbers of capabilities are given. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If we add a last pointer now we will screw up the tc capability. We really should compile termcap.</dd></dl>
+<p>Essentially all the work here is scanning and decoding escapes in string capabilities. We don't use stdio because the editor doesn't, and because living w/o it is not hard. </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a72a591cf0a96cf23c63df5c78712dabe" name="a72a591cf0a96cf23c63df5c78712dabe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72a591cf0a96cf23c63df5c78712dabe">&#9670;&#160;</a></span>BUFSIZ</h2>
 
@@ -171,10 +187,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAXHOP&#160;&#160;&#160;32	/* max number of tc= indirections */</td>
+          <td class="memname">#define MAXHOP&#160;&#160;&#160;32</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>max number of tc= indirections </p>
 
 </div>
 </div>
@@ -429,6 +446,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Similar to tgetent except it returns the next entry instead of doing a lookup. </p>
+<dl class="section note"><dt>Note</dt><dd>Added a "cap" parameter, so we can use these calls for printcap and papd.conf. </dd></dl>
+
 </div>
 </div>
 <a id="a1752e5906fdbc44c6d7b5e612ec7afed" name="a1752e5906fdbc44c6d7b5e612ec7afed"></a>
@@ -457,6 +477,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Tdecode does the grunt work to decode the string capability escapes. </p>
 
 </div>
 </div>
@@ -484,6 +505,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get an entry for terminal name in buffer bp, from the termcap file. </p>
+<dl class="section note"><dt>Note</dt><dd>Parse is very rudimentary; we just notice escaped newlines.</dd></dl>
+<p>Added a "cap" parameter, so we can use these calls for printcap and papd.conf. </p>
+
 </div>
 </div>
 <a id="a1145224ceab6f063a188ac47157005d6" name="a1145224ceab6f063a188ac47157005d6"></a>
@@ -501,6 +526,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Handle a flag option. </p>
+<p>Flag options are given "naked", i.e. followed by a : or the end of the buffer. </p><dl class="section return"><dt>Returns</dt><dd>1 if we find the option, or 0 if it is not given. </dd></dl>
+
 </div>
 </div>
 <a id="a3b196c16bcbb023322f57fb7a8d10a95" name="a3b196c16bcbb023322f57fb7a8d10a95"></a>
@@ -517,6 +545,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return the (numeric) option id. </p>
+<p>Numeric options look like </p><div class="fragment"><div class="line">li#80</div>
+</div><!-- fragment --><p> i.e. the option string is separated from the numeric value by a # character. If the option is not found we return -1. Note that we handle octal numbers beginning with 0. </p>
 
 </div>
 </div>
@@ -539,6 +571,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get a string valued option. </p>
+<p>These are given as </p><div class="fragment"><div class="line">cl=^Z</div>
+</div><!-- fragment --><p> Much decoding is done on the strings, and the strings are placed in area, which is a ref parameter which is updated. No checking on area overflow. </p>
+
 </div>
 </div>
 <a id="a0871d184620a76ef8460ce7a014c2a14" name="a0871d184620a76ef8460ce7a014c2a14"></a>
@@ -556,6 +592,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>deals with name matching. </p>
+<p>The first field of the termcap entry is a sequence of names separated by |'s, so we compare against each such name. The normal : terminator after the last name (before the first field) stops us. </p>
+
 </div>
 </div>
 <a id="a3188ac78c4f4cd129c8ea944c76fae0a" name="a3188ac78c4f4cd129c8ea944c76fae0a"></a>
@@ -572,6 +611,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>check the last entry, see if it's tc=xxx. </p>
+<p>If so, recursively find xxx and append that entry (minus the names) to take the place of the tc=xxx entry. This allows termcap entries to say "like an HP2621 but doesn't turn on the labels". Note that this works because of the left to right scan.</p>
+<p>Added a "cap" parameter, so we can use these calls for printcap and papd.conf. </p>
 
 </div>
 </div>
@@ -598,6 +641,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Skip to the next field. Notice that this is very dumb, not knowing about \: escapes or any such. If necessary, :'s can be put into the termcap file in octal. </p>
+
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
@@ -620,6 +665,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>detect infinite loops in termcap, init 0 </p>
 
 </div>
 </div>
@@ -642,6 +688,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>printcap data base file pointer </p>
 
 </div>
 </div>

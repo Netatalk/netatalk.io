@@ -143,24 +143,34 @@ Functions</h2></td></tr>
 <tr class="memitem:a8368cf190b300328778a1310b46d786a" id="r_a8368cf190b300328778a1310b46d786a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8368cf190b300328778a1310b46d786a">hash_fun_default</a> (const void *<a class="el" href="#ae57736c8a0ddeb64dc394712624d8209">key</a>)</td></tr>
 <tr class="memitem:a57b9e42cb4a7455e01225bf667db9387" id="r_a57b9e42cb4a7455e01225bf667db9387"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57b9e42cb4a7455e01225bf667db9387">hash_comp_default</a> (const void *key1, const void *key2)</td></tr>
 <tr class="memitem:a008b03779c2fb847aaacfde413560c89" id="r_a008b03779c2fb847aaacfde413560c89"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a008b03779c2fb847aaacfde413560c89">compute_bits</a> (void)</td></tr>
+<tr class="memdesc:a008b03779c2fb847aaacfde413560c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the number of bits in the <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> type.  <br /></td></tr>
 <tr class="memitem:a81373fb3dee3aed6ee5b0d1f004efe79" id="r_a81373fb3dee3aed6ee5b0d1f004efe79"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81373fb3dee3aed6ee5b0d1f004efe79">is_power_of_two</a> (<a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> arg)</td></tr>
 <tr class="memitem:a46b09c3f80c4ddbe0712d5790a680df6" id="r_a46b09c3f80c4ddbe0712d5790a680df6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b09c3f80c4ddbe0712d5790a680df6">clear_table</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
 <tr class="memitem:a05dcc0adf7a49d283b3133a91029dd61" id="r_a05dcc0adf7a49d283b3133a91029dd61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05dcc0adf7a49d283b3133a91029dd61">grow_table</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
+<tr class="memdesc:a05dcc0adf7a49d283b3133a91029dd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Double the size of a dynamic table.  <br /></td></tr>
 <tr class="memitem:a415917ed73b1abf0368033be55030709" id="r_a415917ed73b1abf0368033be55030709"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a415917ed73b1abf0368033be55030709">shrink_table</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
+<tr class="memdesc:a415917ed73b1abf0368033be55030709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cut a table size in half.  <br /></td></tr>
 <tr class="memitem:afe991e20cf1520635e01b0fae9a27986" id="r_afe991e20cf1520635e01b0fae9a27986"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhash__t.html">hash_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe991e20cf1520635e01b0fae9a27986">hash_create</a> (<a class="el" href="include_2atalk_2hash_8h.html#aecc5473199dcc266fd5174f30f64a580">hashcount_t</a> <a class="el" href="#aab843860735df831cb06670bfdf0f3c3">maxcount</a>, <a class="el" href="include_2atalk_2hash_8h.html#a29451e8034bdfff2913f59e4c1e5a880">hash_comp_t</a> compfun, <a class="el" href="include_2atalk_2hash_8h.html#a00ebf8a3e3c5692149bb2b90f37d7c5b">hash_fun_t</a> hashfun)</td></tr>
+<tr class="memdesc:afe991e20cf1520635e01b0fae9a27986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a dynamic hash table.  <br /></td></tr>
 <tr class="memitem:ab2a7b14020c49b7420991a13eb50701c" id="r_ab2a7b14020c49b7420991a13eb50701c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a7b14020c49b7420991a13eb50701c">hash_set_allocator</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="include_2atalk_2hash_8h.html#aa15898e7f6a029e6d8f7aca3e93efe09">hnode_alloc_t</a> al, <a class="el" href="include_2atalk_2hash_8h.html#a8adb2eee3d269765dafe4d132d1508ae">hnode_free_t</a> fr, void *<a class="el" href="structcontext.html">context</a>)</td></tr>
 <tr class="memitem:ac63a5e76bde17e867582fd7e6dfb2e20" id="r_ac63a5e76bde17e867582fd7e6dfb2e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac63a5e76bde17e867582fd7e6dfb2e20">hash_free_nodes</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
 <tr class="memitem:a4073889d36e8fb6d2b2fcdea9d890db9" id="r_a4073889d36e8fb6d2b2fcdea9d890db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4073889d36e8fb6d2b2fcdea9d890db9">hash_destroy</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
 <tr class="memitem:a3eb0687d6d5a38ec432ebc5dffd24d77" id="r_a3eb0687d6d5a38ec432ebc5dffd24d77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eb0687d6d5a38ec432ebc5dffd24d77">hash_scan_begin</a> (<a class="el" href="structhscan__t.html">hscan_t</a> *scan, <a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
+<tr class="memdesc:a3eb0687d6d5a38ec432ebc5dffd24d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a hash scanner.  <br /></td></tr>
 <tr class="memitem:a71535648d50cdb2b93d1d47eeb4fb872" id="r_a71535648d50cdb2b93d1d47eeb4fb872"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872">hash_scan_next</a> (<a class="el" href="structhscan__t.html">hscan_t</a> *scan)</td></tr>
+<tr class="memdesc:a71535648d50cdb2b93d1d47eeb4fb872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the next node from the hash table, and update the pointer for the next invocation of <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a>.  <br /></td></tr>
 <tr class="memitem:a67b0242307079e8ae8c8f3d0c395c098" id="r_a67b0242307079e8ae8c8f3d0c395c098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67b0242307079e8ae8c8f3d0c395c098">hash_insert</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>, const void *<a class="el" href="#ae57736c8a0ddeb64dc394712624d8209">key</a>)</td></tr>
+<tr class="memdesc:a67b0242307079e8ae8c8f3d0c395c098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a node into the hash table.  <br /></td></tr>
 <tr class="memitem:a0b95c428f2723afac41fa7d2918523ae" id="r_a0b95c428f2723afac41fa7d2918523ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b95c428f2723afac41fa7d2918523ae">hash_lookup</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, const void *<a class="el" href="#ae57736c8a0ddeb64dc394712624d8209">key</a>)</td></tr>
+<tr class="memdesc:a0b95c428f2723afac41fa7d2918523ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a node in the hash table and return a pointer to it.  <br /></td></tr>
 <tr class="memitem:a5065a86fd3b2ed3e1ef6c12103f2c257" id="r_a5065a86fd3b2ed3e1ef6c12103f2c257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5065a86fd3b2ed3e1ef6c12103f2c257">hash_delete</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
+<tr class="memdesc:a5065a86fd3b2ed3e1ef6c12103f2c257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the given node from the hash table. Since the chains are singly linked, we must locate the start of the node's chain and traverse.  <br /></td></tr>
 <tr class="memitem:a78a880b8f8c49bc6095291b71659246e" id="r_a78a880b8f8c49bc6095291b71659246e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78a880b8f8c49bc6095291b71659246e">hash_alloc_insert</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, const void *<a class="el" href="#ae57736c8a0ddeb64dc394712624d8209">key</a>, void *<a class="el" href="#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a2d522b6569e91fae09f2aecb99532b5a" id="r_a2d522b6569e91fae09f2aecb99532b5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d522b6569e91fae09f2aecb99532b5a">hash_delete_free</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:a6117a74a5eaef1997b83aba0dbaf4dec" id="r_a6117a74a5eaef1997b83aba0dbaf4dec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6117a74a5eaef1997b83aba0dbaf4dec">hash_scan_delete</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:a43d22f3010d8c95497805fe23f9e020b" id="r_a43d22f3010d8c95497805fe23f9e020b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d22f3010d8c95497805fe23f9e020b">hash_scan_delfree</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash, <a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:ab3266c386c02810ff5bfecd57b995cbc" id="r_ab3266c386c02810ff5bfecd57b995cbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3266c386c02810ff5bfecd57b995cbc">hash_verify</a> (<a class="el" href="structhash__t.html">hash_t</a> *hash)</td></tr>
+<tr class="memdesc:ab3266c386c02810ff5bfecd57b995cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify whether the given object is a valid hash table.  <br /></td></tr>
 <tr class="memitem:a434d7348205df7af3e87d7ed8262fa45" id="r_a434d7348205df7af3e87d7ed8262fa45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhnode__t.html">hnode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434d7348205df7af3e87d7ed8262fa45">hnode_init</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *hnode, void *<a class="el" href="#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
 <tr class="memitem:a6b19d89ebdc13b19029e64076423f8fc" id="r_a6b19d89ebdc13b19029e64076423f8fc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b19d89ebdc13b19029e64076423f8fc">hnode_get</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
 <tr class="memitem:aac2fa8881dd829ef9351ec9b4a3d5abc" id="r_aac2fa8881dd829ef9351ec9b4a3d5abc"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac2fa8881dd829ef9351ec9b4a3d5abc">hnode_getkey</a> (<a class="el" href="structhnode__t.html">hnode_t</a> *<a class="el" href="ftw_8c.html#a631f1778e42f5bc3aed002e79b5cb673">node</a>)</td></tr>
@@ -550,6 +560,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Initialize the table of pointers to null. </p>
 
 </div>
 </div>
@@ -576,6 +587,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Compute the number of bits in the <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> type. </p>
+<p>We know that <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> is an unsigned integral type. Thus the highest value it can hold is a Mersenne number (power of two, less one). We initialize a <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> object with this value and then shift bits out one by one while counting. </p><dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>HASH_VAL_T_MAX is a Mersenne number&mdash;one that is one less than a power of two. This means that its binary representation consists of all one bits, and hence 'val' is initialized to all one bits.</li>
+<li>While bits remain in val, we increment the bit count and shift it to the right, replacing the topmost bit by zero. </li>
+</ol>
+</dd></dl>
+
 </div>
 </div>
 <a id="a05dcc0adf7a49d283b3133a91029dd61" name="a05dcc0adf7a49d283b3133a91029dd61"></a>
@@ -600,6 +618,21 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Double the size of a dynamic table. </p>
+<p>This works as follows. Each chain splits into two adjacent chains. The shift amount increases by one, exposing an additional bit of each hashed key. For each node in the original chain, the value of this newly exposed bit will decide which of the two new chains will receive the node: if the bit is 1, the chain with the higher index will have the node, otherwise the lower chain will receive the node. In this manner, the hash table will continue to function exactly as before without having to rehash any of the keys.</p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>Overflow check.</li>
+<li>The new number of chains is twice the old number of chains.</li>
+<li>The new mask is one bit wider than the previous, revealing a new bit in all hashed keys.</li>
+<li>Allocate a new table of chain pointers that is twice as large as the previous one.</li>
+<li>If the reallocation was successful, we perform the rest of the growth algorithm, otherwise we do nothing.</li>
+<li>The exposed_bit variable holds a mask with which each hashed key can be AND-ed to test the value of its newly exposed bit.</li>
+<li>Now loop over each chain in the table and sort its nodes into two chains based on the value of each node's newly exposed hash bit.</li>
+<li>The low chain replaces the current chain. The high chain goes into the corresponding sister chain in the upper half of the table.</li>
+<li>We have finished dealing with the chains and nodes. We now update the various bookeeping fields of the hash structure. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>
@@ -699,6 +732,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a dynamic hash table. </p>
+<p>Both the hash table structure and the table itself are dynamically allocated. Furthermore, the table is extendible in that it will automatically grow as its load factor increases beyond a certain threshold.</p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>If the number of bits in the <a class="el" href="include_2atalk_2hash_8h.html#ad05b97a5bdacb4cc1aaf4a6268de8b48">hash_val_t</a> type has not been computed yet, we do so here, because this is likely to be the first function that the user calls.</li>
+<li>Allocate a hash table control structure.</li>
+<li>If a hash table control structure is successfully allocated, we proceed to initialize it. Otherwise we return a null pointer.</li>
+<li>We try to allocate the table of hash chains.</li>
+<li>If we were able to allocate the hash chain table, we can finish initializing the hash structure and the table. Otherwise, we must backtrack by freeing the hash structure.</li>
+<li>INIT_SIZE should be a power of two. The high and low marks are always set to be twice the table size and half the table size respectively. When the number of nodes in the table grows beyond the high size (beyond load factor 2), it will double in size to cut the load factor down to about about 1. If the table shrinks down to or beneath load factor 0.5, it will shrink, bringing the load up to about 1. However, the table will never shrink beneath INIT_SIZE even if it's emptied.</li>
+<li>This indicates that the table is dynamically allocated and dynamically resized on the fly. A table that has this value set to zero is assumed to be statically allocated and will not be resized.</li>
+<li>The table of chains must be properly reset to all null pointers. </li>
+</ol>
+</dd></dl>
+
 </div>
 </div>
 <a id="a5065a86fd3b2ed3e1ef6c12103f2c257" name="a5065a86fd3b2ed3e1ef6c12103f2c257"></a>
@@ -719,6 +766,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Delete the given node from the hash table. Since the chains are singly linked, we must locate the start of the node's chain and traverse. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>The node must belong to this hash table, and its key must not have been tampered with.</li>
+<li>If this deletion will take the node count below the low mark, we shrink the table now.</li>
+<li>Determine which chain the node belongs to, and fetch the pointer to the first node in this chain.</li>
+<li>If the node being deleted is the first node in the chain, then simply update the chain head pointer.</li>
+<li>Otherwise advance to the node's predecessor, and splice out by updating the predecessor's next pointer.</li>
+<li>Indicate that the node is no longer in a hash table. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>
@@ -757,6 +815,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Free a dynamic hash table structure. </p>
 
 </div>
 </div>
@@ -774,6 +833,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Free every node in the hash using the hash-&gt;<a class="el" href="#a30440a97a3a6b753a35a4b55b474e828">freenode()</a> function pointer, and cause the hash to become empty. </p>
 
 </div>
 </div>
@@ -826,6 +886,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Insert a node into the hash table. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>It's illegal to insert more than the maximum number of nodes. The client should verify that the hash table is not full before attempting an insertion.</li>
+<li>The same key may not be inserted into a table twice.</li>
+<li>If the table is dynamic and the load factor is already at &gt;= 2, grow the table.</li>
+<li>We take the bottom N bits of the hash value to derive the chain index, where N is the base 2 logarithm of the size of the hash table. </li>
+</ol>
+</dd></dl>
+
 </div>
 </div>
 <a id="a0b95c428f2723afac41fa7d2918523ae" name="a0b95c428f2723afac41fa7d2918523ae"></a>
@@ -846,6 +915,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Find a node in the hash table and return a pointer to it. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>We hash the key and keep the entire hash value. As an optimization, when we descend down the chain, we can compare hash values first and only if hash values match do we perform a full key comparison.</li>
+<li>To locate the chain from among 2^N chains, we look at the lower N bits of the hash value by anding them with the current mask.</li>
+<li>Looping through the chain, we compare the stored hash value inside each node against our computed hash. If they match, then we do a full comparison between the unhashed keys. If these match, we have located the entry. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>
@@ -868,6 +945,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialize a hash scanner. </p>
+<p>Reset the hash scanner so that the next element retrieved by <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a> shall be the first element on the first non-empty chain.</p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>Locate the first non empty chain.</li>
+<li>If an empty chain is found, remember which one it is and set the next pointer to refer to its first element.</li>
+<li>Otherwise if a chain is not found, set the next pointer to NULL so that <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a> shall indicate failure. </li>
+</ol>
+</dd></dl>
+
 </div>
 </div>
 <a id="a6117a74a5eaef1997b83aba0dbaf4dec" name="a6117a74a5eaef1997b83aba0dbaf4dec"></a>
@@ -888,6 +974,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Exactly like hash_delete, except does not trigger table shrinkage. This is to be used from within a hash table scan operation. See notes for hash_delete. </p>
 
 </div>
 </div>
@@ -909,6 +996,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Like hash_delete_free but based on hash_scan_delete. </p>
 
 </div>
 </div>
@@ -926,6 +1014,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieve the next node from the hash table, and update the pointer for the next invocation of <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a>. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>Remember the next pointer in a temporary value so that it can be returned.</li>
+<li>This assertion essentially checks whether the module has been properly initialized. The first point of interaction with the module should be either <a class="el" href="#afe991e20cf1520635e01b0fae9a27986" title="Create a dynamic hash table.">hash_create()</a> or <a class="el" href="etc_2afpd_2hash_8h.html#a6064585d780b6c320f4342c917b1380f">hash_init()</a>, both of which set hash_val_t_bit to a non zero value.</li>
+<li>If the next pointer we are returning is not NULL, then the user is allowed to call <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a> again. We prepare the new next pointer for that call right now. That way the user is allowed to delete the node we are about to return, since we will no longer be needing it to locate the next node.</li>
+<li>If there is a next node in the chain (next-&gt;next), then that becomes the new next node, otherwise ...</li>
+<li>We have exhausted the current chain, and must locate the next subsequent non-empty chain in the table.</li>
+<li>If a non-empty chain is found, the first element of that chain becomes the new next node. Otherwise there is no new next node and we set the pointer to NULL so that the next time <a class="el" href="#a71535648d50cdb2b93d1d47eeb4fb872" title="Retrieve the next node from the hash table, and update the pointer for the next invocation of hash_sc...">hash_scan_next()</a> is called, a null pointer shall be immediately returned. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>
@@ -957,6 +1056,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Select a different set of node allocator routines. </p>
 
 </div>
 </div>
@@ -991,6 +1091,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Verify whether the given object is a valid hash table. </p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>If the hash table is dynamic, verify whether the high and low expansion/shrinkage thresholds are powers of two.</li>
+<li>Count all nodes in the table, and test each hash value to see whether it is correct for the node's chain. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>
@@ -1100,6 +1207,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Initialize a client-supplied node </p>
 
 </div>
 </div>
@@ -1125,6 +1233,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Verify whether the given argument is a power of two. </p>
 
 </div>
 </div>
@@ -1150,6 +1259,21 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Cut a table size in half. </p>
+<p>This is done by folding together adjacent chains and populating the lower half of the table with these chains. The chains are simply spliced together. Once this is done, the whole table is reallocated to a smaller object.</p>
+<dl class="section note"><dt>Note</dt><dd><ol type="1">
+<li>It is illegal to have a hash table with one slot. This would mean that hash-&gt;shift is equal to hash_val_t_bit, an illegal shift value. Also, other things could go wrong, such as hash-&gt;lowmark becoming zero.</li>
+<li>Looping over each pair of sister chains, the low_chain is set to point to the head node of the chain in the lower half of the table, and high_chain points to the head node of the sister in the upper half.</li>
+<li>The intent here is to compute a pointer to the last node of the lower chain into the low_tail variable. If this chain is empty, low_tail ends up with a null value.</li>
+<li>If the lower chain is not empty, we simply tack the upper chain onto it. If the upper chain is a null pointer, nothing happens.</li>
+<li>Otherwise if the lower chain is empty but the upper one is not, If the low chain is empty, but the high chain is not, then the high chain is simply transferred to the lower half of the table.</li>
+<li>Otherwise if both chains are empty, there is nothing to do.</li>
+<li>All the chain pointers are in the lower half of the table now, so we reallocate it to a smaller object. This, of course, invalidates all pointer-to-pointers which reference into the table from the first node of each chain.</li>
+<li>Though it's unlikely, the reallocation may fail. In this case we pretend that the table <em>was</em> reallocated to a smaller object.</li>
+<li>Finally, update the various table parameters to reflect the new size. </li>
+</ol>
+</dd></dl>
 
 </div>
 </div>

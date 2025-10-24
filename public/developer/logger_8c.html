@@ -139,6 +139,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a6c82ade539c01bc64e5a2afe12820f39" id="r_a6c82ade539c01bc64e5a2afe12820f39"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c82ade539c01bc64e5a2afe12820f39">log_setup</a> (const char *filename, enum <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983e">loglevels</a> loglevel, enum <a class="el" href="logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4">logtypes</a> <a class="el" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a>, const bool log_us_timestamp)</td></tr>
 <tr class="memitem:a7987d52dd28e8c9c96db3901d19fdf91" id="r_a7987d52dd28e8c9c96db3901d19fdf91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7987d52dd28e8c9c96db3901d19fdf91">syslog_setup</a> (int loglevel, enum <a class="el" href="logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4">logtypes</a> <a class="el" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a>, int display_options, int facility)</td></tr>
 <tr class="memitem:add11fa2b5c5244e6580e247c439b9ada" id="r_add11fa2b5c5244e6580e247c439b9ada"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add11fa2b5c5244e6580e247c439b9ada">setuplog_internal</a> (const char *loglevel, const char *<a class="el" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a>, const char *filename, const bool log_us_timestamp)</td></tr>
+<tr class="memdesc:add11fa2b5c5244e6580e247c439b9ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">If filename == NULL its for syslog logging, otherwise its for file-logging.  <br /></td></tr>
 <tr class="memitem:a452222bed63f4149ad1b87841ba5edb1" id="r_a452222bed63f4149ad1b87841ba5edb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a452222bed63f4149ad1b87841ba5edb1">set_processname</a> (const char *processname)</td></tr>
 <tr class="memitem:aaf986e5534b5e0609c7c8a49fc3cb50a" id="r_aaf986e5534b5e0609c7c8a49fc3cb50a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf986e5534b5e0609c7c8a49fc3cb50a">make_log_entry</a> (enum <a class="el" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983e">loglevels</a> loglevel, enum <a class="el" href="logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4">logtypes</a> <a class="el" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a>, const char *file, const bool log_us_timestamp, int line, char *message,...)</td></tr>
 <tr class="memitem:a1f4712ac06fd52965e065225295a99cd" id="r_a1f4712ac06fd52965e065225295a99cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f4712ac06fd52965e065225295a99cd">setuplog</a> (const char *logstr, const char *logfile, const bool log_us_timestamp)</td></tr>
@@ -186,7 +187,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<p>Default log config: log nothing to files. </p><div class="fragment"><div class="line">0:               set ?</div>
+<div class="line">0:               syslog ?</div>
+<div class="line">-1:              logfiles fd</div>
+<div class="line"><a class="code hl_enumvalue" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea0dabd84ecdcef67fe2c0a2985713c9c0">log_none</a>:        no logging by <span class="keywordflow">default</span></div>
+<div class="line">0:               Display options</div>
+<div class="line"><span class="keyword">false</span>            timestamp_us</div>
+<div class="ttc" id="alogger_8h_html_ac1351f9d0e583b8918401dd4f3d7983ea0dabd84ecdcef67fe2c0a2985713c9c0"><div class="ttname"><a href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea0dabd84ecdcef67fe2c0a2985713c9c0">log_none</a></div><div class="ttdeci">@ log_none</div><div class="ttdef"><b>Definition</b> logger.h:18</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="af744fbd0c6f7d66a04d16b3eafaac398" name="af744fbd0c6f7d66a04d16b3eafaac398"></a>
@@ -238,7 +246,8 @@ Variables</h2></td></tr>
 <div class="line">  <span class="stringliteral">&quot;ad&quot;</span>,                              \</div>
 <div class="line">  <span class="stringliteral">&quot;Spotlight&quot;</span>,                       \</div>
 <div class="line">  <span class="stringliteral">&quot;end_of_list_marker&quot;</span>}</div>
-</div><!-- fragment -->
+</div><!-- fragment --><p>these are the string identifiers corresponding to each logtype </p>
+
 </div>
 </div>
 <a id="ad9c049e4f532b0b081fe30543f91e9c3" name="ad9c049e4f532b0b081fe30543f91e9c3"></a>
@@ -437,6 +446,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000011">Bug</a></b></dt><dd>make_log_entry has 1 main flaw: The message in its entirety, must fit into the tempbuffer. So it must be shorter than MAXLOGSIZE </dd></dl>
 
 </div>
 </div>
@@ -471,6 +481,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called by the LOG macro for syslog messages </p>
 
 </div>
 </div>
@@ -488,6 +499,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>This function sets up the processname </p>
 
 </div>
 </div>
@@ -554,6 +566,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>If filename == NULL its for syslog logging, otherwise its for file-logging. </p>
+<p>"unsetuplog" calls with loglevel == NULL. loglevel == NULL means: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> <a class="code hl_enumeration" href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a> == <span class="keywordflow">default</span></div>
+<div class="line">   disable logging</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">   set <a class="code hl_variable" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> <span class="keywordflow">default</span> logging</div>
+<div class="ttc" id="anad_8h_html_a39c57ea9c9abd4808b31871bda91a3af"><div class="ttname"><a href="nad_8h.html#a39c57ea9c9abd4808b31871bda91a3af">logtype</a></div><div class="ttdeci">logtype</div><div class="ttdef"><b>Definition</b> nad.h:40</div></div>
+<div class="ttc" id="anad__cp_8c_html_a9526abe94d7ddaf880f23cec5608daeb"><div class="ttname"><a href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a></div><div class="ttdeci">PATH_T to</div><div class="ttdef"><b>Definition</b> nad_cp.c:87</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a7987d52dd28e8c9c96db3901d19fdf91" name="a7987d52dd28e8c9c96db3901d19fdf91"></a>
@@ -584,6 +604,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Setup syslog logging </p>
 
 </div>
 </div>
@@ -665,6 +686,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Main log config container </p>
 
 </div>
 </div>
@@ -756,7 +778,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <a class="code hl_define" href="#a44b216ce98668a015a83d9f7f75e9b3d">COUNT_ARRAY</a>(<a class="code hl_variable" href="#abf1ab130bb2c7de178a2de5ba4a9a4bc">arr_loglevel_strings</a>)</div>
 <div class="ttc" id="alogger_8c_html_a44b216ce98668a015a83d9f7f75e9b3d"><div class="ttname"><a href="#a44b216ce98668a015a83d9f7f75e9b3d">COUNT_ARRAY</a></div><div class="ttdeci">#define COUNT_ARRAY(array)</div><div class="ttdef"><b>Definition</b> logger.c:37</div></div>
-<div class="ttc" id="alogger_8c_html_abf1ab130bb2c7de178a2de5ba4a9a4bc"><div class="ttname"><a href="#abf1ab130bb2c7de178a2de5ba4a9a4bc">arr_loglevel_strings</a></div><div class="ttdeci">static const char * arr_loglevel_strings[]</div><div class="ttdef"><b>Definition</b> logger.c:112</div></div>
+<div class="ttc" id="alogger_8c_html_abf1ab130bb2c7de178a2de5ba4a9a4bc"><div class="ttname"><a href="#abf1ab130bb2c7de178a2de5ba4a9a4bc">arr_loglevel_strings</a></div><div class="ttdeci">static const char * arr_loglevel_strings[]</div><div class="ttdef"><b>Definition</b> logger.c:115</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -781,7 +803,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <a class="code hl_define" href="#a44b216ce98668a015a83d9f7f75e9b3d">COUNT_ARRAY</a>(<a class="code hl_variable" href="#a68fdfa9e8df53c3b5216568c8e250c72">arr_logtype_strings</a>)</div>
-<div class="ttc" id="alogger_8c_html_a68fdfa9e8df53c3b5216568c8e250c72"><div class="ttname"><a href="#a68fdfa9e8df53c3b5216568c8e250c72">arr_logtype_strings</a></div><div class="ttdeci">static const char * arr_logtype_strings[]</div><div class="ttdef"><b>Definition</b> logger.c:104</div></div>
+<div class="ttc" id="alogger_8c_html_a68fdfa9e8df53c3b5216568c8e250c72"><div class="ttname"><a href="#a68fdfa9e8df53c3b5216568c8e250c72">arr_logtype_strings</a></div><div class="ttdeci">static const char * arr_logtype_strings[]</div><div class="ttdef"><b>Definition</b> logger.c:107</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -809,7 +831,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="#a6e6c70b24bc916d22df7ba56ede97e0d">DEFAULT_LOG_CONFIG</a>, </div>
 <div class="line">    <a class="code hl_define" href="#a6e6c70b24bc916d22df7ba56ede97e0d">DEFAULT_LOG_CONFIG</a>  </div>
 <div class="line">}</div>
-<div class="ttc" id="alogger_8c_html_a6e6c70b24bc916d22df7ba56ede97e0d"><div class="ttname"><a href="#a6e6c70b24bc916d22df7ba56ede97e0d">DEFAULT_LOG_CONFIG</a></div><div class="ttdeci">#define DEFAULT_LOG_CONFIG</div><div class="ttdef"><b>Definition</b> logger.c:82</div></div>
+<div class="ttc" id="alogger_8c_html_a6e6c70b24bc916d22df7ba56ede97e0d"><div class="ttname"><a href="#a6e6c70b24bc916d22df7ba56ede97e0d">DEFAULT_LOG_CONFIG</a></div><div class="ttdeci">#define DEFAULT_LOG_CONFIG</div><div class="ttdef"><b>Definition</b> logger.c:85</div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -116,8 +116,8 @@ $(function(){initNavTree('uams__guest_8c.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:acc68db599e7f8c9f2c15c61a112828ee" id="r_acc68db599e7f8c9f2c15c61a112828ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#a4d4a351e53cb5116b7942c502d22c628">UAM_MODULE_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc68db599e7f8c9f2c15c61a112828ee">append</a> (struct <a class="el" href="structpapfile.html">papfile</a> *, const char *, int)</td></tr>
-<tr class="memitem:a13eddd61e0be248596211868745916f9" id="r_a13eddd61e0be248596211868745916f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13eddd61e0be248596211868745916f9">noauth_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
-<tr class="memitem:abfc872bb6a6d9751235d9fe8f8e1f9fa" id="r_abfc872bb6a6d9751235d9fe8f8e1f9fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc872bb6a6d9751235d9fe8f8e1f9fa">noauth_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *<a class="el" href="vfs_8c.html#a383f97fe3a901afb4efd55e9c44d146d">uname</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, size_t *<a class="el" href="vfs_8c.html#a8ebdde5d3c4a41b0f96f4fe6b7581131">rbuflen</a>)</td></tr>
+<tr class="memitem:a13eddd61e0be248596211868745916f9" id="r_a13eddd61e0be248596211868745916f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13eddd61e0be248596211868745916f9">noauth_login</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
+<tr class="memitem:abfc872bb6a6d9751235d9fe8f8e1f9fa" id="r_abfc872bb6a6d9751235d9fe8f8e1f9fa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfc872bb6a6d9751235d9fe8f8e1f9fa">noauth_login_ext</a> (void *<a class="el" href="netatalk_8c.html#ab2a2323b2013b68132e8db8dc5087da6">obj</a>, char *uname, struct passwd **uam_pwd, char *ibuf, size_t ibuflen, char *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, size_t *<a class="el" href="afpfunc__helpers_8c.html#a7871fd1d66c15c2c744bd28109af4631">rbuflen</a>)</td></tr>
 <tr class="memitem:a93b6c5693c9c3f13d6e11384ee9b9cd6" id="r_a93b6c5693c9c3f13d6e11384ee9b9cd6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6c5693c9c3f13d6e11384ee9b9cd6">noauth_printer</a> (char *start, char *stop, char *username, struct <a class="el" href="structpapfile.html">papfile</a> *out)</td></tr>
 <tr class="memitem:ad6270e587bc679ee29b5f7bcd68dc87a" id="r_ad6270e587bc679ee29b5f7bcd68dc87a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6270e587bc679ee29b5f7bcd68dc87a">uam_setup</a> (void *handle, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:ae2cc5cad0aad9a4e928900687f0cef7b" id="r_ae2cc5cad0aad9a4e928900687f0cef7b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a> (void)</td></tr>
@@ -207,6 +207,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>login and login_ext are almost the same </p>
 
 </div>
 </div>
@@ -300,6 +301,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Printer NoAuthUAM Login </p>
 
 </div>
 </div>
@@ -376,8 +378,8 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="auam_8h_html_aa2aadc58d0b3550933f269c66d065a8e"><div class="ttname"><a href="uam_8h.html#aa2aadc58d0b3550933f269c66d065a8e">UAM_MODULE_VERSION</a></div><div class="ttdeci">#define UAM_MODULE_VERSION</div><div class="ttdef"><b>Definition</b> uam.h:21</div></div>
 <div class="ttc" id="auam_8h_html_ae495d3c127113c143a025a25560ff35e"><div class="ttname"><a href="uam_8h.html#ae495d3c127113c143a025a25560ff35e">UAM_MODULE_SERVER</a></div><div class="ttdeci">#define UAM_MODULE_SERVER</div><div class="ttdef"><b>Definition</b> uam.h:17</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_ac67f27e6feea66d84cfb4d6e0893f477"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1029</div></div>
-<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1051</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ac67f27e6feea66d84cfb4d6e0893f477"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ac67f27e6feea66d84cfb4d6e0893f477">uam_setup</a></div><div class="ttdeci">static int uam_setup(void *obj, const char *path)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1033</div></div>
+<div class="ttc" id="auams__dhx2__pam_8c_html_ae2cc5cad0aad9a4e928900687f0cef7b"><div class="ttname"><a href="uams__dhx2__pam_8c.html#ae2cc5cad0aad9a4e928900687f0cef7b">uam_cleanup</a></div><div class="ttdeci">static void uam_cleanup(void)</div><div class="ttdef"><b>Definition</b> uams_dhx2_pam.c:1055</div></div>
 </div><!-- fragment -->
 </div>
 </div>

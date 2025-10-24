@@ -114,7 +114,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3e7a7015d6fce77a40636781c50f6953" id="r_a3e7a7015d6fce77a40636781c50f6953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7a7015d6fce77a40636781c50f6953">OpenClientSocket</a> (char *host, int <a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
-<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int <a class="el" href="vfs_8c.html#a642ae48927769266f4a87cf5efb4b344">fd</a>)</td></tr>
+<tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int fd)</td></tr>
 <tr class="memitem:ab8cd6d203bce911123672b83b2c219e2" id="r_ab8cd6d203bce911123672b83b2c219e2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8cd6d203bce911123672b83b2c219e2">my_dsi_stream_read</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>, const size_t length)</td></tr>
 <tr class="memitem:af865ec94544db4b0bd6ec8d2411bcaa1" id="r_af865ec94544db4b0bd6ec8d2411bcaa1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af865ec94544db4b0bd6ec8d2411bcaa1">dsi_read_header</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>)</td></tr>
 <tr class="memitem:ac49cdb9fdfe705fff0f4ca43b0ca7dd5" id="r_ac49cdb9fdfe705fff0f4ca43b0ca7dd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac49cdb9fdfe705fff0f4ca43b0ca7dd5">my_dsi_stream_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *<a class="el" href="afparg_8c.html#ac4e0c8a49e10b951126073c07aa50906">dsi</a>, void *<a class="el" href="afppasswd_8c.html#a72dff57571064f4e3546a2bf18e1147d">buf</a>, const size_t ilength, size_t *rlength)</td></tr>
@@ -146,7 +146,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a09da2bf2e00e204029b196b609fe8c95" id="r_a09da2bf2e00e204029b196b609fe8c95"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09da2bf2e00e204029b196b609fe8c95">AFPCloseFork</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork)</td></tr>
 <tr class="memitem:a23a197c1082bf909d76a1972871e1d34" id="r_a23a197c1082bf909d76a1972871e1d34"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23a197c1082bf909d76a1972871e1d34">AFPByteLock</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int end, int mode, int offset, int size)</td></tr>
 <tr class="memitem:a2767640fa9ebe25c5fc45b48f001bd7a" id="r_a2767640fa9ebe25c5fc45b48f001bd7a"><td class="memItemLeft" align="right" valign="top">static off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2767640fa9ebe25c5fc45b48f001bd7a">get_off_t</a> (unsigned char **ibuf, int is64)</td></tr>
-<tr class="memitem:a5acd3550905a7c829fd5d46fb1d677dd" id="r_a5acd3550905a7c829fd5d46fb1d677dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5acd3550905a7c829fd5d46fb1d677dd">set_off_t</a> (off_t offset, uint8_t *<a class="el" href="vfs_8c.html#ae28a59e1a9b3eb360f65bae673ee47cd">rbuf</a>, int is64)</td></tr>
+<tr class="memitem:a5acd3550905a7c829fd5d46fb1d677dd" id="r_a5acd3550905a7c829fd5d46fb1d677dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5acd3550905a7c829fd5d46fb1d677dd">set_off_t</a> (off_t offset, uint8_t *<a class="el" href="afpfunc__helpers_8c.html#ad50ea93b82541b4008d5b84f255a346b">rbuf</a>, int is64)</td></tr>
 <tr class="memitem:a184028b08efa57e4908faa4c5d671f4f" id="r_a184028b08efa57e4908faa4c5d671f4f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a184028b08efa57e4908faa4c5d671f4f">AFPByteLock_ext</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, int end, int mode, off_t offset, off_t size)</td></tr>
 <tr class="memitem:ab3a5426cf4788213b60d1b861a6005b8" id="r_ab3a5426cf4788213b60d1b861a6005b8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a5426cf4788213b60d1b861a6005b8">AFPSetForkParam</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, uint16_t bitmap, off_t size)</td></tr>
 <tr class="memitem:a17a086e5c861ce0c99cd727d116d3b8e" id="r_a17a086e5c861ce0c99cd727d116d3b8e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a086e5c861ce0c99cd727d116d3b8e">AFPFlush</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>)</td></tr>
@@ -332,6 +332,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Only backup date is valid. </p>
 
 </div>
 </div>
@@ -1445,6 +1446,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000012">Bug</a></b></dt><dd>spec violation in netatalk FPlogout ==&gt; dsiclose </dd></dl>
 
 </div>
 </div>
@@ -1579,6 +1581,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Assume size &lt; 2GB </dd></dl>
 
 </div>
 </div>
@@ -2180,6 +2183,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Close Session no reply </p>
 
 </div>
 </div>
@@ -2197,6 +2201,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>GetStatus </p>
 
 </div>
 </div>
@@ -2214,6 +2219,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Open a new session </p>
 
 </div>
 </div>
@@ -2231,6 +2237,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Our free wrapper. It does nothing special at the moment. </p>
 
 </div>
 </div>
@@ -2248,6 +2255,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Our malloc wrapper. It zeroes allocated memory. </p>
 
 </div>
 </div>
@@ -2452,6 +2460,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>read raw data. return actual bytes read. this will wait until it gets length bytes </p>
 
 </div>
 </div>
@@ -2483,6 +2492,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>read data. function on success. 0 on failure. data length gets stored in length variable. this should really use size_t's, but that would require changes elsewhere. </p>
 
 </div>
 </div>
@@ -2789,6 +2799,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Converts Pascal string to C (null-terminated) string. </p>
 
 </div>
 </div>
@@ -2967,6 +2978,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>write data. 0 on failure. this assumes that dsi_len will never cause an overflow in the data buffer. </p>
 
 </div>
 </div>

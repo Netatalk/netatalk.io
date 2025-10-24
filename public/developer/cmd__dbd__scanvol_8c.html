@@ -135,15 +135,20 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ad1dd4033b9d00766cc63b36f4191ab4f" id="r_ad1dd4033b9d00766cc63b36f4191ab4f"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1dd4033b9d00766cc63b36f4191ab4f">utompath</a> (char *upath)</td></tr>
 <tr class="memitem:add4030b9aa004f2eff16d0c3029b977d" id="r_add4030b9aa004f2eff16d0c3029b977d"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add4030b9aa004f2eff16d0c3029b977d">check_netatalk_dirs</a> (const char *name)</td></tr>
+<tr class="memdesc:add4030b9aa004f2eff16d0c3029b977d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for netatalk special folders e.g. ".AppleDB" or ".AppleDesktop".  <br /></td></tr>
 <tr class="memitem:ac04ccba4a8f10d09108474a37ec231e7" id="r_ac04ccba4a8f10d09108474a37ec231e7"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac04ccba4a8f10d09108474a37ec231e7">check_special_dirs</a> (const char *name)</td></tr>
+<tr class="memdesc:ac04ccba4a8f10d09108474a37ec231e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for special names.  <br /></td></tr>
 <tr class="memitem:afb434eeddcf7e925b81548d498e70b01" id="r_afb434eeddcf7e925b81548d498e70b01"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb434eeddcf7e925b81548d498e70b01">update_cnid</a> (<a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const struct stat *sp, const char *oldname, const char *newname)</td></tr>
 <tr class="memitem:abd6926f7fe2d2b74801e49d0f11c065d" id="r_abd6926f7fe2d2b74801e49d0f11c065d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd6926f7fe2d2b74801e49d0f11c065d">check_adfile</a> (const char *fname, const struct stat *st, const char **newname)</td></tr>
 <tr class="memitem:a12804bc307afd906193e4e6bc57a2074" id="r_a12804bc307afd906193e4e6bc57a2074"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12804bc307afd906193e4e6bc57a2074">remove_eafiles</a> (const char *name, struct <a class="el" href="structea.html">ea</a> *<a class="el" href="structea.html">ea</a>)</td></tr>
 <tr class="memitem:ab6ebe248d85291d8007bfd5e632c2fc6" id="r_ab6ebe248d85291d8007bfd5e632c2fc6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ebe248d85291d8007bfd5e632c2fc6">check_eafiles</a> (const char *fname)</td></tr>
 <tr class="memitem:a5f01049521dedb878683950ba10b29a6" id="r_a5f01049521dedb878683950ba10b29a6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f01049521dedb878683950ba10b29a6">check_addir</a> (int volroot)</td></tr>
 <tr class="memitem:a8800ce0eca5d31ccbe58676d9679c22c" id="r_a8800ce0eca5d31ccbe58676d9679c22c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8800ce0eca5d31ccbe58676d9679c22c">check_eafile_in_adouble</a> (const char *name)</td></tr>
+<tr class="memdesc:a8800ce0eca5d31ccbe58676d9679c22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file cotains "::EA" and if it does check if its correspondig data fork exists.  <br /></td></tr>
 <tr class="memitem:ad3d2bfa5d91e90647afea5324b7709a9" id="r_ad3d2bfa5d91e90647afea5324b7709a9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3d2bfa5d91e90647afea5324b7709a9">read_addir</a> (void)</td></tr>
+<tr class="memdesc:ad3d2bfa5d91e90647afea5324b7709a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check files and dirs inside .AppleDouble folder.  <br /></td></tr>
 <tr class="memitem:a62bb1828366a66fa90ce48078e9ef044" id="r_a62bb1828366a66fa90ce48078e9ef044"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62bb1828366a66fa90ce48078e9ef044">check_cnid</a> (const char *name, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, struct stat *st, int adfile_ok)</td></tr>
+<tr class="memdesc:a62bb1828366a66fa90ce48078e9ef044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check CNID for a file/dir, both from db and from ad-file.  <br /></td></tr>
 <tr class="memitem:aedc39d0bc2f10a8977fbe31f14ad9177" id="r_aedc39d0bc2f10a8977fbe31f14ad9177"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc39d0bc2f10a8977fbe31f14ad9177">check_orphaned</a> (const char *name)</td></tr>
 <tr class="memitem:a270136759c417d2b5a85e1378cc4d4d2" id="r_a270136759c417d2b5a85e1378cc4d4d2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270136759c417d2b5a85e1378cc4d4d2">dbd_readdir</a> (int volroot, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
 <tr class="memitem:a7c922ba7b146cdaa5d957add271c0fb1" id="r_a7c922ba7b146cdaa5d957add271c0fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c922ba7b146cdaa5d957add271c0fb1">cmd_dbd_scanvol</a> (struct <a class="el" href="structvol.html">vol</a> *vol_in, <a class="el" href="cmd__dbd_8h.html#a0058940080756b084877283516d31f7a">dbd_flags_t</a> <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
@@ -213,6 +218,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check for .AppleDouble folder and .Parent, create if missing </p>
 
 </div>
 </div>
@@ -247,6 +253,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check for .AppleDouble file, create if missing </p>
 
 </div>
 </div>
@@ -287,6 +294,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check CNID for a file/dir, both from db and from ad-file. </p>
+<dl class="section return"><dt>Returns</dt><dd>Correct CNID of object or CNID_INVALID (ie 0) on error </dd></dl>
+
 </div>
 </div>
 <a id="a8800ce0eca5d31ccbe58676d9679c22c" name="a8800ce0eca5d31ccbe58676d9679c22c"></a>
@@ -312,6 +322,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check if file cotains "::EA" and if it does check if its correspondig data fork exists. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 = name is not an EA file </dd>
+<dd>
+1 = name is an EA file and no problem was found </dd>
+<dd>
+-1 = name is an EA file and data fork is gone </dd></dl>
+
 </div>
 </div>
 <a id="ab6ebe248d85291d8007bfd5e632c2fc6" name="ab6ebe248d85291d8007bfd5e632c2fc6"></a>
@@ -336,6 +353,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Check Extended Attributes files </p>
 
 </div>
 </div>
@@ -361,6 +379,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check for netatalk special folders e.g. ".AppleDB" or ".AppleDesktop". </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to name or NULL. </dd></dl>
 
 </div>
 </div>
@@ -412,6 +433,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Check for special names. </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to name or NULL. </dd></dl>
+
 </div>
 </div>
 <a id="a7c922ba7b146cdaa5d957add271c0fb1" name="a7c922ba7b146cdaa5d957add271c0fb1"></a>
@@ -432,6 +456,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Main func called from <a class="el" href="cmd__dbd_8c.html">cmd_dbd.c</a> </p>
 
 </div>
 </div>
@@ -461,6 +486,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This is called recursively for all dirs. volroot=1 means we're in the volume root dir, 0 means we aren't. We use this when checking for netatalk private folders like .AppleDB. did is our parent's CNID. </p>
 
 </div>
 </div>
@@ -486,6 +512,11 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check files and dirs inside .AppleDouble folder. </p>
+<dl class="section note"><dt>Note</dt><dd>remove orphaned files </dd>
+<dd>
+bail on dirs </dd></dl>
 
 </div>
 </div>
@@ -515,6 +546,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Remove all files with <a href="file::EA">file::EA</a>* from adouble dir </p>
 
 </div>
 </div>
@@ -554,6 +586,7 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>We unCAPed a name, update CNID db </p>
 
 </div>
 </div>
