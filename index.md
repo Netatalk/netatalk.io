@@ -46,12 +46,7 @@ You want to build from source when neither of the previous options are
 feasible, or when you want to do a hardened Netatalk deployment with
 only a subset of features enabled.
 
-You need a C compiler (we use *gcc* or *clang*), the
-[Meson](https://mesonbuild.com/) build system with
-[Ninja](https://ninja-build.org/), together with [required
-libraries](/install.html).
-Read more in the [Netatalk manual](/manual/en/Installation.html) or the
-OS specific guides in the [wiki](/docs.html).
+See the [getting started guide](/install.html) for instructions how to prepare the build environment, and read more about dependencoes in the [Netatalk manual](/manual/en/Installation.html).
 
 ## How to Use
 
@@ -66,10 +61,7 @@ The [Configuration](/manual/en/Configuration.html) chapter and
 [afp.conf](/manual/en/afp.conf.5.html) page in the Netatalk manual
 are good places to start.
 
-Once Netatalk is up and running, in the macOS Finder, active Netatalk
-file servers appear under *Locations*, or in the *Network* drawer. On
-Classic Mac OS, you use the *AppleShare* client within the *Chooser*
-desk accessory.
+Once Netatalk is up and running, use your AFP client – macOS built-in or 3rd party, to connect to the file server!
 
 ## How to Contribute
 
