@@ -2,7 +2,6 @@ var dir_cf1983ef594b042645f087e5432e2431 =
 [
     [ "adoublehelper.c", "adoublehelper_8c.html", "adoublehelper_8c" ],
     [ "adoublehelper.h", "adoublehelper_8h.html", "adoublehelper_8h" ],
-    [ "afp.h", "test_2testsuite_2afp_8h.html", "test_2testsuite_2afp_8h" ],
     [ "afparg.c", "afparg_8c.html", "afparg_8c" ],
     [ "afparg_FPfuncs.c", "afparg___f_pfuncs_8c.html", "afparg___f_pfuncs_8c" ],
     [ "afpclient.c", "afpclient_8c.html", "afpclient_8c" ],

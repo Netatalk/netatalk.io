@@ -3,7 +3,7 @@ var dir_25f01871147423ebbadbe634d926f3ff =
     [ "acl.h", "acl_8h.html", "acl_8h" ],
     [ "adouble.h", "adouble_8h.html", "adouble_8h" ],
     [ "aep.h", "aep_8h.html", "aep_8h" ],
-    [ "afp.h", "include_2atalk_2afp_8h.html", "include_2atalk_2afp_8h" ],
+    [ "afp.h", "afp_8h.html", "afp_8h" ],
     [ "afp_dtrace.h", "afp__dtrace_8h.html", "afp__dtrace_8h" ],
     [ "afp_util.h", "afp__util_8h.html", "afp__util_8h" ],
     [ "asp.h", "asp_8h.html", "asp_8h" ],

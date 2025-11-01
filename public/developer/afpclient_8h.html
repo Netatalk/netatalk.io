@@ -121,8 +121,8 @@ $(function(){initNavTree('afpclient_8h.html','',''); });
 <code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="afp_8h_source.html">atalk/afp.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="test_2testsuite_2dsi_8h_source.html">dsi.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="test_2testsuite_2afp_8h_source.html">afp.h</a>&quot;</code><br />
 </div>
 <p><a href="afpclient_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -136,6 +136,17 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a40c57ae45831edc27ae9ff933b11aa50" id="r_a40c57ae45831edc27ae9ff933b11aa50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40c57ae45831edc27ae9ff933b11aa50">SA_ONESHOT</a>&#160;&#160;&#160;SA_RESETHAND</td></tr>
 <tr class="memitem:a0c0b427a2547aa727e2c5262a174e26b" id="r_a0c0b427a2547aa727e2c5262a174e26b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c0b427a2547aa727e2c5262a174e26b">bswap_64</a>(x)</td></tr>
+<tr class="memitem:a8659784c3f8e470fd9f1683defb7ca56" id="r_a8659784c3f8e470fd9f1683defb7ca56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8659784c3f8e470fd9f1683defb7ca56">AFP_CLOSEVOL</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:adf7a16b94ed319a71ebb081287336c14" id="r_adf7a16b94ed319a71ebb081287336c14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf7a16b94ed319a71ebb081287336c14">AFP_ENUMERATE</a>&#160;&#160;&#160;9</td></tr>
+<tr class="memitem:a513593590165d7dcb1acb62b649c7e48" id="r_a513593590165d7dcb1acb62b649c7e48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a513593590165d7dcb1acb62b649c7e48">AFP_GETSRVINFO</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memitem:a4515cca3cc497d97d2d70eac3869cf55" id="r_a4515cca3cc497d97d2d70eac3869cf55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4515cca3cc497d97d2d70eac3869cf55">AFP_GETSRVPARAM</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memitem:a9e27130d7fbf5571496dd08dbe6d9e62" id="r_a9e27130d7fbf5571496dd08dbe6d9e62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e27130d7fbf5571496dd08dbe6d9e62">AFP_LOGIN</a>&#160;&#160;&#160;18</td></tr>
+<tr class="memitem:a3ce580172b759d6092be212e561b2888" id="r_a3ce580172b759d6092be212e561b2888"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce580172b759d6092be212e561b2888">AFP_LOGOUT</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memitem:a663d3dab81049d70d1992b9d4b73b878" id="r_a663d3dab81049d70d1992b9d4b73b878"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a663d3dab81049d70d1992b9d4b73b878">AFP_OPENVOL</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memitem:a159917198bc3a96662c39ba344dac9ac" id="r_a159917198bc3a96662c39ba344dac9ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a159917198bc3a96662c39ba344dac9ac">AFP_OPENDIR</a>&#160;&#160;&#160;25</td></tr>
+<tr class="memitem:ac2d31d7bd1f3743dda21a587afe77f32" id="r_ac2d31d7bd1f3743dda21a587afe77f32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2d31d7bd1f3743dda21a587afe77f32">AFP_OPENFORK</a>&#160;&#160;&#160;26</td></tr>
+<tr class="memitem:abc1203fdf189c0084b1c1985f561ae23" id="r_abc1203fdf189c0084b1c1985f561ae23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1203fdf189c0084b1c1985f561ae23">AFP_OPENDT</a>&#160;&#160;&#160;48</td></tr>
+<tr class="memitem:a1975f2e73719c8e7d53ea266f98a1de8" id="r_a1975f2e73719c8e7d53ea266f98a1de8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1975f2e73719c8e7d53ea266f98a1de8">AFP_CLOSEDT</a>&#160;&#160;&#160;49</td></tr>
 <tr class="memitem:a13c2eb9f1ec4d6e96b36a3e1e08c36fd" id="r_a13c2eb9f1ec4d6e96b36a3e1e08c36fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13c2eb9f1ec4d6e96b36a3e1e08c36fd">DIRPBIT_ATTR</a>&#160;&#160;&#160;0</td></tr>
 <tr class="memitem:a82018f62641c01d4982ff99d4b038650" id="r_a82018f62641c01d4982ff99d4b038650"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82018f62641c01d4982ff99d4b038650">DIRPBIT_PDID</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:a92465bf7778f5f18110e1335a3695a38" id="r_a92465bf7778f5f18110e1335a3695a38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92465bf7778f5f18110e1335a3695a38">DIRPBIT_CDATE</a>&#160;&#160;&#160;2</td></tr>
@@ -323,6 +334,160 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define AD_FILELOCK_BASE&#160;&#160;&#160;(UINT32_C(0x7FFFFFFF) - 9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1975f2e73719c8e7d53ea266f98a1de8" name="a1975f2e73719c8e7d53ea266f98a1de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1975f2e73719c8e7d53ea266f98a1de8">&#9670;&#160;</a></span>AFP_CLOSEDT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_CLOSEDT&#160;&#160;&#160;49</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8659784c3f8e470fd9f1683defb7ca56" name="a8659784c3f8e470fd9f1683defb7ca56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8659784c3f8e470fd9f1683defb7ca56">&#9670;&#160;</a></span>AFP_CLOSEVOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_CLOSEVOL&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf7a16b94ed319a71ebb081287336c14" name="adf7a16b94ed319a71ebb081287336c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7a16b94ed319a71ebb081287336c14">&#9670;&#160;</a></span>AFP_ENUMERATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_ENUMERATE&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a513593590165d7dcb1acb62b649c7e48" name="a513593590165d7dcb1acb62b649c7e48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a513593590165d7dcb1acb62b649c7e48">&#9670;&#160;</a></span>AFP_GETSRVINFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_GETSRVINFO&#160;&#160;&#160;15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4515cca3cc497d97d2d70eac3869cf55" name="a4515cca3cc497d97d2d70eac3869cf55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4515cca3cc497d97d2d70eac3869cf55">&#9670;&#160;</a></span>AFP_GETSRVPARAM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_GETSRVPARAM&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e27130d7fbf5571496dd08dbe6d9e62" name="a9e27130d7fbf5571496dd08dbe6d9e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e27130d7fbf5571496dd08dbe6d9e62">&#9670;&#160;</a></span>AFP_LOGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_LOGIN&#160;&#160;&#160;18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ce580172b759d6092be212e561b2888" name="a3ce580172b759d6092be212e561b2888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce580172b759d6092be212e561b2888">&#9670;&#160;</a></span>AFP_LOGOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_LOGOUT&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a159917198bc3a96662c39ba344dac9ac" name="a159917198bc3a96662c39ba344dac9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159917198bc3a96662c39ba344dac9ac">&#9670;&#160;</a></span>AFP_OPENDIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_OPENDIR&#160;&#160;&#160;25</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1203fdf189c0084b1c1985f561ae23" name="abc1203fdf189c0084b1c1985f561ae23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1203fdf189c0084b1c1985f561ae23">&#9670;&#160;</a></span>AFP_OPENDT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_OPENDT&#160;&#160;&#160;48</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2d31d7bd1f3743dda21a587afe77f32" name="ac2d31d7bd1f3743dda21a587afe77f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d31d7bd1f3743dda21a587afe77f32">&#9670;&#160;</a></span>AFP_OPENFORK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_OPENFORK&#160;&#160;&#160;26</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a663d3dab81049d70d1992b9d4b73b878" name="a663d3dab81049d70d1992b9d4b73b878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663d3dab81049d70d1992b9d4b73b878">&#9670;&#160;</a></span>AFP_OPENVOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AFP_OPENVOL&#160;&#160;&#160;24</td>
         </tr>
       </table>
 </div><div class="memdoc">

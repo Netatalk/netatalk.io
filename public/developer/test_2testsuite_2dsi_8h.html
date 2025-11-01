@@ -103,7 +103,7 @@ $(function(){initNavTree('test_2testsuite_2dsi_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="struct_d_s_i.html">DSI</a> (Data Stream Interface) protocol definitions.  
+<p><a class="el" href="struct_d_s_i.html">DSI</a> (Data Stream Interface) protocol definitions modified for the afptest test-suite.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
 <code>#include &lt;sys/time.h&gt;</code><br />
@@ -180,7 +180,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ae739cf79e4300115ce6fec9e4a8489f5" id="r_ae739cf79e4300115ce6fec9e4a8489f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae739cf79e4300115ce6fec9e4a8489f5">dsi_readdone</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="struct_d_s_i.html">DSI</a> (Data Stream Interface) protocol definitions. </p>
+<div class="textblock"><p><a class="el" href="struct_d_s_i.html">DSI</a> (Data Stream Interface) protocol definitions modified for the afptest test-suite. </p>
+<p>The interface for the test-suite differts from the libatalk <a class="el" href="struct_d_s_i.html">DSI</a> interface in that is retains a statically allocated buffer for commands as well as smaller command and data buffer sizes that fit in 16 bit size fields.</p>
 <p>What a <a class="el" href="struct_d_s_i.html">DSI</a> packet looks like: </p><div class="fragment"><div class="line">0                               32</div>
 <div class="line">|-------------------------------|</div>
 <div class="line">|<a class="code hl_variable" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>  |command| requestID     |</div>
@@ -284,7 +285,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">                          (<a class="code hl_function" href="include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a>((x), (x)-&gt;commands, \</div>
 <div class="line">                          <a class="code hl_define" href="#a746f96fd2d3892d863b5c955b25503fe">DSI_CMDSIZ</a>, &amp;(x)-&gt;cmdlen))</div>
 <div class="ttc" id="ainclude_2atalk_2dsi_8h_html_aa8ed662cafd0572718c46609e9ab3ebb"><div class="ttname"><a href="include_2atalk_2dsi_8h.html#aa8ed662cafd0572718c46609e9ab3ebb">dsi_stream_receive</a></div><div class="ttdeci">int dsi_stream_receive(DSI *)</div><div class="ttdoc">Read DSI command and data.</div><div class="ttdef"><b>Definition</b> dsi_stream.c:662</div></div>
-<div class="ttc" id="atest_2testsuite_2dsi_8h_html_a746f96fd2d3892d863b5c955b25503fe"><div class="ttname"><a href="#a746f96fd2d3892d863b5c955b25503fe">DSI_CMDSIZ</a></div><div class="ttdeci">#define DSI_CMDSIZ</div><div class="ttdef"><b>Definition</b> test/testsuite/dsi.h:48</div></div>
+<div class="ttc" id="atest_2testsuite_2dsi_8h_html_a746f96fd2d3892d863b5c955b25503fe"><div class="ttname"><a href="#a746f96fd2d3892d863b5c955b25503fe">DSI_CMDSIZ</a></div><div class="ttdeci">#define DSI_CMDSIZ</div><div class="ttdef"><b>Definition</b> test/testsuite/dsi.h:53</div></div>
 </div><!-- fragment -->
 </div>
 </div>

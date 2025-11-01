@@ -76,7 +76,7 @@ var searchData=
   ['replacement_73',['replacement',['../precompose_8h.html#af6c51ec5eb5e3765ec0ada31d0e81d43',1,'precompose.h']]],
   ['replacement_5fsp_74',['replacement_sp',['../precompose_8h.html#a88b1a8a31fd11812a11aa25bb2b7d236',1,'precompose.h']]],
   ['replaycache_75',['replaycache',['../afp__dsi_8c.html#af6d0a183a06940cd9b52f28bedb21902',1,'afp_dsi.c']]],
-  ['replaycache_5fsize_76',['REPLAYCACHE_SIZE',['../include_2atalk_2afp_8h.html#aad4cb19b150b1f8e9cb6fe072a6ce043',1,'afp.h']]],
+  ['replaycache_5fsize_76',['REPLAYCACHE_SIZE',['../afp_8h.html#aad4cb19b150b1f8e9cb6fe072a6ce043',1,'afp.h']]],
   ['reply_77',['reply',['../struct_a_f_p_obj.html#a419a53b024dc6029009c04322cb7a00e',1,'AFPObj']]],
   ['reply_5fparam_5fmaxlen_78',['REPLY_PARAM_MAXLEN',['../enumerate_8c.html#aa9def15ea9102355532fe379cd41118d',1,'enumerate.c']]],
   ['req_79',['Req',['../speedtest_8c.html#af4af9587928111fb40cafd6a55fc5209',1,'speedtest.c']]],

@@ -142,14 +142,20 @@ $(function(){initNavTree('index.html','',''); });
 <div class="line"> +---------------------------+</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Error checking and logging</h1>
-<p>We want rigid error checking and concise log messages. This often leads to significant code bloat where the relevant function call is buried in error checking and logging statements. In order to alleviate error checking and code readability, we provide a set of error checking macros in &lt;atalk/errchk.h&gt;. These macros compare the return value of statements against 0, NULL, -1 (and maybe more, check it out). Every macro comes in four flavours: EC_CHECK, EC_CHECK_LOG, EC_CHECK_LOG_ERR and EC_CHECK_CUSTOM:</p>
+<p>We want rigid error checking and concise log messages. At the same time, we want to avoid overly verbose code where the relevant function call is buried in error checking and logging statements. In order to address both error checking and code readability, we provide a set of error checking macros in &lt;atalk/errchk.h&gt;. Every macro comes in four flavours: EC_*CHECK*, EC_*CHECK*_LOG, EC_*CHECK*_LOGSTR and EC_*CHECK*_LOG_ERR where <em>CHECK</em> should be substituted with one of the supported tests:</p>
 <ul>
-<li>EC_CHECK just checks the CHECK</li>
-<li>EC_CHECK_LOG additionally logs the stringified function call.</li>
-<li>EC_CHECK_LOG_ERR allows specifying the return value</li>
-<li>EC_CHECK_CUSTOM allows custom actions</li>
+<li><em>ZERO</em> - the value equals 0</li>
+<li><em>NULL</em> - the value equals NULL</li>
+<li><em>NEG1</em> - the value equals -1</li>
 </ul>
-<p>The macros EC_CHECK* unconditionally jump to a cleanup label where the necessary cleanup can be done alongside controlling the return value. EC_CHECK_CUSTOM doesn't do that, so an extra "goto EC_CLEANUP" may be performed as appropriate.</p>
+<p>To explain the loggging logic of each error checking macro flavor, using the <em>ZERO</em> test as an example:</p>
+<ul>
+<li>EC_ZERO checks that the value equals 0 with a standard log message</li>
+<li>EC_ZERO_LOG additionally logs the stringified function call</li>
+<li>EC_ZERO_LOGSTR allows specifying an arbitrary string to log</li>
+<li>EC_ZERO_LOG_ERR allows specifying the return value</li>
+</ul>
+<p>The macros EC_CHECK* unconditionally jump to the cleanup label defined by the <em>EC_CLEANUP</em> macro where the necessary cleanup can be done alongside validating the return value.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Examples</h2>
 <p>stat() without EC macro:</p>
@@ -165,7 +171,7 @@ Examples</h2>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> ret;</div>
 <div class="line"> </div>
-<div class="line">    cleanup:</div>
+<div class="line">cleanup:</div>
 <div class="line">    ...</div>
 <div class="line">    <span class="keywordflow">return</span> ret;</div>
 <div class="line">}</div>

@@ -3,7 +3,7 @@ var searchData=
   ['randhash_0',['randhash',['../uams__randnum_8c.html#a6d2b7bf849cc2f37b7189abdc9348df5',1,'uams_randnum.c']]],
   ['rbufsize_1',['rbufsize',['../afpfunc__helpers_8c.html#af95a9f02684fd37deb05d3a88949717c',1,'afpfunc_helpers.c']]],
   ['read_5flock_2',['read_lock',['../include_2atalk_2util_8h.html#af3fd37d69e7035b61796f211cc74d329',1,'util.h']]],
-  ['replaycache_5fsize_3',['REPLAYCACHE_SIZE',['../include_2atalk_2afp_8h.html#aad4cb19b150b1f8e9cb6fe072a6ce043',1,'afp.h']]],
+  ['replaycache_5fsize_3',['REPLAYCACHE_SIZE',['../afp_8h.html#aad4cb19b150b1f8e9cb6fe072a6ce043',1,'afp.h']]],
   ['reply_5fparam_5fmaxlen_4',['REPLY_PARAM_MAXLEN',['../enumerate_8c.html#aa9def15ea9102355532fe379cd41118d',1,'enumerate.c']]],
   ['rival_5',['RIVAL',['../byteorder_8h.html#ae8e9816eec6db5afb5e7d7f76ad2d259',1,'byteorder.h']]],
   ['rivals_6',['RIVALS',['../byteorder_8h.html#a1d285007466f336467b864716101e5a2',1,'byteorder.h']]],
