@@ -2,15 +2,19 @@
 
 Netatalk static website.
 
-The entire site is generated from Markdown sources using custom Python scripts.
+The core website is generated from Markdown sources using custom Python scripts.
 
 Release notes as well as wiki documentation sources are fetched remotely from the Netatalk/netatalk GitHub project.
 
 The contents of `manual/` should not be modified directly, but rather synced from Netatalk/netatalk for each release.
+
+The developer documentation in `public/developer/` is generated with Doxygen in the same repo.
+
 See the [Netatalk release process](https://github.com/Netatalk/netatalk/wiki/Release-Process) for how to refresh these sources.
 
 ## New release procedure
 
+- Refresh the sources in `manual` and `public/developer` as described above.
 - Create a news story at the top of `index.md`.
 - Move an older news story to `archive.md`. Limit the number of news stories on `index.md` to 4 or less.
 - Add link to release notes in `documentation.md`.
