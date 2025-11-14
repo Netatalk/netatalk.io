@@ -1,7 +1,7 @@
 var searchData=
 [
   ['backtrace_5fstack_5fsize_0',['BACKTRACE_STACK_SIZE',['../fault_8c.html#a0fc21576095471210d2ccd277cf54861',1,'fault.c']]],
-  ['backup_20i_20e_20change_20of_20inode_20number_20ndash_20or_20emacs_1',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md48',1,'']]],
+  ['backup_20i_20e_20change_20of_20inode_20number_20ndash_20or_20emacs_1',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md45',1,'']]],
   ['bad_2',['bad',['../a2boot_8c.html#afecfba5e26789c1f10129387bf55dca5',1,'bad:&#160;a2boot.c'],['../timelord_8c.html#afecfba5e26789c1f10129387bf55dca5',1,'bad:&#160;timelord.c']]],
   ['badcp_3',['badcp',['../nad__cp_8c.html#afcc7f100eceb5fa008553bfc8bccc204',1,'nad_cp.c']]],
   ['badrm_4',['badrm',['../nad__rm_8c.html#acaf3146d2a2e54d5eff9c1b263d97255',1,'nad_rm.c']]],
@@ -39,7 +39,7 @@ var searchData=
   ['bprint_2ec_36',['bprint.c',['../bprint_8c.html',1,'']]],
   ['bpxlen_37',['BPXLEN',['../bprint_8c.html#aa0b82319951e30726a8573fc1a575726',1,'BPXLEN:&#160;bprint.c'],['../ddp__input_8c.html#aa0b82319951e30726a8573fc1a575726',1,'BPXLEN:&#160;ddp_input.c']]],
   ['broadcast_38',['broadcast',['../structmacip__data.html#aa407dce01daf3b6593f1a320171b179f',1,'macip_data']]],
-  ['bsds_39',['Other BSDs',['../md_developer_2ddp.html#autotoc_md2',1,'']]],
+  ['bsds_39',['Other BSDs',['../md_developer_2ddp.html#autotoc_md6',1,'']]],
   ['bsize_40',['bsize',['../structafp__volume__parms.html#aedc7c6b70d9029374690a8f38aec2355',1,'afp_volume_parms']]],
   ['bstr_5flist_5fcreate_5fmin_41',['bstr_list_create_min',['../nad__find_8c.html#af554ed5b22a522d7e7e231d7e4e5dbeb',1,'nad_find.c']]],
   ['bstr_5flist_5fpush_42',['bstr_list_push',['../nad__find_8c.html#a63ab6671c32fba91e05172e7c932f1ae',1,'nad_find.c']]],

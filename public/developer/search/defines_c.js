@@ -67,5 +67,6 @@ var searchData=
   ['msg_5fdontwait_64',['MSG_DONTWAIT',['../dsi__stream_8c.html#ab18d3d439e4a9c8d0f73e7166e8eb376',1,'dsi_stream.c']]],
   ['msg_5fmore_65',['MSG_MORE',['../dsi__stream_8c.html#a7b7c7e5e523ff0fc8823e7bff7665ead',1,'dsi_stream.c']]],
   ['my_5fdsi_5fsend_66',['my_dsi_send',['../afpclient_8h.html#ad6a60581996014544018c3c564d2fa81',1,'afpclient.h']]],
-  ['myarvsize_67',['MYARVSIZE',['../netatalk_8c.html#ae39afbc56267537e266d06940ce2f90c',1,'netatalk.c']]]
+  ['my_5fgid_5ftype_67',['my_gid_type',['../nad_8c.html#afdb88b3116538e903483aadc316631ca',1,'nad.c']]],
+  ['myarvsize_68',['MYARVSIZE',['../netatalk_8c.html#ae39afbc56267537e266d06940ce2f90c',1,'netatalk.c']]]
 ];

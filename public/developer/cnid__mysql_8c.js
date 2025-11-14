@@ -19,7 +19,6 @@ var cnid__mysql_8c =
     [ "init_prepared_stmt_add", "cnid__mysql_8c.html#afdc5a43b573966309588e48e0866d43e", null ],
     [ "init_prepared_stmt_lookup", "cnid__mysql_8c.html#adf161d458417cdb08e3dfc5dbde1cf67", null ],
     [ "init_prepared_stmt_put", "cnid__mysql_8c.html#aff9dc95aab644b6dcc7acfb3360c0feb", null ],
-    [ "uuid_strip_dashes", "cnid__mysql_8c.html#a5fa39e1fc249ef48b1cc4f78b2ad5740", null ],
     [ "add_param", "cnid__mysql_8c.html#a32fb1f9425ed1494b15459b155197003", null ],
     [ "cnid_mysql_module", "cnid__mysql_8c.html#a0a97cd7334a0927f1f8411e9f53af9fb", null ],
     [ "lookup_param", "cnid__mysql_8c.html#ae7bd37ea32f81a22d59b9cddc586aa15", null ],

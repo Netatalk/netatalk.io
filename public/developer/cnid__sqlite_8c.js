@@ -24,6 +24,5 @@ var cnid__sqlite_8c =
     [ "init_prepared_stmt_lookup", "cnid__sqlite_8c.html#a081b5d1744b0f74da928d464c7c3a4c0", null ],
     [ "init_prepared_stmt_put", "cnid__sqlite_8c.html#a3acddaa0cc532795a308f4ccc5c97921", null ],
     [ "init_prepared_stmt_resolve", "cnid__sqlite_8c.html#a7085e7e05c2e7021c8e424da8655559e", null ],
-    [ "uuid_strip_dashes", "cnid__sqlite_8c.html#a5fa39e1fc249ef48b1cc4f78b2ad5740", null ],
     [ "cnid_sqlite_module", "cnid__sqlite_8c.html#ab40c8665cc72318cb2d23e29cacd4db5", null ]
 ];

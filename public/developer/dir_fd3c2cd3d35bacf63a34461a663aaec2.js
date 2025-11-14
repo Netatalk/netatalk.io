@@ -10,6 +10,7 @@ var dir_fd3c2cd3d35bacf63a34461a663aaec2 =
     [ "locking.c", "locking_8c.html", "locking_8c" ],
     [ "logger.c", "logger_8c.html", "logger_8c" ],
     [ "netatalk_conf.c", "netatalk__conf_8c.html", "netatalk__conf_8c" ],
+    [ "pathconv.c", "pathconv_8c.html", "pathconv_8c" ],
     [ "queue.c", "queue_8c.html", "queue_8c" ],
     [ "server_child.c", "server__child_8c.html", "server__child_8c" ],
     [ "server_ipc.c", "server__ipc_8c.html", "server__ipc_8c" ],

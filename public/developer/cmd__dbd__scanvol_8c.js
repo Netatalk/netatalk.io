@@ -15,7 +15,6 @@ var cmd__dbd__scanvol_8c =
     [ "read_addir", "cmd__dbd__scanvol_8c.html#ad3d2bfa5d91e90647afea5324b7709a9", null ],
     [ "remove_eafiles", "cmd__dbd__scanvol_8c.html#a12804bc307afd906193e4e6bc57a2074", null ],
     [ "update_cnid", "cmd__dbd__scanvol_8c.html#afb434eeddcf7e925b81548d498e70b01", null ],
-    [ "utompath", "cmd__dbd__scanvol_8c.html#ad1dd4033b9d00766cc63b36f4191ab4f", null ],
     [ "cwdbuf", "cmd__dbd__scanvol_8c.html#a4bf70874a547107a15b09ac22d6d04e7", null ],
     [ "dbd_flags", "cmd__dbd__scanvol_8c.html#a9d5f0055d954f7d584db64d9298abf9f", null ],
     [ "jmp", "cmd__dbd__scanvol_8c.html#ab8ebbfeb517fea7812af441dc3718d02", null ],

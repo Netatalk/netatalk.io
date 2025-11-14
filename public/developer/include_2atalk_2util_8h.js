@@ -41,6 +41,7 @@ var include_2atalk_2util_8h =
     [ "check_lockfile", "include_2atalk_2util_8h.html#ac9938f3ac5793f48a20b40a9d99c761f", null ],
     [ "cnid_for_path", "include_2atalk_2util_8h.html#acc5e34d9d4ff3cbad83b2b5bc5d9bbb7", null ],
     [ "compare_ip", "include_2atalk_2util_8h.html#a4995bc1b8c67102a5cf5d36f2f4eaedf", null ],
+    [ "convert_utf8_to_mac", "include_2atalk_2util_8h.html#a94155e1b5af35097044a38dafed1e17b", null ],
     [ "create_lockfile", "include_2atalk_2util_8h.html#a9a4e61d9a074881adcf845bd284ca9d9", null ],
     [ "daemonize", "include_2atalk_2util_8h.html#ac07150628d4bd483b1f3f43c2350c80b", null ],
     [ "fault_setup", "include_2atalk_2util_8h.html#ac93b5a75558bfbc3ba02fd9341bf705a", null ],
@@ -78,6 +79,7 @@ var include_2atalk_2util_8h =
     [ "sys_sendfile", "include_2atalk_2util_8h.html#a96bbb0ddf55b6fe926b2c9236ea7eebc", null ],
     [ "tmpdir", "include_2atalk_2util_8h.html#a0a2fa46e0cef80809cd77873559868ff", null ],
     [ "tokenize_ip_port", "include_2atalk_2util_8h.html#a6639de1eb1eaad095e3612d03eb17c1b", null ],
+    [ "uuid_strip_dashes", "include_2atalk_2util_8h.html#a61f198685459ded8e33c1193e8be8c90", null ],
     [ "writet", "include_2atalk_2util_8h.html#ae2d02957f53e178b7cd1f83cef6c8379", null ],
     [ "_diacasemap", "include_2atalk_2util_8h.html#a7246b8cf397827283ab798d5b56f0b0c", null ],
     [ "_dialowermap", "include_2atalk_2util_8h.html#a4ab05d39ff1faad524c790fb0c879452", null ]

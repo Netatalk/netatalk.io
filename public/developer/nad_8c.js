@@ -1,5 +1,6 @@
 var nad_8c =
 [
+    [ "my_gid_type", "nad_8c.html#afdb88b3116538e903483aadc316631ca", null ],
     [ "nad_command_t", "nad_8c.html#a3a336466932ae37e59fa5ae4e5d15bc4", [
       [ "CMD_UNKNOWN", "nad_8c.html#a3a336466932ae37e59fa5ae4e5d15bc4a59c51f88aeda3ea6351f01c9c70b9ac7", null ],
       [ "CMD_LS", "nad_8c.html#a3a336466932ae37e59fa5ae4e5d15bc4aecc7715cab86c12c2d95f6e8330a5b73", null ],

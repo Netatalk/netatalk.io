@@ -25,40 +25,53 @@
 var NAVTREE =
 [
   [ "netatalk", "index.html", [
-    [ "Documentation for Netatalk Developers", "index.html", "index" ],
-    [ "AppleTalk Transport Layer", "md_developer_2ddp.html", [
-      [ "Linux", "md_developer_2ddp.html#autotoc_md0", null ],
-      [ "NetBSD", "md_developer_2ddp.html#autotoc_md1", null ],
-      [ "Other BSDs", "md_developer_2ddp.html#autotoc_md2", null ],
-      [ "Solaris", "md_developer_2ddp.html#autotoc_md3", null ],
-      [ "Generic", "md_developer_2ddp.html#autotoc_md4", null ]
+    [ "Netatalk Architecture", "index.html", null ],
+    [ "CNID Database Daemons", "md_developer_2cnid.html", [
+      [ "Advantages", "md_developer_2cnid.html#autotoc_md0", null ],
+      [ "Disadvantages", "md_developer_2cnid.html#autotoc_md1", null ],
+      [ "Installation and configuration", "md_developer_2cnid.html#autotoc_md2", null ],
+      [ "Current shortcomings", "md_developer_2cnid.html#autotoc_md3", null ]
     ] ],
-    [ "DirCache redundant stat ops", "md_developer_2dircache.html", [
-      [ "Introduction: The Invisible Performance Tax", "md_developer_2dircache.html#autotoc_md16", null ],
-      [ "Part 1: The Storage Stack", "md_developer_2dircache.html#autotoc_md18", null ],
-      [ "Part 2: The Page Cache Problem", "md_developer_2dircache.html#autotoc_md20", [
-        [ "How Directory Enumeration Pollutes the Page Cache", "md_developer_2dircache.html#autotoc_md21", null ],
-        [ "The LRU Scanning Problem", "md_developer_2dircache.html#autotoc_md22", null ]
+    [ "AppleTalk Transport Layer", "md_developer_2ddp.html", [
+      [ "Linux", "md_developer_2ddp.html#autotoc_md4", null ],
+      [ "NetBSD", "md_developer_2ddp.html#autotoc_md5", null ],
+      [ "Other BSDs", "md_developer_2ddp.html#autotoc_md6", null ],
+      [ "Solaris", "md_developer_2ddp.html#autotoc_md7", null ],
+      [ "Generic", "md_developer_2ddp.html#autotoc_md8", null ]
+    ] ],
+    [ "Directory Cache Optimization", "md_developer_2dircache.html", [
+      [ "Introduction: The Invisible Performance Tax", "md_developer_2dircache.html#autotoc_md10", null ],
+      [ "Part 1: The Storage Stack", "md_developer_2dircache.html#autotoc_md12", null ],
+      [ "Part 2: The Page Cache Problem", "md_developer_2dircache.html#autotoc_md14", [
+        [ "How Directory Enumeration Pollutes the Page Cache", "md_developer_2dircache.html#autotoc_md15", null ],
+        [ "The LRU Scanning Problem", "md_developer_2dircache.html#autotoc_md16", null ]
       ] ],
-      [ "Part 3: Why This Goes Unnoticed", "md_developer_2dircache.html#autotoc_md24", null ],
-      [ "Part 4: How Files Are Found - The Lookup Hierarchy", "md_developer_2dircache.html#autotoc_md26", [
-        [ "Initial File Discovery Flow", "md_developer_2dircache.html#autotoc_md27", null ],
-        [ "The Precedence Hierarchy", "md_developer_2dircache.html#autotoc_md28", null ],
-        [ "Key Points", "md_developer_2dircache.html#autotoc_md29", null ]
+      [ "Part 3: Why This Goes Unnoticed", "md_developer_2dircache.html#autotoc_md18", null ],
+      [ "Part 4: How Files Are Found - The Lookup Hierarchy", "md_developer_2dircache.html#autotoc_md20", [
+        [ "Initial File Discovery Flow", "md_developer_2dircache.html#autotoc_md21", null ],
+        [ "The Precedence Hierarchy", "md_developer_2dircache.html#autotoc_md22", null ],
+        [ "Key Points", "md_developer_2dircache.html#autotoc_md23", null ]
       ] ],
-      [ "Part 5: The Probabilistic Solution", "md_developer_2dircache.html#autotoc_md30", [
-        [ "Configuration Example", "md_developer_2dircache.html#autotoc_md31", null ]
+      [ "Part 5: The Probabilistic Solution", "md_developer_2dircache.html#autotoc_md24", [
+        [ "Configuration Example", "md_developer_2dircache.html#autotoc_md25", null ]
       ] ],
-      [ "Part 6: Understanding Cache Lifetimes", "md_developer_2dircache.html#autotoc_md33", null ],
-      [ "Part 7: Monitoring the Improvement", "md_developer_2dircache.html#autotoc_md35", [
-        [ "Sample Statistics", "md_developer_2dircache.html#autotoc_md36", null ]
+      [ "Part 6: Understanding Cache Lifetimes", "md_developer_2dircache.html#autotoc_md27", null ],
+      [ "Part 7: Monitoring the Improvement", "md_developer_2dircache.html#autotoc_md29", [
+        [ "Sample Statistics", "md_developer_2dircache.html#autotoc_md30", null ]
       ] ],
-      [ "Conclusion", "md_developer_2dircache.html#autotoc_md38", [
-        [ "Key Takeaways", "md_developer_2dircache.html#autotoc_md39", null ]
+      [ "Conclusion", "md_developer_2dircache.html#autotoc_md32", [
+        [ "Key Takeaways", "md_developer_2dircache.html#autotoc_md33", null ]
       ] ]
     ] ],
+    [ "Indexing for Spotlight Search", "md_developer_2indexing.html", [
+      [ "Limitations and notes", "md_developer_2indexing.html#autotoc_md35", null ],
+      [ "Supported metadata attributes", "md_developer_2indexing.html#autotoc_md36", null ]
+    ] ],
     [ "Using libatalk from third party apps", "md_developer_2libatalk.html", [
-      [ "Example", "md_developer_2libatalk.html#autotoc_md42", null ]
+      [ "Example", "md_developer_2libatalk.html#autotoc_md38", null ]
+    ] ],
+    [ "Error checking and logging", "md_developer_2logging.html", [
+      [ "Examples", "md_developer_2logging.html#autotoc_md40", null ]
     ] ],
     [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
@@ -97,31 +110,31 @@ var NAVTREEINDEX =
 "afpd_2file_8h.html#a2aa350aac0efd0ef2b184cc516ff9cd1a5d7231369ab83e14f1c47b6408cebbd6",
 "asp_8h.html#a3be1086f74f04b6f4b5f6362bdac85f2",
 "byteorder_8h.html#a97f7e35b464d076b1d046a21fa899f2a",
-"cnid__dbd_8c.html#ace7eb074a3571e0de242a891d8ab4017",
-"config_8c.html#aec196d2570cf8f529eb6b23b10d4726b",
-"dir_32ec1ef171ef2129520d5ef5c8f1f339.html",
-"ea__ad_8c.html#a191c6a81bc54a6e3f1efb213f0508e68",
-"etc_2atalkd_2main_8c.html#a791691932929e2fa5888f0b4248bedc6",
-"fork_8c.html#a09510de7fa517142ee333d58bf6708e0",
-"globals_8h.html#a0cce22132e270062d3cde9d65386ed1d",
-"iconv_8c.html#acd02508f65b38f0f281145e75e5960a1",
-"include_2atalk_2util_8h.html#aefde7f9f477f2f182845eee2663363f7",
-"lantest_8c.html#ae74a7d9f6a9e29631e49d1b79b49b35d",
-"logintest_8c.html#aa2443ae43ee2bc6f5074ffb41a3b08dc",
-"mac__turkish_8h.html#aef78f242b841b1dab9eae4412cf370c5",
+"cnid__dbd_8c.html#ada41eb2bf6c7ab4b782c909ebe35a9ec",
+"contrib_2macipgw_2main_8c.html#a19012016377dcf4080c7d1cf530dd78e",
+"dir_3847941dc22744d30c1d316a1f1a60e2.html",
+"ea__ad_8c.html#a3ebfcbc5e0bc5a5f1f96faed53d6a2d3",
+"etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f",
+"fork_8c.html#a2d26e37f7640a1f2ed36b48f0b0c06e6",
+"globals_8h.html#a155281ed9fa273fe7e8e79efdf6129d7",
+"iconv_8c.html#adeb4fcf4e13a68107b754886b5e0b7d9",
+"include_2atalk_2util_8h.html#af32134bd62d1e48eb57310a8d5fc5404",
+"lantest_8c.html#afa981df84002b0a611e525466f2f7963",
+"logintest_8c.html#ae0de25124c98d3233e1672ef3a797a3b",
+"macip_8c.html#a26d4f0c8916e6c660af7092c7c9cb486",
 "nad__ls_8c.html#aac58c0ee858b1bd721947d60eb711e66",
-"nfsquota_8c.html#ab85a30d5a9a50e7ff89e0a4090c2ddbb",
-"printcap_8c.html#a2f0692c3d4b47dd5b0eb407c27003e55",
-"sparql__map_8h.html#aee379e0778c1c096dd3de5e9affef35fa73af6b7498a45cc1cbbff5fb11deca88",
-"spotlight_8h.html#a370fbfdc3f7348b71539455a275e5ffa",
-"struct_d_a_l_l_o_c___c_t_x.html",
-"structafp__volume__parms.html#aa7281772f9086141de7b6b49725cc1e2",
-"structdsi__block.html#ab25fa2c0e30abb185aca9d886927e562",
-"structnbptab.html#a6a479b9e2b1bc034a8e71c80d25f3fdd",
-"structuam__obj.html#a6106020fe9234bac920cdda7c2e07dab",
-"test_8h_source.html",
-"uams__dhx__pam_8c.html#a6d9f097a3c5dc33837eea53def8adaa7",
-"utf16__casetable_8h.html#ae4fd3aa034fd5cf5abbc91e9485e925d"
+"nfsquota_8c.html#ada1385ee4a11033a04165879cdcfd596",
+"printcap_8c.html#a1c57921c3600c89dbd67dafe471d6a3a",
+"sparql__map_8h.html#aee379e0778c1c096dd3de5e9affef35fa08527b430741682912edf47a9c2fd86e",
+"spotlight_8h.html#a34f2023c533ff31bb1ce854182e7407f",
+"struct_c_o_n_n.html#abd0c6fd3a4d7d7688c251029e115a7ae",
+"structafp__volume__parms.html#a9d217fa4c91ccc0e92f1daddcbefad07",
+"structdsi__block.html#a5f0f1600b0cba7073a6bd34b73f9dbd1",
+"structnbptab.html#a616db4e5cfeacdeb84402e65e0b242ea",
+"structuam__obj.html#a3d6d87eb7b60ef1fca6d4551ca752560",
+"test_8h.html#acfab3c93dfc755d0b3ffd7578df0e7db",
+"uams__dhx__pam_8c.html#a4d71cd5051d2a11ee5dc9b00a6a1c9f3",
+"utf16__casetable_8h.html#ae17b844ce1fd4a41c50819624eebf889"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

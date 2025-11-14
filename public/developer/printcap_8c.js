@@ -3,7 +3,7 @@ var printcap_8c =
     [ "BUFSIZ", "printcap_8c.html#a72a591cf0a96cf23c63df5c78712dabe", null ],
     [ "MAXHOP", "printcap_8c.html#a47b3a5a6de1ab72fd75121c950e1b393", null ],
     [ "PRINTCAP", "printcap_8c.html#a908b6b2273b8813baa5e1783703842ff", null ],
-    [ "tdecode", "printcap_8c.html#ab3bc8b59b78995e92297b5c819deb19e", null ],
+    [ "tdecode", "printcap_8c.html#a9cc6f3879f9bd948bfbd0eb0edb5a629", null ],
     [ "tdecode", "printcap_8c.html#ab3bc8b59b78995e92297b5c819deb19e", null ],
     [ "tgetent", "printcap_8c.html#a73acc9aa38d5a512f926d648f22e3092", null ],
     [ "tgetflag", "printcap_8c.html#a2f0692c3d4b47dd5b0eb407c27003e55", null ],
