@@ -46,7 +46,8 @@ You want to build from source when neither of the previous options are
 feasible, or when you want to do a hardened Netatalk deployment with
 only a subset of features enabled.
 
-See the [getting started guide](/install.html) for instructions how to prepare the build environment, and read more about dependencoes in the [Netatalk manual](/manual/en/Installation.html).
+See the [getting started guide](/install.html) for instructions how to prepare the build environment,
+and read more about dependencoes in the [Netatalk manual](/manual/en/Installation.html).
 
 ## How to Use
 
@@ -61,7 +62,7 @@ The [Configuration](/manual/en/Configuration.html) chapter and
 [afp.conf](/manual/en/afp.conf.5.html) page in the Netatalk manual
 are good places to start.
 
-Once Netatalk is up and running, use your AFP client – macOS built-in or 3rd party, to connect to the file server!
+Once Netatalk is up and running, use your AFP client – macOS built-in or 3rd party like *afpfs-ng* – to connect to the file server!
 
 ## How to Contribute
 
