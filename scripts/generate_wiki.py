@@ -45,6 +45,8 @@ def site_map():
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 """)
         for blob in tree:
+            if os.path.basename(blob.path).startswith('[WIP]'):
+                continue
             commit = next(repo.iter_commits(paths=blob.path, max_count=1))
             datetime_obj = datetime.datetime.fromtimestamp(commit.committed_date)
             site_map_xml.write(f"""<url>
@@ -80,7 +82,7 @@ with open("./wiki/_Sidebar.md", "r", encoding="utf-8") as input_file:
 """
 
 for file in os.listdir("./wiki/"):
-    if file.endswith(".md"):
+    if file.endswith(".md") and not file.startswith('[WIP]'):
         files.append(f"{file}")
 for file in files:
     if file == "_Sidebar.md":
