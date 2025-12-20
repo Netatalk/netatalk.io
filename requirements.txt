@@ -8,4 +8,4 @@ GitPython==3.1.40
 idna==3.10
 Pygments==2.15.1
 smmap==5.0.1
-urllib3==2.3.0
+urllib3==2.6.2
