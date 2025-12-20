@@ -1,7 +1,7 @@
 Markdown==3.4.3
 requests==2.32.5
 ## The following requirements were added by pip freeze:
-certifi==2024.12.14
+certifi==2025.11.12
 charset-normalizer==3.4.4
 gitdb==4.0.12
 GitPython==3.1.40
