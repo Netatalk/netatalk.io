@@ -62,6 +62,7 @@ for lang in LOCALES:
 
         with open(f"./public/manual/{lang}/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
             output_file.write(html_head(f"Netatalk Manual - {page_title}", f"manual/{lang}/{new_name}", lang))
+            output_file.write("<body>\n")
             output_file.write(html_menlinks())
             output_file.write(navbar)
             output_file.write("<div id=\"content\">")
@@ -96,6 +97,7 @@ for file in files:
 
     with open(f"./public/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
         output_file.write(html_head(f"Netatalk - {page_title.capitalize()}", new_name, "en"))
+        output_file.write("<body>\n")
         output_file.write(html_menlinks())
         output_file.write(html_navbar(VERSION))
         output_file.write("<div id=\"content\">")

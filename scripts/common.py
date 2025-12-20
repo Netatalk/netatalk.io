@@ -78,8 +78,7 @@ def html_head(title, path, lang="en"):
 """
 
 def html_menlinks():
-    return """<body>
-<div id="header">
+    return """<div id="header">
     <div id="logo"></div>
     <div id="menlinks">
         <a href="/" title="Return to Netatalk home">[main]</a>
@@ -220,4 +219,12 @@ def html_foot(path):
 </div>
 </body>
 </html>
+"""
+
+def js_mermaid():
+    return """<script
+    src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
+    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    crossorigin="anonymous"
+></script>
 """

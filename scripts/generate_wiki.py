@@ -12,8 +12,8 @@ from common import (
     VERSION,
     html_head,
     html_menlinks,
-    html_navbar,
     html_foot,
+    js_mermaid,
 )
 
 now = datetime.datetime.now()
@@ -111,8 +111,12 @@ for file in files:
     if new_name == "Home.html":
         new_name = "index.html"
 
+    html = html.replace('<pre><code class="language-mermaid">', '<pre class="mermaid">')
+
     with open(f"./public/docs/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
         output_file.write(html_head(f"Netatalk Wiki - {page_title.replace('-', ' ')}", f"/docs/{new_name}"))
+        output_file.write("<body>\n")
+        output_file.write(js_mermaid())
         output_file.write(html_menlinks())
         output_file.write(navbar)
         output_file.write(f"<div id=\"content\">\n<h1 id=\"{file.split('.')[0]}\">{file.split('.')[0].replace('-', ' ')}</h1>\n")
