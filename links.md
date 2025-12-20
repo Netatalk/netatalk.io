@@ -18,8 +18,8 @@ networking that make great Netatalk companions.
 |---|---|---|
 | [A2SERVER](https://appleii.ivanx.com/a2server/) | Plug'n'play distribution for Apple II file sharing and netbooting | Bundles Netatalk |
 | [afp-perl](https://github.com/demonfoo/afp-perl) | AFP client written in Perl |  |
-| [afpfs-ng](https://sourceforge.net/projects/afpfs-ng/) | Cross-platform AFP client application |  |
-| [afpfs-ng (fork)](https://github.com/rdmark/afpfs-ng) | Fork of afpfs-ng that runs on modern systems |  |
+| [afpfs-ng](https://sourceforge.net/projects/afpfs-ng/) | Cross-platform AFP client library with CLI and FUSE clients |  |
+| [afpfs-ng (fork)](https://github.com/Netatalk/afpfs-ng) | Improved fork of afpfs-ng managed by the Netatalk project |  |
 | [atalk-perl](https://github.com/demonfoo/atalk-perl) | AppleTalk transport and base protocols written in Perl |  |
 | [atalkvpn](https://github.com/AceHusky12/atalkvpn) | VPN tunnel for AppleTalk phase 1 | Depends on Netatalk |
 | [Columbia AppleTalk Package (fork)](https://github.com/mabam/CAP) | AppleTalk network stack and AFP implementation for *NIX-like systems | Inspired the creation of Netatalk |
