@@ -1,0 +1,20 @@
+name: Cleanup Cloudflare Pages Deployments
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cleanup Cloudflare Pages Deployments
+        uses: Th3S4mur41/cleanup-cloudflare-deployments@92c47d1780b590362d692c23216fe4c57477a1f7
+        with:
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          cloudflare-project-name: ${{ secrets.CLOUDFLARE_PAGE_NAME }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
