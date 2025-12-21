@@ -111,7 +111,7 @@ for file in files:
     if new_name == "Home.html":
         new_name = "index.html"
 
-    html = html.replace('<pre><code class="language-mermaid">', '<pre class="mermaid">')
+    html = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>', r'<pre class="mermaid">\1</pre>', html, flags=re.DOTALL)
 
     with open(f"./public/docs/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
         output_file.write(html_head(f"Netatalk Wiki - {page_title.replace('-', ' ')}", f"/docs/{new_name}"))
