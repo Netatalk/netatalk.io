@@ -20,7 +20,6 @@ See the [Netatalk release process](https://github.com/Netatalk/netatalk/wiki/Rel
 - Add link to release notes in `documentation.md`.
 - Prepend release version to VERSIONS in `scripts/common.py`
 - Run the `build.sh` script, passing a GITHUB_TOKEN env variable with a valid GitHub API token.
-- Validate the correctness (and absence of spam for wiki) in generated html sources in `public/`.
 - Refresh the manual pages as described in the previous section.
 - Commit all above changes and push to remote git.
 - The web host (currently: CloudFlare) will automatically build and publish the site via a webhook trigger.
