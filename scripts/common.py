@@ -168,9 +168,9 @@ def html_navbar(version):
   <div class="navbar">
     <h2>community</h2>
     <ul>
-       <li><a title="Wiki" href="https://github.com/Netatalk/netatalk/wiki">Contribute to Wiki Pages</a></li>
-       <li><a title="Discussions" href="https://github.com/Netatalk/netatalk/discussions">Participate in Discussions</a></li>
-       <li><a title="Mailing Lists" href="https://sourceforge.net/p/netatalk/mailman/">Subscribe to Mailing Lists</a></li>
+       <li><a title="Participate in Discussions" href="https://github.com/Netatalk/netatalk/discussions">Discussions</a></li>
+       <li><a title="Subscribe to Mailing Lists" href="https://sourceforge.net/p/netatalk/mailman/">Mailing Lists</a></li>
+       <li><a title="Read the Code of Conduct" href="/code_of_conduct.html">Code of Conduct</a></li>
     </ul>
   </div>
   <div class="navbar">
@@ -178,10 +178,9 @@ def html_navbar(version):
     <ul>
       <li><a title="Code Repository, GitHub" href="https://github.com/Netatalk/netatalk">Code Repository</a></li>
       <li><a title="Code Repository, GitLab" href="https://gitlab.com/netatalk-team/netatalk">GitLab Mirror</a></li>
-      <li><a title="How to Contribute" href="https://netatalk.io/docs/Developer-Notes.html">
-        How to Contribute</a></li>
-      <li><a title="Static Analysis" href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk">
-        Static Analysis by SonarQube</a></li>
+      <li><a title="How to Contribute" href="/contributing.html">How to Contribute</a></li>
+      <li><a title="Developer Documentation" href="/developer/">Developer Documentation</a></li>
+      <li><a title="OpenSSF Supply Chain Security" href="https://scorecard.dev/viewer/?uri=github.com/Netatalk/netatalk">Supply Chain Security</a></li>
     </ul>
   </div>
   <div class="navbar">
@@ -197,6 +196,21 @@ def html_navbar(version):
     <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml">
       <img alt="GitHub Continuous Integration - Containers Status" height="22"
          src="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml/badge.svg"/>
+    </a></p>
+  </div>
+  <div class="navbar">
+    <h2>Static Analysis</h2>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Security Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=security_rating"/>
+    </a></p>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Reliability Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=reliability_rating"/>
+    </a></p>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Maintainability Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=sqale_rating"/>
     </a></p>
   </div>
 </div>
