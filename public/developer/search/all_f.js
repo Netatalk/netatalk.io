@@ -93,7 +93,7 @@ var searchData=
   ['hopcount_90',['hopcount',['../printcap_8c.html#a02b7926a0f0054b7b6d98d7ca7aa5ab0',1,'printcap.c']]],
   ['hostaccessvol_91',['hostaccessvol',['../netatalk__conf_8c.html#a433f8ba07ffecbed6150ed1e7300f205',1,'netatalk_conf.c']]],
   ['hostname_92',['hostname',['../structafp__options.html#a6d51396f3d9baf892e97d8608e3105d3',1,'afp_options::hostname'],['../lp_8c.html#af31254e3111773fe1dc68e8dc13df2fe',1,'hostname:&#160;lp.c'],['../uams__pam_8c.html#aad01339e89106fdf68f57ef118956fa9',1,'hostname:&#160;uams_pam.c']]],
-  ['how_20directory_20enumeration_20pollutes_20the_20page_20cache_93',['How Directory Enumeration Pollutes the Page Cache',['../md_developer_2dircache.html#autotoc_md15',1,'']]],
+  ['how_20directory_20enumeration_20works_93',['How Directory Enumeration Works',['../md_developer_2dircache.html#autotoc_md15',1,'']]],
   ['how_20files_20are_20found_20the_20lookup_20hierarchy_94',['Part 4: How Files Are Found - The Lookup Hierarchy',['../md_developer_2dircache.html#autotoc_md20',1,'']]],
   ['hscan_5ft_95',['hscan_t',['../structhscan__t.html',1,'hscan_t'],['../include_2atalk_2hash_8h.html#a07eea2c5db4f5ae689c3d59570acee73',1,'hscan_t:&#160;hash.h']]],
   ['hton64_96',['hton64',['../include_2atalk_2util_8h.html#abc3afb1d08885fc11076985ce06e27ef',1,'util.h']]]

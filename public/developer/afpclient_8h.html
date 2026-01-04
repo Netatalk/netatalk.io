@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -131,6 +131,7 @@ Data Structures</h2></td></tr>
 <tr class="memitem:CONN" id="r_CONN"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_c_o_n_n.html">CONN</a></td></tr>
 <tr class="memitem:afp_5Ffiledir_5Fparms" id="r_afp_5Ffiledir_5Fparms"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a></td></tr>
 <tr class="memitem:afp_5Fvolume_5Fparms" id="r_afp_5Fvolume_5Fparms"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structafp__volume__parms.html">afp_volume_parms</a></td></tr>
+<tr class="memitem:darwin_5Face" id="r_darwin_5Face"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdarwin__ace.html">darwin_ace</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -240,17 +241,31 @@ Macros</h2></td></tr>
 <tr class="memitem:a33f1390709c7263e328e829e37e16114" id="r_a33f1390709c7263e328e829e37e16114"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33f1390709c7263e328e829e37e16114">PASSWDLEN</a>&#160;&#160;&#160;8</td></tr>
 <tr class="memitem:a879ee2e857f58887f55dbaa0b3f78986" id="r_a879ee2e857f58887f55dbaa0b3f78986"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a879ee2e857f58887f55dbaa0b3f78986">dsi_clientID</a>(x)</td></tr>
 <tr class="memitem:ad6a60581996014544018c3c564d2fa81" id="r_ad6a60581996014544018c3c564d2fa81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6a60581996014544018c3c564d2fa81">my_dsi_send</a>(x)</td></tr>
+<tr class="memitem:ad73a0797ebe9ebce8d8dabbd1e600396" id="r_ad73a0797ebe9ebce8d8dabbd1e600396"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad73a0797ebe9ebce8d8dabbd1e600396">kFileSec_UUID</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="memitem:a5d2f9774841169161dfa8d143fd84264" id="r_a5d2f9774841169161dfa8d143fd84264"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d2f9774841169161dfa8d143fd84264">kFileSec_GRPUUID</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="memitem:a752325504264a8bcef431b85a6ad9fca" id="r_a752325504264a8bcef431b85a6ad9fca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752325504264a8bcef431b85a6ad9fca">kFileSec_ACL</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memitem:ac44ac1328ad4f56d9ccbd75c9ad58c8a" id="r_ac44ac1328ad4f56d9ccbd75c9ad58c8a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac44ac1328ad4f56d9ccbd75c9ad58c8a">kFileSec_REMOVEACL</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="memitem:a61b16b763dbe72b03a45cdadac340953" id="r_a61b16b763dbe72b03a45cdadac340953"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61b16b763dbe72b03a45cdadac340953">kFileSec_Inherit</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
+<tr class="memitem:a17b3a95d935e199037fe3284bd0d393b" id="r_a17b3a95d935e199037fe3284bd0d393b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17b3a95d935e199037fe3284bd0d393b">DARWIN_ACE_FLAGS_PERMIT</a>&#160;&#160;&#160;0x00000001  /* Bit 0: ALLOW access */</td></tr>
+<tr class="memitem:a8e7284f63c568fae590919b28a96fdf3" id="r_a8e7284f63c568fae590919b28a96fdf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e7284f63c568fae590919b28a96fdf3">DARWIN_ACE_FLAGS_DENY</a>&#160;&#160;&#160;0x00000002  /* Bit 1: DENY access */</td></tr>
+<tr class="memitem:a4055705c79e84d6611d45fa1ea545b8e" id="r_a4055705c79e84d6611d45fa1ea545b8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4055705c79e84d6611d45fa1ea545b8e">DARWIN_ACE_FLAGS_FILE_INHERIT</a>&#160;&#160;&#160;0x00000020  /* Bit 5: Inherit <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> files */</td></tr>
+<tr class="memitem:aceaf0ad67c30952b0cd5fdce1d44c61f" id="r_aceaf0ad67c30952b0cd5fdce1d44c61f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceaf0ad67c30952b0cd5fdce1d44c61f">DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</a>&#160;&#160;&#160;0x00000040  /* Bit 6: Inherit <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> dirs */</td></tr>
+<tr class="memitem:a237fac9d605d0bb913f75c287f2bf19f" id="r_a237fac9d605d0bb913f75c287f2bf19f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237fac9d605d0bb913f75c287f2bf19f">DARWIN_ACE_FLAGS_ONLY_INHERIT</a>&#160;&#160;&#160;0x00000100  /* Bit 8: Inherit only */</td></tr>
+<tr class="memitem:acd0e71a0b683e48ef08ddd3d9c652104" id="r_acd0e71a0b683e48ef08ddd3d9c652104"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0e71a0b683e48ef08ddd3d9c652104">DARWIN_ACE_READ_DATA</a>&#160;&#160;&#160;0x00000002</td></tr>
+<tr class="memitem:a9227bbdaa881efabb51ca12cee2bfcd2" id="r_a9227bbdaa881efabb51ca12cee2bfcd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9227bbdaa881efabb51ca12cee2bfcd2">DARWIN_ACE_WRITE_DATA</a>&#160;&#160;&#160;0x00000004</td></tr>
+<tr class="memitem:a3079609981ee1d72fbc211796394bc60" id="r_a3079609981ee1d72fbc211796394bc60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3079609981ee1d72fbc211796394bc60">DARWIN_ACE_EXECUTE</a>&#160;&#160;&#160;0x00000008</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a2ac162291539cccdf7b1cb8f52199d28" id="r_a2ac162291539cccdf7b1cb8f52199d28"><td class="memItemLeft" align="right" valign="top">typedef struct CONN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ac162291539cccdf7b1cb8f52199d28">CONN</a></td></tr>
+<tr class="memitem:a44c7975d6aebd41be6678d1e97c7cd88" id="r_a44c7975d6aebd41be6678d1e97c7cd88"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structdarwin__ace.html">darwin_ace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44c7975d6aebd41be6678d1e97c7cd88">darwin_ace_t</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af43086b4456428feb72e0ff807548204" id="r_af43086b4456428feb72e0ff807548204"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af43086b4456428feb72e0ff807548204">my_dsi_cmd_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *x)</td></tr>
 <tr class="memitem:a067d9373e8468fd83c56e30d5aa8ae6a" id="r_a067d9373e8468fd83c56e30d5aa8ae6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a067d9373e8468fd83c56e30d5aa8ae6a">my_dsi_data_receive</a> (<a class="el" href="struct_d_s_i.html">DSI</a> *x)</td></tr>
 <tr class="memitem:a95d6a8aaf238b5c8a34dea901e49a396" id="r_a95d6a8aaf238b5c8a34dea901e49a396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95d6a8aaf238b5c8a34dea901e49a396">afp_volume_unpack</a> (struct <a class="el" href="structafp__volume__parms.html">afp_volume_parms</a> *parms, unsigned char *b, uint16_t rbitmap)</td></tr>
-<tr class="memitem:a398f166b24608a0b470fc57d39ff57ba" id="r_a398f166b24608a0b470fc57d39ff57ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398f166b24608a0b470fc57d39ff57ba">afp_filedir_unpack</a> (struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, unsigned char *b, uint16_t rfbitmap, uint16_t rdbitmap)</td></tr>
+<tr class="memitem:a98350211b6ceb8b3cfcfa36fc6d987fe" id="r_a98350211b6ceb8b3cfcfa36fc6d987fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98350211b6ceb8b3cfcfa36fc6d987fe">afp_filedir_unpack</a> (struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, const unsigned char *b, uint16_t rfbitmap, uint16_t rdbitmap)</td></tr>
 <tr class="memitem:a98d77d68027f7348c55a5c696db1fe5f" id="r_a98d77d68027f7348c55a5c696db1fe5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d77d68027f7348c55a5c696db1fe5f">afp_filedir_pack</a> (unsigned char *b, struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, uint16_t rfbitmap, uint16_t rdbitmap)</td></tr>
 <tr class="memitem:a3e7a7015d6fce77a40636781c50f6953" id="r_a3e7a7015d6fce77a40636781c50f6953"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7a7015d6fce77a40636781c50f6953">OpenClientSocket</a> (char *host, int <a class="el" href="pap_8c.html#ac89e2c19de60b8f23bdd3789b2af094d">port</a>)</td></tr>
 <tr class="memitem:ae5a2d1cab099889031e7dff691a45a1d" id="r_ae5a2d1cab099889031e7dff691a45a1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5a2d1cab099889031e7dff691a45a1d">CloseClientSocket</a> (int fd)</td></tr>
@@ -312,6 +327,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5b8b03112e82ceef050dfb274fb9d129" id="r_a5b8b03112e82ceef050dfb274fb9d129"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b8b03112e82ceef050dfb274fb9d129">AFPCatSearchExt</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, uint32_t nbe, char *pos, uint16_t f_bitmap, uint16_t d_bitmap, uint32_t rbitmap, struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir, struct <a class="el" href="structafp__filedir__parms.html">afp_filedir_parms</a> *filedir2)</td></tr>
 <tr class="memitem:ab3a5426cf4788213b60d1b861a6005b8" id="r_ab3a5426cf4788213b60d1b861a6005b8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a5426cf4788213b60d1b861a6005b8">AFPSetForkParam</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t fork, uint16_t bitmap, off_t size)</td></tr>
 <tr class="memitem:ab2eaa6809a50b408252dd086ce4049fa" id="r_ab2eaa6809a50b408252dd086ce4049fa"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2eaa6809a50b408252dd086ce4049fa">AFPGetACL</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, uint16_t bitmap, char *name)</td></tr>
+<tr class="memitem:ae86428baad427f29b86c3d97a06a14e6" id="r_ae86428baad427f29b86c3d97a06a14e6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae86428baad427f29b86c3d97a06a14e6">AFPSetACL</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, uint16_t bitmap, char *name, uint32_t ace_count, <a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *aces)</td></tr>
 <tr class="memitem:a745169c778a7dbeffee6ec80d92bcc13" id="r_a745169c778a7dbeffee6ec80d92bcc13"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a745169c778a7dbeffee6ec80d92bcc13">AFPListExtAttr</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, uint16_t bitmap, int maxsize, char *pathname)</td></tr>
 <tr class="memitem:a8a2b54df54aecd7ab2e6114cd07a3ea4" id="r_a8a2b54df54aecd7ab2e6114cd07a3ea4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a2b54df54aecd7ab2e6114cd07a3ea4">AFPGetExtAttr</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, uint16_t bitmap, int maxsize, char *pathname, char *attrname)</td></tr>
 <tr class="memitem:a294e7a72e4fbb15c8e4dc6a756a3a959" id="r_a294e7a72e4fbb15c8e4dc6a756a3a959"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294e7a72e4fbb15c8e4dc6a756a3a959">AFPSetExtAttr</a> (<a class="el" href="struct_c_o_n_n.html">CONN</a> *conn, uint16_t <a class="el" href="structvol.html">vol</a>, int <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, uint16_t bitmap, char *pathname, char *attrname, char *<a class="el" href="hash_8c.html#a43a278d13284fb3412e9eee1db1d967e">data</a>)</td></tr>
@@ -870,6 +886,118 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a3079609981ee1d72fbc211796394bc60" name="a3079609981ee1d72fbc211796394bc60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3079609981ee1d72fbc211796394bc60">&#9670;&#160;</a></span>DARWIN_ACE_EXECUTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_EXECUTE&#160;&#160;&#160;0x00000008</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e7284f63c568fae590919b28a96fdf3" name="a8e7284f63c568fae590919b28a96fdf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7284f63c568fae590919b28a96fdf3">&#9670;&#160;</a></span>DARWIN_ACE_FLAGS_DENY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_FLAGS_DENY&#160;&#160;&#160;0x00000002  /* Bit 1: DENY access */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aceaf0ad67c30952b0cd5fdce1d44c61f" name="aceaf0ad67c30952b0cd5fdce1d44c61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceaf0ad67c30952b0cd5fdce1d44c61f">&#9670;&#160;</a></span>DARWIN_ACE_FLAGS_DIRECTORY_INHERIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_FLAGS_DIRECTORY_INHERIT&#160;&#160;&#160;0x00000040  /* Bit 6: Inherit <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> dirs */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4055705c79e84d6611d45fa1ea545b8e" name="a4055705c79e84d6611d45fa1ea545b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4055705c79e84d6611d45fa1ea545b8e">&#9670;&#160;</a></span>DARWIN_ACE_FLAGS_FILE_INHERIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_FLAGS_FILE_INHERIT&#160;&#160;&#160;0x00000020  /* Bit 5: Inherit <a class="el" href="nad__cp_8c.html#a9526abe94d7ddaf880f23cec5608daeb">to</a> files */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a237fac9d605d0bb913f75c287f2bf19f" name="a237fac9d605d0bb913f75c287f2bf19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237fac9d605d0bb913f75c287f2bf19f">&#9670;&#160;</a></span>DARWIN_ACE_FLAGS_ONLY_INHERIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_FLAGS_ONLY_INHERIT&#160;&#160;&#160;0x00000100  /* Bit 8: Inherit only */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17b3a95d935e199037fe3284bd0d393b" name="a17b3a95d935e199037fe3284bd0d393b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b3a95d935e199037fe3284bd0d393b">&#9670;&#160;</a></span>DARWIN_ACE_FLAGS_PERMIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_FLAGS_PERMIT&#160;&#160;&#160;0x00000001  /* Bit 0: ALLOW access */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd0e71a0b683e48ef08ddd3d9c652104" name="acd0e71a0b683e48ef08ddd3d9c652104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd0e71a0b683e48ef08ddd3d9c652104">&#9670;&#160;</a></span>DARWIN_ACE_READ_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_READ_DATA&#160;&#160;&#160;0x00000002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9227bbdaa881efabb51ca12cee2bfcd2" name="a9227bbdaa881efabb51ca12cee2bfcd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9227bbdaa881efabb51ca12cee2bfcd2">&#9670;&#160;</a></span>DARWIN_ACE_WRITE_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARWIN_ACE_WRITE_DATA&#160;&#160;&#160;0x00000004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af1e14566bc765f56c417a2cd5efa5fb1" name="af1e14566bc765f56c417a2cd5efa5fb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1e14566bc765f56c417a2cd5efa5fb1">&#9670;&#160;</a></span>DIRDID_ROOT</h2>
 
@@ -1364,6 +1492,76 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define FILPBIT_UNIXPR&#160;&#160;&#160;15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a752325504264a8bcef431b85a6ad9fca" name="a752325504264a8bcef431b85a6ad9fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752325504264a8bcef431b85a6ad9fca">&#9670;&#160;</a></span>kFileSec_ACL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kFileSec_ACL&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d2f9774841169161dfa8d143fd84264" name="a5d2f9774841169161dfa8d143fd84264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d2f9774841169161dfa8d143fd84264">&#9670;&#160;</a></span>kFileSec_GRPUUID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kFileSec_GRPUUID&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61b16b763dbe72b03a45cdadac340953" name="a61b16b763dbe72b03a45cdadac340953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b16b763dbe72b03a45cdadac340953">&#9670;&#160;</a></span>kFileSec_Inherit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kFileSec_Inherit&#160;&#160;&#160;(1 &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac44ac1328ad4f56d9ccbd75c9ad58c8a" name="ac44ac1328ad4f56d9ccbd75c9ad58c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44ac1328ad4f56d9ccbd75c9ad58c8a">&#9670;&#160;</a></span>kFileSec_REMOVEACL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kFileSec_REMOVEACL&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad73a0797ebe9ebce8d8dabbd1e600396" name="ad73a0797ebe9ebce8d8dabbd1e600396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73a0797ebe9ebce8d8dabbd1e600396">&#9670;&#160;</a></span>kFileSec_UUID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kFileSec_UUID&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1878,6 +2076,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a44c7975d6aebd41be6678d1e97c7cd88" name="a44c7975d6aebd41be6678d1e97c7cd88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c7975d6aebd41be6678d1e97c7cd88">&#9670;&#160;</a></span>darwin_ace_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdarwin__ace.html">darwin_ace</a> darwin_ace_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a98d77d68027f7348c55a5c696db1fe5f" name="a98d77d68027f7348c55a5c696db1fe5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98d77d68027f7348c55a5c696db1fe5f">&#9670;&#160;</a></span>afp_filedir_pack()</h2>
@@ -1910,8 +2122,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a398f166b24608a0b470fc57d39ff57ba" name="a398f166b24608a0b470fc57d39ff57ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a398f166b24608a0b470fc57d39ff57ba">&#9670;&#160;</a></span>afp_filedir_unpack()</h2>
+<a id="a98350211b6ceb8b3cfcfa36fc6d987fe" name="a98350211b6ceb8b3cfcfa36fc6d987fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98350211b6ceb8b3cfcfa36fc6d987fe">&#9670;&#160;</a></span>afp_filedir_unpack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1924,7 +2136,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned char *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3400,6 +3612,52 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>attrname</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae86428baad427f29b86c3d97a06a14e6" name="ae86428baad427f29b86c3d97a06a14e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86428baad427f29b86c3d97a06a14e6">&#9670;&#160;</a></span>AFPSetACL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AFPSetACL </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_c_o_n_n.html">CONN</a> *</td>          <td class="paramname"><span class="paramname"><em>conn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>bitmap</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ace_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdarwin__ace__t.html">darwin_ace_t</a> *</td>          <td class="paramname"><span class="paramname"><em>aces</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

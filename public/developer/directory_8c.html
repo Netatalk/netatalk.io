@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -137,6 +137,10 @@ $(function(){initNavTree('directory_8c.html','',''); });
 <code>#include &quot;<a class="el" href="etc_2afpd_2unix_8h_source.html">unix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="etc_2afpd_2volume_8h_source.html">volume.h</a>&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8110d27d4a4dfa925eb95b8061939657" id="r_a8110d27d4a4dfa925eb95b8061939657"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8110d27d4a4dfa925eb95b8061939657">DIRLOOKUP_LOG_FMT</a>&#160;&#160;&#160;&quot;dirlookup_internal(did:%u)&quot;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5ff31de4779fc26d27462c7bd9c8908a" id="r_a5ff31de4779fc26d27462c7bd9c8908a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff31de4779fc26d27462c7bd9c8908a">netatalk_mkdir</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *name)</td></tr>
@@ -150,8 +154,14 @@ Functions</h2></td></tr>
 <tr class="memitem:aae1a9489c4b2df2d2b80ff2e42cd594b" id="r_aae1a9489c4b2df2d2b80ff2e42cd594b"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structpath.html">path</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae1a9489c4b2df2d2b80ff2e42cd594b">path_from_dir</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, struct <a class="el" href="structpath.html">path</a> *ret)</td></tr>
 <tr class="memdesc:aae1a9489c4b2df2d2b80ff2e42cd594b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build struct path from struct dir.  <br /></td></tr>
 <tr class="memitem:a2f08e97a51b5a57276f6a8c7444dd357" id="r_a2f08e97a51b5a57276f6a8c7444dd357"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f08e97a51b5a57276f6a8c7444dd357">get_afp_errno</a> (const int <a class="el" href="structparam.html">param</a>)</td></tr>
+<tr class="memitem:ade6b789ccd7cc475e656d2593fc1f398" id="r_ade6b789ccd7cc475e656d2593fc1f398"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade6b789ccd7cc475e656d2593fc1f398">dirlookup_internal</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, int retry, int strict)</td></tr>
+<tr class="memdesc:ade6b789ccd7cc475e656d2593fc1f398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal CNID (Directory ID) resolution with retry control.  <br /></td></tr>
+<tr class="memitem:a3713436d3f991ff8b81d7fd005e2a392" id="r_a3713436d3f991ff8b81d7fd005e2a392"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3713436d3f991ff8b81d7fd005e2a392">dirlookup_internal_retry</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, int strict, bstring *fullpath_ptr, char **upath_ptr)</td></tr>
+<tr class="memdesc:a3713436d3f991ff8b81d7fd005e2a392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retry helper for dirlookup_internal on ENOENT.  <br /></td></tr>
 <tr class="memitem:a1d42d13b8257907a411a2704e37dfe93" id="r_a1d42d13b8257907a411a2704e37dfe93"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d42d13b8257907a411a2704e37dfe93">dirlookup</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
-<tr class="memdesc:a1d42d13b8257907a411a2704e37dfe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a DID.  <br /></td></tr>
+<tr class="memdesc:a1d42d13b8257907a411a2704e37dfe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public CNID (Directory ID) resolution (supports files and directories).  <br /></td></tr>
+<tr class="memitem:afe4deb3ff69bf7e31741a690e890a21f" id="r_afe4deb3ff69bf7e31741a690e890a21f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4deb3ff69bf7e31741a690e890a21f">dirlookup_strict</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>)</td></tr>
+<tr class="memdesc:afe4deb3ff69bf7e31741a690e890a21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strict DID resolution with inode validation.  <br /></td></tr>
 <tr class="memitem:a644916c3887056adc8a5d28505f488f4" id="r_a644916c3887056adc8a5d28505f488f4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644916c3887056adc8a5d28505f488f4">dir_new</a> (const char *m_name, const char *u_name, const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, bstring <a class="el" href="structpath.html">path</a>, struct stat *st)</td></tr>
 <tr class="memdesc:a644916c3887056adc8a5d28505f488f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct struct dir.  <br /></td></tr>
 <tr class="memitem:a273dba2fb5d492e91b9bdfa667e5387e" id="r_a273dba2fb5d492e91b9bdfa667e5387e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a273dba2fb5d492e91b9bdfa667e5387e">dir_free</a> (struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
@@ -161,7 +171,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a26f60139d7ddb55a95b0d9ca862afece" id="r_a26f60139d7ddb55a95b0d9ca862afece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f60139d7ddb55a95b0d9ca862afece">dir_free_invalid_q</a> (void)</td></tr>
 <tr class="memdesc:a26f60139d7ddb55a95b0d9ca862afece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the queue with invalid struct dirs.  <br /></td></tr>
 <tr class="memitem:ad9fbc8ab01c3318e8da4a88258e4b68f" id="r_ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9fbc8ab01c3318e8da4a88258e4b68f">dir_remove</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
-<tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache.  <br /></td></tr>
+<tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache with automatic curdir recovery.  <br /></td></tr>
 <tr class="memitem:a27d7b5a570e9482afe6b8b66b436f53f" id="r_a27d7b5a570e9482afe6b8b66b436f53f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpath.html">path</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27d7b5a570e9482afe6b8b66b436f53f">cname</a> (struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char **cpath)</td></tr>
 <tr class="memdesc:a27d7b5a570e9482afe6b8b66b436f53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a catalog node name path.  <br /></td></tr>
 <tr class="memitem:a5925bf05d5c8936f589eb204333ac383" id="r_a5925bf05d5c8936f589eb204333ac383"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5925bf05d5c8936f589eb204333ac383">movecwd</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
@@ -192,6 +202,21 @@ Variables</h2></td></tr>
 <tr class="memitem:acb7bf41a918f181a9da500470e4dcda5" id="r_acb7bf41a918f181a9da500470e4dcda5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpath.html">path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb7bf41a918f181a9da500470e4dcda5">Cur_Path</a></td></tr>
 <tr class="memitem:aeb00a5666ec47da33ceaf4ca045d96bf" id="r_aeb00a5666ec47da33ceaf4ca045d96bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue_8h.html#a0150f5145b7cc9ec8c12f7c526057ffe">q_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb00a5666ec47da33ceaf4ca045d96bf">invalid_dircache_entries</a></td></tr>
 </table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a8110d27d4a4dfa925eb95b8061939657" name="a8110d27d4a4dfa925eb95b8061939657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8110d27d4a4dfa925eb95b8061939657">&#9670;&#160;</a></span>DIRLOOKUP_LOG_FMT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIRLOOKUP_LOG_FMT&#160;&#160;&#160;&quot;dirlookup_internal(did:%u)&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ae5c1bcf67593b5bbe136007e182ab668" name="ae5c1bcf67593b5bbe136007e182ab668"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5c1bcf67593b5bbe136007e182ab668">&#9670;&#160;</a></span>afp_closedir()</h2>
@@ -844,13 +869,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove a file/directory from dircache. </p>
+<p>Remove a file/directory from dircache with automatic curdir recovery. </p>
+<p>This function centralizes global curdir safety for all callers. When removing a cache entry that is curdir, it attempts curdir recovery via CNID database and falls back to volume root if recovery fails.</p>
 <ol type="1">
 <li>Check the dir</li>
-<li>Remove it from the cache</li>
-<li>Queue it for removal</li>
-<li>If it's a request to remove curdir, mark curdir as invalid</li>
-<li>Mark it as invalid</li>
+<li>Detect if removing curdir and save DID</li>
+<li>Remove from cache and queue for deallocation</li>
+<li>Set curdir=NULL if removing curdir (safer than dangling pointer)</li>
+<li>Attempt recovery via dirlookup(saved_did)</li>
+<li>If recovery fails, fallback to vol-&gt;v_root or rootParent</li>
+<li>Mark entry invalid</li>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -859,7 +887,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if curdir was removed and recovery failed (curdir guaranteed non-NULL on return) </dd></dl>
 
 </div>
 </div>
@@ -882,19 +910,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Resolve a DID. </p>
-<p>Resolve a DID, allocate a struct dir for it</p><ol type="1">
-<li>Check for special CNIDs 0 (invalid), 1 and 2.<ol type="a">
-<li>Check if the DID is in the cache.</li>
-<li>Check if it's really a dir because we cache files too.</li>
-</ol>
-</li>
-<li>If it's not in the cache resolve it via the database.</li>
-<li>Build complete server-side path to the dir.</li>
-<li>Check if it exists and is a directory.</li>
-<li>Create the struct dir and populate it.</li>
-<li>Add it to the cache.</li>
-</ol>
+<p>Public CNID (Directory ID) resolution (supports files and directories). </p>
+<p>Resolves a CNID (Directory ID) to its cached entry. This function supports both files and directories since DID can refer to either type. If cache hit, returns cache entry, if cache miss, returns CNID database record and updates cache</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
@@ -902,7 +919,167 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to struct dir </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to struct dir (may have DIRF_ISFILE flag for files) </dd></dl>
+
+</div>
+</div>
+<a id="ade6b789ccd7cc475e656d2593fc1f398" name="ade6b789ccd7cc475e656d2593fc1f398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6b789ccd7cc475e656d2593fc1f398">&#9670;&#160;</a></span>dirlookup_internal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdir.html">dir</a> * dirlookup_internal </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>retry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>strict</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Internal CNID (Directory ID) resolution with retry control. </p>
+<p>Resolve a CNID (Directory ID), allocate a struct dir for it.</p>
+<p>Algorithm:</p><ol type="1">
+<li>Check for special DIDs 0 (invalid), 1 (root parent), and 2 (root).</li>
+<li>Search dircache:<ul>
+<li>If found and valid, return cached entry</li>
+<li>If strict mode, validate inode before use</li>
+</ul>
+</li>
+<li>On cache miss, query CNID database for path component</li>
+<li>Recurse to build parent chain (terminates at root or cache hit)</li>
+<li>Build fullpath and stat to verify existence</li>
+<li>Create new struct dir and populate</li>
+<li>Add new entry to cache</li>
+</ol>
+<p>On ENOENT during stat (step 5), if retry=1:</p><ul>
+<li>Clean stale cache entries</li>
+<li>Retry once via CNID (prevents TOCTOU issues)</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>CNID to resolve </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">retry</td><td>1 = allow one retry on ENOENT, 0 = no retry </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strict</td><td>1 = strict dircache lookup (validate with stat+inode), 0 = optimistic</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to struct dir, or NULL with afp_errno set </dd></dl>
+
+</div>
+</div>
+<a id="a3713436d3f991ff8b81d7fd005e2a392" name="a3713436d3f991ff8b81d7fd005e2a392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3713436d3f991ff8b81d7fd005e2a392">&#9670;&#160;</a></span>dirlookup_internal_retry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdir.html">dir</a> * dirlookup_internal_retry </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>strict</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bstring *</td>          <td class="paramname"><span class="paramname"><em>fullpath_ptr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>upath_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retry helper for dirlookup_internal on ENOENT. </p>
+<p>When stat() fails with ENOENT, this function cleans stale cache entries and retries the lookup via CNID database. This handles race conditions where directories are renamed/moved by external processes between cache and stat.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>Volume </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>Target DID that failed stat </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strict</td><td>Validation mode (0=initial target, 1=parent recursion) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">fullpath_ptr</td><td>Pointer to fullpath to cleanup </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">upath_ptr</td><td>Pointer to upath to cleanup</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retried struct dir from CNID, or NULL on failure </dd></dl>
+
+</div>
+</div>
+<a id="afe4deb3ff69bf7e31741a690e890a21f" name="afe4deb3ff69bf7e31741a690e890a21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4deb3ff69bf7e31741a690e890a21f">&#9670;&#160;</a></span>dirlookup_strict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdir.html">dir</a> * dirlookup_strict </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Strict DID resolution with inode validation. </p>
+<p>Like <a class="el" href="#a1d42d13b8257907a411a2704e37dfe93" title="Public CNID (Directory ID) resolution (supports files and directories).">dirlookup()</a>, but performs additional validation to ensure the cached directory entry matches the actual filesystem state. This prevents race conditions where a directory has been renamed/moved but the cache entry still points to the old path/has become stale.</p>
+<p>Use this for destructive operations (delete, rename, move) where operating on the wrong object could cause data loss.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>DID to resolve</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to validated struct dir, or NULL with afp_errno set </dd></dl>
 
 </div>
 </div>

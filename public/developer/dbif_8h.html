@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,9 +156,9 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CNID <a class="el" href="struct_d_b_d.html">DBD</a> (Database Daemon) Backend interface definitions. </p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
 API usage</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md47"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
 Initialization</h2>
 <ol type="1">
 <li>Provide storage for a <a class="el" href="struct_d_b_d.html">DBD</a> * handle: <span class="tt"><a class="el" href="struct_d_b_d.html">DBD</a> *dbd;</span></li>
@@ -166,19 +166,19 @@ Initialization</h2>
 <li>Call dbif_env_open to open an dbd environment if you called dbif_init with a filename. Pass a <a class="el" href="structdb__param.html">db_param</a> here for on-disk databases.</li>
 <li>Call dbif_open to finally open the CNID database itself. Pass <a class="el" href="structdb__param.html">db_param</a> here for in-memory database.</li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md48"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
 Querying the CNID database</h2>
 <p>Call dbif_[get|pget|put|del]. They map to the corresponding BerkeleyDB calls with the same names.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md49"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
 Transactions</h2>
 <p>We use AUTO_COMMIT for the BDB database accesses. This avoids explicit transactions for every bdb access which speeds up reads. But in order to be able to rollback in case of errors we start a transaction once we encounter the first write from dbif_put or dbif_del. Thus you shouldn't call dbif_txn_[begin|abort|commit], they're used internally.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md50"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
 Checkpoiting</h2>
 <p>Call dbif_txn_checkpoint.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
 Closing</h2>
 <p>Call dbif_close.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
 Silent Upgrade Support</h2>
 <p>On cnid_dbd shutdown we reopen the environment with recovery, close and then remove it. This enables an upgraded netatalk installation possibly linked against a newer bdb lib to succesfully open/create an environment and then silently upgrade the database itself. How nice! </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>

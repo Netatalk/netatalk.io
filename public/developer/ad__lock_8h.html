@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -132,13 +132,27 @@ Macros</h2></td></tr>
 <div class="line">            <span class="keywordflow">break</span>;                                            \</div>
 <div class="line">        for (i = 0; i &lt; (a)-&gt;adf_lockcount; i++) {            \</div>
 <div class="line">            <a class="code hl_struct" href="structadf__lock__t.html">adf_lock_t</a> *lock = (a)-&gt;adf_lock + i;             \</div>
-<div class="line">            if (--(*lock-&gt;<a class="code hl_variable" href="structadf__lock__t.html#a9adca24f74f784cbc8e18e943b3886fc">refcount</a>) &lt; 1)                      \</div>
+<div class="line">            <span class="comment">/* Always release fcntl lock when freeing array */</span> \</div>
+<div class="line">            if ((a)-&gt;adf_fd &gt;= 0) {                           \</div>
+<div class="line">                lock-&gt;<a class="code hl_variable" href="structadf__lock__t.html#a112b1b56ab634e0009bc45cf8159ce2b">lock</a>.l_type = F_UNLCK;                  \</div>
+<div class="line">                if (fcntl((a)-&gt;adf_fd, F_SETLK, &amp;lock-&gt;<a class="code hl_variable" href="structadf__lock__t.html#a112b1b56ab634e0009bc45cf8159ce2b">lock</a>) == -1) { \</div>
+<div class="line">                    LOG(<a class="code hl_enumvalue" href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea43ea88dd15127c0bcf709391c00e3d22">log_warning</a>, <a class="code hl_enumvalue" href="logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4a567b5895db219448c830b76b9a4ccf09">logtype_default</a>,         \</div>
+<div class="line">                        <span class="stringliteral">&quot;adf_lock_free: fcntl unlock failed on fd %d: %s&quot;</span>, \</div>
+<div class="line">                        (a)-&gt;adf_fd, strerror(errno));        \</div>
+<div class="line">                }                                             \</div>
+<div class="line">            }                                                 \</div>
+<div class="line">            <span class="comment">/* Only free refcount memory when last reference */</span> \</div>
+<div class="line">            if (--(*lock-&gt;<a class="code hl_variable" href="structadf__lock__t.html#a9adca24f74f784cbc8e18e943b3886fc">refcount</a>) &lt; 1) {                    \</div>
 <div class="line">                free(lock-&gt;<a class="code hl_variable" href="structadf__lock__t.html#a9adca24f74f784cbc8e18e943b3886fc">refcount</a>);                         \</div>
+<div class="line">            }                                                 \</div>
 <div class="line">        }                                                     \</div>
 <div class="line">        free((a)-&gt;adf_lock);                                  \</div>
 <div class="line">        adf_lock_init(a);                                     \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="alogger_8h_html_a7e2550c12ff27e5cd303101e86cf8eb4a567b5895db219448c830b76b9a4ccf09"><div class="ttname"><a href="logger_8h.html#a7e2550c12ff27e5cd303101e86cf8eb4a567b5895db219448c830b76b9a4ccf09">logtype_default</a></div><div class="ttdeci">@ logtype_default</div><div class="ttdef"><b>Definition</b> logger.h:34</div></div>
+<div class="ttc" id="alogger_8h_html_ac1351f9d0e583b8918401dd4f3d7983ea43ea88dd15127c0bcf709391c00e3d22"><div class="ttname"><a href="logger_8h.html#ac1351f9d0e583b8918401dd4f3d7983ea43ea88dd15127c0bcf709391c00e3d22">log_warning</a></div><div class="ttdeci">@ log_warning</div><div class="ttdef"><b>Definition</b> logger.h:21</div></div>
 <div class="ttc" id="astructadf__lock__t_html"><div class="ttname"><a href="structadf__lock__t.html">adf_lock_t</a></div><div class="ttdef"><b>Definition</b> adouble.h:163</div></div>
+<div class="ttc" id="astructadf__lock__t_html_a112b1b56ab634e0009bc45cf8159ce2b"><div class="ttname"><a href="structadf__lock__t.html#a112b1b56ab634e0009bc45cf8159ce2b">adf_lock_t::lock</a></div><div class="ttdeci">struct flock lock</div><div class="ttdef"><b>Definition</b> adouble.h:164</div></div>
 <div class="ttc" id="astructadf__lock__t_html_a9adca24f74f784cbc8e18e943b3886fc"><div class="ttname"><a href="structadf__lock__t.html#a9adca24f74f784cbc8e18e943b3886fc">adf_lock_t::refcount</a></div><div class="ttdeci">int * refcount</div><div class="ttdef"><b>Definition</b> adouble.h:166</div></div>
 </div><!-- fragment -->
 </div>

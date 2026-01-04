@@ -7,5 +7,6 @@ var _f_p_exchange_files_8c =
     [ "test342", "_f_p_exchange_files_8c.html#a6aae88098f78cfd2ca95739f4dc21ce8", null ],
     [ "test389", "_f_p_exchange_files_8c.html#a9fe2e0c869da09af87c93197cb5fcbed", null ],
     [ "test390", "_f_p_exchange_files_8c.html#ab1eb525a2efb0fe29f71fd86cbccf61a", null ],
-    [ "test391", "_f_p_exchange_files_8c.html#aa77b516e4569a7588959842cfd0891ab", null ]
+    [ "test391", "_f_p_exchange_files_8c.html#aa77b516e4569a7588959842cfd0891ab", null ],
+    [ "test531", "_f_p_exchange_files_8c.html#af188b92649dc9cf04dc29ffe00678f2f", null ]
 ];

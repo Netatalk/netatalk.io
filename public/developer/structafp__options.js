@@ -12,6 +12,7 @@ var structafp__options =
     [ "configfile", "structafp__options.html#a0b60ed05e349292ec491f81ce1178ffc", null ],
     [ "connections", "structafp__options.html#aac734529bef39fe4f5b1a99df44ccaa2", null ],
     [ "ddpaddr", "structafp__options.html#aa341c6f50793d6c6056ff31905308029", null ],
+    [ "dircache_files", "structafp__options.html#a9fa76f6df5c1d2cf8b18253e5d3a4efa", null ],
     [ "dircachesize", "structafp__options.html#a8ff3b210da4204634f4221ed936ae4cd", null ],
     [ "disconnected", "structafp__options.html#a460e6effd8ceaf2de78bbc9244fa2aa9", null ],
     [ "dsireadbuf", "structafp__options.html#a8b10becc929f1a0f70dd98f9f4ef914c", null ],

@@ -4,6 +4,8 @@ var globals_8h =
     [ "afp_options", "structafp__options.html", "structafp__options" ],
     [ "AFPObj", "struct_a_f_p_obj.html", "struct_a_f_p_obj" ],
     [ "AFPOBJ_TMPSIZ", "globals_8h.html#a0fe5f67550e19e0be2a071e49c072c74", null ],
+    [ "CNID_MAX_PATH_LEN", "globals_8h.html#a9ccea3e1aee9b056fc6b299142ffb560", null ],
+    [ "CNID_PATH_OVERHEAD", "globals_8h.html#aee5d5906eb962e2a5c2eee3a7ee743a5", null ],
     [ "DEFAULT_DIRCACHE_METADATA_THRESHOLD", "globals_8h.html#a94f26b483b4c06a887abbcd0a3e3e3fb", null ],
     [ "DEFAULT_DIRCACHE_METADATA_WINDOW", "globals_8h.html#ab6ad563efb5521b90b5aa1d3e96fc2bf", null ],
     [ "DEFAULT_DIRCACHE_VALIDATION_FREQ", "globals_8h.html#afd6d51c0c5b9a0ddc6998e112f415083", null ],

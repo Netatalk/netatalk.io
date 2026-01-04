@@ -9,7 +9,7 @@ var searchData=
   ['ochdir_6',['ochdir',['../include_2atalk_2util_8h.html#a5c01f97ac47d90ccf6a00ab540ce702d',1,'ochdir(const char *dir, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a5c01f97ac47d90ccf6a00ab540ce702d',1,'ochdir(const char *dir, int options):&#160;unix.c']]],
   ['ochmod_7',['ochmod',['../include_2atalk_2util_8h.html#a3537baf3b2b1e9eb9013690c3a7f8488',1,'ochmod(char *path, mode_t mode, const struct stat *st, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a3537baf3b2b1e9eb9013690c3a7f8488',1,'ochmod(char *path, mode_t mode, const struct stat *st, int options):&#160;unix.c']]],
   ['ochown_8',['ochown',['../include_2atalk_2util_8h.html#a4689e229e35ba860cd4acd3f19e0b1b1',1,'ochown(const char *path, uid_t owner, gid_t group, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#a4689e229e35ba860cd4acd3f19e0b1b1',1,'ochown(const char *path, uid_t owner, gid_t group, int options):&#160;unix.c']]],
-  ['of_20inode_20number_20ndash_20or_20emacs_9',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md45',1,'']]],
+  ['of_20inode_20number_20ndash_20or_20emacs_9',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md49',1,'']]],
   ['of_5fad_10',['of_ad',['../structofork.html#aa8d6401e9a96dafb7a47734f584e4d91',1,'ofork::of_ad'],['../fork_8h.html#a7b30e8570107c7bbcb9ed01cd22e14f4',1,'of_ad(const struct vol *, struct path *, struct adouble *):&#160;ofork.c'],['../ofork_8c.html#a9c2cb751316d234de6d3b0ba4998319e',1,'of_ad(const struct vol *vol, struct path *path, struct adouble *ad):&#160;ofork.c']]],
   ['of_5falloc_11',['of_alloc',['../fork_8h.html#a5e494959b71274030c10831a260df0f8',1,'of_alloc(struct vol *, struct dir *, char *, uint16_t *, const int, struct adouble *, struct stat *):&#160;ofork.c'],['../ofork_8c.html#a0f062a3ebda2cc5553ac23aa331b916b',1,'of_alloc(struct vol *vol, struct dir *dir, char *path, uint16_t *ofrefnum, const int eid, struct adouble *ad, struct stat *st):&#160;ofork.c']]],
   ['of_5fclose_5fall_5fforks_12',['of_close_all_forks',['../fork_8h.html#afc6023c0f8a3838ed97a656b0c999036',1,'of_close_all_forks(const AFPObj *obj):&#160;ofork.c'],['../ofork_8c.html#afc6023c0f8a3838ed97a656b0c999036',1,'of_close_all_forks(const AFPObj *obj):&#160;ofork.c']]],
@@ -44,7 +44,7 @@ var searchData=
   ['on_5fbus_5facquired_41',['on_bus_acquired',['../afpstats_8c.html#ad29236fd64e59404ca23564ff3bdac08',1,'afpstats.c']]],
   ['on_5fname_5facquired_42',['on_name_acquired',['../afpstats_8c.html#ad81d720d2cd7ffdc9c5ff710bc62b37d',1,'afpstats.c']]],
   ['on_5fname_5flost_43',['on_name_lost',['../afpstats_8c.html#a43c32ba97d12c2acfc3bfd4bab970d31',1,'afpstats.c']]],
-  ['one_20folder_20to_20another_44',['2) UNIX mv from one folder to another',['../dbd__lookup_8c.html#autotoc_md44',1,'']]],
+  ['one_20folder_20to_20another_44',['2) UNIX mv from one folder to another',['../dbd__lookup_8c.html#autotoc_md48',1,'']]],
   ['one_5fdelay_45',['ONE_DELAY',['../cnid__dbd_8c.html#ace7eb074a3571e0de242a891d8ab4017',1,'cnid_dbd.c']]],
   ['op_46',['op',['../structcnid__dbd__rqst.html#af760e3f5a710f925e623716d62ce2e86',1,'cnid_dbd_rqst::op'],['../nad__cp_8c.html#a99a30df0f2488360cdd46b4b88e5f5f0',1,'op:&#160;nad_cp.c']]],
   ['open_5fdb_47',['open_db',['../etc_2cnid__dbd_2main_8c.html#a7b6ca4cc6694990450b2262425ea72e2',1,'main.c']]],
@@ -90,8 +90,8 @@ var searchData=
   ['options_87',['OPTIONS',['../afppasswd_8c.html#aec95ee3aec6673f51ed3c6a833a2dc71',1,'afppasswd.c']]],
   ['options_88',['options',['../struct_a_f_p_obj.html#a9d0599dfb0b2ea266c7c9eeeed49c6e2',1,'AFPObj']]],
   ['oquantum_89',['oquantum',['../pap_8c.html#a95275f48d3aefa5737fbec1a100b1a1c',1,'oquantum:&#160;pap.c'],['../etc_2papd_2main_8c.html#a95275f48d3aefa5737fbec1a100b1a1c',1,'oquantum:&#160;main.c'],['../session_8c.html#a95275f48d3aefa5737fbec1a100b1a1c',1,'oquantum:&#160;session.c']]],
-  ['or_20emacs_90',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md45',1,'']]],
-  ['or_20inode_20reusage_91',['1) UNIX rename (via mv) or inode reusage(!)',['../dbd__lookup_8c.html#autotoc_md43',1,'']]],
+  ['or_20emacs_90',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md49',1,'']]],
+  ['or_20inode_20reusage_91',['1) UNIX rename (via mv) or inode reusage(!)',['../dbd__lookup_8c.html#autotoc_md47',1,'']]],
   ['org_5fcode_92',['org_code',['../structllc.html#a4e8ac1b175e93d32f0d7819eefa48edb',1,'llc']]],
   ['origin_93',['origin',['../structpapfile.html#ad39d832d78eaa7e0917a1f1212fac087',1,'papfile']]],
   ['os_5fstartup_5ffirstnet_94',['OS_STARTUP_FIRSTNET',['../etc_2atalkd_2rtmp_8h.html#a4e07cba99e8998940f4920cca37c40fb',1,'rtmp.h']]],
@@ -100,5 +100,6 @@ var searchData=
   ['ostatat_97',['ostatat',['../include_2atalk_2util_8h.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c'],['../libatalk_2util_2unix_8c.html#aba71ee1225cc8faf2997c1cdf542d7f6',1,'ostatat(int dirfd, const char *path, struct stat *st, int options):&#160;unix.c']]],
   ['other_20bsds_98',['Other BSDs',['../md_developer_2ddp.html#autotoc_md6',1,'']]],
   ['outputfunc_5ft_99',['outputfunc_t',['../common_8h.html#a69dbbba09a6de7e489aae29310488247',1,'common.h']]],
-  ['overlap_100',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]]
+  ['over_20tcp_20implementation_20notes_100',['DSI over TCP Implementation Notes',['../md_developer_2dsi.html',1,'']]],
+  ['overlap_101',['OVERLAP',['../ad__lock_8c.html#a9bf4641dda871e7abfca912e57c7c889',1,'ad_lock.c']]]
 ];

@@ -48,6 +48,7 @@ var etc_2afpd_2directory_8h =
     [ "dir_remove", "etc_2afpd_2directory_8h.html#ad9fbc8ab01c3318e8da4a88258e4b68f", null ],
     [ "dirlookup", "etc_2afpd_2directory_8h.html#ab10b9050bf845ab1cac053e7230c561c", null ],
     [ "dirlookup_bypath", "etc_2afpd_2directory_8h.html#ae970ba5c372190436c80a23e2a0965fb", null ],
+    [ "dirlookup_strict", "etc_2afpd_2directory_8h.html#ab68771b68b176fad1ee356902e694427", null ],
     [ "dirreenumerate", "etc_2afpd_2directory_8h.html#a7455b5ea2e7a8383a0d3da4e33414882", null ],
     [ "file_access", "etc_2afpd_2directory_8h.html#a1c034d115ffd2f6219c15cc7bcabc32c", null ],
     [ "for_each_dirent", "etc_2afpd_2directory_8h.html#a377583a8458ced15571b10dd60ec0f99", null ],

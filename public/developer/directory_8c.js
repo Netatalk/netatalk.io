@@ -1,5 +1,6 @@
 var directory_8c =
 [
+    [ "DIRLOOKUP_LOG_FMT", "directory_8c.html#a8110d27d4a4dfa925eb95b8061939657", null ],
     [ "afp_closedir", "directory_8c.html#ae5c1bcf67593b5bbe136007e182ab668", null ],
     [ "afp_createdir", "directory_8c.html#aec28ef702d94da36cbcc45b864d5b67c", null ],
     [ "afp_mapid", "directory_8c.html#a580ee7d2a86b1216ee973e9849159964", null ],
@@ -19,6 +20,9 @@ var directory_8c =
     [ "dir_new", "directory_8c.html#a644916c3887056adc8a5d28505f488f4", null ],
     [ "dir_remove", "directory_8c.html#ad9fbc8ab01c3318e8da4a88258e4b68f", null ],
     [ "dirlookup", "directory_8c.html#a1d42d13b8257907a411a2704e37dfe93", null ],
+    [ "dirlookup_internal", "directory_8c.html#ade6b789ccd7cc475e656d2593fc1f398", null ],
+    [ "dirlookup_internal_retry", "directory_8c.html#a3713436d3f991ff8b81d7fd005e2a392", null ],
+    [ "dirlookup_strict", "directory_8c.html#afe4deb3ff69bf7e31741a690e890a21f", null ],
     [ "diroffcnt", "directory_8c.html#a65d9d789bf055427e09071cc5cef2ed8", null ],
     [ "dirreenumerate", "directory_8c.html#a7455b5ea2e7a8383a0d3da4e33414882", null ],
     [ "file_access", "directory_8c.html#a1c034d115ffd2f6219c15cc7bcabc32c", null ],

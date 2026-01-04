@@ -43,7 +43,7 @@ var NAVTREE =
       [ "Introduction: The Invisible Performance Tax", "md_developer_2dircache.html#autotoc_md10", null ],
       [ "Part 1: The Storage Stack", "md_developer_2dircache.html#autotoc_md12", null ],
       [ "Part 2: The Page Cache Problem", "md_developer_2dircache.html#autotoc_md14", [
-        [ "How Directory Enumeration Pollutes the Page Cache", "md_developer_2dircache.html#autotoc_md15", null ],
+        [ "How Directory Enumeration Works", "md_developer_2dircache.html#autotoc_md15", null ],
         [ "The LRU Scanning Problem", "md_developer_2dircache.html#autotoc_md16", null ]
       ] ],
       [ "Part 3: Why This Goes Unnoticed", "md_developer_2dircache.html#autotoc_md18", null ],
@@ -60,18 +60,24 @@ var NAVTREE =
         [ "Sample Statistics", "md_developer_2dircache.html#autotoc_md30", null ]
       ] ],
       [ "Conclusion", "md_developer_2dircache.html#autotoc_md32", [
-        [ "Key Takeaways", "md_developer_2dircache.html#autotoc_md33", null ]
+        [ "Key Takeaways", "md_developer_2dircache.html#autotoc_md33", null ],
+        [ "File Caching Implementation", "md_developer_2dircache.html#autotoc_md34", null ]
       ] ]
     ] ],
+    [ "DSI over TCP Implementation Notes", "md_developer_2dsi.html", [
+      [ "Signals and Writes to Client", "md_developer_2dsi.html#autotoc_md36", null ],
+      [ "Performance Tweaking", "md_developer_2dsi.html#autotoc_md37", null ],
+      [ "Read-Ahead Buffering", "md_developer_2dsi.html#autotoc_md38", null ]
+    ] ],
     [ "Indexing for Spotlight Search", "md_developer_2indexing.html", [
-      [ "Limitations and notes", "md_developer_2indexing.html#autotoc_md35", null ],
-      [ "Supported metadata attributes", "md_developer_2indexing.html#autotoc_md36", null ]
+      [ "Limitations and notes", "md_developer_2indexing.html#autotoc_md39", null ],
+      [ "Supported metadata attributes", "md_developer_2indexing.html#autotoc_md40", null ]
     ] ],
     [ "Using libatalk from third party apps", "md_developer_2libatalk.html", [
-      [ "Example", "md_developer_2libatalk.html#autotoc_md38", null ]
+      [ "Example", "md_developer_2libatalk.html#autotoc_md42", null ]
     ] ],
     [ "Error checking and logging", "md_developer_2logging.html", [
-      [ "Examples", "md_developer_2logging.html#autotoc_md40", null ]
+      [ "Examples", "md_developer_2logging.html#autotoc_md44", null ]
     ] ],
     [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
@@ -100,41 +106,41 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_error_8c.html",
-"_f_p_get_srvr_parms_8c.html#a6a3ba78326e59d8e947c03ad29eb2549",
-"_t2___f_p_move_and_rename_8c.html#aea33ca1a63a62721a46109c1fd3dabc7",
-"ad__lock_8c.html#ad682144c9d2ebb9891b531f9aac789e1",
-"adouble_8h.html#aaea06544de0ad28cc64ab304f43d4c13",
-"afp_8h.html#aa69e75fb0bd5d5c8b37b7b8e9406e5be",
-"afpclient_8c.html#a38d01a2a03d00cd0a89d1c56e31914e4",
-"afpclient_8h.html#af43086b4456428feb72e0ff807548204",
-"afpd_2file_8h.html#a2aa350aac0efd0ef2b184cc516ff9cd1a5d7231369ab83e14f1c47b6408cebbd6",
-"asp_8h.html#a3be1086f74f04b6f4b5f6362bdac85f2",
-"byteorder_8h.html#a97f7e35b464d076b1d046a21fa899f2a",
-"cnid__dbd_8c.html#ada41eb2bf6c7ab4b782c909ebe35a9ec",
-"contrib_2macipgw_2main_8c.html#a19012016377dcf4080c7d1cf530dd78e",
-"dir_3847941dc22744d30c1d316a1f1a60e2.html",
-"ea__ad_8c.html#a3ebfcbc5e0bc5a5f1f96faed53d6a2d3",
-"etc_2atalkd_2main_8c.html#a9319f4233d0597188c3119f4dc7b3f0f",
-"fork_8c.html#a2d26e37f7640a1f2ed36b48f0b0c06e6",
-"globals_8h.html#a155281ed9fa273fe7e8e79efdf6129d7",
-"iconv_8c.html#adeb4fcf4e13a68107b754886b5e0b7d9",
-"include_2atalk_2util_8h.html#af32134bd62d1e48eb57310a8d5fc5404",
-"lantest_8c.html#afa981df84002b0a611e525466f2f7963",
-"logintest_8c.html#ae0de25124c98d3233e1672ef3a797a3b",
-"macip_8c.html#a26d4f0c8916e6c660af7092c7c9cb486",
-"nad__ls_8c.html#aac58c0ee858b1bd721947d60eb711e66",
-"nfsquota_8c.html#ada1385ee4a11033a04165879cdcfd596",
-"printcap_8c.html#a1c57921c3600c89dbd67dafe471d6a3a",
-"sparql__map_8h.html#aee379e0778c1c096dd3de5e9affef35fa08527b430741682912edf47a9c2fd86e",
-"spotlight_8h.html#a34f2023c533ff31bb1ce854182e7407f",
-"struct_c_o_n_n.html#abd0c6fd3a4d7d7688c251029e115a7ae",
-"structafp__volume__parms.html#a9d217fa4c91ccc0e92f1daddcbefad07",
-"structdsi__block.html#a5f0f1600b0cba7073a6bd34b73f9dbd1",
-"structnbptab.html#a616db4e5cfeacdeb84402e65e0b242ea",
-"structuam__obj.html#a3d6d87eb7b60ef1fca6d4551ca752560",
-"test_8h.html#acfab3c93dfc755d0b3ffd7578df0e7db",
-"uams__dhx__pam_8c.html#a4d71cd5051d2a11ee5dc9b00a6a1c9f3",
-"utf16__casetable_8h.html#ae17b844ce1fd4a41c50819624eebf889"
+"_f_p_get_srvr_msg_8c.html",
+"_t2___f_p_get_vol_parms_8c.html#a8dcc5f7793949bb0e374d91e691c255a",
+"ad__lock_8c.html#a4ce2c10a871de6b61922c78b12f3c9ae",
+"adouble_8h.html#a9938df01ff4d7db69659567dd805f662",
+"afp_8h.html#a975c9efc26d4345f566f2ba71d327a45",
+"afpclient_8c.html#a1e12c2e07189cd96f7dbc6e32d6f673d",
+"afpclient_8h.html#acda8b983a6a620ca0dcbc076642bf9b7",
+"afpd_2file_8c.html#acbd63410c90cb5f1c39277a699f282d3",
+"afpstats__obj_8h.html",
+"bprint_8c.html",
+"cnid__bdb__private_8h.html#af53d60bbf2f2d97593dfa73ff98bb777",
+"common_8h_source.html",
+"desktop_8h.html#a2e1071d41557370e9fc79a84383258a6",
+"ea_8h.html#a83c2c6199088465b4a6df7b6801af5a8",
+"etc_2afpd_2volume_8h.html#a2a520b0859fa29329f47ad253fc05a88",
+"fce__util_8c.html#a5180faa665bf8b86b35149c031a8ef0c",
+"getiface_8c.html#a0b194e7472f18d2c7812e25bbbf8829c",
+"headers_8c.html#a8355e3e3676ac43633d677d4cfd43d44",
+"include_2atalk_2util_8h.html#a6b4598af89ce13142b213c34e49fecb2",
+"lantest_8c.html#ac1f45edfd9d501d2972db7aa6b23084c",
+"logger_8h.html#ac3331b98c4c54f95ac68f15a04538760",
+"mac__roman_8c.html#a6167487e76cca8cb832c80267c42ae98",
+"nad__cp_8c.html#a99a30df0f2488360cdd46b4b88e5f5f0",
+"netatalk__conf_8c.html#ab91cc2a6c06bfb6df64a4b4707e1ba62",
+"precompose_8h.html#a936c9c30ecceb8b171ff11bf6a9628ae",
+"session_8c.html",
+"speedtest_8c.html#ae63c77117169bf4dd5b79c2c69602280",
+"struct_a_s_p.html#a866d18fc26f68470d1b166430660537f",
+"structafp__options.html#a87a1b81cd797ad5f944eeb59816d33c8",
+"structddpshdr.html#a61731d299a97a6cf94e4bb7d0dccafed",
+"structmaccess.html#a407c65e2a67380fd9999bd06e1b063c7",
+"structsl__uuid__t.html#a11c19f10023b8a46b6720356e891c59f",
+"test_2testsuite_2dsi_8h.html#a38fa725f7637caa8c79e28570439080c",
+"uams__dhx2__pam_8c.html#aa5b5e9b7856bcb95f66bba6555a1650c",
+"usockfd_8h.html#a6a6d1e8e926f5b43e45353c7e8c3c7fa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -8,5 +8,6 @@ var _f_p_enumerate_8c =
     [ "test38", "_f_p_enumerate_8c.html#afc83c106f87d41fc7cec6d35b8bef1dc", null ],
     [ "test40", "_f_p_enumerate_8c.html#a0686c9d97b69b6205dbe603ed708401a", null ],
     [ "test41", "_f_p_enumerate_8c.html#a674016b4d3c06d050897ffe97015faec", null ],
+    [ "test533", "_f_p_enumerate_8c.html#a3d98489c567c2478503520fb95f2214a", null ],
     [ "test93", "_f_p_enumerate_8c.html#a0588123f226b0d85f7d139e7b8c6a348", null ]
 ];

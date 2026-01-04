@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -129,6 +129,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a9b041055346d857429d4a8d889d4710b" id="r_a9b041055346d857429d4a8d889d4710b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b041055346d857429d4a8d889d4710b">UTF8FILELEN_EARLY</a>&#160;&#160;&#160;255</td></tr>
 <tr class="memitem:a071bf1dd4eb2de6ebffc327141658618" id="r_a071bf1dd4eb2de6ebffc327141658618"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a071bf1dd4eb2de6ebffc327141658618">MAXUSERLEN</a>&#160;&#160;&#160;256</td></tr>
 <tr class="memitem:a20f71fe4c23117621f9f37432af54111" id="r_a20f71fe4c23117621f9f37432af54111"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f71fe4c23117621f9f37432af54111">MAXOPTLEN</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memitem:aee5d5906eb962e2a5c2eee3a7ee743a5" id="r_aee5d5906eb962e2a5c2eee3a7ee743a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee5d5906eb962e2a5c2eee3a7ee743a5">CNID_PATH_OVERHEAD</a>&#160;&#160;&#160;12  /* <a class="el" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> protocol <a class="el" href="speedtest_8c.html#aaab5e1dab0b78bc1a11254befed7da11">header</a> size for <a class="el" href="structpath.html">path</a> resolution */</td></tr>
+<tr class="memitem:a9ccea3e1aee9b056fc6b299142ffb560" id="r_a9ccea3e1aee9b056fc6b299142ffb560"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ccea3e1aee9b056fc6b299142ffb560">CNID_MAX_PATH_LEN</a>&#160;&#160;&#160;(<a class="el" href="#aee5d5906eb962e2a5c2eee3a7ee743a5">CNID_PATH_OVERHEAD</a> + MAXPATHLEN + 1)  /* Maximum <a class="el" href="structpath.html">path</a> length for <a class="el" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> operations */</td></tr>
 <tr class="memitem:aac2fb78a5373af34bc69284dd6d3fa29" id="r_aac2fb78a5373af34bc69284dd6d3fa29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac2fb78a5373af34bc69284dd6d3fa29">DEFAULT_MAX_DIRCACHE_SIZE</a>&#160;&#160;&#160;8192</td></tr>
 <tr class="memitem:afd6d51c0c5b9a0ddc6998e112f415083" id="r_afd6d51c0c5b9a0ddc6998e112f415083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd6d51c0c5b9a0ddc6998e112f415083">DEFAULT_DIRCACHE_VALIDATION_FREQ</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:ab6ad563efb5521b90b5aa1d3e96fc2bf" id="r_ab6ad563efb5521b90b5aa1d3e96fc2bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ad563efb5521b90b5aa1d3e96fc2bf">DEFAULT_DIRCACHE_METADATA_WINDOW</a>&#160;&#160;&#160;300</td></tr>
@@ -197,6 +199,34 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define AFPOBJ_TMPSIZ&#160;&#160;&#160;(MAXPATHLEN)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ccea3e1aee9b056fc6b299142ffb560" name="a9ccea3e1aee9b056fc6b299142ffb560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ccea3e1aee9b056fc6b299142ffb560">&#9670;&#160;</a></span>CNID_MAX_PATH_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CNID_MAX_PATH_LEN&#160;&#160;&#160;(<a class="el" href="#aee5d5906eb962e2a5c2eee3a7ee743a5">CNID_PATH_OVERHEAD</a> + MAXPATHLEN + 1)  /* Maximum <a class="el" href="structpath.html">path</a> length for <a class="el" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> operations */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee5d5906eb962e2a5c2eee3a7ee743a5" name="aee5d5906eb962e2a5c2eee3a7ee743a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5d5906eb962e2a5c2eee3a7ee743a5">&#9670;&#160;</a></span>CNID_PATH_OVERHEAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CNID_PATH_OVERHEAD&#160;&#160;&#160;12  /* <a class="el" href="etc_2afpd_2directory_8h.html#a6e9ac498670273b784319287e6bcd45e">CNID</a> protocol <a class="el" href="speedtest_8c.html#aaab5e1dab0b78bc1a11254befed7da11">header</a> size for <a class="el" href="structpath.html">path</a> resolution */</td>
         </tr>
       </table>
 </div><div class="memdoc">

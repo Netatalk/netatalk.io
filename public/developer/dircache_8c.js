@@ -8,11 +8,11 @@ var dircache_8c =
     [ "dircache_evict", "dircache_8c.html#a74d9d9fc41c0cd46eafae3685b073752", null ],
     [ "dircache_init", "dircache_8c.html#a32d08155545949809d026537e38bc33f", null ],
     [ "dircache_remove", "dircache_8c.html#a8714ac325e3b3da3ac5d09315034e756", null ],
-    [ "dircache_remove_children", "dircache_8c.html#a425ed736a4c8f16731a5648b23719735", null ],
+    [ "dircache_remove_children", "dircache_8c.html#a2e7beceabdec9d51efb178b951ffdc7e", null ],
     [ "dircache_report_invalid_entry", "dircache_8c.html#ae62f645bef33967c49ff641fc51869ad", null ],
     [ "dircache_reset_validation_counter", "dircache_8c.html#aa1f0ff6827839912526bd91a7f4ff233", null ],
     [ "dircache_search_by_did", "dircache_8c.html#a1c5f250d2d0fb3ecdf47c16db30179df", null ],
-    [ "dircache_search_by_name", "dircache_8c.html#a6b96994f92f9267df4f0824e3bd745e5", null ],
+    [ "dircache_search_by_name", "dircache_8c.html#a0754cbe312bb4c8051af6bb0cd20ff3f", null ],
     [ "dircache_set_validation_params", "dircache_8c.html#aba92d20849d1ff0a37238a15d6b7bdd0", null ],
     [ "hash_comp_didname", "dircache_8c.html#a223c492870dd2784fcff67b99388b302", null ],
     [ "hash_comp_vid_did", "dircache_8c.html#afb5dcf2c67945d9207909d9d435037e0", null ],
@@ -29,5 +29,6 @@ var dircache_8c =
     [ "index_didname", "dircache_8c.html#aba43390cb51375034abb102fe588c7e2", null ],
     [ "index_queue", "dircache_8c.html#a8596d2ae2953cadafee12774d76f75d6", null ],
     [ "queue_count", "dircache_8c.html#a9e2601d85172b6a6e7afe5c2fb3c5c2e", null ],
+    [ "queue_count_max", "dircache_8c.html#aef76ca4dd4e459421d6f0a22d98365fb", null ],
     [ "validation_counter", "dircache_8c.html#a5c2dec5855205398420054ff186fd1fa", null ]
 ];

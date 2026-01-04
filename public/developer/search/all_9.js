@@ -1,7 +1,7 @@
 var searchData=
 [
   ['backtrace_5fstack_5fsize_0',['BACKTRACE_STACK_SIZE',['../fault_8c.html#a0fc21576095471210d2ccd277cf54861',1,'fault.c']]],
-  ['backup_20i_20e_20change_20of_20inode_20number_20ndash_20or_20emacs_1',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md45',1,'']]],
+  ['backup_20i_20e_20change_20of_20inode_20number_20ndash_20or_20emacs_1',['3) Restore from backup i.e. change of inode number &amp;ndash; or emacs',['../dbd__lookup_8c.html#autotoc_md49',1,'']]],
   ['bad_2',['bad',['../a2boot_8c.html#afecfba5e26789c1f10129387bf55dca5',1,'bad:&#160;a2boot.c'],['../timelord_8c.html#afecfba5e26789c1f10129387bf55dca5',1,'bad:&#160;timelord.c']]],
   ['badcp_3',['badcp',['../nad__cp_8c.html#afcc7f100eceb5fa008553bfc8bccc204',1,'nad_cp.c']]],
   ['badrm_4',['badrm',['../nad__rm_8c.html#acaf3146d2a2e54d5eff9c1b263d97255',1,'nad_rm.c']]],
@@ -52,15 +52,16 @@ var searchData=
   ['buf_5fs_49',['BUF_S',['../_f_p_read_ext_8c.html#aca8e8af045095ade068c59f74d3a7e68',1,'BUF_S:&#160;FPReadExt.c'],['../_f_p_write_ext_8c.html#aca8e8af045095ade068c59f74d3a7e68',1,'BUF_S:&#160;FPWriteExt.c']]],
   ['buffer_50',['Buffer',['../speedtest_8c.html#ad1bb1e1f60b391156e2a18c4a7fe6033',1,'speedtest.c']]],
   ['buffer_51',['buffer',['../struct_d_s_i.html#a36bdbe4d698a79ffaefcd942a59e36fd',1,'DSI::buffer'],['../netacnv_8c.html#af2afce9d3c962a7307719b0a31a93438',1,'buffer:&#160;netacnv.c']]],
-  ['bufsiz_52',['BUFSIZ',['../printcap_8c.html#a72a591cf0a96cf23c63df5c78712dabe',1,'printcap.c']]],
-  ['bufsize_53',['BUFSIZE',['../lp_8c.html#aeca034f67218340ecb2261a22c2f3dcd',1,'lp.c']]],
-  ['bufsize_5fmax_54',['BUFSIZE_MAX',['../nad__cp_8c.html#a63d9ed76ed5425feb066a97b37ec19c4',1,'nad_cp.c']]],
-  ['bufsize_5fsmall_55',['BUFSIZE_SMALL',['../nad__cp_8c.html#ac16f3da811fe6d99ff25d0e2ad114775',1,'nad_cp.c']]],
-  ['bug_20list_56',['Bug List',['../bug.html',1,'']]],
-  ['build_5ffce_5fpacket_57',['build_fce_packet',['../fce__api_8c.html#a611a580ee44f640537e4e6ca4ff3c91d',1,'fce_api.c']]],
-  ['builtin_5ffunctions_58',['builtin_functions',['../iconv_8c.html#a546fe71c232408e6c4fa3a32946f9b50',1,'iconv.c']]],
-  ['byte_5flock_59',['byte_lock',['../fork_8c.html#a05d6e266fc235bdecd9f09a8212076c2',1,'fork.c']]],
-  ['byte_5forder_60',['BYTE_ORDER',['../endian_8h.html#a1771b7fb65ee640524d0052f229768c3',1,'endian.h']]],
-  ['bytelock_5fmax_61',['BYTELOCK_MAX',['../adouble_8h.html#a4e0c5ea6640018bd8e8c45b16defd4fa',1,'adouble.h']]],
-  ['byteorder_2eh_62',['byteorder.h',['../byteorder_8h.html',1,'']]]
+  ['buffering_52',['Read-Ahead Buffering',['../md_developer_2dsi.html#autotoc_md38',1,'']]],
+  ['bufsiz_53',['BUFSIZ',['../printcap_8c.html#a72a591cf0a96cf23c63df5c78712dabe',1,'printcap.c']]],
+  ['bufsize_54',['BUFSIZE',['../lp_8c.html#aeca034f67218340ecb2261a22c2f3dcd',1,'lp.c']]],
+  ['bufsize_5fmax_55',['BUFSIZE_MAX',['../nad__cp_8c.html#a63d9ed76ed5425feb066a97b37ec19c4',1,'nad_cp.c']]],
+  ['bufsize_5fsmall_56',['BUFSIZE_SMALL',['../nad__cp_8c.html#ac16f3da811fe6d99ff25d0e2ad114775',1,'nad_cp.c']]],
+  ['bug_20list_57',['Bug List',['../bug.html',1,'']]],
+  ['build_5ffce_5fpacket_58',['build_fce_packet',['../fce__api_8c.html#a611a580ee44f640537e4e6ca4ff3c91d',1,'fce_api.c']]],
+  ['builtin_5ffunctions_59',['builtin_functions',['../iconv_8c.html#a546fe71c232408e6c4fa3a32946f9b50',1,'iconv.c']]],
+  ['byte_5flock_60',['byte_lock',['../fork_8c.html#a05d6e266fc235bdecd9f09a8212076c2',1,'fork.c']]],
+  ['byte_5forder_61',['BYTE_ORDER',['../endian_8h.html#a1771b7fb65ee640524d0052f229768c3',1,'endian.h']]],
+  ['bytelock_5fmax_62',['BYTELOCK_MAX',['../adouble_8h.html#a4e0c5ea6640018bd8e8c45b16defd4fa',1,'adouble.h']]],
+  ['byteorder_2eh_63',['byteorder.h',['../byteorder_8h.html',1,'']]]
 ];

@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -145,14 +145,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:a74d9d9fc41c0cd46eafae3685b073752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a fixed number of (oldest) entries from the cache and indexes.  <br /></td></tr>
 <tr class="memitem:a1c5f250d2d0fb3ecdf47c16db30179df" id="r_a1c5f250d2d0fb3ecdf47c16db30179df"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5f250d2d0fb3ecdf47c16db30179df">dircache_search_by_did</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> cnid)</td></tr>
 <tr class="memdesc:a1c5f250d2d0fb3ecdf47c16db30179df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the dircache via a CNID for a directory.  <br /></td></tr>
-<tr class="memitem:a6b96994f92f9267df4f0824e3bd745e5" id="r_a6b96994f92f9267df4f0824e3bd745e5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b96994f92f9267df4f0824e3bd745e5">dircache_search_by_name</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *name, int len)</td></tr>
-<tr class="memdesc:a6b96994f92f9267df4f0824e3bd745e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the cache via did/name hashtable.  <br /></td></tr>
+<tr class="memitem:a0754cbe312bb4c8051af6bb0cd20ff3f" id="r_a0754cbe312bb4c8051af6bb0cd20ff3f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0754cbe312bb4c8051af6bb0cd20ff3f">dircache_search_by_name</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, char *name, size_t len)</td></tr>
+<tr class="memdesc:a0754cbe312bb4c8051af6bb0cd20ff3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the cache via did/name hashtable.  <br /></td></tr>
 <tr class="memitem:a6d640618cb44b9c65e98d4e8e68620c4" id="r_a6d640618cb44b9c65e98d4e8e68620c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d640618cb44b9c65e98d4e8e68620c4">dircache_add</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
 <tr class="memdesc:a6d640618cb44b9c65e98d4e8e68620c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">create struct dir from struct path  <br /></td></tr>
 <tr class="memitem:a8714ac325e3b3da3ac5d09315034e756" id="r_a8714ac325e3b3da3ac5d09315034e756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8714ac325e3b3da3ac5d09315034e756">dircache_remove</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, int <a class="el" href="cmd__dbd_8c.html#a5b5dc5446eb7e7a502a06d67b7ea302c">flags</a>)</td></tr>
 <tr class="memdesc:a8714ac325e3b3da3ac5d09315034e756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an entry from the dircache.  <br /></td></tr>
-<tr class="memitem:a425ed736a4c8f16731a5648b23719735" id="r_a425ed736a4c8f16731a5648b23719735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a425ed736a4c8f16731a5648b23719735">dircache_remove_children</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
-<tr class="memdesc:a425ed736a4c8f16731a5648b23719735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all child entries of a directory from the dircache.  <br /></td></tr>
+<tr class="memitem:a2e7beceabdec9d51efb178b951ffdc7e" id="r_a2e7beceabdec9d51efb178b951ffdc7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e7beceabdec9d51efb178b951ffdc7e">dircache_remove_children</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
+<tr class="memdesc:a2e7beceabdec9d51efb178b951ffdc7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all child entries of a directory from the dircache.  <br /></td></tr>
 <tr class="memitem:a32d08155545949809d026537e38bc33f" id="r_a32d08155545949809d026537e38bc33f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d08155545949809d026537e38bc33f">dircache_init</a> (int reqsize)</td></tr>
 <tr class="memdesc:a32d08155545949809d026537e38bc33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the dircache and indexes.  <br /></td></tr>
 <tr class="memitem:a634fc2bdbe6d1b5d9def7b568faae939" id="r_a634fc2bdbe6d1b5d9def7b568faae939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634fc2bdbe6d1b5d9def7b568faae939">log_dircache_stat</a> (void)</td></tr>
@@ -178,6 +178,7 @@ Variables</h2></td></tr>
 <tr class="memitem:aba43390cb51375034abb102fe588c7e2" id="r_aba43390cb51375034abb102fe588c7e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structhash__t.html">hash_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba43390cb51375034abb102fe588c7e2">index_didname</a></td></tr>
 <tr class="memitem:a8596d2ae2953cadafee12774d76f75d6" id="r_a8596d2ae2953cadafee12774d76f75d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="queue_8h.html#a0150f5145b7cc9ec8c12f7c526057ffe">q_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8596d2ae2953cadafee12774d76f75d6">index_queue</a></td></tr>
 <tr class="memitem:a9e2601d85172b6a6e7afe5c2fb3c5c2e" id="r_a9e2601d85172b6a6e7afe5c2fb3c5c2e"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e2601d85172b6a6e7afe5c2fb3c5c2e">queue_count</a></td></tr>
+<tr class="memitem:aef76ca4dd4e459421d6f0a22d98365fb" id="r_aef76ca4dd4e459421d6f0a22d98365fb"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef76ca4dd4e459421d6f0a22d98365fb">queue_count_max</a> = 0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Directory Cache. </p>
@@ -186,13 +187,13 @@ Variables</h2></td></tr>
 <p>In order to speed up the CNID query for files too, which e.g. happens when a directory is enumerated, files are stored too in the dircache. In order to differentiate between files and dirs, we set the flag DIRF_ISFILE in struct <a class="el" href="structdir.html#ac10cd635149e9d98620839156ff33ec0">dir.d_flags</a> for files.</p>
 <p>The most frequent codepatch that leads to caching is directory enumeration (cf <a class="el" href="enumerate_8c.html">enumerate.c</a>):</p><ul>
 <li>if a element is a directory:<ol type="1">
-<li>the cache is searched by <a class="el" href="#a6b96994f92f9267df4f0824e3bd745e5" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
+<li>the cache is searched by <a class="el" href="#a0754cbe312bb4c8051af6bb0cd20ff3f" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
 <li>if it wasn't found a new struct dir is created and cached both from within <a class="el" href="directory_8c.html#ad4203a175074d5440643ce9ac1fd3092" title="Create struct dir from struct path.">dir_add()</a></li>
 </ol>
 </li>
 <li>for files the caching happens a little bit down the call chain:<ol type="1">
 <li>first <a class="el" href="afpd_2file_8c.html#a4f40897ee367f9ee8bb97e951e20d6a4">getfilparams()</a> is called, which calls</li>
-<li><a class="el" href="afpd_2file_8c.html#a72826107bf8e6a1e16577856e55f3ef1">getmetadata()</a> where the cache is searched with <a class="el" href="#a6b96994f92f9267df4f0824e3bd745e5" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
+<li><a class="el" href="afpd_2file_8c.html#a72826107bf8e6a1e16577856e55f3ef1">getmetadata()</a> where the cache is searched with <a class="el" href="#a0754cbe312bb4c8051af6bb0cd20ff3f" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></li>
 <li>if the element is not found</li>
 <li><a class="el" href="afpd_2file_8c.html#adddb0ed6a3a4e04df9ea5a07315455ad" title="Get CNID for did/upath args both from database and adouble file.">get_id()</a> queries the CNID from the database</li>
 <li>then a struct dir is initialized via <a class="el" href="directory_8c.html#a644916c3887056adc8a5d28505f488f4" title="Construct struct dir.">dir_new()</a> (note the fullpath arg is NULL)</li>
@@ -207,14 +208,14 @@ Variables</h2></td></tr>
 <li>its a directory and an object has been created therein</li>
 <li>the element is deleted and recreated under the same name Using ctime leads to cache eviction in case 2) where it wouldn't be necessary, because the dir itself (name, CNID, ...) hasn't changed, but there's no other way.</li>
 </ol>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
 Indexes</h1>
 <p>The maximum dircache size is: max(DEFAULT_MAX_DIRCACHE_SIZE, min(size, MAX_POSSIBLE_DIRCACHE_SIZE)). It is a hashtable which we use to store "struct dir"s in. If the cache get full, oldest entries are evicted in chunks of DIRCACHE_FREE.</p>
 <p>We have/need two indexes:</p><ul>
 <li>a DID/name index on the main dircache, another hashtable</li>
 <li>a queue index on the dircache, for evicting the oldest entries</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
 Debugging</h1>
 <p>Sending SIGINT to a afpd child causes it to dump the dircache to a file "/tmp/dircache.PID". </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -421,14 +422,14 @@ Debugging</h1>
 
 </div>
 </div>
-<a id="a425ed736a4c8f16731a5648b23719735" name="a425ed736a4c8f16731a5648b23719735"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a425ed736a4c8f16731a5648b23719735">&#9670;&#160;</a></span>dircache_remove_children()</h2>
+<a id="a2e7beceabdec9d51efb178b951ffdc7e" name="a2e7beceabdec9d51efb178b951ffdc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7beceabdec9d51efb178b951ffdc7e">&#9670;&#160;</a></span>dircache_remove_children()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dircache_remove_children </td>
+          <td class="memname">int dircache_remove_children </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
         </tr>
@@ -449,6 +450,7 @@ Debugging</h1>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if curdir was removed and recovery failed </dd></dl>
 
 </div>
 </div>
@@ -530,8 +532,8 @@ Debugging</h1>
 
 </div>
 </div>
-<a id="a6b96994f92f9267df4f0824e3bd745e5" name="a6b96994f92f9267df4f0824e3bd745e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b96994f92f9267df4f0824e3bd745e5">&#9670;&#160;</a></span>dircache_search_by_name()</h2>
+<a id="a0754cbe312bb4c8051af6bb0cd20ff3f" name="a0754cbe312bb4c8051af6bb0cd20ff3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0754cbe312bb4c8051af6bb0cd20ff3f">&#9670;&#160;</a></span>dircache_search_by_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -554,7 +556,7 @@ Debugging</h1>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -764,7 +766,7 @@ Debugging</h1>
 </div><div class="memdoc">
 
 <p>Determine if cache entry should be validated against filesystem. </p>
-<p>Uses probabilistic validation to reduce filesystem calls while still detecting external changes. Internal netatalk operations use explicit cache invalidation via <a class="el" href="directory_8c.html#ad9fbc8ab01c3318e8da4a88258e4b68f" title="Remove a file/directory from dircache.">dir_remove()</a> calls, so frequent validation is only needed to detect external filesystem changes.</p>
+<p>Uses probabilistic validation to reduce filesystem calls while still detecting external changes. Internal netatalk operations use explicit cache invalidation via <a class="el" href="directory_8c.html#ad9fbc8ab01c3318e8da4a88258e4b68f" title="Remove a file/directory from dircache with automatic curdir recovery.">dir_remove()</a> calls, so frequent validation is only needed to detect external filesystem changes.</p>
 <dl class="section return"><dt>Returns</dt><dd>1 if validation should be performed, 0 otherwise </dd></dl>
 
 </div>
@@ -835,7 +837,7 @@ Debugging</h1>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <a class="code hl_define" href="globals_8h.html#a94f26b483b4c06a887abbcd0a3e3e3fb">DEFAULT_DIRCACHE_METADATA_THRESHOLD</a></div>
-<div class="ttc" id="aglobals_8h_html_a94f26b483b4c06a887abbcd0a3e3e3fb"><div class="ttname"><a href="globals_8h.html#a94f26b483b4c06a887abbcd0a3e3e3fb">DEFAULT_DIRCACHE_METADATA_THRESHOLD</a></div><div class="ttdeci">#define DEFAULT_DIRCACHE_METADATA_THRESHOLD</div><div class="ttdef"><b>Definition</b> globals.h:55</div></div>
+<div class="ttc" id="aglobals_8h_html_a94f26b483b4c06a887abbcd0a3e3e3fb"><div class="ttname"><a href="globals_8h.html#a94f26b483b4c06a887abbcd0a3e3e3fb">DEFAULT_DIRCACHE_METADATA_THRESHOLD</a></div><div class="ttdeci">#define DEFAULT_DIRCACHE_METADATA_THRESHOLD</div><div class="ttdef"><b>Definition</b> globals.h:58</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -960,6 +962,28 @@ Debugging</h1>
       <table class="memname">
         <tr>
           <td class="memname">unsigned long queue_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef76ca4dd4e459421d6f0a22d98365fb" name="aef76ca4dd4e459421d6f0a22d98365fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef76ca4dd4e459421d6f0a22d98365fb">&#9670;&#160;</a></span>queue_count_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long queue_count_max = 0</td>
         </tr>
       </table>
   </td>

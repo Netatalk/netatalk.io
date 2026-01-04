@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -157,9 +157,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a57de32689ff7d2a2f52214a1132057fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create struct dir from struct path.  <br /></td></tr>
 <tr class="memitem:afc7ef5b06012f9911249c5a111d88d11" id="r_afc7ef5b06012f9911249c5a111d88d11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7ef5b06012f9911249c5a111d88d11">dir_modify</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#aed7077a729bc2cf6b1fedd3ce58331a6">pdid</a>, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a> <a class="el" href="nad__cp_8c.html#a39466504497f1ab95465d7daf62514c1">did</a>, const char *new_mname, const char *new_uname, bstring pdir_fullpath)</td></tr>
 <tr class="memitem:ad9fbc8ab01c3318e8da4a88258e4b68f" id="r_ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9fbc8ab01c3318e8da4a88258e4b68f">dir_remove</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, struct <a class="el" href="structdir.html">dir</a> *<a class="el" href="structdir.html">dir</a>)</td></tr>
-<tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache.  <br /></td></tr>
+<tr class="memdesc:ad9fbc8ab01c3318e8da4a88258e4b68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a file/directory from dircache with automatic curdir recovery.  <br /></td></tr>
 <tr class="memitem:ab10b9050bf845ab1cac053e7230c561c" id="r_ab10b9050bf845ab1cac053e7230c561c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab10b9050bf845ab1cac053e7230c561c">dirlookup</a> (const struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>)</td></tr>
-<tr class="memdesc:ab10b9050bf845ab1cac053e7230c561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a DID.  <br /></td></tr>
+<tr class="memdesc:ab10b9050bf845ab1cac053e7230c561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public CNID (Directory ID) resolution (supports files and directories).  <br /></td></tr>
+<tr class="memitem:ab68771b68b176fad1ee356902e694427" id="r_ab68771b68b176fad1ee356902e694427"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab68771b68b176fad1ee356902e694427">dirlookup_strict</a> (const struct <a class="el" href="structvol.html">vol</a> *, <a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a>)</td></tr>
+<tr class="memdesc:ab68771b68b176fad1ee356902e694427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strict DID resolution with inode validation.  <br /></td></tr>
 <tr class="memitem:ae970ba5c372190436c80a23e2a0965fb" id="r_ae970ba5c372190436c80a23e2a0965fb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdir.html">dir</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae970ba5c372190436c80a23e2a0965fb">dirlookup_bypath</a> (const struct <a class="el" href="structvol.html">vol</a> *<a class="el" href="structvol.html">vol</a>, const char *<a class="el" href="structpath.html">path</a>)</td></tr>
 <tr class="memitem:a87634b99356f3c5bed8a02b410ac518f" id="r_a87634b99356f3c5bed8a02b410ac518f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87634b99356f3c5bed8a02b410ac518f">movecwd</a> (const struct <a class="el" href="structvol.html">vol</a> *, struct <a class="el" href="structdir.html">dir</a> *)</td></tr>
 <tr class="memdesc:a87634b99356f3c5bed8a02b410ac518f"><td class="mdescLeft">&#160;</td><td class="mdescRight">chdir() to dir  <br /></td></tr>
@@ -1395,13 +1397,16 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Remove a file/directory from dircache. </p>
+<p>Remove a file/directory from dircache with automatic curdir recovery. </p>
+<p>This function centralizes global curdir safety for all callers. When removing a cache entry that is curdir, it attempts curdir recovery via CNID database and falls back to volume root if recovery fails.</p>
 <ol type="1">
 <li>Check the dir</li>
-<li>Remove it from the cache</li>
-<li>Queue it for removal</li>
-<li>If it's a request to remove curdir, mark curdir as invalid</li>
-<li>Mark it as invalid</li>
+<li>Detect if removing curdir and save DID</li>
+<li>Remove from cache and queue for deallocation</li>
+<li>Set curdir=NULL if removing curdir (safer than dangling pointer)</li>
+<li>Attempt recovery via dirlookup(saved_did)</li>
+<li>If recovery fails, fallback to vol-&gt;v_root or rootParent</li>
+<li>Mark entry invalid</li>
 </ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1410,7 +1415,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if curdir was removed and recovery failed (curdir guaranteed non-NULL on return) </dd></dl>
 
 </div>
 </div>
@@ -1441,19 +1446,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Resolve a DID. </p>
-<p>Resolve a DID, allocate a struct dir for it</p><ol type="1">
-<li>Check for special CNIDs 0 (invalid), 1 and 2.<ol type="a">
-<li>Check if the DID is in the cache.</li>
-<li>Check if it's really a dir because we cache files too.</li>
-</ol>
-</li>
-<li>If it's not in the cache resolve it via the database.</li>
-<li>Build complete server-side path to the dir.</li>
-<li>Check if it exists and is a directory.</li>
-<li>Create the struct dir and populate it.</li>
-<li>Add it to the cache.</li>
-</ol>
+<p>Public CNID (Directory ID) resolution (supports files and directories). </p>
+<p>Resolves a CNID (Directory ID) to its cached entry. This function supports both files and directories since DID can refer to either type. If cache hit, returns cache entry, if cache miss, returns CNID database record and updates cache</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
@@ -1461,7 +1455,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to struct dir </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to struct dir (may have DIRF_ISFILE flag for files) </dd></dl>
 
 </div>
 </div>
@@ -1491,6 +1485,47 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab68771b68b176fad1ee356902e694427" name="ab68771b68b176fad1ee356902e694427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68771b68b176fad1ee356902e694427">&#9670;&#160;</a></span>dirlookup_strict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdir.html">dir</a> * dirlookup_strict </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structvol.html">vol</a> *</td>          <td class="paramname"><span class="paramname"><em>vol</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="adouble_8h.html#aef0c7a006ff504f92f04b55e14c27422">cnid_t</a></td>          <td class="paramname"><span class="paramname"><em>did</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Strict DID resolution with inode validation. </p>
+<p>Like <a class="el" href="directory_8c.html#a1d42d13b8257907a411a2704e37dfe93" title="Public CNID (Directory ID) resolution (supports files and directories).">dirlookup()</a>, but performs additional validation to ensure the cached directory entry matches the actual filesystem state. This prevents race conditions where a directory has been renamed/moved but the cache entry still points to the old path/has become stale.</p>
+<p>Use this for destructive operations (delete, rename, move) where operating on the wrong object could cause data loss.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vol</td><td>pointer to struct vol </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">did</td><td>DID to resolve</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to validated struct dir, or NULL with afp_errno set </dd></dl>
 
 </div>
 </div>

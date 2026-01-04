@@ -21,7 +21,8 @@ var searchData=
   ['etc_2fatalkd_2fzip_2eh_18',['zip.h',['../etc_2atalkd_2zip_8h.html',1,'']]],
   ['etc_2fcnid_5fdbd_2fmain_2ec_19',['main.c',['../etc_2cnid__dbd_2main_8c.html',1,'']]],
   ['etc_2fpapd_2fmain_2ec_20',['main.c',['../etc_2papd_2main_8c.html',1,'']]],
-  ['extattr_2ec_21',['extattr.c',['../extattr_8c.html',1,'']]],
-  ['extattrs_2ec_22',['extattrs.c',['../extattrs_8c.html',1,'']]],
-  ['extattrs_2eh_23',['extattrs.h',['../extattrs_8h.html',1,'']]]
+  ['explicit_5fbzero_2ec_21',['explicit_bzero.c',['../explicit__bzero_8c.html',1,'']]],
+  ['extattr_2ec_22',['extattr.c',['../extattr_8c.html',1,'']]],
+  ['extattrs_2ec_23',['extattrs.c',['../extattrs_8c.html',1,'']]],
+  ['extattrs_2eh_24',['extattrs.h',['../extattrs_8h.html',1,'']]]
 ];

@@ -52,6 +52,7 @@ var annotated_dup =
     [ "context", "structcontext.html", "structcontext" ],
     [ "cups_status", "structcups__status.html", "structcups__status" ],
     [ "DALLOC_CTX", "struct_d_a_l_l_o_c___c_t_x.html", "struct_d_a_l_l_o_c___c_t_x" ],
+    [ "darwin_ace", "structdarwin__ace.html", "structdarwin__ace" ],
     [ "darwin_ace_t", "structdarwin__ace__t.html", "structdarwin__ace__t" ],
     [ "darwin_acl_header_t", "structdarwin__acl__header__t.html", "structdarwin__acl__header__t" ],
     [ "db_param", "structdb__param.html", "structdb__param" ],

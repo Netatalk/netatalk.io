@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,14 +102,14 @@ $(function(){initNavTree('md_developer_2libatalk.html','',''); });
   <div class="headertitle"><div class="title">Using libatalk from third party apps </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md37"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md41"></a></p>
 <p>Third party developers wishing to add Netatalk support to their applications have two choices</p>
 <ol type="1">
 <li>Directly integrate libatalk from the Netatalk source tree</li>
 <li>Link with libatalk which is a shared library in its own right starting with Netatalk 3</li>
 </ol>
 <p>Please note that you need at least Netatalk 3.0.1 for approach 2 to work, because in earlier Netatalk versions some necessary headers are not installed correctly.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
 Example</h1>
 <p>This examples links a trivial example program with the libatalk shared library. Assuming Netatalk has been installed to /usr/local/netatalk, compiling backup_demo.c is done like this:</p>
 <div class="fragment"><div class="line">c99 -I/usr/local/netatalk/include -o backup_demo backup_demo.c -L/usr/local/netatalk/lib -latalk -Wl,-rpath=/usr/local/netatalk/lib</div>
@@ -281,7 +281,7 @@ Example</h1>
 <div class="ttc" id="anetatalk__conf_8h_html_a078796270be4438a00a963d87e8d332b"><div class="ttname"><a href="netatalk__conf_8h.html#a078796270be4438a00a963d87e8d332b">getvolbypath</a></div><div class="ttdeci">struct vol * getvolbypath(AFPObj *obj, const char *path)</div><div class="ttdoc">Search volume by path, creating user home vols as necessary.</div><div class="ttdef"><b>Definition</b> netatalk_conf.c:2240</div></div>
 <div class="ttc" id="anetatalk__conf_8h_html_aa051b28df16f69cdbffebc533455f4e7"><div class="ttname"><a href="netatalk__conf_8h.html#aa051b28df16f69cdbffebc533455f4e7">load_volumes</a></div><div class="ttdeci">int load_volumes(AFPObj *obj, lv_flags_t flags)</div><div class="ttdoc">Initialize volumes and load ini configfile.</div><div class="ttdef"><b>Definition</b> netatalk_conf.c:1974</div></div>
 <div class="ttc" id="anetatalk__conf_8h_html_adb4aefcaa370e4e8ced949f9bd893f14"><div class="ttname"><a href="netatalk__conf_8h.html#adb4aefcaa370e4e8ced949f9bd893f14">afp_config_parse</a></div><div class="ttdeci">int afp_config_parse(AFPObj *obj, char *processname)</div><div class="ttdef"><b>Definition</b> netatalk_conf.c:2480</div></div>
-<div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:154</div></div>
+<div class="ttc" id="astruct_a_f_p_obj_html"><div class="ttname"><a href="struct_a_f_p_obj.html">AFPObj</a></div><div class="ttdef"><b>Definition</b> globals.h:158</div></div>
 <div class="ttc" id="astructadouble_html"><div class="ttname"><a href="structadouble.html">adouble</a></div><div class="ttdef"><b>Definition</b> adouble.h:191</div></div>
 <div class="ttc" id="astructvfs__ops_html_ad990d11a01bbcd94d75be1faedbafabb"><div class="ttname"><a href="structvfs__ops.html#ad990d11a01bbcd94d75be1faedbafabb">vfs_ops::vfs_copyfile</a></div><div class="ttdeci">vfs_copyfile_fn vfs_copyfile</div><div class="ttdef"><b>Definition</b> vfs.h:109</div></div>
 <div class="ttc" id="astructvol_html"><div class="ttname"><a href="structvol.html">vol</a></div><div class="ttdef"><b>Definition</b> include/atalk/volume.h:30</div></div>

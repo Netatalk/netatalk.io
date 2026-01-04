@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -105,6 +105,7 @@ $(function(){initNavTree('compat_8h.html','',''); });
 <div class="textblock"><code>#include &lt;signal.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
 </div>
 <p><a href="compat_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -115,8 +116,38 @@ Functions</h2></td></tr>
 <tr class="memitem:a64bc119cf084d1ecfd95098994597f12" id="r_a64bc119cf084d1ecfd95098994597f12"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bc119cf084d1ecfd95098994597f12">strlcpy</a> (char *, const char *, size_t)</td></tr>
 <tr class="memitem:a63e609bfa0d354dcd7e35b297c2e6fdd" id="r_a63e609bfa0d354dcd7e35b297c2e6fdd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63e609bfa0d354dcd7e35b297c2e6fdd">strlcat</a> (char *, const char *, size_t)</td></tr>
 <tr class="memitem:a54b6dd2c589426c8c2f2036f3342423e" id="r_a54b6dd2c589426c8c2f2036f3342423e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b6dd2c589426c8c2f2036f3342423e">vasprintf</a> (char **ret, const char *fmt, va_list ap)</td></tr>
+<tr class="memitem:a51869b401cb0f3e711527bc9a730fbff" id="r_a51869b401cb0f3e711527bc9a730fbff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51869b401cb0f3e711527bc9a730fbff">explicit_bzero</a> (void *s, size_t n)</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a51869b401cb0f3e711527bc9a730fbff" name="a51869b401cb0f3e711527bc9a730fbff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51869b401cb0f3e711527bc9a730fbff">&#9670;&#160;</a></span>explicit_bzero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void explicit_bzero </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa324e7057ec58dbe3addc36fee2ced5f" name="aa324e7057ec58dbe3addc36fee2ced5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa324e7057ec58dbe3addc36fee2ced5f">&#9670;&#160;</a></span>pselect()</h2>
 

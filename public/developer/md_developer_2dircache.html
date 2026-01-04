@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -156,37 +156,71 @@ Part 2: The Page Cache Problem</h1>
 <p>Degeneration Under Common Patterns: LRU can perform poorly with certain access patterns. For example, if an application loops over an array larger than the number of pages in the cache, it will cause a page fault for every access, leading to inefficiency (the cache churns and does not hold data long enough to achieve a good hit rate). Netatalk currently has a small maximum dircache value (dircachesize = 131072) as the implementation performance degrades above this limit.</p>
 <p>Cache Pollution: LRU may evict pages that are frequently accessed but not necessarily the most relevant, which can lead to less optimal cache performance. For example when enumerating paths to move around a directory tree, Netatalk historically (and still does today by default, until you apply the new <span class="tt">afp.conf</span> tuning options shown below) performed an IO stat operation every time it reads a dircache entry to validate the file/directory still exists. These IO stat validations allow Netatalk to detect external filesystem changes, but keep unneeded data warm in the page cache, pushing other more important objects off the page cache and increasing disk IO - even though Netatalk has the dircache containing everything needed.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
-How Directory Enumeration Pollutes the Page Cache</h2>
-<p>When a client browses a Netatalk network folder, here's what traditionally happens:</p>
+How Directory Enumeration Works</h2>
+<p>When a client browses a Netatalk network folder, here's the actual sequence:</p>
 <pre class="mermaid">
 sequenceDiagram
     participant Client as Mac Client
     participant Netatalk
-    participant DirCache as Directory Cache
+    participant Disk as Filesystem
     participant PageCache as Page Cache
-    participant Disk as Storage
+    participant DirCache as Directory Cache
 
-    Client-&gt;&gt;Netatalk: List folder contents
-    Netatalk-&gt;&gt;DirCache: Lookup entries
+    Client-&gt;&gt;Netatalk: List folder contents (FPEnumerate)
+    Netatalk-&gt;&gt;Disk: readdir() - get entry names
+    Disk-&gt;&gt;Netatalk: Return entry names
 
-    loop For EVERY cached entry
-        DirCache-&gt;&gt;Netatalk: Return cached entry
-        Note over Netatalk: Must validate freshness
-        Netatalk-&gt;&gt;PageCache: stat() system call
+    loop For EACH entry
+        Netatalk-&gt;&gt;PageCache: stat() each entry
         alt Cache miss
-            PageCache-&gt;&gt;Disk: Read inode
+            PageCache-&gt;&gt;Disk: Read inode metadata
             Disk-&gt;&gt;PageCache: Load metadata
-            Note over PageCache: Page-Cache Evicts something else!
+            Note over PageCache: Evicts LRU data
         end
-        PageCache-&gt;&gt;Netatalk: Store and Return metadata
+        PageCache-&gt;&gt;Netatalk: Return stat data
+
+        alt Entry is directory
+            Netatalk-&gt;&gt;DirCache: Check if cached
+            alt Not in cache
+                Netatalk-&gt;&gt;DirCache: Add directory to cache
+            end
+        else Entry is file
+            Netatalk-&gt;&gt;DirCache: Check if cached (if file caching enabled)
+            alt Not in cache
+                Netatalk-&gt;&gt;DirCache: Add file to cache (if enabled)
+            end
+        end
     end
 
-    Netatalk-&gt;&gt;Client: Return validated list
-</pre><p>With the dircache improvements we no longer run everything inside "[For EVERY cached entry]". Instead we now only do this probabilistically, and transparently when a cached entry is found to be invalid on use.</p>
+    Netatalk-&gt;&gt;Client: Return file list with metadata
+</pre><p><b>Key insights from <a class="el" href="enumerate_8c.html">enumerate.c</a></b>:</p>
+<ol type="1">
+<li>All entries are read from filesystem via <span class="tt">readdir()</span> and <span class="tt">stat()</span> all - high page-cache/disk demand</li>
+<li><b>Directories</b>: Cache checked before adding, avoiding duplicate entries</li>
+<li><b>Files</b>: Cache is NOT checked during enumeration - always processed via <span class="tt"><a class="el" href="afpd_2file_8c.html#a4f40897ee367f9ee8bb97e951e20d6a4">getfilparams()</a></span> which may add them to cache internally</li>
+</ol>
+<p><b>Current enumeration inefficiency:</b></p>
+<ul>
+<li><b>Every file</b> is <span class="tt">stat()</span>'ed on every enumeration</li>
+<li><b>Every directory</b> is <span class="tt">stat()</span>'ed, then cache is checked to avoid duplicate entries</li>
+<li>Repeatedly browsing a folder with 10,000 files = 10,000 stat calls each time (LRU scanning problem)</li>
+</ul>
+<p><b>Future optimization opportunity - Cache-First Enumeration:</b></p>
+<p>Optimal approach:</p>
+<ol type="1">
+<li><b>readdir()</b>: Get list of entry names from filesystem (unavoidable - must know what exists)</li>
+<li><b>For each entry</b>: Check <span class="tt"><a class="el" href="dircache_8c.html#a0754cbe312bb4c8051af6bb0cd20ff3f" title="Search the cache via did/name hashtable.">dircache_search_by_name()</a></span> first<ul>
+<li><b>Cache HIT</b>: Use cached metadata</li>
+<li><b>Cache MISS</b>: Fall back to <span class="tt">stat()</span> and add to cache</li>
+</ul>
+</li>
+<li><b>Result</b>: Second enumeration of same folder could be ~99% cache-served (only 1% stat for probabilistic validation)</li>
+</ol>
+<p>Would potentially transform repeated directory browsing from O(n) stat calls to O(n/100) stat calls, eliminating most filesystem I/O.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 The LRU Scanning Problem</h2>
 <p>LRU caches have a fundamental weakness called the <b>scanning problem</b>:</p>
-<p>When Netatalk validates thousands of directory entries, each <span class="tt">stat()</span> call:</p>
+<p>When Netatalk validates thousands of entries, each <span class="tt">stat()</span> call:</p>
 <ol type="1">
 <li>Checks the page cache</li>
 <li>Can causes a cache miss (directories and directory trees have many entries)</li>
@@ -194,7 +228,7 @@ The LRU Scanning Problem</h2>
 <li><b>Evicts something potentially more valuable</b></li>
 </ol>
 <p>Parent folder recursion:</p>
-<p>Each directory entry, stores its parent ID, and each parent ID has its own directory cache entry, providing a recursive chain (path) to root. When a new directory is accessed/added, <a class="el" href="directory_8c.html#a1d42d13b8257907a411a2704e37dfe93" title="Resolve a DID.">dirlookup()</a> recursively calls itself until it finds a cached ancestor or reaches volume root. Every recursive lookup also results in many more stat calls. So even opening a small folder directly, still requires stat'ing every level of the whole path to be pushed into the page cache.</p>
+<p>Each directory entry, stores its parent ID, and each parent ID has its own directory cache entry, providing a recursive chain (path) to root. When a new directory is accessed/added, <a class="el" href="directory_8c.html#a1d42d13b8257907a411a2704e37dfe93" title="Public CNID (Directory ID) resolution (supports files and directories).">dirlookup()</a> recursively calls itself until it finds a cached ancestor or reaches volume root. Every recursive lookup also results in many more stat calls. So even opening a small folder directly, still requires stat'ing every level of the whole path to be pushed into the page cache.</p>
 <p>If the dircache max size is small (by default just 8192 entries), as you move around your file share, old entries are pushed off (evicted) as new ones are added. This high entry rotation is known as "scan eviction" and means by the time you want to go back to a previous directory and read a cached entry, it has likely already been evicted which can cause a cascade effect of recursive lookups and stats calls to restore the broken cached paths if parent entries are evicted. So unless your whole file server has less than 8192 file and directories, it is recommended to increase the <span class="tt">dircachesize</span> value in <a href="https://netatalk.io/manual/en/afp.conf.5">afp.conf</a>.</p>
 <p>Future releases will increase the maximum size of the dircache once existing performance issues are addressed. We are also considering retaining directories over files during eviction to reduce recursive path discoveries after parent folders are evicted.</p>
 <hr  />
@@ -367,40 +401,31 @@ graph TB
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Part 7: Monitoring the Improvement</h1>
-<p>You can observe the benefits using these metrics:</p>
-<pre class="mermaid">
-graph LR
-    subgraph "Metrics to Watch"
-        M1[dircache statistics<br  />
-via logs]
-        M2[vmstat<br  />
-page cache activity]
-        M3[iostat<br  />
-disk IOPS]
-        M4[ZFS ARC stats<br  />
-hit rates]
-    end
-
-    M1 --&gt; R1[invalid_on_use<br  />
-should be low]
-    M2 --&gt; R2[Lower scan rate]
-    M3 --&gt; R3[Reduced read IOPS]
-    M4 --&gt; R4[Higher hit ratio]
-
-    style R1 fill:#e6f3ff
-    style R2 fill:#e6f3ff
-    style R3 fill:#e6f3ff
-    style R4 fill:#e6f3ff
-</pre><h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+<p>You can observe the benefits of dircache validation optimization using these metrics:</p>
+<ul>
+<li><b>Dircache statistics via logs</b>: Monitor <span class="tt">invalid_on_use</span> counter (should be low, indicating cached entries remain valid)</li>
+<li><b>vmstat page cache activity</b>: Look for lower page scan rates (less cache churn)</li>
+<li><b>iostat disk IOPS</b>: Measure reduced read IOPS (fewer stat calls to disk)</li>
+<li><b>ZFS ARC stats</b>: Check for higher hit ratios (more efficient cache utilization)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
 Sample Statistics</h2>
+<p>The actual log format from <a class="el" href="dircache_8c.html" title="Directory Cache.">dircache.c</a>:</p>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a> statistics: (user: john)</div>
-<div class="line">entries: 4096, lookups: 100000, </div>
-<div class="line">hits: 95000 (95.0%), misses: 5000,</div>
-<div class="line">validations: ~950 (1.0%),  # ← Only 1% validated!</div>
-<div class="line">added: 5000, removed: 900, </div>
-<div class="line">expunged: 10, invalid_on_use: 2, </div>
+<div class="line">entries: 4096, max_entries: 8192, config_max: 131072,</div>
+<div class="line">lookups: 100000, hits: 95000 (95.0%), misses: 5000,</div>
+<div class="line">validations: ~950 (1.0%),</div>
+<div class="line">added: 5000, removed: 900, expunged: 10, invalid_on_use: 2, evicted: 256,</div>
+<div class="line">validation_freq: 100</div>
 <div class="ttc" id="adircache_8c_html_aaa0f09990ad04686c3d9dbe7d4238214"><div class="ttname"><a href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a></div><div class="ttdeci">static hash_t * dircache</div><div class="ttdef"><b>Definition</b> dircache.c:114</div></div>
-</div><!-- fragment --><hr  />
+</div><!-- fragment --><p><b>Key metrics to monitor:</b></p>
+<ul>
+<li><b>invalid_on_use</b>: Should remain low - indicates cached entries stay valid</li>
+<li><b>validations ratio</b>: Shows validation frequency working as configured (1.0% = every 100th)</li>
+<li><b>hit_ratio</b>: High percentage (95%) indicates good cache effectiveness</li>
+<li><b>max_entries</b>: Peak/high-water cache usage this session - helps tune <span class="tt">dircachesize</span></li>
+</ul>
+<hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 Conclusion</h1>
 <p>The real benefit of this optimization isn't just the eliminated stat() calls— it's the compound effect across the entire storage stack:</p>
@@ -415,12 +440,17 @@ Key Takeaways</h2>
 <li><b>Small changes can have compound effects</b></li>
 </ol>
 <p><b>By default nothing changes, as the default value for <span class="tt"><a class="el" href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a> validation freq = 1</span>.</b></p>
-<p>To try this speed up, configure it;</p>
-<div class="fragment"><div class="line">dircache validation freq = 1-100</div>
-<div class="line">dircache metadata window = 60-3600</div>
-<div class="line">dircache metadata threshold = 10-1800</div>
-</div><!-- fragment --><hr  />
-<p><em>This optimization is available in Netatalk 4.4+ with configurable validation frequency via the <span class="tt"><a class="el" href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a> validation freq</span> parameter.</em></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
+File Caching Implementation</h2>
+<p>In <a class="el" href="directory_8c.html">directory.c</a>, the <span class="tt"><a class="el" href="directory_8c.html#ade6b789ccd7cc475e656d2593fc1f398" title="Internal CNID (Directory ID) resolution with retry control.">dirlookup_internal()</a></span> function controls file caching behavior through the <span class="tt">AFPobj-&gt;options.dircache_files</span> configuration setting:</p>
+<ul>
+<li><b>Cache lookup</b>: When a file is found in cache, checks <span class="tt">AFPobj-&gt;options.dircache_files</span> before returning it — if disabled, returns AFPERR_BADTYPE to reject the cached file entry</li>
+<li><b>CNID lookup</b>: When a file is resolved via CNID, sets the <span class="tt"><a class="el" href="include_2atalk_2directory_8h.html#a776c5eec29fd96623e3f147c34e19f51">DIRF_ISFILE</a></span> flag which will cause cache rejection if file caching is disabled</li>
+<li><b>Parent recursion</b>: Uses <span class="tt">strict</span> parameter to control whether parents must be directories, ensuring parent-chain rebuilds work correctly (database design guarantee)</li>
+</ul>
+<p>This configuration-driven control separates caching policy from core lookup logic, allowing administrators to tune memory vs. performance tradeoffs based on workload characteristics.</p>
+<hr  />
+<p><em>Directory cache optimizations available in Netatalk 4.4+ with configurable validation frequency and file caching control via <span class="tt"><a class="el" href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a> validation freq</span> and <span class="tt"><a class="el" href="dircache_8c.html#aaa0f09990ad04686c3d9dbe7d4238214">dircache</a> files</span> parameters.</em></p>
 <p>Developed and Authored by Andy Lemin, with Contributions from the Netatalk team. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

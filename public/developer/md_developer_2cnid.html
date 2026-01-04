@@ -26,7 +26,7 @@
 <body>
 <script
     src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
     crossorigin="anonymous"
 ></script>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -113,13 +113,13 @@ Advantages</h1>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 Disadvantages</h1>
-<ul>
-<li><p class="startli">Performance in an environment of processes sharing the database (files) is potentially better for two reasons:</p>
-<p class="startli">i) IPC overhead. ii) r/o access to database pages is possible by more than one process at once, r/w access is possible for non overlapping regions.</p>
-<p class="startli">The current implementation of cnid_dbd uses unix domain sockets as the IPC mechanism. While this is not the fastest possible method, it is very portable and the cnid_dbd IPC mechanisms can be extended to use faster IPC (like mmap) on architectures where it is supported. As a ballpark figure, 20000 requests/replies to the cnid_dbd daemon take about 0.6 seconds on a Pentium III 733 MHz running Linux Kernel 2.4.18 using unix domain sockets. The requests are "empty" (no database lookups/changes), so this is just the IPC overhead.</p>
-<p class="startli">I have not measured the effects of the advantages of simultaneous database access.</p>
-</li>
-</ul>
+<p>Performance in an environment of processes sharing the database (files) is potentially better for two reasons:</p>
+<ol type="1">
+<li>IPC overhead.</li>
+<li>r/o access to database pages is possible by more than one process at once, r/w access is possible for non overlapping regions.</li>
+</ol>
+<p>The current implementation of cnid_dbd uses Unix domain sockets as the IPC mechanism. While this is not the fastest possible method, it is very portable and the cnid_dbd IPC mechanisms can be extended to use faster IPC (like mmap) on architectures where it is supported. As a ballpark figure, 20000 requests/replies to the cnid_dbd daemon take about 0.6 seconds on a Pentium III 733 MHz running Linux Kernel 2.4.18 using Unix domain sockets. The requests are "empty" (no database lookups/changes), so this is just the IPC overhead.</p>
+<p>The effects of the advantages of simultaneous database access have not been measured.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Installation and configuration</h1>
 <p>There are two executables that will be built in etc/cnid_dbd and installed into the systems binaries directories of netatalk: cnid_metad and cnid_dbd. cnid_metad should run all the time with root permissions. It will be notified when an instance of afpd starts up and will in turn make sure that a cnid_dbd daemon is started for the volume that afpd wishes to access. The cnid_dbd daemon runs as long as necessary and services any other instances of afpd that access the volume. You can safely kill it with SIGTERM, it will be restarted automatically by cnid_metad as soon as the volume is accessed again.</p>
