@@ -1,29 +1,28 @@
-# Netatalk, Open Source File Server for Macs
+# Netatalk, Free and Open Source File Server
 
-Netatalk is a Free and Open Source file server for Macs. The Netatalk
-software runs on a UNIX-like operating system (such as Linux, BSD or
-macOS) and allows Macintosh computers to easily connect with each other
+Netatalk is a Free and Open Source file server that uses the AFP protocol.
+The Netatalk software runs on a UNIX-like operating system (such as Linux, *BSD or
+macOS) and allows any computer with an AFP client to easily connect with each other
 and share files on a local network or over the Internet.
 
-Written in pure C, it is light-weight, performant, and portable.
+The Netatalk file server software is light-weight, performant, and portable.
 Conforming to the [Apple Filing
 Protocol](https://developer.apple.com/library/archive/documentation/Networking/Conceptual/AFP/Introduction/Introduction.html#//apple_ref/doc/uid/TP40000854-CH1-SW1)
-specification up to and including AFP 3.4, any macOS, Mac OS X, or Mac
-OS system can talk to a Netatalk file server out of the box.
+specification, any macOS, Mac OS X, or Classic Mac OS system can connect to a Netatalk file server out of the box.
 
-Since 1990, Netatalk has been leveraged by universities, enterprises,
-and home users for collaboration and remote data backup on Macs. With
-Netatalk, any UNIX-like host is able to integrate seamlessly with macOS
-network file system services.
+Since its launch in 1990, Netatalk has been leveraged by universities, enterprises,
+and home users for collaboration and remote data backup on Macs.
+With Netatalk, any UNIX-like host is able to integrate seamlessly with networked
+macOS systems, act as centralized file storage, and provide data backup services.
 
 ## Getting Started
 
-There are roughly three ways to get started with Netatalk: Install a
-pre-built binary package, pull a container image, or build the software
-yourself from source. Knowledge of how to install packages, edit
-configuration files, and starting/stopping system services are required.
+There are three ways to get started with Netatalk: Install a pre-built binary package,
+deploy a container image, or build the software yourself from source code.
+Knowledge of basic system administration is required, including installing packages,
+editing configuration files, and starting/stopping system services.
 
-### 1. Install a pre-built package for your distribution
+### 📦 Install a pre-built package for your distribution
 
 Use your operating system's package manager to install the latest
 available *netatalk* package. This is the recommended option for most
@@ -32,7 +31,7 @@ users.
 See [Repology](https://repology.org/project/netatalk/packages)
 for a list of known packages.
 
-### 2. Deploy a container image
+### 🐳 Deploy a container image
 
 The project publishes images on [Docker Hub](https://hub.docker.com/r/netatalk/netatalk)
 that can be deployed with a container runtime such as docker or podman.
@@ -40,7 +39,7 @@ that can be deployed with a container runtime such as docker or podman.
 Refer to the [container documentation](/docker.html) for details on how to
 configure the container.
 
-### 3. Build from source
+### 🛠️ Build from source
 
 You want to build from source when neither of the previous options are
 feasible, or when you want to do a hardened Netatalk deployment with
@@ -62,19 +61,8 @@ The [Configuration](/manual/en/Configuration.html) chapter and
 [afp.conf](/manual/en/afp.conf.5.html) page in the Netatalk manual
 are good places to start.
 
-Once Netatalk is up and running, use your AFP client – macOS built-in or 3rd party like *afpfs-ng* – to connect to the file server!
-
-## How to Contribute
-
-If you found a bug or have an idea for a new feature,
-please file a ticket at the [GitHub issue tracker](https://github.com/Netatalk/netatalk/issues/new/choose).
-
-If you want to contribute code, please familiarize yourself with
-the [Contributor Guidelines](https://netatalk.io/docs/Developer-Notes)
-and then file a [Pull Request](https://github.com/Netatalk/netatalk/pulls)
-with the project.
-
-We are looking forward to your contribution!
+Once Netatalk is up and running, use your AFP client to connect to the file server.
+This can be the macOS built-in client or 3rd party clients such as [afpfs-ng](https://github.com/Netatalk/afpfs-ng).
 
 ## Latest News
 
