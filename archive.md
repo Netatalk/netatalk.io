@@ -4,6 +4,27 @@
 
 Below is a full history of news announcements ever published on the website.
 
+### Netatalk 4.3.0 is available
+
+*5th of August 2025*
+
+The Netatalk development team is proud to announce the first release of
+the Netatalk 4.3 release series.
+
+Notable in this release, is the addition of an experimental SQLite
+CNID backend, as well as a new AppleTalk tool called *rtmpqry*.
+
+A major breaking change is the mandatory dependency on a shared [bstring](https://github.com/msteinert/bstring)
+library. This library was previously vendored in the Netatalk source tree.
+In the absense of a packaged version of *bstring* for your operating system,
+the Meson build system can build it on the fly as a subproject.
+
+Early adopters are encouraged to test the new release and report any
+issues to the Netatalk development team.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.3/ReleaseNotes4.3.0.html).
+
 ### Netatalk 4.2.4 is available
 
 *31st of May 2025*
