@@ -1,0 +1,303 @@
+# 名前
+
+nad - Netatalk AppleDouble ファイルユーティリティ 一式
+
+# 概要
+
+**nad** [ls | cp | mv | rm | set | find] [...]
+
+**nad** [-v | --version]
+
+# 説明
+
+**nad**は、Netatalk AFP 共有ボリュームで動作するファイルユーティリティ一式である。
+共有 Netatalk ボリューム内のファイルが変更されると、AppleDouble データ（ファイルの拡張属性、
+同じディレクトリ内の .\_ ファイルまたは **.AppleDouble** ディレクトリ内のファイル）
+および CNID データベースが適切に更新される。
+
+**nad**を使用することは、Netatalk共有ボリューム内のファイルおよびディレクトリに対するオペレーティングシステムのネイティブなファイル操作コマンドよりも好ましい。なぜなら、Mac
+OSのメタデータの整合性とCNIDデータベースの正確性を維持するからである。
+
+これは、ホストシステムでNetatalkが実行されており、AFPボリュームがNetatalkによって共有されていることに依存する。
+
+ファイルおよびディレクトリにアクセスするための適切な権限を持つユーザーのみが、**nad**を使用してそれらを操作できる。これは、ホストシステムでNetatalkが実行されており、AFPボリュームがNetatalkによって共有されていることに依存する。
+
+# 有効なコマンド
+
+ファイルやディレクトリをリストする。
+
+> nad ls [-dRl[u]] {ファイル|ディレクトリ [...]}
+
+ファイルやディレクトリをコピーする。
+
+> nad cp [-aipvf] {既存のファイル} {宛先のファイル}
+>
+> nad cp -R [-aipvf] {既存のファイル|既存のディレクトリ ...} {宛先のディレクトリ}
+
+ファイルやディレクトリを移動する。
+
+> nad mv [-finv] {既存のファイル} {宛先のファイル}
+>
+> nad mv [-finv] {既存のファイル|既存のディレクトリ ...} {宛先のディレクトリ}
+
+ファイルやディレクトリを削除する。
+
+> nad rm [-Rv] {ファイル|ディレクトリ}
+
+ファイルにメタデータを設定する。
+
+> nad set [-t タイプ] [-c 作成者] [-l ラベル] [-f 旗] [-a 属性] {ファイル}
+
+ファイルやディレクトリを検索する。
+
+> nad find [-v ボリュームパス] {ファイル|ディレクトリ}
+
+バージョンを表示する。
+
+> nad -v | --version
+
+# nad ls
+
+ファイルやディレクトリをリストする。 オプション:
+
+**-d**
+
+> ディレクトリを単純なファイルとしてリストする
+
+**-R**
+
+> サブディレクトリを再帰的にリストする
+
+**-l**
+
+> 長い出力。AFP infoをリストする
+
+**-u**
+
+> UNIX infoをリストする
+
+*長い出力の説明*
+
+    <unixinfo> <FinderFlags> <AFP Attributes> <Color> <Type> <Creator> <CNID from AppleDouble> <name>
+
+    FinderFlags (valid for (f)iles and/or (d)irectories):
+
+      d = On Desktop                      (f/d)
+      e = Hidden extension                (f/d)
+      m = Shared (can run multiple times) (f)
+      n = No INIT resources               (f)
+      i = Inited                          (f/d)
+      c = Custom icon                     (f/d)
+      t = Stationery                      (f)
+      s = Name locked                     (f/d)
+      b = Bundle                          (f/d)
+      v = Invisible                       (f/d)
+      a = Alias file                      (f/d)
+
+    AFP Attributes:
+
+      y = System                          (f/d)
+      w = No write                        (f)
+      p = Needs backup                    (f/d)
+      r = No rename                       (f/d)
+      l = No delete                       (f/d)
+      o = No copy                         (f)
+
+    Note: any letter appearing in uppercase means the flag is set but it's a directory for which the flag is not allowed.
+
+# nad cp
+
+ファイルやディレクトリをコピーする。
+
+上の概要で示した一番目の形式では、cpユーティリティはsrc_fileの内容をdst_fileへコピーする。二番目の形式では、それぞれの名前のsrc_fileの内容は配布先のdst_directoryにコピーされる。ファイル自身の名前は変更されない。ファイルを自分自身へコピーしようとしているのをcpが検出したら、コピーは失敗する。
+
+AFPボリュームへのコピーであると検出された場合、CNIDデータベースデーモンに接続し、全てのコピーはCNIDデータベースの手続きを踏む。ターゲットがAFPボリュームの場合はAppleDoubleデータもまたコピーされ、必要なら作成される。
+
+オプション:
+
+**-a**
+
+> アーカイブモード。**-Rp** と同じ。
+
+**-f**
+
+> それぞれの配布先パス名が既に存在している場合、それを削除してから新しいファイルを作成する。
+パーミッションに関わらず確認プロンプトを出さない。
+(**-f** オプションは手前の **-i** オプションと **-n** オプションを無効にする。)
+
+**-i**
+
+> 存在するファイルに上書きする前に、標準エラー出力にプロンプトを出す。
+もし標準入力からの返答が'y'または'Y'で始まるならばファイルコピーを試みる。
+(**-i** オプションは手前の **-f** オプションと **-n** オプションを無効にする。)
+
+**-n**
+
+> 存在するファイルを上書きしない。
+(**-n** オプションは手前の **-f** オプションと-iオプションを無効にする。)
+
+**-p**
+
+> 以下に示すそれぞれのコピー元ファイルの属性を、パーミッションが許す限り維持する:
+変更時刻、アクセス時刻、ファイルフラグ、ファイルモード、ユーザIDグループID。
+ユーザIDとグループIDが維持されない場合、エラーメッセージは表示されず、終了コードは変更されない。
+
+**-R**
+
+> もしsrc_fileでディレクトリを指定した場合、cpはそのディレクトリと全体のサブツリーをコピーする。
+もしsrc_fileが「/」で終わっている場合、ディレクトリ自身ではなく中身をコピーする。
+
+**-v**
+
+> コピーしたファイルを詳細に表示する。
+
+**-x**
+
+> ファイルシステムのマウントポイントを横断しない。
+
+# nad mv
+
+ファイルやディレクトリを移動する。
+
+AFPボリューム内のファイルを移動し、必要に応じてCNIDデータベースを更新する。以下のどちらかの場合はファイルをコピーしてからコピー元を削除する。
+
+- 移動元または移動先がAFPボリュームでない
+
+- 移動元AFPボリュームと移動先AFPボリュームが異なる
+
+オプション:
+
+**-f**
+
+> 配布先パスに上書きする前に確認プロンプトを出さない。(**-f** オプションは手前の **-i** オプションと **-n** オプションを無効にする。)
+
+**-i**
+
+> 存在するファイルに上書きする前に、標準エラー出力にプロンプトを出す。
+もし標準入力からの返答が'y'または'Y'で始まるならば移動を試みる。
+(**-i** オプションは手前の **-f** オプションと **-n** オプションを無効にする。)
+
+**-n**
+
+> 存在するファイルを上書きしない。
+(**-n** オプションは手前の **-f** オプションと-iオプションを無効にする。)
+
+**-v**
+
+> 移動したファイルを詳細に表示する。
+
+# nad rm
+
+ファイルやディレクトリを削除する。
+
+rmユーティリティはコマンドラインで指定した非ディレクトリ型のファイルを削除しようと試みる。もしファイルやディレクトリがAFPボリューム上にあるなら、対応するCNIDをボリュームデータベースから削除する。
+
+オプションは次の通り。
+
+**-R**
+
+> それぞれのファイル引数の下のファイル階層を削除しようと試みる。
+
+**-v**
+
+> ファイルを削除するときに詳細を表示する。
+
+# nad set
+
+ファイルにメタデータを設定する。
+
+set ユーティリティは、AFP ボリューム内のファイルのメタデータを変更する。
+
+オプションは次の通り。
+
+**-t** *タイプ*
+
+> ファイルの 4 文字のファイル タイプを変更する。
+
+**-c** *作成者*
+
+> ファイルの 4 文字の作成者タイプを変更する。
+
+**-l** *ラベル*
+
+> ファイルの色ラベルを変更する。使用可能な色については、以下のリストを参照。
+
+**-f** *旗*
+
+> ファイルの Finder
+フラグを変更する。使用可能なフラグについては、以下のリストを参照。大文字はフラグを設定し、小文字はフラグを削除する。
+
+**-a** *属性*
+
+> ファイルの属性を変更する。使用可能な属性については、以下のリストを参照。大文字はフラグを設定し、小文字はフラグを削除する。
+
+## 旗の説明
+
+    Color Labels:
+
+      none | grey | green | violet | blue | yellow | red | orange
+
+    Finder Flags (valid for (f)iles and/or (d)irectories):
+
+      d = On Desktop                      (f/d)
+      e = Hidden extension                (f/d)
+      m = Shared (can run multiple times) (f)
+      n = No INIT resources               (f)
+      i = Inited                          (f/d)
+      c = Custom icon                     (f/d)
+      t = Stationery                      (f)
+      s = Name locked                     (f/d)
+      b = Bundle                          (f/d)
+      v = Invisible                       (f/d)
+      a = Alias file                      (f/d)
+
+    AFP Attributes:
+
+      y = System                          (f/d)
+      w = No write                        (f)
+      p = Needs backup                    (f/d)
+      r = No rename                       (f/d)
+      l = No delete                       (f/d)
+      o = No copy                         (f)
+
+# nad find
+
+AFPボリューム内のファイルやディレクトリを検索する。
+
+指定されたファイル名と完全にまたは部分的に一致するパスのリストを返す。
+
+オプション：
+
+**-v** *パス*
+
+> 現在の作業ディレクトリの代わりに、共有ボリュームへのパスを使用して検索する。
+
+# 例
+
+共有AFPボリューム内のファイルをリストする:
+
+    $ nad ls -al /srv/afpshare
+    -------s-v- ------ --- ---- ----          35   TheVolumeSettingsFolder
+    ---------v- ------ --- ---- ----          36   Network Trash Folder
+    ----ic-s--- ------ gre PNGf GKON          39   Picture 1.png
+    ----i---b-- ------ --- APPL SBMC          40   AppleShare IP Browser
+    ----ic----- ------ --- PNGf GKON          41   Picture 3.png
+
+最初の列はFinderフラグ、2番目の列はAFP属性、3番目の列は色ラベル、4番目と5番目の列はファイルタイプと作成者、6番目の列はAppleDoubleデータからのCNID、最後の列はファイル名を示す。
+
+出力の順番はCNIDによるものであり、アルファベット順ではないことに注意。
+
+共有AFPボリューム/srv/afpshare内で「Report」という名前のファイルを検索する。
+
+    $ nad find -v /srv/afpshare Report
+    /srv/afpshare/Documents/2025/Report January 2025.doc
+    /srv/afpshare/Documents/2024/Report December 2024.doc
+    /srv/afpshare/Documents/Report Template.doc
+
+# 参照
+
+dbd(1), addump(1)
+
+# 著者
+
+[CONTRIBUTORS](https://netatalk.io/contributors) を参照

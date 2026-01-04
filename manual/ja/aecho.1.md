@@ -4,16 +4,16 @@ aecho - AppleTalk Echo Protocol プロトコル パケットをネットワー�
 
 # 概要
 
-**aecho** [-c *count*] [*address* | *nbpname*]
+**aecho** [-c *回数*] [*アドレス* | *nbp名*]
 
 # 説明
 
-**aecho** は、指定された AppleTalk *address* または *nbpname* で指定されたホストに
+**aecho** は、指定された AppleTalk *アドレス* または *nbp名* で指定されたホストに
 Apple Echo Protocol (AEP) パケットを繰り返し送信し、応答が受信されたかどうかを報告する。
 リクエストは1秒あたり1つの速度で送信される。
 
-*address* は、**atalk_aton**(3) によって解析される。
-*nbpname* は、**nbp_name**(3) によって解析される。
+*アドレス* は、**atalk_aton**(3) によって解析される。
+*nbp名* は、**nbp_name**(3) によって解析される。
 nbp タイプのデフォルトは \`*Workstation*' である。
 
 **aecho**
@@ -37,9 +37,9 @@ nbp タイプのデフォルトは \`*Workstation*' である。
 
 # オプション
 
-**-c** *count*
+**-c** *回数*
 
-> *count* パケット後に停止する。
+> *回数* パケット後に停止する。
 
 # 関連項目
 

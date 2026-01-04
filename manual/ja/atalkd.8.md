@@ -4,7 +4,7 @@ atalkd — ユーザーランド AppleTalk ネットワーク マネージャ �
 
 # 概要
 
-**atalkd** [-f *configfile*] [-P *pidfile*] [-1] [-2] [-d] [-t]
+**atalkd** [-f *設定ファイル*] [-P *pidファイル*] [-1] [-2] [-d] [-t]
 
 **atalkd** [-v | -V]
 
@@ -35,12 +35,12 @@ OS の init システムは通常、起動時に **atalkd** デーモンを起�
 > デーモンをターミナルから切り離さないで、追加のデバッグ情報を stdout
 に書き込む。
 
-**-f** *configfile*
+**-f** *設定ファイル*
 
-> 設定情報については、**atalkd.conf**ではなく、*configfile*
+> 設定情報については、**atalkd.conf**ではなく、*設定ファイル*
 を参照してください。
 
-**-P** *pidfile*
+**-P** *pidファイル*
 
 > **atalkd** がプロセス ID を保存するファイルを指定する。
 

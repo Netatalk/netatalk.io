@@ -23,7 +23,7 @@ addump - AppleSingle/AppleDouble フォーマットのデータをダンプす�
 このスクリプトはメーラ、アーカイバ、Mac OS
 X、Netatalkなどが生成する様々なAppleSingle/AppleDoubleデータをダンプできる。
 
-*FILE*\ | *DIR*がない、または*FILE*\ | *DIR*が「-」であるとき、標準入力を読み込む。
+*FILE* | *DIR*がない、または*FILE* | *DIR*が「-」であるとき、標準入力を読み込む。
 
 # オプション
 
@@ -61,7 +61,7 @@ FinderInfoがFileInfoなのかDirInfoなのかを検出する方法がない。�
 
 # 関連項目
 
-ad(1), getfattr(1), attr(1), runat(1), getextattr(8), lsextattr(8)
+nad(1), getfattr(1), attr(1), runat(1), getextattr(8), lsextattr(8)
 
 # 著者
 

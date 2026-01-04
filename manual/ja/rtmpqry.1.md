@@ -4,7 +4,7 @@ rtmpqrt - AppleTalkルーティング情報を照会する
 
 # 概要
 
-**rtmpqry** [-a | -r] [ -A local_address ] [remote_address]
+**rtmpqry** [-a | -r] [ -A ローカルアドレス ] [リモートアドレス]
 
 # 説明
 

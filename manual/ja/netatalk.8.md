@@ -4,7 +4,7 @@ netatalk — Netatalk AFP サーバのサービス コントローラ デーモ�
 
 # 概要
 
-**netatalk** [-F *configfile*]
+**netatalk** [-F *設定ファイル*]
 
 **netatalk** [-v | -V]
 
@@ -27,7 +27,7 @@ netatalk デーモンは通常、ブート時に init システムによって�
 
 > デーモンをターミナルから切り離さない。
 
-**-F** *configfile*
+**-F** *設定ファイル*
 
 > 利用する設定ファイルを指定する。
 

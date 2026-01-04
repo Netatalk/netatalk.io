@@ -4,7 +4,7 @@ fce_listen — Netatalk Filesystem Change Event リスナーアプリケーシ�
 
 # 概要
 
-**fce_listen** [-h *host*] [-p *port*]
+**fce_listen** [-h *ホスト*] [-p *ポート*]
 
 # 説明
 

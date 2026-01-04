@@ -4,7 +4,7 @@ cnid_metad — 要求に応じて cnid_dbd デーモンを起動するデーモ�
 
 # 概要
 
-**cnid_metad** [-d] [-F *configuration file*]
+**cnid_metad** [-d] [-F *設定ファイル*]
 
 **cnid_metad** [-v | -V]
 
@@ -24,10 +24,9 @@ cnid_metad — 要求に応じて cnid_dbd デーモンを起動するデーモ�
 > **cnid_metad** はフォアグラウンドに留まり、更に標準入力、標準出力、
 標準エラー出力のファイル記述子を開いたままにする。デバッグに有用。
 
-**-F** *configuration file*
+**-F** *設定ファイル*
 
-> 設定ファイルとして*configuration
-file*を使う。デフォルトは*afp.conf*である。
+> 設定ファイルとして*設定ファイル*を使う。デフォルトは*afp.conf*である。
 
 **-v**, **-V**
 

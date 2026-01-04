@@ -294,6 +294,14 @@ uam path = *path* **(G)**
 
 > Sets the default path for UAMs for this server.
 
+valid shellcheck = *BOOLEAN* (default: *yes*) **(G)**
+
+> Whether to check if the user's login shell is valid (i.e. listed in
+/etc/shells). If the user's shell is not valid, authentication will
+fail. This is a security feature to prevent users with nologin shells
+from logging in. Disable this option to allow users with nologin shells
+to log in.
+
 ## Charset Options
 
 With OS X Apple introduced the AFP3 protocol. One of the big changes
@@ -341,7 +349,7 @@ same as **unix charset**.
 
 passwd file = *path* **(G)**
 
-> Sets the path to the Randnum UAM passwd file for this server.
+> Sets the path to the Randnum UAM *afppasswd* file for this server.
 
 passwd minlen = *number* **(G)**
 
@@ -523,6 +531,55 @@ vol dbnest = *BOOLEAN* (default: *no*) **(G)**
 the CNID database in a folder called .AppleDB inside the volume root of
 each share.
 
+## Directory Cache Tuning
+
+dircachesize = *number* **(G)**
+
+> Maximum possible entries in the directory cache. The cache stores
+directories and files.
+> Default size is 8192, maximum size is 131072.
+
+dircache validation freq = *number* **(G)**
+
+> Directory cache validation frequency for external change detection.
+> Value of 1 means validate every access (default for backward
+compatibility), higher values validate less frequently.
+> If Netatalk is the only process accessing the volume you can safely
+set a value of 100 for maximum performance.
+
+dircache metadata window = *number* **(G)**
+
+> Time window in seconds for distinguishing metadata-only changes from
+content changes in directories.
+> Default: 300 seconds (5 minutes). Range: 60-3600 seconds.
+> If Netatalk is the only process accessing the volume you can safely
+set a value of 3600.
+
+dircache metadata threshold = *number* **(G)**
+
+> Maximum time difference in seconds between cached and current directory
+ctime to be considered a metadata-only change.
+> Default: 60 seconds (1 minute). Range: 10-1800 seconds.
+> If Netatalk is the only process accessing the volume you can safely
+set a value of 1800.
+
+dircache files = *BOOLEAN* (default: *no*) **(G)**
+
+> Whether to allow files to be cached in the directory cache alongside
+directories. The default is *no* for legacy compatibility and memory
+conservation.
+>
+> When enabled (*yes*), files are cached along with directories, which
+can improve performance for file-heavy workloads by reducing CNID database
+queries. However, this increases memory usage and may cause excessive
+cache evictions if the working set is larger than the dircache size.
+>
+> **Recommendation**: Leave disabled (*no*) unless you have a large
+**dircachesize** and file-intensive workflows. For volumes where Netatalk
+is the only accessor, enabling this with a large cache may improve performance.
+
+**Note**: See Configuration chapter in the manual for more information
+
 ## Miscellaneous Options
 
 afpstats = *BOOLEAN* (default: *no*) **(G)**
@@ -534,17 +591,6 @@ close vol = *BOOLEAN* (default: *no*) **(G)**
 
 > Whether to close volumes possibly opened by clients when they're removed
 from the configuration and the configuration is reloaded.
-
-dircachesize = *number* **(G)**
-
-> Maximum possible entries in the directory cache. The cache stores
-directories and files. It is used to cache the full path to directories
-and CNIDs which considerably speeds up directory enumeration.
->
-> Default size is 8192, maximum size is 131072. Given value is rounded up
-to nearest power of 2. Each entry takes about 100 bytes, which is not
-much, but remember that every afpd child process for every connected
-user has its cache.
 
 extmap file = *path* **(G)**
 
@@ -1080,25 +1126,19 @@ cnid scheme = *backend* **(V)**
 Run **afpd -v** to see a list of available backends,
 as well as which one is the default.
 >
-> *dbd* is a zero-configuration, full-featured, and reliable backend
-using Berkeley DB, where database access is managed through
-the **cnid_dbd** daemon.
+> *dbd* uses Berkeley DB, with database reads and writes managed through the **cnid_dbd** daemon.
+It is recommended for most deployments.
 >
-> The *last* backend uses a read-only, in-memory Trivial Database.
-It can be used to mount CD-ROMs and similar read-only media, for instance.
+> The *sqlite* backend uses the SQLite embedded database library.
+It is performant and lean, requiring no external database or daemon.
 >
 > The *mysql* backend requires that a MySQL (or MariaDB) database instance
 has been provisioned for use with Netatalk.
 The upside is that you get full control over how the CNID data is stored,
 which makes for a robust and scalable solution.
 >
-> The EXPERIMENTAL *sqlite* backend is a zero-configuration backend
-that uses the SQLite library. It is performant and lean, requiring
-no external database or daemon.
->
-> ***WARNING:*** The *sqlite* backend should only be used for testing purposes
-and not in a production setting.
-Please take a backup of your data before enabling this backend.
+> The *last* backend uses a read-only, in-memory Trivial Database.
+It can be used to mount CD-ROMs and similar read-only media, for instance.
 
 ea = *sys* | *samba* | *ad* | *none* (default: auto detect) **(V)**
 
@@ -1321,14 +1361,13 @@ The home directory is mounted on */home/{user}/afp-data*.
 ## Example: Classic Mac clients
 
 This enables AppleTalk if Netatalk was built with AppleTalk support.
-The Random Number and ClearTxt authentication modules are used.
-The **legacy icon** option is used to make the server look like a
-BSD Daemon.
+The Random Number and ClearTxt authentication modules are used to support older Mac clients.
+The **legacy icon** option is used to give the volume a custom icon
+when mounted on Classic Mac OS clients.
 
-With **legacy volume size** the volume size is limited to 2 GB
-for very old Macs, while **prodos** is used to enable ProDOS
-boot flags on the volume while limiting the volume free space
-to 32 MB.
+With **legacy volume size** the reported volume size is limited to 2 GB for very old Macs,
+while **prodos** is used to enable Apple II ProDOS boot flags on the volume
+as well as limiting the reported free space on the volume to 32 MB.
 
     [Global]
     appletalk = yes

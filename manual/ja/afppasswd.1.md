@@ -4,21 +4,31 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 # 概要
 
-**afppasswd** [-acfn] [-p *afppasswd file*] [-u *minimum uid*] [-w *password string*]
+**afppasswd** [-acfn] [-p *afppasswd ファイル*] [-u *最小uid*] [-w *パスワード文字列*]
 
 # 説明
 
-**afppasswd** は、「Randnum exchange」および「2-Way Randnum exchange」
+**afppasswd** は「Randnum exchange」および「2-Way Randnum exchange」
 ユーザー認証モジュールのユーザー資格情報を提供する afppasswd ファイルを作成および管理する。
 
-**afppasswd**は、rootがパラメータ付きで呼び出すことも、
+**afppasswd** はrootがパラメータ付きで呼び出すことも、
 一般のユーザが自分のAFPパスワードを変更するためにパラメータなしで呼び出すこともできる。
 
 > 【注記】 このユーティリティでは、Random Number UAMの2種類が利用するパスワードのみ変更できる。
 かなり弱いパスワード暗号化を提供するため、非常に古いAFPクライアントをサポートしなければならない限り、
-より安全な「DHX」（「DHCAST128」）及び「DHX2」UAMを推奨する。
+より安全な「DHX」（別名「DHCAST128」）及び「DHX2」UAMを推奨する。
 
 # 例
+
+管理者が*afppasswd*ファイルを初期化し、新しいユーザを追加する：
+
+    example% sudo afppasswd -c
+    example% sudo afppasswd -a newuser
+    Enter NEW AFP password: (非表示)
+    Enter NEW AFP password again: (非表示)
+    afppasswd: updated password.
+
+newuserはすでにローカルシステムユーザとして存在している必要があることに注意。
 
 ローカルユーザが自分のパスワードを変更する:
 
@@ -35,7 +45,7 @@ afppasswd — AFP パスワード保守ユーティリティ
 
 **-c**
 
-> *afppasswd*ファイルまたは特定ユーザを作成する。(さらに/または)初期化する。
+> *afppasswd* ファイルを作成•初期化、特定ユーザを作成する。
 
 **-f**
 
@@ -51,7 +61,7 @@ afppasswd — AFP パスワード保守ユーティリティ
 cracklib辞書に対して実行されたパスワードを持つことをスーパユーザが望まないなら、
 このオプションはcracklibチェックを無効にできるだろう。
 
-**-u** *minimum uid*
+**-u** *最小uid*
 
 > これは、**afppasswd**がユーザを作成するときに使う最小の*ユーザid*
 (uid)である。

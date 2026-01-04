@@ -4,7 +4,7 @@ afpldaptest — afp.conf の LDAP パラメータを構文チェックする
 
 # 概要
 
-**afpldaptest** [-u *user* | -g *group* | -i *uuid*]
+**afpldaptest** [-u *ユーザ* | -g *グループ* | -i *uuid*]
 
 **afpldaptest** [-h | -? | -:]
 
@@ -14,17 +14,17 @@ afpldaptest — afp.conf の LDAP パラメータを構文チェックする
 
 # オプション
 
-**-u** *user*
+**-u* *ユーザ*
 
-> *user*のためのuuidを表示する。
+> *ユーザ*のためのuuidを表示する。
 
-**-g** *group*
+**-g* *グループ*
 
-> *group*のためのuuidを表示する。
+> *グループ*のためのuuidを表示する。
 
 **-i** *uuid*
 
-> *uuid*のためのuserかgroupかlocal-uuidを表示する。
+> *uuid*のためのユーザかグループかローカルuuidを表示する。
 
 **-h**, **-?**, **-:**
 

@@ -4,32 +4,32 @@ nbplkup — ネットワーク上の登録された AppleTalk エンティティ
 
 # 概要
 
-**nbplkup** [-A *address*] [-D *address*] [-m *Mac charset*] [-r *responses*] [-s] [-f | -l] [*nbpname*]
+**nbplkup** [-A *アドレス*] [-D *アドレス*] [-m *Mac 文字セット*] [-r *回答数*] [-s] [-f | -l] [*nbp名*]
 
 # 説明
 
-**nbplkup** は AppleTalk ネットワークに登録されているエンティティを最大 *responses* 件（デフォルトは 1000 件）表示する。
+**nbplkup** は AppleTalk ネットワークに登録されているエンティティを最大 *回答数* 件（デフォルトは 1000 件）表示する。
 
-デフォルトでは、ローカルゾーン内のすべてのエンティティを検索する。*nbpname*
+デフォルトでは、ローカルゾーン内のすべてのエンティティを検索する。*nbp名*
 が指定されている場合、検索はその名前に一致するエンティティのみを返すようにフィルタリングできる。
 
-これは Name-Binding Protocol (NBP) を使用して AppleTalk ネットワークと対話する。*nbpname* は
+これは Name-Binding Protocol (NBP) を使用して AppleTalk ネットワークと対話する。*nbp名* は
 **nbp_name**(3) によって解析される。
 
 # オプション
 
-**-A** *address*
-> 検索に使用するローカルアドレスとして *address* を使用する。
+**-A** *アドレス*
+> 検索に使用するローカルアドレスとして *アドレス* を使用する。
 
-**-D** *address*
-> 検索を送信する宛先アドレスとして *address* を使用する。
+**-D** *アドレス*
+> 検索を送信する宛先アドレスとして *アドレス* を使用する。
 
-**-m** *Mac charset*
+**-m** *Mac 文字セット*
 > 指定された Macintosh 文字セットで文字列を解釈する。
 > 指定されていない場合、nbplkup はデフォルトで MacRoman を使用する。
 
-**-r** *responses*
-> 応答の数を *responses*（デフォルトは 1000）に制限する。
+**-r** *回答数*
+> 応答の数を *回答数*（デフォルトは 1000）に制限する。
 
 **-s**
 > スクリプトに適した形式で出力を印刷する。
@@ -45,10 +45,10 @@ nbplkup — ネットワーク上の登録された AppleTalk エンティティ
 >
 > -f と一緒に使用できない。
 
-**nbpname**
-> 使用する NBP 名。
+**nbp名**
+> 使用するNBP名。
 >
-> *nbpname* は *obj:type@zone* の形式の文字列で、ここで *obj* はオブジェクト名、
+> *nbp名* は *obj:type@zone* の形式の文字列で、ここで *obj* はオブジェクト名、
 > *type* はオブジェクトのタイプ、*zone* はゾーン名である。
 > *obj* と *type* は任意の文字列にできるが、*zone* は有効なゾーン名でなければならない。
 > *object* または *type* に対する \`*=*' は何でも一致し、*zone* に対する \`*\**' はローカルゾーンを意味する。
@@ -69,7 +69,7 @@ nbplkup — ネットワーク上の登録された AppleTalk エンティティ
 
 NBPLKUP
 
-> nbplkup のデフォルト nbpname、形式は *obj:type@zone*
+> nbplkup のデフォルト nbp名、形式は *obj:type@zone*
 
 # 例
 

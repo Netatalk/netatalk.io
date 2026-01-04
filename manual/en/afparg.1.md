@@ -4,7 +4,9 @@ afparg — Send commands to an AFP server
 
 # Synopsis
 
-**afparg** [-1234567lVv] [-h *host*] [-p *port*] [-s *volume*] [-u *user*] [-w *password*] [-f *command*]
+**afparg** [-1234567Vv] [-h *host*] [-p *port*] [-s *volume*] [-u *user*] [-w *password*] [-f *command*]
+
+**afparg** -l
 
 # Description
 
@@ -49,7 +51,7 @@ Run *afparg -l* to list available commands and their arguments.
 : Server port number (default: 548)
 
 **-u** *user*
-: Username for authentication
+: Username for authentication with AFP server (default: current uid)
 
 **-v**
 : Verbose output
@@ -58,7 +60,7 @@ Run *afparg -l* to list available commands and their arguments.
 : Very verbose output
 
 **-w** *password*
-: Password for authentication
+: Password for authentication with AFP server
 
 # Configuration
 

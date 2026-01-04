@@ -2,26 +2,14 @@
 
 ## AppleTalk トランスポート層
 
-AppleTalk は Apple が作成したネットワーク プロトコル ファミリで、TCP/IP
-より前のものである。これには、アドレス解決、アドレス/名前マッピング、サービスの場所、接続の確立など、さまざまな用途のさまざまなプロトコルが含まれている。
+Netatalk は2種類の AFP サーバーを提供しており、両方とも同時に実行できる。Classic AFP は **atalkd** と
+**afpd** の両方を実行する必要があるが、TCP 経由の AFP は **afpd** のみを実行すればよい。
 
-Netatalk は、AFP 経由でファイルを提供し、古い Mac および Apple II クライアントにその他のサービスを提供するために
-AppleTalk プロトコルを実装している。
+Classic AFP (または DDP 経由の AFP) は、通常、ホスト OS カーネルによって提供される。
 
-EtherTalk Phase I および II、RTMP、NBP、ZIP、AEP、ATP、PAP、ASP をサポートしますが、ホスト OS カーネルが
-DDP を提供することが必須。
-
-- DDP はソケット間プロトコルであり、他のすべての AppleTalk プロトコルはこのプロトコルの上に構築されている。
-
-- ATP、ASP、NBP は、Netatalk の *libatalk* 共有ライブラリに静的リンクライブラリとして実装されている。
-
-- **atalkd** デーモンは RTMP、ZIP、AEP を実装している。
-
-- **papd** デーモンは PAP を実装しており、Mac クライアントが netatalk ホストコンピュータ上の Unix
-  印刷スプーラにスプールできるようにする。
-
-ネットワークスタックの図は [開発者向け readme](/developer.html) に記載されている。カーネルにおける DDP
-サポートに関する最新情報は [AppleTalk readme](/appletalk.html) に記載されている。
+OS カーネルで AppleTalk サポートを有効にする方法の詳細については、Netatalk Wiki の [AppleTalk
+カーネルモジュール](https://netatalk.io/docs/AppleTalk-Kernel-Module.html)
+ページを参照するとよい。
 
 ### AppleTalk を使用するかどうか
 

@@ -4,7 +4,7 @@ afpd — Apple Filing Protocol デーモン
 
 # 概要
 
-**afpd** [-d] [-F *configfile*]
+**afpd** [-d] [-F *設定ファイル*]
 
 **afpd** [-v | -V | -h]
 
@@ -33,7 +33,7 @@ afpd — Apple Filing Protocol デーモン
 
 > ヘルプを表示してから終了する。
 
-**-F** *configfile*
+**-F** *設定ファイル*
 
 > 利用する設定ファイルを指定する。
 

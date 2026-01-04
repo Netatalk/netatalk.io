@@ -1,6 +1,6 @@
 # 名前
 
-nbp_name — NBP 名の解析
+nbp_name — NBP名の解析
 
 # 概要
 

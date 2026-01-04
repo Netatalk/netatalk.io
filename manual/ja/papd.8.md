@@ -4,7 +4,7 @@ papd — AppleTalk プリント サーバー デーモン
 
 # 概要
 
-**papd** [-d] [-f *configfile*] [-p *printcap*] [-P *pidfile*]
+**papd** [-d] [-f *設定ファイル*] [-p *printcap*] [-P *pidファイル*]
 
 **papd** [-v | -V]
 
@@ -37,9 +37,9 @@ Netatalk 2.0 以降では、CUPS もサポートされている。 *cupsautoadd*
 
 > ターミナルからフォークまたは切断しない。
 
-**-f** *configfile*
+**-f** *設定ファイル*
 
-> 設定情報については、**papd.conf** ではなく、*configfile*
+> 設定情報については、**papd.conf** ではなく、*設定ファイル*
 を参照してください。
 
 **-p** *printcap*
@@ -47,7 +47,7 @@ Netatalk 2.0 以降では、CUPS もサポートされている。 *cupsautoadd*
 > LPD 構成情報については、*/etc/printcap* ではなく、*printcap*
 を参照してください。
 
-**-P** *pidfile*
+**-P** *pidファイル*
 
 > **papd** がプロセス ID を保存するファイルを指定する。
 
