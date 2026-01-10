@@ -1,6 +1,6 @@
 # Netatalk Documentation
 
-## Manual
+## User Documentation
 
 The [Netatalk Manual](/manual/en) is the primary source of documentation for the Netatalk suite of programs.
 It also contains the full suite of Unix man pages in html format.
@@ -23,8 +23,10 @@ How to install Netatalk when not using a package manager, either from source cod
 
 ## Developer Documentation
 
-The [Developer Documentation](/developer) contains information for developers interested in contributing to the Netatalk project,
+The developer documentation contains information for developers interested in contributing to the Netatalk project,
 including implemetation details and API documentation.
+
+- [Developer Documentation](/developer)
 
 ## Release History
 
