@@ -13,7 +13,7 @@ Available languages:
 If you are looking for historical manuals for Netatalk version 2.0 to 4.1, you can download
 [this archive](https://sourceforge.net/projects/netatalk/files/docs/).
 
-## Installation
+## Installation Instructions
 
 How to install Netatalk when not using a package manager, either from source code or using container technology.
 
@@ -30,14 +30,10 @@ including implemetation details and API documentation.
 
 ## Release History
 
-The [Changelog](/news.html) (a.k.a. NEWS) contains a summary of changes for each release.
+- [News](/news.html): the complete changelog of the project
+- [Contributors](/contributors.html): a list of everyone who has contributed to the project (huge thanks!)
 
-For a complete list of everyone who has contributed to the Netatalk project,
-see the [Contributors](/contributors.html) page.
-
-Below follows release notes for historical Netatalk releases.
-
-### Netatalk Version 4 Release Series
+### Netatalk Version 4 Release Notes
 
 - [Netatalk 4.4.0](/4.4/ReleaseNotes4.4.0.html)
 - [Netatalk 4.3.2](/4.3/ReleaseNotes4.3.2.html)
@@ -61,7 +57,7 @@ Below follows release notes for historical Netatalk releases.
 - [Netatalk 4.0.1](/4.0/ReleaseNotes4.0.1.html)
 - [Netatalk 4.0.0](/4.0/ReleaseNotes4.0.0.html)
 
-### Netatalk Version 3 Release Series
+### Netatalk Version 3 Release Notes
 
 - [Netatalk 3.2.10](/3.2/ReleaseNotes3.2.10.html)
 - [Netatalk 3.2.9](/3.2/ReleaseNotes3.2.9.html)
@@ -112,7 +108,7 @@ Below follows release notes for historical Netatalk releases.
 - [Netatalk 3.0-alpha2](/3.0/ReleaseNotes-3.0-alpha2.html)
 - [Netatalk 3.0-alpha1](/3.0/ReleaseNotes-3.0-alpha1.html)
 
-### Netatalk Version 2 Release Series
+### Netatalk Version 2 Release Notes
 
 - [Netatalk 2.4.10](/2.4/ReleaseNotes2.4.10.html)
 - [Netatalk 2.4.9](/2.4/ReleaseNotes2.4.9.html)
@@ -161,7 +157,7 @@ Below follows release notes for historical Netatalk releases.
 - [Netatalk 2.0.1](/2.0/ReleaseNotes2.0.1.html)
 - [Netatalk 2.0.0](/2.0/ReleaseNotes2.0.0.html)
 
-### Netatalk Version 1 Release Series
+### Netatalk Version 1 Release Notes
 
 - [Netatalk 1.6.4](/1.6/ReleaseNotes1.6.4.html)
 - [Netatalk 1.6.3](/1.6/ReleaseNotes1.6.3.html)
