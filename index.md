@@ -68,7 +68,7 @@ This can be the macOS built-in client or 3rd party clients such as [afpfs-ng](ht
 
 ### Netatalk 4.4.0 is available
 
-*4th of January 2025*
+*4th of January 2026*
 
 The Netatalk development team is proud to announce the first release of
 the Netatalk 4.4 release series.
