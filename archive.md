@@ -1511,7 +1511,3 @@ Netatalk 2.0 provides no support for symlinks any longer.
 
 For a summary of news and a detailed list of changes see the [Release
 Notes](/2.0/ReleaseNotes2.0.0.html).
-
-[See NEWS for earlier release notes](news.html)
-
-</div>
