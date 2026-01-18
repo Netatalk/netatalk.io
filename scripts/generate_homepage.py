@@ -1,8 +1,10 @@
 import os
+import re
 import markdown
 
 from common import (
     VERSION,
+    VERSIONS,
     html_head,
     html_menlinks,
     html_navbar,
@@ -44,6 +46,14 @@ for dir in subdirs:
                         end_idx = news_indices[3] if len(news_indices) >= 4 else len(lines)
                         news_content = "".join(lines[start_idx:end_idx])
                         text = text.replace("NETATALK_NEWS", news_content)
+
+            if dir == "." and file == "documentation.md":
+                v4_links = []
+                for v in VERSIONS:
+                    if v.startswith("4"):
+                        minor = re.search(r"^(\d+\.\d+)", v).group()
+                        v4_links.append(f"- [Netatalk {v}](/{minor}/ReleaseNotes{v}.html)")
+                text = text.replace("NETATALK_V4_RELEASE_NOTES", "\n".join(v4_links))
 
             html = markdown.markdown(
                 text,

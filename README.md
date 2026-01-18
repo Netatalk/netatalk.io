@@ -18,10 +18,13 @@ for how to refresh these sources.
 
 - Refresh the sources in `manual` and `public/developer` as described above.
 - Create a news story at the top of `archive.md` (the top three stories will be substituted to `index.md`.)
-- Add link to release notes in `documentation.md`.
-- Prepend release version to VERSIONS in `scripts/common.py`
+- Prepend the release version to the VERSIONS list in `scripts/common.py`.
 - Run the `build.sh` script, passing a GITHUB_TOKEN env variable with a valid GitHub API token.
 - Commit all above changes and push to remote git to publish to web hosting.
 
-When introducing a new release series, you also need to create a new public subdir with a `.gitkeep` file,
+When introducing a new *minor* release series, you also need to create a new public subdir with a `.gitkeep` file,
 e.g. `public/4.4/.gitkeep`.
+
+When introducing a new *major* release series, update `scripts/generate_homepage.py` and `documentation.md`
+to iterate over the new release versions (e.g. *4.\**) and substitute a list of release notes,
+e.g. `NETATALK_V4_RELEASE_NOTES`.
