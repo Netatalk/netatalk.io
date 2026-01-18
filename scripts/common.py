@@ -175,6 +175,15 @@ def html_navbar(version):
     </ul>
   </div>
   <div class="navbar">
+    <h2>project</h2>
+    <ul>
+       <li><a title="Contributors" href="/contributors">Netatalk Contributors</a></li>
+       <li><a title="News Archive" href="/archive">News Archive</a></li>
+       <li><a title="Changelog" href="/news">Project Changelog</a></li>
+       <li><a title="Security" href="/news">Security</a></li>
+    </ul>
+  </div>
+  <div class="navbar">
     <h2>development</h2>
     <ul>
       <li><a title="Code Repository, GitHub" href="https://github.com/Netatalk/netatalk">Code Repository</a></li>
