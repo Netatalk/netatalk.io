@@ -180,7 +180,7 @@ def html_navbar(version):
        <li><a title="Contributors" href="/contributors">Netatalk Contributors</a></li>
        <li><a title="News Archive" href="/archive">News Archive</a></li>
        <li><a title="Changelog" href="/news">Project Changelog</a></li>
-       <li><a title="Security" href="/news">Security</a></li>
+       <li><a title="Security" href="/security">Security</a></li>
     </ul>
   </div>
   <div class="navbar">
