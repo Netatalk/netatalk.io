@@ -33,17 +33,7 @@ networking that make great Netatalk companions.
 | [RetroNAS](https://github.com/danmons/retronas) | NAS software distribution that specializes in retro networking | Bundles Netatalk |
 | [TashRouter](https://github.com/lampmerchant/tashrouter) | AppleTalk router for LocalTalk and EtherTalk written in Python | |
 
-### Software for old Macs and Apple IIs
-
-| Project | Description | Relationship |
-| --- | --- | --- |
-| [AFPBridge](https://github.com/sheumann/AFPBridge) | Let an Apple IIGS use AFP-over-TCP instead of AppleTalk | Compatible with Netatalk AFP servers |
-| [MG's davex utils](https://github.com/mgcaret/davex-mg-utils) | Apple II toolsuite that includes a ProDOS *tardis* client | Compatible with Netatalk's *timelord* time server |
-| [mDNSResponder extension](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | DNS Service Discovery (Zeroconf) extension for Mac OS 9 | |
-| [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS AppleShare UAM that uses PGP encryption | The inspiration for Netatalk's now-defunct *uams_pgp.so* UAM |
-| [tardis/Timelord](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html) | Classic Mac OS time client/server | Tardis client is compatible with Netatalk's *timelord* time server |
-
-### Networking devices
+### Network hardware devices
 
 | Project | Description | Relationship |
 | --- | --- | --- |
@@ -58,3 +48,13 @@ networking that make great Netatalk companions.
 | [NuLib](https://nulib.com/) | Archiver utility that can handle Apple II compression formats like ShrinkIt | |
 | [sit](https://github.com/thecloudexpanse/sit) | Create StuffIt archives on Unix systems | |
 | [unar](https://github.com/MacPaw/XADMaster) | Archiver utility that can handle Mac formats like StuffIt and MacBinary | |
+
+### Software for old Macs and Apple IIs
+
+| Project | Description | Relationship |
+| --- | --- | --- |
+| [AFPBridge](https://github.com/sheumann/AFPBridge) | Let an Apple IIGS use AFP-over-TCP instead of AppleTalk | Compatible with Netatalk AFP servers |
+| [MG's davex utils](https://github.com/mgcaret/davex-mg-utils) | Apple II toolsuite that includes a ProDOS *tardis* client | Compatible with Netatalk's *timelord* time server |
+| [mDNSResponder extension](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | DNS Service Discovery (Zeroconf) extension for Mac OS 9 | |
+| [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS AppleShare UAM that uses PGP encryption | The inspiration for Netatalk's now-defunct *uams_pgp.so* UAM |
+| [tardis/Timelord](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html) | Classic Mac OS time client/server | Tardis client is compatible with Netatalk's *timelord* time server |
