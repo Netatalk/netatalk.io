@@ -1,8 +1,54 @@
 # News Archive
 
-## Records of prior announcements
+## Records of project announcements
 
-Below is a full history of news announcements ever published on the website.
+Below is a full history of project announcements ever published on the website.
+
+### Netatalk 4.4.0 is available
+
+*4th of January 2026*
+
+The Netatalk development team is proud to announce the first release of
+the Netatalk 4.4 release series.
+
+In this release, we introduce sophisticated directory cache optimization
+which drastically reduces file system I/O by properly using the pre-existing caching architecture.
+
+Early adopters are encouraged to test the new release and report any
+issues to the Netatalk development team.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.4/ReleaseNotes4.4.0.html).
+
+### Netatalk 4.3.2 is available
+
+*7th of September 2025*
+
+The Netatalk development team is proud to announce the latest release of
+the Netatalk 4.3 release series.
+
+A critical bug preventing authentication with an AD domain via PAM has been
+fixed.
+
+All users of previous Netatalk versions are encouraged to upgrade to 4.3.2.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.3/ReleaseNotes4.3.2.html).
+
+### Netatalk 4.3.1 is available
+
+*29th of August 2025*
+
+The Netatalk development team is proud to announce the latest release of
+the Netatalk 4.3 release series.
+
+The afp_lantest utility has been given a major overhaul,
+and is now capable of thoroughly testing caching in the AFP server.
+
+All users of previous Netatalk versions are encouraged to upgrade to 4.3.1.
+
+For a summary of news and a detailed list of changes see the [Release
+Notes](/4.3/ReleaseNotes4.3.1.html).
 
 ### Netatalk 4.3.0 is available
 
