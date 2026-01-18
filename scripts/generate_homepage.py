@@ -34,6 +34,17 @@ for dir in subdirs:
         path = f"{dir}/{file}"
         with open(f"./{dir}/{file}", "r", encoding="utf-8") as input_file:
             text = input_file.read()
+
+            if dir == "." and file == "index.md":
+                with open("archive.md", "r", encoding="utf-8") as archive_file:
+                    lines = archive_file.readlines()
+                    news_indices = [i for i, line in enumerate(lines) if line.startswith("### ")]
+                    if len(news_indices) > 0:
+                        start_idx = news_indices[0]
+                        end_idx = news_indices[3] if len(news_indices) >= 4 else len(lines)
+                        news_content = "".join(lines[start_idx:end_idx])
+                        text = text.replace("NETATALK_NEWS", news_content)
+
             html = markdown.markdown(
                 text,
                 extensions=[
