@@ -1,8 +1,6 @@
 # News Archive
 
-## Records of project announcements
-
-Below is a full history of project announcements ever published on the website.
+Below is a history of project announcements since 2004.
 
 ### Netatalk 4.4.0 is available
 
