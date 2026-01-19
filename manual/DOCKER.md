@@ -1,4 +1,4 @@
-# Docker
+# Containerized Netatalk
 
 Netatalk comes with a Dockerfile and entry point script for running a containerized AFP server and AppleTalk services.
 
@@ -9,14 +9,25 @@ If you need a different setup, please use the manual configuration option.
 Make sure you have a container runtime installed, then build the netatalk container:
 
 ```shell
-docker build -t netatalk:latest .
+docker build -f distrib/docker/netatalk.Dockerfile .
 ```
 
-Alternatively, pull a pre-built Docker image from [Docker Hub](https://hub.docker.com/u/netatalk).
+Alternatively, pull a pre-built container image from [Docker Hub](https://hub.docker.com/u/netatalk)
+or [GHCR](https://github.com/Netatalk/netatalk/pkgs/container/netatalk).
 
 ## How to Run
 
 Once you have the netatalk image on your machine run it with `docker`, `podman` or equivalent container runtime.
+
+The easiest way to get started is to use the included *docer_compose.yml* file with Docker Compose.
+
+```shell
+docker compose -f distrib/docker/docker-compose.yml up
+```
+
+You just need to edit the file to set the AFP_USER and AFP_PASS environment variables first.
+
+### Configuration
 
 The easiest way to enable full functionality including Zeroconf service discovery and AppleTalk
 is to use the `host` network driver.
@@ -28,11 +39,9 @@ the IP address in the client when connecting to the file server.
 It is recommended to set up either a bind mount, or a Docker managed volume for persistent storage.
 Without this, the shared volume be stored in volatile storage that is lost upon container shutdown.
 
-For Docker Compose, you can use the sample [docker-compose.yml](https://github.com/Netatalk/netatalk/blob/main/docker-compose.yml)
-file that is distributed with this source code.
-
-Below follows a sample `docker run` command. Substitute `/path/to/share` with an actual path
-on your file system with appropriate permissions, `AFP_USER` and `AFP_PASS` with the appropriate user and password,
+Below follows a sample `docker run` command for illustration.
+Substitute `/path/to/share` with an actual path on your file system with appropriate permissions,
+`AFP_USER` and `AFP_PASS` with the appropriate user and password,
 and `ATALKD_INTERFACE` with the network interface to use for AppleTalk.
 
 You also need to set the timezone with `TZ` to the [IANA time zone ID](https://nodatime.org/TimeZones)
@@ -217,7 +226,7 @@ for it to be picked up as an AppleTalk printer.
 
 ## Environment Variables
 
-### Mandatory
+### Mandatory Settings
 
 These are required to set the credentials used to authenticate with the file server.
 
@@ -233,32 +242,38 @@ These are required to set the credentials used to authenticate with the file ser
 |------------------|--------------------------------------------|
 | ATALKD_INTERFACE | The network interface to use for AppleTalk |
 
-### Optional
+### Optional Settings
 
-#### String
+#### Value Type
 
-| Variable          | Description                                                            |
-|-------------------|------------------------------------------------------------------------|
-| AFP_UID           | Specify user id of AFP_USER                                            |
-| AFP_GID           | Specify group id of AFP_GROUP                                          |
-| AFP_USER2         | Username for the secondary user                                        |
-| AFP_PASS2         | Password for the secondary user                                        |
-| SERVER_NAME       | The name of the server (AFP and Zeroconf)                              |
-| SHARE_NAME        | The name of the primary shared volume                                  |
-| SHARE_NAME2       | The name of the secondary shared (Time Machine) volume                 |
-| AFP_LOGLEVEL      | The verbosity of logs; default is "info"                               |
-| AFP_MIMIC_MODEL   | Use a custom macOS (OSX) AFP icon; examples: *Tower*, *RackMount*      |
-| AFP_LEGACY_ICON   | Use a custom Classic Mac OS AFP icon; examples: *daemon*. *sdcard*     |
-| AFP_LOGIN_MESSAGE | A message to display when a user logs in (Classic Mac OS)              |
-| ATALKD_OPTIONS    | A string with options to append to atalkd.conf                         |
-| AFP_CNID_BACKEND  | The backend to use for the CNID database: *bdb* or *mysql*             |
-| AFP_CNID_SQL_HOST | The hostname or IP address of the CNID SQL server                      |
-| AFP_CNID_SQL_USER | The username to use when connecting to the CNID SQL server             |
-| AFP_CNID_SQL_PASS | The password to use when connecting to the CNID SQL server             |
-| AFP_CNID_SQL_DB   | The name of the designated database in the SQL server                  |
-| TZ                | The [timezone](https://nodatime.org/TimeZones) to use in the container |
+Set this environment variable to a specific value or string.
 
-#### Boolean
+| Variable                        | Description                                                            |
+|---------------------------------|------------------------------------------------------------------------|
+| AFP_UID                         | Specify user id of AFP_USER                                            |
+| AFP_GID                         | Specify group id of AFP_GROUP                                          |
+| AFP_USER2                       | Username for the secondary user                                        |
+| AFP_PASS2                       | Password for the secondary user                                        |
+| SERVER_NAME                     | The name of the server (AFP and Zeroconf)                              |
+| SHARE_NAME                      | The name of the primary shared volume                                  |
+| SHARE_NAME2                     | The name of the secondary shared (Time Machine) volume                 |
+| AFP_LOGLEVEL                    | The verbosity of logs; default is "info"                               |
+| AFP_MIMIC_MODEL                 | Use a custom macOS (OSX) AFP icon; examples: *Tower*, *RackMount*      |
+| AFP_LEGACY_ICON                 | Use a custom Classic Mac OS AFP icon; examples: *daemon*. *sdcard*     |
+| AFP_LOGIN_MESSAGE               | A message to display when a user logs in (Classic Mac OS only)         |
+| ATALKD_OPTIONS                  | A string with options to append to atalkd.conf                         |
+| AFP_CNID_BACKEND                | The backend to use for the CNID database: *dbd*, *sqlite*, or *mysql*  |
+| AFP_CNID_SQL_HOST               | The hostname or IP address of the CNID SQL server                      |
+| AFP_CNID_SQL_USER               | The username to use when connecting to the CNID SQL server             |
+| AFP_CNID_SQL_PASS               | The password to use when connecting to the CNID SQL server             |
+| AFP_CNID_SQL_DB                 | The name of the designated database in the SQL server                  |
+| AFP_DIRCACHESIZE                | The size of the directory cache                                        |
+| AFP_DIRCACHE_VALIDATION_FREQ    | The frequency to validate the directory cache                          |
+| AFP_DIRCACHE_METADATA_WINDOW    | The time window (in seconds) for metadata caching                      |
+| AFP_DIRCACHE_METADATA_THRESHOLD | The threshold (in seconds) for metadata caching                        |
+| TZ                              | The [timezone](https://nodatime.org/TimeZones) to use in the container |
+
+#### Boolean Type
 
 Set this environment variable to a non-zero value to enable, ex. "1"
 
