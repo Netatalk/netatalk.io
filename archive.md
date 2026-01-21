@@ -2,6 +2,19 @@
 
 Below is a history of project announcements since 2004.
 
+### Netatalk 4.4.1 is available
+
+*21st of January 2026*
+
+The Netatalk development team is proud to announce the latest release of the Netatalk 4.4 release series.
+
+This release contains primarily a range of bugfixes and reliability improvements for the SQLite CNID backend.
+
+Also of note is that as of this version, we bundle the subprojects (currently: *bstring*) in the release tarball.
+This is handy when building from tarball in an environment without internet access.
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.4/ReleaseNotes4.4.1.html).
+
 ### Netatalk 4.4.0 is available
 
 *4th of January 2026*
