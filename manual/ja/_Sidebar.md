@@ -33,7 +33,7 @@
 * [pap](pap.1.html)
 * [rtmpqry](rtmpqry.1.html)
 
-コンフィグファイル
+設定ファイル
 
 * [afp_signature.conf](afp_signature.conf.5.html)
 * [afp_voluuid.conf](afp_voluuid.conf.5.html)
@@ -42,7 +42,7 @@
 * [extmap.conf](extmap.conf.5.html)
 * [papd.conf](papd.conf.5.html)
 
-デーモン及び管理ツール
+デーモン、管理ツール
 
 * [a2boot](a2boot.8.html)
 * [afpd](afpd.8.html)
