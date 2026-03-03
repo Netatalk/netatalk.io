@@ -32,6 +32,7 @@ networking that make great Netatalk companions.
 | [MacIPRpi](https://www.macip.net/) | OS image for Raspberry Pi bundled with pre-configured vintage Mac networking software | Bundles Netatalk |
 | [RetroNAS](https://github.com/danmons/retronas) | NAS software distribution that specializes in retro networking | Bundles Netatalk |
 | [TashRouter](https://github.com/lampmerchant/tashrouter) | AppleTalk router for LocalTalk and EtherTalk written in Python | |
+| [TailTalk](https://github.com/FeralFirmware/TailTalk) | Userland AppleTalk stack and AFP server | |
 
 ### Network hardware devices
 
