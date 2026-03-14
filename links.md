@@ -24,6 +24,7 @@ networking that make great Netatalk companions.
 | [atalk-perl](https://github.com/demonfoo/atalk-perl) | AppleTalk transport and base protocols written in Perl | |
 | [atalk-proxy](https://github.com/jcs/atalk-proxy) | Stand-alone AppleTalk proxy | |
 | [atalkvpn](https://github.com/AceHusky12/atalkvpn) | VPN tunnel for AppleTalk phase 1 | Depends on Netatalk |
+| [AURP Dissector](https://github.com/bytex64/aurp-dissector) | AppleTalk network traffic dissector for Wireshark | | 
 | [Columbia AppleTalk Package](https://github.com/mabam/CAP) | AppleTalk network stack and AFP implementation for *NIX-like systems | Inspired the creation of Netatalk |
 | [GlobalTalk](https://marchintosh.com/globaltalk.html) | AppleTalk networking community over the Internet | Uses Netatalk for printer sharing |
 | [kea-mboot](https://github.com/saybur/kea-mboot) | Kea DHCP server hooks that enables Macintosh NetBoot 1.0 | Depends on Netatalk |
