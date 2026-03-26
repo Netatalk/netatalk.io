@@ -22,7 +22,7 @@ deploy a container image, or build the software yourself from source code.
 Knowledge of basic system administration is required, including installing packages,
 editing configuration files, and starting/stopping system services.
 
-### 📦 Install a pre-built package for your distribution
+### 📦 Install a binary package for your distribution
 
 Use your operating system's package manager to install the latest
 available *netatalk* package. This is the recommended option for most
@@ -34,6 +34,7 @@ for a list of known packages.
 ### 🐳 Deploy a container image
 
 The project publishes images on [Docker Hub](https://hub.docker.com/r/netatalk/netatalk)
+of [GHCR](https://github.com/Netatalk/netatalk/pkgs/container/netatalk)
 that can be deployed with a container runtime such as docker or podman.
 
 Refer to the [container documentation](/docker.html) for details on how to
