@@ -2,6 +2,33 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.5.0 beta is available
+
+*3rd of April 2026*
+
+The Netatalk development team is proud to announce a beta release of
+Netatalk 4.5.0.
+
+This release introduces an ARC (Adaptive Replacement Cache) for the directory cache,
+along with enumerate caching, AppleDouble support in cache, inter-process cache sync,
+and a Resource Fork caching framework.
+Together with other optimizations, this results in a significant reduction of file system I/O
+and improved performance on workloads with many small files,
+which speeds up both file operations and directory listings.
+
+A new feature synthesizes a virtual *Icon\r* file in the volume root,
+enabling Classic Mac OS clients to display custom color volume icons
+over the wire with the *legacy icon* setting.
+
+Other highlights include a default global 'cnid scheme' option,
+static volume UUID configuration, mkdir and rmdir commands in the nad utility,
+and important improvements to the SQLite CNID backend.
+
+Early adopters are encouraged to test the new beta release and report any
+issues to the Netatalk development team.
+
+For a detailed list of changes, see the [Release Notes](/4.5/ReleaseNotes4.5.0beta.html).
+
 ### Netatalk 4.4.1 is available
 
 *21st of January 2026*
