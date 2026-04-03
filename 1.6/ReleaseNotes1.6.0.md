@@ -117,3 +117,9 @@ their commitment. Without the many suggestions, bug and problem reports,
 patches, and reviews this project wouldn't be where it is.
 
 - The Netatalk Development Team, December 2002
+
+## Editorial Note
+
+Originally posted to the <netatalk-admins@lists.sourceforge.net> mailing list by Sebastian Rittau on December 3, 2002.
+
+This document is a reproduction of the [original announcement](https://sourceforge.net/p/netatalk/mailman/message/7677118).

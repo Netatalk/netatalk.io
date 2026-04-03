@@ -38,4 +38,8 @@ c/o Wesley Craig +1-313-764-2278
 Ann Arbor, Michigan  
 48103-4943
 
-- Wesley Craig, January 1994
+## Editorial Note
+
+Originally posted to the <netatalk-admins@umich.edu> mailing list by Wesley Craig on January 18, 1994.
+
+This document is a reproduction of the [original announcement](https://websites.umich.edu/~rsug/netatalk/archive/admins/1994/0008.html).
