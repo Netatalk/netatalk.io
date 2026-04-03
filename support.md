@@ -24,7 +24,7 @@ at GitHub. Please don't forget to be courteous and mindful of others.
 
 The [netatalk-admins mailing list](https://sourceforge.net/p/netatalk/mailman/netatalk-admins/)
 is a place where project admins and the general public can discuss any netatalk topic.
-You can use it to report bugs or contribute patches if GitHub is not an opion.
+You can use it to report bugs or contribute patches if GitHub is not an option.
 Release announcements are posted here as well.
 
 There are other historical mailing lists on the same platform, but they are read-only archives.
