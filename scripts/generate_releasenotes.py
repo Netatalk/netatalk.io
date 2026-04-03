@@ -33,6 +33,9 @@ else:
         }
 
         response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            print(f"Skipping {release_version}: HTTP {response.status_code} for tag {github_tag}")
+            continue
         body = response.json()
         published_at = re.search(r"^(\d{4}-\d{2}-\d{2})", body["published_at"]).group()
 
@@ -41,7 +44,18 @@ else:
         html = url_pattern.sub(r" <a href='\2'>\2</a>", html)
         html = github_pattern.sub(r"<a href='https://github.com/Netatalk/netatalk/issues/\2'>\1\2</a>", html)
 
-        pre_footer = f"""<h1>Footnotes</h1>
+        assets = body.get("assets", [])
+        downloads_html = ""
+        if assets:
+            downloads_html = "<h1>Downloads</h1>\n<ul>\n"
+            for asset in assets:
+                name = asset["name"]
+                download_url = asset["browser_download_url"]
+                size_mb = asset["size"] / (1024 * 1024)
+                downloads_html += f"<li><a href='{download_url}'>{name}</a> ({size_mb:.1f} MB)</li>\n"
+            downloads_html += "</ul>\n"
+
+        pre_footer = f"""{downloads_html}<h1>Footnotes</h1>
 <p>Release published on {published_at}</p>
 <p>Generated from <a href=\"https://github.com/Netatalk/netatalk/releases/tag/{github_tag}\">GitHub Release Notes</a></p>
 </div>
