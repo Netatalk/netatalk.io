@@ -14,6 +14,7 @@ from common import (
 
 url_pattern = re.compile(r'((?:^|\s)(https?://\S+)(?=<))')
 github_pattern = re.compile(r'(GitHub #)(\d+)')
+github_pr_url_pattern = re.compile(r'https://github\.com/Netatalk/netatalk/pull/(\d+)')
 
 
 if os.environ.get("GITHUB_TOKEN") is None:
@@ -39,7 +40,8 @@ else:
         body = response.json()
         published_at = re.search(r"^(\d{4}-\d{2}-\d{2})", body["published_at"]).group()
 
-        html = markdown.markdown(body["body"], extensions=['fenced_code', 'smarty', 'tables'])
+        body_text = github_pr_url_pattern.sub(r'[#\1](https://github.com/Netatalk/netatalk/pull/\1)', body["body"])
+        html = markdown.markdown(body_text, extensions=['fenced_code', 'smarty', 'tables'])
 
         html = url_pattern.sub(r" <a href='\2'>\2</a>", html)
         html = github_pattern.sub(r"<a href='https://github.com/Netatalk/netatalk/issues/\2'>\1\2</a>", html)
