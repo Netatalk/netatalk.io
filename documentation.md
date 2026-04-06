@@ -5,7 +5,7 @@
 The [Netatalk Manual](/manual/en) is the primary source of documentation for the Netatalk suite of programs.
 It also contains the full suite of Unix man pages in html format.
 
-Available languages:
+Available localizations:
 
 - [Netatalk Manual (English)](/manual/en)
 - [Netatalk マニュアル (Japanese)](/manual/ja)
@@ -21,17 +21,15 @@ How to install Netatalk when not using a package manager, either from source cod
 - [Compile from Source](/compilation.html)
 - [Container Deployment](/docker.html)
 
-## Developer Documentation
+## Technical Documentation
 
-The developer documentation contains information for developers interested in contributing to the Netatalk project,
+The Developer Documentation is generated from the Netatalk source code with Doxygen.
+It contains information for developers interested in contributing to the Netatalk project,
 including implemetation details and API documentation.
 
 - [Developer Documentation](/developer)
 
-## Release History
-
-- [News](/news.html): the complete changelog of the project
-- [Contributors](/contributors.html): a list of everyone who has contributed to the project (huge thanks!)
+## Release Notes
 
 ### Netatalk Version 4 Release Notes
 
