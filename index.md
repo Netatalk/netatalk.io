@@ -34,7 +34,7 @@ for a list of known packages.
 ### 🐳 Deploy a container image
 
 The project publishes images on [Docker Hub](https://hub.docker.com/r/netatalk/netatalk)
-of [GHCR](https://github.com/Netatalk/netatalk/pkgs/container/netatalk)
+and [GHCR](https://github.com/Netatalk/netatalk/pkgs/container/netatalk)
 that can be deployed with a container runtime such as docker or podman.
 
 Refer to the [container documentation](/docker.html) for details on how to
