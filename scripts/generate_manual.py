@@ -92,11 +92,15 @@ for file in files:
                 'tables',
             ],
         )
-    page_title = file.replace('index', 'Index').replace('.md', '')
     new_name = file.replace('.md', '.html').lower()
+    h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
+    if h1_match:
+        page_title = h1_match.group(1)
+    else:
+        page_title = file.replace('.md', '').replace('_', ' ').capitalize()
 
     with open(f"./public/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-        output_file.write(html_head(f"Netatalk - {page_title.capitalize()}", new_name, "en"))
+        output_file.write(html_head(f"Netatalk - {page_title}", new_name, "en"))
         output_file.write("<body>\n")
         output_file.write(html_menlinks())
         output_file.write(html_navbar(VERSION))

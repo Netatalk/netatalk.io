@@ -31,7 +31,7 @@ for dir in subdirs:
     files = []
 
     for file in os.listdir(dir):
-        if file.endswith(".md"):
+        if file.endswith(".md") and file != "README.md":
             files.append(f"{file}")
     for file in files:
         path = f"{dir}/{file}"
@@ -64,12 +64,14 @@ for dir in subdirs:
                     'tables',
                 ],
             )
-        page_title = file.replace('.md', '')
         new_name = file.replace('.md', '.html')
-        if page_title == "index":
+        h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
+        if h1_match:
+            page_title = h1_match.group(1)
+        elif file == "index.md":
             page_title = "Networking Apple Macintosh through Open Source"
         else:
-            page_title.capitalize()
+            page_title = file.replace('.md', '').replace('_', ' ').capitalize()
 
         new_path = f"{dir}/{new_name}"
         if dir == ".":
