@@ -15,6 +15,7 @@ subdirs = [
     '.',
     'blog',
     'security',
+    'spec',
 # Historical release notes; later ones are built in generate_releasenotes.py
     '1.3',
     '1.5',
