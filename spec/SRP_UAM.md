@@ -238,6 +238,51 @@ The protocol uses two different padding conventions depending on context:
 The SRP UAM is advertised in the AFP GetStatus (FPGetSrvrInfo) response as the
 string "SRP" in the UAM list.
 
+## Addendum: Unverified Edge Case in M1 / M2
+
+This specification was reverse-engineered from packet captures of an Apple
+Time Capsule (TimeCapsule8,119, AFP 3.3) and subsequently cross-checked
+against the macOS Tahoe AFP client interoperating with the Netatalk
+server-side implementation. Both peers agreed on every field listed above
+in every exchange that was observed -- with one caveat that has not yet
+been resolved by direct evidence.
+
+For the `A` and `B` fields fed into the `M1` and `M2` SHA-1 inputs, this
+spec prescribes `strip(A)` and `strip(B)` (leading zero bytes removed).
+However:
+
+- `strip(x)` and `PAD(x)` produce byte-for-byte identical inputs whenever
+  the high byte of `x` is non-zero. For uniformly random `A` and `B` in
+  the 1536-bit group, the high byte is zero with probability roughly
+  `1/256` (~0.4%) per value.
+- All exchanges captured against Time Capsule, and all exchanges observed
+  between macOS Tahoe and the Netatalk server, have happened to use
+  values of `A` and `B` whose high bytes were non-zero. For these
+  exchanges, an implementation that fed `PAD(A)` / `PAD(B)` into M1
+  instead of `strip(A)` / `strip(B)` would have produced the exact same
+  M1 digest, and the protocol would have appeared to work identically.
+- Therefore the choice of `strip` over `PAD` for `A` and `B` in M1/M2 is
+  not yet directly verified against an Apple peer. It is the convention
+  used by Tom Wu's reference SRP-6a derivation and by RFC 5054's `u` and
+  `k` examples (where `PAD` is explicit), so `strip` is the more likely
+  choice if Apple is following standard SRP-6a literature, but this is
+  inference rather than observation.
+
+The same ambiguity does **not** apply to `H(N)`, `H(g)`, `PAD(g)` in `k`,
+`PAD(A)`/`PAD(B)` in `u`, or `strip(S)` in `K`: those formulas have either
+been confirmed against the Time Capsule via differential testing, or are
+unambiguous because the values they operate on do contain leading zeros
+in the captured exchanges.
+
+If a future implementation observes intermittent M1 verification failures
+at roughly a 1-in-256 rate where the failing exchanges all have a leading
+zero byte in either the wire-format `A` or the wire-format `B`, this
+addendum is the first place to look. Resolving the ambiguity in that case
+is straightforward: capture one such failing exchange, recompute M1 once
+with `strip(A)` / `strip(B)` and once with `PAD(A)` / `PAD(B)`, and see
+which one matches the M1 the Apple peer actually sent. The Padding
+Summary table above should then be updated accordingly.
+
 ## References
 
 - [RFC 2945: The SRP Authentication and Key Exchange System](https://tools.ietf.org/html/rfc2945)
