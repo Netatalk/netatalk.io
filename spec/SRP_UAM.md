@@ -1,9 +1,10 @@
 # AFP SRP User Authentication Method
 
-This document specifies the SRP (Secure Remote Password) User Authentication
-Method as implemented by Apple's AFP servers, including Time Capsule and macOS
-file sharing. The protocol was reverse-engineered from packet captures and
-verified against a TimeCapsule8,119 running AFP 3.3.
+This document specifies the SRP (Secure Remote Password) User Authentication Method
+as implemented by Apple's AFP clients and servers, notably AirPort Time Capsule
+and the AFP client in macOS. The protocol was reverse-engineered using packet captures
+from TimeCapsule8,119 running AFP 3.3 and validated against the AFP client
+in macOS Tahoe 26.4.
 
 ## Overview
 
