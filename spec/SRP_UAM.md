@@ -122,9 +122,10 @@ AFP error 0 (kFPNoErr) with a 24-byte payload:
 
 #### FPLoginCont Response (Authentication Failure)
 
-If the client proof M1 is invalid, the server returns AFP error -6754 with no
-payload. This covers both wrong password and empty password cases — the server
-does not distinguish between them.
+If the client proof M1 is invalid - incorrect or empty password -
+the server returns error -6754 with no payload.
+
+**Note:** -6754 does *not* correspond to a standard AFP return code.
 
 The DSI header for this response:
 
