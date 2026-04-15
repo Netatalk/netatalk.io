@@ -1,10 +1,11 @@
 # AFP SRP User Authentication Method
 
-This document specifies the SRP (Secure Remote Password) User Authentication Method
-as implemented by Apple's AFP clients and servers, notably AirPort Time Capsule
-and the AFP client in macOS. The protocol was reverse-engineered using packet captures
-from TimeCapsule8,119 running AFP 3.3 and validated against the AFP client
-in macOS Tahoe 26.4.
+This document is an open source community specification for the SRP (Secure Remote Password)
+User Authentication Method as implemented by Apple's AFP clients and servers,
+notably AirPort Time Capsule and the AFP client in macOS.
+The protocol was reverse-engineered using packet captures from TimeCapsule8,119
+which identifies itself as conforming to AFP 3.3,
+validated against the AFP client in macOS Tahoe 26.4.
 
 ## Overview
 
@@ -122,7 +123,7 @@ AFP error 0 (kFPNoErr) with a 24-byte payload:
 
 #### FPLoginCont Response (Authentication Failure)
 
-If the client proof M1 is invalid - incorrect or empty password -
+If the client proof M1 is invalid - e.g. incorrect or empty password -
 the server returns error -6754 with no payload.
 
 **Note:** -6754 does *not* correspond to a standard AFP return code.
