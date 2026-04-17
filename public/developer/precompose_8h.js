@@ -20,10 +20,10 @@ var precompose_8h =
     [ "base_sp", "precompose_8h.html#a1859436f57807621f4acdbfd64d5e8cb", null ],
     [ "comb", "precompose_8h.html#acee30aba273265a8b12a929d9b81bbe7", null ],
     [ "comb_sp", "precompose_8h.html#af73a7f57af157862ba69b7b9b3d68832", null ],
-    [ "decompositions", "precompose_8h.html#a01c6fafdc43c572ad0436823a20ff69e", null ],
-    [ "decompositions_sp", "precompose_8h.html#aca4ba90c20c53092678cc04b146a184c", null ],
-    [ "precompositions", "precompose_8h.html#a5c588e94c911bc732e2f33390496a327", null ],
-    [ "precompositions_sp", "precompose_8h.html#af0c1bb687548e1e6464a9d726f9b342c", null ],
+    [ "decompositions", "precompose_8h.html#a4cb20b9cfa528b904a8c73b57655d6cf", null ],
+    [ "decompositions_sp", "precompose_8h.html#afcd570b7affaa86eee3aebc018080bfe", null ],
+    [ "precompositions", "precompose_8h.html#a1966ef4e419db73c61b6acb4211d3cb5", null ],
+    [ "precompositions_sp", "precompose_8h.html#a3a00c0e99a003b3ee0c85131e802894a", null ],
     [ "replacement", "precompose_8h.html#af6c51ec5eb5e3765ec0ada31d0e81d43", null ],
     [ "replacement_sp", "precompose_8h.html#a88b1a8a31fd11812a11aa25bb2b7d236", null ]
 ];

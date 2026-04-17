@@ -17,11 +17,11 @@ var searchData=
   ['key_20takeaways_14',['Key Takeaways',['../md_developer_2dircache.html#autotoc_md33',1,'']]],
   ['keyfile_15',['keyfile',['../structafp__options.html#ab1efe64de28ad37b8040b8063936a216',1,'afp_options']]],
   ['keysize_16',['KEYSIZE',['../uams__dhx__pam_8c.html#a4b0feb025bc871150dd979b04b527dfd',1,'KEYSIZE:&#160;uams_dhx_pam.c'],['../uams__dhx__passwd_8c.html#a4b0feb025bc871150dd979b04b527dfd',1,'KEYSIZE:&#160;uams_dhx_passwd.c']]],
-  ['kfilesec_5facl_17',['kFileSec_ACL',['../afpclient_8h.html#a752325504264a8bcef431b85a6ad9fca',1,'kFileSec_ACL:&#160;afpclient.h'],['../acls_8h.html#a1499aec5b9e708d1be6fa3bb68f729b1ac490d8c15b99581e580f66bf6a4aeef4',1,'kFileSec_ACL:&#160;acls.h']]],
-  ['kfilesec_5fgrpuuid_18',['kFileSec_GRPUUID',['../afpclient_8h.html#a5d2f9774841169161dfa8d143fd84264',1,'kFileSec_GRPUUID:&#160;afpclient.h'],['../acls_8h.html#a1499aec5b9e708d1be6fa3bb68f729b1af00fb2f7900eefa69311bb9b6936ee69',1,'kFileSec_GRPUUID:&#160;acls.h']]],
-  ['kfilesec_5finherit_19',['kFileSec_Inherit',['../afpclient_8h.html#a61b16b763dbe72b03a45cdadac340953',1,'kFileSec_Inherit:&#160;afpclient.h'],['../acls_8h.html#a1499aec5b9e708d1be6fa3bb68f729b1a66a2823949b7105c9ab7043bb434766b',1,'kFileSec_Inherit:&#160;acls.h']]],
-  ['kfilesec_5fremoveacl_20',['kFileSec_REMOVEACL',['../afpclient_8h.html#ac44ac1328ad4f56d9ccbd75c9ad58c8a',1,'kFileSec_REMOVEACL:&#160;afpclient.h'],['../acls_8h.html#a1499aec5b9e708d1be6fa3bb68f729b1a0851222b86100a4c303bf977350d23dd',1,'kFileSec_REMOVEACL:&#160;acls.h']]],
-  ['kfilesec_5fuuid_21',['kFileSec_UUID',['../afpclient_8h.html#ad73a0797ebe9ebce8d8dabbd1e600396',1,'kFileSec_UUID:&#160;afpclient.h'],['../acls_8h.html#a1499aec5b9e708d1be6fa3bb68f729b1a5faeea981554a22d8c692c9579f49218',1,'kFileSec_UUID:&#160;acls.h']]],
+  ['kfilesec_5facl_17',['kFileSec_ACL',['../afpclient_8h.html#a752325504264a8bcef431b85a6ad9fca',1,'kFileSec_ACL:&#160;afpclient.h'],['../acls_8h.html#ae0e80e4d6c1d86db587ca229cce03ae6ac490d8c15b99581e580f66bf6a4aeef4',1,'kFileSec_ACL:&#160;acls.h']]],
+  ['kfilesec_5fgrpuuid_18',['kFileSec_GRPUUID',['../afpclient_8h.html#a5d2f9774841169161dfa8d143fd84264',1,'kFileSec_GRPUUID:&#160;afpclient.h'],['../acls_8h.html#ae0e80e4d6c1d86db587ca229cce03ae6af00fb2f7900eefa69311bb9b6936ee69',1,'kFileSec_GRPUUID:&#160;acls.h']]],
+  ['kfilesec_5finherit_19',['kFileSec_Inherit',['../afpclient_8h.html#a61b16b763dbe72b03a45cdadac340953',1,'kFileSec_Inherit:&#160;afpclient.h'],['../acls_8h.html#ae0e80e4d6c1d86db587ca229cce03ae6a66a2823949b7105c9ab7043bb434766b',1,'kFileSec_Inherit:&#160;acls.h']]],
+  ['kfilesec_5fremoveacl_20',['kFileSec_REMOVEACL',['../afpclient_8h.html#ac44ac1328ad4f56d9ccbd75c9ad58c8a',1,'kFileSec_REMOVEACL:&#160;afpclient.h'],['../acls_8h.html#ae0e80e4d6c1d86db587ca229cce03ae6a0851222b86100a4c303bf977350d23dd',1,'kFileSec_REMOVEACL:&#160;acls.h']]],
+  ['kfilesec_5fuuid_21',['kFileSec_UUID',['../afpclient_8h.html#ad73a0797ebe9ebce8d8dabbd1e600396',1,'kFileSec_UUID:&#160;afpclient.h'],['../acls_8h.html#ae0e80e4d6c1d86db587ca229cce03ae6a5faeea981554a22d8c692c9579f49218',1,'kFileSec_UUID:&#160;acls.h']]],
   ['kill_5fchild_22',['kill_child',['../server__child_8c.html#af28990b672c546dfdc862d5b67d78329',1,'server_child.c']]],
   ['kill_5fchilds_23',['kill_childs',['../netatalk_8c.html#ae19b278e512fbf3c0e01f4b54e0b12b4',1,'netatalk.c']]],
   ['kill_5fgracetime_24',['KILL_GRACETIME',['../netatalk_8c.html#aee95e5a07714234f550ed1948ea02f07',1,'netatalk.c']]],
@@ -75,7 +75,7 @@ var searchData=
   ['ktextencodingmacturkish_72',['kTextEncodingMacTurkish',['../afpd_2file_8h.html#a2aa350aac0efd0ef2b184cc516ff9cd1a7d3289a362b8224bb215f7d779f8da69',1,'file.h']]],
   ['ktextencodingmacvietnamese_73',['kTextEncodingMacVietnamese',['../afpd_2file_8h.html#a2aa350aac0efd0ef2b184cc516ff9cd1a12e326ab73caedc0e0f6aec3653d330f',1,'file.h']]],
   ['ktextencodingutf8_74',['kTextEncodingUTF8',['../afpd_2file_8h.html#a4139d82f129208e4fd62ee46a72d475a',1,'kTextEncodingUTF8:&#160;file.h'],['../afpclient_8c.html#a4139d82f129208e4fd62ee46a72d475a',1,'kTextEncodingUTF8:&#160;afpclient.c']]],
-  ['kxattrcreate_75',['kXAttrCreate',['../ea_8h.html#a298dfc9bf3382bdc9af1d668c9a56eeda84d1dcb26d70225a2aecff8c5db26513',1,'ea.h']]],
-  ['kxattrnofollow_76',['kXAttrNoFollow',['../ea_8h.html#a298dfc9bf3382bdc9af1d668c9a56eedabbd3c45a6f58ff2d9881fce720408edf',1,'ea.h']]],
-  ['kxattrreplace_77',['kXAttrReplace',['../ea_8h.html#a298dfc9bf3382bdc9af1d668c9a56eeda6221dcf404d5e98fc4c6e23b912b340a',1,'ea.h']]]
+  ['kxattrcreate_75',['kXAttrCreate',['../ea_8h.html#adfb3da350be11977b54637e6be52bff7a84d1dcb26d70225a2aecff8c5db26513',1,'ea.h']]],
+  ['kxattrnofollow_76',['kXAttrNoFollow',['../ea_8h.html#adfb3da350be11977b54637e6be52bff7abbd3c45a6f58ff2d9881fce720408edf',1,'ea.h']]],
+  ['kxattrreplace_77',['kXAttrReplace',['../ea_8h.html#adfb3da350be11977b54637e6be52bff7a6221dcf404d5e98fc4c6e23b912b340a',1,'ea.h']]]
 ];

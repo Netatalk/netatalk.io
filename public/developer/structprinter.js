@@ -11,7 +11,7 @@ var structprinter =
     [ "p_status", "structprinter.html#a3873ec20238bf125752d6f92895dc1ef", null ],
     [ "p_type", "structprinter.html#a14aaa30ac8a170cdb561f8d6f42c1607", null ],
     [ "p_u_name", "structprinter.html#a2e91f2c6465799903969bc342f13f913", null ],
-    [ "p_un", "structprinter.html#a4e6c33a81e9764df84cd28bc0e82abce", null ],
+    [ "p_un", "structprinter.html#a4e452169e22a5329cb5a88b21ec96ca9", null ],
     [ "p_zone", "structprinter.html#a12b6bc257d491afae410c18f011e54af", null ],
     [ "pr_lock", "structprinter.html#a79c8669121a41abed39f6b687c8401b3", null ],
     [ "pr_operator", "structprinter.html#a2d95c634f4a6479db12d694c589b4e6e", null ],
@@ -20,5 +20,5 @@ var structprinter =
     [ "pr_printer", "structprinter.html#aa9d9200b9ef35ef937cc268d7c622b46", null ],
     [ "pr_spool", "structprinter.html#ac85c6a2f9892c338b924e33c856907d6", null ],
     [ "pu_cmd", "structprinter.html#a66f82e522f6ffe59b3fb99d10e308286", null ],
-    [ "pu_pr", "structprinter.html#a2879e445eb5498895090b2260c67cbab", null ]
+    [ "pu_pr", "structprinter.html#a70ca745465cd3b5b51faa4bdfbc2fd89", null ]
 ];
