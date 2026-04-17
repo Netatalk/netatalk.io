@@ -2,6 +2,17 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.4.2 is available
+
+*17th of April 2026*
+
+The Netatalk development team is proud to announce the latest release of the Netatalk 4.4 release series.
+
+This fixes a build breakage on certain 32 bit systems that was introduced between v4.3 and v4.4,
+plus a range of stability and reliability fixes to afpd and the SQLite CNID backend.
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.4/ReleaseNotes4.4.2.html).
+
 ### Netatalk 4.5.0 beta is available
 
 *3rd of April 2026*
