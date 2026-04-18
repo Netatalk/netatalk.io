@@ -9,6 +9,7 @@ from common import (
     html_menlinks,
     html_navbar,
     html_foot,
+    js_mermaid,
 )
 
 subdirs = [
@@ -79,6 +80,7 @@ for dir in subdirs:
         with open(f"./public/{new_path}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
             output_file.write(html_head(f"Netatalk - {page_title}", new_path))
             output_file.write("<body>\n")
+            output_file.write(js_mermaid())
             output_file.write(html_menlinks())
             output_file.write(html_navbar(VERSION))
             output_file.write("<div id=\"content\">\n")
