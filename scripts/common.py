@@ -250,8 +250,8 @@ def html_foot(path):
 
 def js_mermaid():
     return """<script
-    src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"
-    integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+    src="https://cdn.jsdelivr.net/npm/mermaid@11.14.0/dist/mermaid.min.js"
+    integrity="sha384-1CMXl090wj8Dd6YfnzSQUOgWbE6suWCaenYG7pox5AX7apTpY3PmJMeS2oPql4Gk"
     crossorigin="anonymous"
 ></script>
 """
