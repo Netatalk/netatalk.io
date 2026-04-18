@@ -1,4 +1,4 @@
-### FPSpotlightRPC
+# FPSpotlightRPC
 
 Executes Spotlight metadata search and attribute operations on a volume.
 
@@ -15,7 +15,7 @@ uint32_t Reserved
 8 bytes  SubCommandData
 ```
 
-#### Parameters
+## Parameters
 
 *CommandCode*  
 `kFPSpotlightRPC` (76).
@@ -66,7 +66,7 @@ is not specific to AFP.
 If the result code is `kFPNoErr`, the server returns a SubCommand-specific
 reply block as described in "SubCommand Reply Formats" below.
 
-#### Discussion
+## Discussion
 
 `FPSpotlightRPC` is an AFP command introduced in Mac OS X 10.4 Tiger
 that exposes Apple's Spotlight metadata search facility over AFP.
@@ -119,9 +119,9 @@ sequenceDiagram
     Server-->>Client: sl_array [result: 0=ok]
 ```
 
-#### SubCommand Reply Formats
+## SubCommand Reply Formats
 
-##### SPOTLIGHT_CMD_OPEN (1) and SPOTLIGHT_CMD_OPEN2 (4)
+### SPOTLIGHT_CMD_OPEN (1) and SPOTLIGHT_CMD_OPEN2 (4)
 
 Establishes a Spotlight context for the specified volume and returns the
 server-side volume path. Both variants produce identical replies.
@@ -132,7 +132,7 @@ server-side volume path. Both variants produce identical replies.
 | `Reserved` (`uint32_t`) | Zero.                                         |
 | `VolumePath` (variable) | Null-terminated UTF-8 path to the volume root on the server. |
 
-##### SPOTLIGHT_CMD_FLAGS (2)
+### SPOTLIGHT_CMD_FLAGS (2)
 
 Returns a 32-bit value whose structure and semantics are entirely unknown.
 The Netatalk server returns `0x0100006b`. The Helios AFP server is known to return
@@ -143,7 +143,7 @@ is an opaque magic constant, is not established.
 |-------------------------|------------------------------------------------|
 | `ServerFlags` (`uint32_t`) | Big-endian capability flags bitmask.        |
 
-##### SPOTLIGHT_CMD_RPC (3)
+### SPOTLIGHT_CMD_RPC (3)
 
 Executes a Spotlight RPC method. The reply begins with a 4-byte reserved
 field (zeroes), followed by a Spotlight-marshalled data structure.
@@ -153,7 +153,7 @@ field (zeroes), followed by a Spotlight-marshalled data structure.
 | `Reserved` (4 bytes)    | Zero.                                               |
 | `RPCReply` (variable)   | Spotlight-marshalled `DALLOC_CTX` reply. Format depends on the RPC method invoked. See "RPC Methods" below. |
 
-#### RPC Methods
+## RPC Methods
 
 All RPC method calls share the same outer structure for their `RPCPayload`:
 
@@ -174,7 +174,7 @@ The `method` string at position `[0][0][0]` determines which server handler
 is invoked. Context handles `ctx1` and `ctx2` are assigned by the client and
 used as an opaque query identifier throughout the lifecycle of a search.
 
-##### fetchPropertiesForContext
+### fetchPropertiesForContext
 
 Returns volume metadata properties required before opening queries. Takes
 no arguments beyond the method name and context.
@@ -192,7 +192,7 @@ sl_dict_t {
 }
 ```
 
-##### openQueryWithParams:forContext
+### openQueryWithParams:forContext
 
 Submits a Spotlight query string to be executed asynchronously. Results are
 retrieved in subsequent `fetchQueryResultsForContext:` calls.
@@ -215,7 +215,7 @@ sl_array_t [ uint64_t result ]
 `result` is `0` on success or `UINT64_MAX` if the query could not be
 started (e.g., the indexer is unavailable or the query string is invalid).
 
-##### fetchQueryResultsForContext
+### fetchQueryResultsForContext
 
 Retrieves the next batch of search results for a running query. Results
 are delivered incrementally; this call must be repeated until the status
@@ -273,7 +273,7 @@ The server batches at most 20 file results per call. When `status` is 35,
 the server resumes the indexer cursor immediately after replying; the client
 may call `fetchQueryResultsForContext:` again as soon as it likes.
 
-##### fetchAttributeNamesForOIDArray:context
+### fetchAttributeNamesForOIDArray:context
 
 Returns the list of metadata attribute names available for a specific file
 or directory node.
@@ -305,7 +305,7 @@ Netatalk's implementation. The list may not reflect what Apple's original server
 returned for any given item; it represents only the attributes Netatalk
 currently supports.
 
-##### fetchAttributes:forOIDArray:context
+### fetchAttributes:forOIDArray:context
 
 Fetches the values of the requested metadata attributes for a specific item.
 
@@ -344,7 +344,7 @@ Supported attribute keys and their return types:
 
 Attributes not in this table are returned as `nil`.
 
-##### storeAttributes:forOIDArray:context:
+### storeAttributes:forOIDArray:context:
 
 Writes metadata attribute values back to a file or directory. The full
 intended semantics of this call are unclear, but the hypothesis is that it is
@@ -369,7 +369,7 @@ Target item identification is provided by a `sl_cnids_t` at position
 sl_array_t [ uint64_t 0 ]
 ```
 
-##### closeQueryForContext
+### closeQueryForContext
 
 Releases server-side resources associated with a query context. Running
 queries are cancelled; completed queries are freed immediately.
@@ -385,12 +385,12 @@ sl_array_t [ uint64_t result ]
 
 `result` is `0` on success or `UINT64_MAX` if the context was not found.
 
-#### Spotlight Data Encoding
+## Spotlight Data Encoding
 
 The `RPCPayload` and `RPCReply` fields use a custom binary serialization
 format called the *Spotlight wire format*.
 
-##### Message Header
+### Message Header
 
 Each top-level message begins with a 16-byte header:
 
@@ -403,7 +403,7 @@ Each top-level message begins with a 16-byte header:
 Netatalk always writes the little-endian magic `"432130dm"`. An `"md031234"`
 magic indicates big-endian encoding.
 
-##### Data Encoding
+### Data Encoding
 
 The data section follows immediately after the 16-byte header. All scalar
 values are 8-byte aligned. Each value is preceded by an 8-byte *tag word*:
@@ -433,7 +433,7 @@ Dates use the *Spotlight epoch*: seconds since 2001-01-01 00:00:00 UTC
 (i.e., UNIX timestamp − 280,878,921,600). The date value is stored as
 `(spotlight_seconds << 24)` in the 8-byte payload.
 
-##### Table of Contents (TOC)
+### Table of Contents (TOC)
 
 Complex types (arrays, dictionaries, strings, CNID arrays, file metadata)
 are described by a Table of Contents appended after the data section. Each
@@ -456,14 +456,14 @@ The TOC itself is preceded by a `SQ_TYPE_TOC` tag word whose
 `size_or_count` field gives the number of TOC entries including the
 tag word itself.
 
-##### Nested Encoding
+### Nested Encoding
 
 `sl_filemeta_t` values are encoded as an embedded, self-contained
 Spotlight message (a recursive `sl_pack` / `sl_unpack` call). The outer
 message references the filemeta block via a `SQ_CPX_TYPE_FILEMETA` TOC
 entry; the inner message begins with its own `"432130dm"` magic header.
 
-##### CNID Array Encoding
+### CNID Array Encoding
 
 A `sl_cnids_t` in wire form consists of:
 
@@ -505,7 +505,7 @@ block-beta
   end
 ```
 
-#### Availability
+## Availability
 
 - Introduced in AFP 3.2 (Mac OS X 10.4 Tiger).
 - Requires the server to have Spotlight indexing enabled. If Spotlight support
@@ -514,7 +514,7 @@ block-beta
 - Clients should call `FPGetSrvrInfo` and check for the Spotlight capability
   flag before using this command.
 
-#### Result Codes
+## Result Codes
 
 | Result code          | Explanation                                                        |
 |----------------------|--------------------------------------------------------------------|
