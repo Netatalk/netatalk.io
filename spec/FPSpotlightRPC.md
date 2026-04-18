@@ -300,10 +300,9 @@ sl_array_t {
 }
 ```
 
-> **Implementation note:** The attribute list above is hardcoded in
-Netatalk's implementation. The list may not reflect what Apple's original server
-returned for any given item; it represents only the attributes Netatalk
-currently supports.
+> **Implementation note:** The list may not reflect what Apple's original server
+returned for any given item; it represents only the attributes observed
+and functionality tested by the Netatalk team.
 
 ### fetchAttributes:forOIDArray:context
 
@@ -400,9 +399,6 @@ Each top-level message begins with a 16-byte header:
 | 8      | 4 bytes | `TotalDwords`: total length of the message in 8-byte units, including header and TOC. |
 | 12     | 4 bytes | `DataDwords`: length of the data section in 8-byte units (not counting header). |
 
-Netatalk always writes the little-endian magic `"432130dm"`. An `"md031234"`
-magic indicates big-endian encoding.
-
 ### Data Encoding
 
 The data section follows immediately after the 16-byte header. All scalar
@@ -473,9 +469,9 @@ A `sl_cnids_t` in wire form consists of:
      parameter of sl_pack_tag has unknown meaning, but always 8").
    - followed immediately by a header word:
      - bits 0–15: CNID count
-     - bits 16–31: `ca_unkn1` — purpose unknown; named `unkn1` in the source.
+     - bits 16–31: `ca_unkn1` — purpose unknown;
        Observed as `0x0add` in query result replies and `0x0fec` in attribute
-       lookup replies. No explanation for either value is documented.
+       lookup replies.
      - bits 32–63: `ca_context` (echoes the query `ctx2`)
 3. `count` × 8-byte CNID values (each a 32-bit catalog node ID zero-extended to 64 bits).
 
