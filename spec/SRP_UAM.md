@@ -3,9 +3,9 @@
 This document is an open source community specification for the SRP (Secure Remote Password)
 User Authentication Method as implemented by Apple's AFP clients and servers,
 notably AirPort Time Capsule and the AFP client in macOS.
-The protocol was reverse-engineered using packet captures from TimeCapsule8,119
-which identifies itself as conforming to AFP 3.3,
-validated against the AFP client in macOS Tahoe 26.4.
+The protocol was reverse-engineered by the Netatalk development team using packet captures
+from TimeCapsule8,119 which identifies itself as conforming to AFP 3.3,
+then validated against the AFP client in macOS Tahoe 26.4.
 
 ## Overview
 
