@@ -253,5 +253,6 @@ def js_mermaid():
     src="https://cdn.jsdelivr.net/npm/mermaid@11.14.0/dist/mermaid.min.js"
     integrity="sha384-1CMXl090wj8Dd6YfnzSQUOgWbE6suWCaenYG7pox5AX7apTpY3PmJMeS2oPql4Gk"
     crossorigin="anonymous"
+    data-cfasync="false"
 ></script>
 """
