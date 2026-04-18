@@ -65,6 +65,7 @@ for dir in subdirs:
                     'tables',
                 ],
             )
+            html = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>', r'<pre class="mermaid">\1</pre>', html, flags=re.DOTALL)
         new_name = file.replace('.md', '.html')
         h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
         if h1_match:
