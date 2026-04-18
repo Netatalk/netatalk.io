@@ -255,4 +255,5 @@ def js_mermaid():
     crossorigin="anonymous"
     data-cfasync="false"
 ></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
 """
