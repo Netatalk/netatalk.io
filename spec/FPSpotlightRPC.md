@@ -42,14 +42,11 @@ values:
 | 4     | `SPOTLIGHT_CMD_OPEN2`    | Open Spotlight context (alternate form). |
 
 *Reserved*  
-Purpose unknown. Observed to always be zero (`0x00000000`). The field is
-never interpreted by the server in any known implementation; "Reserved" is
-inferred, not documented.
+Purpose unknown. Observed to always be zero (`0x00000000`).
 
 *SubCommandData*  
-Eight bytes whose purpose is entirely unknown. They are never read or
-interpreted by the server in any known implementation; their existence is
-inferred only from the fixed 22-byte offset at which the `RPCPayload` begins.
+Eight bytes whose purpose is unknown; their existence is inferred
+from the fixed 22-byte offset at which the `RPCPayload` begins.
 Observed to be zero in all captured traffic.
 
 *RPCPayload*  
