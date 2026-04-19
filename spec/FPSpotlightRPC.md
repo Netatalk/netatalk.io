@@ -82,7 +82,7 @@ A client wishing to search a volume must follow this sequence:
 3. `SPOTLIGHT_CMD_RPC` / `fetchPropertiesForContext:` — obtain volume scope and UUID.
 4. `SPOTLIGHT_CMD_RPC` / `openQueryWithParams:forContext:` — submit a query.
 5. `SPOTLIGHT_CMD_RPC` / `fetchQueryResultsForContext:` — poll for results (repeat as necessary).
-6. `SPOTLIGHT_CMD_RPC` / `fetchAttributesForOIDArray:context:` — fetch metadata for results (optional).
+6. `SPOTLIGHT_CMD_RPC` / `fetchAttributes:forOIDArray:context:` (or `fetchAllAttributes:forOIDArray:context:`) — fetch metadata for results (optional).
 7. `SPOTLIGHT_CMD_RPC` / `closeQueryForContext:` — release server-side query resources.
 
 ```mermaid
@@ -108,7 +108,7 @@ sequenceDiagram
     end
 
     opt Fetch file metadata
-        Client->>Server: FPSpotlightRPC RPC fetchAttributes:forOIDArray:context:
+        Client->>Server: FPSpotlightRPC RPC fetchAttributes:forOIDArray:context: (or fetchAllAttributes:forOIDArray:context:)
         Server-->>Client: sl_array [result, cnids, filemeta]
     end
 
@@ -182,10 +182,15 @@ no arguments beyond the method name and context.
 
 ```c
 sl_dict_t {
-    "kMDSStoreMetaScopes"        /* sl_array_t [ "kMDQueryScopeComputer" ] */
+    "kMDSStoreMetaScopes"        /* sl_array_t [ "kMDQueryScopeComputer",
+                                                 "kMDQueryScopeAllIndexed",
+                                                 "kMDQueryScopeComputerIndexed" ] */
     "kMDSStorePathScopes"        /* sl_array_t [ <volume root path> ]      */
     "kMDSStoreUUID"              /* sl_uuid_t  <16-byte volume UUID>       */
+    "kMDSVolumeUUID"             /* sl_uuid_t  <same 16-byte volume UUID>  */
     "kMDSStoreHasPersistentUUID" /* sl_bool_t  true                        */
+    "kMDSStoreIsBackup"          /* sl_bool_t  true if Time Machine volume */
+    "kMDSStoreSupportsVolFS"     /* sl_bool_t  true                        */
 }
 ```
 
@@ -304,6 +309,8 @@ and functionality tested by the Netatalk team.
 ### fetchAttributes:forOIDArray:context
 
 Fetches the values of the requested metadata attributes for a specific item.
+Also handled under the alias `fetchAllAttributes:forOIDArray:context:`, which
+the server treats identically.
 
 **Request arguments:**
 
@@ -328,17 +335,27 @@ sl_array_t {
 
 Supported attribute keys and their return types:
 
-| Attribute Key                  | Return type  | Description                         |
-|--------------------------------|--------------|-------------------------------------|
-| `kMDItemDisplayName`           | `char *`     | Filename component of the path.     |
-| `kMDItemFSName`                | `char *`     | Filename component of the path (same as above). |
-| `kMDItemPath`                  | `char *`     | Full server-side absolute path.     |
-| `kMDItemFSSize`                | `uint64_t`   | File size in bytes.                 |
-| `kMDItemFSOwnerUserID`         | `uint64_t`   | Owning user ID.                     |
-| `kMDItemFSOwnerGroupID`        | `uint64_t`   | Owning group ID.                    |
-| `kMDItemFSContentChangeDate`   | `sl_time_t`  | Last modification time.             |
+| Attribute Key                    | Return type  | Description                         |
+|----------------------------------|--------------|-------------------------------------|
+| `kMDItemDisplayName`             | `char *`     | Filename component of the path (NFD-normalized). |
+| `kMDItemFSName`                  | `char *`     | Filename component of the path (same as above). |
+| `_kMDItemFileName`               | `char *`     | Filename component of the path (same as above). |
+| `kMDItemPath`                    | `char *`     | Full server-side absolute path (NFD-normalized). |
+| `kMDItemFSSize`                  | `uint64_t`   | File size in bytes.                 |
+| `kMDItemLogicalSize`             | `uint64_t`   | File size in bytes (alias for `kMDItemFSSize`). |
+| `kMDItemFSOwnerUserID`           | `uint64_t`   | Owning user ID.                     |
+| `kMDItemFSOwnerGroupID`          | `uint64_t`   | Owning group ID.                    |
+| `kMDItemFSContentChangeDate`     | `sl_time_t`  | Last modification time.             |
+| `kMDItemContentModificationDate` | `sl_time_t`  | Last modification time (alias for `kMDItemFSContentChangeDate`). |
+| `kMDItemContentCreationDate`     | `sl_time_t`  | File birth/creation time. Returns `nil` on platforms that do not expose `st_birthtimespec`. |
+| `kMDItemLastUsedDate`            | `sl_time_t`  | Last access time (`st_atim`).       |
 
 Attributes not in this table are returned as `nil`.
+
+> **Implementation note:** String attributes (`kMDItemDisplayName`, `kMDItemFSName`,
+`_kMDItemFileName`, `kMDItemPath`) are converted from the server-side NFC encoding
+to NFD (Unicode decomposed) form before transmission, as macOS expects decomposed
+filenames. If the conversion fails the original path is used verbatim.
 
 ### storeAttributes:forOIDArray:context:
 
@@ -420,7 +437,7 @@ Primitive type codes:
 | `SQ_TYPE_DATE`   | 0x8600 | total units incl tag | count of dates                | `count` × 8-byte date values |
 | `SQ_TYPE_CNIDS`  | 0x8700 | total units incl tag | always `8`; meaning unknown   | CNID header + CNID values    |
 | `SQ_TYPE_UUID`   | 0x0e00 | total units incl tag | count of UUIDs                | `count` × 16 bytes           |
-| `SQ_TYPE_TOC`    | 0x8800 | TOC entry count      | 0                             | TOC entries follow            |
+| `SQ_TYPE_TOC`    | 0x8800 | TOC entry count      | 0                             | TOC entries follow           |
 
 Dates use the *Spotlight epoch*: seconds since 2001-01-01 00:00:00 UTC
 (i.e., UNIX timestamp − 280,878,921,600). The date value is stored as
@@ -432,14 +449,14 @@ Complex types (arrays, dictionaries, strings, CNID arrays, file metadata)
 are described by a Table of Contents appended after the data section. Each
 TOC entry is an 8-byte tag word with a complex subtype code:
 
-| Constant                   | Value  | `size_or_count`             | `value_or_index`     |
-|----------------------------|--------|-----------------------------|----------------------|
-| `SQ_CPX_TYPE_ARRAY`        | 0x0a00 | offset of array in 8-byte units | element count    |
-| `SQ_CPX_TYPE_STRING`       | 0x0c00 | offset of string data        | bytes used in last block |
-| `SQ_CPX_TYPE_UTF16_STRING` | 0x1c00 | offset of string data        | bytes used in last block |
-| `SQ_CPX_TYPE_DICT`         | 0x0d00 | offset of dict data          | key-value pair count |
-| `SQ_CPX_TYPE_CNIDS`        | 0x1a00 | offset of CNID data          | 0                    |
-| `SQ_CPX_TYPE_FILEMETA`     | 0x1b00 | offset of filemeta           | embedded data length |
+| Constant                   | Value  | size_or_count                   | value_or_index           |
+|----------------------------|--------|---------------------------------|--------------------------|
+| `SQ_CPX_TYPE_ARRAY`        | 0x0a00 | offset of array in 8-byte units | element count            |
+| `SQ_CPX_TYPE_STRING`       | 0x0c00 | offset of string data           | bytes used in last block |
+| `SQ_CPX_TYPE_UTF16_STRING` | 0x1c00 | offset of string data           | bytes used in last block |
+| `SQ_CPX_TYPE_DICT`         | 0x0d00 | offset of dict data             | key-value pair count     |
+| `SQ_CPX_TYPE_CNIDS`        | 0x1a00 | offset of CNID data             | 0                        |
+| `SQ_CPX_TYPE_FILEMETA`     | 0x1b00 | offset of filemeta              | embedded data length     |
 
 A `SQ_TYPE_COMPLEX` tag in the data section holds a 1-based TOC index.
 The parser looks up the corresponding TOC entry to determine the complex
