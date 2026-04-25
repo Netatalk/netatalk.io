@@ -4,7 +4,7 @@ requests==2.33.1
 certifi==2026.2.25
 charset-normalizer==3.4.7
 gitdb==4.0.12
-GitPython==3.1.46
+GitPython==3.1.47
 idna==3.11
 Pygments==2.20.0
 smmap==5.0.3
