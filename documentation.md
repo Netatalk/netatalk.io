@@ -79,7 +79,7 @@ NETATALK_V4_RELEASE_NOTES
 - [Netatalk 3.0.3](/3.0/ReleaseNotes3.0.3.html)
 - [Netatalk 3.0.2](/3.0/ReleaseNotes3.0.2.html)
 - [Netatalk 3.0.1](/3.0/ReleaseNotes3.0.1.html)
-- [Netatalk 3.0.0](/3.0/ReleaseNotes-3.0.html)
+- [Netatalk 3.0.0](/3.0/ReleaseNotes3.0.html)
 - [Netatalk 3.0-beta2](/3.0/ReleaseNotes-3.0-beta2.html)
 - [Netatalk 3.0-beta1](/3.0/ReleaseNotes-3.0-beta1.html)
 - [Netatalk 3.0-alpha3](/3.0/ReleaseNotes-3.0-alpha3.html)
