@@ -2,6 +2,22 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.4.3 is available
+
+*13th of May 2026*
+
+The Netatalk development team is proud to announce a security focused release of the Netatalk 4.4 release series.
+
+In addition to the following security fixes, this release contains a handful of UAM and container hardening improvements.
+
+CVE-2026-44047, CVE-2026-44048, CVE-2026-44049, CVE-2026-44050,
+CVE-2026-44051, CVE-2026-44052, CVE-2026-44054, CVE-2026-44055,
+CVE-2026-44057, CVE-2026-44060, CVE-2026-44062, CVE-2026-44064,
+CVE-2026-44066, CVE-2026-44068, CVE-2026-44076, CVE-2026-45354,
+CVE-2026-45355, CVE-2026-45356, CVE-2026-45698, CVE-2026-45699
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.4/ReleaseNotes4.4.3.html).
+
 ### Netatalk 4.4.2 is available
 
 *17th of April 2026*
