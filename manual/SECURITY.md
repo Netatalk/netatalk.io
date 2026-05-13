@@ -42,6 +42,9 @@ That said, we will try to take action on your report as soon as possible!
 |--------|---------|-----------------|-------------------|----------------|
 | [CVE-2026-45699](https://netatalk.io/security/CVE-2026-45699.html) | Stack-based buffer overflow in copydir() | 2026/05/13 | 3.2.0 - 4.4.2 | 4.4.3 |
 | [CVE-2026-45698](https://netatalk.io/security/CVE-2026-45698.html) | Stack-based buffer overflow in deletedir() | 2026/05/13 | 3.2.0 - 4.4.2 | 4.4.3 |
+| [CVE-2026-45356](https://netatalk.io/security/CVE-2026-45356.html) | Integer underflow in Spotlight RPC count decrement | 2026/05/13 | 3.1.0 - 4.4.2 | 4.4.3 |
+| [CVE-2026-45355](https://netatalk.io/security/CVE-2026-45355.html) | Integer underflow to heap OOB read | 2026/05/13 | 3.1.0 - 4.4.2 | 4.4.3 |
+| [CVE-2026-45354](https://netatalk.io/security/CVE-2026-45354.html) | Pre-authentication DSI protocol desync | 2026/05/13 | 1.5.0 - 4.4.2 | 4.4.3 |
 | [CVE-2026-44076](https://netatalk.io/security/CVE-2026-44076.html) | Shell injection via volume path | 2026/05/13 | 3.1.0 - 4.4.2 | 4.4.3 |
 | [CVE-2026-44075](https://netatalk.io/security/CVE-2026-44075.html) | Missing break in DSI OpenSession | 2026/05/13 | 1.5.0 - 4.4.2 | 4.5.0 |
 | [CVE-2026-44074](https://netatalk.io/security/CVE-2026-44074.html) | Bitwise OR of errno values | 2026/05/13 | 2.1.0 - 4.4.2 | 4.5.0 |
