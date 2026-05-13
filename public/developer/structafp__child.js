@@ -9,6 +9,8 @@ var structafp__child =
     [ "afpch_next", "structafp__child.html#a0b7ba8d203cb60de027d42f381fc5aaa", null ],
     [ "afpch_pid", "structafp__child.html#a0ecdf27b812cf8252b6c16d4a49e0777", null ],
     [ "afpch_prevp", "structafp__child.html#a3a60156a036af055b19d0acfcf166110", null ],
+    [ "afpch_sessiontoken", "structafp__child.html#a52d6f9176b07b8adc4acfb08ecbbb022", null ],
+    [ "afpch_sessiontoken_len", "structafp__child.html#ad3dafdc36e9d11c1482d54f52b3bb26c", null ],
     [ "afpch_state", "structafp__child.html#aee4b09ee74d3248adb5a761234e571c5", null ],
     [ "afpch_uid", "structafp__child.html#aefeccfe30a49db652cad9294ef8c2e61", null ],
     [ "afpch_valid", "structafp__child.html#aa1b8d6825d7e8a54d4d9bf7f2b3f4dce", null ],

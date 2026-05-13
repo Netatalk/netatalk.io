@@ -164,6 +164,9 @@ admin auth user = *ユーザ* **(G)**
 通常ユーザのログインが失敗したときにafpdは必ず指定した**admin auth user**として認証を試みる。
 これが成功した場合、元の接続ユーザとして通常のセッションが確立される。
 言い換えると、あなたが**admin auth user**のパスワードを知っている場合、如何なる他のユーザとしてでも認証できる。
+>
+> ***警告:*** このオプションはセキュリティ上敏感なものであり、注意して使用する必要がある。
+将来のNetatalkリリースで削除される予定である。
 
 admin group = *グループ* **(G)**
 
@@ -622,7 +625,8 @@ log level = *type:level [type:level ...]* **(G)**; log level =
 >
 > デフォルトではafpdは**default:note**に相当する設定でsyslogに出力する。
 >
-> ログタイプ: default, afpdaemon, logger, uamsdaemon
+> ログタイプ: default, logger, cnid, afpdaemon, dsi, atalkdaemon, papdaemon,
+uams, fce, ad, spotlight
 >
 > ログレベル: severe, error, warn, note, info, debug, debug6, debug7, debug8, debug9, maxdebug
 >

@@ -209,6 +209,9 @@ fails, afpd will try to authenticate as the specified **admin auth user**.
 If this succeeds, a normal session is created for the original
 connecting user. Said differently: if you know the password of
 **admin auth user**, you can authenticate as any other user.
+>
+> ***WARNING:*** This option is a security sensitive and should be used with caution.
+It will be removed in a future Netatalk release.
 
 admin group = *group* **(G)**
 
@@ -724,7 +727,8 @@ should be logged.
 > By default afpd logs to syslog with a default logging setup equivalent
 to **default:note**
 >
-> logtypes: default, logger, cnid, afpd, dsi, uams, fce, ad, sl
+> logtypes: default, logger, cnid, afpdaemon, dsi, atalkdaemon, papdaemon,
+uams, fce, ad, spotlight
 >
 > loglevels: severe, error, warn, note, info, debug, debug6, debug7,
 debug8, debug9, maxdebug

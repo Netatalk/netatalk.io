@@ -21,5 +21,7 @@ var searchData=
   ['queue_5findex_18',['QUEUE_INDEX',['../dircache_8h.html#a771f8ffab86e0a3bd7bfc0e5d37bbb43',1,'dircache.h']]],
   ['queue_5finit_19',['queue_init',['../queue_8h.html#ab359d8b1ed1e26f7310def3e2920270f',1,'queue_init(void):&#160;queue.c'],['../queue_8c.html#ab359d8b1ed1e26f7310def3e2920270f',1,'queue_init(void):&#160;queue.c']]],
   ['quiet_20',['Quiet',['../afpclient_8c.html#a4cbc70c34829a2ba413672310bb6d528',1,'Quiet:&#160;afpclient.c'],['../testhelper_8h.html#a4cbc70c34829a2ba413672310bb6d528',1,'Quiet:&#160;afpclient.c']]],
-  ['quota_2ec_21',['quota.c',['../quota_8c.html',1,'']]]
+  ['quota_2ec_21',['quota.c',['../quota_8c.html',1,'']]],
+  ['quote_5fgvariant_5fstring_22',['quote_gvariant_string',['../netatalk_8c.html#a19e901b923084edb1e4e81b71c099090',1,'netatalk.c']]],
+  ['quote_5fshell_5farg_23',['quote_shell_arg',['../netatalk_8c.html#ac23618b28795472d018b418aa9ab1e74',1,'netatalk.c']]]
 ];

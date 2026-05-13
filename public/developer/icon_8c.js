@@ -12,9 +12,6 @@ var icon_8c =
     [ "globe_icon", "icon_8c.html#ae349250e1b3cafd08158751d2102a97d", null ],
     [ "globe_icon_icl4", "icon_8c.html#ae2929642b9647b12fb6d5fbf9eb30658", null ],
     [ "globe_icon_icl8", "icon_8c.html#a077fc2c517b9259402fa3fe219d8a3a4", null ],
-    [ "hagar_icon", "icon_8c.html#a4617ea92083e0c62ee1d2396b01319a1", null ],
-    [ "hagar_icon_icl4", "icon_8c.html#a8c8f27ff58cd959b49fc0a212f410c91", null ],
-    [ "hagar_icon_icl8", "icon_8c.html#a6dcb0fe2787b3a3915f1f66f75bd313b", null ],
     [ "nas_icon", "icon_8c.html#a70227894e9488020f91ee2614147542c", null ],
     [ "nas_icon_icl4", "icon_8c.html#ad180fc7d5cd2e9c1cfb4f0225a5e079a", null ],
     [ "nas_icon_icl8", "icon_8c.html#a2ea1e4d8b3c6beb9b8bc6f72751e69cb", null ],
@@ -23,5 +20,8 @@ var icon_8c =
     [ "sdcard_icon_icl8", "icon_8c.html#ae15eed8c9a9f08fbe633a8f10d94f4e8", null ],
     [ "sunlogo_icon", "icon_8c.html#a7642c9992be0d6260c65ff706ba7975a", null ],
     [ "sunlogo_icon_icl4", "icon_8c.html#ad945d9a97be3057ae93a1ac1895d11ab", null ],
-    [ "sunlogo_icon_icl8", "icon_8c.html#a4bfd32c774e544b766e152b9199f8cbf", null ]
+    [ "sunlogo_icon_icl8", "icon_8c.html#a4bfd32c774e544b766e152b9199f8cbf", null ],
+    [ "viking_icon", "icon_8c.html#aade71d51ffe0030770b8039c7ba7da5f", null ],
+    [ "viking_icon_icl4", "icon_8c.html#a1552b38fb63b62d8065e6eb0755abcca", null ],
+    [ "viking_icon_icl8", "icon_8c.html#ab86bfe36045cb5ffdad92d70115aeb1f", null ]
 ];

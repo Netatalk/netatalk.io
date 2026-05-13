@@ -13,6 +13,7 @@ var server__child_8h =
     [ "server_child_login_done", "server__child_8h.html#ab2353d3592e93c652b82fad2d13f1521", null ],
     [ "server_child_remove", "server__child_8h.html#a7b0ed0dac8b98ac0578eae5fb6a7aa33", null ],
     [ "server_child_resolve", "server__child_8h.html#addcd107081280ed9955720acfc7048b1", null ],
-    [ "server_child_transfer_session", "server__child_8h.html#a7026135c007268832035634fc8bfa1d8", null ],
+    [ "server_child_set_token", "server__child_8h.html#aa559ee77f5bde824c562418c73294f07", null ],
+    [ "server_child_transfer_session", "server__child_8h.html#aa67217a192e5fbd87449d1ad53a095c5", null ],
     [ "server_reset_signal", "server__child_8h.html#a64e4878541325fa9690a338c72b9846f", null ]
 ];

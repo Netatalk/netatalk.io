@@ -12,6 +12,7 @@ var uams__srp_8c =
     [ "SRP_SESSION_KEY_LEN", "uams__srp_8c.html#a8f8bad6f7a4f3d5cf60339cd71bd97d8", null ],
     [ "SRP_SHA1_LEN", "uams__srp_8c.html#abe38b01a60d95db64db33c6c638857b7", null ],
     [ "unhex", "uams__srp_8c.html#a484586f31dc1ac85f3597f0f0bc7a5fc", null ],
+    [ "ct_memcmp", "uams__srp_8c.html#a7f1d7f6ec1497711982722f8403c8a7b", null ],
     [ "mgf1_sha1", "uams__srp_8c.html#a4b3177d0d412ed5a938da0aa15f7e3a2", null ],
     [ "mpi_to_padded_buf", "uams__srp_8c.html#a9e9ba4ecf1811c23d35865c806b77697", null ],
     [ "read_uint16_be", "uams__srp_8c.html#a2922b5be0fb4ef5bbe97081361e6e600", null ],

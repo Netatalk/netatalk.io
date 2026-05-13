@@ -9,6 +9,8 @@ var netatalk_8c =
     [ "libevent_logmsg_cb", "netatalk_8c.html#a8b02f8133491383a379f2772379705a7", null ],
     [ "main", "netatalk_8c.html#a3c04138a5bfe5d72780bb7e82a18e627", null ],
     [ "netatalk_exit", "netatalk_8c.html#a1a5ae5ed268128f7331c4a08a0bb3e60", null ],
+    [ "quote_gvariant_string", "netatalk_8c.html#a19e901b923084edb1e4e81b71c099090", null ],
+    [ "quote_shell_arg", "netatalk_8c.html#ac23618b28795472d018b418aa9ab1e74", null ],
     [ "run_process", "netatalk_8c.html#a30efb71cd1aa59d5fe2795634f71db9f", null ],
     [ "service_running", "netatalk_8c.html#aa0ac66ed3992216889d1e3553964d491", null ],
     [ "set_sl_volumes", "netatalk_8c.html#a0187b1e276e7f7fadc672c04ad089417", null ],

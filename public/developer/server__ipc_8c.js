@@ -10,6 +10,7 @@ var server__ipc_8c =
     [ "ipc_kill_token", "server__ipc_8c.html#af52442e5834e0d231dc8dd22411060e4", null ],
     [ "ipc_login_done", "server__ipc_8c.html#a0064c954982e564057c2ef3d3ba6fe5e", null ],
     [ "ipc_server_read", "server__ipc_8c.html#a0be24882c96e89f8dab5db704e3de887", null ],
+    [ "ipc_session_token", "server__ipc_8c.html#aad8cf2faabd5cb65962d80bd3672b1ab", null ],
     [ "ipc_set_state", "server__ipc_8c.html#aba9b7c451eefa19ed1d5ada59c9fab72", null ],
     [ "ipc_set_volumes", "server__ipc_8c.html#acbd3fcf7d09e507cb60897a6b6628e6a", null ],
     [ "ipc_cmd_str", "server__ipc_8c.html#a001726a16cf68eb1048cfbb13bb301db", null ]
