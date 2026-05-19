@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import markdown
 import requests
 
@@ -34,6 +35,9 @@ else:
         }
 
         response = requests.get(url, headers=headers)
+        if response.status_code == 401:
+            print(f"ERROR: GitHub authentication failed (HTTP 401). Check your GITHUB_TOKEN.")
+            sys.exit(1)
         if response.status_code != 200:
             print(f"Skipping {release_version}: HTTP {response.status_code} for tag {github_tag}")
             continue
