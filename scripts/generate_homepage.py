@@ -14,7 +14,6 @@ from common import (
 
 subdirs = [
     '.',
-    'blog',
     'security',
     'spec',
 # Historical release notes; later ones are built in generate_releasenotes.py
