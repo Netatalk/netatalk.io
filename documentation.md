@@ -23,11 +23,12 @@ How to install Netatalk when not using a package manager, either from source cod
 
 ## Technical Documentation
 
-The Developer Documentation is generated from the Netatalk source code with Doxygen.
-It contains information for developers interested in contributing to the Netatalk project,
-including implemetation details and API documentation.
+Information for developers interested in developing software that interacts with Netatalk,
+or for those interested in contributing to the Netatalk project.
 
-- [Developer Documentation](/developer)
+- [Netatalk Developer Documentation](/developer) (Doxygen)
+- [SpotlightRPC Community Specification](/spec/FPSpotlightRPC.html)
+- [SRP UAM Community Specification](/spec/SRP_UAM.html)
 
 ## Release Notes
 
