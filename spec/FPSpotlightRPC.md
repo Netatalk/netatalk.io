@@ -3,7 +3,7 @@
 Executes Spotlight metadata search and attribute operations on a volume.
 
 This is an open source community documentation of this AFP command based on
-reverse engineering by the Netatalk developement team through packet captures.
+reverse engineering by the Netatalk and Samba teams through packet captures.
 
 ```c
 uint8_t  CommandCode
