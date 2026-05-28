@@ -3,6 +3,12 @@ set -ex
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+for tool in cc git meson ninja doxygen po4a pandoc; do
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    echo "Missing required build tool: $tool" >&2
+    exit 1
+  fi
+done
 git submodule update --init --recursive netatalk
 (
   cd netatalk
