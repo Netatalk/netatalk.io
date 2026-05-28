@@ -1,0 +1,3 @@
+[submodule "netatalk"]
+	path = netatalk
+	url = https://github.com/Netatalk/netatalk.git
