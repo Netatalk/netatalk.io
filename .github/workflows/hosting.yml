@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Cleanup Cloudflare Pages Deployments
         uses: Th3S4mur41/cleanup-cloudflare-deployments@c4113768181fc0fe97becc9aaf84b471dd038d3d
