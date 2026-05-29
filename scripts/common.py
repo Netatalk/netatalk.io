@@ -1,6 +1,9 @@
 import re
+from pathlib import Path
 
 LOCALES = ["en", "ja"]
+ROOT = Path(__file__).resolve().parents[1]
+NETATALK_MESON_BUILD = ROOT / "netatalk" / "meson.build"
 
 # List of Netatalk releases 2023 onwards, which have release notes on GitHub.
 # Earlier release notes are revision controlled in this repository.
@@ -68,7 +71,15 @@ VERSIONS = [
     "2.2.7",
 ]
 
-VERSION = next(v for v in VERSIONS if re.fullmatch(r"\d+\.\d+\.\d+", v))
+def netatalk_version():
+    meson_build = NETATALK_MESON_BUILD.read_text(encoding="utf-8")
+    match = re.search(r"^\s*version:\s*['\"]([^'\"]+)['\"]", meson_build, re.MULTILINE)
+    if match is None:
+        raise RuntimeError(f"Unable to find project version in {NETATALK_MESON_BUILD}")
+    return match.group(1)
+
+
+VERSION = netatalk_version()
 
 def html_head(title, path, lang="en"):
     return f"""<!doctype html>
