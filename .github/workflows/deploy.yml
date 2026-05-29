@@ -35,6 +35,7 @@ jobs:
           sudo apt-get install --no-install-recommends --yes \
             build-essential \
             doxygen \
+            libyaml-pp-perl \
             pandoc \
             po4a
 
