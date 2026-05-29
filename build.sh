@@ -19,10 +19,11 @@ git submodule update --init --recursive netatalk
     --localstatedir "$docs_install_path/var"
     --sharedstatedir "$docs_install_path/var/lib"
     -Dwith-appletalk=true
-    -Dwith-website=true
     -Dwith-docs-l10n=true
     -Dwith-docs-install-path="$docs_install_path"
     -Dwith-docs-only=true
+    -Dwith-testsuite=true
+    -Dwith-website=true
   )
   if [ -d build/meson-info ]; then
     meson setup --reconfigure "${meson_setup_args[@]}"
