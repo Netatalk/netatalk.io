@@ -9,10 +9,8 @@ Release notes as well as wiki documentation sources are fetched remotely
 from the Netatalk/netatalk GitHub project by the build script,
 and not kept under revision control in this repository.
 
-The Markdown sources of `manual/` as well as html pages in `public/developer/`
-should not be modified directly, but rather synced from Netatalk/netatalk for each release.
-See the [Netatalk release process](https://github.com/Netatalk/netatalk/wiki/Release-Process)
-for how to refresh these sources.
+The rest of the documentation sources are created on the fly by the netatalk build system,
+which exists as a submodule in this repository and called by the build script.
 
 ## New release procedure
 
