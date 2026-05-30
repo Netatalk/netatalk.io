@@ -2,6 +2,48 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.5.0 is available
+
+*30th of May 2026*
+
+The Netatalk development team is proud to announce the first stable release of the Netatalk 4.5 release series.
+
+All new features in the beta release have been refined and stabilized, notably the new directory caching optimizations
+with ARC cache, 1M entries, rfork cache, and more.
+
+Support for the SRP (*Secure Remote Password*) authentication method has been added, which is a modern and secure alternative to DHX2, supported in Mac OS X 10.7 Lion through macOS 26 Tahoe.
+
+The Spotlight search feature has been modularized, overhauled and works out of the box. We now support three different indexing backends: the original LocalSearch backend,
+a backend that uses Netatalk's native CNID database (the new default), and a new experimental backend that uses the Xapian search engine library.
+
+The AFP statistics framework has been rewritten from D-Bus to Unix sockets, which is more lightweight and portable.
+We have now retired the old `macusers` utility in favor of `afpstats` for getting AFP user and session information.
+
+In addition, a wide range of security fixes and hardening has been introduced, including fixes for the following vulnerabilities:
+
+[CVE-2026-7835](/security/CVE-2026-7835.html),
+[CVE-2026-7836](/security/CVE-2026-7836.html),
+[CVE-2026-7837](/security/CVE-2026-7837.html),
+[CVE-2026-44053](/security/CVE-2026-44053.html),
+[CVE-2026-44056](/security/CVE-2026-44056.html),
+[CVE-2026-44058](/security/CVE-2026-44058.html),
+[CVE-2026-44059](/security/CVE-2026-44059.html),
+[CVE-2026-44061](/security/CVE-2026-44061.html),
+[CVE-2026-44063](/security/CVE-2026-44063.html),
+[CVE-2026-44065](/security/CVE-2026-44065.html),
+[CVE-2026-44067](/security/CVE-2026-44067.html),
+[CVE-2026-44069](/security/CVE-2026-44069.html),
+[CVE-2026-44070](/security/CVE-2026-44070.html),
+[CVE-2026-44071](/security/CVE-2026-44071.html),
+[CVE-2026-44072](/security/CVE-2026-44072.html),
+[CVE-2026-44073](/security/CVE-2026-44073.html),
+[CVE-2026-44074](/security/CVE-2026-44074.html),
+[CVE-2026-44075](/security/CVE-2026-44075.html),
+[CVE-2026-49387](/security/CVE-2026-49387.html),
+[CVE-2026-49388](/security/CVE-2026-49388.html),
+[CVE-2026-49389](/security/CVE-2026-49389.html),
+[CVE-2026-49390](/security/CVE-2026-49390.html)
+
 ### Netatalk 4.4.3 is available
 
 *13th of May 2026*
