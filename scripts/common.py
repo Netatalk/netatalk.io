@@ -87,7 +87,7 @@ def html_head(title, path, lang="en"):
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
-    <meta name="description" content="Netatalk Wiki">
+    <meta name="description" content="Netatalk Project Website: Free and Open Source AFP file server for Unix-like systems">
     <link rel="canonical" href="https://netatalk.io/{path}">
     <link rel="stylesheet" type="text/css" href="https://netatalk.io/css/site.css">
     <link rel="icon" type="image/x-icon" href="https://netatalk.io/gfx/favicon.ico">
