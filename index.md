@@ -37,7 +37,7 @@ The project publishes images on [Docker Hub](https://hub.docker.com/r/netatalk/n
 and [GHCR](https://github.com/Netatalk/netatalk/pkgs/container/netatalk)
 that can be deployed with a container runtime such as docker or podman.
 
-Refer to the [container documentation](/docker.html) for details on how to
+Refer to the [container documentation](containers.html) for details on how to
 configure the container.
 
 ### 🛠️ Build from source
