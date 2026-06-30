@@ -174,12 +174,17 @@ def html_navbar(version):
     <h2>netatalk manual</h2>
     <ol>
       <li><a href="/manual/en/">Introduction</a></li>
-      <li><a href="/manual/en/Installation">Installation</a></li>
-      <li><a href="/manual/en/Configuration">Configuration</a></li>
-      <li><a href="/manual/en/AppleTalk">AppleTalk</a></li>
-      <li><a href="/manual/en/Upgrading">Upgrading</a></li>
-      <li><a href="/manual/en/License">License</a></li>
-      <li><a href="/manual/en/Legal">Legal Notices</a></li>
+      <li><a href="/manual/en/Installation.html">Installation</a></li>
+      <li><a href="/manual/en/Configuration.html">Configuration</a></li>
+      <li><a href="/manual/en/CNID.html">CNID Backends</a></li>
+      <li><a href="/manual/en/Charsets.html">Character Sets</a></li>
+      <li><a href="/manual/en/Authentication.html">Authentication</a></li>
+      <li><a href="/manual/en/ACL.html">ACL Support</a></li>
+      <li><a href="/manual/en/Dircache.html">Caching</a></li>
+      <li><a href="/manual/en/FCE.html">Filesystem Change Events</a></li>
+      <li><a href="/manual/en/Search.html">Search</a></li>
+      <li><a href="/manual/en/AppleTalk.html">AppleTalk</a></li>
+      <li><a href="/manual/en/Upgrading.html">Upgrading</a></li>
     </ol>
   </div>
   <div class="navbar">
@@ -193,11 +198,11 @@ def html_navbar(version):
   <div class="navbar">
     <h2>project resources</h2>
     <ul>
-       <li><a title="Contributors" href="/contributors">Netatalk Contributors</a></li>
-       <li><a title="Release Notes" href="/archive">Rekease Notes</a></li>
-       <li><a title="News Archive" href="/archive">News Archive</a></li>
-       <li><a title="Changelog" href="/news">Project Changelog</a></li>
-       <li><a title="Security" href="/security">Security</a></li>
+       <li><a title="Contributors" href="/contributors.html">Netatalk Contributors</a></li>
+       <li><a title="Release Notes" href="/releasenotes.html">Rekease Notes</a></li>
+       <li><a title="News Archive" href="/archive.html">News Archive</a></li>
+       <li><a title="Changelog" href="/news.html">Project Changelog</a></li>
+       <li><a title="Security" href="/security.html">Security</a></li>
     </ul>
   </div>
   <div class="navbar">
