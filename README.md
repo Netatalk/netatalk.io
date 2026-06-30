@@ -22,7 +22,3 @@ which exists as a submodule in this repository and called by the build script.
 
 When introducing a new *minor* release series, you also need to create a new public subdir with a `.gitkeep` file,
 e.g. `public/4.4/.gitkeep`.
-
-When introducing a new *major* release series, update `scripts/generate_homepage.py` and `documentation.md`
-to iterate over the new release versions (e.g. *4.\**) and substitute a list of release notes,
-e.g. `NETATALK_V4_RELEASE_NOTES`.

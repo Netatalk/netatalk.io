@@ -12,6 +12,28 @@ from common import (
     js_mermaid,
 )
 
+def release_notes_index():
+    versions_by_minor = {}
+    for version in VERSIONS:
+        version_match = re.search(r"^(\d+)\.(\d+)", version)
+        if version_match is None or int(version_match.group(1)) < 4:
+            continue
+        minor = version_match.group()
+        versions_by_minor.setdefault(minor, []).append(version)
+
+    sections = []
+    for minor, versions in versions_by_minor.items():
+        links = [f"[{version}](/{minor}/ReleaseNotes{version}.html)" for version in versions]
+        link_lines = []
+        for i in range(0, len(links), 3):
+            line = " · ".join(links[i:i + 3])
+            if i + 3 < len(links):
+                line += " ·"
+            link_lines.append(line)
+        sections.append(f"## {minor}\n\n" + "\n".join(link_lines))
+
+    return "\n\n".join(sections)
+
 subdirs = [
     '.',
     'security',
@@ -48,13 +70,7 @@ for dir in subdirs:
                         news_content = "".join(lines[start_idx:end_idx])
                         text = text.replace("NETATALK_NEWS", news_content)
 
-            if dir == "." and file == "documentation.md":
-                v4_links = []
-                for v in VERSIONS:
-                    if v.startswith("4"):
-                        minor = re.search(r"^(\d+\.\d+)", v).group()
-                        v4_links.append(f"- [Netatalk {v}](/{minor}/ReleaseNotes{v}.html)")
-                text = text.replace("NETATALK_V4_RELEASE_NOTES", "\n".join(v4_links))
+            text = text.replace("NETATALK_RELEASE_NOTES", release_notes_index())
 
             html = markdown.markdown(
                 text,

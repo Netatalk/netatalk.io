@@ -194,6 +194,7 @@ def html_navbar(version):
     <h2>project resources</h2>
     <ul>
        <li><a title="Contributors" href="/contributors">Netatalk Contributors</a></li>
+       <li><a title="Release Notes" href="/archive">Rekease Notes</a></li>
        <li><a title="News Archive" href="/archive">News Archive</a></li>
        <li><a title="Changelog" href="/news">Project Changelog</a></li>
        <li><a title="Security" href="/security">Security</a></li>
