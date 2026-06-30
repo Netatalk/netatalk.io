@@ -49,6 +49,7 @@ networking that make great Netatalk companions.
 | --- | --- | --- |
 | [NuLib](https://nulib.com/) | Archiver utility that can handle Apple II compression formats like ShrinkIt | |
 | [sit](https://github.com/thecloudexpanse/sit) | Create StuffIt archives on Unix systems | |
+| [stuffit-rs](https://github.com/benletchford/stuffit-rs) | Classic StuffIt encoding/decoding library and tool, written in Rust | Library used by Netatalk's *nad* |
 | [unar](https://github.com/MacPaw/XADMaster) | Archiver utility that can handle Mac formats like StuffIt and MacBinary | |
 
 ### Software for old Macs and Apple IIs
