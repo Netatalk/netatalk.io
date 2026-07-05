@@ -221,30 +221,30 @@ def html_navbar(version):
     <h2>continuous integration</h2>
     <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/build.yml">
       <img alt="GitHub Continuous Integration - Build Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/build.yml/badge.svg"/>
+         src="https://github.com/Netatalk/netatalk/actions/workflows/build.yml/badge.svg">
     </a></p>
     <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/test.yml">
       <img alt="GitHub Continuous Integration - Test Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/test.yml/badge.svg"/>
+         src="https://github.com/Netatalk/netatalk/actions/workflows/test.yml/badge.svg">
     </a></p>
     <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml">
       <img alt="GitHub Continuous Integration - Containers Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml/badge.svg"/>
+         src="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml/badge.svg">
     </a></p>
   </div>
   <div class="navbar">
     <h2>Static Analysis</h2>
     <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
       <img alt="SonarQube Static Analysis - Security Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=security_rating"/>
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=security_rating">
     </a></p>
     <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
       <img alt="SonarQube Static Analysis - Reliability Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=reliability_rating"/>
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=reliability_rating">
     </a></p>
     <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
       <img alt="SonarQube Static Analysis - Maintainability Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=sqale_rating"/>
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=sqale_rating">
     </a></p>
   </div>
 </div>
