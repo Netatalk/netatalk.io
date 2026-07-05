@@ -73,6 +73,7 @@ with open("./wiki/_Sidebar.md", "r", encoding="utf-8") as input_file:
                 build_url=build_url,
             ),
         ],
+        output_format='html',
     )
     navbar = f"""<div id="navbars">
 <div class="navbar">
@@ -105,6 +106,7 @@ for file in files:
                     build_url=build_url,
                 ),
             ],
+            output_format='html',
         )
     page_title = file.replace('.md', '')
     new_name = file.replace('.md', '.html')

@@ -28,6 +28,7 @@ for lang in LOCALES:
                 'smarty',
                 'tables',
             ],
+            output_format='html',
         )
 
         navbar = f"""<div id="navbars">
@@ -56,6 +57,7 @@ for lang in LOCALES:
                         anchorlink=True,
                     ),
                 ],
+                output_format='html',
             )
         page_title = file.replace('index', 'Index').replace('.md', '')
         new_name = file.replace('.md', '.html')
@@ -91,6 +93,7 @@ for file in files:
                 'smarty',
                 'tables',
             ],
+            output_format='html',
         )
     new_name = file.replace('.md', '.html').lower()
     h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)

@@ -45,7 +45,11 @@ else:
         published_at = re.search(r"^(\d{4}-\d{2}-\d{2})", body["published_at"]).group()
 
         body_text = github_pr_url_pattern.sub(r'[#\1](https://github.com/Netatalk/netatalk/pull/\1)', body["body"])
-        html = markdown.markdown(body_text, extensions=['fenced_code', 'smarty', 'tables'])
+        html = markdown.markdown(
+            body_text,
+            extensions=['fenced_code', 'smarty', 'tables'],
+            output_format='html',
+        )
 
         html = url_pattern.sub(r" <a href='\2'>\2</a>", html)
         html = github_pattern.sub(r"<a href='https://github.com/Netatalk/netatalk/issues/\2'>\1\2</a>", html)

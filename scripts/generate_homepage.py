@@ -79,6 +79,7 @@ for dir in subdirs:
                     'smarty',
                     'tables',
                 ],
+                output_format='html',
             )
             html = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>', r'<pre class="mermaid">\1</pre>', html, flags=re.DOTALL)
         new_name = file.replace('.md', '.html')
