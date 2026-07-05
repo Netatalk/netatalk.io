@@ -253,14 +253,15 @@ def html_navbar(version):
 def html_foot(path):
     return f"""
 <div class="footer">
-    <a href="https://validator.nu/?doc=https://netatalk.io/{path}">
+    <a href="https://validator.w3.org/check?uri=https://netatalk.io/{path}">
       <img style="border:0;width:88px;height:31px"
-      src="https://raw.githubusercontent.com/rdmark/html5-valid-badge/refs/heads/master/html5-validator-badge.svg"
+      src="/gfx/html5-validator-badge.svg"
       alt="Valid HTML5">
     </a>
-    <a href="https://validator.nu/?doc=https://netatalk.io/{path}">
+    <a href="https://jigsaw.w3.org/css-validator/check?uri=https://netatalk.io/{path}">
       <img style="border:0;width:88px;height:31px"
-      src="https://www.w3.org/Icons/valid-css-v.svg" alt="Valid CSS">
+      src="/gfx/valid-css-v.svg"
+      alt="Valid CSS">
     </a>
     <p>The <a href="https://github.com/Netatalk/netatalk.io">source code</a> of this website is licensed under
     the <a href="/manual/en/License">GNU General Public License 2.0</a>.</p>
