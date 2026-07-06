@@ -85,6 +85,7 @@ for tool in cc git meson ninja doxygen po4a pandoc; do
   fi
 done
 git submodule update --init --recursive netatalk
+mkdir -p manual/en manual/ja public/manual/en public/manual/ja
 (
   cd netatalk
   docs_install_path="$(pwd)/.."
