@@ -85,7 +85,18 @@ for tool in cc git meson ninja doxygen po4a pandoc; do
   fi
 done
 git submodule update --init --recursive netatalk
-mkdir -p manual/en manual/ja public/manual/en public/manual/ja
+rm -rf manual public
+mkdir -p manual/en manual/ja public/2.0 public/css public/docs public/gfx public/manual/en public/manual/ja public/security
+cp -R css/. public/css/
+cp assets/Netatalk-Manual*.pdf public/2.0/
+cp -R gfx/. public/gfx/
+cp assets/NetatalkDistributionPublicKey.asc public/
+shopt -s nullglob
+security_patches=(security/*.patch security/*.diff)
+shopt -u nullglob
+if [ "${#security_patches[@]}" -gt 0 ]; then
+  cp "${security_patches[@]}" public/security/
+fi
 (
   cd netatalk
   docs_install_path="$(pwd)/.."

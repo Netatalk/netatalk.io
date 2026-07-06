@@ -1,6 +1,8 @@
 # netatalk.io
 
 The core website pages are kept under revision control in the `pages/` directory in Markdown format.
+Static assets are kept in the `assets/`, `css/`, and `gfx/` directories,
+with downloadable security patches stored alongside the advisories in `security/`.
 
 Release notes as well as wiki documentation Markdown sources are fetched on the fly
 from the *Netatalk/netatalk* GitHub project by the build script.
@@ -44,6 +46,3 @@ for any build by setting `NETATALK_SITE_BASE_URL`.
 - cd to the `netatalk` submodule, fetch from origin and checkout the release tag, e.g. `git checkout 4.5.0`.
 - Test the updates by running `./build.sh test` and reviewing the generated site.
 - Commit all above changes and push to remote git to publish to web hosting.
-
-When introducing a new release series, you also need to create a version subdir that contains a `.gitkeep` file,
-e.g. `public/4.5/.gitkeep`.
