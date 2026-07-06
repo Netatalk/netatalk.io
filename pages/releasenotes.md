@@ -37,13 +37,13 @@ NETATALK_RELEASE_NOTES
 [2.4.7](/2.4/ReleaseNotes2.4.7.html) · [2.4.6](/2.4/ReleaseNotes2.4.6.html) · [2.4.5](/2.4/ReleaseNotes2.4.5.html) ·
 [2.4.4](/2.4/ReleaseNotes2.4.4.html) · [2.4.3](/2.4/ReleaseNotes2.4.3.html) · [2.4.2](/2.4/ReleaseNotes2.4.2.html) ·
 [2.4.1](/2.4/ReleaseNotes2.4.1.html) · [2.4.0](/2.4/ReleaseNotes2.4.0.html)
- 
+
 ## 2.3
- 
+
 [2.3.2](/2.3/ReleaseNotes2.3.2.html) · [2.3.1](/2.3/ReleaseNotes2.3.1.html) · [2.3.0](/2.3/ReleaseNotes2.3.0.html)
- 
+
 ## 2.2
- 
+
  [2.2.10](/2.2/ReleaseNotes2.2.10.html) · [2.2.9](/2.2/ReleaseNotes2.2.9.html) · [2.2.8](/2.2/ReleaseNotes2.2.8.html) ·
  [2.2.7](/2.2/ReleaseNotes2.2.7.html) · [2.2.6](/2.2/ReleaseNotes2.2.6.html) · [2.2.5](/2.2/ReleaseNotes2.2.5.html) ·
  [2.2.4](/2.2/ReleaseNotes2.2.4.html) · [2.2.3](/2.2/ReleaseNotes2.2.3.html) · [2.2.1](/2.2/ReleaseNotes2.2.1.html) ·
@@ -52,7 +52,7 @@ NETATALK_RELEASE_NOTES
  [2.2-beta1](/2.2/ReleaseNotes2.2beta1.html) · [2.2-alpha5](/2.2/ReleaseNotes2.2alpha5.html) ·
  [2.2-alpha4](/2.2/ReleaseNotes2.2alpha4.html) · [2.2-alpha3](/2.2/ReleaseNotes2.2alpha3.html) ·
  [2.2-alpha2](/2.2/ReleaseNotes2.2alpha2.html) · [2.2-alpha1](/2.2/ReleaseNotes2.2alpha1.html)
- 
+
 ## 2.1
 
 [2.1.6](/2.1/ReleaseNotes2.1.6.html) · [2.1.5](/2.1/ReleaseNotes2.1.5.html) · [2.1.4](/2.1/ReleaseNotes2.1.4.html) ·
