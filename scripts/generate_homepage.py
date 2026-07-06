@@ -37,10 +37,16 @@ def release_notes_index():
     return "\n\n".join(sections)
 
 subdirs = [
-    '.',
     'security',
     'spec',
+]
+
+page_subdirs = [
+    ('pages', '.'),
+]
+
 # Historical release notes; later ones are built in generate_releasenotes.py
+release_note_subdirs = [
     '1.3',
     '1.5',
     '1.6',
@@ -51,19 +57,22 @@ subdirs = [
     '3.1',
 ]
 
-for dir in subdirs:
+pages = [(dir, dir) for dir in subdirs]
+pages.extend(page_subdirs)
+pages.extend((f"releasenotes/{dir}", dir) for dir in release_note_subdirs)
+
+for source_dir, output_dir in pages:
     files = []
 
-    for file in os.listdir(dir):
+    for file in os.listdir(source_dir):
         if file.endswith(".md") and file != "README.md":
             files.append(f"{file}")
     for file in files:
-        path = f"{dir}/{file}"
-        with open(f"./{dir}/{file}", "r", encoding="utf-8") as input_file:
+        with open(f"./{source_dir}/{file}", "r", encoding="utf-8") as input_file:
             text = input_file.read()
 
-            if dir == "." and file == "index.md":
-                with open("archive.md", "r", encoding="utf-8") as archive_file:
+            if source_dir == "pages" and file == "index.md":
+                with open("pages/archive.md", "r", encoding="utf-8") as archive_file:
                     lines = archive_file.readlines()
                     news_indices = [i for i, line in enumerate(lines) if line.startswith("### ")]
                     if len(news_indices) > 0:
@@ -94,9 +103,10 @@ for dir in subdirs:
         else:
             page_title = file.replace('.md', '').replace('_', ' ').capitalize()
 
-        new_path = f"{dir}/{new_name}"
-        if dir == ".":
+        new_path = f"{output_dir}/{new_name}"
+        if output_dir == ".":
             new_path = new_name
+        os.makedirs(os.path.dirname(f"./public/{new_path}") or "./public", exist_ok=True)
         with open(f"./public/{new_path}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
             output_file.write(html_head(f"Netatalk - {page_title}", new_path))
             output_file.write("<body>\n")

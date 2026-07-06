@@ -1,6 +1,6 @@
 # netatalk.io
 
-The core website pages are kept under revision control in the root of this repository in Markdown format.
+The core website pages are kept under revision control in the `pages/` directory in Markdown format.
 
 Release notes as well as wiki documentation Markdown sources are fetched on the fly
 from the *Netatalk/netatalk* GitHub project by the build script.
@@ -39,7 +39,7 @@ for any build by setting `NETATALK_SITE_BASE_URL`.
 
 ## New release procedure
 
-- Create a news story at the top of `archive.md` (the top three stories will be substituted to `index.md`.)
+- Create a news story at the top of `pages/archive.md` (the top three stories will be substituted to `pages/index.md`.)
 - Prepend the release version to the VERSIONS list in `scripts/common.py`.
 - cd to the `netatalk` submodule, fetch from origin and checkout the release tag, e.g. `git checkout 4.5.0`.
 - Test the updates by running `./build.sh test` and reviewing the generated site.
