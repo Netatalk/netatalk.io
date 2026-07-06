@@ -1,5 +1,80 @@
 #!/usr/bin/env bash
-set -ex
+set -euo pipefail
+
+mode="build"
+host="127.0.0.1"
+port="8000"
+base_url="${NETATALK_SITE_BASE_URL:-}"
+
+usage() {
+  cat <<EOF
+Usage: $0 [test] [--base-url URL] [--host HOST] [--port PORT]
+
+Modes:
+  build  Build the static site. This is the default.
+  test   Build the static site for localhost and serve ./public.
+
+Options:
+  --base-url URL  Base URL for generated internal URLs.
+  --host HOST     Host to bind in test mode. Default: 127.0.0.1
+  --port PORT     Port to bind in test mode. Default: 8000
+EOF
+}
+
+require_arg() {
+  if [ "$#" -lt 2 ]; then
+    echo "Missing value for $1" >&2
+    usage >&2
+    exit 1
+  fi
+}
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    build|test)
+      mode="$1"
+      shift
+      ;;
+    --test)
+      mode="test"
+      shift
+      ;;
+    --base-url)
+      require_arg "$@"
+      base_url="$2"
+      shift 2
+      ;;
+    --host)
+      require_arg "$@"
+      host="$2"
+      shift 2
+      ;;
+    --port)
+      require_arg "$@"
+      port="$2"
+      shift 2
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown argument: $1" >&2
+      usage >&2
+      exit 1
+      ;;
+  esac
+done
+
+if [ "$mode" = "test" ] && [ -z "$base_url" ]; then
+  base_url="http://${host}:${port}/"
+fi
+
+if [ -n "$base_url" ]; then
+  export NETATALK_SITE_BASE_URL="$base_url"
+fi
+
+set -x
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -42,3 +117,10 @@ python3 scripts/generate_releasenotes.py
 python3 scripts/generate_homepage.py
 
 rm -rf wiki
+
+if [ "$mode" = "test" ]; then
+  set +x
+  echo "Serving site at ${NETATALK_SITE_BASE_URL}"
+  echo "Press Ctrl-C to stop the server."
+  python3 scripts/serve_site.py --host "$host" --port "$port" --directory public
+fi

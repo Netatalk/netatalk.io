@@ -10,6 +10,7 @@ from common import (
     html_menlinks,
     html_navbar,
     html_foot,
+    localize_internal_site_urls,
 )
 
 
@@ -18,7 +19,6 @@ from common import (
 for lang in LOCALES:
     navbar = ""
     files = []
-    base_url = f"/manual/{lang}/"
     with open(f"./manual/{lang}/_Sidebar.md", "r", encoding="utf-8") as input_file:
         text = input_file.read()
         html = markdown.markdown(
@@ -30,6 +30,7 @@ for lang in LOCALES:
             ],
             output_format='html',
         )
+        html = localize_internal_site_urls(html)
 
         navbar = f"""<div id="navbars">
     <div class="navbar">
@@ -59,6 +60,7 @@ for lang in LOCALES:
                 ],
                 output_format='html',
             )
+            html = localize_internal_site_urls(html)
         page_title = file.replace('index', 'Index').replace('.md', '')
         new_name = file.replace('.md', '.html')
 
@@ -95,6 +97,7 @@ for file in files:
             ],
             output_format='html',
         )
+        html = localize_internal_site_urls(html)
     new_name = file.replace('.md', '.html').lower()
     h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
     if h1_match:

@@ -14,6 +14,8 @@ from common import (
     html_menlinks,
     html_foot,
     js_mermaid,
+    localize_internal_site_urls,
+    site_url,
 )
 
 now = datetime.datetime.now()
@@ -50,7 +52,7 @@ def site_map():
             commit = next(repo.iter_commits(paths=blob.path, max_count=1))
             datetime_obj = datetime.datetime.fromtimestamp(commit.committed_date)
             site_map_xml.write(f"""<url>
-    <loc>https://netatalk.io/docs/{urllib.parse.quote(blob.path.replace('.md', '.html'))}</loc>
+    <loc>{site_url(f"docs/{urllib.parse.quote(blob.path.replace('.md', '.html'))}")}</loc>
     <lastmod>{datetime_obj.strftime("%Y-%m-%d")}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -68,13 +70,14 @@ with open("./wiki/_Sidebar.md", "r", encoding="utf-8") as input_file:
             'smarty',
             'tables',
             WikiLinkExtension(
-                base_url="/docs/",
+                base_url=site_url("docs/"),
                 end_url=".html",
                 build_url=build_url,
             ),
         ],
         output_format='html',
     )
+    html = localize_internal_site_urls(html)
     navbar = f"""<div id="navbars">
 <div class="navbar">
 <h2>Table of contents</h2>
@@ -101,13 +104,14 @@ for file in files:
                     anchorlink=True,
                 ),
                 WikiLinkExtension(
-                    base_url="/docs/",
+                    base_url=site_url("docs/"),
                     end_url=".html",
                     build_url=build_url,
                 ),
             ],
             output_format='html',
         )
+    html = localize_internal_site_urls(html)
     page_title = file.replace('.md', '')
     new_name = file.replace('.md', '.html')
     if new_name == "Home.html":

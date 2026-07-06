@@ -1,9 +1,28 @@
 import re
+import os
 from pathlib import Path
+from urllib.parse import urljoin
 
 LOCALES = ["en", "ja"]
 ROOT = Path(__file__).resolve().parents[1]
 NETATALK_MESON_BUILD = ROOT / "netatalk" / "meson.build"
+DEFAULT_SITE_BASE_URL = "https://netatalk.io/"
+SITE_BASE_URL = os.environ.get("NETATALK_SITE_BASE_URL", DEFAULT_SITE_BASE_URL).rstrip("/") + "/"
+
+
+def site_url(path=""):
+    return urljoin(SITE_BASE_URL, str(path).lstrip("/"))
+
+
+INTERNAL_SITE_URL_PATTERN = re.compile(r"https://netatalk\.io(?:/([^\"'<>\s]*))?")
+
+
+def localize_internal_site_urls(html):
+    return INTERNAL_SITE_URL_PATTERN.sub(
+        lambda match: site_url(match.group(1) or ""),
+        html,
+    )
+
 
 # List of Netatalk releases 2023 onwards, which have release notes on GitHub.
 # Earlier release notes are revision controlled in this repository.
@@ -89,24 +108,24 @@ def html_head(title, path, lang="en"):
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{title}</title>
     <meta name="description" content="Netatalk Project Website: Free and Open Source AFP file server for Unix-like systems">
-    <link rel="canonical" href="https://netatalk.io/{path}">
-    <link rel="stylesheet" type="text/css" href="https://netatalk.io/css/site.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 760px)" href="https://netatalk.io/css/mobile.css">
-    <link rel="icon" type="image/x-icon" href="https://netatalk.io/gfx/favicon.ico">
+    <link rel="canonical" href="{site_url(path)}">
+    <link rel="stylesheet" type="text/css" href="{site_url('css/site.css')}">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 760px)" href="{site_url('css/mobile.css')}">
+    <link rel="icon" type="image/x-icon" href="{site_url('gfx/favicon.ico')}">
 </head>
 """
 
 def html_menlinks():
-    return """<div id="header">
+    return f"""<div id="header">
     <div id="logo"></div>
     <div id="menlinks">
-        <a href="/" title="Return to Netatalk home">[main]</a>
-        <a href="/docs" title="Netatalk Wiki">[wiki]</a>
-        <a href="/documentation.html" title="Netatalk Manual">[documentation]</a>
-        <a href="/download.html" title="Download Netatalk">[downloads]</a>
-        <a href="/support.html" title="Support">[support]</a>
-        <a href="/links.html" title="Netatalk related links">[links]</a>
-        <img src="/gfx/end.gif" alt="" width="125" height="7">
+        <a href="{site_url()}" title="Return to Netatalk home">[main]</a>
+        <a href="{site_url('docs')}" title="Netatalk Wiki">[wiki]</a>
+        <a href="{site_url('documentation.html')}" title="Netatalk Manual">[documentation]</a>
+        <a href="{site_url('download.html')}" title="Download Netatalk">[downloads]</a>
+        <a href="{site_url('support.html')}" title="Support">[support]</a>
+        <a href="{site_url('links.html')}" title="Netatalk related links">[links]</a>
+        <img src="{site_url('gfx/end.gif')}" alt="" width="125" height="7">
     </div>
 </div>
 
@@ -166,7 +185,7 @@ def html_navbar(version):
       <li>
         <a
         title="view {version} Release Notes"
-        href="/{minor_version}/ReleaseNotes{version}.html">
+        href="{site_url(f'{minor_version}/ReleaseNotes{version}.html')}">
         📝 Release Notes
         </a>
       </li>
@@ -175,18 +194,18 @@ def html_navbar(version):
   <div class="navbar">
     <h2>netatalk manual</h2>
     <ol>
-      <li><a href="/manual/en/">Introduction</a></li>
-      <li><a href="/manual/en/Installation.html">Installation</a></li>
-      <li><a href="/manual/en/Configuration.html">Configuration</a></li>
-      <li><a href="/manual/en/CNID.html">CNID Backends</a></li>
-      <li><a href="/manual/en/Charsets.html">Character Sets</a></li>
-      <li><a href="/manual/en/Authentication.html">Authentication</a></li>
-      <li><a href="/manual/en/ACL.html">ACL Support</a></li>
-      <li><a href="/manual/en/Dircache.html">Caching</a></li>
-      <li><a href="/manual/en/FCE.html">Filesystem Change Events</a></li>
-      <li><a href="/manual/en/Search.html">Search</a></li>
-      <li><a href="/manual/en/AppleTalk.html">AppleTalk</a></li>
-      <li><a href="/manual/en/Upgrading.html">Upgrading</a></li>
+      <li><a href="{site_url('manual/en/')}">Introduction</a></li>
+      <li><a href="{site_url('manual/en/Installation.html')}">Installation</a></li>
+      <li><a href="{site_url('manual/en/Configuration.html')}">Configuration</a></li>
+      <li><a href="{site_url('manual/en/CNID.html')}">CNID Backends</a></li>
+      <li><a href="{site_url('manual/en/Charsets.html')}">Character Sets</a></li>
+      <li><a href="{site_url('manual/en/Authentication.html')}">Authentication</a></li>
+      <li><a href="{site_url('manual/en/ACL.html')}">ACL Support</a></li>
+      <li><a href="{site_url('manual/en/Dircache.html')}">Caching</a></li>
+      <li><a href="{site_url('manual/en/FCE.html')}">Filesystem Change Events</a></li>
+      <li><a href="{site_url('manual/en/Search.html')}">Search</a></li>
+      <li><a href="{site_url('manual/en/AppleTalk.html')}">AppleTalk</a></li>
+      <li><a href="{site_url('manual/en/Upgrading.html')}">Upgrading</a></li>
     </ol>
   </div>
   <div class="navbar">
@@ -194,17 +213,17 @@ def html_navbar(version):
     <ul>
        <li><a title="Participate in Discussions" href="https://github.com/Netatalk/netatalk/discussions">Discussions</a></li>
        <li><a title="Subscribe to Mailing Lists" href="https://sourceforge.net/p/netatalk/mailman/">Mailing Lists</a></li>
-       <li><a title="Read the Code of Conduct" href="/code_of_conduct.html">Code of Conduct</a></li>
+       <li><a title="Read the Code of Conduct" href="{site_url('code_of_conduct.html')}">Code of Conduct</a></li>
     </ul>
   </div>
   <div class="navbar">
     <h2>project resources</h2>
     <ul>
-       <li><a title="Contributors" href="/contributors.html">Netatalk Contributors</a></li>
-       <li><a title="Release Notes" href="/releasenotes.html">Rekease Notes</a></li>
-       <li><a title="News Archive" href="/archive.html">News Archive</a></li>
-       <li><a title="Changelog" href="/news.html">Project Changelog</a></li>
-       <li><a title="Security" href="/security.html">Security</a></li>
+       <li><a title="Contributors" href="{site_url('contributors.html')}">Netatalk Contributors</a></li>
+       <li><a title="Release Notes" href="{site_url('releasenotes.html')}">Release Notes</a></li>
+       <li><a title="News Archive" href="{site_url('archive.html')}">News Archive</a></li>
+       <li><a title="Changelog" href="{site_url('news.html')}">Project Changelog</a></li>
+       <li><a title="Security" href="{site_url('security.html')}">Security</a></li>
     </ul>
   </div>
   <div class="navbar">
@@ -212,8 +231,8 @@ def html_navbar(version):
     <ul>
       <li><a title="Code Repository, GitHub" href="https://github.com/Netatalk/netatalk">Code Repository</a></li>
       <li><a title="Code Repository, GitLab" href="https://gitlab.com/netatalk-team/netatalk">GitLab Mirror</a></li>
-      <li><a title="How to Contribute" href="/contributing.html">How to Contribute</a></li>
-      <li><a title="Developer Documentation" href="/developer/">Developer Documentation</a></li>
+      <li><a title="How to Contribute" href="{site_url('contributing.html')}">How to Contribute</a></li>
+      <li><a title="Developer Documentation" href="{site_url('developer/')}">Developer Documentation</a></li>
       <li><a title="OpenSSF Supply Chain Security" href="https://scorecard.dev/viewer/?uri=github.com/Netatalk/netatalk">Supply Chain Security</a></li>
     </ul>
   </div>
@@ -253,18 +272,18 @@ def html_navbar(version):
 def html_foot(path):
     return f"""
 <div class="footer">
-    <a href="https://validator.w3.org/check?uri=https://netatalk.io/{path}">
+    <a href="https://validator.w3.org/check?uri={site_url(path)}">
       <img style="border:0;width:88px;height:31px"
-      src="/gfx/html5-validator-badge.svg"
+      src="{site_url('gfx/html5-validator-badge.svg')}"
       alt="Valid HTML5">
     </a>
-    <a href="https://jigsaw.w3.org/css-validator/check?uri=https://netatalk.io/{path}">
+    <a href="https://jigsaw.w3.org/css-validator/check?uri={site_url(path)}">
       <img style="border:0;width:88px;height:31px"
-      src="/gfx/valid-css-v.svg"
+      src="{site_url('gfx/valid-css-v.svg')}"
       alt="Valid CSS">
     </a>
     <p>The <a href="https://github.com/Netatalk/netatalk.io">source code</a> of this website is licensed under
-    the <a href="/manual/en/License">GNU General Public License 2.0</a>.</p>
+    the <a href="{site_url('manual/en/License')}">GNU General Public License 2.0</a>.</p>
 </div>
 </body>
 </html>

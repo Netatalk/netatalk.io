@@ -10,6 +10,8 @@ from common import (
     html_navbar,
     html_foot,
     js_mermaid,
+    localize_internal_site_urls,
+    site_url,
 )
 
 def release_notes_index():
@@ -23,7 +25,7 @@ def release_notes_index():
 
     sections = []
     for minor, versions in versions_by_minor.items():
-        links = [f"[{version}](/{minor}/ReleaseNotes{version}.html)" for version in versions]
+        links = [f"[{version}]({site_url(f'{minor}/ReleaseNotes{version}.html')})" for version in versions]
         link_lines = []
         for i in range(0, len(links), 3):
             line = " · ".join(links[i:i + 3])
@@ -81,6 +83,7 @@ for dir in subdirs:
                 ],
                 output_format='html',
             )
+            html = localize_internal_site_urls(html)
             html = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>', r'<pre class="mermaid">\1</pre>', html, flags=re.DOTALL)
         new_name = file.replace('.md', '.html')
         h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)

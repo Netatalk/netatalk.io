@@ -11,6 +11,7 @@ from common import (
     html_menlinks,
     html_navbar,
     html_foot,
+    localize_internal_site_urls,
 )
 
 url_pattern = re.compile(r'((?:^|\s)(https?://\S+)(?=<))')
@@ -51,6 +52,7 @@ else:
             output_format='html',
         )
 
+        html = localize_internal_site_urls(html)
         html = url_pattern.sub(r" <a href='\2'>\2</a>", html)
         html = github_pattern.sub(r"<a href='https://github.com/Netatalk/netatalk/issues/\2'>\1\2</a>", html)
 
