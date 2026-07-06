@@ -19,7 +19,7 @@ How to install Netatalk when not using a package manager, either from source cod
 
 - [Installation Quick Start](/install.html)
 - [Compile from Source](/compilation.html)
-- [Container Deployment](/docker.html)
+- [Container Deployment](/containers.html)
 
 ## Technical Documentation
 
