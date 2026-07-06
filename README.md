@@ -1,10 +1,18 @@
 # netatalk.io
 
-The core website pages are kept under revision control in the `pages/` directory in Markdown format.
-Static assets are kept in the `assets/`, `css/`, and `gfx/` directories,
-with downloadable security patches stored alongside the advisories in `security/`.
+The static website of the Netatalk project, generated from Markdown sources by a custom Python script.
 
-Release notes as well as wiki documentation Markdown sources are fetched on the fly
+- `assets/` sundry downloadable files that don't fit anywhere else
+- `css/` stylesheets used by the website
+- `gfx/` image files used inline in html pages
+- `logo/` the canonical Netatalk logo images, not used directly by the website
+- `pages/` the top level website pages Markdown sources
+- `releasenotes/` historical static release notes in Markdown format
+- `scripts/` Python scripts that build the website
+- `security/` vulnerability advisories in Markdown, and raw patches
+- `spec/` specification documentation in Markdown
+
+Later release notes as well as wiki documentation Markdown sources are fetched on the fly
 from the *Netatalk/netatalk* GitHub project by the build script.
 
 The rest of the Markdown sources are created by the netatalk build system,
