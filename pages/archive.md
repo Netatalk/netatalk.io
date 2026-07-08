@@ -60,6 +60,8 @@ In addition, a wide range of security fixes and hardening has been introduced, i
 [CVE-2026-49389](/security/CVE-2026-49389.html),
 [CVE-2026-49390](/security/CVE-2026-49390.html)
 
+For a summary of news and a detailed list of changes see the [Release Notes](/4.5/ReleaseNotes4.5.0.html).
+
 ### Netatalk 4.4.3 is available
 
 *13th of May 2026*
