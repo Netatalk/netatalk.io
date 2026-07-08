@@ -2,6 +2,22 @@
 
 Netatalk release announcements and other news.
 
+### Introducing the Netatalk Client
+
+*6th of July 2026*
+
+The Netatalk development team is proud to announce the first release of the Netatalk Client,
+a new project that provides a modern AFP client for Unix-like operating systems.
+
+The Netatalk Client got started in 2024 as a fork of the [afpfs-ng](https://sourceforge.net/projects/afpfs-ng/)
+project, which had been dormant for over a decade at the time. It has now been thoroughtly
+overhauled with countless features added, including support for the latest AFP protocol versions,
+modern authentication methods, and improved performance and reliability.
+
+Netatalk Client is still considered beta level software, but early adopters are encouraged to test it and report any issues to the Netatalk development team.
+
+See the [Netatalk Client v0.9.5 release notes and tarball](https://github.com/Netatalk/netatalk-client/releases/tag/0.9.5).
+
 ### Netatalk 4.5.0 is available
 
 *30th of May 2026*
