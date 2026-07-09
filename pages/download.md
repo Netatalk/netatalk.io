@@ -8,10 +8,9 @@ from the **navbar to the left** on this website.
 You can also find the release tarballs attached to the [release
 notes](https://github.com/Netatalk/netatalk/releases) on GitHub.
 
-To validate the integrity of the downloaded source code, you can
-download the corresponding GPG signature file. The signatures are
-signed with the GPG key of the Netatalk project, which can be fetched
-from the keystore at [keys.openpgp.org](https://keys.openpgp.org)
+To validate the integrity of the downloaded source code, you can download the corresponding GPG signature file.
+The signatures are signed with the [GPG key of the Netatalk project](http://netatalk.io/NetatalkDistributionPublicKey.asc),
+which can also be fetched from the keystore at [keys.openpgp.org](https://keys.openpgp.org)
 or [keys.mailvelope.com](https://keys.mailvelope.com).
 
 The GPG key fingerprint is: **835A 6542 8C82 2F69 C45B  817A 7B13 E1BF E4DD E8BD**
