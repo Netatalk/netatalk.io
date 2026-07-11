@@ -52,18 +52,17 @@ and read more about dependencoes in the [Netatalk manual](/manual/en/Installatio
 ## How to Use
 
 By default, Netatalk shares the home directory of each authorized user,
-with secure authentication methods compatible with macOS, Mac OS X, Mac
-OS 9 and Mac OS 8.
+with a secure authentication method for modern AFP clients.
+It is recommended to start and stop the Netatalk AFP server through your operating systems's init system.
 
-If you need a different setup, you have to configure the host system
-before starting Netatalk. Netatalk has a dizzying amount of options
-which can be daunting initially.
+If you need a different setup, for instance sharing a specific directory or allowing very old AFP clients access,
+you have to configure the host system and then restart Netatalk.
+Netatalk has a dizzying amount of options which can be daunting initially.
 The [Configuration](/manual/en/Configuration.html) chapter and
 [afp.conf](/manual/en/afp.conf.5.html) page in the Netatalk manual
 are good places to start.
 
-Once Netatalk is up and running, use your AFP client to connect to the file server.
-This can be the macOS built-in client or 3rd party clients such as [afpfs-ng](https://github.com/Netatalk/afpfs-ng).
+Once Netatalk is up and running, use an [AFP client to connect to the file server](https://netatalk.io/docs/Connect-to-AFP-Server).
 
 ## Latest News
 
