@@ -62,3 +62,13 @@ networking that make great Netatalk companions.
 | [mDNSResponder extension](https://macintoshgarden.org/apps/multicast-dns-dns-sd) | DNS Service Discovery (Zeroconf) extension for Mac OS 9 | |
 | [PGPuam](http://web.archive.org/web/20130518225412/http://www.vmeng.com/vinnie/papers/pgpuam.html) | Classic Mac OS AppleShare UAM that uses PGP encryption | The inspiration for Netatalk's now-defunct *uams_pgp.so* UAM |
 | [tardis/Timelord](https://web.archive.org/web/20010303220117/http://www.cs.mu.oz.au/appletalk/readmes/TMLD.README.html) | Classic Mac OS time client/server | Tardis client is compatible with Netatalk's *timelord* time server |
+
+## Retrocomputing and historical resources
+
+- [netatalk.org](https://www.netatalk.org/) (original UMich homepage, still online as of July 2026)
+- [Mailing list archives](https://websites.umich.edu/~rsug/netatalk/archive/) (1992-2001)
+- [Netatalk 1.3 era FAQ](https://websites.umich.edu/~rsug/netatalk/faq.html)
+- [sunsite.org.uk FTP mirror](http://web.archive.org/web/20010702130020/http://sunsite.org.uk/packages/netatalk/)
+- [Linux Netatalk-HOWTO ca. 1999](https://web.archive.org/web/19990203173815/http://www.thehamptons.com/anders/netatalk/)
+- [Exploiting an 18 Year Old Bug](https://medium.com/tenable-techblog/exploiting-an-18-year-old-bug-b47afe54172)
+- [Fix Time Machine Sparsebundle NAS Based Backup Errors](https://www.garth.org/archives/2011,08,27,169,fix-time-machine-sparsebundle-nas-based-backup-errors.html)
