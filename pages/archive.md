@@ -2,6 +2,21 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.5.1 is available
+
+*16th of July 2026*
+
+The Netatalk development team is proud to announce the latest release of the Netatalk 4.5 release series.
+
+This is a bugfix release that includes patches for the below four security vulnerabilities, big-endian support in SpotlightRPC, and a handful of other improvements.
+
+[CVE-2026-62318](/security/CVE-2026-62318.html),
+[CVE-2026-62319](/security/CVE-2026-62319.html),
+[CVE-2026-62320](/security/CVE-2026-62320.html),
+[CVE-2026-62321](/security/CVE-2026-62321.html)
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.5/ReleaseNotes4.5.1.html).
+
 ### Introducing the Netatalk Client
 
 *6th of July 2026*
