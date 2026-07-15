@@ -27,7 +27,7 @@ navbar = ""
 def pre_footer(name):
     return f"""<h1>Footnotes</h1>
     <p>
-        This is a mirror of the <a href="https://github.com/Netatalk/netatalk/wiki/{name}">Netatalk GitHub Wiki</a>
+        Generated from the <a href="https://github.com/Netatalk/netatalk/wiki/{name}">Netatalk GitHub Wiki</a>
     </p>
     <p>Last updated {date_time}</p>
     </div>
