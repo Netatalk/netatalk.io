@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - .gitignore
+      - logo/**
+      - LICENSE
+      - README.md
   pull_request:
   workflow_dispatch:
 
