@@ -1255,7 +1255,7 @@ release of the next Netatalk version 3.1. This release is intended for
 testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.1/ReleaseNotes-3.1-beta2.html).
+Notes](/3.1/ReleaseNotes3.1beta2.html).
 
 ### Netatalk 3.0.5 is available
 
@@ -1277,7 +1277,7 @@ release of the next Netatalk version 3.1. This release is intended for
 testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.1/ReleaseNotes-3.1-beta1.html).
+Notes](/3.1/ReleaseNotes3.1beta1.html).
 
 ### Netatalk 2.2.5 is available
 
@@ -1299,7 +1299,7 @@ release of the next Netatalk version 3.1. This release is intended for
 testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.1/ReleaseNotes-3.1-alpha1.html).
+Notes](/3.1/ReleaseNotes3.1alpha1.html).
 
 ### Netatalk 3.0.4 is available
 
@@ -1365,7 +1365,7 @@ Netatalk 3.0. Early adopters are encouraged to upgrade their systems to
 3.0.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0.html).
+Notes](/3.0/ReleaseNotes3.0.html).
 
 ### Netatalk 3.0 beta2 is available
 
@@ -1377,7 +1377,7 @@ new 3.0 release series. This release is not intended for production
 systems, but for testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0-beta2.html).
+Notes](/3.0/ReleaseNotes3.0beta2.html).
 
 ### Netatalk 3.0 beta1 is available
 
@@ -1389,7 +1389,7 @@ new 3.0 release series. This release is not intended for production
 systems, but for testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0-beta1.html).
+Notes](/3.0/ReleaseNotes3.0beta1.html).
 
 ### Netatalk 2.2.3 is available
 
@@ -1412,7 +1412,7 @@ new 3.0 release series. This release is not intended for production
 systems, but for testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0-alpha3.html).
+Notes](/3.0/ReleaseNotes3.0alpha3.html).
 
 ### Netatalk 3.0 alpha2 is available
 
@@ -1424,7 +1424,7 @@ new 3.0 release series. This release is not intended for production
 systems, but for testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0-alpha2.html).
+Notes](/3.0/ReleaseNotes3.0alpha2.html).
 
 ### Netatalk 3.0 alpha1 is available
 
@@ -1436,7 +1436,7 @@ new 3.0 release series. This release is not intended for production
 systems, but for testing only.
 
 For a summary of news and a detailed list of changes see the [Release
-Notes](/3.0/ReleaseNotes-3.0-alpha1.html).
+Notes](/3.0/ReleaseNotes3.0alpha1.html).
 
 ### Netatalk 2.2.2 is available
 

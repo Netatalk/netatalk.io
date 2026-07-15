@@ -1,15 +1,23 @@
-import re
 import os
+import re
+import tomllib
 from functools import lru_cache
 from pathlib import Path
 from string import Template
 from urllib.parse import urljoin
 
-LOCALES = ["en", "ja"]
 ROOT = Path(__file__).resolve().parents[1]
+CONFIG = ROOT / "config"
 TEMPLATES = ROOT / "templates"
 NETATALK_MESON_BUILD = ROOT / "netatalk" / "meson.build"
-DEFAULT_SITE_BASE_URL = "https://netatalk.io/"
+RELEASES_FILE = CONFIG / "releases.txt"
+SITE_CONFIG_FILE = CONFIG / "site.toml"
+
+with SITE_CONFIG_FILE.open("rb") as config_file:
+    SITE_CONFIG = tomllib.load(config_file)
+
+LOCALES = SITE_CONFIG["locales"]
+DEFAULT_SITE_BASE_URL = SITE_CONFIG["base_url"]
 SITE_BASE_URL = os.environ.get("NETATALK_SITE_BASE_URL", DEFAULT_SITE_BASE_URL).rstrip("/") + "/"
 
 
@@ -27,71 +35,21 @@ def localize_internal_site_urls(html):
     )
 
 
-# List of Netatalk releases 2023 onwards, which have release notes on GitHub.
-# Earlier release notes are revision controlled in this repository.
-VERSIONS = [
-    "4.5.0",
-    "4.5.0beta",
-    "4.4.3",
-    "4.4.2",
-    "4.4.1",
-    "4.4.0",
-    "4.3.2",
-    "4.3.1",
-    "4.3.0",
-    "4.2.4",
-    "4.2.3",
-    "4.2.2",
-    "4.2.1",
-    "4.2.0",
-    "4.1.2",
-    "4.1.1",
-    "4.1.0",
-    "4.0.8",
-    "4.0.7",
-    "4.0.6",
-    "4.0.5",
-    "4.0.4",
-    "4.0.3",
-    "4.0.2",
-    "4.0.1",
-    "4.0.0",
-    "3.2.10",
-    "3.2.9",
-    "3.2.8",
-    "3.2.7",
-    "3.2.6",
-    "3.2.5",
-    "3.2.4",
-    "3.2.3",
-    "3.2.2",
-    "3.2.1",
-    "3.2.0",
-    "3.1.19",
-    "3.1.18",
-    "3.1.17",
-    "3.1.16",
-    "3.1.15",
-    "3.1.14",
-    "2.4.10",
-    "2.4.9",
-    "2.4.8",
-    "2.4.7",
-    "2.4.6",
-    "2.4.5",
-    "2.4.4",
-    "2.4.3",
-    "2.4.2",
-    "2.4.1",
-    "2.4.0",
-    "2.3.2",
-    "2.3.1",
-    "2.3.0",
-    "2.2.10",
-    "2.2.9",
-    "2.2.8",
-    "2.2.7",
-]
+def load_versions():
+    versions = [
+        line.strip()
+        for line in RELEASES_FILE.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
+
+    if len(versions) != len(set(versions)):
+        raise RuntimeError(f"Duplicate versions in {RELEASES_FILE}")
+
+    return versions
+
+
+VERSIONS = load_versions()
+
 
 def netatalk_version():
     meson_build = NETATALK_MESON_BUILD.read_text(encoding="utf-8")
@@ -100,7 +58,9 @@ def netatalk_version():
         raise RuntimeError(f"Unable to find project version in {NETATALK_MESON_BUILD}")
     return match.group(1)
 
+
 VERSION = netatalk_version()
+
 
 @lru_cache
 def load_template(name):

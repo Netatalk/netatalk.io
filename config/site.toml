@@ -1,0 +1,2 @@
+base_url = "https://netatalk.io/"
+locales = ["en", "ja"]

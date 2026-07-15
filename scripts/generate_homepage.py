@@ -18,7 +18,7 @@ def release_notes_index():
     versions_by_minor = {}
     for version in VERSIONS:
         version_match = re.search(r"^(\d+)\.(\d+)", version)
-        if version_match is None or int(version_match.group(1)) < 4:
+        if version_match is None:
             continue
         minor = version_match.group()
         versions_by_minor.setdefault(minor, []).append(version)
