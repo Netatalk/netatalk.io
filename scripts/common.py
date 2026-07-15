@@ -1,10 +1,13 @@
 import re
 import os
+from functools import lru_cache
 from pathlib import Path
+from string import Template
 from urllib.parse import urljoin
 
 LOCALES = ["en", "ja"]
 ROOT = Path(__file__).resolve().parents[1]
+TEMPLATES = ROOT / "templates"
 NETATALK_MESON_BUILD = ROOT / "netatalk" / "meson.build"
 DEFAULT_SITE_BASE_URL = "https://netatalk.io/"
 SITE_BASE_URL = os.environ.get("NETATALK_SITE_BASE_URL", DEFAULT_SITE_BASE_URL).rstrip("/") + "/"
@@ -97,204 +100,50 @@ def netatalk_version():
         raise RuntimeError(f"Unable to find project version in {NETATALK_MESON_BUILD}")
     return match.group(1)
 
-
 VERSION = netatalk_version()
 
+@lru_cache
+def load_template(name):
+    return Template((TEMPLATES / name).read_text(encoding="utf-8"))
+
+
+def render_template(name, **context):
+    return load_template(name).substitute(context)
+
+
 def html_head(title, path, lang="en"):
-    return f"""<!doctype html>
-<html lang="{lang}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{title}</title>
-    <meta name="description" content="Netatalk Project Website: Free and Open Source AFP file server for Unix-like systems">
-    <link rel="canonical" href="{site_url(path)}">
-    <link rel="stylesheet" type="text/css" href="{site_url('css/site.css')}">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 760px)" href="{site_url('css/mobile.css')}">
-    <link rel="icon" type="image/x-icon" href="{site_url('gfx/favicon.ico')}">
-</head>
-"""
+    return render_template(
+        "document-head.html",
+        canonical_url=site_url(path),
+        lang=lang,
+        site_base_url=SITE_BASE_URL,
+        title=title,
+    )
+
 
 def html_menlinks():
-    return f"""<div id="header">
-    <div id="logo"></div>
-    <div id="menlinks">
-        <a href="{site_url()}" title="Return to Netatalk home">[main]</a>
-        <a href="{site_url('docs')}" title="Netatalk Wiki">[wiki]</a>
-        <a href="{site_url('documentation.html')}" title="Netatalk Manual">[documentation]</a>
-        <a href="{site_url('download.html')}" title="Download Netatalk">[downloads]</a>
-        <a href="{site_url('support.html')}" title="Support">[support]</a>
-        <a href="{site_url('links.html')}" title="Netatalk related links">[links]</a>
-        <img src="{site_url('gfx/end.gif')}" alt="" width="125" height="7">
-    </div>
-</div>
+    return render_template("site-header.html", site_base_url=SITE_BASE_URL)
 
-<div id="header-print">
-    <h1>netatalk.io</h1>
-</div>
-
-<div class="search">
-    <h2>search netatalk.io</h2>
-    <form method="get" action="https://duckduckgo.com/">
-        <p>
-            <input type="text" name="q" size="10" maxlength="255" value="" title="enter search text">
-            <input type="hidden" name="sites" value="netatalk.io">
-            <input type="submit" value="Go" title="search netatalk.io">
-        </p>
-    </form>
-    <span class="italic">powered by DuckDuckGo</span>
-</div>
-"""
 
 def html_navbar(version):
     minor_version = re.search(r"^(\d+\.\d+)", version).group()
     dashed_version = version.replace(".", "-")
-    return f"""
-<div id="navbars">
-  <div class="navbar">
-    <h2>current release</h2>
-    <ul>
-      <li>
-        <a
-        title="download {version} xz compressed source code"
-        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz">
-        Netatalk {version} (source code)
-        </a>
-      </li>
-      <li>
-        <a
-        title="download {version} checksum"
-        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.sha256sum">
-        #️⃣ sha256 checksum
-        </a>
-      </li>
-      <li>
-        <a
-        title="download {version} signature"
-        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.tar.xz.asc">
-        🔑 GPG signature
-        </a>
-      </li>
-      <li>
-        <a
-        title="download {version} Webmin module"
-        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-{dashed_version}/netatalk-{version}.wbm.gz">
-        🧰 Webmin Module
-        </a>
-      </li>
-      <li>
-        <a
-        title="view {version} Release Notes"
-        href="{site_url(f'{minor_version}/ReleaseNotes{version}.html')}">
-        📝 Release Notes
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="navbar">
-    <h2>netatalk manual</h2>
-    <ol>
-      <li><a href="{site_url('manual/en/')}">Introduction</a></li>
-      <li><a href="{site_url('manual/en/Installation.html')}">Installation</a></li>
-      <li><a href="{site_url('manual/en/Configuration.html')}">Configuration</a></li>
-      <li><a href="{site_url('manual/en/CNID.html')}">CNID Backends</a></li>
-      <li><a href="{site_url('manual/en/Charsets.html')}">Character Sets</a></li>
-      <li><a href="{site_url('manual/en/Authentication.html')}">Authentication</a></li>
-      <li><a href="{site_url('manual/en/ACL.html')}">ACL Support</a></li>
-      <li><a href="{site_url('manual/en/Dircache.html')}">Caching</a></li>
-      <li><a href="{site_url('manual/en/FCE.html')}">Filesystem Change Events</a></li>
-      <li><a href="{site_url('manual/en/Search.html')}">Search</a></li>
-      <li><a href="{site_url('manual/en/AppleTalk.html')}">AppleTalk</a></li>
-      <li><a href="{site_url('manual/en/Upgrading.html')}">Upgrading</a></li>
-    </ol>
-  </div>
-  <div class="navbar">
-    <h2>community</h2>
-    <ul>
-       <li><a title="Participate in Discussions" href="https://github.com/Netatalk/netatalk/discussions">Discussions</a></li>
-       <li><a title="Subscribe to Mailing Lists" href="https://sourceforge.net/p/netatalk/mailman/">Mailing Lists</a></li>
-       <li><a title="Read the Code of Conduct" href="{site_url('code_of_conduct.html')}">Code of Conduct</a></li>
-    </ul>
-  </div>
-  <div class="navbar">
-    <h2>project resources</h2>
-    <ul>
-       <li><a title="Contributors" href="{site_url('contributors.html')}">Netatalk Contributors</a></li>
-       <li><a title="Release Notes" href="{site_url('releasenotes.html')}">Release Notes</a></li>
-       <li><a title="News Archive" href="{site_url('archive.html')}">News Archive</a></li>
-       <li><a title="Changelog" href="{site_url('news.html')}">Project Changelog</a></li>
-       <li><a title="Security" href="{site_url('security.html')}">Security</a></li>
-    </ul>
-  </div>
-  <div class="navbar">
-    <h2>development</h2>
-    <ul>
-      <li><a title="Code Repository, GitHub" href="https://github.com/Netatalk/netatalk">Code Repository</a></li>
-      <li><a title="Code Repository, GitLab" href="https://gitlab.com/netatalk-team/netatalk">GitLab Mirror</a></li>
-      <li><a title="How to Contribute" href="{site_url('contributing.html')}">How to Contribute</a></li>
-      <li><a title="Developer Documentation" href="{site_url('developer/')}">Developer Documentation</a></li>
-      <li><a title="OpenSSF Supply Chain Security" href="https://scorecard.dev/viewer/?uri=github.com/Netatalk/netatalk">Supply Chain Security</a></li>
-    </ul>
-  </div>
-  <div class="navbar">
-    <h2>continuous integration</h2>
-    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/build.yml">
-      <img alt="GitHub Continuous Integration - Build Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/build.yml/badge.svg">
-    </a></p>
-    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/test.yml">
-      <img alt="GitHub Continuous Integration - Test Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/test.yml/badge.svg">
-    </a></p>
-    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml">
-      <img alt="GitHub Continuous Integration - Containers Status" height="22"
-         src="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml/badge.svg">
-    </a></p>
-  </div>
-  <div class="navbar">
-    <h2>Static Analysis</h2>
-    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
-      <img alt="SonarQube Static Analysis - Security Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=security_rating">
-    </a></p>
-    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
-      <img alt="SonarQube Static Analysis - Reliability Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=reliability_rating">
-    </a></p>
-    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
-      <img alt="SonarQube Static Analysis - Maintainability Rating" height="22"
-         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=sqale_rating">
-    </a></p>
-  </div>
-</div>
-"""
+    return render_template(
+        "site-navigation.html",
+        dashed_version=dashed_version,
+        minor_version=minor_version,
+        site_base_url=SITE_BASE_URL,
+        version=version,
+    )
+
 
 def html_foot(path):
-    return f"""
-<div class="footer">
-    <a href="https://validator.w3.org/check?uri={site_url(path)}">
-      <img style="border:0;width:88px;height:31px"
-      src="{site_url('gfx/html5-validator-badge.svg')}"
-      alt="Valid HTML5">
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check?uri={site_url(path)}">
-      <img style="border:0;width:88px;height:31px"
-      src="{site_url('gfx/valid-css-v.svg')}"
-      alt="Valid CSS">
-    </a>
-    <p>The <a href="https://github.com/Netatalk/netatalk.io">source code</a> of this website is licensed under
-    the <a href="{site_url('manual/en/License')}">GNU General Public License 2.0</a>.</p>
-</div>
-</body>
-</html>
-"""
+    return render_template(
+        "site-footer.html",
+        page_url=site_url(path),
+        site_base_url=SITE_BASE_URL,
+    )
+
 
 def js_mermaid():
-    return """<script
-    src="https://cdn.jsdelivr.net/npm/mermaid@11.14.0/dist/mermaid.min.js"
-    integrity="sha384-1CMXl090wj8Dd6YfnzSQUOgWbE6suWCaenYG7pox5AX7apTpY3PmJMeS2oPql4Gk"
-    crossorigin="anonymous"
-    data-cfasync="false"
-></script>
-<script>mermaid.initialize({ startOnLoad: true });</script>
-"""
+    return render_template("mermaid-scripts.html")

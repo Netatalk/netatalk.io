@@ -1,0 +1,118 @@
+
+<div id="navbars">
+  <div class="navbar">
+    <h2>current release</h2>
+    <ul>
+      <li>
+        <a
+        title="download ${version} xz compressed source code"
+        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-${dashed_version}/netatalk-${version}.tar.xz">
+        Netatalk ${version} (source code)
+        </a>
+      </li>
+      <li>
+        <a
+        title="download ${version} checksum"
+        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-${dashed_version}/netatalk-${version}.tar.xz.sha256sum">
+        #️⃣ sha256 checksum
+        </a>
+      </li>
+      <li>
+        <a
+        title="download ${version} signature"
+        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-${dashed_version}/netatalk-${version}.tar.xz.asc">
+        🔑 GPG signature
+        </a>
+      </li>
+      <li>
+        <a
+        title="download ${version} Webmin module"
+        href="https://github.com/Netatalk/netatalk/releases/download/netatalk-${dashed_version}/netatalk-${version}.wbm.gz">
+        🧰 Webmin Module
+        </a>
+      </li>
+      <li>
+        <a
+        title="view ${version} Release Notes"
+        href="${site_base_url}${minor_version}/ReleaseNotes${version}.html">
+        📝 Release Notes
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar">
+    <h2>netatalk manual</h2>
+    <ol>
+      <li><a href="${site_base_url}manual/en/">Introduction</a></li>
+      <li><a href="${site_base_url}manual/en/Installation.html">Installation</a></li>
+      <li><a href="${site_base_url}manual/en/Configuration.html">Configuration</a></li>
+      <li><a href="${site_base_url}manual/en/CNID.html">CNID Backends</a></li>
+      <li><a href="${site_base_url}manual/en/Charsets.html">Character Sets</a></li>
+      <li><a href="${site_base_url}manual/en/Authentication.html">Authentication</a></li>
+      <li><a href="${site_base_url}manual/en/ACL.html">ACL Support</a></li>
+      <li><a href="${site_base_url}manual/en/Dircache.html">Caching</a></li>
+      <li><a href="${site_base_url}manual/en/FCE.html">Filesystem Change Events</a></li>
+      <li><a href="${site_base_url}manual/en/Search.html">Search</a></li>
+      <li><a href="${site_base_url}manual/en/AppleTalk.html">AppleTalk</a></li>
+      <li><a href="${site_base_url}manual/en/Upgrading.html">Upgrading</a></li>
+    </ol>
+  </div>
+  <div class="navbar">
+    <h2>community</h2>
+    <ul>
+       <li><a title="Participate in Discussions" href="https://github.com/Netatalk/netatalk/discussions">Discussions</a></li>
+       <li><a title="Subscribe to Mailing Lists" href="https://sourceforge.net/p/netatalk/mailman/">Mailing Lists</a></li>
+       <li><a title="Read the Code of Conduct" href="${site_base_url}code_of_conduct.html">Code of Conduct</a></li>
+    </ul>
+  </div>
+  <div class="navbar">
+    <h2>project resources</h2>
+    <ul>
+       <li><a title="Contributors" href="${site_base_url}contributors.html">Netatalk Contributors</a></li>
+       <li><a title="Release Notes" href="${site_base_url}releasenotes.html">Release Notes</a></li>
+       <li><a title="News Archive" href="${site_base_url}archive.html">News Archive</a></li>
+       <li><a title="Changelog" href="${site_base_url}news.html">Project Changelog</a></li>
+       <li><a title="Security" href="${site_base_url}security.html">Security</a></li>
+    </ul>
+  </div>
+  <div class="navbar">
+    <h2>development</h2>
+    <ul>
+      <li><a title="Code Repository, GitHub" href="https://github.com/Netatalk/netatalk">Code Repository</a></li>
+      <li><a title="Code Repository, GitLab" href="https://gitlab.com/netatalk-team/netatalk">GitLab Mirror</a></li>
+      <li><a title="How to Contribute" href="${site_base_url}contributing.html">How to Contribute</a></li>
+      <li><a title="Developer Documentation" href="${site_base_url}developer/">Developer Documentation</a></li>
+      <li><a title="OpenSSF Supply Chain Security" href="https://scorecard.dev/viewer/?uri=github.com/Netatalk/netatalk">Supply Chain Security</a></li>
+    </ul>
+  </div>
+  <div class="navbar">
+    <h2>continuous integration</h2>
+    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/build.yml">
+      <img alt="GitHub Continuous Integration - Build Status" height="22"
+         src="https://github.com/Netatalk/netatalk/actions/workflows/build.yml/badge.svg">
+    </a></p>
+    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/test.yml">
+      <img alt="GitHub Continuous Integration - Test Status" height="22"
+         src="https://github.com/Netatalk/netatalk/actions/workflows/test.yml/badge.svg">
+    </a></p>
+    <p><a href="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml">
+      <img alt="GitHub Continuous Integration - Containers Status" height="22"
+         src="https://github.com/Netatalk/netatalk/actions/workflows/containers.yml/badge.svg">
+    </a></p>
+  </div>
+  <div class="navbar">
+    <h2>Static Analysis</h2>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Security Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=security_rating">
+    </a></p>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Reliability Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=reliability_rating">
+    </a></p>
+    <p><a href="https://sonarcloud.io/summary/overall?id=Netatalk_netatalk&branch=main">
+      <img alt="SonarQube Static Analysis - Maintainability Rating" height="22"
+         src="https://sonarcloud.io/api/project_badges/measure?project=Netatalk_netatalk&metric=sqale_rating">
+    </a></p>
+  </div>
+</div>

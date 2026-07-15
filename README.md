@@ -11,6 +11,7 @@ The static website of the Netatalk project, generated from Markdown sources by a
 - `scripts/` Python scripts that build the website
 - `security/` vulnerability advisories in Markdown, and raw patches
 - `spec/` specification documentation in Markdown
+- `templates/` reusable HTML fragments used by the website generators
 
 Later release notes as well as wiki documentation Markdown sources are fetched on the fly
 from the *Netatalk/netatalk* GitHub project by the build script.
