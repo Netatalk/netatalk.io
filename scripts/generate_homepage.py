@@ -1,6 +1,8 @@
 import os
 import re
+import sys
 import markdown
+import requests
 
 from common import (
     VERSION,
@@ -36,6 +38,37 @@ def release_notes_index():
 
     return "\n\n".join(sections)
 
+
+def github_release_assets(release_version, github_token):
+    github_tag = "netatalk-" + release_version.replace(".", "-")
+    url = f"https://api.github.com/repos/Netatalk/netatalk/releases/tags/{github_tag}"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "Authorization": "Bearer " + github_token,
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+    response = requests.get(url, headers=headers)
+    if response.status_code == 401:
+        print("ERROR: GitHub authentication failed (HTTP 401). Check your GITHUB_TOKEN.")
+        sys.exit(1)
+    if response.status_code != 200:
+        print(f"Skipping downloads: HTTP {response.status_code} for tag {github_tag}")
+        return []
+
+    return response.json().get("assets", [])
+
+
+def download_links(assets):
+    if not assets:
+        return ""
+
+    links = [
+        f"- [{asset['name']}]({asset['browser_download_url']})"
+        for asset in assets
+    ]
+    return "\n".join(links) + "\n"
+
 subdirs = [
     'security',
     'spec',
@@ -61,6 +94,9 @@ pages = [(dir, dir) for dir in subdirs]
 pages.extend(page_subdirs)
 pages.extend((f"releasenotes/{dir}", dir) for dir in release_note_subdirs)
 
+github_token = os.environ.get("GITHUB_TOKEN")
+download_assets = github_release_assets(VERSION, github_token) if github_token else []
+
 for source_dir, output_dir in pages:
     files = []
 
@@ -82,6 +118,8 @@ for source_dir, output_dir in pages:
                         text = text.replace("NETATALK_NEWS", news_content)
 
             text = text.replace("NETATALK_RELEASE_NOTES", release_notes_index())
+            if source_dir == "pages" and file == "download.md":
+                text = text.replace("NETATALK_DOWNLOADS", download_links(download_assets))
 
             html = markdown.markdown(
                 text,

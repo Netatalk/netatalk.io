@@ -1,12 +1,16 @@
 # Download Netatalk
 
-## Netatalk Source Code Releases
+Here you can find the latest Netatalk source code releases for download,
+which can be [built and installed](/install.html) on your system.
 
-The most recent stable Netatalk source code releases can be downloaded
-from the **navbar to the left** on this website.
+We also distribute a [Webmin module](/docs/Webmin-Module.html) for Netatalk, which can be installed directly from the Webmin interface.
 
-You can also find the release tarballs attached to the [release
-notes](https://github.com/Netatalk/netatalk/releases) on GitHub.
+Both have corresponding `.asc` files for GPG signature verification,
+as well as `.sha256sum` and `.sha512sum` files for checksum verification.
+
+NETATALK_DOWNLOADS
+
+## GPG Signature Verification
 
 To validate the integrity of the downloaded source code, you can download the corresponding GPG signature file.
 The signatures are signed with the [GPG key of the Netatalk project](http://netatalk.io/NetatalkDistributionPublicKey.asc),
@@ -59,20 +63,11 @@ A list of [binary netatalk packages](https://repology.org/project/netatalk/packa
 
 ![Repology package status](https://repology.org/badge/vertical-allrepos/netatalk.svg)
 
-## Webmin Module
-
-As of Netatalk 4.0.0, the Webmin module is part of the Netatalk package.
-Module tarballs are distributed with stable releases.
-
-The Webmin modules for Netatalk 3.x and earlier can be downloaded from
-[SourceForge
-Files](https://sourceforge.net/projects/netatalk/files/Webmin/) section.
-
 ## AFP Test-Suite
 
-As of Netatalk 4.0.2, the afptest test suite is part of the Netatalk
-package.
+The AFP Test-Suite used to be a separate project, but is now part of the Netatalk distribution since v4.0.
+The test suite is used to verify the correct operation of an AFP server implementation.
 
-Find historical afptest release tarballs in the [SourceForge
+Find historical afptest tarballs in the [SourceForge
 Files](https://sourceforge.net/projects/netatalk/files/Testsuite/)
 section.
