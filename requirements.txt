@@ -1,4 +1,4 @@
-Markdown==3.10.2
+Markdown==3.10.3
 meson==1.11.2
 ninja==1.13.0
 requests==2.34.2
