@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netatalk — Logo Concepts</title>
+<style>
+  :root{
+    --navy:#0B1F3A; --blue:#3D82FF; --cyan:#19E3D2;
+    --ink:#0B1F3A; --muted:#5b6b82; --line:#e6ebf2; --bg:#f7f9fc;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Helvetica Neue',Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  header{padding:56px 32px 24px;max-width:1100px;margin:0 auto}
+  .eyebrow{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:700;margin:0 0 10px}
+  h1{font-size:38px;letter-spacing:-1.5px;margin:0 0 10px;font-weight:800}
+  .lede{font-size:17px;color:var(--muted);max-width:640px;line-height:1.55;margin:0}
+  .wrap{max-width:1100px;margin:0 auto;padding:16px 32px 80px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;margin:26px 0;
+    box-shadow:0 1px 2px rgba(11,31,58,.04),0 12px 30px rgba(11,31,58,.05)}
+  .card-head{display:flex;align-items:baseline;gap:14px;padding:22px 26px 0}
+  .tag{font-size:12px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--blue);
+    padding:4px 10px;border-radius:999px;text-transform:uppercase}
+  .card-head h2{font-size:22px;margin:0;letter-spacing:-.5px}
+  .card-head p{margin:0;color:var(--muted);font-size:15px}
+  .rationale{padding:6px 26px 18px;color:var(--muted);font-size:15px;line-height:1.5;max-width:760px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+  .cell{padding:34px;display:flex;align-items:center;justify-content:center;min-height:180px}
+  .cell.light{background:#fff}
+  .cell.dark{background:var(--navy)}
+  .cell img{max-width:100%;height:auto}
+  .icons{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding:26px;border-top:1px solid var(--line)}
+  .icons .lbl{font-size:12px;color:var(--muted);width:100%;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+  .chip{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .chip span{font-size:12px;color:var(--muted)}
+  .footer{max-width:1100px;margin:0 auto;padding:0 32px 80px;color:var(--muted);font-size:14px;line-height:1.6}
+  .palette{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 0}
+  .sw{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+  .dot{width:22px;height:22px;border-radius:6px;border:1px solid rgba(0,0,0,.08)}
+  @media(max-width:720px){.row{grid-template-columns:1fr}h1{font-size:30px}}
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Netatalk · Logo Exploration</p>
+  <h1>Three marks for the world's fastest file exchange</h1>
+  <p class="lede">Each concept is built as a single geometric SVG — crisp at any size, from a browser favicon to a cloud console. Cool palette signals speed, trust, and security. Compare them on light and dark, then tell me which direction to refine.</p>
+  <div class="palette">
+    <div class="sw"><span class="dot" style="background:#0B1F3A"></span>Navy #0B1F3A</div>
+    <div class="sw"><span class="dot" style="background:#3D82FF"></span>Electric Blue #3D82FF</div>
+    <div class="sw"><span class="dot" style="background:#19E3D2"></span>Cyan #19E3D2</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- CONCEPT A -->
+  <section class="card">
+    <div class="card-head"><span class="tag">A</span><div><h2>Exchange N</h2><p>Bidirectional arrows form the letter N</p></div></div>
+    <p class="rationale">Two interlocking arrows point opposite ways to say "exchange," while their silhouette reads as the Netatalk "N." Endpoints are marked with nodes — the two machines talking. Most literal to the protocol's job.</p>
+    <div class="row">
+      <div class="cell light"><img src="lockup-a-exchange.svg" alt="Concept A lockup on light"></div>
+      <div class="cell dark"><img src="concept-a-exchange.svg" style="width:150px" alt="Concept A icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-a-exchange.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-a-exchange.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-a-exchange.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT B -->
+  <section class="card">
+    <div class="card-head"><span class="tag">B</span><div><h2>Velocity</h2><p>A forward chevron trailing motion lines</p></div></div>
+    <p class="rationale">A play-style arrow with speed trails — pure momentum. The cleanest, most abstract option; it scales beautifully and leans hardest into the "fastest protocol" positioning. Works equally as an app icon or a loading glyph.</p>
+    <div class="row">
+      <div class="cell light"><img src="lockup-b-velocity.svg" alt="Concept B lockup on light"></div>
+      <div class="cell dark"><img src="concept-b-velocity.svg" style="width:150px" alt="Concept B icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-b-velocity.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-b-velocity.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-b-velocity.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT C -->
+  <section class="card">
+    <div class="card-head"><span class="tag">C</span><div><h2>Secure Link</h2><p>Two interlocking chain links</p></div></div>
+    <p class="rationale">Interlocked links read instantly as a secure, unbreakable connection between two endpoints — the "secure across the internet" promise. Friendly rounded geometry keeps it modern rather than corporate.</p>
+    <div class="row">
+      <div class="cell light"><img src="lockup-c-securelink.svg" alt="Concept C lockup on light"></div>
+      <div class="cell dark"><img src="concept-c-securelink.svg" style="width:150px" alt="Concept C icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-c-securelink.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-c-securelink.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-c-securelink.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT D -->
+  <section class="card">
+    <div class="card-head"><span class="tag">D</span><div><h2>Warp</h2><p>Chevrons accelerating toward a point</p></div></div>
+    <p class="rationale">Three chevrons grow in weight and brightness as they rush right — motion you can feel. The most aggressive take on raw speed, and a natural spinner or transfer-in-progress animation.</p>
+    <div class="row">
+      <div class="cell light"><img src="concept-d-warp.svg" style="width:150px" alt="Concept D icon on light"></div>
+      <div class="cell dark"><img src="concept-d-warp.svg" style="width:150px" alt="Concept D icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-d-warp.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-d-warp.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-d-warp.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT E -->
+  <section class="card">
+    <div class="card-head"><span class="tag">E</span><div><h2>Orbit</h2><p>An endpoint orbiting a central node</p></div></div>
+    <p class="rationale">A satellite endpoint circles a core node — files distributed from the cloud out to every client. Speaks directly to serving from AWS at global scale. Distinctive silhouette that no competitor owns.</p>
+    <div class="row">
+      <div class="cell light"><img src="concept-e-orbit.svg" style="width:150px" alt="Concept E icon on light"></div>
+      <div class="cell dark"><img src="concept-e-orbit.svg" style="width:150px" alt="Concept E icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-e-orbit.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-e-orbit.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-e-orbit.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+  <!-- CONCEPT F -->
+  <section class="card">
+    <div class="card-head"><span class="tag">F</span><div><h2>Relay N</h2><p>A routed path that traces the letter N</p></div></div>
+    <p class="rationale">The relay path now spells the Netatalk "N" — a single packet route between two endpoints that resolves into the brand letter. Connectivity and identity in one stroke; the anchored nodes keep it grounded.</p>
+    <div class="row">
+      <div class="cell light"><img src="concept-f-relay-n.svg" style="width:150px" alt="Concept F icon on light"></div>
+      <div class="cell dark"><img src="concept-f-relay-n.svg" style="width:150px" alt="Concept F icon on dark"></div>
+    </div>
+    <div class="icons">
+      <span class="lbl">Icon at real sizes</span>
+      <div class="chip"><img src="concept-f-relay-n.svg" width="64" height="64" alt=""><span>64px</span></div>
+      <div class="chip"><img src="concept-f-relay-n.svg" width="32" height="32" alt=""><span>32px</span></div>
+      <div class="chip"><img src="concept-f-relay-n.svg" width="16" height="16" alt=""><span>16px favicon</span></div>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  All files are vector SVGs in this folder. Pick a direction (or mix elements — e.g. Velocity icon with a different wordmark) and I'll produce final assets: full color / white / black variants, favicon package, and a social avatar.
+</div>
+</body>
+</html>

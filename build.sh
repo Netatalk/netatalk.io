@@ -130,6 +130,8 @@ python3 scripts/generate_homepage.py
 
 rm -rf wiki
 
+python3 -m pagefind --site public
+
 if [ "$mode" = "test" ]; then
   set +x
   echo "Serving site at ${NETATALK_SITE_BASE_URL}"
