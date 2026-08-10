@@ -1,27 +1,65 @@
-<div id="header">
-    <div id="logo"></div>
-    <div id="menlinks">
-        <a href="${site_base_url}" title="Return to Netatalk home">[main]</a>
-        <a href="${site_base_url}docs" title="Netatalk Documentation">[documentation]</a>
-        <a href="${site_base_url}download.html" title="Download Netatalk">[downloads]</a>
-        <a href="${site_base_url}support.html" title="Support">[support]</a>
-        <a href="${site_base_url}links.html" title="Netatalk related links">[links]</a>
-        <img src="${site_base_url}gfx/end.gif" alt="" width="125" height="7">
-    </div>
-</div>
-
-<div id="header-print">
-    <h1>netatalk.io</h1>
-</div>
-
-<div class="search">
-    <h2>search netatalk.io</h2>
-    <form method="get" action="https://duckduckgo.com/">
-        <p>
-            <input type="text" name="q" size="10" maxlength="255" value="" title="enter search text">
-            <input type="hidden" name="sites" value="netatalk.io">
-            <input type="submit" value="Go" title="search netatalk.io">
-        </p>
-    </form>
-    <span class="italic">powered by DuckDuckGo</span>
-</div>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="${site_base_url}" title="Return to Netatalk home">
+      <img src="${site_base_url}gfx/logo-lockup.svg" width="826" height="240" alt="netatalk">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="${site_base_url}" title="Return to Netatalk home">Home</a>
+      <a href="${site_base_url}docs" title="Netatalk Documentation">Documentation</a>
+      <a href="${site_base_url}download.html" title="Download Netatalk">Downloads</a>
+      <a href="${site_base_url}support.html" title="Support">Support</a>
+      <a href="${site_base_url}links.html" title="Netatalk related links">Links</a>
+    </nav>
+  </div>
+  <div class="accent-bar" aria-hidden="true"></div>
+  <img class="banner-mascot" src="${site_base_url}gfx/favicon-legacy.png"
+       width="32" height="32" alt="" aria-hidden="true"
+       title="Some things never change">
+</header>
+<script>
+(function () {
+  var bar = document.querySelector(".accent-bar");
+  if (!bar || !bar.animate ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var SPEED = 110;        /* px per second, identical for every packet */
+  var PX_PER_MM = 96 / 25.4;
+  function spawnPacket(offset) {
+    var p = document.createElement("span");
+    p.className = "packet";
+    bar.appendChild(p);
+    var lead = 10 + offset; /* trailing packets start further back */
+    p.animate(
+      [
+        { transform: "translateX(" + (-lead) + "px)", opacity: 0 },
+        { transform: "translateX(0px)", opacity: 1, offset: lead / (bar.offsetWidth + lead) },
+        { opacity: 1, offset: 0.96 },
+        { transform: "translateX(" + bar.offsetWidth + "px)", opacity: 0 }
+      ],
+      { duration: ((bar.offsetWidth + lead) / SPEED) * 1000, easing: "linear" }
+    ).onfinish = function () { p.remove(); };
+  }
+  function spawnCluster() {
+    if (window.scrollY === 0) {
+      var count = 1 + Math.floor(Math.random() * 4);
+      var offset = 0;
+      for (var i = 0; i < count; i++) {
+        if (i) offset += (5 + Math.random() * 25) * PX_PER_MM;
+        spawnPacket(offset);
+      }
+    }
+    setTimeout(spawnCluster, 3000 + Math.random() * 15000);
+  }
+  /* packets fly only while the page rests at the top; scrolling pauses
+     them in place so the sticky banner stays calm while reading, and
+     they carry on from where they stopped on return to the top */
+  window.addEventListener("scroll", function () {
+    var method = window.scrollY > 0 ? "pause" : "play";
+    bar.querySelectorAll(".packet").forEach(function (p) {
+      p.getAnimations().forEach(function (a) { a[method](); });
+    });
+  }, { passive: true });
+  setTimeout(spawnCluster, 500 + Math.random() * 3000);
+})();
+</script>
+<p class="print-title">netatalk.io</p>

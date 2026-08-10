@@ -1,0 +1,18 @@
+<section class="search" aria-label="Site search">
+    <h2>Search netatalk.io
+        <span class="search-lang">${lang_switcher}</span></h2>
+    <link rel="stylesheet" href="${site_base_url}pagefind/pagefind-ui.css">
+    <script src="${site_base_url}pagefind/pagefind-ui.js"></script>
+    <div id="sitesearch"></div>
+    <script>
+    window.addEventListener("DOMContentLoaded", function () {
+        new PagefindUI({
+            element: "#sitesearch",
+            baseUrl: "${site_base_url}",
+            pageSize: 5,
+            showImages: false,
+            showSubResults: true,
+        });
+    });
+    </script>
+</section>

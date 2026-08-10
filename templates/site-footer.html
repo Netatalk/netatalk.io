@@ -1,17 +1,35 @@
-
-<div class="footer">
-    <a href="https://validator.w3.org/check?uri=${page_url}">
-      <img style="border:0;width:88px;height:31px"
-      src="${site_base_url}gfx/html5-validator-badge.svg"
-      alt="Valid HTML5">
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check?uri=${page_url}">
-      <img style="border:0;width:88px;height:31px"
-      src="${site_base_url}gfx/valid-css-v.svg"
-      alt="Valid CSS">
-    </a>
-    <p>The <a href="https://github.com/Netatalk/netatalk.io">source code</a> of this website is licensed under
-    the <a href="${site_base_url}manual/en/License">GNU General Public License 2.0</a>.</p>
-</div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-meta">
+      <p>The <a href="https://github.com/Netatalk/netatalk.io">source code</a> of this website is licensed under
+      the <a href="${site_base_url}manual/en/License">GNU General Public License 2.0</a>.</p>
+      <p><a href="https://validator.w3.org/check?uri=${page_url}">Valid HTML5</a> ·
+      <a href="https://jigsaw.w3.org/css-validator/check?uri=${page_url}">Valid CSS</a></p>
+    </div>
+    <div class="daemon">
+      <picture>
+        <source id="mascot-dark" srcset="${site_base_url}gfx/daemon-dark.png" media="(prefers-color-scheme: dark)">
+        <img id="mascot" src="${site_base_url}gfx/daemon-light.png" width="298" height="256" alt="" loading="lazy">
+      </picture>
+    </div>
+  </div>
+</footer>
+<script>
+(function () {
+  try {
+    var n = (parseInt(localStorage.getItem("mascotCount"), 10) || 0) + 1;
+    localStorage.setItem("mascotCount", n);
+    if (n % 20 === 0) {
+      var base = "${site_base_url}gfx/";
+      document.getElementById("mascot-dark").srcset = base + "daemon-classic-dark.png";
+      var img = document.getElementById("mascot");
+      img.src = base + "daemon-classic-light.png";
+      img.width = 100; img.height = 108;
+      img.alt = "The classic Netatalk daemon logo from the early days of the project";
+      img.title = "Some things never change";
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

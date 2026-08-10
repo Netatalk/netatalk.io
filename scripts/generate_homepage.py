@@ -7,12 +7,8 @@ import requests
 from common import (
     VERSION,
     VERSIONS,
-    html_head,
-    html_menlinks,
-    html_navbar,
-    html_foot,
-    js_mermaid,
     localize_internal_site_urls,
+    render_page,
     site_url,
 )
 
@@ -146,14 +142,6 @@ for source_dir, output_dir in pages:
             new_path = new_name
         os.makedirs(os.path.dirname(f"./public/{new_path}") or "./public", exist_ok=True)
         with open(f"./public/{new_path}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-            output_file.write(html_head(f"Netatalk - {page_title}", new_path))
-            output_file.write("<body>\n")
-            output_file.write(js_mermaid())
-            output_file.write(html_menlinks())
-            output_file.write(html_navbar(VERSION))
-            output_file.write("<div id=\"content\">\n")
-            output_file.write(html)
-            output_file.write("</div>\n")
-            output_file.write(html_foot(new_path))
+            output_file.write(render_page(f"Netatalk - {page_title}", new_path, html, mermaid=True))
 
         print(f"Converted: {file}")
