@@ -8,12 +8,8 @@ import requests
 
 from common import (
     VERSIONS,
-    VERSION,
-    html_head,
-    html_menlinks,
-    html_navbar,
-    html_foot,
     localize_internal_site_urls,
+    render_page,
 )
 
 url_pattern = re.compile(r'((?:^|\s)(https?://\S+)(?=<))')
@@ -122,15 +118,11 @@ def main():
             encoding="utf-8",
             errors="xmlcharrefreplace",
         ) as output_file:
-            output_file.write(html_head(f"Netatalk Release Notes - {release_version}", f"{minor_version}/{file_name}"))
-            output_file.write("<body>\n")
-            output_file.write(html_menlinks())
-            output_file.write(html_navbar(VERSION))
-            output_file.write("<div id=\"content\">\n")
-            output_file.write(html)
-            output_file.write(post_content)
-            output_file.write("</div>\n")
-            output_file.write(html_foot(f"{minor_version}/{file_name}"))
+            output_file.write(render_page(
+                f"Netatalk Release Notes - {release_version}",
+                f"{minor_version}/{file_name}",
+                html + post_content,
+            ))
 
         print(f"Converted: {file_name} ({source})")
 

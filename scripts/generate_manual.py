@@ -6,11 +6,9 @@ from markdown.extensions.toc import TocExtension
 from common import (
     VERSION,
     LOCALES,
-    html_head,
-    html_menlinks,
-    html_navbar,
-    html_foot,
     localize_internal_site_urls,
+    render_page,
+    toc_sidebar,
 )
 
 
@@ -21,6 +19,9 @@ for lang in LOCALES:
     files = []
     with open(f"./manual/{lang}/_Sidebar.md", "r", encoding="utf-8") as input_file:
         text = input_file.read()
+        # The sidebar source in the netatalk repo opens with its own
+        # locale switcher; the site renders one in the search box instead.
+        text = re.sub(r"^\[en\]\([^)]*\)\s*\|\s*\[ja\]\([^)]*\)\s*\n", "", text)
         html = markdown.markdown(
             text,
             extensions=[
@@ -32,12 +33,7 @@ for lang in LOCALES:
         )
         html = localize_internal_site_urls(html)
 
-        navbar = f"""<div id="navbars">
-    <div class="navbar">
-    <h2>Table of contents</h2>
-    {html}
-    </div></div>
-    """
+        navbar = toc_sidebar(html)
 
     for file in os.listdir(f"./manual/{lang}/"):
         if file.endswith(".md"):
@@ -70,14 +66,13 @@ for lang in LOCALES:
         new_name = file.replace('.md', '.html')
 
         with open(f"./public/manual/{lang}/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-            output_file.write(html_head(f"Netatalk Manual - {page_title}", f"manual/{lang}/{new_name}", lang))
-            output_file.write("<body>\n")
-            output_file.write(html_menlinks())
-            output_file.write(navbar)
-            output_file.write("<div id=\"content\">")
-            output_file.write(html)
-            output_file.write("</div>")
-            output_file.write(html_foot(f"manual/{lang}/{new_name}"))
+            output_file.write(render_page(
+                f"Netatalk Manual - {page_title}",
+                f"manual/{lang}/{new_name}",
+                html,
+                lang=lang,
+                sidebar=navbar,
+            ))
 
         print(f"Converted: {lang}/{file}")
 
@@ -111,13 +106,6 @@ for file in files:
         page_title = file.replace('.md', '').replace('_', ' ').capitalize()
 
     with open(f"./public/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-        output_file.write(html_head(f"Netatalk - {page_title}", new_name, "en"))
-        output_file.write("<body>\n")
-        output_file.write(html_menlinks())
-        output_file.write(html_navbar(VERSION))
-        output_file.write("<div id=\"content\">")
-        output_file.write(html)
-        output_file.write("</div>")
-        output_file.write(html_foot(f"{new_name}"))
+        output_file.write(render_page(f"Netatalk - {page_title}", new_name, html))
 
     print(f"Converted: {new_name}")

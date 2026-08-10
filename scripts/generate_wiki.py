@@ -9,13 +9,10 @@ from git import Repo
 import urllib.parse
 
 from common import (
-    VERSION,
-    html_head,
-    html_menlinks,
-    html_foot,
-    js_mermaid,
     localize_internal_site_urls,
+    render_page,
     site_url,
+    toc_sidebar,
 )
 
 now = datetime.datetime.now()
@@ -30,7 +27,6 @@ def pre_footer(name):
         Generated from the <a href="https://github.com/Netatalk/netatalk/wiki/{name}">Netatalk GitHub Wiki</a>
     </p>
     <p>Last updated {date_time}</p>
-    </div>
 """
 
 def build_url(label, base, end):
@@ -78,12 +74,7 @@ with open("./wiki/_Sidebar.md", "r", encoding="utf-8") as input_file:
         output_format='html',
     )
     html = localize_internal_site_urls(html)
-    navbar = f"""<div id="navbars">
-<div class="navbar">
-<h2>Table of contents</h2>
-{html}
-</div></div>
-"""
+    navbar = toc_sidebar(html)
 
 for file in os.listdir("./wiki/"):
     if file.endswith(".md") and not file.startswith('[WIP]'):
@@ -119,16 +110,19 @@ for file in files:
 
     html = re.sub(r'<pre><code class="language-mermaid">(.*?)</code></pre>', r'<pre class="mermaid">\1</pre>', html, flags=re.DOTALL)
 
+    content = (
+        f"<h1 id=\"{file.split('.')[0]}\">{file.split('.')[0].replace('-', ' ')}</h1>\n"
+        + html
+        + pre_footer(page_title)
+    )
     with open(f"./public/docs/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
-        output_file.write(html_head(f"Netatalk Docs - {page_title.replace('-', ' ')}", f"/docs/{new_name}"))
-        output_file.write("<body>\n")
-        output_file.write(js_mermaid())
-        output_file.write(html_menlinks())
-        output_file.write(navbar)
-        output_file.write(f"<div id=\"content\">\n<h1 id=\"{file.split('.')[0]}\">{file.split('.')[0].replace('-', ' ')}</h1>\n")
-        output_file.write(html)
-        output_file.write(pre_footer(page_title))
-        output_file.write(html_foot(f"docs/{new_name}"))
+        output_file.write(render_page(
+            f"Netatalk Docs - {page_title.replace('-', ' ')}",
+            f"/docs/{new_name}",
+            content,
+            sidebar=navbar,
+            mermaid=True,
+        ))
 
     print(f"Converted: {file}")
 

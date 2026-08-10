@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Netatalk warp mark">
+  <defs>
+    <linearGradient id="d-grad" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0" stop-color="#3D82FF"/>
+      <stop offset="1" stop-color="#19E3D2"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0B1F3A"/>
+  <!-- Data warp: stacked chevrons accelerating toward a point -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 176 L236 256 L150 336" stroke="#3D82FF" stroke-width="30" opacity="0.45"/>
+    <path d="M236 176 L322 256 L236 336" stroke="#3D82FF" stroke-width="34" opacity="0.75"/>
+    <path d="M322 176 L408 256 L322 336" stroke="url(#d-grad)" stroke-width="40"/>
+  </g>
+</svg>
