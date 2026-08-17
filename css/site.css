@@ -1,329 +1,622 @@
-/* body */
-body {
-  margin: 0em; /* no margin */
-  font-family: Geneva, Arial, Helvetica, sans-serif;
-  font-size: 1em; /* we use relativ sizes below */
-  font-weight: normal;
-  color: #000000;
-  text-decoration: none;
-}
-
-.italic {
-  font-size: 90%;
-  font-style: italic;
-  text-decoration: none;
-}
-
-/* table */
-
-div#content table {
-  border-collapse: collapse;
-  margin-bottom: 10px;
-  width: 80%;
-}
-
-div#content th, td {
-  border: 1px solid #424242;
-}
-
-div#content td {
-  padding: 5px;
-  text-align: left;
-}
-
-div#content td:first-child {
-  font-weight: bold;
-}
-
-div#content th {
-  text-align: center;
-  text-transform: lowercase;
-  color: white;
-  background-color: #424242;
-  padding-bottom: 2px;
-  margin-bottom: 2px;
-  margin-top: -2px;
-  margin-left: -2px;
-  margin-right: -2px;
-}
-
 /*
- * format the divs
+ * netatalk.io stylesheet
+ *
+ * Single mobile-first stylesheet. All presentation lives here;
+ * markup carries semantic structure only.
+ *
+ * Brand palette (see gfx/color-review.html for WCAG rationale):
+ *   navy #0B1F3A, electric blue #3D82FF, cyan #19E3D2.
+ *   Cyan is accent-only: never text or thin lines on light surfaces.
+ *   Body links on white use the deeper #1E5AF0 to clear AA.
  */
 
+/* ---------- design tokens ---------- */
 
-/* search box */
-div.search {
+:root {
+  --navy: #0B1F3A;
+  --blue: #3D82FF;
+  --cyan: #19E3D2;
+  --gradient: linear-gradient(135deg, var(--blue), var(--cyan));
+
+  --bg: #f7f9fc;
+  --surface: #ffffff;
+  --ink: #0B1F3A;
+  --muted: #5b6b82;
+  --line: #e6ebf2;
+  --link: #1E5AF0;
+  --code-bg: #eef2f8;
+  --code-ink: #24457a;
+  --table-stripe: #f2f6fb;
+
+  --header-ink: #ffffff;
+  --header-muted: #b8c6dd;
+
+  --radius: 10px;
+  --content-width: 72rem;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --surface: #161c26;
+    --ink: #e6edf3;
+    --muted: #94a3b8;
+    --line: #263141;
+    --link: #6ea3ff;
+    --code-bg: #1a2230;
+    --code-ink: #a5c4f5;
+    --table-stripe: #131a24;
+  }
+}
+
+/* ---------- base ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* keep anchor targets clear of the sticky header */
+:target,
+main [id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.skip-link {
   position: absolute;
-  left: 20px;
-  top: 130px;
-  font-size: 80%;
-  width: 195px;
-  font-family : Geneva, Arial, Helvetica, sans-serif;
-  border: 1px solid #424242;
-  text-align: center;
-  padding: 2px;
-  margin-bottom: 20px;
+  left: -999px;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--navy);
+  color: #fff;
 }
 
-.search input {
-  padding: 0px;
-  margin: 0px;
-  border: 1px solid #000000;
+.skip-link:focus {
+  left: 0;
 }
 
-.search form {
-  padding: 2px;
-  margin: 2px;
+/* ---------- site header (navy in both modes) ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--navy);
+  color: var(--header-ink);
 }
 
-.search p {
-  padding: 0px;
-  margin: 0px;
+/* Animated brand accent under the banner: a flowing blue/cyan colour
+   sweep with a travelling "packet" dot — a file on its way to a client.
+   Blue anchors both ends so the scroll loops seamlessly. The bar is
+   full-bleed, so vw units span it without container-query support.
+   Animate transform, not `left`, so the motion is GPU-composited. */
+.accent-bar {
+  position: relative;
+  height: 3px;
+  overflow: hidden;
+  background: linear-gradient(90deg,
+    var(--blue) 0%, var(--blue) 15%,
+    var(--cyan) 35%, var(--cyan) 65%,
+    var(--blue) 85%, var(--blue) 100%);
+  background-size: 200% 100%;
+  animation: accent-flow 8s linear infinite;
 }
 
-/* navigation div */
+@keyframes accent-flow {
+  from { background-position: 0% 0; }
+  to   { background-position: 200% 0; }
+}
 
-div#navbars{
+/* Packets are spawned in random bursts by the header script, which
+   drives their motion at a constant speed via the Web Animations API;
+   this rule only supplies their appearance. */
+.accent-bar .packet {
   position: absolute;
-  top: 220px;
-  left: 20px;
-  width: 200px;
-  padding: 0;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 3px;
+  border-radius: 1.5px;
+  background: #ffffff;
+  box-shadow: 0 0 8px 3px var(--cyan);
+  will-change: transform;
+  opacity: 0;
 }
 
-div.navbar {
-  font-size: 80%;
-  width: 195px;
-  font-family : Geneva, Arial, Helvetica, sans-serif;
-  border: 1px solid #424242;
-  text-align: left;
-  padding: 2px;
-  margin-bottom: 20px;
+@media (prefers-reduced-motion: reduce) {
+  .accent-bar {
+    animation: none;
+    background-size: 100% 100%;
+  }
 }
 
-.navbar p {
-  padding: 0px;
-  padding-top: 1px;
-  padding-left: 2px;
-  padding-bottom: 5px;
-  margin: 0px;
+/* The original Netatalk favicon perches at the right end of the accent
+   bar; the "network cable" along its base (source rows 27-29 of the
+   32px art, white core at row 28) lines up with the bar so the packets
+   flow into its wire. At 1x scale the wire core overlays the 3px bar:
+   bottom = -1.5px. */
+.banner-mascot {
+  position: absolute;
+  right: 14px;
+  bottom: -1.5px;
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.navbar ul {
-  padding: 0px;
-  padding-bottom: 2px;
-  padding-left: 8px;
-  margin: 0px 0px 0px 2px;
-  list-style-type: none;
+.site-header-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
 }
 
-.navbar ol {
-  padding: 0px;
-  padding-bottom: 2px;
-  padding-left: 32px;
-  margin: 0px 0px 0px 2px;
+/* The lockup's navy tile matches the banner, so it blends in seamlessly */
+.brand {
+  display: block;
 }
 
-.navbar ol.alpha {
-  list-style-type: upper-latin;
+.brand img {
+  display: block;
+  width: auto;
+  height: 58px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.site-nav a {
+  color: var(--header-muted);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: #ffffff;
+  background: rgba(61, 130, 255, 0.22);
+  text-decoration: none;
+}
+
+/* ---------- page shell ---------- */
+
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 60rem) {
+  .page {
+    grid-template-columns: minmax(0, 1fr) 17rem;
+    padding-top: 2rem;
+  }
+}
+
+main {
+  min-width: 0;
+}
+
+/* ---------- sidebar ---------- */
+
+.site-aside {
+  min-width: 0;
+  font-size: 0.92rem;
+}
+
+.navbar,
+.search {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.1rem;
 }
 
 .navbar h2,
 .search h2 {
-  font-size: 100%;
-  font-weight: normal;
-  text-align: center;
-  text-transform: lowercase;
-  color: white;
-  background-color: #424242;
-  padding: 0px;
-  padding-bottom: 2px;
-  margin-bottom: 2px;
-  margin-top: -2px;
-  margin-left: -2px;
-  margin-right: -2px;
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
 
-.navbar h3 {
-  font-size: 100%;
-  font-weight: normal;
-  text-align: left;
-  padding: 0px;
-  padding-bottom: 3px;
-  padding-left: 2px;
-  margin: 0px;
+.navbar ul,
+.navbar ol {
+  margin: 0;
+  padding-left: 1.1rem;
 }
 
-
-/* do not display the print header div */
-div#header-print {
-  display: none;
-  margin-left: 210px;
+.navbar ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* main content */
-div#content {
-  background-color: #FFFFFF;
-  /*declare a color together with a contrasting background color*/
-  margin-left: 260px;
-  /*to position the content area to the right of the navigation*/
-  margin-right: 30px;/*breathing space for the text*/
-  padding: 5px;/*space to separate navigation and content*/
-  /*font-family: Geneva, Arial, Helvetica, sans-serif;*/
-  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 90%;
-  width: auto;
-  border: 0.1px solid #FFFFFF;
-  /*to ensure that NN4.xx renders the background-color of the content area*/
+.navbar li {
+  margin: 0.25rem 0;
 }
 
-#content a,
-#content a:visited,
-#content a:link,
-#content a:visited {
-  text-decoration: none;
-  color: #660000;
+/* Current page: chevron plus name, indented together from the siblings */
+.navbar a[aria-current="page"] {
+  display: inline-block;
+  background: url("/gfx/warp-chevron.svg") no-repeat left 0.45em / auto 0.65em;
+  padding-left: 0.95em;
+  margin-left: 0.4em;
+  font-weight: 600;
+  color: var(--ink);
 }
 
-#content a:hover {
-  text-decoration: underline;
-  color: #660000;
+.navbar p {
+  margin: 0.4rem 0;
 }
 
-#content a.toclink {
-  color: #FFFFFF;
+/* Bare paragraphs before lists are group labels (e.g. wiki sidebar sections) */
+.navbar p:has(+ ul),
+.navbar p:has(+ ol) {
+  margin: 0.9rem 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
 }
 
-
-#content td {
-  font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  text-decoration: none;
+.navbar hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0.7rem 0;
 }
 
-/* definitions for the header */
-div#header {
-  margin-top: 0px;
-  margin-left: 0px;
-  height: 109px;
-  white-space: nowrap;
-  background-color: #424242;
-  background-image: url(/gfx/bg.gif);
-  background-repeat: no-repeat;
-  background-position: 380px 0px;
+/* en | ja switcher: flips content locale and, with it, the search
+   language (Pagefind indexes per page language) */
+.search h2 {
+  display: flex;
+  align-items: baseline;
 }
 
-div#logo {
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 25px;
-  width: 225px;
-  height: 109px;
-  padding: 0px;
-  background-image: url(/gfx/netatalklogo.gif);
-  background-repeat: no-repeat;
+.search-lang {
+  margin-left: auto;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
-#logo img {
-  border: 0px;
+.search-lang span[aria-current] {
+  font-weight: 700;
+  color: var(--ink);
 }
 
-div#menlinks {
-  position: absolute;
-  left: 272px;
-  top: 87px;
-  font-family: Geneva, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  color: #FFFFFF;
-  text-decoration: none;
-  white-space: nowrap;
-
+/* Pagefind client-side search, themed with the brand tokens */
+.search #sitesearch {
+  --pagefind-ui-scale: 0.8;
+  --pagefind-ui-primary: var(--link);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--bg);
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--code-bg);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 6px;
+  --pagefind-ui-font: inherit;
 }
 
-div#menlinks a, div#menlinks a:visited {
-  color: #FFFFFF;
-  margin-right: 15px;
-  text-decoration: none;
+.search .pagefind-ui__search-clear {
+  color: var(--muted);
 }
 
-#menlinks img {
-  border: 0px;
+.search .pagefind-ui__result {
+  border-color: var(--line);
 }
 
-/* definitions for the footer */
-div.footer {
-  margin-left: 280px;
-  margin-top: 22px;
-  font-size: 75%;
-  width: 145px;
-  text-align: left;
-  white-space: nowrap;
+.search .pagefind-ui__result-link {
+  color: var(--link);
 }
 
-.footer img {
-  padding-right: 5px;
+.search .pagefind-ui__result-excerpt,
+.search .pagefind-ui__message {
+  color: var(--muted);
 }
 
-/* default settings */
-
-h1, h2, h3 {
-  color: #FFFFFF;
-  font-size: 130%;
-  padding: 2px;
-  margin-top: 0px;
+.search #sitesearch mark {
+  background: var(--cyan);
+  color: var(--navy);
+  border-radius: 2px;
 }
 
-h1 {
-  background-color: #605e5e;
+/* sub-result marker: brand chevron instead of Pagefind's ⤷ arrow */
+.search #sitesearch .pagefind-ui__result-nested .pagefind-ui__result-link::before {
+  content: "";
+  width: 0.6em;
+  height: 0.75em;
+  top: 0.2em;
+  right: calc(100% + 0.35em);
+  background: url("/gfx/warp-chevron.svg") no-repeat center / auto 100%;
 }
 
-h2 {
-  background-color: #424242;
+/* ---------- content typography ---------- */
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  line-height: 1.25;
+  margin: 1.6em 0 0.5em;
+  color: var(--ink);
 }
 
-h3 {
-  background-color: #330000;
+main > h1:first-child {
+  margin-top: 0;
 }
 
-h4, h5 {
-  font-size: 100%;
-  font-weight: normal;
-  padding: 2px;
-  margin-top: 0px;
+main h1 {
+  font-size: 1.9rem;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient) 1;
 }
 
-h4 {
-  color: #FFFFFF;
-  background-color: #424242;
+main h2 {
+  font-size: 1.4rem;
 }
 
-h5 {
-  padding-bottom: 3px;
-  padding-left: 2px;
+main h3 {
+  font-size: 1.15rem;
 }
 
-
-/* no border for images */
-img {
-  border: 0px;
+main h4,
+main h5,
+main h6 {
+  font-size: 1rem;
 }
 
-a, a:visited {
-  text-decoration: none;
-  color: #660000;
+main a.toclink {
+  color: inherit;
 }
+
+.italic {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* ---------- code ---------- */
 
 pre {
-  border: #630 1px dashed;
-  color: #993300;
-  padding: 2px;
-  font-size: 100%;
-  white-space: pre-wrap;
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  overflow-x: auto;
+  white-space: pre;
+  font-size: 0.9rem;
 }
 
 code {
-  color: #993300;
-  font-size: 120%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--code-ink);
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.92em;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+pre.mermaid {
+  background: transparent;
+  border: 0;
+  white-space: pre;
+  text-align: center;
+}
+
+/* ---------- tables ---------- */
+
+main table {
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 60rem) {
+  main table {
+    display: table;
+    width: auto;
+    min-width: 60%;
+  }
+}
+
+main th,
+main td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+main th {
+  background: var(--navy);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+main tbody tr:nth-child(even) {
+  background: var(--table-stripe);
+}
+
+/* ---------- misc content ---------- */
+
+main blockquote {
+  margin: 0.3rem 0 0.9rem;
+  padding: 0.3rem 0.75rem;
+  border-left: 3px solid var(--cyan);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+}
+
+main blockquote p {
+  margin: 0.35em 0;
+}
+
+main blockquote > :first-child {
+  margin-top: 0;
+}
+
+main blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+main blockquote blockquote {
+  margin: 0.35rem 0;
+}
+
+main hr {
+  border: 0;
+  height: 2px;
+  background: var(--gradient);
+  opacity: 0.4;
+  margin: 2rem 0;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.site-footer-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0.7rem 1rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.footer-meta {
+  flex: 1 1 18rem;
+}
+
+.daemon {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.daemon img {
+  display: block;
+  width: auto;
+  height: clamp(47px, 7.75vw, 86px);
+}
+
+@media (max-width: 30rem) {
+  .daemon img {
+    height: 41px;
+  }
+}
+
+/* ---------- print ---------- */
+
+.print-title {
+  display: none;
+}
+
+@media print {
+  .site-header,
+  .site-aside,
+  .site-footer,
+  .skip-link {
+    display: none;
+  }
+
+  .print-title {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .page {
+    display: block;
+    padding: 0;
+  }
+
+  main a {
+    color: #000;
+  }
+
+  pre {
+    border: 1px dashed #666;
+  }
 }

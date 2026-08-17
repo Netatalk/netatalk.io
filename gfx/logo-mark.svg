@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Netatalk secure link mark">
+  <defs>
+    <linearGradient id="c-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19E3D2"/>
+      <stop offset="1" stop-color="#3D82FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0B1F3A"/>
+  <!-- Two interlocking chain links: secure connection between endpoints -->
+  <g fill="none" stroke-width="38" stroke-linecap="round">
+    <rect x="120" y="196" width="180" height="120" rx="60" stroke="#3D82FF"/>
+    <rect x="212" y="196" width="180" height="120" rx="60" stroke="url(#c-grad)"/>
+  </g>
+</svg>
