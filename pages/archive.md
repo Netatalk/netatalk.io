@@ -2,6 +2,18 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.5.2 is available
+
+*6th of September 2026*
+
+The Netatalk development team is proud to announce the latest release of the Netatalk 4.5 release series.
+
+This is a bugfix version that fixes a performance regression in the DSI transport layer caused by the security patches in version 4.5.1. In order to fix this, we made a ABI breaking change – dsi_writeinit changed to a pointer handoff signature – and consequently the libatalk soversion is bumped to 21.
+
+A suite of hardening fixes to the EA and Spotlight code is also included.
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.5/ReleaseNotes4.5.2.html).
+
 ### Netatalk 4.5.1 is available
 
 *16th of July 2026*
