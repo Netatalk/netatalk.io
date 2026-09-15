@@ -2,6 +2,19 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.6.0 and Netatalk Client 1.0.0 are available
+
+*15th of September 2026*
+
+Today we're releasing Netatalk 4.6.0, the fastest and most capable AFP server we've ever shipped;
+Netatalk Client 1.0, our client's first production release; and a rebuilt netatalk.io, the new home for both.
+
+One day ago, on the 14th of September 2026, macOS 27 Golden Gate was released, the first operating system from Apple in 35 years that doesn't ship with an AFP client. This is the end of an era, but also a new beginning for AFP: millions of Macs and NAS devices, decades of archives, studios, labs, and retro-computing setups speak AFP every day. Our answer is to advance. This cycle modernized, hardened, and accelerated the whole stack, and for the first time Netatalk provides both sides of the connection. Our mission is to make AFP the best file sharing solution on any platform.
+
+[Netatalk 4.6.0 Release Notes](/4.6/ReleaseNotes4.6.0.html).
+
+[Netatalk Client 1.0.0 Release Notes](https://github.com/Netatalk/netatalk-client/releases/tag/1.0.0)
+
 ### Netatalk 4.5.2 is available
 
 *6th of September 2026*
