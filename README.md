@@ -16,7 +16,7 @@ The static website of the Netatalk project, generated from Markdown sources by a
 - `templates/` reusable HTML fragments used by the website generators
 
 Contemporary release notes as well as wiki documentation Markdown sources are fetched on the fly
-from the *Netatalk/netatalk* GitHub project by the build script.
+from the *Netatalk/netatalk* and *Netatalk/netatalk-client* GitHub projects by the build script.
 
 The rest of the Markdown sources are created by Netatalk's meson build system,
 including the Doxygen source code documentation.
@@ -53,6 +53,7 @@ The base URL can be overridden for any build by setting `NETATALK_SITE_BASE_URL`
 
 - Create a news story at the top of `pages/archive.md` (the top three stories will be substituted to `pages/index.md`.)
 - Prepend the release version to `config/releases.txt`.
+- Prepend Netatalk Client release versions to `config/client-releases.txt`.
 - cd to the `netatalk` submodule, fetch from origin and checkout the release tag, e.g. `git checkout 4.5.0`.
 - Test the updates by running `./build.sh test` and reviewing the generated site.
 - Commit all above changes and push to remote git to publish to web hosting.

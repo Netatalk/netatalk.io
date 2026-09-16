@@ -1,5 +1,5 @@
-<section class="navbar" aria-label="Current release">
-  <h2>Current release</h2>
+<section class="navbar" aria-label="Netatalk Server Current Release">
+  <h2>Server Release</h2>
   <ul>
     <li>
       <a
@@ -33,6 +33,39 @@
       <a
       title="view ${version} Release Notes"
       href="${site_base_url}${minor_version}/ReleaseNotes${version}.html">
+      📝 Release Notes
+      </a>
+    </li>
+  </ul>
+</section>
+<section class="navbar" aria-label="Netatalk Client Current Release">
+  <h2>Client Release</h2>
+  <ul>
+    <li>
+      <a
+      title="download Netatalk Client ${client_version} xz compressed source code"
+      href="https://github.com/Netatalk/netatalk-client/releases/download/${client_version}/netatalk-client-${client_version}.tar.xz">
+      Netatalk Client ${client_version} (source code)
+      </a>
+    </li>
+    <li>
+      <a
+      title="download Netatalk Client ${client_version} checksum"
+      href="https://github.com/Netatalk/netatalk-client/releases/download/${client_version}/netatalk-client-${client_version}.tar.xz.sha256sum">
+      #️⃣ sha256 checksum
+      </a>
+    </li>
+    <li>
+      <a
+      title="download Netatalk Client ${client_version} signature"
+      href="https://github.com/Netatalk/netatalk-client/releases/download/${client_version}/netatalk-client-${client_version}.tar.xz.asc">
+      🔑 GPG signature
+      </a>
+    </li>
+    <li>
+      <a
+      title="view Netatalk Client ${client_version} Release Notes"
+      href="${site_base_url}client/${client_minor_version}/ReleaseNotes${client_version}.html">
       📝 Release Notes
       </a>
     </li>

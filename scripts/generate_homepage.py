@@ -5,6 +5,7 @@ import markdown
 import requests
 
 from common import (
+    CLIENT_VERSIONS,
     VERSION,
     VERSIONS,
     localize_internal_site_urls,
@@ -12,9 +13,9 @@ from common import (
     site_url,
 )
 
-def release_notes_index():
+def release_notes_index(versions, output_prefix=""):
     versions_by_minor = {}
-    for version in VERSIONS:
+    for version in versions:
         version_match = re.search(r"^(\d+)\.(\d+)", version)
         if version_match is None:
             continue
@@ -23,7 +24,10 @@ def release_notes_index():
 
     sections = []
     for minor, versions in versions_by_minor.items():
-        links = [f"[{version}]({site_url(f'{minor}/ReleaseNotes{version}.html')})" for version in versions]
+        links = [
+            f"[{version}]({site_url(f'{output_prefix}{minor}/ReleaseNotes{version}.html')})"
+            for version in versions
+        ]
         link_lines = []
         for i in range(0, len(links), 3):
             line = " · ".join(links[i:i + 3])
@@ -113,7 +117,11 @@ for source_dir, output_dir in pages:
                         news_content = "".join(lines[start_idx:end_idx])
                         text = text.replace("NETATALK_NEWS", news_content)
 
-            text = text.replace("NETATALK_RELEASE_NOTES", release_notes_index())
+            text = text.replace("NETATALK_RELEASE_NOTES", release_notes_index(VERSIONS))
+            text = text.replace(
+                "NETATALK_CLIENT_RELEASE_NOTES",
+                release_notes_index(CLIENT_VERSIONS, "client/"),
+            )
             if source_dir == "pages" and file == "download.md":
                 text = text.replace("NETATALK_DOWNLOADS", download_links(download_assets))
 

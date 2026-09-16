@@ -13,7 +13,7 @@ One day ago, on the 14th of September 2026, macOS 27 Golden Gate was released, t
 
 [Netatalk 4.6.0 Release Notes](/4.6/ReleaseNotes4.6.0.html).
 
-[Netatalk Client 1.0.0 Release Notes](https://github.com/Netatalk/netatalk-client/releases/tag/1.0.0)
+[Netatalk Client 1.0.0 Release Notes](/client/1.0/ReleaseNotes1.0.0.html)
 
 ### Netatalk 4.5.2 is available
 
@@ -56,7 +56,7 @@ modern authentication methods, and improved performance and reliability.
 
 Netatalk Client is still considered beta level software, but early adopters are encouraged to test it and report any issues to the Netatalk development team.
 
-See the [Netatalk Client v0.9.5 release notes and tarball](https://github.com/Netatalk/netatalk-client/releases/tag/0.9.5).
+See the [Netatalk Client v0.9.5 release notes and tarball](/client/0.9/ReleaseNotes0.9.5.html).
 
 ### Netatalk 4.5.0 is available
 

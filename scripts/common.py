@@ -11,6 +11,7 @@ CONFIG = ROOT / "config"
 TEMPLATES = ROOT / "templates"
 NETATALK_MESON_BUILD = ROOT / "netatalk" / "meson.build"
 RELEASES_FILE = CONFIG / "releases.txt"
+CLIENT_RELEASES_FILE = CONFIG / "client-releases.txt"
 SITE_CONFIG_FILE = CONFIG / "site.toml"
 
 with SITE_CONFIG_FILE.open("rb") as config_file:
@@ -35,20 +36,22 @@ def localize_internal_site_urls(html):
     )
 
 
-def load_versions():
+def load_versions(releases_file=RELEASES_FILE):
     versions = [
         line.strip()
-        for line in RELEASES_FILE.read_text(encoding="utf-8").splitlines()
+        for line in releases_file.read_text(encoding="utf-8").splitlines()
         if line.strip() and not line.lstrip().startswith("#")
     ]
 
     if len(versions) != len(set(versions)):
-        raise RuntimeError(f"Duplicate versions in {RELEASES_FILE}")
+        raise RuntimeError(f"Duplicate versions in {releases_file}")
 
     return versions
 
 
 VERSIONS = load_versions()
+CLIENT_VERSIONS = load_versions(CLIENT_RELEASES_FILE)
+CLIENT_VERSION = CLIENT_VERSIONS[0]
 
 
 def netatalk_version():
@@ -98,8 +101,11 @@ def html_menlinks():
 def html_navbar(version):
     minor_version = re.search(r"^(\d+\.\d+)", version).group()
     dashed_version = version.replace(".", "-")
+    client_minor_version = re.search(r"^(\d+\.\d+)", CLIENT_VERSION).group()
     return render_template(
         "site-navigation.html",
+        client_minor_version=client_minor_version,
+        client_version=CLIENT_VERSION,
         dashed_version=dashed_version,
         minor_version=minor_version,
         site_base_url=SITE_BASE_URL,

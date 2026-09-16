@@ -7,6 +7,7 @@ import markdown
 import requests
 
 from common import (
+    CLIENT_VERSIONS,
     VERSIONS,
     localize_internal_site_urls,
     render_page,
@@ -14,8 +15,9 @@ from common import (
 
 url_pattern = re.compile(r'((?:^|\s)(https?://\S+)(?=<))')
 github_pattern = re.compile(r'(GitHub #)(\d+)')
-github_pr_url_pattern = re.compile(r'https://github\.com/Netatalk/netatalk/pull/(\d+)')
 release_notes_dir = Path(__file__).resolve().parents[1] / "releasenotes"
+NETATALK_REPOSITORY = "Netatalk/netatalk"
+CLIENT_REPOSITORY = "Netatalk/netatalk-client"
 
 
 def static_release_note(release_version, minor_version):
@@ -32,9 +34,8 @@ def static_release_note(release_version, minor_version):
     return None
 
 
-def github_release(release_version, github_token):
-    github_tag = "netatalk-" + release_version.replace(".", "-")
-    url = f"https://api.github.com/repos/Netatalk/netatalk/releases/tags/{github_tag}"
+def github_release(release_version, github_token, repository, github_tag):
+    url = f"https://api.github.com/repos/{repository}/releases/tags/{github_tag}"
     headers = {
         "Accept": "application/vnd.github+json",
         "Authorization": "Bearer " + github_token,
@@ -51,8 +52,11 @@ def github_release(release_version, github_token):
 
     body = response.json()
     published_at = re.search(r"^(\d{4}-\d{2}-\d{2})", body["published_at"]).group()
+    github_pr_url_pattern = re.compile(
+        rf"https://github\.com/{re.escape(repository)}/pull/(\d+)"
+    )
     body_text = github_pr_url_pattern.sub(
-        r'[#\1](https://github.com/Netatalk/netatalk/pull/\1)',
+        rf'[#\1](https://github.com/{repository}/pull/\1)',
         body["body"],
     )
 
@@ -69,18 +73,18 @@ def github_release(release_version, github_token):
 
     post_content = f"""{downloads_html}<h1>Footnotes</h1>
 <p>Release published on {published_at}</p>
-<p>Generated from <a href="https://github.com/Netatalk/netatalk/releases/tag/{github_tag}">GitHub Release Notes</a></p>
+<p>Generated from <a href="https://github.com/{repository}/releases/tag/{github_tag}">GitHub Release Notes</a></p>
 """
     return body_text, post_content
 
 
-def main():
+def generate_release_notes(versions, repository, product_name, output_prefix="", static_notes=False):
     github_token = os.environ.get("GITHUB_TOKEN")
 
-    for release_version in VERSIONS:
+    for release_version in versions:
         minor_version = re.search(r"^(\d+\.\d+)", release_version).group()
         file_name = f"ReleaseNotes{release_version}.html"
-        local_note = static_release_note(release_version, minor_version)
+        local_note = static_release_note(release_version, minor_version) if static_notes else None
 
         if local_note is not None:
             body_text = local_note.read_text(encoding="utf-8")
@@ -91,7 +95,12 @@ def main():
                 print(f"Skipping {release_version}: no static release note and no GITHUB_TOKEN")
                 continue
 
-            release = github_release(release_version, github_token)
+            github_tag = (
+                "netatalk-" + release_version.replace(".", "-")
+                if repository == NETATALK_REPOSITORY
+                else release_version
+            )
+            release = github_release(release_version, github_token, repository, github_tag)
             if release is None:
                 continue
             body_text, post_content = release
@@ -107,24 +116,35 @@ def main():
         if local_note is None:
             html = url_pattern.sub(r" <a href='\2'>\2</a>", html)
             html = github_pattern.sub(
-                r"<a href='https://github.com/Netatalk/netatalk/issues/\2'>\1\2</a>",
+                rf"<a href='https://github.com/{repository}/issues/\2'>\1\2</a>",
                 html,
             )
 
-        os.makedirs(f"./public/{minor_version}", exist_ok=True)
+        output_dir = Path("public") / output_prefix / minor_version
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_path = Path(output_prefix) / minor_version / file_name
         with open(
-            f"./public/{minor_version}/{file_name}",
+            output_dir / file_name,
             "w",
             encoding="utf-8",
             errors="xmlcharrefreplace",
         ) as output_file:
             output_file.write(render_page(
-                f"Netatalk Release Notes - {release_version}",
-                f"{minor_version}/{file_name}",
+                f"{product_name} Release Notes - {release_version}",
+                str(output_path),
                 html + post_content,
             ))
 
-        print(f"Converted: {file_name} ({source})")
+        print(f"Converted: {output_path} ({source})")
+
+
+def main():
+    generate_release_notes(
+        VERSIONS, NETATALK_REPOSITORY, "Netatalk", static_notes=True
+    )
+    generate_release_notes(
+        CLIENT_VERSIONS, CLIENT_REPOSITORY, "Netatalk Client", output_prefix="client"
+    )
 
 
 if __name__ == "__main__":
