@@ -10,6 +10,14 @@ as well as `.sha256sum` and `.sha512sum` files for checksum verification.
 
 NETATALK_DOWNLOADS
 
+## Netatalk Client
+
+The Netatalk Client is an AFP client for Unix-like operating systems.
+Download the latest source release below;
+signature and checksum files are included for verification.
+
+NETATALK_CLIENT_DOWNLOADS
+
 ## GPG Signature Verification
 
 To validate the integrity of the downloaded source code, you can download the corresponding GPG signature file.

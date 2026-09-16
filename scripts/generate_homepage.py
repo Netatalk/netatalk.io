@@ -5,6 +5,7 @@ import markdown
 import requests
 
 from common import (
+    CLIENT_VERSION,
     CLIENT_VERSIONS,
     VERSION,
     VERSIONS,
@@ -39,9 +40,8 @@ def release_notes_index(versions, output_prefix=""):
     return "\n\n".join(sections)
 
 
-def github_release_assets(release_version, github_token):
-    github_tag = "netatalk-" + release_version.replace(".", "-")
-    url = f"https://api.github.com/repos/Netatalk/netatalk/releases/tags/{github_tag}"
+def github_release_assets(github_token, repository, github_tag):
+    url = f"https://api.github.com/repos/{repository}/releases/tags/{github_tag}"
     headers = {
         "Accept": "application/vnd.github+json",
         "Authorization": "Bearer " + github_token,
@@ -95,7 +95,24 @@ pages.extend(page_subdirs)
 pages.extend((f"releasenotes/{dir}", dir) for dir in release_note_subdirs)
 
 github_token = os.environ.get("GITHUB_TOKEN")
-download_assets = github_release_assets(VERSION, github_token) if github_token else []
+download_assets = (
+    github_release_assets(
+        github_token,
+        "Netatalk/netatalk",
+        "netatalk-" + VERSION.replace(".", "-"),
+    )
+    if github_token
+    else []
+)
+client_download_assets = (
+    github_release_assets(
+        github_token,
+        "Netatalk/netatalk-client",
+        CLIENT_VERSION,
+    )
+    if github_token
+    else []
+)
 
 for source_dir, output_dir in pages:
     files = []
@@ -124,6 +141,10 @@ for source_dir, output_dir in pages:
             )
             if source_dir == "pages" and file == "download.md":
                 text = text.replace("NETATALK_DOWNLOADS", download_links(download_assets))
+                text = text.replace(
+                    "NETATALK_CLIENT_DOWNLOADS",
+                    download_links(client_download_assets),
+                )
 
             html = markdown.markdown(
                 text,
