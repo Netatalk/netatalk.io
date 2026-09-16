@@ -1,27 +1,47 @@
 # Download Netatalk
 
-Here you can find the latest Netatalk source code releases for download,
-which can be [built and installed](/install.html) on your system.
+Here you can find the latest source code releases of the Netatalk AFP file server
+and the Netatalk Client for download.
+
+Every release has a corresponding `.asc` file for GPG signature verification,
+as well as a `.sha256sum` file for checksum verification.
+The server release files also come with `.sha512sum` checksums.
+
+## Netatalk Server
+
+The Netatalk file server source code can be [built and installed](/install.html) on your system.
 
 We also distribute a [Webmin module](/docs/Webmin-Module.html) for Netatalk, which can be installed directly from the Webmin interface.
 
-Both have corresponding `.asc` files for GPG signature verification,
-as well as `.sha256sum` and `.sha512sum` files for checksum verification.
-
 NETATALK_DOWNLOADS
+
+All Netatalk server releases are published on
+[GitHub Releases](https://github.com/Netatalk/netatalk/releases).
+For older releases, go to [Netatalk Files on
+SourceForge](https://sourceforge.net/projects/netatalk/files/).
 
 ## Netatalk Client
 
-The Netatalk Client is an AFP client for Unix-like operating systems.
-Download the latest source release below;
-signature and checksum files are included for verification.
+The Netatalk Client is a Free and Open Source AFP file sharing client
+for Linux, \*BSD, macOS and other Unix-like operating systems.
+It can mount AFP volumes as local filesystems through FUSE,
+browse them interactively with the *afpcmd* command line client,
+and add AFP support to other applications through the *libafpclient* library.
+
+See the [installation instructions](https://github.com/Netatalk/netatalk-client/blob/main/INSTALL.md)
+and the [getting started guide](https://github.com/Netatalk/netatalk-client/blob/main/docs/GETTING_STARTED.md)
+for how to build and use the client.
 
 NETATALK_CLIENT_DOWNLOADS
+
+All Netatalk Client releases are published on
+[GitHub Releases](https://github.com/Netatalk/netatalk-client/releases).
+Releases before 0.9.5 were published as *afpfs-ng* tarballs with checksums only, without GPG signatures.
 
 ## GPG Signature Verification
 
 To validate the integrity of the downloaded source code, you can download the corresponding GPG signature file.
-The signatures are signed with the [GPG key of the Netatalk project](http://netatalk.io/NetatalkDistributionPublicKey.asc),
+Both Netatalk server and Netatalk Client releases are signed with the [GPG key of the Netatalk project](http://netatalk.io/NetatalkDistributionPublicKey.asc),
 which can also be fetched from the keystore at [keys.openpgp.org](https://keys.openpgp.org)
 or [keys.mailvelope.com](https://keys.mailvelope.com).
 
@@ -36,11 +56,10 @@ The GPG key fingerprint is: **835A 6542 8C82 2F69 C45B  817A 7B13 E1BF E4DD E8BD
     gpg:                using RSA key 835A65428C822F69C45B817A7B13E1BFE4DDE8BD
     gpg: Good signature from "Netatalk Distribution <distribution@netatalk.io>"
 
-If you get a warning an untrusted signature, compare the key fingerprint
-with the one above. If they match, you can trust the signature.
+The same procedure applies to the Netatalk Client tarball, `netatalk-client-x.y.z.tar.xz`.
 
-For older releases, go to [Netatalk Files on
-SourceForge](https://sourceforge.net/projects/netatalk/files/).
+If you get a warning about an untrusted signature, compare the key fingerprint
+with the one above. If they match, you can trust the signature.
 
 ## Netatalk Binary Packages
 
@@ -62,7 +81,7 @@ With Docker Engine or compatible container runtime installed, pull a
 
     docker pull netatalk/netatalk:latest
 
-See the [container documentation](/docker.html) for available options
+See the [container documentation](/containers.html) for available options
 and usage examples.
 
 ### Repology Reference
