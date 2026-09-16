@@ -109,3 +109,45 @@ for file in files:
         output_file.write(render_page(f"Netatalk - {page_title}", new_name, html))
 
     print(f"Converted: {new_name}")
+
+
+# Generate Netatalk Client documentation
+
+client_docs_dir = "./netatalk-client/docs"
+client_output_dir = "./public/client"
+os.makedirs(client_output_dir, exist_ok=True)
+
+for file in sorted(os.listdir(client_docs_dir)):
+    if not file.endswith(".md"):
+        continue
+
+    with open(f"{client_docs_dir}/{file}", "r", encoding="utf-8") as input_file:
+        text = input_file.read()
+        text = re.sub(r"\s<[^<>]+@[a-zA-Z0-9._-]+>", "", text)
+        html = markdown.markdown(
+            text,
+            extensions=[
+                'fenced_code',
+                'smarty',
+                'tables',
+            ],
+            output_format='html',
+        )
+        html = localize_internal_site_urls(html)
+
+    new_name = file.replace('.md', '.html').lower()
+    h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
+    if h1_match:
+        page_title = h1_match.group(1)
+    else:
+        page_title = file.replace('.md', '').replace('_', ' ').capitalize()
+
+    output_path = f"client/{new_name}"
+    with open(f"{client_output_dir}/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
+        output_file.write(render_page(
+            f"Netatalk Client - {page_title}",
+            output_path,
+            html,
+        ))
+
+    print(f"Converted: {output_path}")
