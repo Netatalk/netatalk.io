@@ -45,6 +45,7 @@ jobs:
             build-essential \
             doxygen \
             libyaml-pp-perl \
+            mandoc \
             pandoc \
             po4a
 
