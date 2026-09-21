@@ -12,6 +12,23 @@
             pageSize: 5,
             showImages: false,
             showSubResults: true,
+            ranking: { pageLength: 0.25, termFrequency: 0.5 },
+            mergeIndex: [{
+                bundlePath: "${site_base_url}developer/pagefind/",
+                baseUrl: "${site_base_url}",
+                indexWeight: 0.1,
+                ranking: { pageLength: 0.25, termFrequency: 0.5 },
+            }],
+            processResult: function (result) {
+                // Show the best-matching sections rather than the ones with the most hits.
+                const pageUrl = result.meta?.url || result.url;
+                const score = (sub) => sub.weighted_locations.reduce((sum, loc) => sum + loc.balanced_score, 0);
+                result.sub_results = result.sub_results
+                    .filter((sub) => sub.url !== pageUrl)
+                    .sort((a, b) => score(b) - score(a))
+                    .slice(0, 3);
+                return result;
+            },
         });
     });
     </script>
