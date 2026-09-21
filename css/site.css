@@ -426,6 +426,15 @@ main a.toclink {
   color: inherit;
 }
 
+main h3.option {
+  font-size: 1rem;
+  margin: 1.4em 0 0.4em;
+}
+
+main h3.option .option-syntax {
+  font-weight: normal;
+}
+
 .italic {
   font-style: italic;
   font-size: 0.9em;

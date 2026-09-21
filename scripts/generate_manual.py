@@ -12,6 +12,36 @@ from common import (
 )
 
 
+OPTION_PARAGRAPH = re.compile(
+    r'<p>(?P<name>[a-z0-9][a-z0-9 _-]*[a-z0-9]) = (?P<syntax>(?:(?!</p>).)*?<strong>\([GVH]\)</strong>)</p>',
+    re.DOTALL,
+)
+
+
+def option_headings(html):
+    """Turn "name = value **(G)**" option paragraphs into linkable headings.
+
+    Each option gets an anchor named after it and a high search weight, so
+    searches for an option land on its definition.
+    """
+    seen = {}
+
+    def replace(match):
+        name = match.group("name")
+        slug = re.sub(r"[^a-z0-9]+", "-", name)
+        seen[slug] = seen.get(slug, 0) + 1
+        if seen[slug] > 1:
+            slug = f"{slug}-{seen[slug]}"
+        syntax = " ".join(match.group("syntax").split())
+        return (
+            f'<h3 class="option" id="{slug}" data-pagefind-weight="10">'
+            f'<a class="toclink" href="#{slug}">{name}</a> '
+            f'<span class="option-syntax">= {syntax}</span></h3>'
+        )
+
+    return OPTION_PARAGRAPH.sub(replace, html)
+
+
 # Generate manual
 
 for lang in LOCALES:
@@ -61,7 +91,7 @@ for lang in LOCALES:
                 ],
                 output_format='html',
             )
-            html = localize_internal_site_urls(html)
+            html = option_headings(localize_internal_site_urls(html))
         page_title = file.replace('index', 'Index').replace('.md', '')
         new_name = file.replace('.md', '.html')
 

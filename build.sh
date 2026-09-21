@@ -130,7 +130,7 @@ python3 scripts/generate_homepage.py
 
 rm -rf wiki
 
-python3 -m pagefind --site public
+python3 scripts/build_search_index.py
 
 if [ "$mode" = "test" ]; then
   set +x

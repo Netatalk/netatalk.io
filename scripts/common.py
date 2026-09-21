@@ -1,3 +1,4 @@
+import fnmatch
 import os
 import re
 import tomllib
@@ -20,6 +21,23 @@ with SITE_CONFIG_FILE.open("rb") as config_file:
 LOCALES = SITE_CONFIG["locales"]
 DEFAULT_SITE_BASE_URL = SITE_CONFIG["base_url"]
 SITE_BASE_URL = os.environ.get("NETATALK_SITE_BASE_URL", DEFAULT_SITE_BASE_URL).rstrip("/") + "/"
+
+DEVELOPER_SEARCH_GLOBS = (
+    "developer/*.html",
+    "docs/Dev-Docs*.html",
+    "docs/Developer-*.html",
+    "docs/Using-*.html",
+    "docs/Benchmarks.html",
+    "docs/CatalogSearch.html",
+    "docs/DirCache-redundant-stat-ops.html",
+    "docs/Release-Process.html",
+    "docs/Roadmap.html",
+    "docs/Testing.html",
+    "docs/Work-with-Documentation.html",
+    "client/developer.html",
+)
+
+LOW_PRIORITY_SEARCH_WEIGHT = "0.3"
 
 
 def site_url(path=""):
@@ -162,6 +180,27 @@ def toc_sidebar(inner_html):
 """
 
 
+def is_developer_page(path):
+    """Pages written for Netatalk developers rather than administrators."""
+    clean = str(path).lstrip("/")
+    return any(fnmatch.fnmatchcase(clean, glob) for glob in DEVELOPER_SEARCH_GLOBS)
+
+
+def search_body_attributes(path):
+    """Attributes on <main> that place the page in the site search.
+
+    Developer pages are indexed separately at a lower weight (see
+    build_search_index.py). Release notes and the news pages are indexed
+    at reduced weight so the manual and man pages outrank them.
+    """
+    if is_developer_page(path):
+        return ' data-search-tier="developer"'
+    clean = str(path).lstrip("/")
+    if re.match(r"(client/)?\d+\.\d+/", clean) or clean in ("news.html", "archive.html"):
+        return f' data-pagefind-body data-pagefind-weight="{LOW_PRIORITY_SEARCH_WEIGHT}"'
+    return " data-pagefind-body"
+
+
 def mark_current_page(html, path):
     """Add aria-current to links that point at the page being rendered.
 
@@ -196,7 +235,7 @@ def render_page(title, path, content, *, lang="en", sidebar=None, mermaid=False)
         "<body>\n",
         js_mermaid() if mermaid else "",
         mark_current_page(html_menlinks(), path),
-        '<div class="page">\n<main id="content">\n',
+        f'<div class="page">\n<main id="content"{search_body_attributes(path)}>\n',
         content,
         '\n</main>\n<aside class="site-aside">\n',
         sidebar,
