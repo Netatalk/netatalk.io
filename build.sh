@@ -78,7 +78,7 @@ set -x
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-for tool in cc git meson ninja doxygen po4a pandoc; do
+for tool in cc git mandoc meson ninja doxygen po4a pandoc; do
   if ! command -v "$tool" >/dev/null 2>&1; then
     echo "Missing required build tool: $tool" >&2
     exit 1
@@ -119,6 +119,23 @@ fi
   fi
   meson compile -C build
   meson install -C build
+)
+(
+  cd netatalk-client
+  docs_install_path="$(pwd)/.."
+  meson_setup_args=(
+    build
+    --prefix "$docs_install_path"
+    -Dwebsite-docs=true
+    -Dwebsite-docs-install-path="$docs_install_path"
+  )
+  if [ -d build/meson-info ]; then
+    meson setup --reconfigure "${meson_setup_args[@]}"
+  else
+    meson setup "${meson_setup_args[@]}"
+  fi
+  meson compile -C build docs-markdown
+  meson install -C build --tags doc --no-rebuild
 )
 rm -rf wiki
 git clone https://github.com/Netatalk/netatalk.wiki.git wiki

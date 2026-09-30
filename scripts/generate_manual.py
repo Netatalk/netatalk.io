@@ -141,43 +141,60 @@ for file in files:
     print(f"Converted: {new_name}")
 
 
-# Generate Netatalk Client documentation
+# Generate Netatalk Client manual
 
-client_docs_dir = "./netatalk-client/docs"
-client_output_dir = "./public/client"
+client_manual_dir = "./client/manual/en"
+client_output_dir = "./public/client/manual/en"
 os.makedirs(client_output_dir, exist_ok=True)
 
-for file in sorted(os.listdir(client_docs_dir)):
-    if not file.endswith(".md"):
+with open(f"{client_manual_dir}/_Sidebar.md", "r", encoding="utf-8") as input_file:
+    html = markdown.markdown(
+        input_file.read(),
+        extensions=[
+            'fenced_code',
+            'smarty',
+            'tables',
+        ],
+        output_format='html',
+    )
+    navbar = toc_sidebar(localize_internal_site_urls(html))
+
+for file in sorted(os.listdir(client_manual_dir)):
+    if not file.endswith(".md") or file == "_Sidebar.md":
         continue
 
-    with open(f"{client_docs_dir}/{file}", "r", encoding="utf-8") as input_file:
+    with open(f"{client_manual_dir}/{file}", "r", encoding="utf-8") as input_file:
         text = input_file.read()
-        text = re.sub(r"\s<[^<>]+@[a-zA-Z0-9._-]+>", "", text)
+        text = re.sub(
+            r'(?m)^([ \t]{0,3}#(?!#)[ \t]+[^\r\n]+)',
+            r'\1\n\n[TOC]\n\n',
+            text,
+            count=1,
+        )
         html = markdown.markdown(
             text,
             extensions=[
                 'fenced_code',
                 'smarty',
                 'tables',
+                TocExtension(
+                    anchorlink=True,
+                ),
             ],
             output_format='html',
         )
         html = localize_internal_site_urls(html)
 
-    new_name = file.replace('.md', '.html').lower()
-    h1_match = re.search(r'^# (.+)$', text, re.MULTILINE)
-    if h1_match:
-        page_title = h1_match.group(1)
-    else:
-        page_title = file.replace('.md', '').replace('_', ' ').capitalize()
+    page_title = file.replace('index', 'Index').replace('.md', '')
+    new_name = file.replace('.md', '.html')
+    output_path = f"client/manual/en/{new_name}"
 
-    output_path = f"client/{new_name}"
     with open(f"{client_output_dir}/{new_name}", "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
         output_file.write(render_page(
-            f"Netatalk Client - {page_title}",
+            f"Netatalk Client Manual - {page_title}",
             output_path,
             html,
+            sidebar=navbar,
         ))
 
     print(f"Converted: {output_path}")
