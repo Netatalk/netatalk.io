@@ -2,6 +2,16 @@
 
 Netatalk release announcements and other news.
 
+### Netatalk 4.6.1 is available
+
+*2nd of October 2026*
+
+The Netatalk development team is proud to announce the latest release of the Netatalk 4.6 release series.
+
+This is a bugfix release that improves compatibility with older Linux distributions, with substantial hardening across the board, and massively improved test coverage.
+
+For a summary of news and a detailed list of changes see the [Release Notes](/4.6/ReleaseNotes4.6.1.html).
+
 ### Netatalk 4.6.0 and Netatalk Client 1.0.0 are available
 
 *15th of September 2026*
