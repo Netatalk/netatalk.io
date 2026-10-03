@@ -1,4 +1,4 @@
-Markdown==3.10.3
+Markdown==3.11
 meson==1.12.1
 ninja==1.13.2
 # "extended" bundles CJK word segmentation, needed for the Japanese manual
