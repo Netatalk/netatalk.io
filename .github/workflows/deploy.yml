@@ -43,10 +43,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install --no-install-recommends --yes \
             build-essential \
-            doxygen \
             libyaml-pp-perl \
             pandoc \
             po4a
+
+      - name: Install Doxygen
+        env:
+          DOXYGEN_VERSION: '1.18.0'
+          DOXYGEN_SHA256: '14fa81bdc34171edb5f1f02b1d60e74802f0439b77fa44e592565d517d72df90'
+        run: |
+          archive="$RUNNER_TEMP/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz"
+          release="Release_${DOXYGEN_VERSION//./_}"
+          curl --fail --location --retry 3 --output "$archive" \
+            "https://github.com/doxygen/doxygen/releases/download/${release}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz"
+          echo "$DOXYGEN_SHA256  $archive" | sha256sum --check
+          tar -xzf "$archive" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/doxygen-${DOXYGEN_VERSION}/bin" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/doxygen-${DOXYGEN_VERSION}/bin/doxygen" --version
 
       - name: Build site
         env:
