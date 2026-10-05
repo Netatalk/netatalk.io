@@ -38,9 +38,11 @@ To build the website for local review and start a static web server:
 GITHUB_TOKEN=your_token ./build.sh test
 ```
 
-This generates internal website URLs with `http://127.0.0.1:8000/` as the base URL
-and serves the generated site from `public/`. Use `--host`, `--port`, or `--base-url`
-to customize the local server and generated base URL, for example:
+This serves the generated site from `public/`, with `http://127.0.0.1:8000/` as the
+base URL for canonical tags, sitemaps, and validator links. Internal links and
+assets use root-relative URLs, so the browser resolves them against the current
+hostname. Use `--host`, `--port`, or `--base-url` to customize the local server and
+generated base URL, for example:
 
 ```sh
 GITHUB_TOKEN=your_token ./build.sh test --host 0.0.0.0 --port 8080 --base-url http://localhost:8080/
@@ -48,6 +50,7 @@ GITHUB_TOKEN=your_token ./build.sh test --host 0.0.0.0 --port 8080 --base-url ht
 
 The default production base URL and supported locales are configured in `config/site.toml`.
 The base URL can be overridden for any build by setting `NETATALK_SITE_BASE_URL`.
+Its path is also used as the prefix for internal links when hosting in a subdirectory.
 
 ## New release procedure
 

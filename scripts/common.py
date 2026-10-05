@@ -5,7 +5,7 @@ import tomllib
 from functools import lru_cache
 from pathlib import Path
 from string import Template
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config"
@@ -21,6 +21,9 @@ with SITE_CONFIG_FILE.open("rb") as config_file:
 LOCALES = SITE_CONFIG["locales"]
 DEFAULT_SITE_BASE_URL = SITE_CONFIG["base_url"]
 SITE_BASE_URL = os.environ.get("NETATALK_SITE_BASE_URL", DEFAULT_SITE_BASE_URL).rstrip("/") + "/"
+# Root-relative links follow the browser's current origin, including preview
+# deployment URLs. Retain the configured path for sites hosted in a subdirectory.
+INTERNAL_SITE_BASE_URL = urlsplit(SITE_BASE_URL).path or "/"
 
 DEVELOPER_SEARCH_GLOBS = (
     "developer/*.html",
@@ -41,10 +44,18 @@ LOW_PRIORITY_SEARCH_WEIGHT = "0.3"
 
 
 def site_url(path=""):
+    """Return an internal URL that uses the browser's current origin."""
+    return urljoin(INTERNAL_SITE_BASE_URL, str(path).lstrip("/"))
+
+
+def absolute_site_url(path=""):
+    """Return an absolute URL for canonical tags, sitemaps, and validators."""
     return urljoin(SITE_BASE_URL, str(path).lstrip("/"))
 
 
-INTERNAL_SITE_URL_PATTERN = re.compile(r"https://netatalk\.io(?:/([^\"'<>\s]*))?")
+INTERNAL_SITE_URL_PATTERN = re.compile(
+    r"https://netatalk\.io(?=/|[?#\"'<>\s]|$)([^\"'<>\s]*)"
+)
 
 
 def localize_internal_site_urls(html):
@@ -104,16 +115,16 @@ def css_hash():
 def html_head(title, path, lang="en"):
     return render_template(
         "document-head.html",
-        canonical_url=site_url(path),
+        canonical_url=absolute_site_url(path),
         css_hash=css_hash(),
         lang=lang,
-        site_base_url=SITE_BASE_URL,
+        site_base_url=INTERNAL_SITE_BASE_URL,
         title=title,
     )
 
 
 def html_menlinks():
-    return render_template("site-header.html", site_base_url=SITE_BASE_URL)
+    return render_template("site-header.html", site_base_url=INTERNAL_SITE_BASE_URL)
 
 
 def html_navbar(version):
@@ -126,7 +137,7 @@ def html_navbar(version):
         client_version=CLIENT_VERSION,
         dashed_version=dashed_version,
         minor_version=minor_version,
-        site_base_url=SITE_BASE_URL,
+        site_base_url=INTERNAL_SITE_BASE_URL,
         version=version,
     )
 
@@ -155,15 +166,15 @@ def html_search(path="", lang="en"):
     return render_template(
         "site-search.html",
         lang_switcher=lang_switcher(path, lang),
-        site_base_url=SITE_BASE_URL,
+        site_base_url=INTERNAL_SITE_BASE_URL,
     )
 
 
 def html_foot(path):
     return render_template(
         "site-footer.html",
-        page_url=site_url(path),
-        site_base_url=SITE_BASE_URL,
+        page_url=absolute_site_url(path),
+        site_base_url=INTERNAL_SITE_BASE_URL,
     )
 
 
