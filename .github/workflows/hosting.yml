@@ -16,7 +16,7 @@ jobs:
         with:
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          cloudflare-project-name: ${{ secrets.CLOUDFLARE_PAGE_NAME }}
+          cloudflare-project-name: ${{ vars.CLOUDFLARE_PAGE_NAME }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           cleanup-types: all
           production-keep: 5
