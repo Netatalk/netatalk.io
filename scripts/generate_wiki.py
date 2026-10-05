@@ -9,6 +9,7 @@ from git import Repo
 import urllib.parse
 
 from common import (
+    absolute_site_url,
     localize_internal_site_urls,
     render_page,
     site_url,
@@ -48,7 +49,7 @@ def site_map():
             commit = next(repo.iter_commits(paths=blob.path, max_count=1))
             datetime_obj = datetime.datetime.fromtimestamp(commit.committed_date)
             site_map_xml.write(f"""<url>
-    <loc>{site_url(f"docs/{urllib.parse.quote(blob.path.replace('.md', '.html'))}")}</loc>
+    <loc>{absolute_site_url(f"docs/{urllib.parse.quote(blob.path.replace('.md', '.html'))}")}</loc>
     <lastmod>{datetime_obj.strftime("%Y-%m-%d")}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
