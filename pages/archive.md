@@ -35,6 +35,10 @@ This is a bugfix version that fixes a performance regression in the DSI transpor
 
 A suite of hardening fixes to the EA and Spotlight code is also included.
 
+[CVE-2026-103933](/security/CVE-2026-103933.html),
+[CVE-2026-110779](/security/CVE-2026-110779.html),
+[CVE-2026-110780](/security/CVE-2026-110780.html)
+
 For a summary of news and a detailed list of changes see the [Release Notes](/4.5/ReleaseNotes4.5.2.html).
 
 ### Netatalk 4.5.1 is available
