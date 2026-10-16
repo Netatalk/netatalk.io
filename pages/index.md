@@ -8,7 +8,7 @@ and share files on a local network or over the Internet.
 The Netatalk file server software is light-weight, performant, and portable.
 Conforming to the [Apple Filing
 Protocol](https://developer.apple.com/library/archive/documentation/Networking/Conceptual/AFP/Introduction/Introduction.html#//apple_ref/doc/uid/TP40000854-CH1-SW1)
-specification, any macOS, Mac OS X, or Classic Mac OS system can connect to a Netatalk file server out of the box.
+specification, most macOS, Mac OS X, or Classic Mac OS system can connect to a Netatalk file server out of the box.
 
 Since its launch in 1990, Netatalk has been leveraged by universities, enterprises,
 and home users for collaboration and remote data backup on Macs.
