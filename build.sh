@@ -84,7 +84,7 @@ for tool in cc git mandoc meson ninja doxygen po4a pandoc; do
     exit 1
   fi
 done
-git submodule update --init --recursive netatalk
+git submodule update --init --recursive netatalk netatalk-client
 rm -rf manual public
 mkdir -p manual/en manual/ja public/2.0 public/css public/docs public/gfx public/manual/en public/manual/ja public/security
 cp -R css/. public/css/

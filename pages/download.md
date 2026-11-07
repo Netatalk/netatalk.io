@@ -28,8 +28,8 @@ It can mount AFP volumes as local filesystems through FUSE,
 browse them interactively with the *afpcmd* command line client,
 and add AFP support to other applications through the *libafpclient* library.
 
-See the [installation instructions](https://github.com/Netatalk/netatalk-client/blob/main/INSTALL.md)
-and the [getting started guide](https://github.com/Netatalk/netatalk-client/blob/main/docs/GETTING_STARTED.md)
+See the [installation guide](/client/manual/en/installation.html)
+and the [getting started guide](/client/manual/en/getting_started.html)
 for how to build and use the client.
 
 NETATALK_CLIENT_DOWNLOADS
