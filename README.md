@@ -58,5 +58,6 @@ Its path is also used as the prefix for internal links when hosting in a subdire
 - Prepend the release version to `config/releases.txt`.
 - Prepend Netatalk Client release versions to `config/client-releases.txt`.
 - cd to the `netatalk` submodule, fetch from origin and checkout the release tag, e.g. `git checkout 4.5.0`.
+- For a Netatalk Client release, cd to the `netatalk-client` submodule, fetch from origin and checkout its release tag, e.g. `git checkout 1.0.0`.
 - Test the updates by running `./build.sh test` and reviewing the generated site.
 - Commit all above changes and push to remote git to publish to web hosting.
