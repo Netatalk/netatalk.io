@@ -2,7 +2,7 @@ Markdown==3.11.2
 meson==1.12.1
 ninja==1.13.2
 # "extended" bundles CJK word segmentation, needed for the Japanese manual
-pagefind[extended]==1.5.2
+pagefind[extended]==1.6.0
 requests==2.34.2
 ## The following requirements were added by pip freeze:
 certifi==2026.10.23
