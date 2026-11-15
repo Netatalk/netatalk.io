@@ -1,6 +1,6 @@
-# News Archive
+# Netatalk News
 
-Netatalk release announcements and other news.
+Netatalk project announcements and other news.
 
 ### Netatalk 4.6.1 is available
 

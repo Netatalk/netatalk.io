@@ -54,7 +54,7 @@ Its path is also used as the prefix for internal links when hosting in a subdire
 
 ## New release procedure
 
-- Create a news story at the top of `pages/archive.md` (the top three stories will be substituted to `pages/index.md`.)
+- Create a news story at the top of `pages/archive.md`.
 - Prepend the release version to `config/releases.txt`.
 - Prepend Netatalk Client release versions to `config/client-releases.txt`.
 - cd to the `netatalk` submodule, fetch from origin and checkout the release tag, e.g. `git checkout 4.5.0`.

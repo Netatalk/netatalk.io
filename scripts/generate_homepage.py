@@ -124,16 +124,6 @@ for source_dir, output_dir in pages:
         with open(f"./{source_dir}/{file}", "r", encoding="utf-8") as input_file:
             text = input_file.read()
 
-            if source_dir == "pages" and file == "index.md":
-                with open("pages/archive.md", "r", encoding="utf-8") as archive_file:
-                    lines = archive_file.readlines()
-                    news_indices = [i for i, line in enumerate(lines) if line.startswith("### ")]
-                    if len(news_indices) > 0:
-                        start_idx = news_indices[0]
-                        end_idx = news_indices[3] if len(news_indices) >= 4 else len(lines)
-                        news_content = "".join(lines[start_idx:end_idx])
-                        text = text.replace("NETATALK_NEWS", news_content)
-
             text = text.replace("NETATALK_RELEASE_NOTES", release_notes_index(VERSIONS))
             text = text.replace(
                 "NETATALK_CLIENT_RELEASE_NOTES",
