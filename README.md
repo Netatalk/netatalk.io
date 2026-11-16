@@ -7,7 +7,8 @@ The static website of the Netatalk project, generated from Markdown sources by a
 - `css/` stylesheets used by the website
 - `gfx/` image files used inline in HTML pages
 - `logo/` the canonical Netatalk logo images, not used directly by the website
-- `netatalk/` the Netatalk source code submodule, used to build various documentation
+- `netatalk/` the Netatalk source code submodule, used to build server documentation
+- `netatalk-client/` the Netatalk Client source code submodule, used to build client documentation
 - `pages/` the top level website pages Markdown sources
 - `releasenotes/` historical static release notes in Markdown format (until 2022)
 - `scripts/` Python scripts that build the website
